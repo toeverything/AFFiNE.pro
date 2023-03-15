@@ -18,9 +18,11 @@ const locale = ref(en)
 </script>
 
 <style lang="stylus">
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap')
+
 body
   margin: 0
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif
+  font-family: "Inter", "Roboto", "Helvetica", "Arial", sans-serif
   background: var(--secondary)
   font-size: 1rem
   line-height: 1.5
