@@ -1,7 +1,9 @@
 <template lang="pug">
 .layout.default-layout
+  site-header
   .fluid-container
     slot
+  site-footer
 </template>
 
 <style lang="stylus">

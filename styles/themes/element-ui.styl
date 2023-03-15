@@ -1,16 +1,14 @@
-:root {
+:root,
+html.dark {
   --primary-color-h: 229;
   --primary-color-s: 61%;
   --primary-color-l: 59%;
 
   --el-color-primary: s('hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l))');
-  --el-color-primary-light-3: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 5%))');
-  --el-color-primary-light-5: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 10%))');
-  --el-color-primary-light-7: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 20%))');
-  --el-color-primary-light-8: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 25%))');
-  --el-color-primary-light-9: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 57%))');
   --el-color-primary-dark-2: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) - 10%))');
+}
 
+:root {
   --el-color-success: #4B8D6D; // Normal
   --el-color-success-light-3: #59AD85; // Hover
   --el-color-success-dark-2: #386D54; // Active

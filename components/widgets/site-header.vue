@@ -7,5 +7,6 @@
 
 <style lang="stylus">
 .site-header
-  null
+  height: 50px
+  background: $secondary100
 </style>

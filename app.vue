@@ -23,7 +23,7 @@ const locale = ref(en)
 body
   margin: 0
   font-family: "Inter", "Roboto", "Helvetica", "Arial", sans-serif
-  background: var(--secondary)
+  background: $secondary100
   font-size: 1rem
   line-height: 1.5
   letter-spacing: 0.00938em

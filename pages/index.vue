@@ -1,14 +1,15 @@
 <template lang="pug">
-div Home
+.page.page-home
+  div Home
 
-nuxt-link( to="/blog/hello" ) {{ $t('hello') }}
+  nuxt-link( to="/blog/hello" ) {{ $t('hello') }}
 
-.flex
-  el-button( @click="toggleDark()" ) {{ isDark ? 'Dark' : 'Light' }}
+  .flex
+    el-button( @click="toggleDark()" ) {{ isDark ? 'Dark' : 'Light' }}
 
-.flex
-  select( v-model="locale" )
-    option( v-for="item in locales" :value="item.code" ) {{ item.name }}
+  .flex
+    select( v-model="locale" )
+      option( v-for="item in locales" :value="item.code" ) {{ item.name }}
 
 </template>
 
@@ -23,3 +24,8 @@ watch(locale, () => {
   setLocaleCookie(locale.value)
 })
 </script>
+
+<style lang="stylus">
+.page-home
+  color: $primary87
+</style>

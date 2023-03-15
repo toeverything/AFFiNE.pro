@@ -1,3 +1,5 @@
+import path from 'path'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   runtimeConfig: {
@@ -64,6 +66,16 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
 
+  vite: {
+    css: {
+      preprocessorOptions: {
+        stylus: {
+          additionalData: `@require "../styles/ref.styl"`
+        }
+      }
+    }
+  },
+
   i18n: {
     locales: [
       { code: 'enUS', iso: 'en-US', name: 'English', file: 'en-US.js' },
@@ -78,5 +90,6 @@ export default defineNuxtConfig({
     langDir: 'locales',
     strategy: 'no_prefix',
     defaultLocale: 'en'
-  }
+  },
+
 })
