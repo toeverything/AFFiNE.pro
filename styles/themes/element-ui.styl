@@ -1,0 +1,155 @@
+:root {
+  --primary-color-h: 229;
+  --primary-color-s: 61%;
+  --primary-color-l: 59%;
+
+  --el-color-primary: s('hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l))');
+  --el-color-primary-light-3: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 5%))');
+  --el-color-primary-light-5: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 10%))');
+  --el-color-primary-light-7: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 20%))');
+  --el-color-primary-light-8: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 25%))');
+  --el-color-primary-light-9: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 57%))');
+  --el-color-primary-dark-2: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) - 10%))');
+
+  --el-color-success: #4B8D6D; // Normal
+  --el-color-success-light-3: #59AD85; // Hover
+  --el-color-success-dark-2: #386D54; // Active
+  --el-color-success-light-5: #cbddd3 // Disabled
+
+  --el-fill-color-light: #f5faf6;
+  --el-text-color-regular: rgba(12, 12, 12, 0.5);
+  --el-border-radius-base: 6px
+}
+
+.app {
+  .el-button {
+    font-weight: 700
+    font-size: 12px
+    background-color: var(--el-button-bg-color);
+
+    &:not(.is-circle):not(.round-icon-button) {
+      min-width: 100px
+    }
+
+    &.is-link {
+      background: transparent
+    }
+
+    &--primary {
+      --el-button-disabled-bg-color: #bbb
+      --el-button-disabled-border-color: #bbb
+
+      &:hover,
+      &:focus {
+        background-color: var(--el-color-primary-light-3) !important
+        border-color: var(--el-color-primary-light-3) !important
+        color: white !important
+      }
+    }
+
+    &--default {
+      &:hover,
+      &:focus {
+        background-color: #efefef !important
+        border-color: #efefef !important
+      }
+
+      &:active {
+        background-color: #dfdfdf !important
+        border-color: #cfcfcf !important
+      }
+
+      &:focus-visible {
+        outline-color: #ccc !important
+      }
+    }
+
+    &--secondary {
+      color: black
+      background: #F6F6F6
+      border-color: #e0e0e0
+
+      &:hover,
+      &:focus {
+        background-color: #ffffff !important
+        border-color: #e0e0e0 !important
+      }
+
+      &:active {
+        background-color: #e0e0e0 !important
+        border-color: #e0e0e0 !important
+      }
+    }
+
+    &.is-disabled {
+      background-color: var(--el-button-disabled-bg-color) !important;
+      color: var(--el-button-disabled-text-color) !important;
+      border-color: var(--el-button-disabled-border-color) !important;
+    }
+  }
+
+  // Modal
+  .el-overlay {
+    background-color: alpha(#21222E, 90%);
+  }
+
+  .el-dialog {
+    border-radius: 6px;
+
+    &__header {
+      padding: 30px 40px
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    &__body {
+      padding-left: 40px
+      padding-right: 40px
+      padding-top: 0
+    }
+
+    &__footer {
+      border-top: 1px solid #E0E0E0
+      padding-top: 20px;
+    }
+  }
+}
+
+.el-loading-mask {
+  border-radius: 3px
+
+  .el-loading-spinner {
+    transform: scale(0.7)
+  }
+}
+
+.el-message {
+  max-width: 90vw;
+  min-width: 300px;
+  border: none;
+  border-radius: 3px;
+  padding-top: 12px;
+  padding-bottom: 16px;
+
+  .el-message__content {
+    line-height: 1.5 !important;
+  }
+
+  &--info {
+    background-color: #f7f8fc;
+    box-shadow: inset 0px -2px 0px #dfe4ef;
+    .el-message__content {
+      color: #333 !important;
+    }
+  }
+
+  &--error {
+    background-color: #faf8f7;
+    box-shadow: inset 0px -2px 0px #f7d8d8;
+  }
+
+  &--success {
+    background-color: #f7f9f7;
+    box-shadow: inset 0px -2px 0px #c2e1b2;
+  }
+}
