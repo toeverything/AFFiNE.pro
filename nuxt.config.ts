@@ -56,10 +56,27 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/content',
+    '@nuxtjs/i18n',
     '@element-plus/nuxt',
     'unplugin-icons/nuxt',
     'nuxt-icons',
     '@unocss/nuxt',
     '@pinia/nuxt',
-  ]
+  ],
+
+  i18n: {
+    locales: [
+      { code: 'enUS', iso: 'en-US', name: 'English', file: 'en-US.js' },
+      { code: 'zhHans', iso: 'zh-Hans', name: '简体中文', file: 'zh-Hans.js' }
+    ],
+    vueI18n: {
+      fallbackLocale: {
+        'zhHans': [ 'zh' ],
+        'enUS': [ 'en' ]
+      },
+    },
+    langDir: 'locales',
+    strategy: 'no_prefix',
+    defaultLocale: 'en'
+  }
 })
