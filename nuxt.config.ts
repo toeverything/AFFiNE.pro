@@ -29,6 +29,18 @@ export default defineNuxtConfig({
         { name: 'og:description', content: 'There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.' },
         { name: 'theme-color', content: '#556cd6' },
       ],
+      script: [
+        { id: 'check-dark-light',
+          children: `
+            ;(() => {
+              const preference = localStorage.getItem('vueuse-color-scheme')
+              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+              if (!preference || preference === 'auto' ? prefersDark : preference === 'dark') {
+                document.documentElement.classList.add('dark')
+              }
+            })()
+          ` }
+      ]
     }
   },
 
