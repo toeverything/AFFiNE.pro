@@ -7,7 +7,7 @@
   .flex
     el-button( @click="toggleDark()" ) {{ isDark ? 'Dark' : 'Light' }}
 
-  .flex
+  .flex( class="mt-10 lt-lg:mt-2 w-full" )
     select( v-model="locale" )
       option( v-for="item in locales" :value="item.code" ) {{ item.name }}
 
@@ -28,4 +28,8 @@ watch(locale, () => {
 <style lang="stylus">
 .page-home
   color: $primary87
+  font-size: fluid-value()
+
+  @media $mediaInMobile
+    padding-top: 10px
 </style>
