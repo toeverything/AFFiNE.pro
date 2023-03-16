@@ -40,6 +40,7 @@ a
 // Common
 .nuxt-icon
   display: inline-flex
+  vertical-align: middle
   line-height: 1
 
   svg

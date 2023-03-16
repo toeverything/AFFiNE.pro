@@ -21,7 +21,7 @@ export default defineConfig({
   ],
   theme: {
     breakpoints: {
-      xs: '28rem',
+      xs: '30rem',
       sm: '48rem',
       md: '64rem',
       lg: '75rem',

@@ -27,9 +27,10 @@
             nuxt-link.nav-item.flex( :to="PATH.AFFiNE_BLOCK_SUITE" target="_blank") toeverything/blocksuite
             nuxt-link.nav-item( :to="PATH.AFFiNE_OCTO_BASE" target="_blank") toeverything/OctoBase
       .right-part.theme-switcher-part
-        .nav-list
-          .list-name( class="lt-sm:hidden" ) {{ $t('websiteTheme') }}
-          theme-switcher
+        client-only
+          .nav-list
+            .list-name( class="lt-sm:hidden" ) {{ $t('websiteTheme') }}
+            theme-switcher
 
   .container.is-fluid.fluid-row.copyright-row
     .flex.justify-between(
@@ -39,7 +40,7 @@
       .links.flex.items-center
         nuxt-link( to="/terms" ) {{ $t('terms') }}
         .link-divider
-        nuxt-link( to="/privacy" ) {{ $t('Privacy') }}
+        nuxt-link( to="/privacy" ) {{ $t('privacy') }}
 
 </template>
 

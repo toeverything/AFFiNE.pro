@@ -5,7 +5,16 @@ html.dark {
   --primary-color-l: 61%;
 
   --el-color-primary: s('hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l))');
+  --el-color-primary-light-3: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 5%))')
+  --el-color-primary-light-5: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 10%))')
+  --el-color-primary-light-7: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 15%))')
+  --el-color-primary-light-8: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 26%))')
+  --el-color-primary-light-9: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 37%))')
   --el-color-primary-dark-2: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) - 10%))');
+}
+
+html.dark {
+  --el-color-primary-light-9: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) - 70%))')
 }
 
 :root {
@@ -15,22 +24,21 @@ html.dark {
   --el-color-success-light-5: #cbddd3 // Disabled
 
   --el-fill-color-light: #f5faf6;
-  --el-text-color-regular: rgba(12, 12, 12, 0.5);
+  --el-text-color-regular: var(--primary) !important;
   --el-border-radius-base: 6px
 }
 
 .app {
   .el-button {
-    font-weight: 700
-    font-size: 12px
+    font-weight: 800
     background-color: var(--el-button-bg-color);
-
-    &:not(.is-circle):not(.round-icon-button) {
-      min-width: 100px
-    }
 
     &.is-link {
       background: transparent
+    }
+
+    &--large {
+      font-size: 20px
     }
 
     &--primary {
@@ -43,9 +51,16 @@ html.dark {
         border-color: var(--el-color-primary-light-3) !important
         color: white !important
       }
+
+      &:active {
+        background-color: var(--el-color-primary-light-5) !important
+      }
     }
 
     &--default {
+      background-color: #fff
+      color: #0F0F0F !important
+
       &:hover,
       &:focus {
         background-color: #efefef !important
