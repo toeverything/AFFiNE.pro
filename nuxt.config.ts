@@ -82,14 +82,11 @@ export default defineNuxtConfig({
       { code: 'zhHans', iso: 'zh-Hans', name: '简体中文', file: 'zh-Hans.js' }
     ],
     vueI18n: {
-      fallbackLocale: {
-        'zhHans': [ 'zh' ],
-        'enUS': [ 'en' ]
-      },
+      fallbackLocale: 'enUS'
     },
     langDir: 'locales',
     strategy: 'no_prefix',
-    defaultLocale: 'en'
+    defaultLocale: 'enUS'
   },
 
 })

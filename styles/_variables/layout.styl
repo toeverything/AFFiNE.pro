@@ -27,7 +27,7 @@ $mediaMobileMin = s('(min-width: %s)', $breakpoints['sm']['size'])
 $mediaMobileMax = s('(max-width: %s)', ($breakpoints['sm']['size'] - 1/$remFontSize))
 
 // MD Breakpoints，Mobile Fisrt
-$mediaInXS      = '(max-width: 599px)'
+$mediaInXS      = '(max-width: 27.9rem)'
 $mediaInSM      = '(min-width: 600px) and (max-width: 959px)'
 $mediaInMD      = '(min-width: 960px) and (max-width: 1263px)'
 $mediaInLG      = '(min-width: 1264px) and (max-width: 1903px)'
@@ -40,3 +40,6 @@ $mediaInDesktop = '(min-width: 768px)'
 $mediaInSmallScreen  = s('(min-width: 0px) and %s', s('(max-width: 959px)'))
 $mediaInMiddleScreen  = s('(min-width: 0px) and %s', s('(max-width: 1315px)'))
 $mediaInBigScreen = '(min-width: 1280px)'
+
+// Widths
+$containerMaxWidth = 1512px

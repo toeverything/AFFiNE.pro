@@ -24,6 +24,7 @@ body
   margin: 0
   font-family: "Inter", "Roboto", "Helvetica", "Arial", sans-serif
   background: $secondary100
+  color: $primary100
   font-size: 1rem
   line-height: 1.5
   letter-spacing: 0.00938em
@@ -31,13 +32,26 @@ body
 a
   text-decoration: none
   color: inherit
+  transition: color 268ms
 
 *, :before, :after
   box-sizing: border-box
 
 // Common
-.nuxt-icon svg
-  margin: 0 !important
+.nuxt-icon
+  display: inline-flex
+  line-height: 1
+
+  svg
+    margin: 0 !important
+
+// Container
+.container
+  width: 100%
+  max-width: 94.5rem !important
+
+  &.is-fluid
+    max-width: 100% !important
 
 // Page
 .page

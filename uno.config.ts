@@ -13,7 +13,7 @@ export default defineConfig({
     presetWind()
   ],
   transformers: [
-    transformerDirectives({ enforce: 'pre' }),
+    transformerDirectives(),
   ],
   extractors: [
     extractorSplit,
@@ -25,7 +25,7 @@ export default defineConfig({
       sm: '48rem',
       md: '64rem',
       lg: '75rem',
-      xl: '90rem',
+      xl: '94.5rem',
     }
   }
 })
