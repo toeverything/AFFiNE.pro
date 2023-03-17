@@ -10,6 +10,8 @@
 <style lang="stylus">
 .default-layout
   min-height: 500px
+  position relative
+  overflow: hidden
 
   .fluid-container
     height: 100%
