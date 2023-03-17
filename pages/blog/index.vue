@@ -106,6 +106,10 @@ useHead({
   title: 'Blog',
 })
 
+definePageMeta({
+  heroType: 'blog'
+})
+
 const { arrivedState, x } = useScroll(tagListEl, { behavior: 'smooth' })
 </script>
 
@@ -115,7 +119,7 @@ const { arrivedState, x } = useScroll(tagListEl, { behavior: 'smooth' })
 
   .blog-container
     min-height: 50vh
-    padding: 24px 16px
+    padding: fluid-value(24, 60) 16px
     max-width: (1200px + 32px)
     width: 100%
     margin: 0 auto

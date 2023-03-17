@@ -62,7 +62,7 @@ const loadData = async () => {
     asyncOptions.isError = false
     asyncOptions.isLoading = true
     const blog = await useFetchWithCache<any>('/api/blog')
-    if (blog.value.pages?.length) {
+    if (blog.value?.pages.length) {
       store.blog = blog.value.pages
     }
     article.value = store.blog.find(item => item.slug === route.params.slug)
@@ -106,7 +106,8 @@ const pageMeta = computed(() => {
 })
 
 definePageMeta({
-  keepalive: false
+  keepalive: false,
+  heroType: 'blog'
 })
 
 await loadData()

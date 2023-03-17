@@ -30,7 +30,7 @@ const listenToScroll = () => {
 <style lang="stylus">
 .site-header
   position relative
-  background: $secondary100
+  // background: $secondary100
   z-index: $zIndexHeader
 
   .header-navbar-mobile
