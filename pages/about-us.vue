@@ -3,6 +3,9 @@
 </template>
 
 <script lang="ts" setup>
+useHead({
+  title: 'About US'
+})
 </script>
 
 <style lang="stylus">

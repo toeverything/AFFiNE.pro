@@ -1,11 +1,16 @@
 import { defineStore } from 'pinia'
 import { useLocalStorage } from '@vueuse/core'
 import { getCookie } from 'typescript-cookie'
+import { ContentFileMeta } from '~/services/blog/resolveContentFile'
 
 const userInitial = {
   username: null,
   email: 'name@email.com',
   token: null
+}
+
+type MainState = {
+  blog: ContentFileMeta[]
 }
 
 export const useStore = defineStore('main', {
@@ -22,10 +27,12 @@ export const useStore = defineStore('main', {
       nextUrl: '/me',
     },
 
+    blog: [],
+
     // Entity
     domain: {
     }
-  }),
+  } as MainState),
 
   getters: {
     token: (state) => {

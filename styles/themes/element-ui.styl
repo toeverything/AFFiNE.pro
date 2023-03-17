@@ -10,7 +10,8 @@ html.dark {
   --el-color-primary-light-7: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 15%))')
   --el-color-primary-light-8: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 26%))')
   --el-color-primary-light-9: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 37%))')
-  --el-color-primary-dark-2: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) - 10%))');
+  --el-color-primary-dark-2: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) - 10%))')
+  --el-mask-color: $primary10
 }
 
 html.dark {
@@ -23,7 +24,7 @@ html.dark {
   --el-color-success-dark-2: #386D54; // Active
   --el-color-success-light-5: #cbddd3 // Disabled
 
-  --el-fill-color-light: #f5faf6;
+  --el-fill-color-light: #f4f4f4;
   --el-text-color-regular: var(--primary) !important;
   --el-border-radius-base: 6px
 }
@@ -126,13 +127,18 @@ html.dark {
       padding-top: 20px;
     }
   }
-}
 
-.el-loading-mask {
-  border-radius: 3px
+  .el-loading-mask {
+    border-radius: 3px
+    z-index: 100
 
-  .el-loading-spinner {
-    transform: scale(0.7)
+    .el-loading-spinner {
+      // transform: scale(0.7)
+
+      .path {
+        stroke-width: 3px
+      }
+    }
   }
 }
 

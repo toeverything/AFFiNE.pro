@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   app: {
     keepalive: true,
     head: {
-      title: 'AFFiNE - All In One Workos',
+      titleTemplate: '%s | AFFiNE - All In One Workos',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' },
         { name: 'twitter:card', content: 'summary_large_image' },
@@ -29,7 +29,6 @@ export default defineNuxtConfig({
         { name: 'og:url', content: 'https://affine.pro' },
         { name: 'og:image', content: 'https://affine.pro/og.jpeg' },
         { name: 'og:description', content: 'There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.' },
-        { name: 'theme-color', content: '#556cd6' },
       ],
       script: [
         { id: 'check-dark-light',

@@ -1,6 +1,7 @@
 <template lang="pug">
-a.scroll-nuxt-link(
+a.scroll-link(
   @click.stop="handleRootClick"
+  :class="{ 'is-active': to === '/' ? route.path === to : route.path.startsWith(to) }"
 )
   slot
 </template>
@@ -28,6 +29,6 @@ const handleRootClick = () => {
 </script>
 
 <style lang="stylus">
-.scroll-nuxt-link
+.scroll-link
   cursor pointer
 </style>

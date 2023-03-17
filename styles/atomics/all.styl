@@ -12,7 +12,7 @@
   color: var(--brand)
 
 .text-brand-grad
-  color: transparent
+  color: transparent !important
   background-image: var(--brand-gradient)
   background-clip: text
 
@@ -20,3 +20,13 @@
   background-color: #D9D9D9
   background-size: cover
   background-position: center
+
+.transparent-scroll
+  &::-webkit-scrollbar
+    width: 1px
+
+  &::-webkit-scrollbar *
+    background: transparent
+
+  &::-webkit-scrollbar-thumb
+    background: rgba(255,0,0,0.001) !important

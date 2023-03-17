@@ -23,6 +23,13 @@ const toggleDark = useToggle(isDark)
 watch(locale, () => {
   setLocaleCookie(locale.value)
 })
+
+useHead({
+  titleTemplate: 'AFFiNE - All In One Workos',
+  meta: [
+    { name: 'twitter:title', content: 'AFFiNE - All In One Workos' },
+  ]
+})
 </script>
 
 <style lang="stylus">

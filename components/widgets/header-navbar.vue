@@ -3,33 +3,35 @@
   :style="{ '--affix-progress': affixProgress }"
 )
   .navbar-placeholder
-  .navbar-fluid-container.flex.items-center
+  .navbar-fluid-container.flex.items-center(
+    :class="{ 'is-invisible': y > 100 }"
+  )
     .flex.flex-1.justify-between
-      nuxt-link( to="/" )
+      nuxt-link.handler( to="/" )
         nuxt-icon.navbar-logo( name="logo" )
 
-      client-only
-        .right-part.flex.items-center.gap-52px
-          nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" )
+      .right-part.flex.items-center.gap-52px
+        nuxt-link.handler( :to="PATH.AFFiNE_COMMUNITY" target="_blank" )
+          client-only
             el-button.try-button.out-try-button(
               size="large"
               :type="isDark ? 'default' : 'primary'"
             ) {{ $t('tryItOnline') }}
 
-          nuxt-link( :to="PATH.AFFiNE_GITHUB" target="_blank" )
-            .out-github-button.flex.items-center.justify-center
-              nuxt-icon.text-30px( name="github" )
+        nuxt-link.handler( :to="PATH.AFFiNE_GITHUB" target="_blank" )
+          .out-github-button.flex.items-center.justify-center
+            nuxt-icon.text-30px( name="github" )
 
   .navbar-fixed.flex.items-center
-    .menu-list.flex.items-center.gap-40px
+    .menu-list.flex.items-center.gap-13px
       .nav-item
-        scroll-nuxt-link( to="/" ) {{ $t('home') }}
+        scroll-link( to="/" ) {{ $t('home') }}
       .nav-item
-        scroll-nuxt-link( to="/about-us" ) {{ $t('aboutUs') }}
+        scroll-link( to="/about-us" ) {{ $t('aboutUs') }}
       .nav-item
         nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" ) {{ $t('community') }}
       .nav-item
-        scroll-nuxt-link( to="/blog" ) {{ $t('blog') }}
+        scroll-link( to="/blog" ) {{ $t('blog') }}
       el-dropdown(
         trigger="click" size="large"
         popper-class="lang-switcher-dropdown"
@@ -49,8 +51,8 @@
             )
               | {{ item.name }}
     .right-part.flex.items-center.gap-25px
-      client-only
-        nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" )
+      nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" )
+        client-only
           el-button.try-button(
             :type="isDark ? 'default' : 'primary'"
           ) {{ $t('tryItOnline') }}
@@ -83,6 +85,7 @@ const affixProgress = computed(() => {
   --navbar-height: 114px
   --navbar-border-color: var(--primary-gray)
   --navbar-bg-color:  rgba(255, 255, 255, 0.7)
+  --navbar-active-bg-color: #E7E7E7
   --github-border-color: #A4A4A4
 
   .navbar-logo
@@ -111,6 +114,10 @@ const affixProgress = computed(() => {
     padding-right: 62.5px
     height: var(--navbar-height)
     opacity: calc(1 - var(--affix-progress) * 2)
+    pointer-events: none
+
+    &:not(.is-invisible) .handler
+      pointer-events: initial
 
     .out-try-button
       border: 1px solid rgba(255, 255, 255, 0.72)
@@ -138,6 +145,17 @@ const affixProgress = computed(() => {
     overflow: hidden
     background: var(--navbar-bg-color)
     backdrop-filter: blur(14px)
+
+    .nav-item > a,
+    .el-dropdown
+      display: block
+      padding: 0 13.5px
+      border-radius: 52px;
+
+      &.is-active
+        height: 38px
+        line-height: 38px
+        background: var(--navbar-active-bg-color);
 
     .right-part
       overflow: hidden
@@ -169,6 +187,7 @@ const affixProgress = computed(() => {
     --github-border-color: #A4A4A4
     --navbar-border-color: #717171
     --navbar-bg-color: rgba(0, 0, 0, 0.7)
+    --navbar-active-bg-color: #383838
 
 .lang-switcher-dropdown
   margin-top: 12px
