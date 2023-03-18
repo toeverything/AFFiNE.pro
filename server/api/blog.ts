@@ -1,8 +1,19 @@
+import { Cacheables } from 'cacheables'
 import { getWorkspacePages } from '~/services/blog/getWorkspacePages'
 
-export default defineEventHandler(async (event) => {
+const cache = new Cacheables({
+  logTiming: true,
+  log: true
+})
 
-  const pages = await getWorkspacePages()
+export default defineEventHandler(async (event) => {
+  const getData = () =>
+    cache.cacheable(() => getWorkspacePages(), `${event.node.req.url}`, {
+      cachePolicy: 'max-age',
+      maxAge: 1000 * 3600 * 4,
+    })
+
+  const pages = await getData()
 
   return {
     pages

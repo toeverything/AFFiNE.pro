@@ -11,6 +11,9 @@ const userInitial = {
 
 type MainState = {
   blog: ContentFileMeta[]
+  context: {
+    lastFetched: Record<string, any>
+  }
 }
 
 export const useStore = defineStore('main', {
@@ -25,6 +28,7 @@ export const useStore = defineStore('main', {
 
     context: {
       nextUrl: '/me',
+      lastFetched: useLocalStorage('affine/lastFetched', {}),
     },
 
     blog: [],
