@@ -48,11 +48,18 @@ a
 
 // Container
 .container
+  margin: 0 auto
   width: 100%
   max-width: 94.5rem !important
 
   &.is-fluid
     max-width: 100% !important
+
+.md-container
+  padding: 0 16px
+  max-width: (1200px + 32px)
+  width: 100%
+  margin: 0 auto
 
 // Page
 .page

@@ -10,3 +10,7 @@ export const PATH = {
   AFFiNE_OCTO_BASE: 'https://github.com/toeverything/octobase',
   AFFiNE_COMMUNITY: 'https://community.affine.pro/',
 }
+
+export const INFO = {
+  CONTACT_EMAIL: 'contact@toeverything.info'
+}

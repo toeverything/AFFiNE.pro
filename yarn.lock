@@ -2010,6 +2010,11 @@ acorn@^8.5.0, acorn@^8.6.0, acorn@^8.8.1, acorn@^8.8.2:
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.8.2.tgz"
   integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
 
+affine-reader@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/affine-reader/-/affine-reader-0.1.1.tgz#28246f7ace8877cd1f24f027f11e6f6b7e25922d"
+  integrity sha512-dFxVfwzSmVXp8s/UhLX8v5QUYxrcjLpCY2zee1uoORqN4Ht3ti1Y6khOi/2BEPHONS/u89uF5wPRbllZZH9NOA==
+
 agent-base@6:
   version "6.0.2"
   resolved "https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz"
@@ -2229,11 +2234,6 @@ bl@^5.0.0:
     buffer "^6.0.3"
     inherits "^2.0.4"
     readable-stream "^3.4.0"
-
-blocksuite-reader@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/blocksuite-reader/-/blocksuite-reader-0.0.6.tgz#0af833a86a85b225ab0f1cc3fb23ba1b19cdeb19"
-  integrity sha512-zMKCc98w3KOXKy/7NZmCHMDanwshBx6B1AQpnihT9up5LStjtDyvs2zAZTzrZkdDu+lI8ksJEzVifyoBPOKsWQ==
 
 boolbase@^1.0.0:
   version "1.0.0"

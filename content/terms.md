@@ -1,7 +1,5 @@
 # Terms & Conditions
 
-Terms and Conditions
-
 This Agreement (“Agreement”) is a legal agreement between you (either an individual or an entity) and TOEVERYTHING PTE. LTD. (“Company”) and applies to your use of the [Software] (“Software”) provided by Company. By accessing or using the Software, you agree to be bound by the terms and conditions of this Agreement. If you do not agree to the terms and conditions of this Agreement, do not use the Software.
 
 ### 1. License

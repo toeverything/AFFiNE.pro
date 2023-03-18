@@ -1,4 +1,4 @@
-import type { WorkspacePage } from 'blocksuite-reader'
+import type { WorkspacePage } from 'affine-reader'
 import { Buffer as BufferPolyfill } from 'buffer'
 import grayMatter from 'gray-matter'
 import rehypePrism from 'rehype-prism-plus'

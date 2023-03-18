@@ -53,6 +53,11 @@ const isFromList = ref(false)
 
 const asyncOptions = reactive({
   emptyTips: 'Article Not Found',
+  errorTips: 'Article Not Found',
+  errorActionText: 'Back to Home',
+  onErrorAction: () => {
+    router.push('/')
+  },
   isLoading: true,
   isError: false
 })
@@ -235,6 +240,10 @@ const handleReturnClick = () => {
     .nuxt-icon
       font-size: 33px
       margin-right: 33px
+
+  .async-container
+    .el-empty
+      margin-top: 10vh
 
   /html.dark &
     --tag-color: #E6E6E6

@@ -42,17 +42,19 @@ const rootClass = computed(() => {
     background-size: 20px 20px
     background-position: 20px 20px
     height: 1674px
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 44%, transparent 90%)
+
 
     /html.dark &
       --dot: #656565
 
   .blur-layer
     z-index: 10
-    background: rgba(255, 255, 255, 0.1);
+    background: $secondary10;
     backdrop-filter: blur(150px)
     backface-visibility: hidden
     height: 1600px
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 44%, transparent 90%)
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 80%, transparent 90%)
     max-blend-mode: multiply
 
   .ellipse

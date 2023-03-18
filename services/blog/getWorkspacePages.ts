@@ -1,4 +1,4 @@
-import { getBlocksuiteReader } from 'blocksuite-reader'
+import { getBlocksuiteReader } from 'affine-reader'
 import { ContentFileMeta, parseWorkspacePageMeta } from './resolveContentFile'
 
 const reader = getBlocksuiteReader({
