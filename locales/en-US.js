@@ -11,6 +11,12 @@ export default {
   blog: 'Blog',
   all: 'All',
   allPosts: 'All posts',
+
+  overflowPage: {
+    snsTitle: 'Join our Community',
+    snsDesc: 'AFFiNE is an <span class="hashtag">#OpenSource</span> software, built with <span class="text-bold">BlockSuite</span> and OctoBase'
+  },
+
   aboutUsPage: {
     slogan: 'To Shape, <br class="show-in-xs" />not to adapt',
     desc: 'Deliver Building Blocks for Future SaaS Applications.',

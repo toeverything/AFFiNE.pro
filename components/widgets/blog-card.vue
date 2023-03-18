@@ -90,6 +90,9 @@ const publishDate = useDateFormat(new Date(props.meta.updated || Date.now()), 'M
     &:hover
       opacity: 0.8
 
+  img.card-cover
+    background: var(--el-fill-color-light)
+
   .user-name
     font-weight: 700
     font-size: 14px
