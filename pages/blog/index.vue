@@ -198,13 +198,10 @@ const { arrivedState, x } = useScroll(tagListEl, { behavior: 'smooth' })
         line-height: 14px;
 
   .blog-list
-    display: flex
+    display: grid
     column-gap: fluid-value(16, 102, 768)
     row-gap: fluid-value(34, 68, 768)
-    flex-wrap: wrap
-
-    > *
-      flex: 40%;
+    grid-template-columns: 1fr 1fr
 
     @media $mediaInXS
       flex-direction: column

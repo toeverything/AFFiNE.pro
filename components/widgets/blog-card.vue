@@ -4,6 +4,7 @@ nuxt-link.blog-card.flex.flex-col(
 )
   el-image.card-cover(
     v-if="lazy && meta.cover"
+    :lazy="lazy"
     :src="meta.cover"
   )
   img.card-cover(
