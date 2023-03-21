@@ -6,10 +6,18 @@
       v-loading="asyncOptions.isLoading"
     )
       blog-card.cover-blog-card(
+        v-if="blogHero"
         :meta="blogHero"
       )
 
-    .tags-list-wrapper
+    el-empty(
+      v-if="!asyncOptions.isLoading && !blogHero"
+      description="No articles"
+    )
+
+    .tags-list-wrapper(
+      v-if="blogTags?.length"
+    )
       .scroll-indicator.dir-left(
         @click="x -= 200"
         :class="{ 'is-show': x > 0 }"

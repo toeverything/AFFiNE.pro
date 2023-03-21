@@ -55,8 +55,8 @@ export function parseWorkspacePageMeta(page: WorkspacePage): ContentFileMeta {
       (typeof tags === 'string' && tags.split(',').map((tag) => tag.trim())) ||
       null,
     description: description || null,
-    created: (created as unknown as Date)?.getTime() || null,
-    updated: (updated as unknown as Date)?.getTime() || null,
+    created: (created instanceof Date && created.getTime()) || null,
+    updated: (updated instanceof Date && updated.getTime()) || null,
     layout: layout || null,
     id: page.id,
     slug: slug || page.id,

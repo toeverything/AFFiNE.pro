@@ -1,8 +1,8 @@
 <template lang="pug">
-.overflow-sns-card-wrapper(
+.overview-sns-card-wrapper(
   :style="{ '--x': `${elementX}px`, '--y': `${elementY}px` }"
 )
-  nuxt-link.overflow-sns-card(
+  nuxt-link.overview-sns-card(
     ref="el"
     :to="sns.link"
     target="_blank"
@@ -47,7 +47,7 @@ const { elementX, elementY } = useMouseInElement(el, { handleOutside: false })
 </script>
 
 <style lang="stylus">
-.overflow-sns-card
+.overview-sns-card
   display flex
   flex-direction: column
   justify-content: center

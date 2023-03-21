@@ -47,6 +47,10 @@ a
     margin: 0 !important
 
 // Container
+.base-container
+  margin: 0 auto
+  width: 100%
+
 .container
   margin: 0 auto
   width: 100%

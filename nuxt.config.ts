@@ -78,15 +78,15 @@ export default defineNuxtConfig({
 
   i18n: {
     locales: [
-      { code: 'enUS', iso: 'en-US', name: 'English', file: 'en-US.js' },
-      { code: 'zhHans', iso: 'zh-Hans', name: '简体中文', file: 'zh-Hans.js' }
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en-US.js' },
+      // { code: 'zhHans', iso: 'zh-Hans', name: '简体中文', file: 'zh-Hans.js' }
     ],
     vueI18n: {
-      fallbackLocale: 'enUS'
+      fallbackLocale: 'en'
     },
     langDir: 'locales',
     strategy: 'no_prefix',
-    defaultLocale: 'enUS'
+    defaultLocale: 'en'
   },
 
   image: {

@@ -13,9 +13,13 @@ export default defineEventHandler(async (event) => {
       maxAge: 1000 * 3600 * 4,
     })
 
-  const pages = await getData()
-
-  return {
-    pages
+  try {
+    const pages = await getData()
+    return {
+      pages
+    }
+  } catch(error) {
+    console.log('[API] get blog error', error)
+    throw error
   }
 })

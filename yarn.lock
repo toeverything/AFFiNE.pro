@@ -1499,6 +1499,11 @@
   resolved "https://registry.npmjs.org/@trysound/sax/-/sax-0.2.0.tgz"
   integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
 
+"@tweakpane/core@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@tweakpane/core/-/core-1.1.6.tgz#386c9946150d20dc705c981a876c305487495c23"
+  integrity sha512-/pDdbdXHI1xv2763K/45sVJ2IrwUDZ5rklbfgb70EZ4wjnAMrWNoYJ20Z3QDS6N13IEkde50FKokFre35rSW1Q==
+
 "@types/debug@^4.0.0":
   version "4.1.7"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.7.tgz#7cc0ea761509124709b8b2d1090d8f6c17aadb82"
@@ -6971,6 +6976,11 @@ tunnel@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/tunnel/-/tunnel-0.0.6.tgz#72f1314b34a5b192db012324df2cc587ca47f92c"
   integrity sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg==
+
+tweakpane@^3.1.7:
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/tweakpane/-/tweakpane-3.1.7.tgz#04d2832c595178ffad6a06638feed65624a54753"
+  integrity sha512-8JF0Ri3cPTv/tUwrb28FBalB6XTW+m3pm2BUMz8gXkvppMjSQ89RMOF/jLdaWhrkRnSayPp5WX9lTDXNqRgK5Q==
 
 type-fest@^0.21.3:
   version "0.21.3"

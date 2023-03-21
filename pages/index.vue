@@ -3,8 +3,12 @@
   .container
     //- nuxt-link( to="/blog/hello" ) {{ $t('hello') }}
 
+  .section-hero
+    .base-container.hero-container
+      overview-hero
+
   .section-sns
-    overflow-sns
+    overview-sns
 
 </template>
 
@@ -19,11 +23,17 @@ useHead({
 
 <style lang="stylus">
 .page-overview
-  color: $primary87
+  color: var(--primary)
   font-size: fluid-value()
 
   @media $mediaInMobile
     padding-top: 10px
+
+  .section-title
+    font-weight: 800;
+    font-size: fluid-value(32, 64);
+    line-height: (77/64);
+    text-align: center
 
   .section-grad2-title
     font-weight: 800;
@@ -35,6 +45,41 @@ useHead({
 
     /html.dark &
       background-image: linear-gradient(180deg, #A8C3FF 0%, #417DFF 100%)
+
+  .section-desc
+    text-align: center
+
+  .try-it-button
+    padding: 12.5px 73px
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    background: linear-gradient(180deg, #0E58F5 0%, #396BD8 31.77%, #1443A9 76.04%, #0043D3 100%);
+    box-shadow: 0px 4px 21px rgba(14, 85, 238, 0.54), 0px 4px 84px rgba(138, 175, 255, 0.3);
+    border-radius: 44.1161px
+    color: #E6E6E6;
+    transition: 368ms
+
+    @media $mediaInXS
+      padding: 10px 51px;
+
+    &:hover
+      box-shadow: 0px 4px 80px #1D62F4, 0px 4px 21px rgba(14, 85, 238, 0.54), 0px 4px 84px rgba(138, 175, 255, 0.3);
+
+    &:active
+      transform: translateY(2px)
+
+    /html.dark &
+      background: linear-gradient(179.54deg, #6A51FF 2.51%, #4326FF 16.25%, #003096 94.57%, #0A3EAD 101.87%);
+      box-shadow: 0px 4px 21px rgba(14, 85, 238, 0.54), 0px 4px 84px rgba(138, 175, 255, 0.3);
+
+      &:hover
+        box-shadow: 0px 4px 80px #0043D3, 0px 4px 21px rgba(14, 85, 238, 0.54), 0px 4px 84px rgba(138, 175, 255, 0.3);
+
+  .section-hero
+    .hero-container
+      max-width: (1280px + 68px)
+      padding: 0 fluid-value(32, 100)
 
   .section-sns
     padding: fluid-value(60, 180) 20px

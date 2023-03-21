@@ -12,7 +12,12 @@ export default {
   all: 'All',
   allPosts: 'All posts',
 
-  overflowPage: {
+  overviewPage: {
+    heroTitle: '<span class="hide-in-xs">The </span>Open Source, Privacy First',
+    heroSubtitle: 'Notion Alternative',
+    heroDesc: 'AFFiNE is the next-generation collaborative knowledge base for professionals.',
+    pageMode: 'Page mode',
+    edgelessMode: 'Edgeless mode',
     snsTitle: 'Join our Community',
     snsDesc: 'AFFiNE is an <span class="hashtag">#OpenSource</span> software, built with <span class="text-bold">BlockSuite</span> and OctoBase'
   },

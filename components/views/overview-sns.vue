@@ -1,13 +1,13 @@
 <template lang="pug">
 .overview-sns.flex.flex-col.items-center
-  .sns-title.section-grad2-title {{ $t('overflowPage.snsTitle') }}
+  .sns-title.section-grad2-title {{ $t('overviewPage.snsTitle') }}
   .sns-list.flex.flex-wrap.justify-center.gap-30px
-    overflow-sns-card(
+    overview-sns-card(
       v-for="sns in COMMUNITY_SNS_LIST"
       :sns="sns"
     )
   .sns-desc(
-    v-html="$t('overflowPage.snsDesc')"
+    v-html="$t('overviewPage.snsDesc')"
   )
 
 </template>

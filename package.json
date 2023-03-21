@@ -16,6 +16,7 @@
     "cacheables": "^1.2.2",
     "element-plus": "^2.2.29",
     "lodash.throttle": "^4.1.1",
+    "tweakpane": "^3.1.7",
     "typescript-cookie": "^1.0.4"
   },
   "devDependencies": {
@@ -25,6 +26,7 @@
     "@nuxt/image-edge": "^1.0.0-27968280.9739e4d",
     "@nuxtjs/i18n": "^8.0.0-beta.10",
     "@pinia/nuxt": "^0.4.6",
+    "@tweakpane/core": "^1.1.6",
     "@types/node": "^18.13.0",
     "@unocss/extractor-pug": "^0.49.4",
     "@unocss/nuxt": "^0.49.4",

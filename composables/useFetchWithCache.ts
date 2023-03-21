@@ -24,7 +24,7 @@ export default async <T>(url: string) => {
   }
 
   const lastCache = store.context.lastFetched[url]
-  const isValid = lastCache && lastCache.date + FOUR_HOHURS > Date.now()
+  const isValid = lastCache && lastCache.date + FOUR_HOHURS > Date.now() && lastCache.data
 
   if (process.client) {
     if (lastCache && isValid) {
