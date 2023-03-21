@@ -19,3 +19,7 @@ export const PATH = {
 export const INFO = {
   CONTACT_EMAIL: 'contact@toeverything.info'
 }
+
+export const CONFIG = {
+  ENABLE_LANG_SWITCHER: false
+}

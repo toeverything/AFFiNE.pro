@@ -28,7 +28,9 @@
             nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" ) {{ $t('community') }}
           .nav-item
             nuxt-link( to="/blog" ) {{ $t('blog') }}
-          .nav-item
+          .nav-item(
+            v-if="CONFIG.ENABLE_LANG_SWITCHER"
+          )
             .current-lang.flex.items-center(
               ref="ignoreElRef"
               @click="() => isOpenLangList = !isOpenLangList"
@@ -46,7 +48,7 @@
 
 <script setup lang="ts">
 import { onClickOutside } from '@vueuse/core'
-import { PATH } from '~/utils/constants'
+import { PATH, CONFIG } from '~/utils/constants'
 const { locale, locales, localeProperties, setLocaleCookie } = useI18n()
 
 const props = defineProps<{

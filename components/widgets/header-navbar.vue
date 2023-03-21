@@ -33,6 +33,7 @@
       .nav-item
         scroll-link( to="/blog" ) {{ $t('blog') }}
       el-dropdown(
+        v-if="CONFIG.ENABLE_LANG_SWITCHER"
         trigger="click" size="large"
         popper-class="lang-switcher-dropdown"
       )
@@ -63,7 +64,7 @@
 </template>
 
 <script setup lang="ts">
-import { PATH } from '~/utils/constants'
+import { PATH, CONFIG } from '~/utils/constants'
 import { useDark } from '@vueuse/core'
 
 const { locale, locales, localeProperties, setLocaleCookie } = useI18n()
