@@ -57,6 +57,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/content',
+    '@nuxt/image-edge',
     '@nuxtjs/i18n',
     '@element-plus/nuxt',
     'unplugin-icons/nuxt',
@@ -87,5 +88,11 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
     defaultLocale: 'enUS'
   },
+
+  image: {
+    cloudflare: {
+      baseURL: 'https://affine.pro'
+    }
+  }
 
 })

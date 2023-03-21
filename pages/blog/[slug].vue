@@ -13,8 +13,12 @@
       .all-posts-handler.flex.items-center( @click="handleReturnClick" )
         nuxt-icon( name="ArrowRightSmall" )
         | {{ $t('allPosts') }}
-      img.article-cover.mb-28px(
+      nuxt-img.article-cover.mb-28px(
         v-if="article.cover"
+        format="webp"
+        width="1600"
+        height="800"
+        provider="cloudflare"
         :src="article.cover"
       )
       .article-tag-row.flex.gap-4
@@ -191,6 +195,7 @@ const handleReturnClick = () => {
     object-fit: cover
     object-position: center
     vertical-align: middle
+    height: auto !important
 
   .users-row
     margin-top: 15px

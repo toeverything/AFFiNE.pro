@@ -2,13 +2,21 @@
 nuxt-link.blog-card.flex.flex-col(
   :to="`/blog/${meta.slug}?source=list`"
 )
-  el-image.card-cover(
+  nuxt-img.card-cover(
     v-if="lazy && meta.cover"
-    :lazy="lazy"
+    :loading="lazy ? 'lazy' : 'auto'"
     :src="meta.cover"
+    format="webp"
+    provider="cloudflare"
+    width="1200"
+    height="600"
   )
-  img.card-cover(
+  nuxt-img.card-cover(
     v-else
+    format="webp"
+    provider="cloudflare"
+    width="2400"
+    height="1200"
     :src="meta.cover"
   )
   .blog-tag-row.flex.gap-4
@@ -84,6 +92,7 @@ const publishDate = useDateFormat(new Date(props.meta.updated || Date.now()), 'M
     margin-bottom: 26px
     border-radius: 8px
     width: 100%
+
   .card-cover img,
   img.card-cover
     transition: 368ms
@@ -93,6 +102,7 @@ const publishDate = useDateFormat(new Date(props.meta.updated || Date.now()), 'M
 
   img.card-cover
     background: var(--el-fill-color-light)
+    height: auto !important
 
   .user-name
     font-weight: 700

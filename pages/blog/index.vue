@@ -204,7 +204,7 @@ const { arrivedState, x } = useScroll(tagListEl, { behavior: 'smooth' })
     grid-template-columns: 1fr 1fr
 
     @media $mediaInXS
-      flex-direction: column
+      grid-template-columns: 1fr
       row-gap: 80px
 
   /html.dark &
