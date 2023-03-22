@@ -24,7 +24,7 @@
           .nav-list.need-underline
             .list-name {{ $t('openSource') }}
             nuxt-link.nav-item.flex( :to="PATH.AFFiNE_GITHUB_ORG" target="_blank" ) toeverything/AFFiNE
-            nuxt-link.nav-item.flex( :to="PATH.AFFiNE_BLOCK_SUITE" target="_blank") toeverything/blocksuite
+            nuxt-link.nav-item.flex( :to="PATH.AFFiNE_BLOCK_SUITE" target="_blank") toeverything/BlockSuite
             nuxt-link.nav-item( :to="PATH.AFFiNE_OCTO_BASE" target="_blank") toeverything/OctoBase
       .right-part.theme-switcher-part
         client-only

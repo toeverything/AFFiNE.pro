@@ -6,9 +6,13 @@
 )
   .demo-tab-bar.flex.gap-30px
     .tab-handler( :class="{ 'is-active': mode === 'page' }" @click="() => mode = 'page'" )
-      nuxt-icon( name="mode-page" filled)
+      lottie-hover-icon(
+        animationLink="/lottie-files/page-hover.json"
+      )
     .tab-handler( :class="{ 'is-active': mode === 'edgeless' }" @click="() => mode = 'edgeless'" )
-      nuxt-icon( name="mode-edgeless" filled)
+      lottie-hover-icon(
+        animationLink="/lottie-files/edgeless-hover.json"
+      )
   .demo-sidebar
   .demo-content
     .demo-bg
@@ -38,7 +42,8 @@
 t-pane( title="Overview" )
   t-folder( title="Live Demo" )
     t-input( v-model="params.lightSize" name="hoverLightSize" :opt-params="{min: 10, max: 1000}" )
-    t-input( v-model="params.rotateFactor" name="LogoRotateFactor" :opt-params="{min: 1, max: 100}" )
+    t-input( v-model="params.rotateFactor" name="logoRotateFactor" :opt-params="{min: 1, max: 100}" )
+    //- t-input( v-model="params.iconLottieSpeed" name="iconLottieSpeed" :opt-params="{min: 1, max: 10}" )
 
 </template>
 
@@ -54,6 +59,7 @@ const BASE_WIDTH = 1147
 const mode = ref<DemoMode>('page')
 const scale = ref(1)
 const params = reactive({
+  iconLottieSpeed: 4,
   lightSize: 400,
   rotateFactor: 35,
 })
@@ -100,6 +106,7 @@ gradient-border()
   box-shadow: 0px 1px 45px rgba(51, 51, 51, 0.25)
   border-radius: 20px
   --cross-color: rgba(0, 0, 0, 0.08);
+  --path-color: var(--primary-gray)
 
   .border-card
     display: inline-flex
@@ -113,6 +120,7 @@ gradient-border()
   /html.dark &
     --cross-color: rgba(255, 255, 255, 0.08);
     --secondary: #0E0E0E;
+    --path-color: white
     background: #0E0E0E;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0px 1px 45px rgba(51, 51, 51, 0.25);
@@ -156,24 +164,26 @@ gradient-border()
       width: 60px
       height: 60px
       font-size: 50px
-      color: var(--primary-gray)
       transition: 218ms
       transition-property: background, color
       cursor pointer
 
+      path
+        fill: var(--path-color) !important
+
       &:not(.is-active):hover
-        background: $primary07;
+        // background: $primary07;
 
       &.is-active
         background: #FFFFFF;
-        color: var(--primary)
+        --path-color var(--primary)
 
       /html.dark &
         &.is-active
           background: #2F2F2F;
 
           &:last-child
-            color: var(--brand)
+            --path-color var(--brand)
 
     .nuxt-icon *
       stroke: currentColor !important;
@@ -285,6 +295,12 @@ gradient-border()
     transition-property: background, color
     cursor pointer
     white-space: pre
+
+    &:hover
+      opacity: 0.9
+
+    &:active
+      bottom: -1px
 
   // Case: Different content style
   &.mode-edgeless

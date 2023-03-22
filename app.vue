@@ -14,6 +14,8 @@ import 'element-plus/es/components/message/style/css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import '~/styles/main.styl'
 
+import 'vue3-lottie/dist/style.css'
+
 const locale = ref(en)
 </script>
 
@@ -38,6 +40,9 @@ a
   box-sizing: border-box
 
 // Common
+.lottie-animation-container
+  line-height: 1
+
 .nuxt-icon
   display: inline-flex
   vertical-align: middle

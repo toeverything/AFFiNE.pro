@@ -4457,6 +4457,11 @@ longest-streak@^3.0.0:
   resolved "https://registry.yarnpkg.com/longest-streak/-/longest-streak-3.1.0.tgz#62fa67cd958742a1574af9f39866364102d90cd4"
   integrity sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==
 
+lottie-web@^5.8.1:
+  version "5.10.2"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.10.2.tgz#a1c952b6734759fcd369eba73b6b7e3d9a76ce0b"
+  integrity sha512-d0PFIGiwuMsJYaF4uPo+qG8dEorlI+xFI2zrrFtE1bGO4WoLIz+NjremxEq1swpR7juR10aeOtmNh3d6G3ub0A==
+
 lru-cache@^5.1.1:
   version "5.1.1"
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-5.1.1.tgz"
@@ -7528,6 +7533,14 @@ vue-router@^4.1.6:
   integrity sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ==
   dependencies:
     "@vue/devtools-api" "^6.4.5"
+
+vue3-lottie@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/vue3-lottie/-/vue3-lottie-2.5.0.tgz#0bfa8bffa19235b8593d719b125f9ae0b31c603b"
+  integrity sha512-JwlTzykr4ofPnSXsTAPt571RDrtQNy66H8w/zYBVHNgrCRG4RINI30c/oJx3Dj+XpxuktpKzgfI08tv1FjYkAQ==
+  dependencies:
+    lodash-es "^4.17.21"
+    lottie-web "^5.8.1"
 
 vue@^3.2.47:
   version "3.2.47"
