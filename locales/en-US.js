@@ -18,6 +18,8 @@ export default {
     heroDesc: 'AFFiNE is the next-generation collaborative knowledge base for professionals.',
     pageMode: 'Page mode',
     edgelessMode: 'Edgeless mode',
+    buildWith: 'Build with',
+    and: 'and',
     snsTitle: 'Join our Community',
     snsDesc: 'AFFiNE is an <span class="hashtag">#OpenSource</span> software, built with <span class="text-bold">BlockSuite</span> and OctoBase'
   },

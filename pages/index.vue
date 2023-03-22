@@ -1,11 +1,13 @@
 <template lang="pug">
 .page.page-home.page-overview
-  .container
-    //- nuxt-link( to="/blog/hello" ) {{ $t('hello') }}
+  svg-defs
 
   .section-hero
     .base-container.hero-container
       overview-hero
+
+  .section-build-with
+    overview-build-with
 
   .section-sns
     overview-sns

@@ -284,6 +284,7 @@ gradient-border()
     transform: translate3D(-50%, 50%, 0) scale(var(--scale))
     transition-property: background, color
     cursor pointer
+    white-space: pre
 
   // Case: Different content style
   &.mode-edgeless
