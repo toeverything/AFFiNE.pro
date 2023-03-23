@@ -6,7 +6,7 @@
   .section-title.section-subtitle.text-brand-grad {{ $t('overviewPage.heroSubtitle') }}
   .section-desc {{ $t('overviewPage.heroDesc') }}
   nuxt-link.hero-action.try-it-button(
-    :to="PATH.AFFiNE_COMMUNITY" target="_blank"
+    :to="PATH.AFFINE_DWONHILLS" target="_blank"
   ) {{ $t('tryItOnline') }}
   overview-live-demo
 </template>

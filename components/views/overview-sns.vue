@@ -1,14 +1,15 @@
 <template lang="pug">
-.overview-sns.flex.flex-col.items-center
-  .sns-title.section-grad2-title {{ $t('overviewPage.snsTitle') }}
-  .sns-list.flex.flex-wrap.justify-center.gap-30px
-    overview-sns-card(
-      v-for="sns in COMMUNITY_SNS_LIST"
-      :sns="sns"
+.overview-sns
+  .container.flex.flex-col.items-center
+    .sns-title.section-grad2-title {{ $t('overviewPage.snsTitle') }}
+    .sns-list.flex.flex-wrap.justify-center.gap-30px
+      overview-sns-card(
+        v-for="sns in COMMUNITY_SNS_LIST"
+        :sns="sns"
+      )
+    .sns-desc(
+      v-html="$t('overviewPage.snsDesc')"
     )
-  .sns-desc(
-    v-html="$t('overviewPage.snsDesc')"
-  )
 
 </template>
 
@@ -48,6 +49,10 @@ const COMMUNITY_SNS_LIST = [
 <style lang="stylus">
 .overview-sns
   --hashtag-color: #244EE7
+
+  .container
+    border-top: 1px solid var(--divider-color)
+    padding: fluid-value(60, 180) 20px
 
   .sns-title
     margin-bottom: fluid-value(40, 103)

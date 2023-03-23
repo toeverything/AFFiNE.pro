@@ -29,6 +29,10 @@ interface PaneStateDefinition {
   pane: Ref<Pane>
 }
 
+const PANES: Record<string, Pane | null> = {
+
+}
+
 const PaneContext = Symbol('PaneContext') as InjectionKey<PaneStateDefinition>
 
 function usePaneContext(component: string) {
@@ -64,11 +68,15 @@ export const TPane = defineComponent({
         }
 
         if (el.value instanceof Element || props.float) {
-          pane.value = new Pane({
-            container: props.float ? undefined : el.value as HTMLElement,
-            title: props.title,
-            expanded: props.expanded
-          })
+            pane.value = PANES[props.title as string] || new Pane({
+              container: props.float ? undefined : el.value as HTMLElement,
+              title: props.title,
+              expanded: props.expanded
+            })
+
+          if (props.float && props.title) {
+            PANES[props.title] = pane.value
+          }
         }
       })
     }
@@ -79,7 +87,7 @@ export const TPane = defineComponent({
 
     onUnmounted(() => {
       // console.log('pane.value', pane.value)
-      pane.value?.dispose()
+      // pane.value?.dispose()
     })
 
     onActivated(() => {
@@ -87,8 +95,13 @@ export const TPane = defineComponent({
     })
 
     onDeactivated(() => {
+      if (!pane.value || !PANES[props.title as string]) {
+        pane.value = null
+        return
+      }
       pane.value?.dispose()
       pane.value = null
+      PANES[props.title as string] = null
     })
 
     return () =>

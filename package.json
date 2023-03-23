@@ -15,6 +15,7 @@
     "buffer": "^6.0.3",
     "cacheables": "^1.2.2",
     "element-plus": "^2.2.29",
+    "gsap": "^3.11.5",
     "lodash.throttle": "^4.1.1",
     "tweakpane": "^3.1.7",
     "typescript-cookie": "^1.0.4",

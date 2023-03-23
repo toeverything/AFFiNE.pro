@@ -27,7 +27,7 @@ const { elementX, elementY } = useMouseInElement(el, { handleOutside: false })
 .hover-spotlight-card
   overflow: hidden
   position: relative
-  --light-color: rgba(150,150,150,0.1)
+  --light-color: brand(8)
   --radius: 12px
   --border: 2px
   --y: calc((var(--cursor-y) * 1px))

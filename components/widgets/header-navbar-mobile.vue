@@ -72,7 +72,6 @@ watch(locale, () => {
 
 <style lang="stylus">
 .header-navbar-mobile
-  --navbar-height: 55px
 
   .navbar-placeholder
     height: var(--navbar-height)

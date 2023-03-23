@@ -66,6 +66,10 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
 
+  build: {
+    transpile: ['gsap']
+  },
+
   vite: {
     css: {
       preprocessorOptions: {

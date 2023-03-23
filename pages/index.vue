@@ -9,6 +9,18 @@
   .section-build-with
     overview-build-with
 
+  .section-open-source-everything
+    overview-open-source-everything
+
+  .section-beyond-docs
+    overview-beyond-docs
+
+  .section-privacy-first
+    overview-privacy-first
+
+  .section-build-with-module
+    overview-build-with-module
+
   .section-sns
     overview-sns
 
@@ -82,7 +94,4 @@ useHead({
     .hero-container
       max-width: (1280px + 68px)
       padding: 0 fluid-value(32, 100)
-
-  .section-sns
-    padding: fluid-value(60, 180) 20px
 </style>
