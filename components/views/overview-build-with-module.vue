@@ -42,7 +42,6 @@ const params = reactive({
 })
 
 const setupScrollTrigger = () => {
-  const height = pinContent.value?.getBoundingClientRect().height
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: el.value.$trigger,
@@ -50,12 +49,15 @@ const setupScrollTrigger = () => {
       // markers: true,
       pin: pinContent.value,
       start: "top top",
-      end: `bottom ${height}px`,
+      end: () => {
+        const height = pinContent.value?.getBoundingClientRect().height
+        return `bottom ${height}px`
+      },
       scrub: 1
     }
   })
     .to(scrollProgress, { value: 1, ease: 'none', duration: 1, onUpdate: () => {
-      console.log('overview-build-with-module scrollProgress', scrollProgress.value)
+      // console.log('overview-build-with-module scrollProgress', scrollProgress.value)
   } })
 
   watch(() => params.triggerHeight, () => {
@@ -134,11 +136,12 @@ onMounted(() => {
       line-height: (29/24);
 
   &.enable-hover
-    .icon-blocksuite-wrapper:hover
-      filter: drop-shadow(-40px -100px 250px rgba(18, 70, 255, 0.6)) drop-shadow(40px 100px 250px rgba(215, 169, 252, 0.6)) drop-shadow(0px 4px 47px rgba(255, 255, 255, 0.8));
+    @media $mediaInDesktop
+      .icon-blocksuite-wrapper:hover
+        filter: drop-shadow(-40px -100px 250px rgba(18, 70, 255, 0.6)) drop-shadow(40px 100px 250px rgba(215, 169, 252, 0.6)) drop-shadow(0px 4px 47px rgba(255, 255, 255, 0.8));
 
-    .icon-octobase-wrapper:hover
-      filter: drop-shadow(-40px -100px 250px rgba(169, 187, 252, 0.6)) drop-shadow(40px 100px 250px rgba(169, 252, 237, 0.6)) drop-shadow(0px 4px 47px rgba(255, 255, 255, 0.8));
+      .icon-octobase-wrapper:hover
+        filter: drop-shadow(-40px -100px 250px rgba(169, 187, 252, 0.6)) drop-shadow(40px 100px 250px rgba(169, 252, 237, 0.6)) drop-shadow(0px 4px 47px rgba(255, 255, 255, 0.8));
 
   /html.dark &
     --icon-border: #2E2E2E

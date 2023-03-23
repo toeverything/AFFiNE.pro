@@ -43,6 +43,14 @@ a
 .lottie-animation-container
   line-height: 1
 
+.icon-gradient
+  path
+    fill: url(#brand-gradient) !important
+
+.icon-stroke-gradient
+  path
+    stroke: url(#brand-gradient) !important
+
 .nuxt-icon
   display: inline-flex
   vertical-align: middle

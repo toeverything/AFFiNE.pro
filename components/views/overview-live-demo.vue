@@ -4,6 +4,12 @@
   :class="[ `mode-${mode}` ]"
   :style="{ '--scale': scale }"
 )
+  .onboarding
+    svg-icon-drawing( :isShow="onboardingDrawing.isShowCircle" )
+      nuxt-icon.onboarding-circle.icon-stroke-gradient(
+        ref="onboardingCircle"
+        filled name="onboarding-circle"
+      )
   .demo-tab-bar.flex.gap-30px
     .tab-handler( :class="{ 'is-active': mode === 'page' }" @click="() => mode = 'page'" )
       lottie-hover-icon(
@@ -48,20 +54,27 @@ t-pane( title="Overview" )
 </template>
 
 <script setup lang="ts">
-import { useMouseInElement } from '@vueuse/core'
-import { useResizeObserver } from '@vueuse/core'
+import { gsap } from 'gsap'
+import { useMouseInElement, useResizeObserver, useScroll } from '@vueuse/core'
 
 type DemoMode = 'page' | 'edgeless'
 
 const el = ref(null)
 const contentLogo = ref(null)
+const onboardingCircle = ref(null)
 const BASE_WIDTH = 1147
 const mode = ref<DemoMode>('page')
 const scale = ref(1)
+const scrollState = reactive({
+  y: 0
+})
 const params = reactive({
   iconLottieSpeed: 4,
   lightSize: 400,
   rotateFactor: 35,
+})
+const onboardingDrawing = reactive({
+  isShowCircle: false
 })
 
 const toggleMode = () => {
@@ -82,10 +95,44 @@ const contentLogoVarStyle = computed(() => {
   }
 })
 
+const setupScrollTrigger = () => {
+  gsap.to(onboardingCircle.value, {
+    scrollTrigger: {
+      start: "top center",
+      end: "bottom center",
+      trigger: '.onboarding',
+      onEnter: () => {
+        onboardingDrawing.isShowCircle = true
+      },
+      onEnterBack: () => {
+        onboardingDrawing.isShowCircle = true
+      },
+      onLeave: () => {
+        onboardingDrawing.isShowCircle = false
+      }
+    }
+  })
+}
+
+const listenToScroll = () => {
+  const { y } = useScroll(document)
+  watch(y, () => {
+    scrollState.y = y.value
+    if (scrollState.y < 40) {
+      onboardingDrawing.isShowCircle = false
+    }
+  })
+}
+
 useResizeObserver(el, (entries) => {
   const entry = entries[0]
   const { width } = entry.contentRect
   scale.value = Math.min(1, width/BASE_WIDTH)
+})
+
+onMounted(() => {
+  listenToScroll()
+  setupScrollTrigger()
 })
 </script>
 
@@ -107,6 +154,24 @@ gradient-border()
   border-radius: 20px
   --cross-color: rgba(0, 0, 0, 0.08);
   --path-color: var(--primary-gray)
+  $baseWidth = 1147
+
+  .onboarding
+    position absolute
+    z-index: 233
+    inset: 0
+    pointer-events: none
+    transform: scale(var(--scale))
+    transform-origin: center top
+
+    > *
+      position absolute
+      left: 49%
+      top: -120px
+      transform: translateX(-50%)
+
+  .onboarding-circle
+    font-size: 215px
 
   .border-card
     display: inline-flex
@@ -128,8 +193,8 @@ gradient-border()
   .demo-sidebar
     position absolute
     top: 50%
-    left: percentage(-66/1147)
-    width: percentage(293/1147)
+    left: percentage(-66/$baseWidth)
+    width: percentage(293/$baseWidth)
     aspect-ratio: 293/750
     background-image: url(@/assets/overview/demo-sidebar.png)
     background-size: contain

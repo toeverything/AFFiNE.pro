@@ -30,8 +30,8 @@ const { elementX, elementY } = useMouseInElement(el, { handleOutside: false })
   --light-color: brand(8)
   --radius: 12px
   --border: 2px
-  --y: calc((var(--cursor-y) * 1px))
-  --x: calc((var(--cursor-x) * 1px))
+  --y: s('calc(var(--cursor-y) * 1px)')
+  --x: s('calc(var(--cursor-x) * 1px)')
 
   .spotlight
     pointer-events: none;
