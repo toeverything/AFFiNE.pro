@@ -196,6 +196,7 @@ const handleReturnClick = () => {
     object-position: center
     vertical-align: middle
     height: auto !important
+    background: var(--el-fill-color-light)
 
   .users-row
     margin-top: 15px

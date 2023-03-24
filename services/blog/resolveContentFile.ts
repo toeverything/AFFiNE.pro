@@ -30,39 +30,43 @@ export interface ContentFileMeta {
 }
 
 export function parseWorkspacePageMeta(page: WorkspacePage): ContentFileMeta {
-  const fileMetaRaw = grayMatter(page.md!)
-  const {
-    title,
-    author,
-    tags,
-    publish,
-    description,
-    updated,
-    created,
-    layout,
-    slug
-  } = fileMetaRaw.data
+  try {
+    const fileMetaRaw = grayMatter(page.md!)
+    const {
+      title,
+      author,
+      tags,
+      publish,
+      description,
+      updated,
+      created,
+      layout,
+      slug
+    } = fileMetaRaw.data
 
-  const coverImage = getCoverImage(remark().parse(fileMetaRaw.content))
+    const coverImage = getCoverImage(remark().parse(fileMetaRaw.content))
 
-  return {
-    title: title || null,
-    authors:
-      (typeof author === 'string' &&
-        author.split(',').map((au) => au.trim())) ||
-      null,
-    tags:
-      (typeof tags === 'string' && tags.split(',').map((tag) => tag.trim())) ||
-      null,
-    description: description || null,
-    created: (created instanceof Date && created.getTime()) || null,
-    updated: (updated instanceof Date && updated.getTime()) || null,
-    layout: layout || null,
-    id: page.id,
-    slug: slug || page.id,
-    cover: coverImage,
-    md: page.md ?? '',
-    publish: !!publish
+    return {
+      title: title || null,
+      authors:
+        (typeof author === 'string' &&
+          author.split(',').map((au) => au.trim())) ||
+        null,
+      tags:
+        (typeof tags === 'string' && tags.split(',').map((tag) => tag.trim())) ||
+        null,
+      description: description || null,
+      created: (created instanceof Date && created.getTime()) || null,
+      updated: (updated instanceof Date && updated.getTime()) || null,
+      layout: layout || null,
+      id: page.id,
+      slug: slug || page.id,
+      cover: coverImage,
+      md: page.md ?? '',
+      publish: !!publish
+    }
+  } catch (error) {
+    return {} as ContentFileMeta
   }
 }
 

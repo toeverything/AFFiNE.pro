@@ -108,7 +108,7 @@ const setupScrollTrigger = () => {
         onboardingDrawing.isShowCircle = true
       },
       onLeave: () => {
-        onboardingDrawing.isShowCircle = false
+        // onboardingDrawing.isShowCircle = false
       }
     }
   })

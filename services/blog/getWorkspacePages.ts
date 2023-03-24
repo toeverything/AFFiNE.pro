@@ -27,6 +27,7 @@ export async function getWorkspacePages(invalidateCache = false) {
       return pages
         ?.filter((p) => !p.trash)
         .map((page) => parseWorkspacePageMeta(page))
+        .filter(p => p.title)
     })
     lastFetch = Date.now()
   } else {

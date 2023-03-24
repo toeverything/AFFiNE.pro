@@ -1,6 +1,6 @@
 <template lang="pug">
 .header-navbar(
-  :style="{ '--affix-progress': affixProgress }"
+  :class="{ 'has-ext': y > 100 }"
 )
   .navbar-placeholder
   .navbar-fluid-container.flex.items-center(
@@ -51,16 +51,17 @@
               @click="locale = item.code"
             )
               | {{ item.name }}
-    .right-part.flex.items-center.gap-25px
-      nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" )
-        client-only
-          el-button.try-button(
-            :type="isDark ? 'default' : 'primary'"
-          ) {{ $t('tryItOnline') }}
+    .right-part
+      .flex.items-center.gap-25px
+        nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" )
+          client-only
+            el-button.try-button(
+              :type="isDark ? 'default' : 'primary'"
+            ) {{ $t('tryItOnline') }}
 
-      nuxt-link( :to="PATH.AFFiNE_GITHUB" target="_blank" )
-        .github-button.flex.items-center.justify-center
-          nuxt-icon.text-30px( name="github" )
+        nuxt-link( :to="PATH.AFFiNE_GITHUB" target="_blank" )
+          .github-button.flex.items-center.justify-center
+            nuxt-icon.text-30px( name="github" )
 </template>
 
 <script setup lang="ts">
@@ -88,6 +89,16 @@ const affixProgress = computed(() => {
   --navbar-bg-color:  rgba(255, 255, 255, 0.7)
   --navbar-active-bg-color: #E7E7E7
   --github-border-color: #A4A4A4
+  --affix-progress: 0
+
+  &.has-ext
+    --affix-progress: 1
+
+    .right-part
+      // transition-delay: 0.2s
+
+      .flex
+        transition-delay: 0s
 
   .navbar-logo
     color: var(--logo-color)
@@ -107,17 +118,17 @@ const affixProgress = computed(() => {
     height: var(--navbar-height)
 
   .navbar-fluid-container
-    position fixed
+    position absolute
     z-index: $zIndexHeader
     width: 100%
     top: 0
     padding: 0 50px
     padding-right: 62.5px
     height: var(--navbar-height)
-    opacity: calc(1 - var(--affix-progress) * 2)
+    // opacity: calc(1 - var(--affix-progress) * 2)
     pointer-events: none
 
-    &:not(.is-invisible) .handler
+    &:not(.) .handler
       pointer-events: initial
 
     .out-try-button
@@ -142,7 +153,7 @@ const affixProgress = computed(() => {
     transform: translateX(-50%)
     border: 1px solid var(--navbar-border-color)
     border-radius: 70px
-    padding-left: 26px
+    padding-left: 13px
     overflow: hidden
     background: var(--navbar-bg-color)
     backdrop-filter: blur(14px)
@@ -161,13 +172,24 @@ const affixProgress = computed(() => {
     .right-part
       overflow: hidden
       // @TODO: Pass dynamic container width
-      width: calc(330px * var(--affix-progress))
+      width: calc(343px * var(--affix-progress))
       opacity: calc(var(--affix-progress))
-      padding-left: calc(78.5px * var(--affix-progress))
-      padding-right: 20px
+      padding-left: calc(65.5px * var(--affix-progress))
+      padding-right: 13px
+      transition-duration: 0.5s
+      // transition-timing-function: cubic-bezier(.85,.0,.3,.1)
+      // transition-delay: 0.2s
 
-      > *
-        flex-shrink: 0
+      .flex
+        padding-left: 13px
+        transition-duration: 0.5s
+        // transition-timing-function: cubic-bezier(.85,.0,.3,.1)
+        opacity: calc(var(--affix-progress))
+        // transition-delay: 0.3s
+        transform: translateX(calc(110% * (1 - var(--affix-progress))))
+
+        > *
+          flex-shrink: 0
 
     .try-button
       height: 35px
