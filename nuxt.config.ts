@@ -14,18 +14,18 @@ export default defineNuxtConfig({
   app: {
     keepalive: true,
     head: {
-      titleTemplate: '%s | AFFiNE - All In One Workos',
+      titleTemplate: '%s | AFFiNE - All In One KnowledgeOS',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:url', content: 'https://affine.pro' },
-        { name: 'twitter:title', content: 'AFFiNE - All In One Workos' },
+        { name: 'twitter:title', content: 'AFFiNE - All In One KnowledgeOS' },
         { name: 'twitter:description', content: 'There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.' },
         { name: 'twitter:site', content: '@AffineOfficial' },
         { name: 'twitter:image', content: 'https://affine.pro/og.jpeg' },
         { name: 'og:type', content: 'website' },
         { name: 'og:site_name', content: 'AFFiNE' },
-        { name: 'og:title', content: 'AFFiNE - All In One Workos' },
+        { name: 'og:title', content: 'AFFiNE - All In One KnowledgeOS' },
         { name: 'og:url', content: 'https://affine.pro' },
         { name: 'og:image', content: 'https://affine.pro/og.jpeg' },
         { name: 'og:description', content: 'There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.' },

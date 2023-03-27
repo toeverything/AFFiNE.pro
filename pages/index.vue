@@ -28,9 +28,9 @@
 
 <script setup lang="ts">
 useHead({
-  titleTemplate: 'AFFiNE - All In One Workos',
+  titleTemplate: 'AFFiNE - All In One KnowledgeOS',
   meta: [
-    { name: 'twitter:title', content: 'AFFiNE - All In One Workos' },
+    { name: 'twitter:title', content: 'AFFiNE - All In One KnowledgeOS' },
   ]
 })
 </script>

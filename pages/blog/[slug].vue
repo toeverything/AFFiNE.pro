@@ -93,7 +93,7 @@ const pageMeta = computed(() => {
 
   const title = article.value?.title
     ? article.value?.title + " | AFFiNE"
-    : "Blog | AFFiNE - All In One Workos"; // should always have a title`
+    : "Blog | AFFiNE - All In One KnowledgeOS"; // should always have a title`
   const desc = article.value?.description || 'There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.'
   const url = `${PATH.SHARE_HOST}/blog/${article.value?.slug}`
   const image =  article.value?.cover || 'https://affine.pro/og.jpeg'
