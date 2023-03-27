@@ -74,7 +74,7 @@ const founderMembers: Member[] = [
   },
   {
     name: 'Chi Zhang',
-    title: 'Co-founder & Head of Engineering',
+    title: 'Co-founder & CTO',
     desc: 'He builds AFFiNE with great engineers.',
     avatar: 'https://unavatar.io/github/tzhangchi',
     link: 'https://github.com/tzhangchi',
