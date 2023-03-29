@@ -11,9 +11,8 @@
         .flex.gap-130px.items-start.flex-wrap(
           class="lt-sm:gap-18px lt-md:flex-col"
         )
-          nuxt-icon.icon-logo(
+          affine-logo.icon-logo(
             class="lt-lg:important-hidden"
-            name="logo"
           )
           .nav-list
             .list-name {{ $t('tryItOnline') }}
@@ -69,6 +68,7 @@ const currentYear = new Date().getFullYear()
       opacity: 0.8
 
   .fluid-row
+    max-width: 1712px !important
     padding: 0 fluid-value(18, 100)
 
   .nav-list
@@ -95,7 +95,7 @@ const currentYear = new Date().getFullYear()
       margin-top: 32px
 
     .icon-logo
-      font-size: 91px
+      font-size: 71px
       color: var(--logo-color)
       margin-right: 20px
 
