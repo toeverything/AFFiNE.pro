@@ -27,11 +27,12 @@
             nuxt-link.nav-item.flex( :to="PATH.AFFiNE_BLOCK_SUITE" target="_blank") toeverything/BlockSuite
             nuxt-link.nav-item( :to="PATH.AFFiNE_OCTO_BASE" target="_blank") toeverything/OctoBase
       .right-part.theme-switcher-part
-        client-only
+        client-only( v-if="CONFIG.ENABLE_THEME_SWITCHER" )
           .nav-list
             .list-name( class="lt-sm:hidden" ) {{ $t('websiteTheme') }}
             theme-switcher
-
+        .theme-switcher-placeholder( v-else )
+          | To Shape, not to adapt
   .container.is-fluid.fluid-row.copyright-row
     .flex.justify-between(
       class="lt-sm:flex-col lt-sm:items-center"
@@ -45,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { PATH } from '~/utils/constants'
+import { PATH, CONFIG } from '~/utils/constants'
 
 const currentYear = new Date().getFullYear()
 </script>
@@ -147,6 +148,13 @@ const currentYear = new Date().getFullYear()
       .nav-list {
         @apply flex justify-center mt-95px
       }
+
+    .theme-switcher-placeholder
+      font-weight: 800;
+      font-size: 16px;
+
+      @media $mediaInXS
+        margin-top: 32px
 
   .footer-divider
     height: 1px

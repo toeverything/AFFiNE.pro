@@ -15,9 +15,11 @@
     @click="switchMode('dark')"
   )
     nuxt-icon( name="DarkMode" )
+
 </template>
 
 <script setup lang="ts">
+import { CONFIG } from '~/utils/constants'
 import { useColorMode } from '@vueuse/core'
 const mode = useColorMode({ emitAuto: true })
 
