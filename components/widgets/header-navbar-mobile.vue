@@ -4,7 +4,7 @@
   .navbar-fixed( :class="{ 'has-scrolled': y > 0  }" )
     .flex.flex-1.justify-between.items-center.fixed-row
       nuxt-link( to="/" )
-        nuxt-icon.navbar-logo( name="logo" )
+        affine-logo.navbar-logo( name="logo" )
 
       .flex.items-center.gap-18px
         nuxt-link.try-link( :to="PATH.AFFINE_DWONHILLS" target="_blank" ) {{ $t('tryItOnline') }}
@@ -93,7 +93,8 @@ watch(locale, () => {
 
     .navbar-logo
       color: var(--logo-color)
-      font-size: 28px
+      font-size: 18px
+      margin-left: 6px
 
     .icon-menu
       font-size: 24px

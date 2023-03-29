@@ -1,14 +1,14 @@
 <template lang="pug">
 .header-navbar(
-  :class="{ 'has-ext': y > 100 }"
+  :class="{ 'has-ext': y > 80 }"
 )
   .navbar-placeholder
   .navbar-fluid-container.flex.items-center(
-    :class="{ 'is-invisible': y > 100 }"
+    :class="{ 'is-invisible': y > 80 }"
   )
-    .flex.flex-1.justify-between
-      nuxt-link.handler( to="/" )
-        nuxt-icon.navbar-logo( name="logo" )
+    .flex.flex-1.justify-between.items-center
+      nuxt-link.handler.logo-handler( to="/" )
+        affine-logo.navbar-logo
 
       .right-part.flex.items-center.gap-52px
         nuxt-link.handler( :to="PATH.AFFiNE_COMMUNITY" target="_blank" )
@@ -23,13 +23,18 @@
             nuxt-icon.text-30px( name="github" )
 
   .navbar-fixed.flex.items-center
-    .menu-list.flex.items-center.gap-13px
+    .menu-list.flex.items-center.gap-16px
+      client-only
+        .active-tab(
+          ref="activeTab"
+          :style="activeTabStyle"
+        )
       .nav-item
         scroll-link( to="/" ) {{ $t('home') }}
       .nav-item
-        scroll-link( to="/about-us" ) {{ $t('aboutUs') }}
-      .nav-item
         nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" ) {{ $t('community') }}
+      .nav-item
+        scroll-link( to="/about-us" ) {{ $t('aboutUs') }}
       .nav-item
         scroll-link( to="/blog" ) {{ $t('blog') }}
       el-dropdown(
@@ -52,7 +57,7 @@
             )
               | {{ item.name }}
     .right-part
-      .flex.items-center.gap-25px
+      .flex.items-center.gap-16px
         nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" )
           client-only
             el-button.try-button(
@@ -74,17 +79,43 @@ const props = defineProps<{
   y: number
 }>()
 
+const route = useRoute()
 // @FIXME: Get this value after mounted
 const isDark = useDark()
 
+const activeTab = ref(null)
+const activeTabStyle = reactive({
+  opacity: 0,
+  width: '0px',
+  transform: '',
+  transition: '0s'
+})
 const affixProgress = computed(() => {
   return Math.min(1, props.y / 50)
 })
+
+const refreshActiveTab = async (needTransition = false) => {
+  await nextTick()
+  const $target = document.querySelector('.nav-item a.is-active')
+  if (!$target) return
+  const width = $target.clientWidth
+  let left = $target.parentElement?.offsetLeft || 0
+  activeTabStyle.opacity = 1
+  activeTabStyle.width = `${width}px`
+  activeTabStyle.transform = `translateX(${left}px)`
+  activeTabStyle.transition = needTransition ? '218ms' : '0s'
+}
+
+onMounted(() => {
+  refreshActiveTab()
+})
+
+watch(() => route.path, () => refreshActiveTab(true))
 </script>
 
 <style lang="stylus">
 .header-navbar
-  --navbar-height: 114px
+  --navbar-height: 72px
   --navbar-border-color: var(--primary-gray)
   --navbar-bg-color:  rgba(255, 255, 255, 0.7)
   --navbar-active-bg-color: #E7E7E7
@@ -100,9 +131,12 @@ const affixProgress = computed(() => {
       .flex
         transition-delay: 0s
 
+  .logo-handler
+    height: 28px
+
   .navbar-logo
     color: var(--logo-color)
-    font-size: 48px
+    font-size: 28px
 
   .try-button
     padding-left: 28px
@@ -116,6 +150,7 @@ const affixProgress = computed(() => {
 
   .navbar-placeholder
     height: var(--navbar-height)
+    pointer-events: none
 
   .navbar-fluid-container
     position absolute
@@ -128,15 +163,16 @@ const affixProgress = computed(() => {
     // opacity: calc(1 - var(--affix-progress) * 2)
     pointer-events: none
 
-    &:not(.) .handler
+    &:not(.is-invisible) .handler
       pointer-events: initial
 
     .out-try-button
+      font-size: 15px
       border: 1px solid rgba(255, 255, 255, 0.72)
 
     .out-github-button
-      width: 50px
-      height: 50px
+      width: 40px
+      height: 40px
       border-radius: 50%
       border: 1px solid #A4A4A4
       transition: 218ms
@@ -147,13 +183,13 @@ const affixProgress = computed(() => {
   .navbar-fixed
     position fixed
     z-index: ($zIndexHeader + 1)
-    top: 35px
+    top: 16px
     left: 50%
-    height: 44px
+    height: 40px
     transform: translateX(-50%)
     border: 1px solid var(--navbar-border-color)
-    border-radius: 70px
-    padding-left: 13px
+    border-radius: 58px
+    padding-left: 8px
     overflow: hidden
     background: var(--navbar-bg-color)
     backdrop-filter: blur(14px)
@@ -161,28 +197,28 @@ const affixProgress = computed(() => {
     .nav-item > a,
     .el-dropdown
       display: block
-      padding: 0 13.5px
-      border-radius: 52px;
+      padding: 0 12px
+      border-radius: 12px;
+      color: #e6e6e6
 
-      &.is-active
-        height: 38px
-        line-height: 38px
-        background: var(--navbar-active-bg-color);
+      &:hover
+        color: white
+        text-shadow: 0px 0px 18px rgba(255, 255, 255, 0.8);
 
     .right-part
       overflow: hidden
       // @TODO: Pass dynamic container width
-      width: calc(343px * var(--affix-progress))
+      width: calc(280px * var(--affix-progress))
       opacity: calc(var(--affix-progress))
-      padding-left: calc(65.5px * var(--affix-progress))
-      padding-right: 13px
-      transition-duration: 0.5s
+      padding-left: calc(20px * var(--affix-progress))
+      padding-right: 8px
+      transition-duration: 0.4s
       // transition-timing-function: cubic-bezier(.85,.0,.3,.1)
       // transition-delay: 0.2s
 
       .flex
-        padding-left: 13px
-        transition-duration: 0.5s
+        padding-left: 8px
+        transition-duration: 0.4s
         // transition-timing-function: cubic-bezier(.85,.0,.3,.1)
         opacity: calc(var(--affix-progress))
         // transition-delay: 0.3s
@@ -192,19 +228,29 @@ const affixProgress = computed(() => {
           flex-shrink: 0
 
     .try-button
-      height: 35px
+      height: 34px
       font-weight: 800
-      font-size: 20px
+      font-size: 15px
 
     .menu-list
+      position relative
+
+      > span
+        display none
+
+      .active-tab
+        position absolute
+        border-radius: 12px
+        height: 24px
+        top: 0px
+        background: rgba(255, 255, 255, 0.1)
+        pointer-events: none
+
       .nav-item
         font-weight: 800;
-        font-size: 20px;
+        font-size: 15px;
         line-height: 24px;
         white-space: nowrap;
-
-        &:hover
-          opacity: 0.8
 
   /html.dark &
     --github-border-color: #A4A4A4
