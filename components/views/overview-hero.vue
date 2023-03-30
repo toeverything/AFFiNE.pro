@@ -24,7 +24,7 @@ import { PATH } from '~/utils/constants'
 
   .section-title
     @media $mediaInXS
-      font-size: 40px !important
+      font-size: 32px !important
       max-width: 324px
 
   .section-subtitle
