@@ -18,7 +18,6 @@
         format="webp"
         width="1600"
         height="800"
-        provider="cloudflare"
         :src="article.cover"
       )
       .article-tag-row.flex.gap-4

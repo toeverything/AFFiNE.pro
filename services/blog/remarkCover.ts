@@ -25,7 +25,7 @@ export const getCoverImage = (tree: Node): string | null => {
     if (root.children.length === 1 && !coverImage) {
       const child = root.children[0]
       if (child.type === 'image') {
-        coverImage = child.url
+        coverImage = `${child.url}.webp`
       }
     }
   })

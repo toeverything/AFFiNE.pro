@@ -7,14 +7,12 @@ nuxt-link.blog-card.flex.flex-col(
     :loading="lazy ? 'lazy' : 'auto'"
     :src="meta.cover"
     format="webp"
-    provider="cloudflare"
     width="1200"
     height="600"
   )
   nuxt-img.card-cover(
     v-else
     format="webp"
-    provider="cloudflare"
     width="2400"
     height="1200"
     :src="meta.cover"
