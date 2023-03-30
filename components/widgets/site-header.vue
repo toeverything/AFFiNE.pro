@@ -2,7 +2,7 @@
 .site-header
   nuxt-loading-indicator(
     :duration="3000"
-    color="repeating-linear-gradient(to right,var(--brand) 0%, #002A86 50%,#0047e1 100%)"
+    color="repeating-linear-gradient(to right,var(--brand) 0%, #002A86 50%,#4179f3 100%)"
   )
   header-navbar(
     :y="scrollState.y"

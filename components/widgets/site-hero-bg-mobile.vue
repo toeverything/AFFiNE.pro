@@ -1,18 +1,21 @@
 <template lang="pug">
-.site-hero-bg(
-  v-if="!isMobile"
+.site-hero-bg-mobile(
+  v-if="isMobile"
   :class="rootClass"
 )
-  .gradient-overlay
-  .dotted-layer
-  .blur-layer
-  .ellipse.ellipse-1
-  .ellipse.ellipse-2
+  .static-bg(v-if="useStaticImage")
+  template( v-else )
+    .gradient-overlay
+    .dotted-layer
+    .blur-layer
+    .ellipse.ellipse-1
 </template>
 
 <script setup lang="ts">
 const route = useRoute()
 const { isMobile } = useDevice()
+
+const useStaticImage = true
 
 const rootClass = computed(() => {
   return `type-${route.meta.heroType || 'default'}`
@@ -20,7 +23,7 @@ const rootClass = computed(() => {
 </script>
 
 <style lang="stylus">
-.site-hero-bg
+.site-hero-bg-mobile
   position absolute
   z-index: -1
   top: 0
@@ -29,12 +32,20 @@ const rootClass = computed(() => {
   background: $secondary100
   height: 1700px
   overflow: hidden
+  display: none
 
   --ellipse: #6A89F8
 
   > *
     position absolute
     width: 100%
+
+  .static-bg
+    width: 100%
+    aspect-ratio: 390/1151
+    background-image: url(@/assets/global/hero-bg-mobile-dark.webp)
+    background-size: 100%
+    background-position: center top
 
   .dotted-layer
     --backgroud: red
@@ -43,9 +54,7 @@ const rootClass = computed(() => {
     background-image: radial-gradient(var(--dot) 1.5px, transparent 1.5px)
     background-size: 20px 20px
     background-position: 20px 20px
-    height: 1674px
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 44%, transparent 90%)
-
+    height: 870px
 
     /html.dark &
       --dot: #656565
@@ -56,7 +65,6 @@ const rootClass = computed(() => {
     backdrop-filter: blur(150px)
     backface-visibility: hidden
     height: 1600px
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 80%, transparent 90%)
     max-blend-mode: multiply
 
   .ellipse
@@ -64,38 +72,24 @@ const rootClass = computed(() => {
     background-color: var(--ellipse)
 
   .ellipse-1
-    top: 83px
-    right: 20px
-    width: 500px
-    height: 631px
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%
-
-  .ellipse-2
-    border-radius: 78% 22% 26% 74% / 81% 27% 73% 19%
-    width: 400px
+    top: 717px
+    left: -20px
+    width: 446px;
     height: 365px;
-    left: 0px;
-    top: 567px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%
 
   .gradient-overlay
     z-index: 233
-    height: 2619px
+    height: 3588px
     background: linear-gradient(180deg, #FFFFFF 4.32%, rgba(255, 255, 255, 0) 70.08%, #FFFFFF 88.49%);
 
     /html.dark &
-      background: linear-gradient(180deg, #000000 4.32%, rgba(0, 0, 0, 0) 70.08%, #000000 88.49%);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 4.32%, rgba(0, 0, 0, 0.98) 11.53%, rgba(0, 0, 0, 0) 16.87%, rgba(0, 0, 0, 0.78) 24.04%, rgba(0, 0, 0, 0.9) 88.49%)
 
   @media $mediaInMobile
-    display: none
+    display: block
 
   /html.dark &
-    --ellipse: #244EE7
-
-  &.type-blog
-    .gradient-overlay
-      // background: linear-gradient(180deg, #FFFFFF 4.32%, rgba(255, 255, 255, 0.75) 70.08%, #FFFFFF 88.49%);
-
-      /html.dark &
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 4.32%, rgba(0, 0, 0, 0.16) 40.27%, rgba(0, 0, 0, 0.8) 53.86%, rgba(0, 0, 0, 0.8) 60.4%, rgba(0, 0, 0, 0.8) 88.49%);
+    --ellipse: #6A89F8
 
 </style>

@@ -19,6 +19,9 @@ import { PATH } from '~/utils/constants'
 .overview-hero
   margin-top: 90px
 
+  @media $mediaInXS
+    margin-top: 55px
+
   .section-title
     @media $mediaInXS
       font-size: 40px !important
@@ -27,6 +30,9 @@ import { PATH } from '~/utils/constants'
   .section-subtitle
     margin-top: 24px
     margin-bottom: fluid-value(53, 104)
+    @media $mediaInXS
+      font-size: 24px !important
+      max-width: 184px
 
   .section-desc
     font-weight: 700
@@ -35,7 +41,7 @@ import { PATH } from '~/utils/constants'
     margin-bottom: fluid-value(48, 87)
 
   .hero-action
-    margin-bottom: fluid-value(134, 235)
+    margin-bottom: fluid-value(60, 235)
 
   .overview-live-demo
     margin-bottom: fluid-value(110, 170)

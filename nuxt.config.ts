@@ -59,6 +59,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/image-edge',
+    '@nuxtjs/device',
     '@nuxtjs/i18n',
     '@element-plus/nuxt',
     'unplugin-icons/nuxt',
