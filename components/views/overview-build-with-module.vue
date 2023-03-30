@@ -23,7 +23,7 @@ scroll-trigger-container.overview-build-with-module(
           nuxt-icon( name="OctoBase-icon")
         .card-features.text-brand-grad( v-html="$t('overviewPage.octobaseFeatures')" )
 t-pane( title="Overview" )
-  t-folder( title="Build with" )
+  t-folder( title="Built with" )
     t-input( v-model="params.triggerHeight" name="triggerHeight(vh)" :opt-params="{min: 120, max: 400}" )
 
 </template>
