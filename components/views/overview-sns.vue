@@ -14,35 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { PATH } from '~/utils/constants'
-
-const COMMUNITY_SNS_LIST = [
-  {
-    name: 'GitHub',
-    iconName: 'github',
-    link: PATH.AFFiNE_GITHUB
-  },
-  {
-    name: 'Discord',
-    iconName: 'discord',
-    link: PATH.SNS_DISCORD
-  },
-  {
-    name: 'Reddit',
-    iconName: 'reddit',
-    link: PATH.SNS_REDDIT
-  },
-  {
-    name: 'Telegram',
-    iconName: 'telegram',
-    link: PATH.SNS_TELEGRAM
-  },
-  {
-    name: 'Twitter',
-    iconName: 'twitter',
-    link: PATH.SNS_TWITTER
-  },
-]
+import { PATH, COMMUNITY_SNS_LIST } from '~/utils/constants'
 
 </script>
 

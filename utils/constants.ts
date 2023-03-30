@@ -1,3 +1,4 @@
+// @TODO: Move the file to constants dir
 export const PATH = {
   SHARE_HOST: 'https://affine.pro',
 
@@ -14,7 +15,41 @@ export const PATH = {
   SNS_DISCORD: 'https://discord.com/invite/yz6tGVsf5p',
   SNS_TELEGRAM: 'https://t.me/affineworkos',
   SNS_TWITTER: 'https://twitter.com/AffineOfficial',
+  SNS_YOUTUBE: 'https://www.youtube.com/@affinepro',
 }
+
+export const COMMUNITY_SNS_LIST = [
+  {
+    name: 'GitHub',
+    iconName: 'github',
+    link: PATH.AFFiNE_GITHUB
+  },
+  {
+    name: 'Discord',
+    iconName: 'discord',
+    link: PATH.SNS_DISCORD
+  },
+  {
+    name: 'Reddit',
+    iconName: 'reddit',
+    link: PATH.SNS_REDDIT
+  },
+  {
+    name: 'Telegram',
+    iconName: 'telegram',
+    link: PATH.SNS_TELEGRAM
+  },
+  {
+    name: 'Twitter',
+    iconName: 'twitter',
+    link: PATH.SNS_TWITTER
+  },
+  {
+    name: 'YouTube',
+    iconName: 'youtube',
+    link: PATH.SNS_YOUTUBE
+  },
+]
 
 export const INFO = {
   CONTACT_EMAIL: 'contact@toeverything.info'
