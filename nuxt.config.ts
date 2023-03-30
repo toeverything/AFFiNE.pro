@@ -35,6 +35,7 @@ export default defineNuxtConfig({
           children: `
             ;(() => {
               const preference = 'dark'
+              localStorage.setItem('vueuse-color-scheme', preference)
               const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
               if (!preference || preference === 'auto' ? prefersDark : preference === 'dark') {
                 document.documentElement.classList.add('dark')

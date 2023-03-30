@@ -23,9 +23,9 @@
           .nav-item
             nuxt-link( to="/" ) {{ $t('home') }}
           .nav-item
-            nuxt-link( to="/about-us" ) {{ $t('aboutUs') }}
-          .nav-item
             nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" ) {{ $t('community') }}
+          .nav-item
+            nuxt-link( to="/about-us" ) {{ $t('aboutUs') }}
           .nav-item
             nuxt-link( to="/blog" ) {{ $t('blog') }}
           .nav-item(

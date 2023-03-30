@@ -23,7 +23,7 @@ export default {
     privacyFirstItemA: 'Privacy-first, and collaborative. No compromises whatsoever.',
     privacyFirstItemB: 'Keep your data in your hand. Moreover, shape your tool in your favour.',
     privacyFirstItemC: 'AFFiNE is built upon fully extensible and customizable foundation open-source frameworks.',
-    privacyFirstItemD: 'We ensure real-time syncing with decentralized storage.<br/>WITHOUT VENDOR lock-in and CRYPT',
+    privacyFirstItemD: 'We ensure real-time syncing with decentralized storage.<br/>WITHOUT VENDOR lock-in and CRYPTO.',
     buildWithDetailTitle: 'Build With BlockSuite and OctoBase',
     blocksuiteDesc: 'The self-contained collaborative database that supports:',
     blocksuiteFeatures: 'Local-first Distributed storage<br/>Frontend-centric developer experience<br/>Real-time Sync with ORM for multiple database providers',

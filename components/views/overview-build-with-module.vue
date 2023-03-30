@@ -84,7 +84,7 @@ onMounted(() => {
 
   .local-title
     font-weight: 900
-    font-size: fluid-value(24, 48)
+    font-size: fluid-value(16, 48)
     line-height: (58/48)
     text-align: center
     margin-bottom: fluid-value(50, 140)

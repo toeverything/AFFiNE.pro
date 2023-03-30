@@ -30,6 +30,8 @@ body
   font-size: 1rem
   line-height: 1.5
   letter-spacing: 0.00938em
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
 
 a
   text-decoration: none

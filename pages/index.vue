@@ -36,14 +36,7 @@ useHead({
 </script>
 
 <style lang="stylus">
-.page-overview
-  color: var(--primary)
-  font-size: fluid-value()
-
-  @media $mediaInMobile
-    padding-top: 10px
-
-  .section-title
+.section-title
     font-weight: 800;
     font-size: fluid-value(32, 64);
     line-height: (77/64);
@@ -59,6 +52,13 @@ useHead({
 
     /html.dark &
       background-image: linear-gradient(180deg, #A8C3FF 0%, #417DFF 100%)
+
+.page-overview
+  color: var(--primary)
+  font-size: fluid-value()
+
+  @media $mediaInMobile
+    padding-top: 10px
 
   .section-desc
     text-align: center
