@@ -10,15 +10,16 @@
         ref="onboardingCircle"
         filled name="onboarding-circle"
       )
-  .demo-tab-bar.flex.gap-30px
-    .tab-handler( :class="{ 'is-active': mode === 'page' }" @click="() => mode = 'page'" )
-      lottie-hover-icon(
-        animationLink="/lottie-files/page-hover.json"
-      )
-    .tab-handler( :class="{ 'is-active': mode === 'edgeless' }" @click="() => mode = 'edgeless'" )
-      lottie-hover-icon(
-        animationLink="/lottie-files/edgeless-hover.json"
-      )
+  client-only
+    .demo-tab-bar.flex.gap-30px
+      .tab-handler( :class="{ 'is-active': mode === 'page' }" @click="() => mode = 'page'" )
+        lottie-hover-icon(
+          animationLink="/lottie-files/page-hover.json"
+        )
+      .tab-handler( :class="{ 'is-active': mode === 'edgeless' }" @click="() => mode = 'edgeless'" )
+        lottie-hover-icon(
+          animationLink="/lottie-files/edgeless-hover.json"
+        )
   .demo-sidebar
   .demo-content
     .demo-bg

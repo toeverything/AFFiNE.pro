@@ -46,6 +46,7 @@ const rootClass = computed(() => {
     background-image: url(@/assets/global/hero-bg-mobile-dark.webp)
     background-size: 100%
     background-position: center top
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 90%, rgba(0, 0, 0, 0) 100%)
 
   .dotted-layer
     --backgroud: red

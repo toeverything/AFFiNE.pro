@@ -58,4 +58,5 @@ export const INFO = {
 export const CONFIG = {
   ENABLE_LANG_SWITCHER: false,
   ENABLE_THEME_SWITCHER: false,
+  API_HOST: 'https://api.affine.pro'
 }

@@ -7,24 +7,24 @@ const cache = new Cacheables({
 
 const FOUR_HOHURS = 1000 * 3600 * 4
 
-export default async <T>(url: string) => {
+export default async <T>(url: string, maxAge: number = FOUR_HOHURS) => {
   const store = useStore()
 
   const getCacheData = () =>
     // @TODO: Support xhr cache
     cache.cacheable(() => useFetch<T>(url), url, {
       cachePolicy: 'max-age',
-      maxAge: FOUR_HOHURS,
+      maxAge,
     })
 
   const cached = cache.isCached(url) || store.context.lastFetched[url]
 
-  if (cached) {
+  if (process.server && cached) {
     console.log(`Getting value from cache for ${url}`)
   }
 
   const lastCache = store.context.lastFetched[url]
-  const isValid = lastCache && lastCache.date + FOUR_HOHURS > Date.now() && lastCache.data
+  const isValid = lastCache && lastCache.date + maxAge > Date.now() && lastCache.data
 
   if (process.client) {
     if (lastCache && isValid) {
