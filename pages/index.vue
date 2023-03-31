@@ -94,4 +94,8 @@ useHead({
     .hero-container
       max-width: (1280px + 68px)
       padding: 0 fluid-value(32, 100)
+
+  .section-open-source-everything
+    height: var(--section-height, auto)
+    overflow hidden
 </style>

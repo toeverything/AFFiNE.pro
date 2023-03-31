@@ -1,6 +1,6 @@
 <template lang="pug">
 .overview-open-source-everything(
-  :style="{ '--scale': scale, '--scale-delta': 1 - scale }"
+  :style="{ '--scale': scale }"
 )
   .inner-layer.fixed-layer
     .float-el.section-title.text-brand-grad {{ $t('overviewPage.openSourceTitle') }}
@@ -27,6 +27,8 @@ t-pane( title="Overview" )
 <script setup lang="ts">
 import { useResizeObserver } from '@vueuse/core'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 const { isMobile } = useDevice()
 
 const TARGET_WIDTH = 1900
@@ -55,15 +57,27 @@ const setupScrollTrigger = () => {
   })
 }
 
+const reduceHeightAfterScale = () => {
+  const $section = document.querySelector('.section-open-source-everything') as HTMLElement
+  const $container = document.querySelector('.overview-open-source-everything') as HTMLElement
+  const $marquee = document.querySelector('.marquee-layer') as HTMLElement
+  if (!$section || !$container || !$marquee) return
+  const marqueeHeight = $marquee.offsetHeight
+  const containerHeight = $container.offsetHeight
+  const sectionHeight = (containerHeight - marqueeHeight) + (marqueeHeight * scale.value)
+  $section.style.setProperty('--section-height', `${sectionHeight}px`)
+  ScrollTrigger.refresh()
+}
+
 const setupResize = () => {
   useResizeObserver(document.body, (entries) => {
     const width = window.innerWidth
     const height = window.innerHeight
     scale.value = Math.min(1, width/TARGET_WIDTH, height/TARGET_HEIGHT)
     scale.value = Math.max(0.4, scale.value)
+    reduceHeightAfterScale()
   })
 }
-
 
 onMounted(() => {
   setupScrollTrigger()
@@ -76,7 +90,6 @@ onMounted(() => {
   position relative
   padding-top: fluid-value(100, 170)
   padding-bottom: fluid-value(130, 180)
-  margin-bottom: calc(var(--scale-delta) * -100vh)
 
   .blur-card
     background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.45) 100%)

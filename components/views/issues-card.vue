@@ -80,7 +80,7 @@ useResizeObserver(issueList, (entries) => {
   const $item = entry.target.querySelector('.issue-item')
   const itemHeight = $item?.getBoundingClientRect().height || 1
   const count = Math.round(height / itemHeight)
-  maxIssueLength.value = count
+  maxIssueLength.value = Math.min(8, count)
 })
 
 onMounted(() => {
