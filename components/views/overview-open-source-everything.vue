@@ -27,6 +27,7 @@ t-pane( title="Overview" )
 <script setup lang="ts">
 import { useResizeObserver } from '@vueuse/core'
 import gsap from 'gsap'
+const { isMobile } = useDevice()
 
 const TARGET_WIDTH = 1900
 const TARGET_HEIGHT = 800
@@ -41,7 +42,7 @@ const params = reactive({
 const setupScrollTrigger = () => {
   gsap.to(enableMarquee, {
     scrollTrigger: {
-      start: "38% center",
+      start: isMobile ? "20% center" : "38% center",
       trigger: '.overview-open-source-everything',
       onEnter: () => {
         if (enableMarquee.value) return
@@ -103,14 +104,18 @@ onMounted(() => {
 
   .inner-layer
     --outer-padding: fluid-value(20, 159)
-    transform: scale(var(--scale))
-    transform-origin: left top
 
   .marquee-layer
-    // overflow-x: auto
+    overflow-x: auto
+    min-width: 100vw
+
+    .marquee
+      min-width: 100vw
+      // padding-right: fluid-value(0, 69)
 
     .scroll-padding
       width: fluid-value(0, 69)
+      flex-shrink: 0
 
     .middle-content
       gap: 89px
@@ -120,17 +125,23 @@ onMounted(() => {
 
     @keyframes marquee-horiz
       from
-        transform: translateX(0)
+        transform: translate3d(0, 0, 0)
       to
-        transform: translateX(-100%)
+        transform: translate3d(-100%, 0, 0)
 
     .marquee-content
       animation: marquee-horiz var(--marquee-duration) linear infinite;
       animation-play-state: paused
+      backface-visibility hidden
 
       &.is-play
         will-change: transform
         animation-play-state: running
+
+  .fixed-layer,
+  .marquee
+    transform: scale(var(--scale))
+    transform-origin: left top
 
   .fixed-layer
     position absolute
