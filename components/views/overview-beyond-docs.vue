@@ -1,7 +1,7 @@
 <template lang="pug">
 scroll-trigger-container.overview-beyond-docs(
   ref="el"
-  :height="`300vh`"
+  :height="`400vh`"
   :style="{ '--progress': scrollProgress, '--enter-progress': scrollStates.enterProgress, ...scrollStyle }"
 )
   .pin-content.flex.flex-col.items-center.justify-center(
@@ -105,7 +105,7 @@ const setupScrollTrigger = () => {
     // - Feature Image
     .to(scrollStates, { featureImageProgress: 1, ease: 'none', duration: 2 })
     // Stage: Placeholder
-    .to(scrollStates, { duration: 1 })
+    .to(scrollStates, { duration: 0.5 })
 }
 
 onMounted(() => {
@@ -254,7 +254,9 @@ onMounted(() => {
       position absolute
       margin-top: 5vh
       gap: var(--gap)
-      transform: translateX(calc((-75% - var(--gap) * 0.75) * var(--feature-image-progress)))
+      transform: \
+        translateX(calc((1 - var(--text-gradient-opacity)) * 0%)) \
+        translateX(calc((-75% - var(--gap) * 0.75) * var(--feature-image-progress)))
 
       > *
         inset: 0
