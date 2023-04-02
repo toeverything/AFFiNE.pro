@@ -4531,6 +4531,11 @@ ky@^0.33.2:
   resolved "https://registry.yarnpkg.com/ky/-/ky-0.33.3.tgz#bf1ad322a3f2c3428c13cfa4b3af95e6c4a2f543"
   integrity sha512-CasD9OCEQSFIam2U8efFK81Yeg8vNMTBUqtMOHlrcWQHqUX3HeCl9Dr31u4toV7emlH8Mymk5+9p0lL6mKb/Xw==
 
+laser-pen@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/laser-pen/-/laser-pen-1.0.0.tgz#f6177a1d33b2854a7c49d48827dc0ba4b080f113"
+  integrity sha512-skXczZoLKEN8ut6hz9dRSx025bx83tYlP7c2DhxLhAwzmjJL8w9m3lU0OHkrMYLUX8zwAyfhehz9xHVbpA3zIg==
+
 lazystream@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/lazystream/-/lazystream-1.0.1.tgz"

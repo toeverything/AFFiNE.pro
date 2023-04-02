@@ -62,23 +62,21 @@ export const TPane = defineComponent({
     })
 
     const initPane = () => {
-      nextTick(() => {
-        if (pane.value || !NEED_GUI) {
-          return
-        }
+      if (pane.value || !NEED_GUI) {
+        return
+      }
 
-        if (el.value instanceof Element || props.float) {
-            pane.value = PANES[props.title as string] || new Pane({
-              container: props.float ? undefined : el.value as HTMLElement,
-              title: props.title,
-              expanded: props.expanded
-            })
+      if (el.value instanceof Element || props.float) {
+          pane.value = PANES[props.title as string] || new Pane({
+            container: props.float ? undefined : el.value as HTMLElement,
+            title: props.title,
+            expanded: props.expanded
+          })
 
-          if (props.float && props.title) {
-            PANES[props.title] = pane.value
-          }
+        if (props.float && props.title) {
+          PANES[props.title] = pane.value
         }
-      })
+      }
     }
 
     onMounted(() => {
@@ -135,17 +133,26 @@ export const TFolder = defineComponent({
     const folder: Ref<FolderApi | null> = ref(null)
     const paneContext = usePaneContext('TFolder')
 
-    onActivated(() => {
-      setTimeout(() => {
-        folder.value = paneContext.pane.value?.addFolder({ title, expanded })
-      }, 0)
+    const initFolder = () => {
+      if (folder.value) return
+      folder.value = paneContext.pane.value?.addFolder({ title, expanded })
+    }
+
+    onMounted(() => {
+      nextTick(() => initFolder())
     })
+
+    onActivated(() => {
+      nextTick(() => initFolder())
+    })
+
     provide(FolderContext, {
       folder
     })
 
     onDeactivated(() => {
       folder.value?.dispose()
+      folder.value = null
     })
   }
 })
@@ -170,7 +177,8 @@ export const TInput = defineComponent({
       [props.name]: props.modelValue
     }
 
-    onActivated(() => {
+    const initInput = () => {
+      clearTimeout(initTimer)
       initTimer = setTimeout(() => {
         blade.value = folderContext?.folder.value
           ? folderContext.folder.value
@@ -181,11 +189,20 @@ export const TInput = defineComponent({
           emit('change', ev.value)
         })
       }, 20)
+    }
+
+    onMounted(() => {
+      nextTick(() => initInput())
+    })
+
+    onActivated(() => {
+      nextTick(() => initInput())
     })
 
     onDeactivated(() => {
       clearTimeout(initTimer)
       input.value?.dispose()
+      input.value = null
     })
   }
 })

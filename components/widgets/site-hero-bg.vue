@@ -5,6 +5,9 @@
 )
   .gradient-overlay
   .dotted-layer
+    client-only
+      mouse-trail-sketch
+    .muted-dots
   .blur-layer
   .ellipse.ellipse-1
   .ellipse.ellipse-2
@@ -40,12 +43,18 @@ const rootClass = computed(() => {
     --backgroud: red
     --dot: #EAEAEA
     z-index: 23
-    background-image: radial-gradient(var(--dot) 1.5px, transparent 1.5px)
-    background-size: 20px 20px
-    background-position: 20px 20px
-    height: 1674px
     mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 44%, transparent 90%)
 
+    .mouse-trail-sketch
+      position absolute
+      mix-blend-mode: lighten
+      mask-image: radial-gradient(white 2px, transparent 2px)
+      mask-size: 30px 30px
+
+    .muted-dots
+      background-image: radial-gradient(var(--dot) 2px, transparent 2px)
+      background-size: 30px 30px
+      height: 1674px
 
     /html.dark &
       --dot: #656565
@@ -57,7 +66,7 @@ const rootClass = computed(() => {
     backface-visibility: hidden
     height: 1600px
     mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 80%, transparent 90%)
-    max-blend-mode: multiply
+    // mix-blend-mode: multiply
 
   .ellipse
     inset auto

@@ -237,7 +237,7 @@ onMounted(() => {
           position absolute
           left: 50%
           top: 50%
-          transform: translate3d(-50%, -50%, 0) scale(var(--icon-scale))
+          transform: translate3d(-50%, -50%, 0) scale(calc(1.1 * var(--icon-scale)))
 
         .nuxt-icon svg
           width: auto
