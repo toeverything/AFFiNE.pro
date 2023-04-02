@@ -36,7 +36,7 @@ const params = reactive({
   color: {r: 255, g: 255, b: 255},
   opacity: 1,
   minWidth: 5,
-  maxWidth: 60,
+  maxWidth: 90,
   delay: 0.8,
 })
 let mouseTrack: IOriginalPointData[] = []

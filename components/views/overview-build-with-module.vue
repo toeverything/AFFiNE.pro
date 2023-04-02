@@ -198,7 +198,7 @@ onMounted(() => {
       background-size: contain
       background-position: center center
       opacity: var(--shadow-progress)
-      mask-image: radial-gradient(circle, #000, transparent 120%)
+      mask-image: radial-gradient(circle, #000, #000 40%, transparent 70%)
       will-change: opacity
 
       &.type-blocksuite
