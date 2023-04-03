@@ -190,22 +190,31 @@ onMounted(() => {
     .card-icon-shadow
       position absolute
       z-index: -3
-      width: 290%
-      height: 290%
+      width: 100%
+      height: 100%
       left: 50%
       top: 50%
       transform: translate3d(-50%, -50%, 0)
       background-size: contain
       background-position: center center
       opacity: var(--shadow-progress)
-      mask-image: radial-gradient(circle, #000, #000 40%, transparent 70%)
+      // mask-image: radial-gradient(circle, #000, #000 40%, transparent 70%)
       will-change: opacity
+      background: #000
+      border-radius: 18px
 
       &.type-blocksuite
-        background-image: url(@/assets/overview/built-with-blocksuite-shadow.svg)
+        // background-image: url(@/assets/overview/built-with-blocksuite-shadow.svg)
+        filter: \
+          drop-shadow(-25px -60px 60px rgba(18, 70, 255, 0.5)) \
+          drop-shadow(25px 60px 60px rgba(215, 169, 252, 0.4)) \
+          drop-shadow(0px 4px 60px rgba(255, 255, 255, 0.3))
 
       &.type-octobase
-        background-image: url(@/assets/overview/built-with-octobase-shadow.svg)
+        filter: \
+          drop-shadow(-25px -60px 60px rgba(169, 187, 252, 0.5)) \
+          drop-shadow(25px 60px 60px rgba(169, 252, 237, 0.4)) \
+          drop-shadow(0px 4px 45px rgba(255, 255, 255, 0.3))
 
     .card-icon-wrapper
       --border-width: fluid-value(2, 5)
