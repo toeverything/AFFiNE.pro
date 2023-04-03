@@ -3,7 +3,11 @@
   .section-title(
     v-html="$t('overviewPage.heroTitle')"
   )
-  .section-title.section-subtitle.text-brand-grad {{ $t('overviewPage.heroSubtitle') }}
+  .section-title.section-subtitle
+    .alternative-wrapper.flex.justify-center
+      overview-hero-alternatives
+      .inline-gap &nbsp;
+      .subtitle-text.text-brand-grad {{ $t('overviewPage.heroSubtitle') }}
   .section-desc {{ $t('overviewPage.heroDesc') }}
   nuxt-link.hero-action.try-it-button(
     :to="PATH.AFFINE_DWONHILLS" target="_blank"
@@ -28,11 +32,28 @@ import { PATH } from '~/utils/constants'
       max-width: 324px
 
   .section-subtitle
+    width: 100%
     margin-top: 24px
     margin-bottom: fluid-value(53, 104)
     @media $mediaInXS
       font-size: 24px !important
-      max-width: 184px
+
+  .alternative-wrapper
+    .overview-hero-alternatives
+      @media $mediaInDesktop
+        min-width: 260px
+        text-align: right
+
+        .content-title
+          width: 100%
+          text-align: right
+
+    @media $mediaInMobile
+      flex-direction: column
+      gap: 4px
+
+      .inline-gap
+        display: none
 
   .section-desc
     font-weight: 700

@@ -18,7 +18,7 @@ export default {
 
   overviewPage: {
     heroTitle: '<span class="hide-in-xs">The </span>Open Source, Privacy First',
-    heroSubtitle: 'Notion Alternative',
+    heroSubtitle: 'Alternative',
     heroDesc: 'AFFiNE is the next-generation collaborative knowledge base for professionals.',
     pageMode: 'Page mode',
     edgelessMode: 'Edgeless mode',
