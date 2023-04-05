@@ -11,7 +11,7 @@
         affine-logo.navbar-logo
 
       .right-part.flex.items-center.gap-52px
-        nuxt-link.handler( :to="PATH.AFFiNE_COMMUNITY" target="_blank" )
+        nuxt-link.handler( :to="PATH.AFFINE_DWONHILLS" target="_blank" )
           client-only
             el-button.try-button.out-try-button(
               size="large"
@@ -58,7 +58,7 @@
               | {{ item.name }}
     .right-part
       .flex.items-center.gap-16px
-        nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" )
+        nuxt-link( :to="PATH.AFFINE_DWONHILLS" target="_blank" )
           client-only
             el-button.try-button(
               :type="isDark ? 'default' : 'primary'"
