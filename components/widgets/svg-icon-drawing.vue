@@ -31,6 +31,7 @@ const props = withDefaults(defineProps<{
     animation: drawing-animation cubic-bezier(0.4, 0, 0.2, 1) forwards
     animation-duration: var(--duration)
     animation-delay: var(--delay)
+    opacity: 0
 
   @keyframes drawing-animation
     0%
@@ -42,6 +43,7 @@ const props = withDefaults(defineProps<{
 
     100%
       stroke-dashoffset: 0
+      opacity: 1
 
   @keyframes clear-animation
     0%

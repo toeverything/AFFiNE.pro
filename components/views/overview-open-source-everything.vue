@@ -3,7 +3,7 @@
   :style="{ '--scale': scale }"
 )
   .inner-layer.fixed-layer
-    h1.float-el.section-title.text-brand-grad {{ $t('overviewPage.openSourceTitle') }}
+    h2.float-el.section-title.text-brand-grad {{ $t('overviewPage.openSourceTitle') }}
     .middle-content
     .float-el.section-desc.text-brand-grad( v-html="$t('overviewPage.openSourceDesc')" )
   .inner-layer.marquee-layer.transparent-scroll

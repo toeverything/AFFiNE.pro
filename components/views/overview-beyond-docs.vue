@@ -51,11 +51,17 @@ const el = ref<any>(null)
 const pinContent = ref<HTMLElement>()
 const scrollProgress = ref(0)
 const scrollStates = reactive({
-  enterProgress: 0,
+  enterProgress: 1,
   textGradientProgress: 0,
   wordDocsProgress: 0,
+  wordDocsEnterProgress: 0,
+  wordDocsLeaveProgress: 0,
   wordWhiteboardProgress: 0,
+  wordWhiteboardEnterProgress: 0,
+  wordWhiteboardLeaveProgress: 0,
   wordTableProgress: 0,
+  wordTableEnterProgress: 0,
+  wordTableLeaveProgress: 0,
   flipDocsProgress: 0,
   flipWhiteboardProgress: 0,
   flipTableProgress: 0,
@@ -64,10 +70,16 @@ const scrollStates = reactive({
 
 const scrollStyle = computed(() => {
   return {
-    '--text-gradient-opacity': scrollStates.textGradientProgress,
-    '--word-docs-opacity': scrollStates.wordDocsProgress,
-    '--word-whiteboard-opacity': scrollStates.wordWhiteboardProgress,
-    '--word-table-opacity': scrollStates.wordTableProgress,
+    '--text-gradient-alpha': scrollStates.textGradientProgress,
+    '--docs-alpha': scrollStates.wordDocsProgress,
+    '--docs-mask': 1 - scrollStates.wordDocsEnterProgress,
+    '--docs-mask-leave': scrollStates.wordDocsLeaveProgress,
+    '--whiteboard-alpha': scrollStates.wordWhiteboardProgress,
+    '--whiteboard-mask': 1 - scrollStates.wordWhiteboardEnterProgress,
+    '--whiteboard-mask-leave': scrollStates.wordWhiteboardLeaveProgress,
+    '--table-alpha': scrollStates.wordTableProgress,
+    '--table-mask': 1 - scrollStates.wordTableEnterProgress,
+    '--table-mask-leave': scrollStates.wordTableLeaveProgress,
     '--flip-docs-progress': scrollStates.flipDocsProgress,
     '--flip-whiteboard-progress': scrollStates.flipWhiteboardProgress,
     '--flip-table-progress': scrollStates.flipTableProgress,
@@ -89,17 +101,17 @@ const setupScrollTrigger = () => {
     }
   })
     // Stage: Enter
-    .to(scrollStates, { enterProgress: 1, ease: 'none', duration: 1 })
+    .to(scrollStates, { enterProgress: 1, ease: 'none', duration: 0.1 })
     // Stage: Animation
     // - Word: Docs
-    .to(scrollStates, { wordDocsProgress: 1, ease: 'none', duration: 1 })
-    .to(scrollStates, { wordDocsProgress: 0, flipDocsProgress: 1, ease: 'none', duration: 1, delay: 0.5 })
+    .to(scrollStates, { wordDocsProgress: 1, wordDocsEnterProgress: 1, ease: 'none', duration: 1 })
+    .to(scrollStates, { wordDocsProgress: 0, wordDocsLeaveProgress: 1, flipDocsProgress: 1, ease: 'none', duration: 1, delay: 0.5 })
     // - Word: Whiteboard
-    .to(scrollStates, { wordWhiteboardProgress: 1, ease: 'none', duration: 1 })
-    .to(scrollStates, { wordWhiteboardProgress: 0, flipWhiteboardProgress: 1, ease: 'none', duration: 1, delay: 0.5 })
+    .to(scrollStates, { wordWhiteboardProgress: 1, wordWhiteboardEnterProgress: 1, ease: 'none', duration: 1 })
+    .to(scrollStates, { wordWhiteboardProgress: 0, wordWhiteboardLeaveProgress: 1, flipWhiteboardProgress: 1, ease: 'none', duration: 1, delay: 0.5 })
     // - Word: Table
-    .to(scrollStates, { wordTableProgress: 1, ease: 'none', duration: 1 })
-    .to(scrollStates, { wordTableProgress: 0, flipTableProgress: 1, ease: 'none', duration: 1, delay: 0.5 })
+    .to(scrollStates, { wordTableProgress: 1, wordTableEnterProgress: 1, ease: 'none', duration: 1 })
+    .to(scrollStates, { wordTableProgress: 0, wordTableLeaveProgress: 1, flipTableProgress: 1, ease: 'none', duration: 1, delay: 0.5 })
     // - Text Gradient
     .to(scrollStates, { textGradientProgress: 1, ease: 'none', duration: 1 })
     // - Feature Image
@@ -175,22 +187,22 @@ onMounted(() => {
     .word-docs:before
       content: 'Docs'
       background-image: linear-gradient(180deg, #a4c0fd 0%, #7ea6fc 100%)
-      opacity: var(--word-docs-opacity)
+      clip-path: inset(0 calc(var(--docs-mask) * 100%) 0 calc(var(--docs-mask-leave) * 100%))
 
     .word-whiteboard:before
       content: 'whiteboards'
       background-image: linear-gradient(172.05deg, #7ADFFF 49.07%, #67d4f6 66.71%)
-      opacity: var(--word-whiteboard-opacity)
+      clip-path: inset(0 calc(var(--whiteboard-mask) * 100%) 0 calc(var(--whiteboard-mask-leave) * 100%))
 
     .word-tables:before
       content: 'tables'
       background-image: linear-gradient(106.81deg, #AF89F5 37.47%, #a67bf5 62.22%)
-      opacity: var(--word-table-opacity)
+      clip-path: inset(0 calc(var(--table-mask) * 100%) 0 calc(var(--table-mask-leave) * 100%))
 
     .type-gradient
       position absolute
       top: 0
-      opacity: var(--text-gradient-opacity)
+      opacity: var(--text-gradient-alpha)
 
   .middle-block
     position relative
@@ -211,33 +223,33 @@ onMounted(() => {
       background-size:  contain
       opacity: 0
       transform-origin: center top
-      max-width: s('min(63vh, 70vw)')
+      width: 1000px
+      max-width: s('min(90vh, 70vw)')
+      background-repeat: no-repeat
 
       &.image-docs
-        width: 700px
         aspect-ratio: 1800/1096
         background-image: url(@/assets/overview/beyond-docs-flip-docs.png)
-        opacity: calc(var(--word-docs-opacity) * var(--word-docs-opacity))
+        opacity: calc(var(--docs-alpha) * var(--docs-alpha))
         transform: \
           rotate(calc(7.5deg * var(--flip-docs-progress))) \
           skewX(calc(-10deg * var(--flip-docs-progress))) \
           translateY(calc(-30% * var(--flip-docs-progress))) \
 
       &.image-whiteboard
-        width: 700px
         aspect-ratio: 1600/960
         background-image: url(@/assets/overview/beyond-docs-flip-whiteboard.png)
-        opacity: calc(var(--word-whiteboard-opacity) * var(--word-whiteboard-opacity))
+        opacity: calc(var(--whiteboard-alpha) * var(--whiteboard-alpha))
         transform: \
           rotate(calc(-11.25deg * var(--flip-whiteboard-progress))) \
           skewY(calc(10deg * var(--flip-whiteboard-progress))) \
           translateY(calc(-20% * var(--flip-whiteboard-progress))) \
 
       &.image-table
-        width: 620px
+        width: 900px
         aspect-ratio: 1600/960
         background-image: url(@/assets/overview/beyond-docs-flip-table.png)
-        opacity: calc(var(--word-table-opacity) * var(--word-table-opacity))
+        opacity: calc(var(--table-alpha) * var(--table-alpha))
         transform: \
           rotate(calc(6deg * var(--flip-table-progress))) \
           skewX(calc(-10deg * var(--flip-table-progress))) \
@@ -246,7 +258,7 @@ onMounted(() => {
   .feature-image-wrapper
     position relative
     height: 0
-    opacity: var(--text-gradient-opacity)
+    opacity: var(--text-gradient-alpha)
 
     .image-list
       --gap: fluid-value(40, 80)
@@ -255,7 +267,7 @@ onMounted(() => {
       margin-top: 5vh
       gap: var(--gap)
       transform: \
-        translateX(calc((1 - var(--text-gradient-opacity)) * 0%)) \
+        translateX(calc((1 - var(--text-gradient-alpha)) * 0%)) \
         translateX(calc((-75% - var(--gap) * 0.75) * var(--feature-image-progress)))
 
       > *

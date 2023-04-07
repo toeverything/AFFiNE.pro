@@ -3,12 +3,12 @@
   h1.section-title(
     v-html="$t('overviewPage.heroTitle')"
   )
-  h1.section-title.section-subtitle
+  h2.section-title.section-subtitle
     .alternative-wrapper.flex.justify-center
       overview-hero-alternatives
       .inline-gap &nbsp;
       .subtitle-text.text-brand-grad {{ $t('overviewPage.heroSubtitle') }}
-  .section-desc {{ $t('overviewPage.heroDesc') }}
+  h3.section-desc.mt-0 {{ $t('overviewPage.heroDesc') }}
   nuxt-link.hero-action.try-it-button(
     :to="PATH.AFFINE_DWONHILLS" target="_blank"
   ) {{ $t('tryItOnline') }}
@@ -20,6 +20,10 @@ import { PATH } from '~/utils/constants'
 </script>
 
 <style lang="stylus">
+.page-overview
+  h1,h2,h3,h4,h5,h6
+    margin: 0
+
 .overview-hero
   margin-top: 90px
 

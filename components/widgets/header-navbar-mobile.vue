@@ -8,7 +8,7 @@
 
       .flex.items-center.gap-18px
         nuxt-link.try-link( :to="PATH.AFFINE_DWONHILLS" target="_blank" ) {{ $t('tryItOnline') }}
-        nuxt-link( :to="PATH.AFFiNE_GITHUB" target="_blank" )
+        nuxt-link( :to="PATH.AFFiNE_GITHUB" target="_blank" rel="nofollow")
           nuxt-icon( name="github" )
 
         .menu-handler.ml-13px(

@@ -1,7 +1,7 @@
 <template lang="pug">
 .overview-sns
   .container.flex.flex-col.items-center
-    .sns-title.section-grad2-title {{ $t('overviewPage.snsTitle') }}
+    h2.sns-title.section-grad2-title {{ $t('overviewPage.snsTitle') }}
     .sns-list.flex.flex-wrap.justify-center.gap-30px
       overview-sns-card(
         v-for="sns in COMMUNITY_SNS_LIST"

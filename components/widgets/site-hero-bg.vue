@@ -39,7 +39,8 @@ const params = reactive({
 })
 
 // @TODO: useMouseInElement to replace useMouse to improve performance
-const { x, y } = useMouse({ touch: false })
+// const { x, y } = useMouse({ touch: false })
+const { x, y } = { x: ref(0), y: ref(0) }
 const fromCenterX = computed(() => {
   if (!process.client) return 0
   return -(x.value - width.value / 2) * params.parallaxFactor

@@ -1,20 +1,20 @@
 <template lang="pug">
-.scroll-trigger-container.overview-build-with-module(
+.overview-build-with-module(
   ref="el"
   :height="`${params?.triggerHeight}vh`"
-  :class="{ 'enable-hover': scrollProgress >= 0.7 }"
+  :class="{ 'enable-hover': scrollStates.particlesProgress >= 0.9 }"
   :style="scrollStyle"
 )
   .pin-content(
     ref="pinContent"
   )
     .content-block.flex.flex-col.items-center
-      .local-title {{ $t('overviewPage.buildWithDetailTitle') }}
+      h2.local-title {{ $t('overviewPage.buildWithDetailTitle') }}
       .module-list.flex.justify-between
         .module-card.module-blocksuite
-          .card-desc {{ $t('overviewPage.blocksuiteDesc') }}
+          h4.card-desc {{ $t('overviewPage.blocksuiteDesc') }}
           .card-icon-shadow-wrapper( ref="icon" )
-            nuxt-link.card-icon-wrapper.icon-blocksuite-wrapper(:to="PATH.AFFiNE_BLOCK_SUITE" target="_blank")
+            nuxt-link.card-icon-wrapper.icon-blocksuite-wrapper(:to="PATH.AFFiNE_BLOCK_SUITE" target="_blank" rel="nofollow")
               .gradient-border
               .content-box
                 nuxt-icon.logo-icon.colorful-icon( name="BlockSuite-icon" filled)
@@ -26,11 +26,11 @@
                   nuxt-icon( name="blocksuite-particles-layber-4").blocksuite-particles-layer-4
 
             .card-icon-shadow.type-blocksuite
-          .card-features.text-brand-grad( v-html="$t('overviewPage.blocksuiteFeatures')" )
+          h4.card-features.text-brand-grad( v-html="$t('overviewPage.blocksuiteFeatures')" )
         .module-card
-          .card-desc {{ $t('overviewPage.octobaseDesc') }}
+          h4.card-desc {{ $t('overviewPage.octobaseDesc') }}
           .card-icon-shadow-wrapper
-            nuxt-link.card-icon-wrapper.icon-octobase-wrapper(:to="PATH.AFFiNE_OCTO_BASE" target="_blank")
+            nuxt-link.card-icon-wrapper.icon-octobase-wrapper(:to="PATH.AFFiNE_OCTO_BASE" target="_blank" rel="nofollow")
               .gradient-border
               .content-box
                 nuxt-icon.logo-icon.colorful-icon( name="OctoBase-icon" filled)
@@ -41,7 +41,7 @@
                   nuxt-icon( name="octobase-particles-layber-3").octobase-particles-layer-3
                   nuxt-icon( name="octobase-particles-layber-4").octobase-particles-layer-4
             .card-icon-shadow.type-octobase
-          .card-features.text-brand-grad( v-html="$t('overviewPage.octobaseFeatures')" )
+          h4.card-features.text-brand-grad( v-html="$t('overviewPage.octobaseFeatures')" )
 t-pane( title="Overview" )
   t-folder( title="Built with" )
     t-input( v-model="params.triggerHeight" name="triggerHeight(vh)" :opt-params="{min: 120, max: 400}" )
@@ -85,7 +85,7 @@ const setupScrollTrigger = () => {
     .to(scrollStates, { shadowProgress: 1, ease: 'none', duration: 1 }, 0)
     .to(scrollStates, { shadowProgress: 0, ease: 'none', duration: 1 })
     // Particles
-    .to(scrollStates, { particlesProgress: 0, ease: 'none', duration: 2 }, 0)
+    .to(scrollStates, { particlesProgress: 1, ease: 'none', duration: 2 }, 0)
     .to('.content-particles', { rotate: 90, scale: 1, ease: 'none', duration: 2 }, 0)
     .to('.blocksuite-particles-layer-1', { color: '#BFA0FF', opacity: 0.1, ease: 'none', duration: 2 }, 0)
     .to('.blocksuite-particles-layer-2', { color: '#BB9BFF', opacity: 0.1, ease: 'none', duration: 2 }, 0)
@@ -302,12 +302,14 @@ onMounted(() => {
       null
 
   &.enable-hover
-    // @media $mediaInDesktop
-    //   .icon-blocksuite-wrapper:hover
-    //     filter: drop-shadow(-4px -10px 25px rgba(18, 70, 255, 0.6)) drop-shadow(4px 10px 25px rgba(215, 169, 252, 0.6)) drop-shadow(0px 4px 47px rgba(255, 255, 255, 0.8));
+    @media $mediaInDesktop
+      .card-icon-shadow-wrapper
+        .card-icon-shadow
+          transition: 368ms
 
-    //   .icon-octobase-wrapper:hover
-    //     filter: drop-shadow(-4px -10px 25px rgba(169, 187, 252, 0.6)) drop-shadow(4px 10px 25px rgba(169, 252, 237, 0.6)) drop-shadow(0px 4px 47px rgba(255, 255, 255, 0.8));
+        &:hover
+          .card-icon-shadow
+            opacity: 1 !important
 
   /html.dark &
     --icon-border: #2E2E2E

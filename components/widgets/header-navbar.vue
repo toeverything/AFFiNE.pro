@@ -64,7 +64,7 @@
               :type="isDark ? 'default' : 'primary'"
             ) {{ $t('tryItOnline') }}
 
-        nuxt-link( :to="PATH.AFFiNE_GITHUB" target="_blank" )
+        nuxt-link( :to="PATH.AFFiNE_GITHUB" target="_blank" rel="nofollow")
           .github-button.flex.items-center.justify-center
             nuxt-icon.text-30px( name="github" )
 </template>

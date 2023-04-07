@@ -27,7 +27,7 @@ pulish: false
 
 `title` the title of the article
 
-`author` the author/authors of the article in a comma sepeareted list. For a list of available authors, see [src/libs/pagesContent/user.ts](src/libs/pagesContent/user.ts). Profile images are taken from the [public](public) folder.
+`author` the author/authors of the article in a comma sepeareted list. For a list of available authors, see [services/blog/userMap.ts](services/blog/userMap.ts). Profile images are taken from the [public](public) folder.
 
 `tags` the tag, or rather categorey, of the article
 

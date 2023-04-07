@@ -4,6 +4,7 @@
 )
   nuxt-link.overview-sns-card(
     ref="el"
+    rel="nofollow"
     :to="sns.link"
     target="_blank"
     :style="{ '--fill': `url(#vertical-gradient-${sns.iconName})` }"

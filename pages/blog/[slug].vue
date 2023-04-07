@@ -6,7 +6,7 @@
     :hasContent="article"
   )
     .jumbotron-container
-      .article-title {{ article.title }}
+      h1.article-title {{ article.title }}
       .article-desc {{ article.description }}
 
     .main-container
@@ -159,6 +159,7 @@ const handleReturnClick = () => {
       font-weight: 800
       font-size: fluid-value(20, 54)
       line-height: 58/48
+      margin: 0
       margin-bottom: 10px
 
     .article-desc

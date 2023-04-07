@@ -10,6 +10,14 @@
         ref="onboardingCircle"
         filled name="onboarding-circle"
       )
+    svg-icon-drawing( :isShow="onboardState.isShowLeftArrow" )
+      nuxt-icon.onboarding-left-arrow.icon-stroke-gradient(
+        filled name="onboarding-left-arrow"
+      )
+    svg-icon-drawing( :isShow="onboardState.isShowTopArrow" duration="0.5s" )
+      nuxt-icon.onboarding-top-arrow.icon-stroke-gradient(
+        filled name="onboarding-top-arrow"
+      )
   client-only
     .demo-tab-bar.flex.gap-30px
       .tab-handler( :class="{ 'is-active': mode === 'page' }" @click="() => mode = 'page'" )
@@ -66,6 +74,10 @@ const onboardingCircle = ref(null)
 const BASE_WIDTH = 1147
 const mode = ref<DemoMode>('page')
 const scale = ref(1)
+const onboardState = reactive({
+  isShowLeftArrow: false,
+  isShowTopArrow: false
+})
 const scrollState = reactive({
   y: 0
 })
@@ -95,6 +107,28 @@ const contentLogoVarStyle = computed(() => {
     transform: (contentLogoMouse.isOutside.value || mode.value === 'page') ? null : `rotateY(${rx}deg) rotateX(${ry}deg)`
   }
 })
+
+const setupOnboardTimeline = () => {
+  const tl = gsap.timeline({ paused: true })
+
+  tl
+    .to(onboardState, { delay: 0.3, duration: 0.1, onComplete: () => {
+      onboardState.isShowLeftArrow = true
+    }})
+    .to(onboardState, { delay: 1.3, duration: 0.1, onComplete: () => {
+      onboardState.isShowTopArrow = true
+    }})
+
+  watch(mode, () => {
+    if (mode.value === 'edgeless') {
+      tl.play(0)
+    } else {
+      tl.pause()
+      onboardState.isShowLeftArrow = false
+      onboardState.isShowTopArrow = false
+    }
+  })
+}
 
 const setupScrollTrigger = () => {
   gsap.to(onboardingCircle.value, {
@@ -133,6 +167,7 @@ useResizeObserver(el, (entries) => {
 
 onMounted(() => {
   listenToScroll()
+  setupOnboardTimeline()
   setupScrollTrigger()
 })
 </script>
@@ -160,19 +195,31 @@ gradient-border()
   .onboarding
     position absolute
     z-index: 233
-    inset: 0
+    width: 1147px
+    height: 850px
     pointer-events: none
-    transform: scale(var(--scale))
-    transform-origin: center top
-
-    > *
-      position absolute
-      left: 49%
-      top: -120px
-      transform: translateX(-50%)
+    transform: scale(var(--scale)) translate3d(-50%, -50%, 0)
+    transform-origin: left top
+    left: 50%
+    top: 50%
 
   .onboarding-circle
+    position absolute
     font-size: 215px
+    left: 49%
+    top: -120px
+    transform: translateX(-50%)
+
+  .onboarding-left-arrow
+    position absolute
+    font-size: 291px
+    transform: translate3d(450px, 460px, 0)
+
+  .onboarding-top-arrow
+    position absolute
+    font-size: 206px
+    top: 200px
+    right: 110px
 
   .border-card
     display: inline-flex

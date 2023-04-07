@@ -43,16 +43,17 @@ useHead({
   line-height: (77/64);
   text-align: center
 
-  .section-grad2-title
-    font-weight: 800;
-    font-size: fluid-value(20, 64);
-    line-height: (77/64);
-    background-image: linear-gradient(180deg, #0E55EE 0%, #002A86 100%);
-    background-clip: text;
-    color: transparent
+.section-grad2-title
+  margin: 0
+  font-weight: 800;
+  font-size: fluid-value(20, 64);
+  line-height: (77/64);
+  background-image: linear-gradient(180deg, #0E55EE 0%, #002A86 100%);
+  background-clip: text;
+  color: transparent
 
-    /html.dark &
-      background-image: linear-gradient(180deg, #A8C3FF 0%, #417DFF 100%)
+  /html.dark &
+    background-image: linear-gradient(180deg, #A8C3FF 0%, #417DFF 100%)
 
 .page-overview
   color: var(--primary)

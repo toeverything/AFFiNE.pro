@@ -3,6 +3,7 @@
   nuxt-link(
     :to="member.link"
     target="_blank"
+    rel="nofollow"
   )
     .avatar(
       :style="{ backgroundImage: `url(${member.avatar})` }"

@@ -1,6 +1,6 @@
 <template lang="pug">
 .overview-privacy-first.flex.flex-col.items-center
-  .section-title.section-grad2-title {{ $t('overviewPage.privacyFirstTitle') }}
+  h2.section-title.section-grad2-title {{ $t('overviewPage.privacyFirstTitle') }}
   .privacy-card-list.flex.flex-wrap
     hover-spotlight-card.privacy-card.item-a
       .card-bg
@@ -8,28 +8,28 @@
           name="lock-alt"
           filled
         )
-        .card-text {{ $t('overviewPage.privacyFirstItemA') }}
+        h5.card-text {{ $t('overviewPage.privacyFirstItemA') }}
     hover-spotlight-card.privacy-card.item-b
       .card-bg
         nuxt-icon.card-icon.icon-computer(
           name="desktop-computer"
           filled
         )
-        .card-text {{ $t('overviewPage.privacyFirstItemB') }}
+        h5.card-text {{ $t('overviewPage.privacyFirstItemB') }}
     hover-spotlight-card.privacy-card.item-c
       .card-bg
         nuxt-icon.card-icon.icon-a-vector(
           name="A-Vector"
           filled
         )
-        .card-text {{ $t('overviewPage.privacyFirstItemC') }}
+        h5.card-text {{ $t('overviewPage.privacyFirstItemC') }}
     hover-spotlight-card.privacy-card.item-d
       .card-bg
         nuxt-icon.card-icon.icon-insync(
           name="Insync"
           filled
         )
-        .card-text( v-html="$t('overviewPage.privacyFirstItemD')" )
+        h5.card-text( v-html="$t('overviewPage.privacyFirstItemD')" )
   nuxt-link.hero-action.try-it-button.hidden(
     :to="PATH.AFFINE_DWONHILLS" target="_blank"
   ) {{ $t('tryItOnline') }}

@@ -4,11 +4,11 @@
     class="lt-sm:flex-col"
   )
     .text-build-with {{ $t('overviewPage.buildWith') }}
-    nuxt-link.logo-wrapper( :to="PATH.AFFiNE_BLOCK_SUITE" target="_blank")
+    nuxt-link.logo-wrapper( :to="PATH.AFFiNE_BLOCK_SUITE" target="_blank" rel="nofollow")
       nuxt-icon.icon-blockSuite.icon-gradient( name="blockSuite" filled )
       nuxt-icon.icon-blockSuite( name="blockSuite" )
     .text-and {{ $t('overviewPage.and') }}
-    nuxt-link.logo-wrapper( :to="PATH.AFFiNE_OCTO_BASE" target="_blank")
+    nuxt-link.logo-wrapper( :to="PATH.AFFiNE_OCTO_BASE" target="_blank" rel="nofollow")
       nuxt-icon.icon-octobase.icon-gradient( name="octobase" filled)
       nuxt-icon.icon-octobase( name="octobase" )
   .decoration-row.flex.justify-center

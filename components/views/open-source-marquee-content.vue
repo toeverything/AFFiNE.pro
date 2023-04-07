@@ -4,10 +4,10 @@
 )
   .scroll-padding
   .blur-card.issues-card-wrapper
-    h2.card-title {{ $t('overviewPage.issuesTitle') }}
+    h3.card-title {{ $t('overviewPage.issuesTitle') }}
     issues-card
   .blur-card.roadmap-card-wrapper
-    h2.card-title {{ $t('overviewPage.roadmapTitle') }}
+    h3.card-title {{ $t('overviewPage.roadmapTitle') }}
     .card-list.flex
 
       .inner-card.roadmap-card
@@ -39,6 +39,7 @@
           nuxt-link.sns-item.flex(
             v-for="sns in COMMUNITY_SNS_LIST"
             :to="sns.link"
+            rel="nofollow"
             target="_blank"
           )
             nuxt-icon( :name="sns.iconName" )
