@@ -4,10 +4,10 @@
 )
   .scroll-padding
   .blur-card.issues-card-wrapper
-    .card-title {{ $t('overviewPage.issuesTitle') }}
+    h2.card-title {{ $t('overviewPage.issuesTitle') }}
     issues-card
   .blur-card.roadmap-card-wrapper
-    .card-title {{ $t('overviewPage.roadmapTitle') }}
+    h2.card-title {{ $t('overviewPage.roadmapTitle') }}
     .card-list.flex
 
       .inner-card.roadmap-card

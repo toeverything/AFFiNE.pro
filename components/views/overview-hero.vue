@@ -1,9 +1,9 @@
 <template lang="pug">
 .overview-hero.flex.flex-col.items-center
-  .section-title(
+  h1.section-title(
     v-html="$t('overviewPage.heroTitle')"
   )
-  .section-title.section-subtitle
+  h1.section-title.section-subtitle
     .alternative-wrapper.flex.justify-center
       overview-hero-alternatives
       .inline-gap &nbsp;
@@ -27,6 +27,7 @@ import { PATH } from '~/utils/constants'
     margin-top: 55px
 
   .section-title
+    margin: 0
     @media $mediaInXS
       font-size: 32px !important
       max-width: 324px

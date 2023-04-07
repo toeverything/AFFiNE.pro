@@ -38,6 +38,7 @@
   nuxt-link.more-handler(
     :to="`${PATH.AFFiNE_GITHUB}/issues`"
     target="_blank"
+    rel="nofollow"
   ) {{ $t('more') }}
 
 </template>

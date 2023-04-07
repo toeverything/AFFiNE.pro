@@ -17,6 +17,7 @@ export default defineNuxtConfig({
       titleTemplate: '%s | AFFiNE - All In One KnowledgeOS',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' },
+        { name: 'description', content: 'AFFiNE is the next-gen knowledge base for professionals that brings planning, sorting and creating all together.' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:url', content: 'https://affine.pro' },
         { name: 'twitter:title', content: 'AFFiNE - All In One KnowledgeOS' },

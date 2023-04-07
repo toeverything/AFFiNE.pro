@@ -1,6 +1,7 @@
 <template lang="pug">
 nuxt-link.issue-item.flex.items-center(
   :to="`${PATH.AFFiNE_GITHUB}/issues/${issue.number}`"
+  rel="nofollow"
   target="_blank"
   :class="[`type-${type}`]"
 )
@@ -9,7 +10,7 @@ nuxt-link.issue-item.flex.items-center(
     .item-title.truncate {{ issue.title }}
     .item-meta.flex
       | \#{{ issue.number }} opened {{ timeAgo }} by &nbsp;
-      nuxt-link( :to="`https://github.com/${issue.user}`" target="_blank" ) {{ issue.user }}
+      nuxt-link( :to="`https://github.com/${issue.user}`" rel="nofollow" target="_blank" ) {{ issue.user }}
 </template>
 
 <script setup lang="ts">

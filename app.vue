@@ -17,6 +17,15 @@ import '~/styles/main.styl'
 import 'vue3-lottie/dist/style.css'
 
 const locale = ref(en)
+
+const i18n = useI18n()
+
+useHead({
+  htmlAttrs: {
+    lang: i18n.locale.value || 'en'
+  }
+})
+
 </script>
 
 <style lang="stylus">

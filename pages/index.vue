@@ -37,10 +37,11 @@ useHead({
 
 <style lang="stylus">
 .section-title
-    font-weight: 800;
-    font-size: fluid-value(32, 64);
-    line-height: (77/64);
-    text-align: center
+  margin: 0
+  font-weight: 800;
+  font-size: fluid-value(32, 64);
+  line-height: (77/64);
+  text-align: center
 
   .section-grad2-title
     font-weight: 800;
