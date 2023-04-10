@@ -203,18 +203,20 @@ onMounted(() => {
       background: #000
       border-radius: 18px
 
-      &.type-blocksuite
-        // background-image: url(@/assets/overview/built-with-blocksuite-shadow.svg)
-        filter: \
-          drop-shadow(-25px -60px 60px rgba(18, 70, 255, 0.5)) \
-          drop-shadow(25px 60px 60px rgba(215, 169, 252, 0.4)) \
-          drop-shadow(0px 4px 60px rgba(255, 255, 255, 0.3))
+      @media $mediaInDesktop
 
-      &.type-octobase
-        filter: \
-          drop-shadow(-25px -60px 60px rgba(169, 187, 252, 0.5)) \
-          drop-shadow(25px 60px 60px rgba(169, 252, 237, 0.4)) \
-          drop-shadow(0px 4px 45px rgba(255, 255, 255, 0.3))
+        &.type-blocksuite
+          // background-image: url(@/assets/overview/built-with-blocksuite-shadow.svg)
+          filter: \
+            drop-shadow(-25px -60px 60px rgba(18, 70, 255, 0.5)) \
+            drop-shadow(25px 60px 60px rgba(215, 169, 252, 0.4)) \
+            drop-shadow(0px 4px 60px rgba(255, 255, 255, 0.3))
+
+        &.type-octobase
+          filter: \
+            drop-shadow(-25px -60px 60px rgba(169, 187, 252, 0.5)) \
+            drop-shadow(25px 60px 60px rgba(169, 252, 237, 0.4)) \
+            drop-shadow(0px 4px 45px rgba(255, 255, 255, 0.3))
 
     .card-icon-wrapper
       --border-width: fluid-value(2, 5)

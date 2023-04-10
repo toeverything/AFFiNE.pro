@@ -89,7 +89,7 @@ onMounted(() => {
 .overview-open-source-everything
   position relative
   padding-top: fluid-value(100, 170)
-  padding-bottom: fluid-value(130, 180)
+  padding-bottom: fluid-value(50, 180)
 
   .blur-card
     background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.45) 100%)
