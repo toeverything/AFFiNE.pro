@@ -1,0 +1,19 @@
+toRem(val)
+  return val / 16
+
+// @REF: https://min-max-calculator.9elements.com
+fluid-value(min = 16, max = 24, minWidth = 390, maxWidth = 1440, unit = 'px')
+  if min > max
+    max = min
+
+  if unit == 'px'
+    min = toRem(min)
+    max = toRem(max)
+    minWidth = toRem(minWidth)
+    maxWidth = toRem(maxWidth)
+
+  variablePart = (max - min) / (maxWidth - minWidth)
+  constant = round((max - maxWidth * variablePart), 3)
+  result = s('clamp(%srem, %srem + %svw, %srem)', min, constant, ceil(100 * variablePart, 2), max)
+
+  return result

@@ -1,0 +1,27 @@
+// Default theme is light
+:root
+  defineColorVar(--brand, #5438FF)
+  --brand-gradient: linear-gradient(180deg, #0E55EE 0%, #002A86 100%)
+  --v-primary-rgb: 66, 66, 66
+  --v-secondary-rgb: 255, 255, 255
+  --primary: #424242
+  --primary-deep: #000
+  --primary-gray: #747474
+  --secondary: #fff
+  --logo-color: #5438FF
+  --divider-color: rgba(215, 215, 215, 1)
+
+  --container-padding: 40px
+  --navbar-height: 55px
+
+// Custom dark theme color
+html.dark
+  --brand-gradient: linear-gradient(180deg, #6999FF 0%, #5438FF 100%)
+  --v-primary-rgb: 255, 255, 255
+  --v-secondary-rgb: 0, 0, 0
+  --primary: #fff
+  --primary-deep: var(--primary)
+  --primary-gray: #e6e6e6
+  --secondary: #000
+  --logo-color: #fff
+  --divider-color: rgba(61, 61, 61, 1)

@@ -1,0 +1,46 @@
+$primary100 = s('rgb(var(--v-primary-rgb))')
+$primary87 = s('rgba(var(--v-primary-rgb), 0.87)')
+$primary80 = s('rgba(var(--v-primary-rgb), 0.8)')
+$primary75 = s('rgba(var(--v-primary-rgb), 0.75)')
+$primary72 = s('rgba(var(--v-primary-rgb), 0.72)')
+$primary60 = s('rgba(var(--v-primary-rgb), 0.6)')
+$primary54 = s('rgba(var(--v-primary-rgb), 0.54)')
+$primary50 = s('rgba(var(--v-primary-rgb), 0.5)')
+$primary40 = s('rgba(var(--v-primary-rgb), 0.4)')
+$primary38 = s('rgba(var(--v-primary-rgb), 0.38)')
+$primary30 = s('rgba(var(--v-primary-rgb), 0.3)')
+$primary20 = s('rgba(var(--v-primary-rgb), 0.2)')
+$primary10 = s('rgba(var(--v-primary-rgb), 0.1)')
+$primary07 = s('rgba(var(--v-primary-rgb), 0.07)')
+$primary05 = s('rgba(var(--v-primary-rgb), 0.05)')
+
+$secondary100 = s('rgb(var(--v-secondary-rgb))')
+$secondary87 = s('rgba(var(--v-secondary-rgb), 0.87)')
+$secondary80 = s('rgba(var(--v-secondary-rgb), 0.8)')
+$secondary75 = s('rgba(var(--v-secondary-rgb), 0.75)')
+$secondary72 = s('rgba(var(--v-secondary-rgb), 0.72)')
+$secondary60 = s('rgba(var(--v-secondary-rgb), 0.6)')
+$secondary54 = s('rgba(var(--v-secondary-rgb), 0.54)')
+$secondary40 = s('rgba(var(--v-secondary-rgb), 0.4)')
+$secondary38 = s('rgba(var(--v-secondary-rgb), 0.38)')
+$secondary30 = s('rgba(var(--v-secondary-rgb), 0.3)')
+$secondary20 = s('rgba(var(--v-secondary-rgb), 0.2)')
+$secondary10 = s('rgba(var(--v-secondary-rgb), 0.1)')
+$secondary07 = s('rgba(var(--v-secondary-rgb), 0.07)')
+$secondary05 = s('rgba(var(--v-secondary-rgb), 0.05)')
+
+defineColorVar($colorName, $color)
+  $hue = hue($color)
+  $saturation = saturation($color)
+  $lightness = lightness($color)
+
+  {$colorName}: $color
+  {$colorName}-rgb: s('%s, %s, %s', red($color), green($color), blue($color))
+  {$colorName}-hs: s('%s, %s', $hue, $saturation)
+  {$colorName}-h: $hue
+  {$colorName}-s: $saturation
+  {$colorName}-l: $lightness
+
+brand(alphaPercent = 100)
+  alpha = alphaPercent / 100
+  return s('rgba(var(--brand-rgb), %s)', alpha)
