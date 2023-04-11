@@ -55,12 +55,13 @@ const props = defineProps<{
     margin-top: 8px
     font-weight: 700;
     font-size: 14px;
-    line-height: 220.02%;
+    line-height: 140.02%;
+    margin-bottom: 8px
 
   .info-desc
     font-weight: 400;
     font-size: 14px;
-    line-height: 220.02%;
+    line-height: 160.02%;
     color: var(--primary-gray)
     max-width: 270px
 

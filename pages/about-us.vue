@@ -26,21 +26,17 @@
   .section.section-members
     .md-container
       .section-title {{ $t('aboutUsPage.memberTitle') }}
-      .section-label {{ $t('aboutUsPage.founderLabel') }}
+      .section-label {{ $t('aboutUsPage.coreLabel') }}
       .members-list
         member-card(
-          v-for="member in founderMembers"
+          v-for="member in coreMembers"
           :member="member"
         )
-      .section-title {{ $t('aboutUsPage.architectureTitle') }}
-      .members-list
-        member-card(
-          v-for="member in architectureMembers"
-          :member="member"
-        )
+
       .section-title {{ $t('aboutUsPage.engineeringTitle') }}
       .members-list
         member-card(
+          :key="member.avatar"
           v-for="member in engineeringMembers"
           :member="member"
         )
@@ -64,45 +60,52 @@ import type { Member } from '~/components/widgets/member-card.vue'
 
 const { t } = useI18n()
 
-const founderMembers: Member[] = [
+const coreMembers: Member[] = [
   {
-    name: 'Jiachen He',
+    name: 'Enther/Jiachen He',
     title: 'Founder & Product Owner',
-    desc: 'The PM and CEO guy.',
+    desc: 'The PM and CEO guy of AFFiNE.',
     avatar: 'https://unavatar.io/github/HeJiachen-PM',
     link: 'https://github.com/HeJiachen-PM',
   },
   {
-    name: 'Chi Zhang',
+    name: 'Terry/Chi Zhang',
     title: 'Co-founder & CTO',
-    desc: 'He builds AFFiNE with great engineers.',
+    desc: 'AFFiNE builder with great engineers.',
     avatar: 'https://unavatar.io/github/tzhangchi',
     link: 'https://github.com/tzhangchi',
   },
   {
-    name: 'Yipei Wei',
+    name: 'Iris/Yipei Wei',
     title: 'Co-founder & Head of Community Support',
     desc: 'She talks to people so that AFFiNE is something people want.',
-    avatar: 'https://unavatar.io/github/Yipei-Operation',
+    avatar: '/yipei.png',
     link: 'https://github.com/Yipei-Operation',
   },
   {
-    name: 'Yifeng Wang',
+    name: 'Ewind/Yifeng Wang',
     title: 'Co-founder & Chief Architect',
-    desc: 'He ensures AFFiNE is built with the proper technology.',
+    desc: 'He ensures AFFiNE is built with the proper technology. Leader of BlockSuite and Developer Relationship.',
     avatar: 'https://unavatar.io/github/doodlewind',
     link: 'https://github.com/doodlewind',
   },
   {
-    name: 'Xiang Wang',
-    title: 'Chief AI Scientist',
-    desc: `Making everyone's life easier by embracing the power of AI.`,
-    avatar: 'https://unavatar.io/github/xiangwang1223',
-    link: 'https://github.com/xiangwang1223',
+    name: 'Brooooooklyn/Yinan Long',
+    title: 'Partner & Head of Server and System Architect',
+    desc: `Enable real-time web applications to run locally. Make distributed data connected synchronously. Leader of OctoBase.`,
+    avatar: 'https://unavatar.io/github/Brooooooklyn',
+    link: 'https://github.com/Brooooooklyn',
+  },
+  {
+    name: 'Alex Yang',
+    title: 'Architecture Engineer',
+    desc: `Leader of AFFiNE engineering.`,
+    avatar: 'https://unavatar.io/github/Himself65',
+    link: 'https://github.com/Himself65',
   },
 ]
 
-const architectureMembers: Member[] = [
+const engineeringMembers: Member[] = [
   {
     name: 'Xiaodong Zuo',
     title: 'Architecture Engineer',
@@ -122,12 +125,6 @@ const architectureMembers: Member[] = [
     link: 'https://github.com/alt1o',
   },
   {
-    name: 'Alex Yang',
-    title: 'Architecture Engineer',
-    avatar: 'https://unavatar.io/github/Himself65',
-    link: 'https://github.com/Himself65',
-  },
-  {
     name: 'Xiao Pengfei',
     title: 'Architecture Engineer',
     avatar: 'https://unavatar.io/github/Saul-Mirone',
@@ -139,9 +136,12 @@ const architectureMembers: Member[] = [
     avatar: 'https://unavatar.io/github/pengx17',
     link: 'https://pengx17.vercel.app',
   },
-]
-
-const engineeringMembers: Member[] = [
+  {
+    name: 'Yi Liu',
+    title: 'Architecture Engineer',
+    avatar: 'https://unavatar.io/github/forehalo',
+    link: 'https://github.com/forehalo',
+  },
   {
     name: 'Cankun You',
     title: 'Full-stack Engineer',
@@ -197,10 +197,10 @@ const productMembers: Member[] = [
     link: 'https://craft.do/s/jxEgkth6QpmxPs',
   },
   {
-    name: 'Haifang Li',
-    title: 'Director UI/UX',
-    avatar: 'https://unavatar.io/github/VelikaHF',
-    link: 'https://www.figma.com/file/QJMj6PBfmICHpQqPSEwznr/Portfolio-of-Velika?node-id=2052-59&t=7QEbwImHMRXzoC8x-0',
+    name: 'Hwang',
+    title: 'Product Designer',
+    avatar: '/hwang.png',
+    link: 'https://bento.me/hwang',
   },
   {
     name: 'Shiwen Shen',

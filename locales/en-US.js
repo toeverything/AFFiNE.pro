@@ -57,7 +57,7 @@ export default {
     contactItemC: 'Want to build your own block-based applications.',
     contactGeneralInfo: 'General contact (including resume): ',
     memberTitle: 'Team Member',
-    founderLabel: 'Founder & Co-Founders',
+    coreLabel: 'AFFiNE Core Team',
     architectureTitle: 'Architectural Developers',
     engineeringTitle: 'Engineering Team',
     communityTitle: 'Community Team',
