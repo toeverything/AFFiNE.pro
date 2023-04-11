@@ -1,7 +1,8 @@
 export default {
   home: 'Home',
-  aboutUs: 'About US',
+  aboutUs: 'About Us',
   community: 'Community',
+  try: 'Try',
   tryItOnline: 'Try it Online',
   openSource: 'Open Source',
   websiteTheme: 'Website Theme',

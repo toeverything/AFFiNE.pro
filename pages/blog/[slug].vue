@@ -27,11 +27,12 @@
         .user-meta.flex.items-center(
           v-for="user in users"
         )
-          .user-avatar.mr-3(
-            v-if="user.avatar"
-            :style="{ backgroundImage: `url(${user.avatar})` }"
-          )
-          .user-name {{ user.name }}
+          template( v-if="user" )
+            .user-avatar.mr-3(
+              v-if="user.avatar"
+              :style="{ backgroundImage: `url(${user.avatar})` }"
+            )
+            .user-name {{ user.name }}
 
       .updated-info.mt-15px Updated: {{ publishDate }}
 

@@ -12,15 +12,17 @@
 
       .right-part.flex.items-center.gap-52px
         nuxt-link.handler( :to="PATH.AFFINE_DWONHILLS" target="_blank" )
-          client-only
-            el-button.try-button.out-try-button(
-              size="large"
-              :type="isDark ? 'default' : 'primary'"
-            ) {{ $t('tryItOnline') }}
+          el-button.try-button.out-try-button(
+            :class="[`dark-${isDark}`]"
+            size="large"
+            :type="isDark ? 'default' : 'primary'"
+          )
+            span.text-long {{ $t('tryItOnline') }}
+            span.text-short {{ $t('try') }}
 
         nuxt-link.handler( :to="PATH.AFFiNE_GITHUB" target="_blank" )
           .out-github-button.flex.items-center.justify-center
-            nuxt-icon.text-30px( name="github" )
+            github-circle.text-30px
 
   .navbar-fixed.flex.items-center
     .menu-list.flex.items-center.gap-16px
@@ -56,20 +58,22 @@
               @click="locale = item.code"
             )
               | {{ item.name }}
-    .right-part
+
+    .right-part( v-if="isMounted" )
       .flex.items-center.gap-16px
         nuxt-link( :to="PATH.AFFINE_DWONHILLS" target="_blank" )
-          client-only
-            el-button.try-button(
-              :type="isDark ? 'default' : 'primary'"
-            ) {{ $t('tryItOnline') }}
+          el-button.try-button(
+            :type="isDark ? 'default' : 'primary'"
+          ) {{ $t('tryItOnline') }}
 
         nuxt-link( :to="PATH.AFFiNE_GITHUB" target="_blank" rel="nofollow")
           .github-button.flex.items-center.justify-center
-            nuxt-icon.text-30px( name="github" )
+            github-circle.text-30px
 </template>
 
 <script setup lang="ts">
+import GithubCircle from '~icons/mdi/github-circle'
+
 import { PATH, CONFIG } from '~/utils/constants'
 import { useDark } from '@vueuse/core'
 
@@ -81,8 +85,9 @@ const props = defineProps<{
 
 const route = useRoute()
 // @FIXME: Get this value after mounted
-const isDark = useDark()
+const isDark = useDark({ initialValue: 'dark' })
 
+const isMounted = ref(false)
 const activeTab = ref(null)
 const activeTabStyle = reactive({
   opacity: 0,
@@ -108,12 +113,15 @@ const refreshActiveTab = async (needTransition = false) => {
 
 onMounted(() => {
   refreshActiveTab()
+  isMounted.value = true
 })
 
 watch(() => route.path, () => refreshActiveTab(true))
 </script>
 
 <style lang="stylus">
+$mediaCompactHeader = '(max-width: 1280px)'
+
 .header-navbar
   --navbar-height: 72px
   --navbar-border-color: var(--primary-gray)
@@ -144,6 +152,15 @@ watch(() => route.path, () => refreshActiveTab(true))
     border-radius: 70px
     min-width: 177px
 
+    .text-long
+      @media $mediaCompactHeader
+        display: none
+
+    .text-short
+      display: none
+      @media $mediaCompactHeader
+        display: block
+
   .github-button
     &:hover
       opacity: 0.8
@@ -170,6 +187,9 @@ watch(() => route.path, () => refreshActiveTab(true))
       font-size: 15px
       border: 1px solid rgba(255, 255, 255, 0.72)
 
+      @media $mediaCompactHeader
+        min-width: 84px
+
     .out-github-button
       width: 40px
       height: 40px
@@ -179,6 +199,10 @@ watch(() => route.path, () => refreshActiveTab(true))
 
       &:hover
         background-color: $primary10
+
+    .right-part
+      @media $mediaCompactHeader
+        gap: 28px
 
   .navbar-fixed
     position fixed

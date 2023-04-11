@@ -73,8 +73,12 @@ useHead({
     background: linear-gradient(180deg, #0E58F5 0%, #396BD8 31.77%, #1443A9 76.04%, #0043D3 100%);
     box-shadow: 0px 4px 21px rgba(14, 85, 238, 0.54), 0px 4px 84px rgba(138, 175, 255, 0.3);
     border-radius: 44.1161px
-    color: #E6E6E6;
+    color: #fff;
     transition: 368ms
+
+    @media $mediaInDesktop
+      padding: 0 32px
+      height: 52px
 
     @media $mediaInXS
       padding: 10px 51px;

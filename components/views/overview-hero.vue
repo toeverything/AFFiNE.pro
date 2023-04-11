@@ -3,20 +3,91 @@
   h1.section-title(
     v-html="$t('overviewPage.heroTitle')"
   )
+
   h2.section-title.section-subtitle
     .alternative-wrapper.flex.justify-center
       overview-hero-alternatives
       .inline-gap &nbsp;
       .subtitle-text.text-brand-grad {{ $t('overviewPage.heroSubtitle') }}
+
   h3.section-desc.mt-0 {{ $t('overviewPage.heroDesc') }}
+
   nuxt-link.hero-action.try-it-button(
     :to="PATH.AFFINE_DWONHILLS" target="_blank"
-  ) {{ $t('tryItOnline') }}
+    @mouseenter="handleMouseenter"
+    @mouseleave="handleMouseleave"
+  )
+    .icon-container
+      .icon-placeholder(
+        v-if="!lottieLoaded"
+      )
+        affine-logo
+
+      client-only
+        vue3-lottie(
+          ref="lottieIcon"
+          :autoPlay="false"
+          :loop="false",
+          :speed="4"
+          animationLink="/lottie-files/loading-white.json"
+          @onComplete="handleLottieComplete"
+          @onAnimationLoaded="handleLottieLoaded"
+        )
+
+    | {{ $t('tryItOnline') }}
   overview-live-demo
 </template>
 
 <script setup lang="ts">
 import { PATH } from '~/utils/constants'
+
+const { isMobile } = useDevice()
+
+let lastCallTime = Date.now()
+const LAST_LOTTIE_FRAME = 240
+
+const lottieLoaded = ref(false)
+const isReverse = ref(true)
+const lottieIcon = ref<any>(null)
+
+const playLottieSegment = () => {
+  const animation = lottieIcon.value
+
+  if (!animation) return
+
+  if (!isReverse.value) {
+    animation.setDirection('forward')
+    animation.goToAndStop(0)
+    animation.play()
+  } else {
+    animation.setDirection('reverse')
+    animation.goToAndStop(LAST_LOTTIE_FRAME)
+    animation.play()
+  }
+}
+
+const handleMouseenter = (event: Event) => {
+  isReverse.value = true
+  playLottieSegment()
+}
+
+const handleMouseleave = (event: Event) => {
+  lottieIcon.value?.goToAndStop(LAST_LOTTIE_FRAME)
+}
+
+const handleLottieLoaded = () => {
+  lottieIcon.value?.goToAndStop(LAST_LOTTIE_FRAME)
+  lottieLoaded.value = true
+}
+
+// @FIXME: Ignore repeated calls
+const handleLottieComplete = () => {
+  const now = Date.now()
+  if (now - lastCallTime < 100) return
+  isReverse.value = !isReverse.value
+  lastCallTime = now
+  playLottieSegment()
+}
 </script>
 
 <style lang="stylus">
@@ -65,6 +136,32 @@ import { PATH } from '~/utils/constants'
     font-size: fluid-value(16, 24)
     line-height: (29/24)
     margin-bottom: fluid-value(48, 87)
+
+  .try-it-button
+    display: inline-flex
+    align-items: center
+
+    .icon-container
+      display: inline-flex
+      align-items: center
+      margin-right: 14px
+      width: 40px
+      height: 40px
+      position relative
+      top: 2px
+
+      .icon-placeholder
+        position absolute
+        inset: 0
+        top: 2.6px
+        left: 6px
+
+        .affine-logo svg
+          width: 28px
+          height: 28px
+
+      @media $mediaInMobile
+        display: none
 
   .hero-action
     margin-bottom: fluid-value(60, 235)
