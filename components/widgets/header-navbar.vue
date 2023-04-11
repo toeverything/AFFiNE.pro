@@ -59,10 +59,11 @@
             )
               | {{ item.name }}
 
-    .right-part( v-if="isMounted" )
+    .right-part
       .flex.items-center.gap-16px
         nuxt-link( :to="PATH.AFFINE_DWONHILLS" target="_blank" )
           el-button.try-button(
+            v-if="isMounted"
             :type="isDark ? 'default' : 'primary'"
           ) {{ $t('tryItOnline') }}
 
@@ -184,6 +185,7 @@ $mediaCompactHeader = '(max-width: 1280px)'
       pointer-events: initial
 
     .out-try-button
+      height: 40px
       font-size: 15px
       border: 1px solid rgba(255, 255, 255, 0.72)
 
