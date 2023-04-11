@@ -24,12 +24,12 @@ export default {
     edgelessMode: 'Edgeless mode',
     buildWith: 'Built with',
     openSourceTitle: 'Open Source Everything',
-    openSourceDesc: `Open Source isn't just about codes.<br/>Everything is built in public with AFFiNE`,
+    openSourceDesc: `Open Source isn't just about code.<br/>Everything is built in public with AFFiNE`,
     issuesTitle: 'Whole code is open source',
     issuesTabOpen: 'Open issues',
     issuesTabClosed: 'Closed',
     roadmapTitle: 'Whole roadmap is open source',
-    whatYouWant: 'What your want ?',
+    whatYouWant: 'More ideas?',
     tellUsWhatYouWant: 'Tell us what you want and we will make it!',
     findUsOn: 'Find us on',
     privacyFirstTitle: 'Privacy-first & Local-first',
@@ -38,13 +38,13 @@ export default {
     privacyFirstItemC: 'AFFiNE is built upon fully extensible and customizable foundation open-source frameworks.',
     privacyFirstItemD: 'We ensure real-time syncing with decentralized storage.<br/>WITHOUT VENDOR lock-in and CRYPTO.',
     buildWithDetailTitle: 'Built With BlockSuite and OctoBase',
-    blocksuiteDesc: 'The self-contained collaborative database that supports:',
+    blocksuiteDesc: 'The self-contained collaborative database:',
     blocksuiteFeatures: 'Local-first Distributed storage<br/>Frontend-centric developer experience<br/>Real-time Sync with ORM for multiple database providers',
-    octobaseDesc: 'The only JAMstack block editing framework that supports:',
+    octobaseDesc: 'The only JAMstack block editing framework:',
     octobaseFeatures: 'Rich-text blocks<br/>Table & Database blocks<br/>Canvas graphic blocks',
     and: 'and',
     snsTitle: 'Join our Community',
-    snsDesc: 'AFFiNE is an <span class="hashtag">#OpenSource</span> software, built with <span class="text-bold">BlockSuite</span> and OctoBase'
+    snsDesc: 'AFFiNE is an <span class="hashtag">#OpenSource</span> software, built with <span class="text-bold">BlockSuite</span> and <span class="text-bold">OctoBase</span>'
   },
 
   aboutUsPage: {
