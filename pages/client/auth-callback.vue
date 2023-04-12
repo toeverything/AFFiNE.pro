@@ -4,22 +4,25 @@
   button(@click="openAffineClient") Click here to try again
 </template>
 
-<script>
-export default {
-  name: "ClientAuthRedirect",
-  mounted() {
-    this.openAffineClient();
-  },
-  methods: {
-    openAffineClient() {
-      if (typeof window !== "undefined") {
-        // do we need to concern if it is secure?
-        window.location.href =
-          "affine://auth-callback?" + window.location.search;
-      }
-    },
-  },
-};
+<script setup>
+
+import { onMounted } from 'vue'
+
+definePageMeta({
+  middleware: 'auth-callback'
+})
+
+onMounted(() => {
+  openAffineClient()
+});
+
+const openAffineClient = () => {
+  if (typeof window !== 'undefined') {
+    // do we need to concern if it is secure?
+    window.location.href = 'affine://auth-callback' + window.location.search
+  }
+}
+
 </script>
 
 <style lang="stylus">
