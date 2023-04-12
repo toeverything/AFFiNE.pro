@@ -143,7 +143,7 @@ const engineeringMembers: Member[] = [
     link: 'https://github.com/forehalo',
   },
   {
-    name: 'Cankun You',
+    name: 'Whitewater',
     title: 'Full-stack Engineer',
     avatar: 'https://unavatar.io/github/lawvs',
     link: 'https://github.com/lawvs',
