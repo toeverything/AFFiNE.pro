@@ -203,7 +203,7 @@ const productMembers: Member[] = [
     link: 'https://bento.me/hwang',
   },
   {
-    name: 'Shiwen Shen',
+    name: 'Svaney',
     title: 'UX Designer',
     avatar: 'https://unavatar.io/github/Svaney-ssman',
     link: 'https://github.com/Svaney-ssman',
