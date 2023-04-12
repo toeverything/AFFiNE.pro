@@ -113,7 +113,7 @@ const engineeringMembers: Member[] = [
     link: 'https://github.com/zuoxiaodong0815',
   },
   {
-    name: 'Wenhao Tan',
+    name: 'Darksky Tan',
     title: 'Architecture Engineer',
     avatar: 'https://unavatar.io/github/darkskygit',
     link: 'https://github.com/darkskygit',
