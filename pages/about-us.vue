@@ -113,7 +113,7 @@ const engineeringMembers: Member[] = [
     link: 'https://github.com/zuoxiaodong0815',
   },
   {
-    name: 'Wenhao Tan',
+    name: 'Darksky Tan',
     title: 'Architecture Engineer',
     avatar: 'https://unavatar.io/github/darkskygit',
     link: 'https://github.com/darkskygit',
@@ -143,7 +143,7 @@ const engineeringMembers: Member[] = [
     link: 'https://github.com/forehalo',
   },
   {
-    name: 'Cankun You',
+    name: 'Whitewater',
     title: 'Full-stack Engineer',
     avatar: 'https://unavatar.io/github/lawvs',
     link: 'https://github.com/lawvs',
@@ -191,7 +191,7 @@ const communityMembers: Member[] = [
 
 const productMembers: Member[] = [
   {
-    name: 'Qiao Hou',
+    name: 'Joe Hou',
     title: 'Product Architect',
     avatar: '/JoeHou.jpeg',
     link: 'https://craft.do/s/jxEgkth6QpmxPs',
