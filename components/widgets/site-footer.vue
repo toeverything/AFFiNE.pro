@@ -16,13 +16,13 @@
           )
           .nav-list
             .list-name {{ $t('tryItOnline') }}
-            nuxt-link.nav-item.flex.items-center( :to="PATH.AFFINE_DWONHILLS" target="_blank" )
-              | AFFiNE Alpha - Dwonhills
+            nuxt-link.nav-item.flex.items-center( :to="PATH.AFFINE_DOWNHILLS" target="_blank" )
+              | AFFiNE Alpha - Downhills
               .latest-label.text-brand-grad.ml-15px {{ $t('latest') }}
             nuxt-link.nav-item( :to="PATH.AFFINE_PRE_ALPHA" target="_blank") AFFiNE Pre-Alpha
           .nav-list.need-underline
             .list-name {{ $t('openSource') }}
-            nuxt-link.nav-item.flex( :to="PATH.AFFiNE_GITHUB_ORG" target="_blank" rel="nofollow" ) toeverything/AFFiNE
+            nuxt-link.nav-item.flex( :to="PATH.AFFiNE_GITHUB" target="_blank" rel="nofollow" ) toeverything/AFFiNE
             nuxt-link.nav-item.flex( :to="PATH.AFFiNE_BLOCK_SUITE" target="_blank" rel="nofollow") toeverything/BlockSuite
             nuxt-link.nav-item( :to="PATH.AFFiNE_OCTO_BASE" target="_blank" rel="nofollow") toeverything/OctoBase
       .right-part.theme-switcher-part

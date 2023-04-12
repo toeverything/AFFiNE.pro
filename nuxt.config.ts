@@ -35,6 +35,9 @@ export default defineNuxtConfig({
         { name: 'og:image', content: 'https://affine.pro/og.jpeg' },
         { name: 'og:description', content: 'There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.' },
       ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon-96.png' }
+      ],
       script: [
         { id: 'check-dark-light',
           children: `

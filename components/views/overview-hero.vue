@@ -13,7 +13,8 @@
   h3.section-desc.mt-0 {{ $t('overviewPage.heroDesc') }}
 
   nuxt-link.hero-action.try-it-button(
-    :to="PATH.AFFINE_DWONHILLS" target="_blank"
+    :to="PATH.AFFINE_DOWNHILLS"
+    target="_blank"
     @mouseenter="handleMouseenter"
     @mouseleave="handleMouseleave"
   )

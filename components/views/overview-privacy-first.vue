@@ -31,7 +31,7 @@
         )
         h5.card-text( v-html="$t('overviewPage.privacyFirstItemD')" )
   nuxt-link.hero-action.try-it-button.hidden(
-    :to="PATH.AFFINE_DWONHILLS" target="_blank"
+    :to="PATH.AFFINE_DOWNHILLS" target="_blank"
   ) {{ $t('tryItOnline') }}
 </template>
 
