@@ -11,7 +11,7 @@
         affine-logo.navbar-logo
 
       .right-part.flex.items-center.gap-52px
-        nuxt-link.handler( :to="PATH.AFFINE_DWONHILLS" target="_blank" )
+        nuxt-link.handler( :to="PATH.AFFINE_DOWNHILLS" target="_blank" )
           el-button.try-button.out-try-button(
             :class="[`dark-${isDark}`]"
             size="large"
@@ -61,7 +61,7 @@
 
     .right-part
       .flex.items-center.gap-16px
-        nuxt-link( :to="PATH.AFFINE_DWONHILLS" target="_blank" )
+        nuxt-link( :to="PATH.AFFINE_DOWNHILLS" target="_blank" )
           el-button.try-button(
             v-if="isMounted"
             :type="isDark ? 'default' : 'primary'"

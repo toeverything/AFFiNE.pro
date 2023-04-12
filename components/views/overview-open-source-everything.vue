@@ -119,7 +119,7 @@ onMounted(() => {
     --outer-padding: fluid-value(20, 159)
 
   .marquee-layer
-    overflow-x: auto
+    // overflow-x: auto
     min-width: 100vw
 
     .marquee

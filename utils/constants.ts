@@ -2,7 +2,7 @@
 export const PATH = {
   SHARE_HOST: 'https://affine.pro',
 
-  AFFINE_DWONHILLS: 'https://app.affine.pro',
+  AFFINE_DOWNHILLS: 'https://app.affine.pro',
   AFFINE_PRE_ALPHA: 'https://livedemo.affine.pro',
 
   AFFiNE_GITHUB: 'https://github.com/toeverything/AFFiNE',
