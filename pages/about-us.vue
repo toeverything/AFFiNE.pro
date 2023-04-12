@@ -125,7 +125,7 @@ const engineeringMembers: Member[] = [
     link: 'https://github.com/alt1o',
   },
   {
-    name: 'Xiao Pengfei',
+    name: 'Mirone Saul',
     title: 'Architecture Engineer',
     avatar: 'https://unavatar.io/github/Saul-Mirone',
     link: 'https://mirone.me',
