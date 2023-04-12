@@ -25,7 +25,7 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:url', content: 'https://affine.pro' },
         { name: 'twitter:title', content: 'AFFiNE - All In One KnowledgeOS' },
-        { name: 'twitter:description', content: 'There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.' },
+        { name: 'twitter:description', content: 'AFFiNE is the next-gen knowledge base for professionals that brings planning, sorting and creating all together.' },
         { name: 'twitter:site', content: '@AffineOfficial' },
         { name: 'twitter:image', content: 'https://affine.pro/og.jpeg' },
         { name: 'og:type', content: 'website' },
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
         { name: 'og:title', content: 'AFFiNE - All In One KnowledgeOS' },
         { name: 'og:url', content: 'https://affine.pro' },
         { name: 'og:image', content: 'https://affine.pro/og.jpeg' },
-        { name: 'og:description', content: 'There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.' },
+        { name: 'og:description', content: 'AFFiNE is the next-gen knowledge base for professionals that brings planning, sorting and creating all together.' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon-96.png' }
