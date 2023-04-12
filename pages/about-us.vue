@@ -191,7 +191,7 @@ const communityMembers: Member[] = [
 
 const productMembers: Member[] = [
   {
-    name: 'Qiao Hou',
+    name: 'Joe Hou',
     title: 'Product Architect',
     avatar: '/JoeHou.jpeg',
     link: 'https://craft.do/s/jxEgkth6QpmxPs',
