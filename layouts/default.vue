@@ -6,6 +6,9 @@
   .fluid-container
     slot
   site-footer
+
+  client-only
+    mobile-intercept-modal
 </template>
 
 <style lang="stylus">

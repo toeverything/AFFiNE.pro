@@ -17,6 +17,9 @@
     target="_blank"
     @mouseenter="handleMouseenter"
     @mouseleave="handleMouseleave"
+    :data-intercept="$t('useDesktopVersion.title')"
+    v-mobile-intercept
+    :class="{ 'is-mobile': isMobile }"
   )
     .icon-container
       .icon-placeholder(
@@ -141,6 +144,19 @@ const handleLottieComplete = () => {
   .try-it-button
     display: inline-flex
     align-items: center
+    position relative
+
+    &.is-mobile:after
+      content: attr(data-intercept)
+      font-weight: 800
+      font-size: 12px
+      line-height: 32px
+      position absolute
+      left: 50%
+      bottom: -38px
+      width: 100%
+      text-align: center
+      transform: translate3d(-50%, 0, 0)
 
     .icon-container
       display: inline-flex
@@ -165,7 +181,7 @@ const handleLottieComplete = () => {
         display: none
 
   .hero-action
-    margin-bottom: fluid-value(60, 235)
+    margin-bottom: fluid-value(90, 235)
 
   .overview-live-demo
     margin-bottom: fluid-value(110, 170)

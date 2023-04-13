@@ -7,7 +7,7 @@
         affine-logo.navbar-logo( name="logo" )
 
       .flex.items-center.gap-18px
-        nuxt-link.try-link( :to="PATH.AFFINE_DOWNHILLS" target="_blank" ) {{ $t('tryItOnline') }}
+        nuxt-link.try-link( :to="PATH.AFFINE_DOWNHILLS" target="_blank" v-mobile-intercept) {{ $t('tryItOnline') }}
         nuxt-link( :to="PATH.AFFiNE_GITHUB" target="_blank" rel="nofollow")
           nuxt-icon( name="github" )
 

@@ -10,7 +10,10 @@ const userInitial = {
 }
 
 type MainState = {
-  blog: ContentFileMeta[]
+  blog: ContentFileMeta[],
+  ui: {
+    isShowMobileInterceptModal: boolean
+  },
   context: {
     lastFetched: Record<string, any>
   }
@@ -23,7 +26,7 @@ export const useStore = defineStore('main', {
     user: useLocalStorage('affine/user', userInitial),
 
     ui: {
-      isShowLoginModal: false
+      isShowMobileInterceptModal: false
     },
 
     context: {

@@ -68,6 +68,7 @@ import { useMouseInElement, useResizeObserver, useScroll } from '@vueuse/core'
 
 type DemoMode = 'page' | 'edgeless'
 
+const { isMobile } = useDevice()
 const el = ref(null)
 const contentLogo = ref(null)
 const onboardingCircle = ref(null)
@@ -131,13 +132,14 @@ const setupOnboardTimeline = () => {
 }
 
 const setupScrollTrigger = () => {
+  const startViewport = isMobile ? 400 : Math.min(500, window.innerHeight / 2)
   gsap.to(onboardingCircle.value, {
     scrollTrigger: {
-      start: "top center",
+      start: `top ${startViewport}`,
       end: "bottom center",
       trigger: '.onboarding',
       onEnter: () => {
-        onboardingDrawing.isShowCircle = true
+        onboardingDrawing.isShowCircle = scrollState.y > 0 && true
       },
       onEnterBack: () => {
         onboardingDrawing.isShowCircle = true
@@ -166,9 +168,9 @@ useResizeObserver(el, (entries) => {
 })
 
 onMounted(() => {
-  listenToScroll()
   setupOnboardTimeline()
   setupScrollTrigger()
+  listenToScroll()
 })
 </script>
 
