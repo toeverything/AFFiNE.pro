@@ -23,6 +23,9 @@ const openAffineClient = () => {
   }
 }
 
+useHead({
+  title: 'Redirecting'
+})
 </script>
 
 <style lang="stylus">

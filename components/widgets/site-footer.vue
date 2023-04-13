@@ -16,10 +16,10 @@
           )
           .nav-list
             .list-name {{ $t('tryItOnline') }}
-            nuxt-link.nav-item.flex.items-center( :to="PATH.AFFINE_DOWNHILLS" target="_blank" )
+            nuxt-link.nav-item.flex.items-center( :to="PATH.AFFINE_DOWNHILLS" target="_blank" v-mobile-intercept)
               | AFFiNE Alpha - Downhills
               .latest-label.text-brand-grad.ml-15px {{ $t('latest') }}
-            nuxt-link.nav-item( :to="PATH.AFFINE_PRE_ALPHA" target="_blank") AFFiNE Pre-Alpha
+            nuxt-link.nav-item( :to="PATH.AFFINE_PRE_ALPHA" target="_blank" v-mobile-intercept) AFFiNE Pre-Alpha
           .nav-list.need-underline
             .list-name {{ $t('openSource') }}
             nuxt-link.nav-item.flex( :to="PATH.AFFiNE_GITHUB" target="_blank" rel="nofollow" ) toeverything/AFFiNE

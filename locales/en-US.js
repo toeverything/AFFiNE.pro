@@ -16,6 +16,12 @@ export default {
   comingSoon: 'Coming Soon',
   more: 'More',
   error: 'Error',
+  ok: 'Ok',
+
+  useDesktopVersion: {
+    title: 'Full functionality on desktop',
+    desc: 'For the best experience, \nplease use the desktop version.',
+  },
 
   overviewPage: {
     heroTitle: '<span class="hide-in-xs">The </span>Open Source, Privacy First',
