@@ -1,6 +1,6 @@
 <template lang="pug">
 nuxt-link.blog-card.flex.flex-col(
-  :to="`/blog/${meta.slug}?source=list`"
+  :to="{ path: `/blog/${meta.slug}`, meta: { source: 'list' } } "
 )
   nuxt-img.card-cover(
     v-if="lazy && meta.cover"

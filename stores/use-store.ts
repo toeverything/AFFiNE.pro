@@ -15,6 +15,7 @@ type MainState = {
     isShowMobileInterceptModal: boolean
   },
   context: {
+    lastPath: string
     lastFetched: Record<string, any>
   }
 }
@@ -30,6 +31,7 @@ export const useStore = defineStore('main', {
     },
 
     context: {
+      lastPath: '/',
       nextUrl: '/me',
       lastFetched: useLocalStorage('affine/lastFetched', {}),
     },

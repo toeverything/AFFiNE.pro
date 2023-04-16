@@ -121,12 +121,10 @@ definePageMeta({
 
 await loadData()
 
-console.log('article detail', article.value, html.value)
-
 useHead(pageMeta)
 
 onMounted(() => {
-  isFromList.value = route.query.source === 'list'
+  isFromList.value = store.context.lastPath === '/blog'
 
   if (isFromList.value) {
     router.replace(route.path)
