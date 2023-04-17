@@ -44,6 +44,7 @@
 <script lang="ts" setup>
 import { useDateFormat } from '@vueuse/core'
 import { PATH } from '~/utils/constants'
+import { primaryAPI } from '~/apis'
 import { USER_MAP } from '~/services/blog/userMap'
 import { renderHTML } from '~/services/blog/resolveContentFile'
 import type { ContentFileMeta } from '~/services/blog/resolveContentFile'
@@ -57,7 +58,7 @@ const isFromList = ref(false)
 
 const asyncOptions = reactive({
   emptyTips: 'Article Not Found',
-  errorTips: 'Article Not Found',
+  errorTips: 'Article Load Error',
   errorActionText: 'Back to Home',
   onErrorAction: () => {
     router.push('/')
@@ -70,10 +71,7 @@ const loadData = async () => {
   try {
     asyncOptions.isError = false
     asyncOptions.isLoading = true
-    const blog = await useFetchWithCache<any>('/api/blog')
-    if (blog.value?.pages.length) {
-      store.blog = blog.value.pages
-    }
+    await primaryAPI.getBlog()
     article.value = store.blog.find(item => item.slug === route.params.slug)
     html.value = await renderHTML(article.value?.md as string)
   } catch (error) {

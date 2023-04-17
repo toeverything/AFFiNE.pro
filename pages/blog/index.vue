@@ -56,6 +56,7 @@
 
 <script lang="ts" setup>
 import { useScroll } from '@vueuse/core'
+import { primaryAPI } from '~/apis'
 import { useBlogMetas } from '~/services/blog/useBlogMetas'
 
 const store = useStore()
@@ -69,8 +70,7 @@ const asyncOptions = reactive({
 const loadData = async () => {
   try {
     asyncOptions.isLoading = true
-    const blog = await useFetchWithCache<any>('/api/blog')
-    store.blog = blog.value.pages
+    await primaryAPI.getBlog()
   } catch (error) {
     asyncOptions.isError = true
   }
