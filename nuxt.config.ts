@@ -13,6 +13,13 @@ export default defineNuxtConfig({
     host: '0.0.0.0'
   },
 
+  nitro: {
+    routeRules: {
+      '/blog': { swr: true },
+      '/blog/**': { swr: true },
+    }
+  },
+
   ssr: true,
 
   app: {
