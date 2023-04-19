@@ -56,6 +56,7 @@
 
 <script lang="ts" setup>
 import { useScroll } from '@vueuse/core'
+import { PATH } from '~/utils/constants'
 import { primaryAPI } from '~/apis'
 import { useBlogMetas } from '~/services/blog/useBlogMetas'
 
@@ -109,9 +110,12 @@ watch(() => route.query.tag, async () => {
 
 await loadData()
 
-useHead({
+useHead(() => ({
   title: 'Blog',
-})
+  link: [
+    route.query.tag ? { rel: 'canonical', href: `${PATH.SHARE_HOST}/blog` } : {},
+  ]
+}))
 
 definePageMeta({
   heroType: 'blog'

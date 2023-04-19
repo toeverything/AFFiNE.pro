@@ -7,7 +7,7 @@
   )
     .video-wrapper.flex.items-center
       | {{ $t('affineCopilot') }}
-      video( muted loop autoplay ref="copilotVideo" )
+      video( muted loop autoplay playsinline ref="copilotVideo" )
         source( :src="copilotButtonAnimationUrl" )
       arrow-forward-rounded.ml-10px.icon-arrow
 </template>

@@ -1,5 +1,6 @@
 <template lang="pug">
 .brand-glow-button.flex.items-center.justify-center(
+  @click="handleClick"
   :class="{ 'is-disabled': disabled }"
 )
   .button-text
@@ -10,7 +11,7 @@
 
 <script setup lang="ts">
 defineProps<{
-  disabled: boolean
+  disabled?: boolean
 }>()
 </script>
 
@@ -26,6 +27,7 @@ defineProps<{
   font-size: fluid-value(16, 24)
   border-radius: 10px
   transition: 368ms
+  cursor pointer
 
   .button-text
     position relative
@@ -37,7 +39,7 @@ defineProps<{
     background: linear-gradient(180deg, #0E55EE 0%, #002A86 100%)
     position absolute
     pointer-events: none
-    z-index: -1
+    z-index: 1
     inset: 0
 
   &:before
@@ -46,6 +48,7 @@ defineProps<{
     position absolute
     pointer-events: none
     inset: 2px
+    z-index: 2
     background: var(--background-color)
 
   .text-brand-grad
@@ -70,7 +73,7 @@ defineProps<{
   &:not(.is-disabled)
     &:hover
       --background-color: #fff
-      box-shadow: 0px 4px 80px #1D62F4, 0px 4px 21px rgba(14, 85, 238, 0.54), 0px 4px 84px rgba(138, 175, 255, 0.3);
+      // box-shadow: 0px 4px 80px #1D62F4, 0px 4px 21px rgba(14, 85, 238, 0.54), 0px 4px 84px rgba(138, 175, 255, 0.3);
 
       .text-brand-grad
         opacity: 1

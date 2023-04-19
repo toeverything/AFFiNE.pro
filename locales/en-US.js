@@ -16,6 +16,7 @@ export default {
   comingSoon: 'Coming Soon',
   more: 'More',
   error: 'Error',
+  for: 'for ',
   ok: 'Ok',
   download: 'Download',
   downloadApp: 'Download App',
@@ -71,6 +72,27 @@ export default {
     engineeringTitle: 'Engineering Team',
     communityTitle: 'Community Team',
     productTitle: 'Product Team',
+  },
+
+  downloadPage: {
+    headline: 'Download the AFFiNE Client allows you to experience the full power of AFFiNE. You can try our ',
+    headlineLink: 'live demo',
+    beta: 'Beta Version',
+    betaDesc: 'A pre-release software that is tested by a limited group of users',
+    canary: 'Canary Version',
+    canaryDesc: 'Want to see what we are working on? The Canary version is unstable and not recommended for production use.',
+    stable: 'Stable Version',
+    stableDesc: 'If you are looking to use AFFiNE then we suggest this version.\nA stable version for production-use with regular updates.',
+    otherVersion: 'Other Version',
+    // @FIXME: vars not work in prod
+    otherVersionFor: 'Other version for',
+    manuallyUpdateTips: 'Please note there is currently no auto-updater, you must manually check and download the latest versions.',
+    why: 'Why download?',
+    reasonA: 'Navigate your workspaces like never before',
+    reasonB: 'Revolutionise your organisation with the power of databases',
+    reasonC: 'Get creative in Edgeless and unleash your imagination',
+    reasonD: 'Coming soon! Full control over where and how you store your data',
+    mobileVersionNotes: 'Mobile Still in development for now, but we hope to have mobile apps real soon.'
   },
 
   hello: 'Hello',

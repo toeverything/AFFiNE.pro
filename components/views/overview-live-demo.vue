@@ -169,9 +169,15 @@ useResizeObserver(el, (entries) => {
 
 onMounted(() => {
   setupOnboardTimeline()
-  setupScrollTrigger()
   listenToScroll()
 })
+
+onActivated(() => {
+  setTimeout(() => {
+    setupScrollTrigger()
+  }, 100)
+})
+
 </script>
 
 <style lang="stylus">

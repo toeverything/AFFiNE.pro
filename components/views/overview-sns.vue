@@ -21,6 +21,7 @@ import { PATH, COMMUNITY_SNS_LIST } from '~/utils/constants'
 <style lang="stylus">
 .overview-sns
   --hashtag-color: #244EE7
+  font-size: fluid-value()
 
   .container
     border-top: 1px solid var(--divider-color)
