@@ -17,6 +17,8 @@ export default {
   more: 'More',
   error: 'Error',
   ok: 'Ok',
+  download: 'Download',
+  downloadApp: 'Download App',
   affineCopilot: 'AFFiNE Copilot',
 
   useDesktopVersion: {
