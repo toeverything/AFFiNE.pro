@@ -1,5 +1,7 @@
 <template lang="pug">
 .overview-hero.flex.flex-col.items-center
+  campaign-entry
+
   h1.section-title(
     v-html="$t('overviewPage.heroTitle')"
   )
@@ -100,7 +102,7 @@ const handleLottieComplete = () => {
     margin: 0
 
 .overview-hero
-  margin-top: 90px
+  margin-top: 100px
 
   @media $mediaInXS
     margin-top: 55px

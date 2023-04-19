@@ -3,7 +3,7 @@ export default {
   aboutUs: 'About Us',
   community: 'Community',
   try: 'Try',
-  tryItOnline: 'Try It Online',
+  tryItOnline: 'Try Demo Online',
   openSource: 'Open Source',
   websiteTheme: 'Website Theme',
   latest: 'Latest',
@@ -17,6 +17,7 @@ export default {
   more: 'More',
   error: 'Error',
   ok: 'Ok',
+  affineCopilot: 'AFFiNE Copilot',
 
   useDesktopVersion: {
     title: 'Full functionality on desktop',
@@ -39,7 +40,7 @@ export default {
     whatYouWant: 'More ideas?',
     tellUsWhatYouWant: 'Tell us what you want and we will make it!',
     findUsOn: 'Find us on',
-    privacyFirstTitle: 'Privacy-first & Local-first',
+    privacyFirstTitle: 'Privacy Focused & Local-first',
     privacyFirstItemA: 'Privacy-first, and collaborative. No compromises whatsoever.',
     privacyFirstItemB: 'Keep your data in your hand. Moreover, shape your tool in your favour.',
     privacyFirstItemC: 'AFFiNE is built upon fully extensible and customizable foundation open-source frameworks.',
