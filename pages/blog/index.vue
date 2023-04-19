@@ -105,7 +105,6 @@ watch(() => route.query.tag, async () => {
   if ($currentTag) {
     $currentTag.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
   }
-  console.log('change')
 })
 
 await loadData()

@@ -108,20 +108,22 @@ const handleLottieComplete = () => {
   .section-title
     margin: 0
     @media $mediaInXS
-      font-size: 32px !important
-      max-width: 324px
+      font-size: 24px !important
+      max-width: 270px
 
   .section-subtitle
     width: 100%
     margin-top: 24px
+    font-size: fluid-value(24, 48)
     margin-bottom: fluid-value(53, 104)
+
     @media $mediaInXS
       font-size: 24px !important
 
   .alternative-wrapper
     .overview-hero-alternatives
       @media $mediaInDesktop
-        min-width: 260px
+        min-width: 200px
         text-align: right
 
         .content-title

@@ -252,7 +252,7 @@ gradient-border()
     transition: 318ms
 
     /html.dark &
-      background-image: url(@/assets/overview/demo-sidebar-dark.png)
+      background-image: url(@/assets/overview/demo-sidebar-dark.svg)
 
   .demo-tab-bar
     position absolute
