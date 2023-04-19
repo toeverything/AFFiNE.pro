@@ -24,8 +24,8 @@ export default {
   },
 
   overviewPage: {
-    heroTitle: '<span class="hide-in-xs">The </span>Open Source, Privacy First',
-    heroSubtitle: 'Alternative',
+    heroTitle: 'Write, Draw, and Plan all at once.',
+    heroSubtitle: 'Open Source Alternative',
     heroDesc: 'AFFiNE is the next-generation collaborative knowledge base for professionals.',
     pageMode: 'Page Mode',
     edgelessMode: 'Edgeless Mode',

@@ -59,7 +59,7 @@ export const USER_MAP: Record<
   },
   AFFiNE: {
     name: 'AFFiNE',
-    avatar: '/favicon.ico',
+    avatar: '/favicon-96.png',
     dec: 'Toeverything'
   },
   'Xinglong Wang': {
