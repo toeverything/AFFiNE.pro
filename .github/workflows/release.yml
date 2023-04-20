@@ -1,0 +1,42 @@
+name: Release Channel CI
+
+on:
+  # allows to manually run the job at any time
+  workflow_dispatch:
+
+  # run on every push on the release branch
+  push:
+    branches: [production]
+
+jobs:
+  send-feishu-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: post message
+        uses: foxundermoon/feishu-action@v2
+        with:
+          url: ${{ secrets.FEISHU_BOT_WEBHOOK_URL }}
+          msg_type: post
+          content: |
+            post:
+              en:
+                title: AFFiNE PRO Release
+                content:
+                - - tag: text
+                    un_escape: true
+                    text: "Landing page has been updated&nbsp;:"
+                  - tag: a
+                    text: visit
+                    href: ${{ secrets.PROD_DEPLOY_URL }}
+                - - tag: text
+                    un_escape: true
+                    text: "head_commit: ${{ github.event.head_commit.message }}"
+                - - tag: text
+                    un_escape: true
+                    text: 'Compare&nbsp;:'
+                  - tag: a
+                    text: Show what changed
+                    href: ${{ github.event.compare }}
+                - - tag: text
+                    un_escape: true
+                    text: "sender&nbsp;: ${{ github.event.sender.login }}"
