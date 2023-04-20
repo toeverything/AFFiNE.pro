@@ -24,7 +24,7 @@ export default {
   },
 
   overviewPage: {
-    heroTitle: 'Write, Draw, and Plan all at once.',
+    heroTitle: 'Write, Draw, and Plan All at Once',
     heroSubtitle: 'Open Source Alternative',
     heroDesc: 'AFFiNE is the next-generation collaborative knowledge base for professionals.',
     pageMode: 'Page Mode',
