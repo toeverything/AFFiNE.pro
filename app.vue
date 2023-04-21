@@ -67,6 +67,10 @@ a
   vertical-align: middle
   line-height: 1
 
+  &:not(:has(svg))
+    min-width: 1em
+    min-height: 1em
+
   svg
     margin: 0 !important
 

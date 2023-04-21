@@ -16,6 +16,8 @@ export const PATH = {
   SNS_TELEGRAM: 'https://t.me/affineworkos',
   SNS_TWITTER: 'https://twitter.com/AffineOfficial',
   SNS_YOUTUBE: 'https://www.youtube.com/@affinepro',
+
+  COPILOT_FORM: 'https://6dxre9ihosp.typeform.com/to/MjaI1NIV',
 }
 
 export const COMMUNITY_SNS_LIST = [
@@ -56,7 +58,11 @@ export const INFO = {
 }
 
 export const CONFIG = {
+  // UI & Context
+  IS_SHOW_CAMPAIGN_ENTRY: true,
   ENABLE_LANG_SWITCHER: false,
   ENABLE_THEME_SWITCHER: false,
+
+  // Service
   API_HOST: 'https://api.affine.pro'
 }

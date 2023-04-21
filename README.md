@@ -2,6 +2,12 @@
 
 This repo is AFFiNE official website and blog source code.
 
+## Git Flow
+Feature dev: `feature/$x` or `master` -> [`staging`](https://next.affine.pro) -> [`production`](https://affine.pro)
+
+Issue/Hotfix: `issue/$x` -> `production`
+
+
 ## How to publish blog
 
 The new blog source uses AFFiNE - public workspace: [https://app.affine.pro/public-workspace/H6vffRmJbCfA-r3kq_36_](https://app.affine.pro/public-workspace/H6vffRmJbCfA-r3kq_36_)

@@ -169,9 +169,15 @@ useResizeObserver(el, (entries) => {
 
 onMounted(() => {
   setupOnboardTimeline()
-  setupScrollTrigger()
   listenToScroll()
 })
+
+onActivated(() => {
+  setTimeout(() => {
+    setupScrollTrigger()
+  }, 100)
+})
+
 </script>
 
 <style lang="stylus">
@@ -252,7 +258,7 @@ gradient-border()
     transition: 318ms
 
     /html.dark &
-      background-image: url(@/assets/overview/demo-sidebar-dark.png)
+      background-image: url(@/assets/overview/demo-sidebar-dark.svg)
 
   .demo-tab-bar
     position absolute

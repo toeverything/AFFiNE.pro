@@ -3,7 +3,7 @@ export default {
   aboutUs: 'About Us',
   community: 'Community',
   try: 'Try',
-  tryItOnline: 'Try It Online',
+  tryItOnline: 'Try Demo Online',
   openSource: 'Open Source',
   websiteTheme: 'Website Theme',
   latest: 'Latest',
@@ -16,7 +16,11 @@ export default {
   comingSoon: 'Coming Soon',
   more: 'More',
   error: 'Error',
+  for: 'for ',
   ok: 'Ok',
+  download: 'Download',
+  downloadApp: 'Download App',
+  affineCopilot: 'AFFiNE Copilot',
 
   useDesktopVersion: {
     title: 'Full functionality on desktop',
@@ -24,8 +28,8 @@ export default {
   },
 
   overviewPage: {
-    heroTitle: '<span class="hide-in-xs">The </span>Open Source, Privacy First',
-    heroSubtitle: 'Alternative',
+    heroTitle: 'Write, Draw, and Plan All at Once',
+    heroSubtitle: 'Open Source Alternative',
     heroDesc: 'AFFiNE is the next-generation collaborative knowledge base for professionals.',
     pageMode: 'Page Mode',
     edgelessMode: 'Edgeless Mode',
@@ -39,7 +43,7 @@ export default {
     whatYouWant: 'More ideas?',
     tellUsWhatYouWant: 'Tell us what you want and we will make it!',
     findUsOn: 'Find us on',
-    privacyFirstTitle: 'Privacy-first & Local-first',
+    privacyFirstTitle: 'Privacy Focused & Local-first',
     privacyFirstItemA: 'Privacy-first, and collaborative. No compromises whatsoever.',
     privacyFirstItemB: 'Keep your data in your hand. Moreover, shape your tool in your favour.',
     privacyFirstItemC: 'AFFiNE is built upon fully extensible and customizable foundation open-source frameworks.',
@@ -68,6 +72,27 @@ export default {
     engineeringTitle: 'Engineering Team',
     communityTitle: 'Community Team',
     productTitle: 'Product Team',
+  },
+
+  downloadPage: {
+    headline: 'Download the AFFiNE Client allows you to experience the full power of AFFiNE. You can try our ',
+    headlineLink: 'live demo',
+    beta: 'Beta Version',
+    betaDesc: 'A pre-release software that is tested by a limited group of users',
+    canary: 'Canary Version',
+    canaryDesc: 'Want to see what we are working on? The Canary version is unstable and not recommended for production use.',
+    stable: 'Stable Version',
+    stableDesc: 'If you are looking to use AFFiNE then we suggest this version.\nA stable version for production-use with regular updates.',
+    otherVersion: 'Other Version',
+    // @FIXME: vars not work in prod
+    otherVersionFor: 'Other version for',
+    manuallyUpdateTips: 'Please note there is currently no auto-updater, you must manually check and download the latest versions.',
+    why: 'Why download?',
+    reasonA: 'Navigate your workspaces like never before',
+    reasonB: 'Revolutionise your organisation with the power of databases',
+    reasonC: 'Get creative in Edgeless and unleash your imagination',
+    reasonD: 'Coming soon! Full control over where and how you store your data',
+    mobileVersionNotes: 'Mobile Still in development for now, but we hope to have mobile apps real soon.'
   },
 
   hello: 'Hello',

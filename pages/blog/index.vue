@@ -56,6 +56,8 @@
 
 <script lang="ts" setup>
 import { useScroll } from '@vueuse/core'
+import { PATH } from '~/utils/constants'
+import { primaryAPI } from '~/apis'
 import { useBlogMetas } from '~/services/blog/useBlogMetas'
 
 const store = useStore()
@@ -69,8 +71,7 @@ const asyncOptions = reactive({
 const loadData = async () => {
   try {
     asyncOptions.isLoading = true
-    const blog = await useFetchWithCache<any>('/api/blog')
-    store.blog = blog.value.pages
+    await primaryAPI.getBlog()
   } catch (error) {
     asyncOptions.isError = true
   }
@@ -105,14 +106,16 @@ watch(() => route.query.tag, async () => {
   if ($currentTag) {
     $currentTag.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
   }
-  console.log('change')
 })
 
 await loadData()
 
-useHead({
+useHead(() => ({
   title: 'Blog',
-})
+  link: [
+    route.query.tag ? { rel: 'canonical', href: `${PATH.SHARE_HOST}/blog` } : {},
+  ]
+}))
 
 definePageMeta({
   heroType: 'blog'

@@ -8,10 +8,6 @@
 
 import { onMounted } from 'vue'
 
-definePageMeta({
-  middleware: 'auth-callback'
-})
-
 onMounted(() => {
   openAffineClient()
 });

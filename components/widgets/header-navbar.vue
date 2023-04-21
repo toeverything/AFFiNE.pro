@@ -11,14 +11,13 @@
         affine-logo.navbar-logo
 
       .right-part.flex.items-center.gap-52px
-        nuxt-link.handler( :to="PATH.AFFINE_DOWNHILLS" target="_blank" )
+        nuxt-link.handler( to="/download" )
           el-button.try-button.out-try-button(
             :class="[`dark-${isDark}`]"
             size="large"
             :type="isDark ? 'default' : 'primary'"
           )
-            span.text-long {{ $t('tryItOnline') }}
-            span.text-short {{ $t('try') }}
+            span {{ $t('download') }}
 
         nuxt-link.handler( :to="PATH.AFFiNE_GITHUB" target="_blank" )
           .out-github-button.flex.items-center.justify-center
@@ -61,11 +60,11 @@
 
     .right-part
       .flex.items-center.gap-16px
-        nuxt-link( :to="PATH.AFFINE_DOWNHILLS" target="_blank" )
+        nuxt-link( to="/download" )
           el-button.try-button(
             v-if="isMounted"
             :type="isDark ? 'default' : 'primary'"
-          ) {{ $t('tryItOnline') }}
+          ) {{ $t('download') }}
 
         nuxt-link( :to="PATH.AFFiNE_GITHUB" target="_blank" rel="nofollow")
           .github-button.flex.items-center.justify-center

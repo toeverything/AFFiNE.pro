@@ -1,5 +1,7 @@
 <template lang="pug">
 .overview-hero.flex.flex-col.items-center
+  campaign-entry
+
   h1.section-title(
     v-html="$t('overviewPage.heroTitle')"
   )
@@ -12,33 +14,40 @@
 
   h3.section-desc.mt-0 {{ $t('overviewPage.heroDesc') }}
 
-  nuxt-link.hero-action.try-it-button(
-    :to="PATH.AFFINE_DOWNHILLS"
-    target="_blank"
-    @mouseenter="handleMouseenter"
-    @mouseleave="handleMouseleave"
-    :data-intercept="$t('useDesktopVersion.title')"
-    v-mobile-intercept
-    :class="{ 'is-mobile': isMobile }"
-  )
-    .icon-container
-      .icon-placeholder(
-        v-if="!lottieLoaded"
-      )
-        affine-logo
-
-      client-only
-        vue3-lottie(
-          ref="lottieIcon"
-          :autoPlay="false"
-          :loop="false",
-          :speed="4"
-          animationLink="/lottie-files/loading-white.json"
-          @onComplete="handleLottieComplete"
-          @onAnimationLoaded="handleLottieLoaded"
+  .flex.hero-action
+    nuxt-link.try-it-button.download-app-button(
+      to="/download"
+      @mouseenter="handleMouseenter"
+      @mouseleave="handleMouseleave"
+    )
+      .icon-container
+        .icon-placeholder(
+          v-if="!lottieLoaded"
         )
+          affine-logo
 
-    | {{ $t('tryItOnline') }}
+        client-only
+          vue3-lottie(
+            ref="lottieIcon"
+            :autoPlay="false"
+            :loop="false",
+            :speed="4"
+            animationLink="/lottie-files/loading-white.json"
+            @onComplete="handleLottieComplete"
+            @onAnimationLoaded="handleLottieLoaded"
+          )
+
+      | {{ $t('downloadApp') }}
+
+    nuxt-link(
+      :to="PATH.AFFINE_DOWNHILLS"
+      target="_blank"
+      :data-intercept="$t('useDesktopVersion.title')"
+      v-mobile-intercept
+      :class="{ 'is-mobile': isMobile }"
+    )
+      brand-glow-button() {{ $t('tryItOnline') }}
+
   overview-live-demo
 </template>
 
@@ -100,7 +109,7 @@ const handleLottieComplete = () => {
     margin: 0
 
 .overview-hero
-  margin-top: 90px
+  margin-top: 100px
 
   @media $mediaInXS
     margin-top: 55px
@@ -108,20 +117,22 @@ const handleLottieComplete = () => {
   .section-title
     margin: 0
     @media $mediaInXS
-      font-size: 32px !important
-      max-width: 324px
+      font-size: 24px !important
+      max-width: 270px
 
   .section-subtitle
     width: 100%
     margin-top: 24px
+    font-size: fluid-value(24, 48)
     margin-bottom: fluid-value(53, 104)
+
     @media $mediaInXS
       font-size: 24px !important
 
   .alternative-wrapper
     .overview-hero-alternatives
       @media $mediaInDesktop
-        min-width: 260px
+        min-width: 200px
         text-align: right
 
         .content-title
@@ -141,10 +152,15 @@ const handleLottieComplete = () => {
     line-height: (29/24)
     margin-bottom: fluid-value(48, 87)
 
-  .try-it-button
+  .try-it-button,
+  .brand-glow-button
     display: inline-flex
     align-items: center
+    justify-content: center
     position relative
+
+    @media $mediaInDesktop
+      min-width: 286px
 
     &.is-mobile:after
       content: attr(data-intercept)
@@ -180,8 +196,13 @@ const handleLottieComplete = () => {
       @media $mediaInMobile
         display: none
 
+  .download-app-button
+    @media $mediaInMobile
+      display: none
+
   .hero-action
     margin-bottom: fluid-value(90, 235)
+    gap: 47px
 
   .overview-live-demo
     margin-bottom: fluid-value(110, 170)
