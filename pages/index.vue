@@ -66,13 +66,13 @@ useHead({
     text-align: center
 
   .try-it-button
-    padding: 12.5px 73px
+    padding: 12.5px 29px
     font-weight: 800;
     font-size: 24px;
     line-height: 29px;
     background: linear-gradient(180deg, #0E58F5 0%, #396BD8 31.77%, #1443A9 76.04%, #0043D3 100%);
     box-shadow: 0px 4px 21px rgba(14, 85, 238, 0.54), 0px 4px 84px rgba(138, 175, 255, 0.3);
-    border-radius: 44.1161px
+    border-radius: 10px
     color: #fff;
     transition: 368ms
 

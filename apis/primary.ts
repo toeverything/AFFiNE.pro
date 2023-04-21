@@ -1,3 +1,5 @@
+const FOUR_HOURS = 1000 * 3600 * 4
+
 class PrimaryAPI {
 
   async getBlog () {
@@ -11,6 +13,11 @@ class PrimaryAPI {
       store.blog = res.pages
     }
     return res.pages
+  }
+
+  async getReleases () {
+    const res = await useFetchWithCache<Release[]>('/api/releases', FOUR_HOURS)
+    return res.value
   }
 
 }

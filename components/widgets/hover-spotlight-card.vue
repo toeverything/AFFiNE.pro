@@ -1,7 +1,8 @@
 <template lang="pug">
 .hover-spotlight-card(
   ref="el"
-  :style="{ '--cursor-x': elementX, '--cursor-y': elementY, '--light-size': `${lightSize}px` }"
+  :class="{ 'enable-parallax': enableParallax }"
+  :style="{ '--cursor-x': elementX, '--cursor-y': elementY, '--light-size': `${lightSize}px`, ...transformStyle }"
 )
   .spotlight( v-if="enableHover" )
   slot
@@ -12,14 +13,32 @@ import { useMouseInElement } from '@vueuse/core'
 
 const props = withDefaults(defineProps<{
   enableHover: boolean,
+  enableParallax: boolean,
+  rotateFactor: number
   lightSize: number
 }>(), {
   lightSize: 400,
+  rotateFactor: 15,
   enableHover: true
 })
 const el = ref(null)
 
-const { elementX, elementY } = useMouseInElement(el, { handleOutside: false })
+const cardMouse = useMouseInElement(el, { handleOutside: false })
+const { elementX, elementY } = cardMouse
+
+const transformStyle = computed(() => {
+  if (!props.enableParallax) return
+
+  const x = cardMouse.elementX.value - cardMouse.elementWidth.value / 2
+  const y = cardMouse.elementY.value - cardMouse.elementHeight.value / 2
+  const mousePX = x / cardMouse.elementWidth.value
+  const mousePY = y / cardMouse.elementHeight.value
+  const rx = mousePX * props.rotateFactor
+  const ry = mousePY * props.rotateFactor
+  return {
+    transform: (cardMouse.isOutside.value) ? null : `rotateY(${rx}deg) rotateX(${ry}deg)`
+  }
+})
 
 </script>
 
@@ -32,6 +51,9 @@ const { elementX, elementY } = useMouseInElement(el, { handleOutside: false })
   --border: 2px
   --y: s('calc(var(--cursor-y) * 1px)')
   --x: s('calc(var(--cursor-x) * 1px)')
+
+  &.enable-parallax
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)
 
   .spotlight
     pointer-events: none;

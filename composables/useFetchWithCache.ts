@@ -7,7 +7,7 @@ const cache = new Cacheables({
 
 const FIVE_MINUTES = 1000 * 60 * 5
 
-export default async <T>(url: string, maxAge: number = FIVE_MINUTES) => {
+export default async <T>(url: string, maxAge: number = FIVE_MINUTES): Promise<Ref<T>> => {
   const store = useStore()
 
   const getCacheData = () =>
@@ -49,5 +49,5 @@ export default async <T>(url: string, maxAge: number = FIVE_MINUTES) => {
     })
   }
 
-  return data
+  return data as Ref<T>
 }
