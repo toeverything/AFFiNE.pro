@@ -28,6 +28,7 @@ defineProps<{
   border-radius: 10px
   transition: 368ms
   cursor pointer
+  white-space: pre
 
   .button-text
     position relative
