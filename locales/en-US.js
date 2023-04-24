@@ -21,6 +21,8 @@ export default {
   download: 'Download',
   downloadApp: 'Download App',
   affineCopilot: 'AFFiNE Copilot',
+  OctoBase: "OctoBase",
+  BlockSuite: "BlockSuite",
 
   useDesktopVersion: {
     title: 'Full functionality on desktop',
@@ -55,7 +57,7 @@ export default {
     octobaseFeatures: 'Local-first Distributed storage<br/>Frontend-centric developer experience<br/>Real-time Sync with ORM for multiple database providers',
     and: 'and',
     snsTitle: 'Join Our Community',
-    snsDesc: 'AFFiNE is an <span class="hashtag">#OpenSource</span> software, built with <span class="text-bold">BlockSuite</span> and <span class="text-bold">OctoBase</span>'
+    snsDesc: 'AFFiNE is an <span class="hashtag">#OpenSource</span> software, built with '
   },
 
   aboutUsPage: {
