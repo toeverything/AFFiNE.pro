@@ -113,7 +113,7 @@ await loadData()
 useHead(() => ({
   title: 'Blog',
   link: [
-    route.query.tag ? { rel: 'canonical', href: `${PATH.SHARE_HOST}/blog` } : {},
+    { rel: 'canonical', href: `${PATH.SHARE_HOST}/blog` },
   ]
 }))
 
