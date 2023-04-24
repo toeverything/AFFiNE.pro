@@ -8,8 +8,11 @@
         :sns="sns"
       )
     .sns-desc(
-      v-html="$t('overviewPage.snsDesc')"
     )
+      span( v-html="$t('overviewPage.snsDesc')" )
+      nuxt-link.text-bold( :to="PATH.AFFiNE_BLOCK_SUITE" target="_blank" rel="nofollow" ) {{ $t('BlockSuite') }}
+      | &nbsp;{{ $t('overviewPage.and') }}&nbsp;
+      nuxt-link.text-bold( :to="PATH.AFFiNE_OCTO_BASE" target="_blank" rel="nofollow" ) {{ $t('OctoBase') }}
 
 </template>
 
