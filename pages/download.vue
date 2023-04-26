@@ -31,6 +31,7 @@
 </template>
 
 <script lang="ts" setup>
+import semver from 'semver'
 import { PATH } from '~/utils/constants'
 import { primaryAPI } from '~/apis'
 
@@ -105,7 +106,14 @@ const loadData = async () => {
     githubReleases.map(release => {
       const { tag_name, assets, prerelease } = release
       const type = getReleaseType(release)
-      if (!type || hasRelease(releases[type])) return
+      if (!type) {
+        return
+      } else if (
+        hasRelease(releases[type]) &&
+        semver.lt(tag_name, releases[type].tag_name)
+      ) {
+        return
+      }
       releases[type] = {
         tag_name,
         assets,
