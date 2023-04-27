@@ -12,6 +12,14 @@ jobs:
   send-feishu-bot:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+
+      - name: "Check package version"
+        run: |
+          VERSION=$(cat package.json|grep version|head -1|awk -F: '{ print $2 }'|sed 's/[", ]//g')
+          echo $VERSION
+          echo "package_version=$VERSION" >> $GITHUB_ENV
       - name: post message
         uses: foxundermoon/feishu-action@v2
         with:
@@ -31,12 +39,3 @@ jobs:
                 - - tag: text
                     un_escape: true
                     text: "head_commit: ${{ github.event.head_commit.message }}"
-                - - tag: text
-                    un_escape: true
-                    text: 'Compare&nbsp;:'
-                  - tag: a
-                    text: Show what changed
-                    href: ${{ github.event.compare }}
-                - - tag: text
-                    un_escape: true
-                    text: "sender&nbsp;: ${{ github.event.sender.login }}"
