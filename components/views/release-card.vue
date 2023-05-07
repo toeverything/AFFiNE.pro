@@ -77,7 +77,7 @@ const isShowOtherVersion = ref(false)
 const isWinAsset = (asset: Asset) => asset.name.includes('windows')
 const isWinExeAsset = (asset: Asset) => isWinAsset(asset) && asset.name.endsWith('.exe')
 const isMacAsset = (asset: Asset) => asset.name.includes('macos')
-const isMacArmAsset = (asset: Asset) => isMacAsset(asset) && asset.name.endsWith('arm64.dmg')
+const isMacArmAsset = (asset: Asset) => isMacAsset(asset) && asset.name.includes('arm64')
 const isLinuxAsset = (asset: Asset) => asset.name.includes('linux')
 
 const defaultAssetPlatformName = computed(() => {
