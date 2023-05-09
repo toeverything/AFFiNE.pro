@@ -54,5 +54,14 @@ onActivated(() => {
       position relative
       padding: 0 fluid-value(20, 38)
       overflow hidden
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
+      // @hack: Fix Border radius with overflow hidden on Safari
+      // @ref: https://gist.github.com/domske/b66047671c780a238b51c51ffde8d3a0
+      transform: translateZ(0)
+
+      &:after
+        content: ''
+        position absolute
+        z-index: -1
+        inset: 0
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
 </style>
