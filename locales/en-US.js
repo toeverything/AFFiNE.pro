@@ -77,14 +77,18 @@ export default {
   },
 
   downloadPage: {
-    headline: 'Download the AFFiNE Client allows you to experience the full power of AFFiNE. You can try our ',
+    headline: 'Download the AFFiNE Client allows you to experience the full power of AFFiNE.',
+    headlineLinkYouCanTry: 'You can try our ',
     headlineLink: 'live demo',
-    beta: 'Beta Version',
-    betaDesc: 'A pre-release software that is tested by a limited group of users',
-    canary: 'Canary Version',
-    canaryDesc: 'Want to see what we are working on? The Canary version is unstable and not recommended for production use.',
-    stable: 'Stable Version',
-    stableDesc: 'If you are looking to use AFFiNE then we suggest this version.\nA stable version for production-use with regular updates.',
+    beta: 'Beta',
+    betaDesc: 'The right version if you are looking to test and provide feedback on some of our upcoming features and help us check for bugs. <br/><b>It incorporates improvements from the Canary Version.</b>',
+    betaUpdateFrequency: 'Updated every two weeks',
+    canary: 'Canary',
+    canaryDesc: 'The cutting-edge version with the latest features and ideas. Lots of testing and not all features may be fully developed to release.',
+    canaryUpdateFrequency: 'Updated almost daily',
+    stable: 'Stable',
+    stableDesc: 'The most reliable and well-tested version, perfect for users who want a smooth and consistent experience without worrying about crashes or glitches.',
+    stableUpdateFrequency: '&nbsp;',
     otherVersion: 'Other Version',
     // @FIXME: vars not work in prod
     otherVersionFor: 'Other version for',
@@ -93,8 +97,8 @@ export default {
     reasonA: 'Navigate your workspaces like never before',
     reasonB: 'Revolutionise your organisation with the power of databases',
     reasonC: 'Get creative in Edgeless and unleash your imagination',
-    reasonD: 'Coming soon! Full control over where and how you store your data',
-    mobileVersionNotes: 'Mobile Still in development for now, but we hope to have mobile apps real soon.'
+    reasonD: 'Full control over where and how you store your data',
+    mobileVersionNotes: 'Mobile apps are still in development, but we hope to have them available real soon.'
   },
 
   hello: 'Hello',
