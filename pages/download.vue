@@ -174,9 +174,13 @@ await loadData()
           width: 100%
           height: 2px
           background-color: white
+          transition: 318ms
 
         &:hover
-          opacity: 0.85
+          color: var(--link-hover-color)
+
+          &:after
+            background-color: var(--link-hover-color)
 
     .release-cards
       margin-bottom: fluid-value(48, 86)

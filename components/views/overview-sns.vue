@@ -55,6 +55,9 @@ import { PATH, COMMUNITY_SNS_LIST } from '~/utils/constants'
     .text-bold
       font-weight: 800
 
+      &:hover
+        color: var(--hashtag-color)
+
   /html.dark &
     --hashtag-color: #3E6FDB
 </style>
