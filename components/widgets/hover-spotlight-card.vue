@@ -24,7 +24,7 @@ const props = withDefaults(defineProps<{
 const el = ref(null)
 
 const cardMouse = useMouseInElement(el, { handleOutside: false })
-const { elementX, elementY } = cardMouse
+const { elementX, elementY, isOutside } = cardMouse
 
 const transformStyle = computed(() => {
   if (!props.enableParallax) return
@@ -38,6 +38,10 @@ const transformStyle = computed(() => {
   return {
     transform: (cardMouse.isOutside.value) ? null : `rotateY(${rx}deg) rotateX(${ry}deg)`
   }
+})
+
+defineExpose({
+  isOutside
 })
 
 </script>

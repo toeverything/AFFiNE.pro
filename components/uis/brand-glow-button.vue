@@ -1,7 +1,7 @@
 <template lang="pug">
 .brand-glow-button.flex.items-center.justify-center(
   @click="handleClick"
-  :class="{ 'is-disabled': disabled }"
+  :class="{ 'is-disabled': disabled, 'need-shadow': needShadow }"
 )
   .button-text
     slot
@@ -11,6 +11,7 @@
 
 <script setup lang="ts">
 defineProps<{
+  needShadow?: boolean
   disabled?: boolean
 }>()
 </script>
@@ -20,7 +21,6 @@ defineProps<{
   position relative
   --background-color: #000
   height: fluid-value(38, 52)
-  box-shadow: 0px 4px 21px rgba(14, 85, 238, 0.54), 0px 4px 84px rgba(138, 175, 255, 0.3)
   padding: 0 29px
   color: #fff
   font-weight: 800;
@@ -29,6 +29,9 @@ defineProps<{
   transition: 368ms
   cursor pointer
   white-space: pre
+
+  &.need-shadow
+    box-shadow: 0px 4px 21px rgba(14, 85, 238, 0.54), 0px 4px 84px rgba(138, 175, 255, 0.3)
 
   .button-text
     position relative
@@ -67,6 +70,7 @@ defineProps<{
   &.is-disabled
     cursor not-allowed
     box-shadow: none
+    border: 1px solid rgba(255, 255, 255, 0.65);
 
     &:after
       display none

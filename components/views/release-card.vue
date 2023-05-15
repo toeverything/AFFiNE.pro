@@ -1,17 +1,25 @@
 <template lang="pug">
-.release-card.inline-flex.flex-col
+.release-card.inline-flex.flex-col(
+  ref="el"
+)
   hover-spotlight-card.card-wrapper.inline-flex.flex-col.items-center(
     :enableParallax="!$device.isMobile"
     :lightSize="340"
   )
     .card-title {{ title }}
-    .release-tag( v-if="hasAssets" ) {{ tag_name.substring(1) }}
+    .update-frequency( v-html="updateFrequency" )
+    svg-icon-drawing(  v-if="!$device.isMobile" :isShow="hasAssets && !isOutside" )
+      nuxt-icon.download-drawing-line(
+        filled name="download-drawing-line"
+      )
+    //- .release-tag( v-if="hasAssets" ) {{ tag_name.substring(1) }}
     .card-icon(
       :style="{ backgroundImage: `url(${icon})` }"
     )
-    .card-desc.text-center {{ desc }}
+    .card-desc.text-center( v-html="desc" )
     brand-glow-button(
       @click="() => handleDownloadClick(defaultAsset)"
+      :needShadow="!tag_name?.includes('canary')"
       :disabled="!hasAssets"
     ) {{ hasAssets ? $t('download') : $t('comingSoon') }}
 
@@ -52,9 +60,15 @@
 </template>
 
 <script setup lang="ts">
+import { useMouseInElement } from '@vueuse/core'
+
+const el = ref(null)
+const { isOutside } = useMouseInElement(el, { handleOutside: false })
+
 const props = defineProps<{
   title: string
   desc: string
+  updateFrequency: string
   icon: string
   tips?: string
   tag_name: string
@@ -70,7 +84,7 @@ const Platform = {
 }
 
 const $device = useDevice()
-const hasAssets = computed(() => props.tag_name && props.assets.length)
+const hasAssets = computed(() => !!props.tag_name && props.assets.length > 0)
 const isArm64 = ref(false)
 const isShowOtherVersion = ref(false)
 
@@ -163,12 +177,23 @@ onBeforeMount(async () => {
 
   .card-wrapper
     width: 100%
-    background: #1B1B1B;
+    background: rgba(0, 0, 0, 0.19);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
     border-radius: 14px;
     padding: 30px
-    gap: fluid-value(24, 38)
+    gap: fluid-value(16, 18)
+
+    .update-frequency
+      margin-top: -1em
+
+    .svg-icon-drawing
+      position absolute
+      top: 84px
+
+      svg
+        width: 151px
+        height: 8px
 
     .release-tag
       margin: -1em
@@ -185,8 +210,8 @@ onBeforeMount(async () => {
       background-size: contain
 
     .card-desc
+      min-height: 120px
       white-space: pre-line
-      font-weight: 700
       font-size: fluid-value(14, 16)
       line-height: (20/16);
 
@@ -194,7 +219,7 @@ onBeforeMount(async () => {
     padding: 0 65px
 
   .platform-name
-    margin-top: -1.5em
+    margin-top: -0.3em
     font-size: 14px;
     line-height: 17px;
 

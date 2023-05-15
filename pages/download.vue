@@ -5,7 +5,9 @@
     .container.flex.flex-col.items-center
       .hero-headline
         | {{ $t('downloadPage.headline') }}
-        nuxt-link( :to="PATH.AFFINE_DOWNHILLS" v-mobile-intercept target="_blank") {{ $t('downloadPage.headlineLink') }}
+        .hero-try-action
+          | {{ $t('downloadPage.headlineLinkYouCanTry') }}
+          nuxt-link( :to="PATH.AFFINE_DOWNHILLS" v-mobile-intercept target="_blank") {{ $t('downloadPage.headlineLink') }}
 
       .release-cards.flex.items-start
         release-card(
@@ -68,20 +70,23 @@ const releases: Record<string, Release> = reactive({
 const releaseCards = computed(() => {
   return [
     {
+      title: t('downloadPage.canary'),
+      desc: t('downloadPage.canaryDesc'),
+      updateFrequency: t('downloadPage.canaryUpdateFrequency'),
+      icon: canaryIconUrl,
+      // tips: t('downloadPage.manuallyUpdateTips'),
+      ...releases.canary
+    },
+    {
       title: t('downloadPage.beta'),
+      updateFrequency: t('downloadPage.betaUpdateFrequency'),
       desc: t('downloadPage.betaDesc'),
       icon: betaIconUrl,
       ...releases.beta
     },
     {
-      title: t('downloadPage.canary'),
-      desc: t('downloadPage.canaryDesc'),
-      icon: canaryIconUrl,
-      tips: t('downloadPage.manuallyUpdateTips'),
-      ...releases.canary
-    },
-    {
       title: t('downloadPage.stable'),
+      updateFrequency: t('downloadPage.stableUpdateFrequency'),
       desc: t('downloadPage.stableDesc'),
       icon: stableIconUrl,
       // ...releases.stable
@@ -144,17 +149,22 @@ await loadData()
       font-size: fluid-value(24, 36)
       line-height: 44/36
       font-weight: 800
-      margin-bottom: fluid-value(81, 157)
+      margin-bottom: fluid-value(81, 121)
+
+      .hero-try-action
+        font-weight: 400
+        font-size: fluid-value(16, 24)
+        margin-top: fluid-value(16, 24)
+
+        a
+          font-weight: 800
 
       @media $mediaInXS
         max-width: 280px
 
       a
-        color: transparent
-        background-image: linear-gradient(180deg, #7ca5ff, #286CFF)
-        background-clip: text
-        position relative
         transition: 318ms
+        position relative
 
         &:after
           content: ''
@@ -163,7 +173,7 @@ await loadData()
           bottom: 0px
           width: 100%
           height: 2px
-          background-color: #286CFF
+          background-color: white
 
         &:hover
           opacity: 0.85
