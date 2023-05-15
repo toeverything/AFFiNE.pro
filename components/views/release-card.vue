@@ -177,7 +177,7 @@ onBeforeMount(async () => {
 
   .card-wrapper
     width: 100%
-    background: rgba(0, 0, 0, 0.19);
+    background: rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
     border-radius: 14px;
