@@ -52,7 +52,7 @@ enum ReleaseType {
 const releases: Record<string, Release> = reactive({
   beta: {
     tag_name: '',
-    prerelease: true,
+    prerelease: false,
     assets: []
   },
   canary: {
@@ -95,7 +95,7 @@ const releaseCards = computed(() => {
 })
 
 const loadData = async () => {
-  const isBeta = (release: Release) => release.prerelease && release.tag_name.includes('beta')
+  const isBeta = (release: Release) => !release.prerelease && release.tag_name.includes('beta')
   const isCanary = (release: Release) => release.prerelease && release.tag_name.includes('canary')
   const isStable = (release: Release) => !release.prerelease
   const hasRelease = (release: Release) => release.tag_name && release.assets.length
