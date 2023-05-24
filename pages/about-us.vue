@@ -55,170 +55,172 @@
 </template>
 
 <script lang="ts" setup>
-import { INFO } from '~/utils/constants'
-import type { Member } from '~/components/widgets/member-card.vue'
+import { INFO } from "~/utils/constants";
+import type { Member } from "~/components/widgets/member-card.vue";
 
-const { t } = useI18n()
+const { t } = useI18n();
 
 const coreMembers: Member[] = [
   {
-    name: 'Enther/Jiachen He',
-    title: 'Founder & Product Owner',
-    desc: 'The PM and CEO guy of AFFiNE.',
-    avatar: 'https://unavatar.io/github/HeJiachen-PM',
-    link: 'https://github.com/HeJiachen-PM',
+    name: "Enther/Jiachen He",
+    title: "Founder & Product Owner",
+    desc: "The PM and CEO guy of AFFiNE.",
+    avatar: "https://unavatar.io/github/HeJiachen-PM",
+    link: "https://github.com/HeJiachen-PM",
   },
   {
-    name: 'Terry/Chi Zhang',
-    title: 'Co-founder & CTO',
-    desc: 'AFFiNE builder with great engineers.',
-    avatar: 'https://unavatar.io/github/tzhangchi',
-    link: 'https://github.com/tzhangchi',
+    name: "Terry/Chi Zhang",
+    title: "Co-founder & CTO",
+    desc: "AFFiNE builder with great engineers.",
+    avatar: "https://unavatar.io/github/tzhangchi",
+    link: "https://github.com/tzhangchi",
   },
   {
-    name: 'Iris/Yipei Wei',
-    title: 'Co-founder & Head of Community Support',
-    desc: 'She talks to people so that AFFiNE is something people want.',
-    avatar: '/yipei.png',
-    link: 'https://github.com/Yipei-Operation',
+    name: "Iris/Yipei Wei",
+    title: "Co-founder & Head of Community Support",
+    desc: "She talks to people so that AFFiNE is something people want.",
+    avatar: "/yipei.png",
+    link: "https://github.com/Yipei-Operation",
   },
   {
-    name: 'Ewind/Yifeng Wang',
-    title: 'Co-founder & Chief Architect',
-    desc: 'He ensures AFFiNE is built with the proper technology. Leader of BlockSuite and Developer Relationship.',
-    avatar: 'https://unavatar.io/github/doodlewind',
-    link: 'https://github.com/doodlewind',
+    name: "Ewind/Yifeng Wang",
+    title: "Co-founder & Chief Architect",
+    desc: "He ensures AFFiNE is built with the proper technology. Leader of BlockSuite and Developer Relationship.",
+    avatar: "https://unavatar.io/github/doodlewind",
+    link: "https://github.com/doodlewind",
   },
   {
-    name: 'Brooooooklyn/Yinan Long',
-    title: 'Partner & Head of Server and System Architect',
+    name: "Brooooooklyn/Yinan Long",
+    title: "Partner & Head of Server and System Architect",
     desc: `Enable real-time web applications to run locally. Make distributed data connected synchronously. Leader of OctoBase.`,
-    avatar: 'https://unavatar.io/github/Brooooooklyn',
-    link: 'https://github.com/Brooooooklyn',
+    avatar: "https://unavatar.io/github/Brooooooklyn",
+    link: "https://github.com/Brooooooklyn",
   },
   {
-    name: 'Alex Yang',
-    title: 'Architecture Engineer',
+    name: "Alex Yang",
+    title: "Architecture Engineer",
     desc: `Leader of AFFiNE engineering.`,
-    avatar: 'https://unavatar.io/github/Himself65',
-    link: 'https://github.com/Himself65',
+    avatar: "https://unavatar.io/github/Himself65",
+    link: "https://github.com/Himself65",
   },
-]
+];
 
 const engineeringMembers: Member[] = [
   {
-    name: 'Xiaodong Zuo',
-    title: 'Architecture Engineer',
-    avatar: 'https://unavatar.io/github/zuoxiaodong0815',
-    link: 'https://github.com/zuoxiaodong0815',
+    name: "Xiaodong Zuo",
+    title: "Architecture Engineer",
+    avatar: "https://unavatar.io/github/zuoxiaodong0815",
+    link: "https://github.com/zuoxiaodong0815",
   },
   {
-    name: 'Darksky Tan',
-    title: 'Architecture Engineer',
-    avatar: 'https://unavatar.io/github/darkskygit',
-    link: 'https://github.com/darkskygit',
+    name: "Darksky Tan",
+    title: "Architecture Engineer",
+    avatar: "https://unavatar.io/github/darkskygit",
+    link: "https://github.com/darkskygit",
   },
   {
-    name: 'Xinglong Wang',
-    title: 'Architecture Engineer',
-    avatar: 'https://unavatar.io/github/alt1o',
-    link: 'https://github.com/alt1o',
+    name: "Mirone Saul",
+    title: "Architecture Engineer",
+    avatar: "https://unavatar.io/github/Saul-Mirone",
+    link: "https://mirone.me",
   },
   {
-    name: 'Mirone Saul',
-    title: 'Architecture Engineer',
-    avatar: 'https://unavatar.io/github/Saul-Mirone',
-    link: 'https://mirone.me',
+    name: "Xiao Peng",
+    title: "Architecture Engineer",
+    avatar: "https://unavatar.io/github/pengx17",
+    link: "https://pengx17.vercel.app",
   },
   {
-    name: 'Xiao Peng',
-    title: 'Architecture Engineer',
-    avatar: 'https://unavatar.io/github/pengx17',
-    link: 'https://pengx17.vercel.app',
+    name: "Yi Liu",
+    title: "Architecture Engineer",
+    avatar: "https://unavatar.io/github/forehalo",
+    link: "https://github.com/forehalo",
   },
   {
-    name: 'Yi Liu',
-    title: 'Architecture Engineer',
-    avatar: 'https://unavatar.io/github/forehalo',
-    link: 'https://github.com/forehalo',
+    name: "Whitewater",
+    title: "Full-stack Engineer",
+    avatar: "https://unavatar.io/github/lawvs",
+    link: "https://github.com/lawvs",
   },
   {
-    name: 'Whitewater',
-    title: 'Full-stack Engineer',
-    avatar: 'https://unavatar.io/github/lawvs',
-    link: 'https://github.com/lawvs',
+    name: "Shaoxuan Qi",
+    title: "Full-stack Engineer",
+    avatar: "https://unavatar.io/github/QiSHaoXuan",
+    link: "https://github.com/QiSHaoXuan",
   },
   {
-    name: 'Shaoxuan Qi',
-    title: 'Full-stack Engineer',
-    avatar: 'https://unavatar.io/github/QiSHaoXuan',
-    link: 'https://github.com/QiSHaoXuan',
+    name: "Xiaotian Ma",
+    title: "Full-stack Engineer",
+    avatar: "https://unavatar.io/github/thorseraq",
+    link: "https://github.com/thorseraq",
   },
+
   {
-    name: 'Xiaotian Ma',
-    title: 'Full-stack Engineer',
-    avatar: 'https://unavatar.io/github/thorseraq',
-    link: 'https://github.com/thorseraq',
+    name: "Regis Chen",
+    title: "Full-stack Engineer",
+    avatar: "/RegisChen.jpeg",
+    link: "https://github.com/regischen",
   },
+
   {
-    name: 'Haoxin Shang',
-    title: 'Full-stack Engineer',
-    avatar: 'https://unavatar.io/github/DiamondThree',
-    link: 'https://github.com/DiamondThree',
+    name: "Yang Jinfei",
+    title: "Full-stack Engineer",
+    avatar: "https://unavatar.io/github/JimmFly",
+    link: "https://github.com/JimmFly",
   },
-  {
-    name: 'Yang Jinfei',
-    title: 'Full-stack Engineer',
-    avatar: 'https://unavatar.io/github/JimmFly',
-    link: 'https://github.com/JimmFly',
-  },
-]
+];
 
 const communityMembers: Member[] = [
   {
-    name: 'Christopher Smolak',
-    title: 'Operations Specialist',
-    avatar: '/ChristopherSmolak.jpg',
-    link: 'https://shortcipher.me',
+    name: "Christopher Smolak",
+    title: "Operation Director, Community and Growth",
+    avatar: "/ChristopherSmolak.jpg",
+    link: "https://shortcipher.me",
   },
   {
-    name: 'Yang Peng',
-    title: 'Community Operator & Data Analyst',
-    avatar: 'https://unavatar.io/github/JackiePengp',
-    link: 'https://github.com/JackiePengp',
+    name: "Yang Peng",
+    title: "Operation Director, SEO and Data",
+    avatar: "https://unavatar.io/github/JackiePengp",
+    link: "https://github.com/JackiePengp",
   },
-]
+  {
+    name: "Haoxin Shang",
+    title: "DevRel of AFFiNE",
+    avatar: "https://unavatar.io/github/DiamondThree",
+    link: "https://github.com/DiamondThree",
+  },
+];
 
 const productMembers: Member[] = [
   {
-    name: 'Joe Hou',
-    title: 'Product Architect',
-    avatar: '/JoeHou.jpeg',
-    link: 'https://craft.do/s/jxEgkth6QpmxPs',
+    name: "Joe Hou",
+    title: "Product Architect",
+    avatar: "/JoeHou.jpeg",
+    link: "https://craft.do/s/jxEgkth6QpmxPs",
   },
   {
-    name: 'Hwang',
-    title: 'Product Designer',
-    avatar: '/hwang.png',
-    link: 'https://bento.me/hwang',
+    name: "Hwang",
+    title: "Product Designer",
+    avatar: "/hwang.png",
+    link: "https://bento.me/hwang",
   },
   {
-    name: 'Svaney',
-    title: 'UX Designer',
-    avatar: 'https://unavatar.io/github/Svaney-ssman',
-    link: 'https://github.com/Svaney-ssman',
+    name: "Svaney",
+    title: "UX Designer",
+    avatar: "https://unavatar.io/github/Svaney-ssman",
+    link: "https://github.com/Svaney-ssman",
   },
   {
-    name: 'Guozhu Liu',
-    title: 'Head of Product Design',
-    avatar: '/GuozhuLiu.jpeg',
-    link: 'https://xell.me',
+    name: "Guozhu Liu",
+    title: "Head of Product Design",
+    avatar: "/GuozhuLiu.jpeg",
+    link: "https://xell.me",
   },
-]
+];
 
 useHead({
-  title: t('aboutUs')
-})
+  title: t("aboutUs"),
+});
 </script>
 
 <style lang="stylus">
