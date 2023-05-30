@@ -129,6 +129,9 @@ $mediaCompactHeader = '(max-width: 1280px)'
   --navbar-active-bg-color: #E7E7E7
   --github-border-color: #A4A4A4
   --affix-progress: 0
+  position: relative
+  max-width: 1920px
+  margin: 0 auto
 
   &.has-ext
     --affix-progress: 1
