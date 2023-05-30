@@ -23,6 +23,8 @@ export default {
   affineCopilot: 'AFFiNE Copilot',
   OctoBase: "OctoBase",
   BlockSuite: "BlockSuite",
+  starOnGitHub: 'Star on GitHub',
+  gotoCommunity: 'Go to our community',
 
   useDesktopVersion: {
     title: 'Full functionality on desktop',
@@ -32,7 +34,7 @@ export default {
   overviewPage: {
     heroTitle: 'Write, Draw, and Plan All at Once',
     heroSubtitle: 'Open Source Alternative',
-    heroDesc: 'AFFiNE is the next-generation collaborative knowledge base for professionals.',
+    heroDesc: 'One Hyper fused Platform for wildly creative minds',
     pageMode: 'Page Mode',
     edgelessMode: 'Edgeless Mode',
     buildWith: 'Built with',

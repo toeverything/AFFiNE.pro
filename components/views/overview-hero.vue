@@ -48,12 +48,34 @@
     )
       brand-glow-button() {{ $t('tryItOnline') }}
 
+  .flex.hero-links
+    nuxt-link.link-button(
+      :to="`${PATH.AFFiNE_GITHUB}`"
+      rel="nofollow"
+      target="_blank"
+    )
+      github-circle.button-icon
+      .flex.flex-1.justify-between
+        .part-left {{ $t('starOnGitHub') }}
+        .part-right.star-count.ml-4
+          template( v-if="store.github.starAmount" ) {{formattedStarAmount}}k
+
+    nuxt-link.link-button(
+      :to="`${PATH.AFFiNE_COMMUNITY}`"
+      rel="nofollow"
+      target="_blank"
+    )
+      icon-message-circle-chat.button-icon
+      | {{ $t('gotoCommunity') }}
+
   overview-live-demo
 </template>
 
 <script setup lang="ts">
+import GithubCircle from '~icons/mdi/github-circle'
 import { PATH } from '~/utils/constants'
 
+const store = useStore()
 const { isMobile } = useDevice()
 
 let lastCallTime = Date.now()
@@ -62,6 +84,9 @@ const LAST_LOTTIE_FRAME = 240
 const lottieLoaded = ref(false)
 const isReverse = ref(true)
 const lottieIcon = ref<any>(null)
+const formattedStarAmount = computed(() => {
+  return (store.github.starAmount/1000).toFixed(1)
+})
 
 const playLottieSegment = () => {
   const animation = lottieIcon.value
@@ -109,7 +134,7 @@ const handleLottieComplete = () => {
     margin: 0
 
 .overview-hero
-  margin-top: 100px
+  margin-top: 76px
 
   @media $mediaInXS
     margin-top: 55px
@@ -124,7 +149,7 @@ const handleLottieComplete = () => {
     width: 100%
     margin-top: 24px
     font-size: fluid-value(24, 48)
-    margin-bottom: fluid-value(53, 104)
+    margin-bottom: fluid-value(53, 65)
 
     @media $mediaInXS
       font-size: 24px !important
@@ -150,7 +175,7 @@ const handleLottieComplete = () => {
     font-weight: 700
     font-size: fluid-value(16, 24)
     line-height: (29/24)
-    margin-bottom: fluid-value(48, 87)
+    margin-bottom: fluid-value(48, 65)
 
   .try-it-button,
   .brand-glow-button
@@ -201,8 +226,40 @@ const handleLottieComplete = () => {
       display: none
 
   .hero-action
-    margin-bottom: fluid-value(90, 235)
+    margin-bottom: fluid-value(25, 45)
     gap: 47px
+
+  .hero-links
+    margin-bottom: fluid-value(70, 165)
+    gap: fluid-value(1, 50)
+
+    @media $mediaInMobile
+      flex-direction: column
+      align-items: center
+
+    .link-button
+      display: flex
+      align-items: center
+      justify-content: center
+      font-weight: 800
+      font-size: 14px
+      line-height: 24px
+      min-width: fluid-value(226, 250)
+      min-height: fluid-value(34, 54)
+      padding: 0 20px
+      transition: 318ms
+
+      &:hover
+        color: var(--link-hover-color)
+
+      @media $mediaInMobile
+        font-weight: 500
+        font-size: 13px
+
+    .button-icon
+      font-size: fluid-value(19, 30)
+      width: fluid-value(19, 30)
+      margin-right: 18px
 
   .overview-live-demo
     margin-bottom: fluid-value(110, 170)
