@@ -6,8 +6,8 @@
     .base-container.hero-container
       overview-hero
 
-  .section-build-with
-    overview-build-with
+  .section-trusted-by
+    overview-trusted-by
 
   .section-open-source-everything
     overview-open-source-everything

@@ -38,6 +38,7 @@ export default {
     pageMode: 'Page Mode',
     edgelessMode: 'Edgeless Mode',
     buildWith: 'Built with',
+    trustedByTitle: 'Trusted by people from next-gen startups to established organizations',
     openSourceTitle: 'Open Source Everything',
     openSourceDesc: `Open Source isn't just about code.<br/>Everything is built in public with AFFiNE`,
     issuesTitle: 'Whole code is open source',
