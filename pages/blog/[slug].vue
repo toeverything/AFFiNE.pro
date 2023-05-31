@@ -7,7 +7,7 @@
   )
     .jumbotron-container
       h1.article-title {{ article.title }}
-      .article-desc {{ article.description }}
+      .article-desc( v-if="article.description" ) {{ article.description }}
 
     .main-container
       .all-posts-handler.flex.items-center( @click="handleReturnClick" )

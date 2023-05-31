@@ -19,7 +19,13 @@ export const useBlogMetas = (
   query?: { tag: string }
 ) => {
   const publishedMetas = blogMetas
-    .filter((meta) => meta.publish)
+    .filter((meta) => (
+      meta.publish &&
+      meta.cover &&
+      meta.title &&
+      meta.md &&
+      meta.slug
+    ))
     .sort(({ created: a }, { created: b }) => {
       if (a === null || b === null) {
         return 0
