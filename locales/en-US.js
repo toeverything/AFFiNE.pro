@@ -53,6 +53,7 @@ export default {
     privacyFirstItemB: 'Keep your data in your hand. Moreover, shape your tool in your favour.',
     privacyFirstItemC: 'AFFiNE is built upon fully extensible and customizable foundation open-source frameworks.',
     privacyFirstItemD: 'We ensure real-time syncing with decentralized storage.<br/>WITHOUT VENDOR lock-in and CRYPTO.',
+    userStoriesTitle: 'User Stories',
     buildWithDetailTitle: 'Built with BlockSuite and OctoBase',
     blocksuiteDesc: 'The only JAMstack block editing framework that supports:',
     blocksuiteFeatures: 'Rich-text blocks<br/>Table & Database blocks<br/>Canvas graphic blocks',

@@ -13,4 +13,11 @@ declare global {
     assets: Asset[]
   }
 
+  interface UserStory {
+    avatar: string
+    name: string
+    position: string
+    content: string
+  }
+
 }

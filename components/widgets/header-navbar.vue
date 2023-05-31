@@ -155,6 +155,9 @@ $mediaCompactHeader = '(max-width: 1280px)'
     border-radius: 70px
     min-width: 177px
 
+    &:hover
+      border-color: black !important
+
     .text-long
       @media $mediaCompactHeader
         display: none
