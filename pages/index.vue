@@ -9,6 +9,9 @@
   .section-trusted-by
     overview-trusted-by
 
+  .section-build-in-public
+    overview-build-in-public
+
   .section-user-stories
     overview-user-stories
 

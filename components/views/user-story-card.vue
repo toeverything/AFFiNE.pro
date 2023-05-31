@@ -40,6 +40,7 @@ onMounted(() => {
   background: rgba(255, 255, 255, 0.1)
 
   // Radial gradient border
+  // @TODO: Abstract as a util or com
   &:before
     content: ""
     pointer-events: none
