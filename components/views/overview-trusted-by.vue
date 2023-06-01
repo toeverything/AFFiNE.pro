@@ -9,6 +9,18 @@
 
 <style lang="stylus">
 .overview-trusted-by
+  position: relative
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.04) 100%)
+  padding-bottom: fluid-value(118, 128)
+
+  &:before
+    content: ''
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 1px
+    background-image: radial-gradient(rgba(255,255,255,0.23) 0%, rgba(255,255,255,0) 100%)
+
   .section-mini-title
     font-weight: 800
     font-size: fluid-value(16, 24)

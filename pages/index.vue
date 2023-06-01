@@ -9,6 +9,9 @@
   .section-trusted-by
     overview-trusted-by
 
+  .section-consolidate-workflow
+    overview-consolidate-workflow
+
   .section-build-in-public
     overview-build-in-public
 

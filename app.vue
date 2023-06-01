@@ -30,6 +30,7 @@ useHead({
 
 <style lang="stylus">
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap')
 
 body
   margin: 0
