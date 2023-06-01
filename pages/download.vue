@@ -78,18 +78,18 @@ const releaseCards = computed(() => {
       ...releases.canary
     },
     {
-      title: t('downloadPage.beta'),
-      updateFrequency: t('downloadPage.betaUpdateFrequency'),
-      desc: t('downloadPage.betaDesc'),
-      icon: betaIconUrl,
-      ...releases.beta
-    },
-    {
       title: t('downloadPage.stable'),
       updateFrequency: t('downloadPage.stableUpdateFrequency'),
       desc: t('downloadPage.stableDesc'),
       icon: stableIconUrl,
       // ...releases.stable
+    },
+    {
+      title: t('downloadPage.beta'),
+      updateFrequency: t('downloadPage.betaUpdateFrequency'),
+      desc: t('downloadPage.betaDesc'),
+      icon: betaIconUrl,
+      ...releases.beta
     },
   ]
 })
