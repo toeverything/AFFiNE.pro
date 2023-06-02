@@ -12,6 +12,9 @@
   .section-consolidate-workflow
     overview-consolidate-workflow
 
+  .section-write-draw-plan
+    overview-write-draw-plan
+
   .section-build-in-public
     overview-build-in-public
 

@@ -81,9 +81,10 @@ a
   width: 100%
 
 .container
+  --width: 94.5rem
   margin: 0 auto
   width: 100%
-  max-width: 94.5rem !important
+  max-width: var(--width) !important
 
   &.is-fluid
     max-width: 100% !important

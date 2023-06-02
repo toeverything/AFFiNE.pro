@@ -124,6 +124,7 @@ const featureGroups = [
 
   .get-notified-button
     position: relative
+    z-index: 2
     display: inline-flex
     font-weight: 800
     font-size: fluid-value(11, 32)
