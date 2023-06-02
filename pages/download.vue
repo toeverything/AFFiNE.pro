@@ -82,7 +82,7 @@ const releaseCards = computed(() => {
       updateFrequency: t('downloadPage.stableUpdateFrequency'),
       desc: t('downloadPage.stableDesc'),
       icon: stableIconUrl,
-      // ...releases.stable
+      ...releases.stable
     },
     {
       title: t('downloadPage.beta'),
