@@ -26,6 +26,7 @@ export default {
   starOnGitHub: 'Star on GitHub',
   gotoCommunity: 'Go to our community',
   getNotified: 'Get Notified',
+  visit: 'Visit',
 
   useDesktopVersion: {
     title: 'Full functionality on desktop',
@@ -99,6 +100,7 @@ export default {
     contactItemB: 'Want to join us;',
     contactItemC: 'Want to build your own block-based applications.',
     contactGeneralInfo: 'General contact (including resume): ',
+    contributorRewardDesc: `As an open-source project that values community engagement, AFFiNE seeks to financially support its contributors. If you are an influential contributor to AFFiNE, we can provide you a monthly sponsorship of $1000 through the AFFiNE Core Community Contributor program. If you're interested in starting your contribution to AFFiNE, please visit home Of course, we also offer internship opportunities. If you want to participate in our projects more effectively and receive personal guidance from industry experts, you can fill out the form below to apply for our paid internship position.`,
     memberTitle: 'Team Member',
     coreLabel: 'AFFiNE Core Team',
     architectureTitle: 'Architectural Developers',

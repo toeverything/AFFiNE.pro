@@ -17,7 +17,8 @@ export const PATH = {
   SNS_TWITTER: 'https://twitter.com/AffineOfficial',
   SNS_YOUTUBE: 'https://www.youtube.com/@affinepro',
 
-  GET_NOTIFIED_FORM: 'https://typeform.com/todo',
+  INTERN_APPLY_FORM: 'https://6dxre9ihosp.typeform.com/to/lnHWRsVS',
+  GET_NOTIFIED_FORM: 'https://6dxre9ihosp.typeform.com/to/B8IHwuyy',
   COPILOT_FORM: 'https://6dxre9ihosp.typeform.com/to/MjaI1NIV',
 }
 
