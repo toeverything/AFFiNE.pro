@@ -26,7 +26,8 @@ const props = withDefaults(defineProps<{
   //   display: block
 
   path
-    stroke-dasharray: 1
+    // A little larger than 1 to prevent flickering
+    stroke-dasharray: 1.01
     stroke-dashoffset: 1
     animation: drawing-animation cubic-bezier(0.4, 0, 0.2, 1) forwards
     animation-duration: var(--duration)
@@ -40,6 +41,7 @@ const props = withDefaults(defineProps<{
 
     1%
       opacity: 1
+      stroke-dashoffset: 1
 
     100%
       stroke-dashoffset: 0

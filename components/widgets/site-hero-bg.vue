@@ -211,8 +211,8 @@ const rootClass = computed(() => {
     background: linear-gradient(180deg, #FFFFFF 4.32%, rgba(255, 255, 255, 0) 70.08%, #FFFFFF 88.49%);
 
     /html.dark &
-      height: 1592px
-      background: linear-gradient(180deg, #000000 4.32%, rgba(0, 0, 0, 0) 70.08%, #000000 88.49%);
+      height: 1691px
+      background: linear-gradient(180deg, #000000 4.32%, rgba(0, 0, 0, 0.65) 50.97%, #000000 88.49%);
 
   @media $mediaInMobile
     display: none

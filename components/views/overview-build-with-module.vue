@@ -180,7 +180,7 @@ onMounted(() => {
       position relative
       aspect-ratio: 358/338
       width: 100%
-      max-width: s('min(358px, 70%)')
+      max-width: s('min(260px, 70%)')
       margin-top: fluid-value(15, 35)
       margin-bottom: fluid-value(30, 80)
 
@@ -219,7 +219,7 @@ onMounted(() => {
             drop-shadow(0px 4px 45px rgba(255, 255, 255, 0.3))
 
     .card-icon-wrapper
-      --border-width: fluid-value(2, 5)
+      --border-width: fluid-value(2, 3.6)
       position relative
       display: flex
       justify-content: center

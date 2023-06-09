@@ -49,6 +49,8 @@ import { PATH } from '~/utils/constants'
 
 type IssueType = 'open' | 'closed'
 
+const store = useStore()
+
 const isLoading = ref(true)
 const isError = ref(false)
 const issueList = ref(null)
@@ -68,6 +70,7 @@ const loadData = async () => {
     const res = await $fetch<any>(`api/status`)
     openedIssues.value = res.opened_issues
     closedIssues.value = res.closed_issues
+    store.github.starAmount = res.stargazers_count
   } catch(error) {
     isError.value = true
   }

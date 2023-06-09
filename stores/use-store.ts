@@ -11,6 +11,9 @@ const userInitial = {
 
 type MainState = {
   blog: ContentFileMeta[],
+  github: {
+    starAmount: boolean | undefined
+  },
   ui: {
     isShowMobileInterceptModal: boolean
   },
@@ -25,6 +28,10 @@ export const useStore = defineStore('main', {
     isInited: false,
 
     user: useLocalStorage('affine/user', userInitial),
+
+    github: {
+      starAmount: undefined
+    },
 
     ui: {
       isShowMobileInterceptModal: false
