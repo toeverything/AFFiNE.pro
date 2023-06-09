@@ -54,6 +54,7 @@ const html = ref('')
 const store = useStore()
 const route = useRoute()
 const router = useRouter()
+const isFromList = ref(false)
 
 const asyncOptions = reactive({
   emptyTips: 'Article Not Found',
@@ -120,7 +121,15 @@ await loadData()
 
 useHead(pageMeta)
 
+onMounted(() => {
+  isFromList.value = store.context.lastPath === '/blog' && window.history.state.back === '/blog'
+})
+
 const handleReturnClick = () => {
+  if (isFromList.value) {
+    return window.history.go(-1)
+  }
+
   router.push('/blog')
 }
 
