@@ -67,8 +67,10 @@ const { elementX, elementY } = useMouseInElement(el, { handleOutside: false })
     --color-stop-top: #666
     --color-stop-down: #666
     position relative
-    overflow: hidden
     border-radius: 8px
+
+    @media $mediaInDesktop
+      overflow: hidden
 
     .cursor-vfx
       position absolute
