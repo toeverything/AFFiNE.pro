@@ -129,8 +129,17 @@ onMounted(() => {
   }
 })
 
+const backFallbackAction = () => {
+  setTimeout(() => {
+    if (route.name === 'blog-slug') {
+      router.push('/blog')
+    }
+  }, 100);
+}
+
 const handleReturnClick = () => {
   if (isFromList.value) {
+    backFallbackAction()
     return window.history.go(-1)
   }
 
