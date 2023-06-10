@@ -10,10 +10,12 @@ export default {
   terms: 'Terms',
   privacy: 'Privacy',
   blog: 'Blog',
+  price: 'Price',
   all: 'All',
   allPosts: 'All posts',
   currentVersion: 'Current Version',
   comingSoon: 'Coming Soon',
+  contactUsNow: 'Contact us now',
   more: 'More',
   error: 'Error',
   for: 'for ',
@@ -147,6 +149,30 @@ export default {
     `,
     viewGitHubReleases: 'View the latest developments',
     viewDetail: 'View Detail',
+  },
+
+  pricePage: {
+    title: 'Pay for what you need with Cloud & AI backed services at scale',
+    desc: `Own your data and shape your tool for free.
+    Pay for what you need for collaboration with others on hosted cloud.
+    Achieve more with creativity released from AI powered copilot.
+    `,
+    community: 'Community Free forever',
+    communityItemA: 'Full control for everything backed by AFFiNE open source community',
+    communityItemB: 'Offline supported, sync across-devices with peer-to-peer network',
+    communityItemC: 'Cloud backup with limited storage',
+    pro: 'Pro',
+    proItemA: 'Sync, collaborate & backup in realtime with AFFiNE Cloud',
+    proItemB: 'Enhanced creativity & knowledge management by AI Copilot',
+    proItemC: 'Web publishing with permission & administration control',
+    team: 'Team',
+    teamItemA: 'Best team workspace for collaboration and knowledge distilling',
+    teamItemB: 'Focusing on what really matters with team project management and automation.',
+    teamItemC: 'Pay for seats, fits all team size',
+    enterprise: 'Enterprise',
+    enterpriseItemA: 'Solutions & best practices for dedicated needs',
+    enterpriseItemB: 'Embedable & intergrations with IT support',
+    wipTips: 'Our pricing model is still under development, we are diligently working to it!'
   },
 
   hello: 'Hello',

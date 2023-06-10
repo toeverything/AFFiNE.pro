@@ -38,6 +38,8 @@
         scroll-link( to="/about-us" ) {{ $t('aboutUs') }}
       .nav-item
         scroll-link( to="/blog" ) {{ $t('blog') }}
+      .nav-item
+        scroll-link( to="/price" ) {{ $t('price') }}
       el-dropdown(
         v-if="CONFIG.ENABLE_LANG_SWITCHER"
         trigger="click" size="large"
@@ -155,9 +157,6 @@ $mediaCompactHeader = '(max-width: 1280px)'
     border-radius: 70px
     min-width: 177px
 
-    &:hover
-      border-color: black !important
-
     .text-long
       @media $mediaCompactHeader
         display: none
@@ -262,6 +261,9 @@ $mediaCompactHeader = '(max-width: 1280px)'
       height: 34px
       font-weight: 800
       font-size: 15px
+
+      &:hover
+        border-color: black !important
 
     .menu-list
       position relative
