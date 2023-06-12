@@ -54,7 +54,7 @@ const setupScrollTrigger = () => {
 
   if (isMobile) return
 
-  gsap.fromTo('.cover-okr', { yPercent: -30 }, {
+  gsap.from('.cover-okr', {
     yPercent: "-=30",
     ease: 'none',
     scrollTrigger: {
@@ -177,6 +177,6 @@ onMounted(() => {
     top: 50%
     aspect-ratio: 1053/1407
     background-image: url(@/assets/overview/module-draw-cover-okr.png)
-    transform: translate3d(-50%, -50%, 0)
+    transform: translate3d(-50%, -30%, 0)
 
 </style>
