@@ -120,11 +120,11 @@ export const USER_MAP: Record<
   'Yanxi Liu': {
     name: 'Yanxi Liu',
     avatar: '/YanxiLiu.jpeg',
-    dec: 'OP Team'
+    dec: 'Operations Team'
   },
   'Xuan Pang': {
     name: 'Xuan Pang',
     avatar: '/XuanPang.jpeg',
-    dec: 'OP Team'
+    dec: 'Operations Team'
   }
 }
