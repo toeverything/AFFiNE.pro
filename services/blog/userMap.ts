@@ -10,7 +10,7 @@ export const USER_MAP: Record<
   'Christopher Smolak': {
     name: 'Christopher Smolak',
     avatar: '/ChristopherSmolak.jpg',
-    dec: 'Author, Overseas Operation Specialist'
+    dec: 'Author, Operations Director'
   },
   'Chi Zhang': {
     name: 'Chi Zhang',
