@@ -1,5 +1,7 @@
 <template lang="pug">
-.feature-card.overview-draw
+.feature-card.overview-draw(
+  :style="{ '--glow-opacity': scrollStates.glowOpacity }"
+)
   .content-part
     .card-title
       | {{ $t('overviewPage.moduleDrawTitle') }}
@@ -15,7 +17,7 @@
         nuxt-icon(
           filled name="draw-creativity-mark"
         )
-      svg-icon-drawing.heart-mark( :isShow="scrollStates.isShowHeart" )
+      svg-icon-drawing.heart-mark( :isShow="scrollStates.isShowHeart" duration="0.8s")
         nuxt-icon(
           filled name="draw-heart"
         )
@@ -57,8 +59,17 @@ const setupScrollTrigger = () => {
     })
     .to(scrollStates, {
       isShowHeart: true,
-      duration: 1
+      duration: 0.1
     })
+
+  gsap.to(scrollStates, {
+    glowOpacity: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: '.overview-draw',
+      start: '55% center',
+    }
+  })
 
   if (isMobile) return
 

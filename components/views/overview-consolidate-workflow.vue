@@ -283,6 +283,7 @@ onMounted(() => {
 
   .lucid-card
     padding: 20px
+    --radius: fluid-value(5, 8)
     background: rgba(255, 255, 255, 0.04)
     border-radius: fluid-value(7, 10)
     border: 2px solid rgba(255, 255, 255, 0.08)

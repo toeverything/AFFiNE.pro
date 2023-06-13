@@ -217,9 +217,11 @@ const featureGroups = [
 
       .dot-1
         left: 30%
+        --delay: 0s;
 
       .dot-2
         right: 30%
+        --delay: 0.6s;
 
     .circle-cloud
       position: absolute
@@ -232,10 +234,12 @@ const featureGroups = [
       .dot-1
         left: 55%
         top: 28%
+        --delay: 1.4s;
 
       .dot-2
         left: 78%
         top: 46%
+        --delay: 1.8s;
 
     .circle-copilot
       position: relative
@@ -246,14 +250,17 @@ const featureGroups = [
       .dot-1
         top: 20%
         right: 40%
+        --delay: 2.2s;
 
       .dot-2
         top: 25%
         right: 30%
+        --delay: 2.6s;
 
       .dot-3
         top: 50%
         right: 26%
+        --delay: 3.3s;
 
     .feature-dot
       position: absolute
@@ -265,6 +272,33 @@ const featureGroups = [
       transition: 318ms
       pointer-events: initial
       cursor: pointer
+      --delay: 0s
+
+      @keyframes circle-opacity {
+		    from {
+          opacity: 0.5
+          transform: translate3d(-50%, -50%, 0) scale(0)
+        }
+
+		    50%,
+        to {
+          opacity: 0
+          transform: translate3d(-50%, -50%, 0) scale(1)
+        }
+      }
+
+      &:after
+        content: ''
+        position: absolute
+        animation: circle-opacity 2s cubic-bezier(0.0, 0.0, 0.2, 1) var(--delay) infinite;
+        width: 300%;
+        height: 300%;
+        background: #fff;
+        border-radius: 50%;
+        opacity: 0;
+        left: 50%
+        top: 50%
+        transform: translate3d(-50%, -50%, 0)
 
       &:before
         content: ''
@@ -400,7 +434,7 @@ const featureGroups = [
           color: var(--brand)
 
 .el-popover.el-popper.feature-dot-popover
-  background: rgba(80, 80, 80, 0.4)
+  background: rgba(24, 24, 24, 0.9)
   border-radius: 5px
   border: none
   font-size: 14px

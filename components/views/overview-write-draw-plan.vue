@@ -20,6 +20,7 @@
 
 .feature-card
   --theme-color: #C775C3
+  --glow-opacity: 0
   display: flex
   align-items: center
   position: relative
@@ -64,6 +65,7 @@
     bottom: 0
     left: 50%
     transform: translate3d(-50%, 70%, 0)
+    opacity: var(--glow-opacity)
 
   .content-part
     min-height: fluid-value(50, 400)

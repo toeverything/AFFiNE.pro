@@ -1,5 +1,7 @@
 <template lang="pug">
-.feature-card.overview-plan
+.feature-card.overview-plan(
+  :style="{ '--glow-opacity': dynamicStates.glowOpacity }"
+)
   .content-part
     .layer-front
       nuxt-icon.card-icon(
@@ -31,6 +33,25 @@
 </template>
 
 <script setup lang="ts">
+import gsap from 'gsap'
+
+const dynamicStates = reactive({
+})
+
+const setupScrollTrigger = () => {
+  gsap.to(dynamicStates, {
+    glowOpacity: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: '.overview-plan',
+      start: '55% center',
+    }
+  })
+}
+
+onMounted(() => {
+  setupScrollTrigger()
+})
 </script>
 
 <style lang="stylus">

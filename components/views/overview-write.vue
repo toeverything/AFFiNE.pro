@@ -1,5 +1,7 @@
 <template lang="pug">
-.feature-card.overview-write
+.feature-card.overview-write(
+  :style="{ '--glow-opacity': dynamicStates.glowOpacity }"
+)
   .content-part
     .card-title
       template(
@@ -39,8 +41,17 @@ const setupScrollTrigger = () => {
       isTyping: true,
       textTypingIndex: dynamicStates.titleText.length - 1,
       ease: `steps(${dynamicStates.titleText.length - 1})`,
-      duration: 1
+      duration: 2
     })
+
+  gsap.to(dynamicStates, {
+    glowOpacity: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: '.overview-write',
+      start: '55% center',
+    }
+  })
 
   gsap.to(dynamicStates, {
     scrollTrigger: {
