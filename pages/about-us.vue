@@ -173,6 +173,20 @@ const engineeringMembers: Member[] = [
     avatar: "https://unavatar.io/github/JimmFly",
     link: "https://github.com/JimmFly",
   },
+
+  {
+    name: "Zhijian Zuo",
+    title: "Full-stack Engineer",
+    avatar: "/Zhijian.jpeg",
+    link: "https://github.com/zzj3720",
+  },
+
+  {
+    name: "Hongtao lye",
+    title: "Full-stack Engineer",
+    avatar: "/Hongtao.jpeg",
+    link: "https://github.com/doouding",
+  },
 ];
 
 const communityMembers: Member[] = [
