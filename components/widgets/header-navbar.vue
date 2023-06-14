@@ -39,7 +39,7 @@
       .nav-item
         scroll-link( to="/blog" ) {{ $t('blog') }}
       .nav-item
-        scroll-link( to="/price" ) {{ $t('price') }}
+        scroll-link( to="/pricing" ) {{ $t('price') }}
       el-dropdown(
         v-if="CONFIG.ENABLE_LANG_SWITCHER"
         trigger="click" size="large"

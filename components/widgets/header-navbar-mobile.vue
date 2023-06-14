@@ -29,7 +29,7 @@
           .nav-item
             nuxt-link( to="/blog" ) {{ $t('blog') }}
           .nav-item
-            nuxt-link( to="/price" ) {{ $t('price') }}
+            nuxt-link( to="/pricing" ) {{ $t('price') }}
           .nav-item(
             v-if="CONFIG.ENABLE_LANG_SWITCHER"
           )

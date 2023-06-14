@@ -10,7 +10,7 @@ export default {
   terms: 'Terms',
   privacy: 'Privacy',
   blog: 'Blog',
-  price: 'Price',
+  price: 'Pricing',
   all: 'All',
   allPosts: 'All posts',
   currentVersion: 'Current Version',
