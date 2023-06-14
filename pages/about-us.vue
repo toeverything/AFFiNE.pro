@@ -7,20 +7,25 @@
         v-html="$t('aboutUsPage.slogan')"
       )
       .hero-desc {{ $t('aboutUsPage.desc')  }}
-      .contact-card
-        .card-header.flex.items-center.gap-28px
-          .icon-wrapper
-            nuxt-icon( name="Email" )
-          | {{ $t('aboutUsPage.contactTitle') }}
-        .card-body
-          ul
-            li {{ $t('aboutUsPage.contactItemA') }}
-            li {{ $t('aboutUsPage.contactItemB') }}
-            li {{ $t('aboutUsPage.contactItemC') }}
-        .card-footer.flex.flex-wrap
-          | {{ $t('aboutUsPage.contactGeneralInfo') }}&nbsp;
-          br.show-in-xs
-          nuxt-link( :to="`mailto:${INFO.CONTACT_EMAIL}`" target="_blank" ) {{ INFO.CONTACT_EMAIL }}
+      .flex.cards-row
+        .contact-card
+          .card-header.flex.items-center.gap-28px
+            .icon-wrapper
+              nuxt-icon( name="Email" )
+            | {{ $t('aboutUsPage.contactTitle') }}
+          .card-body
+            ul
+              li {{ $t('aboutUsPage.contactItemA') }}
+              li {{ $t('aboutUsPage.contactItemB') }}
+              li {{ $t('aboutUsPage.contactItemC') }}
+          .card-footer.flex.flex-wrap
+            | {{ $t('aboutUsPage.contactGeneralInfo') }}&nbsp;
+            br.show-in-xs
+            nuxt-link( :to="`mailto:${INFO.CONTACT_EMAIL}`" target="_blank" ) {{ INFO.CONTACT_EMAIL }}
+
+        .contributor-reward-card.flex.flex-col.items-center
+          .card-desc {{ $t('aboutUsPage.contributorRewardDesc') }}
+          nuxt-link.visit-button( :to="PATH.INTERN_APPLY_FORM" target="_blank" ) {{ $t('visit') }}
       .divider
 
   .section.section-members
@@ -55,7 +60,7 @@
 </template>
 
 <script lang="ts" setup>
-import { INFO } from "~/utils/constants";
+import { INFO, PATH } from "~/utils/constants";
 import type { Member } from "~/components/widgets/member-card.vue";
 
 const { t } = useI18n();
@@ -167,6 +172,20 @@ const engineeringMembers: Member[] = [
     title: "Full-stack Engineer",
     avatar: "https://unavatar.io/github/JimmFly",
     link: "https://github.com/JimmFly",
+  },
+
+  {
+    name: "Zhijian Zuo",
+    title: "Full-stack Engineer",
+    avatar: "/Zhijian.jpeg",
+    link: "https://github.com/zzj3720",
+  },
+
+  {
+    name: "Hongtao lye",
+    title: "Full-stack Engineer",
+    avatar: "/Hongtao.jpeg",
+    link: "https://github.com/doouding",
   },
 ];
 
@@ -314,6 +333,78 @@ useHead({
       background: var(--brand-gradient)
       color: white
       font-size: 24px
+
+  .cards-row
+    --offset: 169px
+    --reward-scale: 1
+    position: relative
+    flex-direction: column
+    gap: 14px
+    align-items: center
+    max-width: 630px
+
+    @media $mediaInBigScreen
+      max-width: 100%
+      padding-right: var(--offset)
+
+      .contact-card
+        position: relative
+        z-index: 2
+
+      .contact-card,
+      .contributor-reward-card
+        transition: 500ms
+
+      .visit-button
+        transform: translateX(-30%)
+        opacity: 0.4
+
+      &:hover
+        --reward-scale: 1
+
+        .visit-button
+          transform: translateY(0)
+          opacity: 1
+
+        .contact-card
+          transform: translateX(-40%)
+
+        .contributor-reward-card
+          transform: translateX(40%) translateY(-50%) scaleY(var(--reward-scale))
+          max-height: 150%
+
+  .contributor-reward-card
+    padding: 4px
+    overflow: hidden
+
+    @media $mediaInBigScreen
+      max-height: 90%
+      padding: 20px 30px
+      position: absolute
+      top: 50%
+      left: var(--offset)
+      right: 0
+      background: #1B1B1B
+      border: 1px solid rgba(255, 255, 255, 0.1)
+      box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1)
+      border-radius: 14px
+      transform: translateY(-50%)
+
+    .card-desc
+      font-size: 14px;
+      line-height: 220.02%;
+
+    .visit-button
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 3px 120px;
+      font-size: 14px;
+      line-height: 220.02%;
+      margin-top: fluid-value(36, 41)
+      transition: 518ms
+
+      &:hover
+        background: rgba(255, 255, 255, 0.15);
 
   .members-list
     margin-top: 56px

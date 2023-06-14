@@ -20,6 +20,11 @@ class PrimaryAPI {
     return res.value
   }
 
+  async getChangelogs () {
+    const res = await useFetchWithCache<Changelog[]>('/api/changelogs', FOUR_HOURS)
+    return res.value
+  }
+
 }
 
 export const primaryAPI = new PrimaryAPI

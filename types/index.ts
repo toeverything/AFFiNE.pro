@@ -13,4 +13,20 @@ declare global {
     assets: Asset[]
   }
 
+  interface Changelog {
+    title: string
+    version: string
+    date: string | number
+    description?: string
+    detailLink?: string
+    cover?: string
+  }
+
+  interface UserStory {
+    avatar: string
+    name: string
+    position: string
+    content: string
+  }
+
 }

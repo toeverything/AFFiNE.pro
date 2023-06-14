@@ -10,8 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useResizeObserver } from '@vueuse/core'
 
 const estimatedScreenPerSecond = 0.5
@@ -35,8 +33,6 @@ const finalHeight = computed(() => {
 defineExpose({
   $trigger
 })
-
-gsap.registerPlugin(ScrollTrigger)
 </script>
 
 <style lang="stylus">

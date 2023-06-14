@@ -122,11 +122,7 @@ await loadData()
 useHead(pageMeta)
 
 onMounted(() => {
-  isFromList.value = store.context.lastPath === '/blog'
-
-  if (isFromList.value) {
-    router.replace(route.path)
-  }
+  isFromList.value = store.context.lastPath === '/blog' && window.history.state.back === '/blog'
 })
 
 const handleReturnClick = () => {

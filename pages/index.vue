@@ -6,17 +6,20 @@
     .base-container.hero-container
       overview-hero
 
-  .section-build-with
-    overview-build-with
+  .section-trusted-by
+    overview-trusted-by
 
-  .section-open-source-everything
-    overview-open-source-everything
+  .section-consolidate-workflow
+    overview-consolidate-workflow
 
-  .section-beyond-docs
-    overview-beyond-docs
+  .section-write-draw-plan
+    overview-write-draw-plan
 
-  .section-privacy-first
-    overview-privacy-first
+  .section-build-in-public
+    overview-build-in-public
+
+  .section-user-stories
+    overview-user-stories
 
   .section-build-with-module
     overview-build-with-module
@@ -27,12 +30,17 @@
 </template>
 
 <script setup lang="ts">
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 useHead({
   titleTemplate: 'AFFiNE - All In One KnowledgeOS',
   meta: [
     { name: 'twitter:title', content: 'AFFiNE - All In One KnowledgeOS' },
   ]
 })
+
+gsap.registerPlugin(ScrollTrigger)
 </script>
 
 <style lang="stylus">

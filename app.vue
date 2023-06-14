@@ -29,7 +29,8 @@ useHead({
 </script>
 
 <style lang="stylus">
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap')
 
 body
   margin: 0
@@ -80,9 +81,10 @@ a
   width: 100%
 
 .container
+  --width: 94.5rem
   margin: 0 auto
   width: 100%
-  max-width: 94.5rem !important
+  max-width: var(--width) !important
 
   &.is-fluid
     max-width: 100% !important

@@ -28,6 +28,8 @@
             nuxt-link( to="/about-us" ) {{ $t('aboutUs') }}
           .nav-item
             nuxt-link( to="/blog" ) {{ $t('blog') }}
+          .nav-item
+            nuxt-link( to="/pricing" ) {{ $t('price') }}
           .nav-item(
             v-if="CONFIG.ENABLE_LANG_SWITCHER"
           )

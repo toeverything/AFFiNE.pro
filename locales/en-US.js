@@ -10,10 +10,12 @@ export default {
   terms: 'Terms',
   privacy: 'Privacy',
   blog: 'Blog',
+  price: 'Pricing',
   all: 'All',
   allPosts: 'All posts',
   currentVersion: 'Current Version',
   comingSoon: 'Coming Soon',
+  contactUsNow: 'Contact us now',
   more: 'More',
   error: 'Error',
   for: 'for ',
@@ -23,6 +25,10 @@ export default {
   affineCopilot: 'AFFiNE Copilot',
   OctoBase: "OctoBase",
   BlockSuite: "BlockSuite",
+  starOnGitHub: 'Star on GitHub',
+  gotoCommunity: 'Go to our community',
+  getNotified: 'Get Notified',
+  visit: 'Visit',
 
   useDesktopVersion: {
     title: 'Full functionality on desktop',
@@ -32,10 +38,11 @@ export default {
   overviewPage: {
     heroTitle: 'Write, Draw, and Plan All at Once',
     heroSubtitle: 'Open Source Alternative',
-    heroDesc: 'AFFiNE is the next-generation collaborative knowledge base for professionals.',
+    heroDesc: 'One Hyper fused Platform for wildly creative minds',
     pageMode: 'Page Mode',
     edgelessMode: 'Edgeless Mode',
     buildWith: 'Built with',
+    trustedByTitle: 'Trusted by people from next-gen startups to established organizations',
     openSourceTitle: 'Open Source Everything',
     openSourceDesc: `Open Source isn't just about code.<br/>Everything is built in public with AFFiNE`,
     issuesTitle: 'Whole code is open source',
@@ -45,11 +52,38 @@ export default {
     whatYouWant: 'More ideas?',
     tellUsWhatYouWant: 'Tell us what you want and we will make it!',
     findUsOn: 'Find us on',
+    consolidateWorkflowTitle: 'Consolidate Your Workflow with Ease on a Hyper fused Platform',
+    consolidateWorkflowSayGoodbye: 'Say goodbye to the hassle of switchover',
+    consolidateWorkflowSayGoodbyeDesc: 'Tired of switching between Notion, Miro, and Monday to meet your complex needs?',
+    consolidateWorkflowAffine: 'Unleash your <b>Wild creativity</b> with AFFiNE',
+    consolidateWorkflowAffineDesc: 'Your all-in-one KnowledgeOS solution for effortlessly writing, drawing, and planning on a hyper-fused platform.',
+    consolidateWorkflowPrivacy: 'Privacy-focused, local-first',
+    consolidateWorkflowPrivacyDesc: 'You are in charge of your own data',
+    moduleWriteTitle: 'Write',
+    moduleWriteSubtitle: 'Your way to better\n productivity',
+    moduleWriteDesc: 'Build up your content like blocks and let your idea run wild\n\nStart with an empty space and show the blocks appearing, stacking up, and forming the building',
+    moduleDrawTitle: 'Draw and visualise with\nease and creativity',
+    moduleDrawDesc: 'Visualize your creativity with others.\n\nNo constraints, limited only by your imagination',
+    modulePlanTitle: 'Plan track and collaborate',
+    modulePlanDesc: 'Stay on top of your workload and achieve more in less time.',
     privacyFirstTitle: 'Privacy Focused & Local-first',
     privacyFirstItemA: 'Privacy-first, and collaborative. No compromises whatsoever.',
     privacyFirstItemB: 'Keep your data in your hand. Moreover, shape your tool in your favour.',
     privacyFirstItemC: 'AFFiNE is built upon fully extensible and customizable foundation open-source frameworks.',
     privacyFirstItemD: 'We ensure real-time syncing with decentralized storage.<br/>WITHOUT VENDOR lock-in and CRYPTO.',
+    buildInPublicTitle: 'AFFiNE builds everything in public',
+    buildInPublicDesc: 'New features you can look forward',
+    buildInPublicClient: 'Official Client',
+    buildInPublicClientA: 'Fully offline support or markdown offline fully support',
+    buildInPublicClientB: 'Desktop Client for Windows, macOS, Linux',
+    buildInPublicCloud: 'Cloud Service',
+    buildInPublicCloudA: 'Seamless sync, so users can access their notes whatever they want',
+    buildInPublicCloudB: 'Ability to collaborate and share notes effortlessly',
+    buildInPublicCopilot: 'AFFiNE Copilot',
+    buildInPublicCopilotA: 'Automation process to improve work efficiency',
+    buildInPublicCopilotB: 'Brainstorm ideas to enhance productivity',
+    buildInPublicCopilotC: 'Content search & formatting to prompt content organization',
+    userStoriesTitle: 'User Stories',
     buildWithDetailTitle: 'Built with BlockSuite and OctoBase',
     blocksuiteDesc: 'The only JAMstack block editing framework that supports:',
     blocksuiteFeatures: 'Rich-text blocks<br/>Table & Database blocks<br/>Canvas graphic blocks',
@@ -68,6 +102,7 @@ export default {
     contactItemB: 'Want to join us;',
     contactItemC: 'Want to build your own block-based applications.',
     contactGeneralInfo: 'General contact (including resume): ',
+    contributorRewardDesc: `As an open-source project that values community engagement, AFFiNE seeks to financially support its contributors. If you are an influential contributor to AFFiNE, we can provide you a monthly sponsorship of $1000 through the AFFiNE Core Community Contributor program. If you're interested in starting your contribution to AFFiNE, please visit home Of course, we also offer internship opportunities. If you want to participate in our projects more effectively and receive personal guidance from industry experts, you can fill out the form below to apply for our paid internship position.`,
     memberTitle: 'Team Member',
     coreLabel: 'AFFiNE Core Team',
     architectureTitle: 'Architectural Developers',
@@ -99,6 +134,45 @@ export default {
     reasonC: 'Get creative in Edgeless and unleash your imagination',
     reasonD: 'Full control over where and how you store your data',
     mobileVersionNotes: 'Mobile apps are still in development, but we hope to have them available real soon.'
+  },
+
+  whatIsNewPage: {
+    title: `What’s new`,
+    desc: 'New updates about AFFiNE',
+    heroContent: `Welcome to the What's New section, where we'll keep you informed of our latest product releases, iterations, major version updates, bug fixes, and enhancements.
+
+    Our goal is to provide you with product information and also to offer an easy and efficient way to track what's new. With our three distinct sections: Today's What's New, Yesterday's What's New, and Earlier What's New, you can stay up-to-date on our latest developments.
+
+    Whether you're a long-time user or a new one, we encourage you to check this section frequently to ensure you stay informed and ahead of the curve.
+
+    Thank you for choosing our product, and we're excited to share our latest updates with you.
+    `,
+    viewGitHubReleases: 'View the latest developments',
+    viewDetail: 'View Detail',
+  },
+
+  pricePage: {
+    title: 'Pay for what you need with Cloud & AI backed services at scale',
+    desc: `Own your data and shape your tool for free.
+    Pay for what you need for collaboration with others on hosted cloud.
+    Achieve more with creativity released from AI powered copilot.
+    `,
+    community: 'Community Free forever',
+    communityItemA: 'Full control for everything backed by AFFiNE open source community',
+    communityItemB: 'Offline supported, sync across-devices with peer-to-peer network',
+    communityItemC: 'Cloud backup with limited storage',
+    pro: 'Pro',
+    proItemA: 'Sync, collaborate & backup in realtime with AFFiNE Cloud',
+    proItemB: 'Enhanced creativity & knowledge management by AI Copilot',
+    proItemC: 'Web publishing with permission & administration control',
+    team: 'Team',
+    teamItemA: 'Best team workspace for collaboration and knowledge distilling',
+    teamItemB: 'Focusing on what really matters with team project management and automation.',
+    teamItemC: 'Pay for seats, fits all team size',
+    enterprise: 'Enterprise',
+    enterpriseItemA: 'Solutions & best practices for dedicated needs',
+    enterpriseItemB: 'Embedable & intergrations with IT support',
+    wipTips: 'Our pricing model is still under development, we are diligently working to it!'
   },
 
   hello: 'Hello',
