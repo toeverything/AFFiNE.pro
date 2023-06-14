@@ -190,4 +190,7 @@ onMounted(() => {
     background-image: url(@/assets/overview/module-draw-cover-okr.png)
     transform: translate3d(-50%, -30%, 0)
 
+    @media $mediaInMobile
+      transform: translate3d(-50%, -50%, 0)
+
 </style>

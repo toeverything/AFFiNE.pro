@@ -36,7 +36,7 @@ const timeAgo = useTimeAgo(new Date(props.issue.created_at))
 
 <style lang="stylus">
 .issue-item
-  gap: 28px
+  gap: fluid-value(18, 28)
   padding-bottom: 19px
   transition: 218ms
 
@@ -45,7 +45,7 @@ const timeAgo = useTimeAgo(new Date(props.issue.created_at))
 
   .nuxt-icon
     width: 1em
-    font-size: 33px
+    font-size: fluid-value(24, 33)
     --color: #35FF23
 
   &.type-closed
@@ -57,7 +57,7 @@ const timeAgo = useTimeAgo(new Date(props.issue.created_at))
 
   .item-title
     font-weight: 800
-    font-size: 16px
+    font-size: fluid-value(14, 16)
     line-height: (19/16)
 
   .item-meta

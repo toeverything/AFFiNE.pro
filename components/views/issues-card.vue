@@ -97,7 +97,7 @@ onMounted(() => {
 .issues-card
   display flex
   flex-direction: column
-  gap: 30px
+  gap: fluid-value(22, 30)
 
   .edge-case
     background: rgba(255, 255, 255, 0.1)
@@ -153,7 +153,7 @@ onMounted(() => {
       cursor pointer
 
       @media $mediaInXS
-        height: 16px
+        height: 20px
 
         span
           transform: scale(0.5)
@@ -169,7 +169,7 @@ onMounted(() => {
   .more-handler
     flex-shrink: 0
     font-weight: 800;
-    font-size: 24px;
+    font-size: fluid-value(16, 24);
     display: flex
     justify-content: center
     align-items: center
