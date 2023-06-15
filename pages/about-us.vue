@@ -175,9 +175,9 @@ const engineeringMembers: Member[] = [
   },
 
   {
-    name: "Zhijian Zuo",
+    name: "Zijian Zuo",
     title: "Full-stack Engineer",
-    avatar: "/Zhijian.jpeg",
+    avatar: "/Zijian.jpeg",
     link: "https://github.com/zzj3720",
   },
 
