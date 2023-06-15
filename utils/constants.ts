@@ -9,6 +9,7 @@ export const PATH = {
   AFFiNE_GITHUB_ORG: 'https://github.com/toeverything',
   AFFiNE_BLOCK_SUITE: 'https://github.com/toeverything/blocksuite',
   AFFiNE_OCTO_BASE: 'https://github.com/toeverything/octobase',
+  AFFiNE_HOME_PAGE: "https://github.com/toeverything/affine.pro",
   AFFiNE_COMMUNITY: 'https://community.affine.pro/',
 
   SNS_REDDIT: 'https://www.reddit.com/r/Affine/',

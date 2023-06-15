@@ -23,7 +23,9 @@
             .list-name {{ $t('openSource') }}
             nuxt-link.nav-item.flex( :to="PATH.AFFiNE_GITHUB" target="_blank" rel="nofollow" ) toeverything/AFFiNE
             nuxt-link.nav-item.flex( :to="PATH.AFFiNE_BLOCK_SUITE" target="_blank" rel="nofollow") toeverything/BlockSuite
-            nuxt-link.nav-item( :to="PATH.AFFiNE_OCTO_BASE" target="_blank" rel="nofollow") toeverything/OctoBase
+            nuxt-link.nav-item.flex( :to="PATH.AFFiNE_OCTO_BASE" target="_blank" rel="nofollow") toeverything/OctoBase
+            nuxt-link.nav-item( :to="PATH.AFFiNE_HOME_PAGE" target="_blank" rel="nofollow") toeverything/AFFiNE.pro
+
       .right-part.theme-switcher-part
         client-only( v-if="CONFIG.ENABLE_THEME_SWITCHER" )
           .nav-list
