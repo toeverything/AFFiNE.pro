@@ -29,6 +29,7 @@ export default {
   gotoCommunity: 'Visit our community',
   getNotified: 'Get Notified',
   visit: 'Visit',
+  latestVersion: 'Latest Version: ',
 
   useDesktopVersion: {
     title: 'Full functionality on desktop',

@@ -7,10 +7,11 @@ export default defineEventHandler(async (event) => {
     let { data } = await axios.get(REQUEST_URL)
 
     if (Array.isArray(data)) {
-      data = data.map(({ name, prerelease, assets, tag_name }) => {
+      data = data.map(({ name, prerelease, assets, tag_name, published_at }) => {
         return {
           name,
           tag_name,
+          published_at,
           prerelease,
           assets
         }

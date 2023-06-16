@@ -10,6 +10,7 @@ declare global {
   interface Release {
     tag_name: string,
     prerelease: boolean,
+    published_at: string,
     assets: Asset[]
   }
 

@@ -109,7 +109,7 @@ const loadData = async () => {
   try {
     const githubReleases = await primaryAPI.getReleases()
     githubReleases.map(release => {
-      const { tag_name, assets, prerelease } = release
+      const { tag_name, assets, prerelease, published_at } = release
       const type = getReleaseType(release)
       if (!type) {
         return
@@ -121,6 +121,7 @@ const loadData = async () => {
       }
       releases[type] = {
         tag_name,
+        published_at,
         assets,
         prerelease
       }
