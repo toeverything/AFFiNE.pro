@@ -27,7 +27,9 @@
       | {{ $t('for') }}
       | {{ defaultAssetPlatformName }}
 
-    .publish-date( v-if="defaultAsset" ) {{ $t('latestVersion') }}{{ publishDate }}
+    .publish-date( v-if="defaultAsset" )
+      | {{ $t('latestVersion') }}
+      span.fw-500 {{ publishDate }}
 
     .other-version( v-if="hasAssets" )
       .other-version-title.flex.items-center(
