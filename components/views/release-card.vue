@@ -27,6 +27,8 @@
       | {{ $t('for') }}
       | {{ defaultAssetPlatformName }}
 
+    .publish-date( v-if="defaultAsset" ) {{ $t('latestVersion') }}{{ publishDate }}
+
     .other-version( v-if="hasAssets" )
       .other-version-title.flex.items-center(
         :class="{ 'is-active': isShowOtherVersion }"
@@ -60,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-import { useMouseInElement } from '@vueuse/core'
+import { useMouseInElement, useDateFormat } from '@vueuse/core'
 
 const el = ref(null)
 const { isOutside } = useMouseInElement(el, { handleOutside: false })
@@ -73,6 +75,7 @@ const props = defineProps<{
   tips?: string
   tag_name: string
   prerelease: boolean
+  published_at: string
   assets: Asset[]
 }>()
 
@@ -84,6 +87,7 @@ const Platform = {
 }
 
 const $device = useDevice()
+const publishDate = useDateFormat(new Date(props.published_at || Date.now()), 'MMM DD, YYYY')
 const hasAssets = computed(() => !!props.tag_name && props.assets.length > 0)
 const isArm64 = ref(false)
 const isShowOtherVersion = ref(false)
@@ -225,6 +229,12 @@ onBeforeMount(async () => {
 
     @media $mediaInXS
       margin-top: -0.5em
+
+  .publish-date
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: -0.5em
 
   .other-version
     width: 100%
