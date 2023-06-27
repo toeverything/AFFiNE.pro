@@ -18,6 +18,7 @@
             .item {{ $t('pricePage.communityItemA') }}
             .item {{ $t('pricePage.communityItemB') }}
             .item {{ $t('pricePage.communityItemC') }}
+          nuxt-link.contact-us-button( :to="PATH.PRICING_CONTACT_FORM" target="_blank" ) {{ $t('contactUsNow')  }}
 
         .price-card.type-pro
           .card-header.with-bg
@@ -28,7 +29,7 @@
             .item {{ $t('pricePage.proItemA') }}
             .item {{ $t('pricePage.proItemB') }}
             .item {{ $t('pricePage.proItemC') }}
-          .coming-soon-tips {{ $t('comingSoon') }}
+          nuxt-link.contact-us-button( :to="PATH.PRICING_CONTACT_FORM" target="_blank" ) {{ $t('contactUsNow')  }}
 
         .price-card.type-team
           .card-header.with-bg
@@ -39,7 +40,7 @@
             .item {{ $t('pricePage.teamItemA') }}
             .item {{ $t('pricePage.teamItemB') }}
             .item {{ $t('pricePage.teamItemC') }}
-          .coming-soon-tips {{ $t('comingSoon') }}
+          nuxt-link.contact-us-button( :to="PATH.PRICING_CONTACT_FORM" target="_blank" ) {{ $t('contactUsNow')  }}
 
         .price-card.type-enterprise
           .card-header.with-bg
@@ -48,7 +49,7 @@
           .planning-list
             .item {{ $t('pricePage.enterpriseItemA') }}
             .item {{ $t('pricePage.enterpriseItemB') }}
-          nuxt-link.contact-us-button( :to="`mailto:${INFO.CONTACT_EMAIL}`" target="_blank" ) {{ $t('contactUsNow')  }}
+          nuxt-link.contact-us-button( :to="PATH.PRICING_CONTACT_FORM" target="_blank" ) {{ $t('contactUsNow')  }}
 
       .wip-tips {{ $t('pricePage.wipTips') }}
 </template>

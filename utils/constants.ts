@@ -19,6 +19,7 @@ export const PATH = {
   SNS_YOUTUBE: 'https://www.youtube.com/@affinepro',
 
   INTERN_APPLY_FORM: 'https://6dxre9ihosp.typeform.com/to/lnHWRsVS',
+  PRICING_CONTACT_FORM: 'https://6dxre9ihosp.typeform.com/to/uZeBtpPm',
   GET_NOTIFIED_FORM: 'https://6dxre9ihosp.typeform.com/to/B8IHwuyy',
   COPILOT_FORM: 'https://6dxre9ihosp.typeform.com/to/MjaI1NIV',
 }
