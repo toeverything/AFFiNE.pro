@@ -7,7 +7,11 @@
         | {{ $t('downloadPage.headline') }}
         .hero-try-action
           | {{ $t('downloadPage.headlineLinkYouCanTry') }}
-          nuxt-link( :to="PATH.AFFINE_DOWNHILLS" v-mobile-intercept target="_blank") {{ $t('downloadPage.headlineLink') }}
+          track-link(
+            :to="PATH.AFFINE_DOWNHILLS" v-mobile-intercept target="_blank"
+            action="Link"
+            :params="{ 'resolve': 'Online Demo' }"
+          ) {{ $t('downloadPage.headlineLink') }}
 
       .release-cards.flex.items-start
         release-card(

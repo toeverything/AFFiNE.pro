@@ -1,9 +1,11 @@
 <template lang="pug">
 .campaign-entry.flex.justify-center( v-if="CONFIG.IS_SHOW_CAMPAIGN_ENTRY" )
-  nuxt-link.copilot-button(
+  track-link.copilot-button(
     :to="PATH.COPILOT_FORM"
     target="_blank"
     rel="nofollow"
+    action="Survey"
+    :params="{ 'resolve': 'Copilot' }"
   )
     .video-wrapper.flex.items-center
       | {{ $t('affineCopilot') }}
