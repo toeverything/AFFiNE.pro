@@ -5,7 +5,11 @@
       .section-mini-title {{ $t('overviewPage.buildInPublicTitle') }}
       .section-mini-desc {{ $t('overviewPage.buildInPublicDesc') }}
       .button-wrapper
-        nuxt-link.get-notified-button( :to="PATH.GET_NOTIFIED_FORM" target="_blank" rel="nofollow")
+        track-link.get-notified-button(
+          :to="PATH.GET_NOTIFIED_FORM" target="_blank" rel="nofollow"
+          action="Survey"
+          :params="{ 'resolve': 'Get Notified' }"
+        )
           | {{ $t('getNotified') }}
 
     .features-part

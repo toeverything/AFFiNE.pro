@@ -18,7 +18,7 @@
     )
     .card-desc.text-center( v-html="desc" )
     brand-glow-button(
-      @click="() => handleDownloadClick(defaultAsset)"
+      @click="() => handleDownloadClick(defaultAsset, title)"
       :needShadow="!tag_name?.includes('canary')"
       :disabled="!hasAssets"
     ) {{ hasAssets ? $t('download') : $t('comingSoon') }}
@@ -88,6 +88,7 @@ const Platform = {
   Linux: 'Linux'
 }
 
+const mixpanel = useMixpanel()
 const $device = useDevice()
 const publishDate = useDateFormat(new Date(props.published_at || Date.now()), 'MMM DD, YYYY')
 const hasAssets = computed(() => !!props.tag_name && props.assets.length > 0)
@@ -159,8 +160,9 @@ const assetsMap = computed(() => {
   }
 })
 
-const handleDownloadClick = (asset: Asset) => {
+const handleDownloadClick = (asset: Asset, type?: string) => {
   if (!asset) return
+  mixpanel.track('Button', { 'resolve': type })
   var link = document.createElement('a')
   link.download = asset.name
   link.href = asset.url

@@ -39,20 +39,24 @@
 
       | {{ $t('downloadApp') }}
 
-    nuxt-link(
+    track-link(
       :to="PATH.AFFINE_DOWNHILLS"
       target="_blank"
       :data-intercept="$t('useDesktopVersion.title')"
       v-mobile-intercept
       :class="{ 'is-mobile': isMobile }"
+      action="Button"
+      :params="{ 'resolve': 'Goto Demo' }"
     )
       brand-glow-button() {{ $t('tryItOnline') }}
 
   .flex.hero-links
-    nuxt-link.link-button(
+    track-link.link-button(
       :to="`${PATH.AFFiNE_GITHUB}`"
       rel="nofollow"
       target="_blank"
+      action="Button"
+      :params="{ 'resolve': 'Goto Github' }"
     )
       github-circle.button-icon
       .flex.flex-1.justify-between
@@ -60,10 +64,12 @@
         .part-right.star-count.ml-4
           template( v-if="store.github.starAmount" ) {{formattedStarAmount}}k
 
-    nuxt-link.link-button(
+    track-link.link-button(
       :to="`${PATH.AFFiNE_COMMUNITY}`"
       rel="nofollow"
       target="_blank"
+      action="Button"
+      :params="{ 'resolve': 'Goto Community' }"
     )
       icon-message-circle-chat.button-icon
       | {{ $t('gotoCommunity') }}
