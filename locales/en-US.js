@@ -176,5 +176,11 @@ export default {
     wipTips: 'Our pricing model is still under development, we are diligently working to it!'
   },
 
+  notFoundPage: {
+    title: '404 Not Found',
+    desc: 'Sorry, the page you are looking for doesn’t exist or has been moved',
+    backToHome: 'Back to Home',
+  },
+
   hello: 'Hello',
 }
