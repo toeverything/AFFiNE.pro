@@ -1,7 +1,7 @@
 # affine.pro
 
 This repo is AFFiNE official website and blog source code.
-<img width="1702" alt="image" src="https://github.com/toeverything/AFFiNE.pro/assets/5910926/e65955d4-2891-40fe-b896-687da483c671">
+<img width="1721" alt="image" src="https://github.com/toeverything/AFFiNE.pro/assets/5910926/80717a81-d911-4ca6-916b-ffdce2754a4e">
 
 
 ## Git Flow
