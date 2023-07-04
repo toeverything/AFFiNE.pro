@@ -140,14 +140,7 @@ export default {
   whatIsNewPage: {
     title: `What’s new`,
     desc: 'New updates about AFFiNE',
-    heroContent: `Welcome to the What's New section, where we'll keep you informed of our latest product releases, iterations, major version updates, bug fixes, and enhancements.
-
-    Our goal is to provide you with product information and also to offer an easy and efficient way to track what's new. With our three distinct sections: Today's What's New, Yesterday's What's New, and Earlier What's New, you can stay up-to-date on our latest developments.
-
-    Whether you're a long-time user or a new one, we encourage you to check this section frequently to ensure you stay informed and ahead of the curve.
-
-    Thank you for choosing our product, and we're excited to share our latest updates with you.
-    `,
+    heroContent: `Welcome to our What's New section, your source for staying informed about our latest product releases, iterations, major version improvements, and bug fixes. We strive to keep you up-to-date with the most relevant information to ensure you're always on the cutting edge.`,
     viewGitHubReleases: 'View the latest developments',
     viewDetail: 'View Detail',
   },
