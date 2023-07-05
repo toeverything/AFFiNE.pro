@@ -19,6 +19,11 @@
             nuxt-link.nav-item.flex.items-center( :to="PATH.AFFINE_DOWNHILLS" target="_blank" v-mobile-intercept)
               | AFFiNE Alpha
             nuxt-link.nav-item( :to="PATH.AFFINE_PRE_ALPHA" target="_blank" v-mobile-intercept) AFFiNE Pre-Alpha
+          .nav-list
+            .list-name {{ $t('client') }}
+            nuxt-link.nav-item.flex.items-center( to="/download")
+              | {{ $t('downloadApp') }}
+            nuxt-link.nav-item( to="/what-is-new") {{ $t('WhatIsNew') }}
           .nav-list.need-underline
             .list-name {{ $t('openSource') }}
             nuxt-link.nav-item.flex( :to="PATH.AFFiNE_GITHUB" target="_blank" rel="nofollow" ) toeverything/AFFiNE

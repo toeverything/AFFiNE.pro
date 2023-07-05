@@ -30,6 +30,8 @@ export default {
   getNotified: 'Get Notified',
   visit: 'Visit',
   latestVersion: 'Latest Version: ',
+  client: 'Client',
+  WhatIsNew: 'What’s new',
 
   useDesktopVersion: {
     title: 'Full functionality on desktop',
@@ -140,7 +142,7 @@ export default {
   whatIsNewPage: {
     title: `What’s new`,
     desc: 'New updates about AFFiNE',
-    heroContent: `Welcome to our What's New section, your source for staying informed about our latest product releases, iterations, major version improvements, and bug fixes. We strive to keep you up-to-date with the most relevant information to ensure you're always on the cutting edge.`,
+    heroContent: `Welcome to our What's New section, your source for staying informed about our latest product updates covering iterations, major improvements, and bug fixes. We strive to keep you up-to-date with the most relevant information to ensure you're always on the cutting edge.`,
     viewGitHubReleases: 'View the latest developments',
     viewDetail: 'View Detail',
   },
