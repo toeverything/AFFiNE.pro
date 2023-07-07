@@ -8,11 +8,15 @@ class PrimaryAPI {
     if (process.client) {
       if (store.blog.length) return store.blog
     }
-    const res = await $fetch<any>('/api/blog')
-    if (res.pages?.length) {
-      store.blog = res.pages
+    try {
+      const res = await $fetch<any>('/api/blog')
+      if (res.pages?.length) {
+        store.blog = res.pages
+      }
+      return res.pages
+    } catch (error) {
+      console.log('getBlog error', error)
     }
-    return res.pages
   }
 
   async getReleases () {
