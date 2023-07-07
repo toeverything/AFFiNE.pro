@@ -105,8 +105,8 @@ const coreMembers: Member[] = [
     name: "Alex Yang",
     title: "Architecture Engineer",
     desc: `Leader of AFFiNE engineering.`,
-    avatar: "https://unavatar.io/github/Himself65",
-    link: "https://github.com/Himself65",
+    avatar: "https://unavatar.io/github/himself65",
+    link: "https://github.com/himself65",
   },
 ];
 
