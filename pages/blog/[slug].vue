@@ -77,9 +77,9 @@ const loadData = async () => {
   } catch (error) {
     console.log('Load blog articles error', error)
     asyncOptions.isError = true
-    console.log(111, article.value)
     if (!article.value) {
-      showError({ statusCode: 404, statusMessage: 'Page Not Found' })
+      // showError({ statusCode: 404, statusMessage: 'Page Not Found' })
+      router.push(`/not-found?fromPath=${route.path}`)
     }
   }
   asyncOptions.isLoading = false
