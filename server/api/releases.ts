@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
           prerelease,
           assets
         }
-      })
+      }).filter(el => el.published_at)
     }
 
     return data
