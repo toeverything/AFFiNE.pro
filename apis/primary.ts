@@ -1,3 +1,5 @@
+import { ContentFileMeta } from '~/services/blog/resolveContentFile'
+
 const FOUR_HOURS = 1000 * 3600 * 4
 
 class PrimaryAPI {
@@ -9,11 +11,14 @@ class PrimaryAPI {
       if (store.blog.length) return store.blog
     }
     try {
-      const res = await $fetch<any>('/api/blog')
-      if (res.pages?.length) {
-        store.blog = res.pages
+      const res = await queryContent<ContentFileMeta>('blog')
+        .sort({ order: 1 })
+        .find()
+
+      if (res?.length) {
+        store.blog = res
       }
-      return res.pages
+      return res
     } catch (error) {
       console.log('getBlog error', error)
     }

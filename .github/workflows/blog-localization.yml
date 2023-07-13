@@ -1,0 +1,30 @@
+name: Blog Localization
+
+on:
+  # allows to manually run the job at any time
+  workflow_dispatch:
+
+  # run on every push on the release branch
+  push:
+    branches: [production, staging, master, refactor/**]
+
+jobs:
+  sync-blog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+
+      - name: "Run sync command"
+        run: npm run sync-blog
+
+      - name: "Commit sync contents"
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[GitHub Action] Sync blog contents from AFFiNE Cloud"
+          file_pattern: 'content/blog/*.json'

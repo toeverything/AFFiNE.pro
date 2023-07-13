@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
   const getData = () =>
     cache.cacheable(() => getWorkspacePages(), `${event.node.req.url}`, {
       cachePolicy: 'max-age',
-      maxAge: FIVE_MINUTES,
+      maxAge: 1,
     })
 
   try {
