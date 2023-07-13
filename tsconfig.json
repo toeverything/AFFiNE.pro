@@ -5,5 +5,14 @@
     "types": [
       "unplugin-icons/types/vue",
     ]
-  }
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+    "compilerOptions": {
+      "esModuleInterop": true,
+      "moduleResolution": "Node",
+      "module": "commonjs"
+    },
+  },
 }
