@@ -12,11 +12,22 @@ class PrimaryAPI {
     }
     try {
       const res = await queryContent<ContentFileMeta>('blog')
-        .sort({ order: 1 })
         .find()
 
       if (res?.length) {
-        store.blog = res
+        store.blog = res.sort(({ created: a }, { created: b }) => {
+          if (a === null || b === null) {
+            return 0
+          }
+          if (a < b) {
+            return 1
+          }
+          if (a > b) {
+            return -1
+          } else {
+            return 0
+          }
+        })
       }
       return res
     } catch (error) {

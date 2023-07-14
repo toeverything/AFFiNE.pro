@@ -18,7 +18,6 @@ async function convertBlogToMarkdowns(cb: any) {
       throw new Error('No pages')
     }
     pages.map((page: any, index: number) => {
-      page.order = index
       return src('/content/*')
         .pipe(file(`${page.slug}.json`, JSON.stringify(page, null, 2)))
         .pipe(dest('./content/blog'))
