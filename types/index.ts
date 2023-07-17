@@ -14,6 +14,16 @@ declare global {
     assets: Asset[]
   }
 
+  interface ReleaseTab {
+    name?: string
+    version: string
+    releaseMap?: {
+      canary: Release | null
+      stable: Release | null
+      beta: Release | null
+    }
+  }
+
   interface Changelog {
     title: string
     version: string
