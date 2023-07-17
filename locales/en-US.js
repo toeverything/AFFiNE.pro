@@ -3,7 +3,7 @@ export default {
   aboutUs: 'About Us',
   community: 'Community',
   try: 'Try',
-  tryItOnline: 'Try Demo Online',
+  tryItOnline: 'Try A Limited Demo',
   openSource: 'Open Source',
   websiteTheme: 'Website Theme',
   latest: 'Latest',
@@ -116,8 +116,8 @@ export default {
 
   downloadPage: {
     headline: 'Download the AFFiNE Client allows you to experience the full power of AFFiNE.',
-    headlineLinkYouCanTry: 'You can try our ',
-    headlineLink: 'live demo',
+    headlineLinkYouCanTry: 'Download the client for a feature-rich experience, without comprimise. A limited version is also available to',
+    headlineLink: 'try online',
     beta: 'Beta',
     betaDesc: 'The best app for testing upcoming features and providing us with feedback.. <br/><b><span style="color: #92e7fc">This build has been lightly tested, but is not suitable for production.</span></b>',
     betaUpdateFrequency: 'Updated regularly',
