@@ -4,7 +4,9 @@ export default defineNuxtPlugin(async nuxtApp => {
 
   try {
     primaryAPI.getBlog()
-    primaryAPI.getReleases()
+    if (process.client) {
+      primaryAPI.getReleaseTabs()
+    }
   } catch (error) {
     console.log('prefetch store error', error)
   }

@@ -13,9 +13,34 @@
             :params="{ 'resolve': 'Online Demo' }"
           ) {{ $t('downloadPage.headlineLink') }}
 
+      .release-tabs.flex.gap-4(
+      )
+        circle-loading(
+          v-if="!tabs.length"
+        )
+        template(
+          v-else
+        )
+          .release-tab.flex(
+            v-for="(tab, index) in tabs"
+            :class="{ 'is-current': index === currentTabIndex}"
+            @click="() => currentTabIndex = index"
+          )
+            .text-wrapper.flex
+              .info-name( v-if="tab.name" ) {{ tab.name }}
+              .info-version {{ tab.version }}
+
+          nuxt-link.release-tab.flex(
+            :to="`${PATH.AFFiNE_GITHUB}/releases`"
+            target="_blank" rel="nofollow"
+          )
+            .text-wrapper
+              .info-version More
+
       .release-cards.flex.items-start
         release-card(
           v-for="data in releaseCards"
+          :key="data.name"
           v-bind="data"
         )
 
@@ -53,6 +78,17 @@ enum ReleaseType {
   Stable = 'stable',
 }
 
+const tabs = ref<ReleaseType[]>([])
+const currentTabIndex = ref(0)
+
+const finalReleases = computed(() => {
+  const currentTab = tabs.value[currentTabIndex.value]
+
+  if (!currentTab) return releases
+
+  return Object.assign({}, releases, currentTab.releaseMap)
+})
+
 const releases: Record<string, Release> = reactive({
   beta: {
     tag_name: '',
@@ -79,21 +115,21 @@ const releaseCards = computed(() => {
       updateFrequency: t('downloadPage.canaryUpdateFrequency'),
       icon: canaryIconUrl,
       // tips: t('downloadPage.manuallyUpdateTips'),
-      ...releases.canary
+      ...finalReleases.value.canary
     },
     {
       title: t('downloadPage.stable'),
       updateFrequency: t('downloadPage.stableUpdateFrequency'),
       desc: t('downloadPage.stableDesc'),
       icon: stableIconUrl,
-      ...releases.stable
+      ...finalReleases.value.stable
     },
     {
       title: t('downloadPage.beta'),
       updateFrequency: t('downloadPage.betaUpdateFrequency'),
       desc: t('downloadPage.betaDesc'),
       icon: betaIconUrl,
-      ...releases.beta
+      ...finalReleases.value.beta
     },
   ]
 })
@@ -111,26 +147,9 @@ const loadData = async () => {
   }
 
   try {
-    const githubReleases = await primaryAPI.getReleases()
-    githubReleases.map(release => {
-      const { tag_name, assets, prerelease, published_at } = release
-      const type = getReleaseType(release)
-      if (!type) {
-        return
-      } else if (
-        hasRelease(releases[type]) &&
-        semver.lt(tag_name, releases[type].tag_name)
-      ) {
-        return
-      }
-      releases[type] = {
-        tag_name,
-        published_at,
-        assets,
-        prerelease
-      }
-    })
+    tabs.value = await primaryAPI.getReleaseTabs()
   } catch(error) {
+    // @TODO: handle request error
     console.log('[download] loadData error', error)
   }
 }
@@ -154,7 +173,7 @@ await loadData()
       font-size: fluid-value(24, 36)
       line-height: 44/36
       font-weight: 800
-      margin-bottom: fluid-value(81, 121)
+      margin-bottom: fluid-value(81, 100)
 
       .hero-try-action
         font-weight: 400
@@ -228,6 +247,63 @@ await loadData()
 
       .nuxt-icon
         font-size: 45px
+
+  .release-tabs
+    margin-bottom: fluid-value(40, 80)
+    min-height: 50px
+
+    .info-name
+      padding-right: 0
+      font-weight: bold
+      transition: 318ms
+      transform: translate(60%)
+      width: 0
+      overflow: hidden
+
+    .release-tab
+      transition: 318ms
+      justify-content: center
+      align-items: center
+      padding: 14px 18px
+      border-radius: 14px
+      position: relative
+      color: white
+      cursor: pointer
+      background: linear-gradient(180deg, rgba(217, 217, 217, 0.10) 0%, rgba(255, 255, 255, 0.09) 14.06%, rgba(217, 217, 217, 0.00) 100%);
+
+      .text-wrapper
+        position: relative
+        z-index: 3
+
+      &:before
+        content: ""
+        pointer-events: none
+        user-select: none
+        position: absolute
+        inset: 0px
+        border-radius: inherit
+        transition: 318ms
+        padding: 1px
+        background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 100%)
+        -webkit-mask: linear-gradient(black, black) content-box content-box, linear-gradient(black, black)
+        -webkit-mask-composite: xor
+
+      &:not(.is-current):hover
+        background: linear-gradient(180deg, rgba(217, 217, 217, 0.20) 0%, rgba(255, 255, 255, 0.19) 14.06%, rgba(217, 217, 217, 0.10) 100%);
+
+      &.is-current
+        background: #000
+        padding: 0 fluid-value(20, 50)
+
+        .info-name
+          transform: translateX(0)
+          min-width: var(--name-width, fit-content)
+          width: auto
+          padding-right: 8px
+
+        &:before
+          padding: 2px
+          background: linear-gradient(180deg, #0E55EE 0%, #002A86 100%)
 
   .section-why
     .container

@@ -40,6 +40,11 @@ class PrimaryAPI {
     return res.value
   }
 
+  async getReleaseTabs () {
+    const res = await useFetchWithCache<ReleaseTab[]>('/api/release-tabs', FOUR_HOURS)
+    return res.value
+  }
+
   async getChangelogs () {
     const res = await useFetchWithCache<Changelog[]>('/api/changelogs', FOUR_HOURS)
     return res.value
