@@ -92,34 +92,19 @@
     stroke-dashoffset: -124;
   }
 }
-@-webkit-keyframes color {
-  0% {
-    stroke: var(--brand);
-  }
-  40% {
-    stroke: var(--brand);
-  }
-  66% {
-    stroke: var(--brand);
-  }
-  80%,
-  90% {
-    stroke: var(--brand);
-  }
-}
 @keyframes color {
   0% {
-    stroke: var(--brand);
+    stroke: #0E55EE;
   }
   40% {
-    stroke: var(--brand);
+    stroke: #0E55EE;
   }
   66% {
-    stroke: var(--brand);
+    stroke: #0E55EE;
   }
   80%,
   90% {
-    stroke: var(--brand);
+    stroke: #0E55EE;
   }
 }
 </style>
