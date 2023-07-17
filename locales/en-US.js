@@ -116,13 +116,13 @@ export default {
 
   downloadPage: {
     headline: 'Download the AFFiNE Client allows you to experience the full power of AFFiNE.',
-    headlineLinkYouCanTry: 'Download the client for a feature-rich experience, without comprimise. A limited version is also available to',
+    headlineLinkYouCanTry: 'Download the client for a feature-rich experience, without comprimise. <br/>A limited version is also available to ',
     headlineLink: 'try online',
     beta: 'Beta',
-    betaDesc: 'The best app for testing upcoming features and providing us with feedback. <br/><br/> <b><span style="color: #92e7fc">This build has been lightly tested, but is not suitable for production.</span></b>',
+    betaDesc: 'The best app for testing upcoming features and providing us with feedback.<br/><br/><b><span style="color: #92e7fc">This build has been lightly tested, but is not suitable for production.</span></b>',
     betaUpdateFrequency: 'Updated regularly',
     canary: 'Canary',
-    canaryDesc: `The cutting-edge version with the latest features and ideas. <br/><br/> <b><span style="color: #92e7fc">This build has not been tested or used, it's released as soon as it's built.</span></b>`,
+    canaryDesc: `The cutting-edge version with the latest features and ideas.<br/><br/><b><span style="color: #92e7fc">This build has not been tested or used, it's released as soon as it's built.</span></b>`,
     canaryUpdateFrequency: 'Frequent updates',
     stable: 'Stable',
     stableDesc: 'The most reliable and well-tested version, perfect for users who want a smooth and consistent experience without worrying about crashes or glitches.',
