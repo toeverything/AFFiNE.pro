@@ -5,8 +5,8 @@
     "draft":false,
     "prerelease":false,
     "tag_name":"v0.7.0-beta.1",
-    "created_at":"2023-07-17T08:12:53Z",
-    "published_at":"2023-07-17T09:38:07Z",
+    "created_at": "2023-07-18T05:02:18Z",
+    "published_at": "2023-07-18T05:48:31Z",
     "assets":[
       {
         "name":"affine-beta-linux-x64.zip",
