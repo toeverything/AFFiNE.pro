@@ -52,6 +52,7 @@ onMounted(() => {
     background: radial-gradient(420px circle at var(--x) var(--y), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1))
     -webkit-mask: linear-gradient(black, black) content-box content-box, linear-gradient(black, black)
     -webkit-mask-composite: xor
+    mask-composite: exclude
 
   .story-content
     font-weight: 500

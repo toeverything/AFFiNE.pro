@@ -136,6 +136,7 @@ onMounted(() => {
           background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0))
           -webkit-mask: linear-gradient(black, black) content-box content-box, linear-gradient(black, black)
           -webkit-mask-composite: xor
+          mask-composite: exclude
 
         &:hover
           --border-color: rgba(255, 255, 255, 0.2)

@@ -287,6 +287,7 @@ await loadData()
         background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 100%)
         -webkit-mask: linear-gradient(black, black) content-box content-box, linear-gradient(black, black)
         -webkit-mask-composite: xor
+        mask-composite: exclude
 
       &:not(.is-current):hover
         background: linear-gradient(180deg, rgba(217, 217, 217, 0.20) 0%, rgba(255, 255, 255, 0.19) 14.06%, rgba(217, 217, 217, 0.10) 100%);
