@@ -151,6 +151,7 @@ const featureGroups = [
       background: radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.05))
       -webkit-mask: linear-gradient(black, black) content-box content-box, linear-gradient(black, black)
       -webkit-mask-composite: xor
+      -webkit-mask-composite: subtract
 
   .features-part
     position: relative
@@ -459,4 +460,5 @@ const featureGroups = [
     background: radial-gradient(60px circle, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1))
     -webkit-mask: linear-gradient(black, black) content-box content-box, linear-gradient(black, black)
     -webkit-mask-composite: xor
+    mask-composite: subtract
 </style>
