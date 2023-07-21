@@ -14,9 +14,9 @@
 </template>
 
 <script setup lang="ts">
-import { useScroll, useMouseInElement } from "@vueuse/core"
+import { useElementBounding, useMouse } from "@vueuse/core"
 
-const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
+const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max)
 
 const stories: UserStory[] = [
   { avatar: '/user-stories/Frame 5.png', name: 'PanicN3xus', position: 'User', content: `AFFiNE is an exceptional project that elevates note-making to a whole new level. I am highly impressed by the number of features that it brings to the table. Having tried several other open-source note-making software, I can confidently say that AFFiNE is the best.` },
@@ -29,20 +29,15 @@ const stories: UserStory[] = [
   { avatar: '/user-stories/Frame 2.png', name: 'Eliot', position: 'Student', content: `AFFiNE is an open source that is close to its community and filled with useful features. I use edgeless mode to connect all my knowledge to a single page.` },
 ]
 
-const el = ref<HTMLDivElement>(null)
-const scrollState = reactive({
-  y: 0
-})
+const el = ref<HTMLDivElement>()
 
-const { elementX, elementY } = useMouseInElement(el)
+const { left, top } = useElementBounding(el)
+const { x, y } = useMouse({ type: "client" })
+
+const elementX = computed(() => x.value - left.value)
+const elementY = computed(() => y.value - top.value)
 const clampedX = computed(() => clamp(elementX.value, -300, 1500))
 const clampedY = computed(() => clamp(elementY.value, -100, 1000))
-
-onMounted(async () => {
-  await nextTick()
-  elementX.value = 500
-  elementY.value = 200
-})
 
 </script>
 
