@@ -17,11 +17,13 @@ async function convertBlogToMarkdowns(cb: any) {
     if (!pages || !pages.length) {
       throw new Error('No pages')
     }
-    pages.map((page: any, index: number) => {
-      return src('/content/*')
-        .pipe(file(`${page.slug}.json`, JSON.stringify(page, null, 2)))
-        .pipe(dest('./content/blog'))
-    })
+    pages
+      .filter((page: any) => page.publish)
+      .map((page: any, index: number) => {
+        return src('/content/*')
+          .pipe(file(`${page.slug}.json`, JSON.stringify(page, null, 2)))
+          .pipe(dest('./content/blog'))
+      })
   } catch (error) {
     console.log('convertBlogToMarkdowns error', error)
     throw error
