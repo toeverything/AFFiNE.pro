@@ -110,12 +110,11 @@ const releases: Record<string, Release> = reactive({
 const releaseCards = computed(() => {
   return [
     {
-      title: t('downloadPage.canary'),
-      desc: t('downloadPage.canaryDesc'),
-      updateFrequency: t('downloadPage.canaryUpdateFrequency'),
-      icon: canaryIconUrl,
-      // tips: t('downloadPage.manuallyUpdateTips'),
-      ...finalReleases.value.canary
+      title: t('downloadPage.beta'),
+      updateFrequency: t('downloadPage.betaUpdateFrequency'),
+      desc: t('downloadPage.betaDesc'),
+      icon: betaIconUrl,
+      ...finalReleases.value.beta
     },
     {
       title: t('downloadPage.stable'),
@@ -125,11 +124,12 @@ const releaseCards = computed(() => {
       ...finalReleases.value.stable
     },
     {
-      title: t('downloadPage.beta'),
-      updateFrequency: t('downloadPage.betaUpdateFrequency'),
-      desc: t('downloadPage.betaDesc'),
-      icon: betaIconUrl,
-      ...finalReleases.value.beta
+      title: t('downloadPage.canary'),
+      desc: t('downloadPage.canaryDesc'),
+      updateFrequency: t('downloadPage.canaryUpdateFrequency'),
+      icon: canaryIconUrl,
+      // tips: t('downloadPage.manuallyUpdateTips'),
+      ...finalReleases.value.canary
     },
   ]
 })
