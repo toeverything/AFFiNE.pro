@@ -235,6 +235,12 @@ const productMembers: Member[] = [
     avatar: "/GuozhuLiu.jpeg",
     link: "https://xell.me",
   },
+  {
+    name: "zanwei.guo",
+    title: "Product Designer",
+    avatar: "/zanwei-guo.jpeg",
+    link: "bento.me/zw"
+  }
 ];
 
 useHead({
