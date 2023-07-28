@@ -221,7 +221,10 @@ await loadData()
         max-width: min(500px, 45vw)
 
         &:nth-child(2)
-          flex: 1.25 0
+          @media $mediaInDesktop
+            flex: 1.25 0
+            position: relative
+            --scale: 1.15
 
         .card-wrapper
           min-height: fluid-value(100, 500)
@@ -254,7 +257,7 @@ await loadData()
         font-size: 45px
 
   .release-tabs
-    margin-bottom: fluid-value(40, 80)
+    margin-bottom: fluid-value(40, 100)
     min-height: 50px
 
     .info-name

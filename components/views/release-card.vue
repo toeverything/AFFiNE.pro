@@ -196,7 +196,7 @@ onBeforeMount(async () => {
 
 <style lang="stylus">
 .release-card
-  transform: perspective(800px)
+  transform: perspective(800px) scale(var(--scale, 1))
   transform-style: preserve-3d
 
   .card-wrapper
