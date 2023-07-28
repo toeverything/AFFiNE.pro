@@ -6,7 +6,9 @@
     :enableParallax="!$device.isMobile"
     :lightSize="340"
   )
-    .card-title {{ title }}
+    .card-title
+      | {{ title }}
+      .title-glow( v-if="isShowTitleGlow" )
     .update-frequency( v-html="updateFrequency" )
     svg-icon-drawing(  v-if="!$device.isMobile" :isShow="hasAssets && !isOutside" )
       nuxt-icon.download-drawing-line(
@@ -61,15 +63,24 @@
 
   .info-tips.mt-14px( v-if="tips" ) {{ tips }}
 
+  download-canary-modal(
+    v-if="title == 'Canary'"
+    v-model="isShowCanaryModal"
+    :releases="releases"
+    :defaultAsset="defaultAsset"
+  )
+
 </template>
 
 <script setup lang="ts">
 import { useMouseInElement, useDateFormat } from '@vueuse/core'
 
 const el = ref(null)
+const isShowCanaryModal = ref(false)
 const { isOutside } = useMouseInElement(el, { handleOutside: false })
 
 const props = defineProps<{
+  isShowTitleGlow: boolean
   title: string
   desc: string
   updateFrequency: string
@@ -78,6 +89,7 @@ const props = defineProps<{
   tag_name: string
   prerelease: boolean
   published_at: string
+  releases: Record<string, Release>
   assets: Asset[]
 }>()
 
@@ -161,6 +173,10 @@ const assetsMap = computed(() => {
 })
 
 const handleDownloadClick = (asset: Asset, type?: string) => {
+  if (type === 'Canary') {
+    isShowCanaryModal.value = true
+    return
+  }
   if (!asset) return
   mixpanel.track('Button', { 'resolve': type })
   var link = document.createElement('a')
@@ -208,9 +224,21 @@ onBeforeMount(async () => {
       font-size: fluid-value(11, 14)
 
     .card-title
+      position: relative
       font-weight: 800;
       font-size: fluid-value(24, 32)
       line-height: 1
+
+      .title-glow
+        position: absolute
+        width: 200%
+        aspect-ratio: 1/0.07
+        border-radius: 45px
+        background: rgba(255, 255, 255, 0.80)
+        filter: blur(27.5px)
+        left: 50%
+        top: 50%
+        transform: translate3d(-50%, -50%, 0)
 
     .card-icon
       width: fluid-value(70, 134)

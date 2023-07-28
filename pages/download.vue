@@ -41,6 +41,8 @@
         release-card(
           v-for="data in releaseCards"
           :key="data.name"
+          :isShowTitleGlow="data.title == 'Stable'"
+          :releases="finalReleases"
           v-bind="data"
         )
 
@@ -217,6 +219,9 @@ await loadData()
         flex: 1 0
         min-width: 330px
         max-width: min(500px, 45vw)
+
+        &:nth-child(2)
+          flex: 1.25 0
 
         .card-wrapper
           min-height: fluid-value(100, 500)
