@@ -1,68 +1,68 @@
 {
-  "name":"0.7.0",
-  "tag_name":"v0.7.0",
-  "published_at":"2023-07-28T05:06:45Z",
+  "name":"0.7.1",
+  "tag_name":"v0.7.1",
+  "published_at": "2023-07-31T06:49:46Z",
   "prerelease":false,
   "assets":[
     {
-      "name":"affine-stable-linux-x64.zip",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.7.0/affine-stable-linux-x64.zip",
-      "size":143094175,
-      "download_count":0
+      "name": "affine-stable-linux-x64.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.7.1/affine-stable-linux-x64.zip",
+      "size": 143094335,
+      "download_count": 0
     },
     {
-      "name":"affine-stable-macos-arm64.dmg",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.7.0/affine-stable-macos-arm64.dmg",
-      "size":136539766,
-      "download_count":4
+      "name": "affine-stable-macos-arm64.dmg",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.7.1/affine-stable-macos-arm64.dmg",
+      "size": 136535864,
+      "download_count": 3
     },
     {
-      "name":"affine-stable-macos-arm64.zip",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.7.0/affine-stable-macos-arm64.zip",
-      "size":137237709,
-      "download_count":0
+      "name": "affine-stable-macos-arm64.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.7.1/affine-stable-macos-arm64.zip",
+      "size": 137234998,
+      "download_count": 7
     },
     {
-      "name":"affine-stable-macos-x64.dmg",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.7.0/affine-stable-macos-x64.dmg",
-      "size":141743859,
-      "download_count":0
+      "name": "affine-stable-macos-x64.dmg",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.7.1/affine-stable-macos-x64.dmg",
+      "size": 141733473,
+      "download_count": 3
     },
     {
-      "name":"affine-stable-macos-x64.zip",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.7.0/affine-stable-macos-x64.zip",
-      "size":142723556,
-      "download_count":0
+      "name": "affine-stable-macos-x64.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.7.1/affine-stable-macos-x64.zip",
+      "size": 142721504,
+      "download_count": 5
     },
     {
-      "name":"affine-stable-windows-x64.exe",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.7.0/affine-stable-windows-x64.exe",
-      "size":145817088,
-      "download_count":0
+      "name": "affine-stable-windows-x64.exe",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.7.1/affine-stable-windows-x64.exe",
+      "size": 145817600,
+      "download_count": 4
     },
     {
-      "name":"affine-stable-windows-x64.nupkg",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.7.0/affine-stable-windows-x64.nupkg",
-      "size":144170424,
-      "download_count":0
+      "name": "affine-stable-windows-x64.nupkg",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.7.1/affine-stable-windows-x64.nupkg",
+      "size": 144170838,
+      "download_count": 0
     },
     {
-      "name":"affine-stable-windows-x64.zip",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.7.0/affine-stable-windows-x64.zip",
-      "size":146897315,
-      "download_count":0
+      "name": "affine-stable-windows-x64.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.7.1/affine-stable-windows-x64.zip",
+      "size": 146897471,
+      "download_count": 2
     },
     {
-      "name":"codecov.yml",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.7.0/codecov.yml",
-      "size":91,
-      "download_count":0
+      "name": "codecov.yml",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.7.1/codecov.yml",
+      "size": 91,
+      "download_count": 0
     },
     {
-      "name":"latest-mac.yml",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.7.0/latest-mac.yml",
-      "size":829,
-      "download_count":6
+      "name": "latest-mac.yml",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.7.1/latest-mac.yml",
+      "size": 829,
+      "download_count": 23
     }
   ]
 }
