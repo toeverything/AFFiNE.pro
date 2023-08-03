@@ -239,7 +239,7 @@ const productMembers: Member[] = [
     name: "zanwei.guo",
     title: "Product Designer",
     avatar: "/zanwei-guo.jpeg",
-    link: "bento.me/zw"
+    link: "https://bento.me/zw"
   }
 ];
 
