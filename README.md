@@ -12,7 +12,7 @@ Issue/Hotfix: `issue/$x` -> `production`
 
 ## How to publish blog
 
-The new blog source uses AFFiNE - public workspace: [https://app.affine.pro/public-workspace/H6vffRmJbCfA-r3kq_36_](https://app.affine.pro/public-workspace/H6vffRmJbCfA-r3kq_36_)
+The blog source uses a public workspace of AFFiNE: [https://app.affine.pro/public-workspace/H6vffRmJbCfA-r3kq_36_](https://app.affine.pro/public-workspace/H6vffRmJbCfA-r3kq_36_)
 
 You can use AFFiNE to write your article, contact [ShortCipher](https://github.com/ShortCipher5) to request permissions for the AFFiNE Blog Workspace.
 
