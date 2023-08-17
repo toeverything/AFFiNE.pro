@@ -412,6 +412,11 @@ useHead({
       &:hover
         background: rgba(255, 255, 255, 0.15);
 
+  .section-members
+    .md-container
+      @media $mediaInDesktop
+        max-width: s('min(84vw, 1200px)')
+
   .members-list
     margin-top: 56px
     display: flex
