@@ -40,7 +40,7 @@ const value = computed({
 
 const hasStable = computed(() => {
   if (!props.releases) return
-  return props.releases.stable?.assets.length
+  return props.releases.stable?.assets?.length
 })
 
 const mixpanel = useMixpanel()
