@@ -18,18 +18,18 @@
             .item {{ $t('pricePage.communityItemA') }}
             .item {{ $t('pricePage.communityItemB') }}
             .item {{ $t('pricePage.communityItemC') }}
-          nuxt-link.contact-us-button( :to="PATH.PRICING_CONTACT_FORM" target="_blank" ) {{ $t('contactUsNow')  }}
 
         .price-card.type-pro
           .card-header.with-bg
             .card-icon
               nuxt-icon.icon-circles( name="price-pro" filled )
             .card-title {{ $t('pricePage.pro') }}
+            .early-access-label {{ $t('earlyAccess') }}
           .planning-list
             .item {{ $t('pricePage.proItemA') }}
             .item {{ $t('pricePage.proItemB') }}
             .item {{ $t('pricePage.proItemC') }}
-          nuxt-link.contact-us-button( :to="PATH.PRICING_CONTACT_FORM" target="_blank" ) {{ $t('contactUsNow')  }}
+          nuxt-link.contact-us-button( :to="PATH.PRICING_PRO_EARLY_ACCESS" target="_blank" ) {{ $t('getEarlyAccess')  }}
 
         .price-card.type-team
           .card-header.with-bg
@@ -99,7 +99,7 @@ useHead({
     padding-right: fluid-value(20, 60)
 
   .prices-list
-    max-width: 1440px
+    max-width: 1300px
     width: 100%
     gap: 32px
     flex-wrap: wrap
@@ -119,6 +119,82 @@ useHead({
     display: flex
     flex-direction: column
     justify-content: flex-start
+
+  .price-card.type-pro
+    --label-bg: 1
+    position relative
+    background: none
+
+    &:before,
+    &:after
+      content: ''
+      position absolute
+      z-index: -1
+      border-radius: 11px
+      inset: 0
+      opacity: 0
+      transition: 318ms
+
+    &:before
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+      opacity: var(--label-bg)
+
+    &:after
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.80) 0.01%, rgba(0, 0, 0, 0.50) 100%);
+      opacity: calc(1 - var(--label-bg))
+
+    .early-access-label
+      position absolute
+      z-index 2
+      overflow hidden
+      padding: 2px 14px
+      border-radius: 26px
+      top: 16px
+      right: 6px
+      font-weight: 500
+
+      &:before,
+      &:after
+        content: ''
+        position absolute
+        z-index: -1
+        transition: 318ms
+        inset: 0
+
+      &:before
+        background: linear-gradient(7deg, rgba(29, 228, 255, 0.71) 0%, rgba(37, 229, 255, 0.14) 100%)
+        opacity: var(--label-bg)
+
+      &:after
+        background: linear-gradient(349deg, rgba(29, 228, 255, 0.71) 0%, rgba(37, 229, 255, 0.14) 100%)
+        opacity: calc(1 - var(--label-bg))
+
+    .contact-us-button
+
+      &:hover
+        background: lighten(#006BCC, 10%) !important
+
+    .card-header
+      background: rgba(0, 133, 255, 0.08)
+
+      .icon-circles
+        font-size: 230px
+        transition: 318ms
+
+    &:hover
+      --label-bg: 0
+
+      &:after
+        opacity: 1
+
+      .contact-us-button
+        background: #006BCC;
+        box-shadow: 0px 4px 29px 0px rgba(255, 255, 255, 0.15), 0px 4px 32px 0px rgba(0, 56, 255, 0.27)
+
+      .card-header
+        .icon-circles
+          font-size: 330px
+          top: -50%
 
   .card-header
     aspect-ratio: 1/1
@@ -143,11 +219,9 @@ useHead({
       padding: 15px
 
     .icon-circles
-      font-size: 299px
       position: absolute
-      z-index: -1
       right: 0%
-      top: -40%
+      top: -20%
 
     .icon-triangles
       font-size: 372px
@@ -214,7 +288,7 @@ useHead({
     margin-top: 12px
 
   .contact-us-button
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(2px);
     transition: 318ms
 

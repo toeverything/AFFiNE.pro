@@ -28,6 +28,8 @@ export default {
   starOnGitHub: 'Stars on GitHub',
   gotoCommunity: 'Visit our community',
   getNotified: 'Get Notified',
+  earlyAccess: 'Early access',
+  getEarlyAccess: 'Get early access',
   visit: 'Visit',
   latestVersion: 'Latest Version: ',
   client: 'Client',

@@ -20,6 +20,7 @@ export const PATH = {
 
   INTERN_APPLY_FORM: 'https://6dxre9ihosp.typeform.com/to/lnHWRsVS',
   PRICING_CONTACT_FORM: 'https://6dxre9ihosp.typeform.com/to/uZeBtpPm',
+  PRICING_PRO_EARLY_ACCESS: 'https://community.affine.pro/c/insider-general/',
   GET_NOTIFIED_FORM: 'https://6dxre9ihosp.typeform.com/to/B8IHwuyy',
   COPILOT_FORM: 'https://6dxre9ihosp.typeform.com/to/MjaI1NIV',
 }
