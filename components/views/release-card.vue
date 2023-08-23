@@ -23,13 +23,13 @@
       @click="() => handleDownloadClick(defaultAsset, title)"
       :needShadow="!tag_name?.includes('canary')"
       :disabled="!hasAssets"
-    ) {{ hasAssets ? $t('download') : $t('comingSoon') }}
+    ) {{ hasAssets ? $t('download') : $t(isObsolete ? 'outdated' : 'comingSoon') }}
 
-    .platform-name( v-if="defaultAsset" )
+    .platform-name( v-if="defaultAsset && !isObsolete" )
       | {{ $t('for') }}
       | {{ defaultAssetPlatformName }}
 
-    .publish-date( v-if="defaultAsset" )
+    .publish-date( v-if="defaultAsset && !isObsolete" )
       | {{ $t('latestVersion') }}
       span.fw-500 {{ publishDate }}
 
@@ -80,6 +80,7 @@ const isShowCanaryModal = ref(false)
 const { isOutside } = useMouseInElement(el, { handleOutside: false })
 
 const props = defineProps<{
+  isLatest: boolean
   isShowTitleGlow: boolean
   title: string
   desc: string
@@ -102,8 +103,9 @@ const Platform = {
 
 const mixpanel = useMixpanel()
 const $device = useDevice()
+const isObsolete = computed(() => !props.isLatest && !props.isShowTitleGlow)
 const publishDate = useDateFormat(new Date(props.published_at || Date.now()), 'MMM DD, YYYY')
-const hasAssets = computed(() => !!props.tag_name && props.assets.length > 0)
+const hasAssets = computed(() => !isObsolete.value && !!props.tag_name && props.assets.length > 0)
 const isArm64 = ref(false)
 const isShowOtherVersion = ref(false)
 

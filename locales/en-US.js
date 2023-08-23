@@ -15,6 +15,7 @@ export default {
   allPosts: 'All posts',
   currentVersion: 'Current Version',
   comingSoon: 'Coming Soon',
+  outdated: 'Outdated',
   contactUsNow: 'Contact us now',
   more: 'More',
   error: 'Error',

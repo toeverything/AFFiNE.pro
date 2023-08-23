@@ -41,6 +41,7 @@
         release-card(
           v-for="data in releaseCards"
           :key="data.name"
+          :isLatest="currentTabIndex === 0"
           :isShowTitleGlow="data.title == 'Stable'"
           :releases="finalReleases"
           v-bind="data"
