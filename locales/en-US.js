@@ -119,7 +119,7 @@ export default {
 
   downloadPage: {
     headline: 'Download the AFFiNE Client allows you to experience the full power of AFFiNE.',
-    headlineLinkYouCanTry: 'Download the AFFiNE Client for a feature-rich experience, without comprimise.\nA limited version is also available to ',
+    headlineLinkYouCanTry: 'Download the AFFiNE Client for a feature-rich experience, without compromise.\nA limited version is also available to ',
     headlineLink: 'try online',
     beta: 'Beta',
     betaDesc: 'The best app for testing upcoming features and providing us with feedback.<br/><br/><b><span style="color: #92e7fc">This build has been lightly tested, but is not suitable for production.</span></b>',
