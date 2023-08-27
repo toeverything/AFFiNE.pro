@@ -11,6 +11,7 @@ nuxt-link(
 <script setup lang="ts">
 const props = defineProps<{
   to: string,
+  onClick: () => any,
   target?: string,
   rel?: string,
   action?: string,
@@ -20,6 +21,9 @@ const props = defineProps<{
 const mixpanel = useMixpanel()
 
 const handleLinkClick = () => {
+  if (props.onClick) {
+    props.onClick()
+  }
   if (!props.action) return
   mixpanel.track(props.action, props.params)
 }

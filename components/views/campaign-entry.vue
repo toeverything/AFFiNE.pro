@@ -1,30 +1,31 @@
 <template lang="pug">
 .campaign-entry.flex.justify-center( v-if="CONFIG.IS_SHOW_CAMPAIGN_ENTRY" )
-  track-link.copilot-button(
-    :to="PATH.COPILOT_FORM"
-    target="_blank"
-    rel="nofollow"
-    action="Survey"
-    :params="{ 'resolve': 'Copilot' }"
+  .copilot-button(
+    @click="handleClick"
   )
     .video-wrapper.flex.items-center
       | {{ $t('affineCopilot') }}
       video( muted loop autoplay playsinline ref="copilotVideo" )
-        source( :src="copilotButtonAnimationUrl" )
+        source( :src="copilotButtonAnimationUrl" type="video/mp4" )
       arrow-forward-rounded.ml-10px.icon-arrow
 </template>
 
 <script setup lang="ts">
 import ArrowForwardRounded from '~icons/ph/arrow-right-bold'
 import { PATH, CONFIG } from '~/utils/constants'
-import copilotButtonAnimationUrl from '~/assets/videos/copilot_button_animation.mp4'
-
+import copilotButtonAnimationUrl from '~/assets/videos/copilot.json.mp4'
+const mixpanel = useMixpanel()
 const copilotVideo = ref<HTMLVideoElement>()
 
 // @Hack: Force play when back into the view
 onActivated(() => {
   copilotVideo.value?.play()
 })
+
+const handleClick = () => {
+  mixpanel.track('Survey', { 'resolve': 'Copilot' })
+  window.open(PATH.COPILOT_FORM, '_blank')
+}
 </script>
 
 <style lang="stylus">
@@ -32,6 +33,7 @@ onActivated(() => {
   margin-bottom: fluid-value(16, 45)
 
   .copilot-button
+    cursor pointer
     font-weight: 800
     font-size: fluid-value(14, 16)
     border-radius: 45px
