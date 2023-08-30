@@ -89,7 +89,7 @@ const users = computed(() => {
   return article.value?.authors?.map(user => USER_MAP[user])
 })
 
-const publishDate = useDateFormat(new Date(article.value?.updated || Date.now()), 'MM/DD/YYYY')
+const publishDate = useDateFormat(computed(() => new Date(article.value?.updated || Date.now())), 'MM/DD/YYYY')
 
 const pageMeta = computed(() => {
 
