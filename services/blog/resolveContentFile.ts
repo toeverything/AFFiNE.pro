@@ -1,4 +1,5 @@
 import type { WorkspacePage } from 'affine-reader'
+import { getBlocksuiteReader } from 'affine-reader'
 import { Buffer as BufferPolyfill } from 'buffer'
 import grayMatter from 'gray-matter'
 import rehypePrism from 'rehype-prism-plus'
@@ -29,9 +30,10 @@ export interface ContentFileMeta {
   html?: string
 }
 
-export function parseWorkspacePageMeta(page: WorkspacePage): ContentFileMeta {
+export const parseWorkspacePageMeta = async (page: WorkspacePage, reader: ReturnType<typeof getBlocksuiteReader>): ContentFileMeta => {
+  const doc = await reader.getDocMarkdown(page.guid)
   try {
-    const fileMetaRaw = grayMatter(page.md!)
+    const fileMetaRaw = grayMatter(doc?.md!)
     const {
       title,
       author,
@@ -62,7 +64,7 @@ export function parseWorkspacePageMeta(page: WorkspacePage): ContentFileMeta {
       id: page.id,
       slug: slug || page.id,
       cover: coverImage,
-      md: page.md ?? '',
+      md: doc?.md ?? '',
       publish: !!publish
     }
   } catch (error) {
