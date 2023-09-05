@@ -17,9 +17,11 @@ const reader = getBlocksuiteReader({
   workspaceId: `gccB8ILpdX7bvgbngvoon`
 })
 
-const parseWorkspacePageMeta = (page: WorkspacePage): Changelog  => {
+const parseWorkspacePageMeta = async (page: WorkspacePage, reader: ReturnType<typeof getBlocksuiteReader>): Changelog  => {
+  const doc = await reader.getDocMarkdown(page.guid)
+
   try {
-    const fileMetaRaw = grayMatter(page.md!)
+    const fileMetaRaw = grayMatter(doc?.md!)
     const {
       title,
       version,
@@ -52,21 +54,24 @@ const getWorkspacePages = async (invalidateCache = false) => {
           'ms ago.'
       )
     }
-    _pages$ = reader.getWorkspacePages(true).then((pages) => {
+    _pages$ = reader.getDocPageMetas().then((pages) => {
       console.log(
         'Changelogs fetched in ' + (performance.now() - start).toFixed(1) + 'ms'
       )
-      return pages
-        ?.filter((p) => !p.trash)
-        .map((page) => parseWorkspacePageMeta(page))
-        .filter(p => p.title && p.date && p.version)
+
+      let _pages = (pages
+        ?.filter((p) => !p.trash)) || []
+
+      return Promise.all(_pages.map((page) => parseWorkspacePageMeta(page, reader)))
     })
     lastFetch = Date.now()
   } else {
     console.log('Using cached pages.')
   }
+
   const pages = await _pages$
-  return pages
+
+  return pages?.filter(p => p.title && p.date && p.version)
 }
 
 export default defineEventHandler(async (event) => {

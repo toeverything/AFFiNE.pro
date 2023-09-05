@@ -20,14 +20,17 @@ export async function getWorkspacePages(invalidateCache = false) {
           'ms ago.'
       )
     }
-    _pages$ = reader.getWorkspacePages(true).then((pages) => {
+    _pages$ = reader.getDocPageMetas().then((pages) => {
       console.log(
         'Pages fetched in ' + (performance.now() - start).toFixed(1) + 'ms'
       )
-      return pages
+      const filteredPages = pages
         ?.filter((p) => !p.trash)
-        .map((page) => parseWorkspacePageMeta(page))
-        .filter(p => p.title)
+        .filter(p => p.title) || []
+
+      return Promise.all(
+        filteredPages.map((page) => parseWorkspacePageMeta(page, reader))
+      )
     })
     lastFetch = Date.now()
   } else {
