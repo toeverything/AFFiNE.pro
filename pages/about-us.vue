@@ -74,11 +74,11 @@ const coreMembers: Member[] = [
     link: "https://github.com/HeJiachen-PM",
   },
   {
-    name: "Terry/Chi Zhang",
-    title: "Co-founder & CTO",
-    desc: "AFFiNE builder with great engineers.",
-    avatar: "https://unavatar.io/github/tzhangchi",
-    link: "https://github.com/tzhangchi",
+    name: "Brooooooklyn/Yinan Long",
+    title: "Partner & CTO",
+    desc: `Enable real-time web applications to run locally. Make distributed data connected synchronously. Leader of OctoBase.`,
+    avatar: "https://unavatar.io/github/Brooooooklyn",
+    link: "https://github.com/Brooooooklyn",
   },
   {
     name: "Iris/Yipei Wei",
@@ -93,13 +93,6 @@ const coreMembers: Member[] = [
     desc: "He ensures AFFiNE is built with the proper technology. Leader of BlockSuite and Developer Relationship.",
     avatar: "https://unavatar.io/github/doodlewind",
     link: "https://github.com/doodlewind",
-  },
-  {
-    name: "Brooooooklyn/Yinan Long",
-    title: "Partner & Head of Server and System Architect",
-    desc: `Enable real-time web applications to run locally. Make distributed data connected synchronously. Leader of OctoBase.`,
-    avatar: "https://unavatar.io/github/Brooooooklyn",
-    link: "https://github.com/Brooooooklyn",
   },
   {
     name: "Alex Yang",
