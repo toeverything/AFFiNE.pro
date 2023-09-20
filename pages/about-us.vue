@@ -105,10 +105,10 @@ const coreMembers: Member[] = [
 
 const engineeringMembers: Member[] = [
   {
-    name: "Xiaodong Zuo",
+    name: "Huaqiao Li",
     title: "Architecture Engineer",
-    avatar: "https://unavatar.io/github/zuoxiaodong0815",
-    link: "https://github.com/zuoxiaodong0815",
+    avatar: "https://unavatar.io/github/joooye34",
+    link: "https://github.com/joooye34",
   },
   {
     name: "Darksky Tan",
@@ -134,24 +134,7 @@ const engineeringMembers: Member[] = [
     avatar: "https://unavatar.io/github/forehalo",
     link: "https://github.com/forehalo",
   },
-  {
-    name: "Whitewater",
-    title: "Full-stack Engineer",
-    avatar: "https://unavatar.io/github/lawvs",
-    link: "https://github.com/lawvs",
-  },
-  {
-    name: "Shaoxuan Qi",
-    title: "Full-stack Engineer",
-    avatar: "https://unavatar.io/github/QiSHaoXuan",
-    link: "https://github.com/QiSHaoXuan",
-  },
-  {
-    name: "Xiaotian Ma",
-    title: "Full-stack Engineer",
-    avatar: "https://unavatar.io/github/thorseraq",
-    link: "https://github.com/thorseraq",
-  },
+
 
   {
     name: "Regis Chen",
@@ -194,13 +177,7 @@ const communityMembers: Member[] = [
     title: "Operation Director, SEO and Data",
     avatar: "https://unavatar.io/github/JackiePengp",
     link: "https://github.com/JackiePengp",
-  },
-  {
-    name: "Haoxin Shang",
-    title: "DevRel of AFFiNE",
-    avatar: "https://unavatar.io/github/DiamondThree",
-    link: "https://github.com/DiamondThree",
-  },
+  }
 ];
 
 const productMembers: Member[] = [
@@ -213,7 +190,7 @@ const productMembers: Member[] = [
   {
     name: "Hwang",
     title: "Product Designer",
-    avatar: "/hwang.png",
+    avatar: "https://unavatar.io/github/hwangdev97",
     link: "https://bento.me/hwang",
   },
   {
@@ -223,15 +200,9 @@ const productMembers: Member[] = [
     link: "https://github.com/Svaney-ssman",
   },
   {
-    name: "Guozhu Liu",
-    title: "Head of Product Design",
-    avatar: "/GuozhuLiu.jpeg",
-    link: "https://xell.me",
-  },
-  {
     name: "zanwei.guo",
     title: "Product Designer",
-    avatar: "/zanwei-guo.jpeg",
+    avatar: "https://unavatar.io/github/zanwei",
     link: "https://bento.me/zw"
   }
 ];
