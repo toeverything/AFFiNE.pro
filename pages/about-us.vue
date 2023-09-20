@@ -144,13 +144,6 @@ const engineeringMembers: Member[] = [
   },
 
   {
-    name: "Yang Jinfei",
-    title: "Full-stack Engineer",
-    avatar: "https://unavatar.io/github/JimmFly",
-    link: "https://github.com/JimmFly",
-  },
-
-  {
     name: "Zijian Zuo",
     title: "Full-stack Engineer",
     avatar: "/Zijian.jpeg",
