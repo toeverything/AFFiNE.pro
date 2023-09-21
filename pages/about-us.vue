@@ -156,6 +156,12 @@ const engineeringMembers: Member[] = [
     avatar: "/Hongtao.jpeg",
     link: "https://github.com/doouding",
   },
+  {
+    name: "Xiang Gao",
+    title: "Full-stack Engineer",
+    avatar: "https://unavatar.io/github/Flrande",
+    link: "https://github.com/Flrande",
+  },
 ];
 
 const communityMembers: Member[] = [
