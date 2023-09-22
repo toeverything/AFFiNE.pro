@@ -2,16 +2,16 @@
   "tabs": [
 
     {
+      "version": "0.9"
+    },
+
+    {
       "version": "0.8"
     },
 
     {
       "_name": "Ivry",
       "version": "0.7"
-    },
-
-    {
-      "version": "0.6"
     }
 
   ]
