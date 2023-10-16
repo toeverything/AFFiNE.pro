@@ -49,10 +49,12 @@ export default defineNuxtConfig({
         { id: 'check-dark-light',
           children: `
             ;(() => {
-              const preference = 'dark'
+              const preference = 'light'
               localStorage.setItem('vueuse-color-scheme', preference)
-              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-              if (!preference || preference === 'auto' ? prefersDark : preference === 'dark') {
+              const prefersLight = window.matchMedia('(prefers-color-scheme: dark)').matches
+              if (!preference || preference === 'auto' ? prefersLight : preference === 'light') {
+                document.documentElement.classList.add('light')
+              } else {
                 document.documentElement.classList.add('dark')
               }
             })()
