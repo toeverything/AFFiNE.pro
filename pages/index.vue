@@ -2,31 +2,6 @@
 .page.page-home.page-overview
   svg-defs
 
-  .section-hero
-    .base-container.hero-container
-      overview-hero
-
-  .section-trusted-by
-    overview-trusted-by
-
-  .section-consolidate-workflow
-    overview-consolidate-workflow
-
-  .section-write-draw-plan
-    overview-write-draw-plan
-
-  .section-build-in-public
-    overview-build-in-public
-
-  .section-user-stories
-    overview-user-stories
-
-  .section-build-with-module
-    overview-build-with-module
-
-  .section-sns
-    overview-sns
-
 </template>
 
 <script setup lang="ts">

@@ -203,12 +203,13 @@ onBeforeMount(async () => {
 
   .card-wrapper
     width: 100%
-    background: rgba(0, 0, 0, 0.45);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
-    border-radius: 14px;
+    background: white;
+    border: 1px solid #E3E2E4;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
     padding: 30px
     gap: fluid-value(16, 18)
+    --light-color:rgba(#1E96EB, 0.1)
 
     .update-frequency
       margin-top: -1em

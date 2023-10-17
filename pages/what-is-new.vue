@@ -127,13 +127,13 @@ await loadData()
       font-weight: 500;
       padding: 5px 15px
       font-size: 14px
-      background: rgba(249, 249, 249, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(5, 5, 5, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.1);
       border-radius: 28px;
       transition: 316ms
 
       &:hover
-        background: rgba(249, 249, 249, 0.22);
+        background: rgba(5, 5, 5, 0.1);;
 
       .nuxt-icon
         font-size: 16px
@@ -144,7 +144,7 @@ await loadData()
       height: 1px
       opacity: 0.6
       margin-top: 42px
-      background: radial-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0))
+      background: radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
 
   .section-changelogs
     .changelog-card

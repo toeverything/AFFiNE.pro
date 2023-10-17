@@ -353,8 +353,8 @@ useHead({
       top: 50%
       left: var(--offset)
       right: 0
-      background: #1B1B1B
-      border: 1px solid rgba(255, 255, 255, 0.1)
+      background: #fff
+      border: 1px solid s('rgba(var(--v-primary-rgb), 0.1)')
       box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1)
       border-radius: 14px
       transform: translateY(-50%)
@@ -364,7 +364,7 @@ useHead({
       line-height: 220.02%;
 
     .visit-button
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       padding: 3px 120px;
       font-size: 14px;
@@ -373,7 +373,7 @@ useHead({
       transition: 518ms
 
       &:hover
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(0, 0, 0, 0.15);
 
   .section-members
     .md-container

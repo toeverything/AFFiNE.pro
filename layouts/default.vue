@@ -1,7 +1,5 @@
 <template lang="pug">
 .layout.default-layout
-  site-hero-bg
-  site-hero-bg-mobile
   site-header
   .fluid-container
     slot

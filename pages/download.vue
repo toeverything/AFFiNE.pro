@@ -239,8 +239,8 @@ await loadData()
           max-width: 70vw
 
     .mobile-version-notes
-      background: rgba(27, 27, 27, 0.3);
-      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: white;
+      border: 2px solid #E3E2E4;
       border-radius: 10px;
       display: flex;
       padding: 32px;
@@ -274,11 +274,14 @@ await loadData()
       justify-content: center
       align-items: center
       padding: 14px 18px
-      border-radius: 14px
+      border-radius: 8px
       position: relative
-      color: white
+      border: 1px solid #E3E2E4
+      box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08);
+      color: #424149
       cursor: pointer
-      background: linear-gradient(180deg, rgba(217, 217, 217, 0.10) 0%, rgba(255, 255, 255, 0.09) 14.06%, rgba(217, 217, 217, 0.00) 100%);
+      background: $secondary
+      font-weight: 500
 
       .text-wrapper
         position: relative
@@ -302,8 +305,9 @@ await loadData()
         background: linear-gradient(180deg, rgba(217, 217, 217, 0.20) 0%, rgba(255, 255, 255, 0.19) 14.06%, rgba(217, 217, 217, 0.10) 100%);
 
       &.is-current
-        background: #000
+        box-shadow: 0px 2px 10px 0px rgba(30, 150, 235, 0.20);
         padding: 0 fluid-value(20, 50)
+        color: #1E96EB
 
         .info-name
           transform: translateX(0)
@@ -312,8 +316,8 @@ await loadData()
           padding-right: 8px
 
         &:before
-          padding: 2px
-          background: linear-gradient(180deg, #0E55EE 0%, #002A86 100%)
+          padding: 1.5px
+          background: #1E96EB
 
   .section-why
     .container

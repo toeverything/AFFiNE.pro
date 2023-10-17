@@ -57,7 +57,7 @@ const publishDate = useDateFormat(new Date(props.changelog.date || Date.now()), 
       margin-bottom: 40px
       border-radius: 8px;
       aspect-ratio: 880/398;
-      background-color: #000
+      background-color: #eee
 
     .info-title
       font-weight: 900
@@ -73,10 +73,11 @@ const publishDate = useDateFormat(new Date(props.changelog.date || Date.now()), 
     .view-button
       $bg = rgba(78, 63, 255, 0.7)
       background: $bg;
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(0, 0, 0, 0.16);
       border-radius: 28px;
       padding: 5px 15px;
       transition: 318ms
+      color: white
 
       &:hover
         background: darken($bg, 8%)
