@@ -27,19 +27,14 @@ export const PATH = {
 
 export const COMMUNITY_SNS_LIST = [
   {
+    name: 'Twitter',
+    iconName: 'twitter',
+    link: PATH.SNS_TWITTER
+  },
+  {
     name: 'GitHub',
     iconName: 'github',
     link: PATH.AFFiNE_GITHUB
-  },
-  {
-    name: 'Discord',
-    iconName: 'discord',
-    link: PATH.SNS_DISCORD
-  },
-  {
-    name: 'Reddit',
-    iconName: 'reddit',
-    link: PATH.SNS_REDDIT
   },
   {
     name: 'Telegram',
@@ -47,14 +42,19 @@ export const COMMUNITY_SNS_LIST = [
     link: PATH.SNS_TELEGRAM
   },
   {
-    name: 'Twitter',
-    iconName: 'twitter',
-    link: PATH.SNS_TWITTER
+    name: 'Discord',
+    iconName: 'discord',
+    link: PATH.SNS_DISCORD
   },
   {
     name: 'YouTube',
     iconName: 'youtube',
     link: PATH.SNS_YOUTUBE
+  },
+  {
+    name: 'Reddit',
+    iconName: 'reddit',
+    link: PATH.SNS_REDDIT
   },
 ]
 
