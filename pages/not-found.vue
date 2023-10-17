@@ -43,7 +43,7 @@ useHead({
 
   .page-desc
     font-size: 16px
-    color: #E6E6E6
+    color: #808080
 
   .not-found-layers
     margin-top: 51px
@@ -52,5 +52,6 @@ useHead({
     background-size: contain
     background-repeat: no-repeat
     background-image: url(@/assets/error-handling/not-found-layers.png)
+    filter: invert(100%)
 
 </style>

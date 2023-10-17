@@ -113,12 +113,13 @@ useHead({
     min-width: 290px
     padding: 32px 20px;
     gap: 10px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-    border: 1px solid #202020;
+    background: white;
+    border: 1px solid #E3E2E4;
     border-radius: 11px;
     display: flex
     flex-direction: column
     justify-content: flex-start
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.05)
 
   .price-card.type-pro
     --label-bg: 1
@@ -140,7 +141,7 @@ useHead({
       opacity: var(--label-bg)
 
     &:after
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.80) 0.01%, rgba(0, 0, 0, 0.50) 100%);
+      background: linear-gradient(180deg, rgba(240, 240, 240, 0.10) 0%, rgba(255, 255, 255, 0.80) 0.01%, rgba(255, 255, 255, 0.50) 100%);
       opacity: calc(1 - var(--label-bg))
 
     .early-access-label
@@ -189,6 +190,7 @@ useHead({
 
       .contact-us-button
         background: #006BCC;
+        color: white
         box-shadow: 0px 4px 29px 0px rgba(255, 255, 255, 0.15), 0px 4px 32px 0px rgba(0, 56, 255, 0.27)
 
       .card-header
@@ -214,7 +216,7 @@ useHead({
         opacity 0.9
 
     &.with-bg
-      background: rgba(255, 255, 255, 0.05)
+      background: rgba(0, 0, 0, 0.02)
       border-radius: 5px
       padding: 15px
 
@@ -238,7 +240,7 @@ useHead({
     border-radius: 50%
 
   .card-title
-    background: linear-gradient(180deg, #FFFFFF 0%, #B3B3B3 100%);
+    background: linear-gradient(180deg, #000 0%, #B3B3B3 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -280,7 +282,7 @@ useHead({
   .coming-soon-tips,
   .contact-us-button
     text-align: center
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
     border-radius: 10px;
     font-size: 15px;
     height: 36px;
@@ -288,10 +290,10 @@ useHead({
     margin-top: 12px
 
   .contact-us-button
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(2px);
     transition: 318ms
 
     &:hover
-      background: rgba(255, 255, 255, 0.23);
+      background: rgba(0, 0, 0, 0.1);
 </style>
