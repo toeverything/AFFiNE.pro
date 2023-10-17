@@ -191,10 +191,13 @@ $mediaCompactHeader = '(max-width: 1280px)'
     .out-try-button
       height: 40px
       font-size: 15px
-      border: 1px solid rgba(255, 255, 255, 0.72)
+      border: 1px solid rgba(0, 0, 0, 0.72)
 
       @media $mediaCompactHeader
         min-width: 84px
+
+      &:hover
+        border-color: rgba(0, 0, 0, 0.72) !important
 
     .out-github-button
       width: 40px
@@ -229,11 +232,11 @@ $mediaCompactHeader = '(max-width: 1280px)'
       display: block
       padding: 0 12px
       border-radius: 12px;
-      color: #e6e6e6
+      color: #585858
 
       &:hover
-        color: white
-        text-shadow: 0px 0px 18px rgba(255, 255, 255, 0.8);
+        color: black
+        text-shadow: 0px 0px 18px rgba(128, 128, 128, 0.4);
 
     .right-part
       overflow: hidden
@@ -263,7 +266,7 @@ $mediaCompactHeader = '(max-width: 1280px)'
       font-size: 15px
 
       &:hover
-        border-color: black !important
+        border-width: 0px !important
 
     .menu-list
       position relative
