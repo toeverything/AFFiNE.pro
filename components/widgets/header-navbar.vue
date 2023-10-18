@@ -6,7 +6,7 @@
   .navbar-fixed
     .limit-container.flex.items-center
       .flex.flex-1.justify-between.items-center
-        .menu-list.flex.items-center.gap-16px
+        .menu-list.flex.items-center.gap-12px
           nuxt-link.handler.logo-handler( to="/" )
             affine-logo.navbar-logo
           client-only
@@ -101,7 +101,7 @@ $mediaCompactHeader = '(max-width: 1280px)'
   .navbar-logo
     color: var(--logo-color)
     font-size: 32px
-    margin-right: 16px
+    margin-right: 20px
 
   .github-button
     &:hover
