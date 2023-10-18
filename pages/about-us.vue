@@ -364,7 +364,7 @@ useHead({
       line-height: 220.02%;
 
     .visit-button
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.05);
       border-radius: 10px;
       padding: 3px 120px;
       font-size: 14px;
@@ -373,7 +373,7 @@ useHead({
       transition: 518ms
 
       &:hover
-        background: rgba(0, 0, 0, 0.15);
+        background: rgba(0, 0, 0, 0.1);
 
   .section-members
     .md-container

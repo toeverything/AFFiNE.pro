@@ -6,22 +6,21 @@
       nuxt-link( to="/" )
         affine-logo.navbar-logo( name="logo" )
 
-      .flex.items-center.gap-18px
-        nuxt-link.try-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank") {{ $t('community') }}
-        nuxt-link( :to="PATH.AFFiNE_GITHUB" target="_blank" rel="nofollow")
-          nuxt-icon( name="github" )
+      .flex.items-center.gap-12px
+        header-download-button
+        stars-on-github-button
 
-        .menu-handler.ml-13px(
+        .menu-handler(
           ref="menuHandler"
           @click="() => isOpen = !isOpen"
         )
-          nuxt-icon.icon-menu( name="menu" )
+          nuxt-icon.icon-menu( :name="isOpen ? 'menu-close' : 'hamburg-menu'" )
 
     el-collapse-transition
       .collapsed-menu( v-show="isOpen" )
         .menu-list
-          .nav-item
-            nuxt-link( to="/" ) {{ $t('home') }}
+          //- .nav-item
+          //-   nuxt-link( to="/" ) {{ $t('home') }}
           .nav-item
             nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" ) {{ $t('community') }}
           .nav-item
@@ -39,6 +38,7 @@
             )
               | {{ localeProperties?.name  }}
               nuxt-icon.ml-3px( name="arrow-down-s" )
+
         .menu-list.lang-list( v-show="isOpenLangList" )
           .nav-item.flex.justify-between(
             v-for="item in locales"
@@ -83,40 +83,50 @@ watch(locale, () => {
     top: 0
     position fixed
     z-index: $zIndexHeader
+    backdrop-filter: blur(15px)
+    background: white;
+    border-bottom: 0.5px solid transparent;
 
     .fixed-row
       height: var(--navbar-height)
-      border-bottom: 1px solid var(--divider-color)
       padding: 4px
       padding-right: 8px
+      padding: 0 32px
+
+      @media (max-width: 390px)
+        padding: 0 20px
 
     .try-link
       font-size: 14px
 
     .navbar-logo
       color: var(--logo-color)
-      font-size: 18px
-      margin-left: 6px
+      font-size: 32px
 
     .icon-menu
       font-size: 24px
+      color: var(--primary-deep)
 
     &.has-scrolled
-      background: var(--secondary)
+      background: rgba(253, 253, 252, 0.90);
+      // background: var(--secondary)
+      border-bottom-color: rgba(0, 0, 0, 0.10);
 
     .collapsed-menu
-      background: var(--secondary)
+      // background: var(--secondary)
       overflow-y: scroll
+      height: s('calc(100dvh - var(--navbar-height))')
 
       .menu-list
-        padding: 20px 32px
+        padding: 0 32px
 
         .nav-item
-          font-weight: 800;
+          font-weight: 500;
           font-size: 14px;
-          line-height: 24px;
-          color: var(--primary-gray)
-          margin-bottom: 18px
+          line-height: 20px;
+          color: var(--primary-deep)
+          padding: 12px 0
+          border-bottom: 0.5px solid rgba(0, 0, 0, 0.10);
 
       .lang-list
         border-top: 1px solid var(--divider-color)

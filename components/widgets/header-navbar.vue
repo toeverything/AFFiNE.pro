@@ -1,76 +1,32 @@
 <template lang="pug">
 .header-navbar(
-  :class="{ 'has-ext': y > 80 }"
+  :class="{ 'has-scroll': y > 0 }"
 )
   .navbar-placeholder
-  .navbar-fluid-container.flex.items-center(
-    :class="{ 'is-invisible': y > 80 }"
-  )
-    .flex.flex-1.justify-between.items-center
-      nuxt-link.handler.logo-handler( to="/" )
-        affine-logo.navbar-logo
-
-      .right-part.flex.items-center.gap-52px
-        nuxt-link.handler( to="/download" )
-          el-button.try-button.out-try-button(
-            :class="[`dark-${isDark}`]"
-            size="large"
-            :type="isDark ? 'default' : 'primary'"
-          )
-            span {{ $t('download') }}
-
-        nuxt-link.handler( :to="PATH.AFFiNE_GITHUB" target="_blank" )
-          .out-github-button.flex.items-center.justify-center
-            github-circle.text-30px
-
-  .navbar-fixed.flex.items-center
-    .menu-list.flex.items-center.gap-16px
-      client-only
-        .active-tab(
-          ref="activeTab"
-          :style="activeTabStyle"
-        )
-      .nav-item
-        scroll-link( to="/" ) {{ $t('home') }}
-      .nav-item
-        nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" ) {{ $t('community') }}
-      .nav-item
-        scroll-link( to="/about-us" ) {{ $t('aboutUs') }}
-      .nav-item
-        scroll-link( to="/blog" ) {{ $t('blog') }}
-      .nav-item
-        scroll-link( to="/pricing" ) {{ $t('price') }}
-      el-dropdown(
-        v-if="CONFIG.ENABLE_LANG_SWITCHER"
-        trigger="click" size="large"
-        popper-class="lang-switcher-dropdown"
-      )
-        .nav-item.cursor-pointer
-          .current-lang.flex.items-center(
-            ref="ignoreElRef"
-            @click="() => isOpenLangList = !isOpenLangList"
-          )
-            | {{ localeProperties?.name  }}
-            nuxt-icon.ml-3px( name="arrow-down-s" )
-        template( #dropdown )
-          el-dropdown-menu
-            el-dropdown-item.flex.justify-between(
-              v-for="item in locales"
-              @click="locale = item.code"
+  .navbar-fixed
+    .limit-container.flex.items-center
+      .flex.flex-1.justify-between.items-center
+        .menu-list.flex.items-center.gap-16px
+          nuxt-link.handler.logo-handler( to="/" )
+            affine-logo.navbar-logo
+          client-only
+            .active-tab(
+              ref="activeTab"
+              :style="activeTabStyle"
             )
-              | {{ item.name }}
+          .nav-item
+            nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" ) {{ $t('community') }}
+          .nav-item
+            scroll-link( to="/about-us" ) {{ $t('aboutUs') }}
+          .nav-item
+            scroll-link( to="/blog" ) {{ $t('blog') }}
+          .nav-item
+            scroll-link( to="/pricing" ) {{ $t('price') }}
 
-    .right-part
-      .flex.items-center.gap-16px
-        nuxt-link( to="/download" )
-          el-button.try-button(
-            v-if="isMounted"
-            :type="isDark ? 'default' : 'primary'"
-          ) {{ $t('download') }}
+        .right-part.flex.items-center.gap-12px
+          header-download-button
+          stars-on-github-button
 
-        nuxt-link( :to="PATH.AFFiNE_GITHUB" target="_blank" rel="nofollow")
-          .github-button.flex.items-center.justify-center
-            github-circle.text-30px
 </template>
 
 <script setup lang="ts">
@@ -132,39 +88,20 @@ $mediaCompactHeader = '(max-width: 1280px)'
   --github-border-color: #A4A4A4
   --affix-progress: 0
   position: relative
-  max-width: 1920px
   margin: 0 auto
 
-  &.has-ext
-    --affix-progress: 1
-
-    .right-part
-      // transition-delay: 0.2s
-
-      .flex
-        transition-delay: 0s
+  &.has-scroll
+    .navbar-fixed
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.10);
+      background: rgba(253, 253, 252, 0.90);
 
   .logo-handler
-    height: 28px
+    height: 32px
 
   .navbar-logo
     color: var(--logo-color)
-    font-size: 28px
-
-  .try-button
-    padding-left: 28px
-    padding-right: 28px
-    border-radius: 70px
-    min-width: 177px
-
-    .text-long
-      @media $mediaCompactHeader
-        display: none
-
-    .text-short
-      display: none
-      @media $mediaCompactHeader
-        display: block
+    font-size: 32px
+    margin-right: 16px
 
   .github-button
     &:hover
@@ -174,76 +111,38 @@ $mediaCompactHeader = '(max-width: 1280px)'
     height: var(--navbar-height)
     pointer-events: none
 
-  .navbar-fluid-container
-    position absolute
-    z-index: $zIndexHeader
-    width: 100%
-    top: 0
-    padding: 0 50px
-    padding-right: 62.5px
-    height: var(--navbar-height)
-    // opacity: calc(1 - var(--affix-progress) * 2)
-    pointer-events: none
-
-    &:not(.is-invisible) .handler
-      pointer-events: initial
-
-    .out-try-button
-      height: 40px
-      font-size: 15px
-      border: 1px solid rgba(0, 0, 0, 0.72)
-
-      @media $mediaCompactHeader
-        min-width: 84px
-
-      &:hover
-        border-color: rgba(0, 0, 0, 0.72) !important
-
-    .out-github-button
-      width: 40px
-      height: 40px
-      border-radius: 50%
-      border: 1px solid #A4A4A4
-      transition: 218ms
-
-      &:hover
-        background-color: $primary10
-
-    .right-part
-      @media $mediaCompactHeader
-        gap: 28px
-
   .navbar-fixed
     position fixed
     z-index: ($zIndexHeader + 1)
-    top: 16px
-    left: 50%
-    height: 40px
-    transform: translateX(-50%)
-    border: 1px solid var(--navbar-border-color)
-    border-radius: 58px
-    padding-left: 8px
-    overflow: hidden
-    background: var(--navbar-bg-color)
-    backdrop-filter: blur(14px)
+    width: 100%
+    left: 0
+    top: 0
+    border-bottom: 0.5px solid transparent;
+    backdrop-filter: blur(15px);
+    transition: background 318ms
+
+    .limit-container
+      max-width: 1024px + 64px
+      padding: 20px 32px
+      margin: 0 auto
 
     .nav-item > a,
     .el-dropdown
       display: block
       padding: 0 12px
       border-radius: 12px;
-      color: #585858
+      color: black
+      padding: 8px 12px
+      border-radius: 4px;
+      transition: 318ms
 
       &:hover
         color: black
-        text-shadow: 0px 0px 18px rgba(128, 128, 128, 0.4);
+        background: rgba(0, 0, 0, 0.04)
 
     .right-part
       overflow: hidden
       // @TODO: Pass dynamic container width
-      width: calc(280px * var(--affix-progress))
-      opacity: calc(var(--affix-progress))
-      padding-left: calc(20px * var(--affix-progress))
       padding-right: 8px
       transition-duration: 0.4s
       // transition-timing-function: cubic-bezier(.85,.0,.3,.1)
@@ -255,7 +154,6 @@ $mediaCompactHeader = '(max-width: 1280px)'
         // transition-timing-function: cubic-bezier(.85,.0,.3,.1)
         opacity: calc(var(--affix-progress))
         // transition-delay: 0.3s
-        transform: translateX(calc(110% * (1 - var(--affix-progress))))
 
         > *
           flex-shrink: 0
@@ -283,9 +181,9 @@ $mediaCompactHeader = '(max-width: 1280px)'
         pointer-events: none
 
       .nav-item
-        font-weight: 800;
-        font-size: 15px;
-        line-height: 24px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
         white-space: nowrap;
 
   /html.dark &
