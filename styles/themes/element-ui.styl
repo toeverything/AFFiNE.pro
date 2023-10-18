@@ -33,6 +33,11 @@ html.dark {
   .el-button {
     font-weight: 800
     background-color: var(--el-button-bg-color);
+    --el-border-radius-base: 34px;
+    font-weight: 500
+    transition: 318ms
+    padding: 7px 16px
+    letter-spacing: -0.28px
 
     &.is-link {
       background: transparent
@@ -40,6 +45,9 @@ html.dark {
 
     &--large {
       font-size: 20px
+      padding: 12px 20px
+      font-size: 16px
+      letter-spacing: -0.32px
     }
 
     &--primary {
@@ -59,22 +67,19 @@ html.dark {
     }
 
     &--default {
-      background-color: #fff
-      color: #0F0F0F !important
+      background-color: var(--primary-deep)
+      color: var(--secondary) !important
+      border: none;
 
       &:hover,
       &:focus {
-        background-color: #efefef !important
-        border-color: #efefef !important
+        background-color: #424149 !important
+        border-color: #424149 !important
       }
 
       &:active {
-        background-color: #dfdfdf !important
-        border-color: #cfcfcf !important
-      }
-
-      &:focus-visible {
-        outline-color: #ccc !important
+        background-color: #424149 !important
+        border-color: #424149 !important
       }
     }
 

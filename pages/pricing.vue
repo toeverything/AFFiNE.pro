@@ -240,7 +240,7 @@ useHead({
     border-radius: 50%
 
   .card-title
-    background: linear-gradient(180deg, #000 0%, #B3B3B3 100%);
+    background: linear-gradient(180deg, #000 0%, #5f5f5f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
