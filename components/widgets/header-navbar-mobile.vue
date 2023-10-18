@@ -7,7 +7,6 @@
         affine-logo.navbar-logo( name="logo" )
 
       .flex.items-center.gap-12px
-        header-download-button
         stars-on-github-button
 
         .menu-handler(
