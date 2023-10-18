@@ -126,6 +126,7 @@ watch(locale, () => {
           line-height: 20px;
           color: var(--primary-deep)
           padding: 12px 0
+          letter-spacing: -0.28px;
           border-bottom: 0.5px solid rgba(0, 0, 0, 0.10);
 
       .lang-list
