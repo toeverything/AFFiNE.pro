@@ -122,9 +122,7 @@ $mediaCompactHeader = '(max-width: 1280px)'
     transition: background 318ms
 
     .limit-container
-      max-width: 1024px + 64px
       padding: 20px 32px
-      margin: 0 auto
 
     .nav-item > a,
     .el-dropdown

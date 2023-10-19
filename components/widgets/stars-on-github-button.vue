@@ -28,7 +28,7 @@ import GithubCircle from '~icons/mdi/github-circle'
   &:hover
     background: rgba(0, 0, 0, 0.04)
 
-  @media (max-width: 743px)
+  @media (max-width: 569px)
     padding: 6px
 
     .info-text
