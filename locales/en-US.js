@@ -98,7 +98,8 @@ export default {
     octobaseFeatures: 'Local-first Distributed storage<br/>Frontend-centric developer experience<br/>Real-time Sync with ORM for multiple database providers',
     and: 'and',
     snsTitle: 'Join Our Community',
-    snsDesc: 'AFFiNE is an <span class="hashtag">#OpenSource</span> software, built with '
+    snsDesc: 'AFFiNE is an <span class="hashtag">#OpenSource</span> software, built with ',
+    sloganBannerTitle: `Get more things done, Your creativity isn't monotone`,
   },
 
   aboutUsPage: {

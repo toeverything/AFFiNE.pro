@@ -1,5 +1,5 @@
 <template lang="pug">
-nuxt-link.stars-on-github-button.inline-flex.items-center(
+nuxt-link.stars-on-github-button.inline-flex.justify-center.items-center(
   :to="PATH.AFFiNE_GITHUB"
   target="_blank"
   rel="nofollow"

@@ -24,7 +24,7 @@
             scroll-link( to="/pricing" ) {{ $t('price') }}
 
         .right-part.flex.items-center.gap-12px
-          header-download-button
+          download-entry-button
           stars-on-github-button
 
 </template>

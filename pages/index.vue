@@ -2,6 +2,8 @@
 .page.page-home.page-overview
   svg-defs
 
+  overview-slogan-banner
+
 </template>
 
 <script setup lang="ts">
@@ -21,10 +23,16 @@ gsap.registerPlugin(ScrollTrigger)
 <style lang="stylus">
 .section-title
   margin: 0
-  font-weight: 800;
-  font-size: fluid-value(32, 64);
-  line-height: (77/64);
+  font-weight: 500;
+  font-size: fluid-value(32, 60);
+  line-height: (65/60);
   text-align: center
+  letter-spacing: -0.068em;
+
+.section-grad-title
+  background-image: linear-gradient(91deg, #474747 20.12%, #000 55.27%, #474747 82.61%)
+  background-clip: text;
+  color: transparent
 
 .section-grad2-title
   margin: 0
