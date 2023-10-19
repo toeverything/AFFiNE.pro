@@ -214,7 +214,7 @@ useHead({
 <style lang="stylus">
 .page.page-about-us
   --contact-card-bg-color: #fff
-  --contact-card-footer-color: rgba(0, 42, 134, 1)
+  --contact-card-footer-color: brand(100)
   padding-bottom: fluid-value(40, 100)
 
   .section-hero
