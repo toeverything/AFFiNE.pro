@@ -13,6 +13,7 @@
             .sns-icons-row.flex
               nuxt-link(
                 v-for="sns in COMMUNITY_SNS_LIST"
+                :class="[`link-${sns.iconName}`]"
                 :to="sns.link"
                 rel="nofollow"
                 target="_blank"
@@ -143,7 +144,31 @@ const currentYear = new Date().getFullYear()
 
     .sns-icon
       font-size: 24px
-      color: #77757D99
+      color: rgba(119, 117, 125, 0.60)
+
+    .link-twitter:hover
+      .sns-icon
+        color: rgba(29, 161, 242, 1)
+
+    .link-github:hover
+      .sns-icon
+        color: rgba(0, 0, 0, 1)
+
+    .link-telegram:hover
+      .sns-icon
+        color: rgba(42, 171, 238, 1)
+
+    .link-discord:hover
+      .sns-icon
+        color: rgba(88, 101, 242, 1)
+
+    .link-youtube:hover
+      .sns-icon
+        color: rgba(255, 0, 0, 1)
+
+    .link-reddit:hover
+      .sns-icon
+        color: rgba(255, 69, 0, 1)
 
   .icon-logo
     font-size: 48px
