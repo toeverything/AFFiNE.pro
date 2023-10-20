@@ -2,6 +2,8 @@
 .page.page-home.page-overview
   svg-defs
 
+  overview-trusted-by
+
   overview-slogan-banner
 
 </template>

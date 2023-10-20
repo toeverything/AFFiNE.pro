@@ -107,6 +107,12 @@ a
   margin: 0 auto
 
 // Typography
+.headine-2
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.333
+  letter-spacing: -0.02em
+
 .headine-6
   font-size: 14px;
   font-weight: 500;
