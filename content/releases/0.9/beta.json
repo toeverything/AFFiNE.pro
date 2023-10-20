@@ -1,71 +1,72 @@
 {
-  "url": "https://github.com/toeverything/AFFiNE/releases/tag/0.9.0-beta.1",
-  "name": "0.9.0-beta.1",
-  "draft": false,
-  "prerelease": true,
-  "tag_name": "0.9.0-beta.1",
-  "created_at": "2023-09-23T07:00:09Z",
-  "published_at": "2023-09-23T23:20:03Z",
-  "assets": [
-    {
-      "name": "affine-beta-linux-x64.AppImage",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/0.9.0-beta.1/affine-beta-linux-x64.AppImage",
-      "size": 171324608,
-      "download_count": 0
-    },
-    {
-      "name": "affine-beta-linux-x64.zip",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/0.9.0-beta.1/affine-beta-linux-x64.zip",
-      "size": 171510359,
-      "download_count": 0
-    },
-    {
-      "name": "affine-beta-macos-arm64.dmg",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/0.9.0-beta.1/affine-beta-macos-arm64.dmg",
-      "size": 166513998,
-      "download_count": 2
-    },
-    {
-      "name": "affine-beta-macos-arm64.zip",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/0.9.0-beta.1/affine-beta-macos-arm64.zip",
-      "size": 164999408,
-      "download_count": 42
-    },
-    {
-      "name": "affine-beta-macos-x64.dmg",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/0.9.0-beta.1/affine-beta-macos-x64.dmg",
-      "size": 171745281,
-      "download_count": 1
-    },
-    {
-      "name": "affine-beta-macos-x64.zip",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/0.9.0-beta.1/affine-beta-macos-x64.zip",
-      "size": 170367888,
-      "download_count": 13
-    },
-    {
-      "name": "affine-beta-windows-x64.exe",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/0.9.0-beta.1/affine-beta-windows-x64.exe",
-      "size": 173051240,
-      "download_count": 47
-    },
-    {
-      "name": "codecov.yml",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/0.9.0-beta.1/codecov.yml",
-      "size": 91,
-      "download_count": 0
-    },
-    {
-      "name": "latest-mac.yml",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/0.9.0-beta.1/latest-mac.yml",
-      "size": 984,
-      "download_count": 121
-    },
-    {
-      "name": "latest.yml",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/0.9.0-beta.1/latest.yml",
-      "size": 356,
-      "download_count": 80
-    }
-  ]
-}
+    "url": "https://github.com/toeverything/AFFiNE/releases/tag/v0.9.0-beta.3",
+    "name": "0.9.0-beta.3",
+    "body": "## What's Changed\r\n* fix(electron): app image icon by @pengx17 in https://github.com/toeverything/AFFiNE/pull/4442\r\n* refactor(native): remove unused code by @himself65 in https://github.com/toeverything/AFFiNE/pull/4651\r\n* feat(core): change favicon by @joooye34 in https://github.com/toeverything/AFFiNE/pull/4663\r\n\r\n**Full Changelog**: https://github.com/toeverything/AFFiNE/compare/v0.9.0-beta.2...v0.9.0-beta.3",
+    "draft": false,
+    "prerelease": true,
+    "tag_name": "v0.9.0-beta.3",
+    "created_at": "2023-10-20T03:40:35Z",
+    "published_at": "2023-10-20T04:30:30Z",
+    "assets": [
+      {
+        "name": "affine-beta-linux-x64.AppImage",
+        "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.9.0-beta.3/affine-beta-linux-x64.AppImage",
+        "size": 171095232,
+        "download_count": 0
+      },
+      {
+        "name": "affine-beta-linux-x64.zip",
+        "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.9.0-beta.3/affine-beta-linux-x64.zip",
+        "size": 171314819,
+        "download_count": 0
+      },
+      {
+        "name": "affine-beta-macos-arm64.dmg",
+        "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.9.0-beta.3/affine-beta-macos-arm64.dmg",
+        "size": 166491989,
+        "download_count": 0
+      },
+      {
+        "name": "affine-beta-macos-arm64.zip",
+        "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.9.0-beta.3/affine-beta-macos-arm64.zip",
+        "size": 164924161,
+        "download_count": 1
+      },
+      {
+        "name": "affine-beta-macos-x64.dmg",
+        "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.9.0-beta.3/affine-beta-macos-x64.dmg",
+        "size": 171626422,
+        "download_count": 0
+      },
+      {
+        "name": "affine-beta-macos-x64.zip",
+        "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.9.0-beta.3/affine-beta-macos-x64.zip",
+        "size": 170362139,
+        "download_count": 2
+      },
+      {
+        "name": "affine-beta-windows-x64.exe",
+        "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.9.0-beta.3/affine-beta-windows-x64.exe",
+        "size": 172939112,
+        "download_count": 5
+      },
+      {
+        "name": "codecov.yml",
+        "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.9.0-beta.3/codecov.yml",
+        "size": 91,
+        "download_count": 0
+      },
+      {
+        "name": "latest-mac.yml",
+        "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.9.0-beta.3/latest-mac.yml",
+        "size": 984,
+        "download_count": 7
+      },
+      {
+        "name": "latest.yml",
+        "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.9.0-beta.3/latest.yml",
+        "size": 356,
+        "download_count": 11
+      }
+    ]
+  },
