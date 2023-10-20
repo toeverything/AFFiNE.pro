@@ -21,7 +21,7 @@ import GithubCircle from '~icons/mdi/github-circle'
   border-radius: 34px
   padding: 6px 16px
   border: 1px solid var(--black-quaternary, #CCC)
-  transition: 316ms
+  transition: 150ms cubic-bezier(.42, 0, .58, 1)
   line-height: 1
   font-size: 14px
 
