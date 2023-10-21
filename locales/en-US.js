@@ -91,6 +91,7 @@ export default {
     buildInPublicCopilotB: 'Brainstorm ideas to enhance productivity',
     buildInPublicCopilotC: 'Content search & formatting to prompt content organisation',
     userStoriesTitle: 'User Stories',
+    userStoriesLightTitle: 'Millions love to engage and\npropel the unparalleled ',
     buildWithDetailTitle: 'Built with BlockSuite and OctoBase',
     blocksuiteDesc: 'The collaborative engine for block-based editing:',
     blocksuiteFeatures: 'Unified data model & block schema<br/>Compact UI infra built-in<br/>Extensible and reusable',

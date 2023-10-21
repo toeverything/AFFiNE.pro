@@ -90,15 +90,15 @@ a
     max-width: 100% !important
 
 .limit-container
-  padding-left: 32px
-  padding-right: 32px
+  --padding: 32px
+  padding-left: var(--padding)
+  padding-right: var(--padding)
   max-width: 1144px
   width: 100%
   margin: 0 auto
 
   @media $mediaInXS
-    padding-left: 20px
-    padding-right: 20px
+    --padding: 20px
 
 .md-container
   padding: 0 16px
