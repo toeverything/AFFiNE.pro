@@ -4,6 +4,8 @@
 
   overview-trusted-by
 
+  overview-user-stories-light
+
   overview-slogan-banner
 
 </template>
