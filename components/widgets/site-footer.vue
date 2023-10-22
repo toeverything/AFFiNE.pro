@@ -8,7 +8,7 @@
       .left-part.nav-part
         .flex.items-start.flex-wrap
           .icons-part
-            nuxt-link(
+            nuxt-link.mr-5.inline-flex(
               to="/"
             )
               affine-logo.icon-logo(
@@ -176,7 +176,6 @@ const currentYear = new Date().getFullYear()
   .icon-logo
     font-size: 48px
     color: var(--logo-color)
-    margin-right: 20px
 
   .copyright-row
     margin-top: 32px
