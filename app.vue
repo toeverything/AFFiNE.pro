@@ -89,11 +89,29 @@ a
   &.is-fluid
     max-width: 100% !important
 
+.limit-container
+  padding-left: 32px
+  padding-right: 32px
+  max-width: 1144px
+  width: 100%
+  margin: 0 auto
+
+  @media $mediaInXS
+    padding-left: 20px
+    padding-right: 20px
+
 .md-container
   padding: 0 16px
   max-width: (1200px + 32px)
   width: 100%
   margin: 0 auto
+
+// Typography
+.headine-6
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.28px;
 
 // Page
 .page

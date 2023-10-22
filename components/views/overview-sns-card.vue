@@ -63,7 +63,7 @@ const { elementX, elementY } = useMouseInElement(el, { handleOutside: false })
   &-wrapper
     --icon-color: #666
     --name-color: #666
-    --cursor-color: #002A86
+    --cursor-color: #1E96EB
     --color-stop-top: #666
     --color-stop-down: #666
     position relative
@@ -125,9 +125,9 @@ const { elementX, elementY } = useMouseInElement(el, { handleOutside: false })
 
   &-wrapper
     &:hover
-      --color-stop-top: #0E55EE
-      --color-stop-down: #002A86
-      --name-color: #002A86
+      --color-stop-top: #1E96EB
+      --color-stop-down: #1E96EB
+      --name-color: #1E96EB
 
       .cursor-vfx
         opacity: 0.3
