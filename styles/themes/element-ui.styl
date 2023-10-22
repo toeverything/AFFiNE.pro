@@ -23,7 +23,7 @@ html.dark {
   --el-color-success-light-3: #59AD85; // Hover
   --el-color-success-dark-2: #386D54; // Active
   --el-color-success-light-5: #cbddd3 // Disabled
-
+  --el-overlay-color-lighter: rgba(0, 0, 0, 0.3);
   --el-fill-color-light: #f4f4f4;
   --el-text-color-regular: var(--primary) !important;
   --el-border-radius-base: 6px
@@ -119,10 +119,6 @@ html.dark {
   }
 
   // Modal
-  .el-overlay {
-    background-color: rgba(0, 0, 0, 0.9);
-  }
-
   .el-dialog {
     border-radius: 6px;
 
@@ -156,6 +152,10 @@ html.dark {
       }
     }
   }
+}
+
+.el-overlay {
+  backdrop-filter: blur(1.5px);
 }
 
 .el-message {

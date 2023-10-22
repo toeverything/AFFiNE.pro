@@ -54,6 +54,7 @@ defineProps<{
     inset: 2px
     z-index: 2
     background: var(--background-color)
+    transition: 150ms cubic-bezier(.42, 0, .58, 1)
 
   .text-brand-grad
     opacity: 0

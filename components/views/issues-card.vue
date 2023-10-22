@@ -18,11 +18,12 @@
   )
     el-skeleton( animated style="--el-skeleton-color: rgba(0, 0, 0, 0.05);--el-skeleton-to-color: rgba(255, 255, 255, 0)")
       template( #template )
-        .flex.gap-21px.mb-4.pl-4.items-center(
+        .flex.gap-21px.pl-4.items-center(
           v-for="num in maxIssueLength"
+          :class="{ 'mb-5': num !== 3 }"
         )
-          el-skeleton-item( style="animation: none; width: 27px; height: 27px")
-          el-skeleton-item( style="flex: 1; height:54px")
+          el-skeleton-item( style="animation: none; width: 30px; height: 30px")
+          el-skeleton-item( style="flex: 1; height:55.5px")
 
   transition( v-else name="el-fade-in" )
     .issues-list(
@@ -97,7 +98,6 @@ onMounted(() => {
   .edge-case
     background: rgba(255, 255, 255, 0.1)
     border-radius: 10px
-    padding: 10px
     flex: 1
     overflow: hidden
     width: 100%
