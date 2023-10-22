@@ -72,10 +72,9 @@ const handleDownloadPrimaryClick = () => {
 <style lang="stylus">
 .download-canary-modal
   --el-dialog-width: 520px
-  border-radius: 8px;
-  border: 1px solid #ddd;
+  border-radius: 12px;
   background: linear-gradient(180deg, #fff 0%, #eee 100%);
-  box-shadow: 0px 0px 57px 0px rgba(0, 39, 178, 0.29);
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.15);
 
   @media (max-width: 520px)
     margin-left: 8px;
@@ -132,7 +131,7 @@ const handleDownloadPrimaryClick = () => {
     font-size: 16px
 
     b
-      color: #a89e15
+      color: #EB4335
 
   .text-button
     cursor: pointer

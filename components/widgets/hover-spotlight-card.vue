@@ -52,7 +52,7 @@ defineExpose({
   position: relative
   --light-color: brand(8)
   --radius: 12px
-  --border: 2px
+  --border: 0px
   --y: s('calc(var(--cursor-y) * 1px)')
   --x: s('calc(var(--cursor-x) * 1px)')
 
