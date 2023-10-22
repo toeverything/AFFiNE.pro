@@ -6125,10 +6125,10 @@ longest-streak@^3.0.0:
   resolved "https://registry.npmjs.org/longest-streak/-/longest-streak-3.1.0.tgz"
   integrity sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==
 
-lottie-web@^5.8.1:
-  version "5.10.2"
-  resolved "https://registry.npmjs.org/lottie-web/-/lottie-web-5.10.2.tgz"
-  integrity sha512-d0PFIGiwuMsJYaF4uPo+qG8dEorlI+xFI2zrrFtE1bGO4WoLIz+NjremxEq1swpR7juR10aeOtmNh3d6G3ub0A==
+lottie-web@5.12.2:
+  version "5.12.2"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.12.2.tgz#579ca9fe6d3fd9e352571edd3c0be162492f68e5"
+  integrity sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==
 
 lru-cache@^5.1.1:
   version "5.1.1"
@@ -10266,13 +10266,13 @@ vue-router@^4.2.3:
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-vue3-lottie@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.npmjs.org/vue3-lottie/-/vue3-lottie-2.5.0.tgz"
-  integrity sha512-JwlTzykr4ofPnSXsTAPt571RDrtQNy66H8w/zYBVHNgrCRG4RINI30c/oJx3Dj+XpxuktpKzgfI08tv1FjYkAQ==
+vue3-lottie@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/vue3-lottie/-/vue3-lottie-3.2.0.tgz#7f95831d3483dc304c680a9b2cac6ed098070a2a"
+  integrity sha512-PtNXbv7iD4XGmK8CXd71aLWmILIR6P6VzLMDw6ZzmDAeuJZuJ0MdOVnn50LOARgq+cOFJsn/2z+7tZh0F9T9qw==
   dependencies:
     lodash-es "^4.17.21"
-    lottie-web "^5.8.1"
+    lottie-web "5.12.2"
 
 vue3-marquee-slider@^1.0.5:
   version "1.0.5"

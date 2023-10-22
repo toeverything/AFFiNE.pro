@@ -7,8 +7,26 @@
     .limit-container.flex.items-center
       .flex.flex-1.justify-between.items-center
         .menu-list.flex.items-center.gap-12px
-          nuxt-link.handler.logo-handler( to="/" )
-            affine-logo.navbar-logo
+          nuxt-link.handler.logo-handler(
+            to="/"
+            @mouseenter="handleMouseenter"
+            @mouseleave="handleMouseleave"
+          )
+            affine-logo-lottie.navbar-logo(
+              v-if="!lottieLoaded"
+            )
+
+            client-only
+              vue3-lottie.navbar-logo.lottie-logo(
+                ref="lottieIcon"
+                :autoPlay="false"
+                :loop="false"
+                :speed="1"
+                width="32px"
+                height="32px"
+                animationLink="/lottie-files/logo-hover.json"
+                @onAnimationLoaded="handleLottieLoaded"
+              )
           client-only
             .active-tab(
               ref="activeTab"
@@ -45,6 +63,12 @@ const route = useRoute()
 // @FIXME: Get this value after mounted
 const isDark = useDark({ initialValue: 'dark' })
 
+let lastCallTime = Date.now()
+const LAST_LOTTIE_FRAME = 39
+
+const isReverse = ref(true)
+const lottieIcon = ref<any>(null)
+const lottieLoaded = ref(false)
 const isMounted = ref(false)
 const activeTab = ref(null)
 const activeTabStyle = reactive({
@@ -67,6 +91,25 @@ const refreshActiveTab = async (needTransition = false) => {
   activeTabStyle.width = `${width}px`
   activeTabStyle.transform = `translateX(${left}px)`
   activeTabStyle.transition = needTransition ? '218ms' : '0s'
+}
+
+const handleMouseenter = (event: Event) => {
+  const animation = lottieIcon.value
+
+  if (!animation) return
+
+  animation.setDirection('forward')
+  animation.goToAndStop(1)
+  animation.play()
+}
+
+const handleMouseleave = (event: Event) => {
+  lottieIcon.value?.goToAndStop(LAST_LOTTIE_FRAME)
+}
+
+const handleLottieLoaded = () => {
+  lottieIcon.value?.goToAndStop(1)
+  lottieLoaded.value = true
 }
 
 onMounted(() => {
@@ -96,12 +139,22 @@ $mediaCompactHeader = '(max-width: 1280px)'
       background: rgba(253, 253, 252, 0.90);
 
   .logo-handler
+    width: 32px
     height: 32px
+    margin-right: 20px
+    position relative
+    // overflow: hidden
 
   .navbar-logo
+    position absolute
+    left: 50%
+    top: 50%
+    transform: translate3d(-50%, -50%, 0)
     color: var(--logo-color)
     font-size: 32px
-    margin-right: 20px
+
+    &.lottie-logo
+      transform: translate3d(-50%, -50%, 0)
 
   .github-button
     &:hover

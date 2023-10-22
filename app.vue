@@ -14,8 +14,6 @@ import 'element-plus/es/components/message/style/css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import '~/styles/main.styl'
 
-import 'vue3-lottie/dist/style.css'
-
 const locale = ref(en)
 
 const i18n = useI18n()

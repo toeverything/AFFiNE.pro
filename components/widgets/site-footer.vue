@@ -8,8 +8,11 @@
       .left-part.nav-part
         .flex.items-start.flex-wrap
           .icons-part
-            affine-logo.icon-logo(
+            nuxt-link(
+              to="/"
             )
+              affine-logo.icon-logo(
+              )
             .sns-icons-row.flex
               nuxt-link(
                 v-for="sns in COMMUNITY_SNS_LIST"
