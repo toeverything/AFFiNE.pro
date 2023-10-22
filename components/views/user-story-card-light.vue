@@ -6,6 +6,7 @@ hover-spotlight-card.user-story-card-light(
   .meta-row.flex.items-start
     .avatar(
       :style="{ backgroundImage: `url('${story.avatar}')` }"
+      :class="{ 'is-default': story.avatar.includes('default') }"
     )
     .main-body
       .user-name {{ story.name }}
@@ -68,6 +69,9 @@ onMounted(() => {
     flex-shrink: 0
     border: 1px solid #eee
     border-radius: 50%
+
+    &.is-default
+      border: none
 
   .user-name
     color: var(--primary-deep)
