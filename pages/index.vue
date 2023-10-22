@@ -4,6 +4,8 @@
 
   overview-trusted-by
 
+  overview-build-in-public-light
+
   overview-user-stories-light
 
   overview-slogan-banner

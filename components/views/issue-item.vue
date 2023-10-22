@@ -9,8 +9,10 @@ nuxt-link.issue-item.flex.items-center(
   .item-body.flex-1
     .item-title.truncate {{ issue.title }}
     .item-meta.flex
-      | \#{{ issue.number }} opened {{ timeAgo }} by &nbsp;
+      .text-part
+        | \#{{ issue.number }} opened · {{ timeAgo }} by · &nbsp;
       nuxt-link( :to="`https://github.com/${issue.user}`" rel="nofollow" target="_blank" ) {{ issue.user }}
+      nuxt-icon( name="arrow-top-right" )
 </template>
 
 <script setup lang="ts">
@@ -36,36 +38,50 @@ const timeAgo = useTimeAgo(new Date(props.issue.created_at))
 
 <style lang="stylus">
 .issue-item
-  gap: fluid-value(18, 28)
-  padding-bottom: 19px
+  gap: 8px
+  padding: 6px 8px
+  border-radius: 4px
   transition: 218ms
+  --icon-color: #8E8D91
+
+  & + .issue-item
+    margin-top: 20px
 
   &:hover
-    opacity: 0.8
+    background: var(--light-detail-color-hover-color, rgba(0, 0, 0, 0.04));
+    --icon-color: var(--brand)
 
-  .nuxt-icon
+  > .nuxt-icon
     width: 1em
-    font-size: fluid-value(24, 33)
-    --color: #35FF23
+    font-size: 39px
+    --color: #44C11A
 
   &.type-closed
-    circle
-      --color: #8250df
+    .nuxt-icon
+      --color: #8F44DA
 
   .item-body
     min-width: 0
 
   .item-title
-    font-weight: 800
-    font-size: fluid-value(14, 16)
-    line-height: (19/16)
+    font-size: 16px
+    line-height: 1.5
+    margin-bottom: 4px
+    color: black
+
+    @media $mediaInXS
+      font-size: 14px
 
   .item-meta
-    margin-top: 7px
-    font-size: 12px
-    line-height: (15/12)
-    font-weight: 800
+    font-size: 13px;
+    line-height: normal;
 
-    a
-      text-decoration: underline
+    .text-part
+      text-overflow()
+
+    .nuxt-icon
+      margin-left: 4px
+      position relative
+      top: 1.5px
+      color: var(--icon-color)
 </style>
