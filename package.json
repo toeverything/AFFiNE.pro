@@ -26,7 +26,7 @@
     "tweakpane": "^3.1.7",
     "typescript-cookie": "^1.0.4",
     "vue-highlight-words": "^3.0.1",
-    "vue3-lottie": "^2.5.0",
+    "vue3-lottie": "^3.2.0",
     "vue3-marquee-slider": "^1.0.5"
   },
   "devDependencies": {
