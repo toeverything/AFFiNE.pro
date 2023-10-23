@@ -312,7 +312,6 @@ useHead({
   .price-card.type-pro
     --label-bg: 1
     position relative
-    background: none
 
     &:before,
     &:after
