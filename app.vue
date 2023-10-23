@@ -28,12 +28,12 @@ useHead({
 
 <style lang="stylus">
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap')
 
 body
   margin: 0
   font-family: "Inter", "Roboto", "Helvetica", "Arial", sans-serif
-  background: $secondary100
+  background: #FDFDFC
   color: $primary100
   font-size: 1rem
   line-height: 1.5
