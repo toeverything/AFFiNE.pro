@@ -30,6 +30,10 @@ useHead({
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap')
 
+::selection
+  background-color: var(--brand)
+  color: white
+
 body
   margin: 0
   font-family: "Inter", "Roboto", "Helvetica", "Arial", sans-serif
