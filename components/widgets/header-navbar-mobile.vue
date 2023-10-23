@@ -83,8 +83,8 @@ watch(locale, () => {
     position fixed
     z-index: $zIndexHeader
     backdrop-filter: blur(15px)
-    background: white;
     border-bottom: 0.5px solid transparent;
+    background: rgba(253, 253, 252, 0.90);
 
     .fixed-row
       height: var(--navbar-height)
@@ -107,7 +107,6 @@ watch(locale, () => {
       color: var(--primary-deep)
 
     &.has-scrolled
-      background: rgba(253, 253, 252, 0.90);
       // background: var(--secondary)
       border-bottom-color: rgba(0, 0, 0, 0.10);
 
