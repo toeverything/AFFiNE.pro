@@ -136,7 +136,6 @@ $mediaCompactHeader = '(max-width: 1280px)'
   &.has-scroll
     .navbar-fixed
       border-bottom: 0.5px solid rgba(0, 0, 0, 0.10);
-      background: rgba(253, 253, 252, 0.90);
 
   .logo-handler
     width: 32px
@@ -170,6 +169,7 @@ $mediaCompactHeader = '(max-width: 1280px)'
     width: 100%
     left: 0
     top: 0
+    background: rgba(253, 253, 252, 0.90);
     border-bottom: 0.5px solid transparent;
     backdrop-filter: blur(15px);
     transition: background 318ms
