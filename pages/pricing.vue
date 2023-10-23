@@ -23,7 +23,7 @@
             .price-row.flex.items-end.gap-2
               .price-amount $0
               .per-time-tips.headine-6 {{ $t('pricePage.perMonth') }}
-            nuxt-link( :href="PATH.SING_UP" target="_blank" rel="nofollow" )
+            nuxt-link( href="/download" )
               el-button(
                 type="primary"
                 size="action"
@@ -62,7 +62,7 @@
                 .discount-tag.color-emphasis( v-if="isYearly" ) {{ $t('pricePage.yearlyDiscount') }}
 
             .price-row.flex.items-end.gap-2
-              .price-amount $15
+              .price-amount $7.99
               .per-time-tips.headine-6 {{ $t('pricePage.perMonth') }}
             nuxt-link( :href="PATH.PRICING_PRO_EARLY_ACCESS" target="_blank" rel="nofollow" )
               el-button(
