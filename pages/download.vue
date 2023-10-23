@@ -200,7 +200,7 @@ await loadData()
           bottom: 0px
           width: 100%
           height: 2px
-          background-color: white
+          background-color: black
           transition: 318ms
 
         &:hover
@@ -280,7 +280,7 @@ await loadData()
       box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08);
       color: #424149
       cursor: pointer
-      background: $secondary
+      background: white
       font-weight: 500
 
       .text-wrapper
@@ -302,7 +302,7 @@ await loadData()
         mask-composite: exclude
 
       &:not(.is-current):hover
-        background: linear-gradient(180deg, rgba(217, 217, 217, 0.20) 0%, rgba(255, 255, 255, 0.19) 14.06%, rgba(217, 217, 217, 0.10) 100%);
+        background: #fcfcfc
 
       &.is-current
         box-shadow: 0px 2px 10px 0px rgba(30, 150, 235, 0.20);
