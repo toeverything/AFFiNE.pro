@@ -89,10 +89,16 @@ const stories: UserStory[] = [
       padding-left: 12px
       padding-right: 12px
       animation panningLoop 15s linear infinite alternate
+      vertical-align: top;
+      animation-play-state: running
+
+      &:hover
+        animation-play-state: paused
 
     .user-story-card-light
       // flex: 1 0 258px
-      break-inside: avoid-column;
-      transform: translateX(0);
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
       margin-bottom: 16px
 </style>
