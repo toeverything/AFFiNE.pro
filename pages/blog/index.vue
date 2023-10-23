@@ -1,6 +1,6 @@
 <template lang="pug">
 .page.page-blog
-  .blog-container(
+  .limit-container.blog-container(
   )
     .hero-blog(
       v-loading="asyncOptions.isLoading"
@@ -130,10 +130,7 @@ const { arrivedState, x } = useScroll(tagListEl, { behavior: 'smooth' })
 
   .blog-container
     min-height: 50vh
-    padding: fluid-value(24, 60) 16px
-    max-width: (1200px + 32px)
-    width: 100%
-    margin: 0 auto
+    padding-top: fluid-value(24, 60)
 
   .cover-blog-card
     @media $mediaInDesktop
