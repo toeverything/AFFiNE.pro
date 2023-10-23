@@ -182,12 +182,13 @@ useHead({
     padding-bottom: fluid-value(30, 40)
 
   .hero-title
-    padding-bottom: fluid-value(28, 29)
+    padding-bottom: fluid-value(16, 16)
     font-weight: 500
     font-size: fluid-value(32, 48)
     line-height: 119.444%
     letter-spacing: -0.04em
     max-width: fluid-value(450, 561)
+    color: black
 
   .hero-desc
     white-space: pre-line
@@ -195,6 +196,7 @@ useHead({
     line-height: 135%
     max-width: fluid-value(450, 590)
     letter-spacing: -0.02em
+    font-weight: 500
 
   .wip-tips
     margin-top: 24px
@@ -219,11 +221,11 @@ useHead({
 
     &.active-monthly
       .tab-monthly
-        color: black
+        color: #424149
 
     &.active-yearly
       .tab-yearly
-        color: black
+        color: #424149
       .tab-active-bg
         transform: translateX(calc(100% - var(--gap) * 2))
 
