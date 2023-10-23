@@ -26,7 +26,7 @@ defineProps<{
   story: UserStory
 }>()
 
-const el = ref<HTMLDivElement>(null)
+const el = ref<HTMLDivElement>()
 const { elementX, elementY, stop } = useMouseInElement(el, { handleOutside: false })
 const { isMobile } = useDevice()
 
