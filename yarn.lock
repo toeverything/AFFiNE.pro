@@ -1810,6 +1810,11 @@
   resolved "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.191.tgz"
   integrity sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==
 
+"@types/matter-js@^0.19.0":
+  version "0.19.2"
+  resolved "https://registry.yarnpkg.com/@types/matter-js/-/matter-js-0.19.2.tgz#280c55bf749df9d286d7e39841944932d4ffb1ff"
+  integrity sha512-017JF8XkqIsuCpSAQOK94bpcs7Fyqx4YR3j1ZS68w18HLNEnG1KSfdMW098QN8alrbHFJOec8QDbyrsE7tx8ww==
+
 "@types/mdast@^3.0.0":
   version "3.0.10"
   resolved "https://registry.npmjs.org/@types/mdast/-/mdast-3.0.10.tgz"
@@ -6248,6 +6253,11 @@ matchdep@^2.0.0:
     micromatch "^3.0.4"
     resolve "^1.4.0"
     stack-trace "0.0.10"
+
+matter-js@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/matter-js/-/matter-js-0.19.0.tgz#185e518146ae4fa20c33826ebc7e6e42685e3642"
+  integrity sha512-v2huwvQGOHTGOkMqtHd2hercCG3f6QAObTisPPHg8TZqq2lz7eIY/5i/5YUV8Ibf3mEioFEmwibcPUF2/fnKKQ==
 
 mdast-squeeze-paragraphs@^5.0.0:
   version "5.2.1"

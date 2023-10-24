@@ -75,6 +75,7 @@ const timeAgo = useTimeAgo(new Date(props.issue.created_at))
   .item-meta
     font-size: 13px;
     line-height: normal;
+    flex-wrap: no-wrap
 
     .text-part
       text-overflow()

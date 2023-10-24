@@ -4,6 +4,8 @@
 
   overview-trusted-by
 
+  overview-hyperfused-platform
+
   overview-features
 
   overview-build-in-public-light
