@@ -145,7 +145,8 @@ const handleCopyAddressClick = () => {
           padding-top: 3%
           font-weight: bold
           opacity: 0
-          transition: 318ms
+          transition: 218ms
+          transform: translateY(6px)
 
           &:first-child
             padding-right: 1%
@@ -153,6 +154,7 @@ const handleCopyAddressClick = () => {
           &:hover
             @media (min-width: 744px)
               opacity: 1
+              transform: translateY(0)
 
         .type-free
           text-shadow: 1px 2px 6px #47B028
