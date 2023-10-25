@@ -401,6 +401,10 @@ useHead({
 
       @media $mediaInXS
         flex: 0 0 46%
+        max-width: calc(50% - 10px)
+
+        .info-name
+          word-break: break-all
 
   /html.dark &
     --contact-card-bg-color: #1b1b1b
