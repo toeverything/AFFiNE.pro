@@ -25,6 +25,8 @@ import GithubCircle from '~icons/mdi/github-circle'
   line-height: 1
   font-size: 14px
 
+  hover-scale()
+
   &:hover
     background: rgba(0, 0, 0, 0.04)
 
