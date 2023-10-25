@@ -25,7 +25,7 @@ defineProps<{
   color: #fff
   font-weight: 500;
   font-size: fluid-value(16, 24)
-  border-radius: 10px
+  border-radius: 26px
   transition: 368ms
   cursor pointer
   white-space: pre
@@ -47,7 +47,7 @@ defineProps<{
     inset: 0
 
   &:before
-    border-radius: 9px
+    border-radius: 26px
     content: ''
     position absolute
     pointer-events: none
@@ -81,6 +81,8 @@ defineProps<{
       display none
 
   &:not(.is-disabled)
+    hover-scale()
+
     &:hover
       --background-color: #424149
       // box-shadow: 0px 4px 80px #1D62F4, 0px 4px 21px rgba(14, 85, 238, 0.54), 0px 4px 84px rgba(138, 175, 255, 0.3);
