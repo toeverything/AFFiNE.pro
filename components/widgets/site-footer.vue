@@ -77,6 +77,7 @@ const currentYear = new Date().getFullYear()
   --list-item-color: #8E8D91
   position relative
   padding: fluid-value(60, 80) 0 fluid-value(60, 70)
+  background: var(--bg)
 
   @media $mediaInMobile
     padding: 36px 0

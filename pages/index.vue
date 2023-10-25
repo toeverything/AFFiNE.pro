@@ -2,17 +2,20 @@
 .page.page-home.page-overview
   svg-defs
 
-  overview-trusted-by
+  overview-hero-v3
 
-  overview-hyperfused-platform
+  .section-bg-wrapper
+    overview-trusted-by
 
-  overview-features
+    overview-hyperfused-platform
 
-  overview-build-in-public-light
+    overview-features
 
-  overview-user-stories-light
+    overview-build-in-public-light
 
-  overview-slogan-banner
+    overview-user-stories-light
+
+    overview-slogan-banner
 
 </template>
 
@@ -59,6 +62,9 @@ gsap.registerPlugin(ScrollTrigger)
 .page-overview
   color: var(--primary)
   font-size: fluid-value()
+
+  .section-bg-wrapper
+    background: #fdfdfc
 
   @media $mediaInMobile
     padding-top: 10px
