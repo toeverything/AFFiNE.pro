@@ -96,6 +96,7 @@ const handleCopyAddressClick = () => {
       flex: 1
       border-radius: 12px
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15)
+      background: white
 
       .card-desc
         font-size: 20px;

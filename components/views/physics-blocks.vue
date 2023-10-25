@@ -296,6 +296,7 @@ const initialization = (matter: typeof Matter) => {
     currentBodies = refs?.filter((ref) => getComputedStyle(ref).display === 'block').length || 0
 
     // Main loop
+    if (isInited.value) return
     useRafFn(() => {
       boxes.forEach((box) => box?.render())
       Engine.update(engine, 1000 / 60)
@@ -361,7 +362,7 @@ const setupScroll = () => {
 }
 
 const initMatter = () => {
-  if (isInited.value || !matterInstance) return
+  if (!matterInstance) return
   containerRef = el.value
   initialization(matterInstance)
   setupResize()
@@ -375,6 +376,7 @@ const setupScrollTrigger = () => {
       trigger: el.value,
       start: "top center",
       markers: false,
+      once: true,
       toggleActions: "play none none none",
       onEnter: () => {
         initMatter()
@@ -386,8 +388,10 @@ const setupScrollTrigger = () => {
 }
 
 onActivated(async () => {
-  const matter = await import('matter-js')
-  matterInstance = matter
+  if (!matterInstance) {
+    const matter = await import('matter-js')
+    matterInstance = matter
+  }
   setupScrollTrigger()
 })
 </script>

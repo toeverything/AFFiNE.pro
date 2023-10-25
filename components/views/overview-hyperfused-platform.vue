@@ -26,6 +26,10 @@
         .card-desc {{ $t('overviewPage.consolidateWorkflowSayGoodbyeDesc') }}
       .flex.flex-col.side-part.gap-4
         .card.focused-card
+          .stay-focused-flow-placeholder
+          stay-focused-flow
+          .card-mini-title {{ $t('overviewPage.consolidateWorkflowAffine') }}
+          .card-desc {{ $t('overviewPage.consolidateWorkflowAffineDesc') }}
         .card.privacy-card
           .card-cover
           .card-mini-title {{ $t('overviewPage.consolidateWorkflowPrivacy') }}
@@ -89,7 +93,8 @@
       min-width: s('min(500px, 100%)')
 
     .card
-      padding: 24px;
+      padding: fluid-value(16, 24, 390, 744);
+      padding-bottom: fluid-value(20, 24, 390, 744);
       border-radius: 16px;
       background: #FFF;
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15)
@@ -115,6 +120,28 @@
 
     .focused-card
       flex: 1
+      position relative
+      overflow hidden
+      padding-top: 0
+
+      .stay-focused-flow-placeholder
+        height: 210px
+        margin-bottom: 24px
+
+      .stay-focused-flow
+        position absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 210px
+
+      .card-mini-title
+        margin-bottom: 4px
+
+      @media (min-width: 744px)
+        .card-mini-title
+          max-width: 380px
+          margin-bottom: 8px
 
     .say-goodbye-card
       flex: 564
