@@ -48,7 +48,8 @@ const props = defineProps<{
   .info-name
     font-weight: 700
     font-size: 20px
-    line-height: 220.02%
+    line-height: 120.02%
+    padding: 10px 0
     margin-top: 8px
 
   .info-title
