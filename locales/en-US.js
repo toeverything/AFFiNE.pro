@@ -45,7 +45,7 @@ export default {
   overviewPage: {
     heroTitle: 'Write, Draw, and Plan All at Once',
     heroSubtitle: 'Open Source Alternative',
-    heroDesc: 'One hyper-fused platform for wildly creative minds',
+    heroDesc: 'AFFiNE is a workspace with fully merged docs, whiteboards and databases.\nGet more things done, your creativity isn’t monotone ',
     pageMode: 'Page Mode',
     edgelessMode: 'Edgeless Mode',
     buildWith: 'Built with',
