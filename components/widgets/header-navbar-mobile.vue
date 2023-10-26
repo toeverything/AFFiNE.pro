@@ -84,7 +84,7 @@ watch(locale, () => {
     z-index: $zIndexHeader
     backdrop-filter: blur(15px)
     border-bottom: 0.5px solid transparent;
-    background: rgba(253, 253, 252, 0.90);
+    background: rgba(248, 248, 247, 0.90);
 
     .fixed-row
       height: var(--navbar-height)
