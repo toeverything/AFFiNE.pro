@@ -4,8 +4,12 @@
 )
   .limit-container
     .pin-wrapper-placeholder
+    .hero-cover-wrapper
+      video-play-when-visible( src="/overview/hero-cover.mp4" :isActive="true" )
+    .bottom-gap
 
   .pin-wrapper
+    .text-wrapper
     .spline-container( :class="{ 'is-inited': isInited }" )
       canvas( ref="canvasRef" )
 </template>
@@ -87,10 +91,34 @@ onDeactivated(() => {
     opacity: 0
     transition: 118ms linear 1s
 
+    @media (max-width: 1023px)
+      display: none
+
     &.is-inited
       opacity: 1
 
     canvas
       width: 100%
       height: 100%
+
+  .bottom-gap
+    width: 100%
+    height: 88px
+    background: var(--bg)
+
+  .hero-cover-wrapper
+    max-width: 1040px
+    margin: 0 auto
+    overflow: hidden
+    border-radius: 16px
+    background: var(--white-white, #FFF)
+    box-shadow: 1px 18px 39px 0px rgba(0, 0, 0, 0.15), 5px 71px 71px 0px rgba(0, 0, 0, 0.09), 12px 160px 96px 0px rgba(0, 0, 0, 0.05), 20px 284px 114px 0px rgba(0, 0, 0, 0.01), 32px 443px 124px 0px rgba(0, 0, 0, 0.00)
+    position relative
+    z-index: 2
+
+    video
+      display: flex
+      width: 100%
+      aspect-ratio: 721.15/500.8
+
 </style>
