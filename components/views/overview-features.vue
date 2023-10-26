@@ -28,24 +28,24 @@
       .video-part
         .video-card.pin-card
           .video-wrapper( :progress="scrollProgress" )
-            video.video-write( :class="{ 'current': currentSection === 'write' }" :src="writeVideoUrl" loop muted playsinline )
-            video.video-draw( :class="{ 'current': currentSection === 'draw' }" :src="drawVideoUrl" loop muted playsinline )
-            video.video-plan( :class="{ 'current': currentSection === 'plan' }" :src="planVideoUrl" loop muted playsinline )
+            img.video-write( :class="{ 'current': currentSection === 'write' }" :src="writeCoverUrl" )
+            img.video-draw( :class="{ 'current': currentSection === 'draw' }" :src="drawCoverUrl" )
+            img.video-plan( :class="{ 'current': currentSection === 'plan' }" :src="planCoverUrl" )
 
         .video-card.mobile-card
-          video-play-when-visible( :src="writeVideoUrl" :isActive="!needScrollTrigger" )
+          img( :src="writeCoverUrl" )
   .feature-section.feature-draw
     .limit-container.flex
       +drawIntro
       .video-part
         .video-card.mobile-card
-          video-play-when-visible( :src="drawVideoUrl" :isActive="!needScrollTrigger" )
+          img( :src="drawCoverUrl" )
   .feature-section.feature-plan
     .limit-container.flex
       +planIntro
       .video-part
         .video-card.mobile-card
-          video-play-when-visible( :src="drawVideoUrl" :isActive="!needScrollTrigger" )
+          img( :src="drawCoverUrl" )
 </template>
 
 <script setup lang="ts">
@@ -55,10 +55,9 @@ import { gsap } from 'gsap'
 
 const scrollTriggerBreakWidth = 900
 
-const writeVideoUrl = '/overview/feature-videos/write.mp4'
-// @TODO: Replace draw video and plan video
-const drawVideoUrl = '/overview/feature-videos/draw.mp4'
-const planVideoUrl = '/overview/feature-videos/plan.mp4'
+const writeCoverUrl = '/overview/Write.jpg'
+const drawCoverUrl = '/overview/Draw.jpg'
+const planCoverUrl = '/overview/Plan.jpg'
 
 const el = ref()
 const needScrollTrigger = ref(false)
@@ -97,7 +96,7 @@ const setupScrollTrigger = () => {
 }
 
 watch(scrollProgress, (val) => {
-  if (val > 0.8) {
+  if (val > 0.9) {
     currentSection.value = 'plan'
     return
   }
@@ -216,6 +215,11 @@ onMounted(() => {
       overflow: hidden
       aspect-ratio: 720/500
 
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
     .pin-card
       display: block
 
@@ -224,7 +228,8 @@ onMounted(() => {
         width: 100%
         height: 100%
 
-      video
+      video,
+      img
         position absolute
         inset: 0
         opacity: 0
