@@ -64,7 +64,7 @@ gsap.registerPlugin(ScrollTrigger)
   font-size: fluid-value()
 
   .section-bg-wrapper
-    background: #fdfdfc
+    background: var(--bg)
     position relative
     z-index: 2
 

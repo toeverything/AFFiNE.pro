@@ -81,7 +81,7 @@ defineProps<{
       display none
 
   &:not(.is-disabled)
-    hover-scale()
+    active-scale()
 
     &:hover
       --background-color: #424149

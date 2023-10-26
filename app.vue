@@ -35,7 +35,7 @@ useHead({
   color: white
 
 body
-  --bg: #FDFDFC
+  --bg: #F8F8F7
   margin: 0
   font-family: "Inter", "Roboto", "Helvetica", "Arial", sans-serif
   background: var(--bg)

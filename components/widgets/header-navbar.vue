@@ -169,7 +169,7 @@ $mediaCompactHeader = '(max-width: 1280px)'
     width: 100%
     left: 0
     top: 0
-    background: rgba(253, 253, 252, 0.90);
+    background: rgba(248, 248, 247, 0.90);
     border-bottom: 0.5px solid transparent;
     backdrop-filter: blur(15px);
     transition: background 318ms
