@@ -65,6 +65,8 @@ gsap.registerPlugin(ScrollTrigger)
 
   .section-bg-wrapper
     background: #fdfdfc
+    position relative
+    z-index: 2
 
   @media $mediaInMobile
     padding-top: 10px
