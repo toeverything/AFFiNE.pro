@@ -2,19 +2,28 @@
 .stay-focused-flow
   .content-wrapper.flex.justify-center.items-center
     .module-label.module-empty.is-active
-    .module-label.module-moodboard
+    .module-label.module-moodboard(
+      :class="{ 'is-active': currentFlow === 'moodboard' }"
+    )
       nuxt-icon( name="moodboard" )
       | Moodboard
     .module-label.module-wiki.is-muted
       nuxt-icon( name="wiki" )
       | Doc & Wiki
-    .module-label.module-storyboarding
+    .module-label.module-storyboarding(
+      :class="{ 'is-active': currentFlow === 'storyboarding' }"
+    )
       nuxt-icon( name="storyboarding" )
       | Storyboarding
-    .module-label.module-tasks
+
+    .module-label.module-tasks(
+      :class="{ 'is-active': currentFlow === 'tasks' }"
+    )
       nuxt-icon( name="block-5" )
       | Project Tasks
-    .module-label.module-mindmap
+    .module-label.module-mindmap(
+      :class="{ 'is-active': currentFlow === 'mindmap' }"
+    )
       nuxt-icon( name="block-6" )
       | Mind mapping
 
@@ -45,21 +54,56 @@
 <script setup lang="ts">
 import { gsap } from 'gsap'
 
+
+const currentFlowIndex = ref(-1)
+const currentFlow = computed(() => {
+  if (currentFlowIndex.value < 0) {
+    return null
+  }
+
+  return gsap.utils.wrap(moduleFlows, currentFlowIndex.value)
+})
+
 const moduleFlows = [
   'moodboard',
   'storyboarding',
-  'tasks',
   'mindmap',
+  'tasks',
 ]
 
 const setupAnimation = () => {
-  gsap.fromTo('.module-flow path', {'--strokeDashoffset': 2}, {
+  let lastIndex = 0
+  const duration = 1
+  const delay = 0.3
+
+  const timeline = gsap.timeline({
     repeat: -1,
-    '--strokeDashoffset': -1.2,
-    duration: 1,
-    stagger: 1.3,
-    overwrite: true
+    defaults: {
+      duration: 1,
+    }
   })
+
+  moduleFlows
+    .map((name, i) => {
+      timeline
+        .fromTo(`.module-flow.module-${name} path`, {'--strokeDashoffset': 2}, {
+          '--strokeDashoffset': 0,
+          duration: 0.5,
+          overwrite: true,
+          delay: 1,
+          onStart: () => {
+            currentFlowIndex.value = i
+          },
+        })
+        .to(`.module-flow.module-${name} path`, {
+          '--strokeDashoffset': -1.2,
+          duration: 0.5,
+          delay: 0.3,
+          onStart: () => {
+            currentFlowIndex.value = -1
+          },
+        })
+    })
 }
 
 onActivated(() => {
@@ -104,22 +148,18 @@ onActivated(() => {
   .module-label
     position absolute
     display flex
-
     min-width: 100px
     height: 40px
     padding: 6px 16px 6px 10px
     align-items: center
     gap: 4px
     border-radius: 8px
-    border: 1px solid rgba(0, 0, 0, 0.10)
-    background: #FFF
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08)
-
     font-size: 15px
     font-weight: 500
     line-height: normal
     letter-spacing: -0.45px
-    color: #8E8D91
+    transition: 500ms
+    background: #FFF
 
     .nuxt-icon
       font-size: 28px
@@ -149,10 +189,16 @@ onActivated(() => {
       top: 93px
       left: 44.5px
 
+    &,
     &.is-muted
       box-shadow: none
       border: 1px solid var(--black-04, rgba(0, 0, 0, 0.04))
       color: #CCC
+
+    &.is-active
+      border: 1px solid rgba(0, 0, 0, 0.10)
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08)
+      color: #8E8D91
 
   .logo-group
     position: relative
