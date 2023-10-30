@@ -34,8 +34,22 @@
 
     .base-card.user-centric-card
       .row.flex.justify-between
-        .info-text.headline-3 {{ $t('overviewPage.buildInPublicUserCentricDesc') }}
-        .card-cover
+        .flex.flex-col.justify-between
+          .info-text.headline-3 {{ $t('overviewPage.buildInPublicUserCentricDesc') }}
+          nuxt-link(
+            :href="PATH.AFFiNE_COMMUNITY"
+            target="_blank"
+            rel="nofollow"
+          )
+            el-button.action-button(
+              size="large"
+              type="secondary"
+            ) {{ $t('overviewPage.snsTitle') }}
+        vue3-lottie.card-cover(
+          autoPlay
+          loop
+          animationLink="/lottie-files/community.json"
+        )
 </template>
 
 <script setup lang="ts">
@@ -271,21 +285,28 @@ const handleCopyAddressClick = () => {
       line-height: 135%
       letter-spacing: (-0.4/20em)
       max-width: 269px
+      margin-bottom: 26px
 
       @media $mediaInXS
         font-size: 16px;
         max-width: 309px
-        margin-bottom: 26px
+
+    .action-button
+      @media $mediaInXS
+        margin-bottom: 12px
 
     .card-cover
       width: 100%
       max-width: 579px
-      background-size: contain
-      background-repeat: no-repeat
-      background-image: url(/overview/user-centric-cover.svg)
-      aspect-ratio: 579/328
+      aspect-ratio: 500/296
       position relative
       top: -3px
+      margin: 0
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, transparent 100%)
+      filter: drop-shadow(0px -3.366666078567505px 5.386666297912598px rgba(0, 0, 0, 0.03))
+
+      svg
+        transform: scale(1.12) !important
 
       @media (max-width: 800px)
         max-width: 700px

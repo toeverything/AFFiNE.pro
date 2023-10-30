@@ -76,8 +76,11 @@ const setupScrollTrigger = async () => {
 }
 
 onActivated(() => {
+  const config = useRuntimeConfig()
   if (!isMobile) {
-    setupSpline()
+    if (config.public.ENV !== 'development') {
+      setupSpline()
+    }
     setupScrollTrigger()
     isInited.value = true
   }

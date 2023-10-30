@@ -5,15 +5,6 @@
       h2.section-subtitle.section-grad-title
         | {{ $t('overviewPage.userStoriesLightTitle') }}
         span.color-brand AFFiNE
-      nuxt-link(
-        :href="PATH.AFFiNE_COMMUNITY"
-        target="_blank"
-        rel="nofollow"
-      )
-        el-button.action-button(
-          size="large"
-        type="secondary"
-        ) {{ $t('overviewPage.snsTitle') }}
     .stories-list( ref="el" )
       user-story-card-light(
         v-for="story in stories"
@@ -57,10 +48,10 @@ const stories: UserStory[] = [
     line-height: 118.75%
     font-weight: 500
     letter-spacing: (-1.92/48em);
+    margin-bottom: fluid-value(32, 48, 1024)
 
   .action-button
     margin-top: 24px
-    margin-bottom: fluid-value(32, 48, 1024)
 
   .stories-list
     position: relative
