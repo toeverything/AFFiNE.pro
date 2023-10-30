@@ -89,7 +89,7 @@
             .item
               .item-icon
                 nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemMaxFileSize', [500]) }}
+              .item-body {{ $t('pricePage.itemMaxFileSize', [100]) }}
             .item
               .item-icon
                 nuxt-icon( name="Done" filled)
