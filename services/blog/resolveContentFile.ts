@@ -33,7 +33,7 @@ export interface ContentFileMeta {
 export const parseWorkspacePageMeta = async (page: WorkspacePage, reader: ReturnType<typeof getBlocksuiteReader>): ContentFileMeta => {
   const doc = await reader.getDocMarkdown(page.guid)
   try {
-    const fileMetaRaw = grayMatter(doc?.md!)
+    const fileMetaRaw = grayMatter(doc?.md!.trim()!)
     const {
       title,
       author,
