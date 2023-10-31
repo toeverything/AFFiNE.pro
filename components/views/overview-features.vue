@@ -33,7 +33,7 @@
               filled name="draw-ease-mark"
             )
         span and&nbsp;
-        .underline-wrapper.inline
+        .underline-wrapper.inline-flex
           em creativity
           svg-icon-drawing.creativity-mark( :isShow="drawScrollStates.isShowCreativityMark" )
             nuxt-icon(
@@ -425,8 +425,9 @@ onMounted(() => {
 
   .feature-draw
     .feature-title
-      margin-left: 0
-      margin-right: 0
+
+      @media (min-width: 1024px)
+        width: 9em
 
     .underline-wrapper
       position: relative

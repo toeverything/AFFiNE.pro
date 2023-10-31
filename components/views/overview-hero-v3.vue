@@ -123,7 +123,7 @@ onDeactivated(() => {
 
     &,
     &-placeholder
-      height: fluid-value(331, 520, 390, 1024)
+      height: fluid-value(331, 580, 390, 1024)
 
     @media $mediaInXS
       position absolute
@@ -133,7 +133,7 @@ onDeactivated(() => {
     width: 1920px
     height: 1100px
     position absolute
-    top: -250px
+    top: -210px
     left: 50%
     transform: translateX(-47.5%)
     // z-index: 4
@@ -161,7 +161,7 @@ onDeactivated(() => {
 
   .text-wrapper
     padding: 0 32px
-    padding-top: fluid-value(44, 100, 390, 1024)
+    padding-top: fluid-value(44, 130, 390, 1024)
     pointer-events: none
 
     @keyframes animatedIn
