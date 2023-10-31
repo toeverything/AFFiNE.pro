@@ -238,16 +238,20 @@ onDeactivated(() => {
             font-size: (65/90em)
             opacity: 0
             transition: 118ms
+            transform: scale(0.9)
 
           .unchecked-icon
             opacity: 1
+            transform: scale(1)
 
           &.is-checked
             .checked-icon
               opacity: 1
+              transform: scale(1)
 
             .unchecked-icon
               opacity: 0
+              transform: scale(0.95)
 
     .hero-desc
       white-space: pre-line

@@ -19,19 +19,26 @@
   mixin drawIntro
     .intro-part
       .feature-title
-        span( v-html="$t('overviewPage.moduleDrawTitle')" )
-        svg-icon-drawing.draw-mark( :isShow="drawScrollStates.isShowDrawMark" )
-          nuxt-icon(
-            filled name="draw-draw-mark"
-          )
-        svg-icon-drawing.ease-mark( :isShow="drawScrollStates.isShowEaseMark" )
-          nuxt-icon(
-            filled name="draw-ease-mark"
-          )
-        svg-icon-drawing.creativity-mark( :isShow="drawScrollStates.isShowCreativityMark" )
-          nuxt-icon(
-            filled name="draw-creativity-mark"
-          )
+        .underline-wrapper.inline
+          em Draw
+          svg-icon-drawing.draw-mark( :isShow="drawScrollStates.isShowDrawMark" )
+            nuxt-icon(
+              filled name="draw-draw-mark"
+            )
+        span &nbsp;and visualise with&nbsp;
+        .underline-wrapper.inline
+          em ease&nbsp;
+          svg-icon-drawing.ease-mark( :isShow="drawScrollStates.isShowEaseMark" )
+            nuxt-icon(
+              filled name="draw-ease-mark"
+            )
+        span and&nbsp;
+        .underline-wrapper.inline
+          em creativity
+          svg-icon-drawing.creativity-mark( :isShow="drawScrollStates.isShowCreativityMark" )
+            nuxt-icon(
+              filled name="draw-creativity-mark"
+            )
       .feature-desc {{ $t('overviewPage.moduleDrawItemA') }}
       .feature-desc {{ $t('overviewPage.moduleDrawItemB') }}
       .feature-desc {{ $t('overviewPage.moduleDrawItemC') }}
@@ -418,6 +425,10 @@ onMounted(() => {
 
   .feature-draw
     .feature-title
+      margin-left: 0
+      margin-right: 0
+
+    .underline-wrapper
       position: relative
 
   .svg-icon-drawing
@@ -429,13 +440,13 @@ onMounted(() => {
       font-size: 2.32em
 
     &.ease-mark
-      left: 0.78em
-      top: 0.29em
+      left: -0.1em
+      top: -0.25em
       font-size: 2.38em
 
     &.creativity-mark
-      left: 0em
-      top: 0.33em
+      left: -0.02em
+      top: -0.25em
       font-size: (156/36em)
 
   .plan-lottie
