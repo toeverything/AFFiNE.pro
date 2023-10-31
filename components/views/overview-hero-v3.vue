@@ -135,7 +135,7 @@ onDeactivated(() => {
     position absolute
     top: -250px
     left: 50%
-    transform: translateX(-50%)
+    transform: translateX(-47.5%)
     // z-index: 4
     z-index: -1
     pointer-events: none

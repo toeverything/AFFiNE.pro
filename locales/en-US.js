@@ -67,7 +67,7 @@ export default {
     consolidateWorkflowPrivacy: 'Privacy-focused, local-first',
     consolidateWorkflowPrivacyDesc: 'You are in charge of your own data',
     moduleWriteTitle: 'Write',
-    moduleWriteSubtitle: 'Write your way to better productivity',
+    moduleWriteSubtitle: 'your way to better productivity',
     moduleWriteItemA: 'Build up your content like blocks and let your ideas run wild',
     moduleWriteItemB: 'Start with an empty space and show the blocks appearing, stacking up, and forming the building',
     moduleWriteItemC: 'Frame your ideas into slides for an engaging Presentation',

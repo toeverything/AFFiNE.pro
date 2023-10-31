@@ -2,7 +2,15 @@
 .overview-features( ref="el" )
   mixin writeIntro
     .intro-part
-      .feature-label {{ $t('overviewPage.moduleWriteTitle') }}
+      .write-label
+        template(
+          v-for="(char, index) in dynamicStates.titleText"
+        )
+          span.char(
+            v-if="dynamicStates.textTypingIndex >= index"
+            :class="{ 'is-typed': dynamicStates.textTypingIndex >= index, 'is-current': index == dynamicStates.textTypingIndex }"
+          )
+            | {{ char }}
       .feature-title {{ $t('overviewPage.moduleWriteSubtitle') }}
       .feature-desc {{ $t('overviewPage.moduleWriteItemA') }}
       .feature-desc {{ $t('overviewPage.moduleWriteItemB') }}
@@ -59,11 +67,19 @@ const writeCoverUrl = '/overview/Write.jpg'
 const drawCoverUrl = '/overview/Draw.jpg'
 const planCoverUrl = '/overview/Plan.jpg'
 
+const { t } = useI18n()
+
 const el = ref()
 const needScrollTrigger = ref(false)
 const currentSection = ref('write')
 const scrollProgress = ref(0)
 const elIsVisible = useElementVisibility(el)
+
+const dynamicStates = reactive({
+  titleText: t('overviewPage.moduleWriteTitle'),
+  typingIndex: -1,
+  isTyping: false,
+})
 
 useResizeObserver(el, (entries) => {
   const entry = entries[0]
@@ -71,7 +87,33 @@ useResizeObserver(el, (entries) => {
   needScrollTrigger.value = width >= scrollTriggerBreakWidth
 })
 
+const setupWriteScrollTrigger = () => {
+  const drawingTimeline = gsap.timeline({
+    paused: true
+  })
+
+  drawingTimeline
+    .to(dynamicStates, {
+      isTyping: true,
+      textTypingIndex: dynamicStates.titleText.length - 1,
+      ease: `steps(${dynamicStates.titleText.length - 1})`,
+      duration: 2
+    })
+
+  gsap.to(dynamicStates, {
+    scrollTrigger: {
+      trigger: '.feature-section.feature-write',
+      start: '20% center',
+      onEnter: () => {
+        drawingTimeline.play()
+      }
+    }
+  })
+}
+
 const setupScrollTrigger = () => {
+  setupWriteScrollTrigger()
+
   const pinCard = document.querySelector('.video-card.pin-card')
 
   if (!pinCard) return
@@ -141,6 +183,51 @@ onMounted(() => {
   @media $mediaInXS
     padding-left: 12px
     padding-right: 12px
+
+  @keyframes blinking
+    from,
+    49.8%{
+      opacity: 1;
+    }
+    49.9%,
+    99.9% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+
+  cursor()
+    animation: blinking 1s linear infinite
+
+  .write-label
+    font-style: italic;
+    font-weight: 700;
+    font-size: fluid-value(32, 40)
+    line-height: 1
+    color #000
+    margin-left: -0.1em
+
+    .char
+      opacity: 0
+      position relative
+
+      &:last-child
+        margin-right: 0.15em
+
+      &.is-typed
+        opacity: 1
+
+    &:after
+      content: ''
+      display: inline-block
+      background: #1e96eb
+      width: 5px
+      height: 1em
+      border-radius: 4px
+      position: relative
+      top: 0.15em
+      cursor()
 
   .feature-section
     padding-top: fluid-value(30, 100, 560, 1024)
