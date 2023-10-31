@@ -5,11 +5,19 @@
       h2.section-subtitle.section-grad-title
         | {{ $t('overviewPage.userStoriesLightTitle') }}
         span.color-brand AFFiNE
-    .stories-list( ref="el" )
-      user-story-card-light(
-        v-for="story in stories"
-        :story="story"
-      )
+    .marquee-wrapper.flex.flex-nowrap
+      .stories-list( ref="el" )
+        user-story-card-light(
+          v-for="story in stories"
+          :key="story.name"
+          :story="story"
+        )
+      .stories-list.marquee-copy
+        user-story-card-light(
+          v-for="story in stories"
+          :key="story.name"
+          :story="story"
+        )
 </template>
 
 <script setup lang="ts">
@@ -53,6 +61,17 @@ const stories: UserStory[] = [
   .action-button
     margin-top: 24px
 
+  .marquee-wrapper
+    &:hover
+      .stories-list
+        animation-play-state: paused
+
+  .marquee-copy
+    display: none
+
+    @media (max-width: 480px)
+      display: block
+
   .stories-list
     position: relative
     width: 100%
@@ -60,13 +79,11 @@ const stories: UserStory[] = [
     gap: 16px
 
     @keyframes panningLoop
-      0%,
-      5%
+      0%
         transform: translateX(0px)
 
-      95%,
       100%
-        transform: translateX(calc(-100% - 32px + 100vw))
+        transform: translateX(-100%)
 
     @media (max-width: 1024px)
       column-count: 3
@@ -75,16 +92,15 @@ const stories: UserStory[] = [
       column-count: 2
 
     @media (max-width: 480px)
+      flex-shrink: 0
       column-count: 5
       width: 1440px
       padding-left: 12px
       padding-right: 12px
-      animation panningLoop 15s linear infinite alternate
+      animation panningLoop 12s linear infinite
       vertical-align: top;
       animation-play-state: running
-
-      &:hover
-        animation-play-state: paused
+      will-change: transform
 
     .user-story-card-light
       // flex: 1 0 258px
