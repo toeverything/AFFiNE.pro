@@ -18,15 +18,33 @@
 
   mixin drawIntro
     .intro-part
-      .feature-label {{ $t('overviewPage.moduleDrawLabel') }}
-      .feature-title(v-html="$t('overviewPage.moduleDrawTitle')")
+      .feature-title
+        span( v-html="$t('overviewPage.moduleDrawTitle')" )
+        svg-icon-drawing.draw-mark( :isShow="drawScrollStates.isShowDrawMark" )
+          nuxt-icon(
+            filled name="draw-draw-mark"
+          )
+        svg-icon-drawing.ease-mark( :isShow="drawScrollStates.isShowEaseMark" )
+          nuxt-icon(
+            filled name="draw-ease-mark"
+          )
+        svg-icon-drawing.creativity-mark( :isShow="drawScrollStates.isShowCreativityMark" )
+          nuxt-icon(
+            filled name="draw-creativity-mark"
+          )
       .feature-desc {{ $t('overviewPage.moduleDrawItemA') }}
       .feature-desc {{ $t('overviewPage.moduleDrawItemB') }}
       .feature-desc {{ $t('overviewPage.moduleDrawItemC') }}
 
   mixin planIntro
     .intro-part
-      .feature-label {{ $t('overviewPage.modulePlanLabel') }}
+      .feature-label
+        vue3-lottie.plan-lottie(
+          :loop="false"
+          :autoPlay="false"
+          :pauseAnimation="!planScrollStates.isPlayPlanLottie"
+          animationLink="/lottie-files/feature-plan.json"
+        )
       .feature-title {{ $t('overviewPage.modulePlanTitle') }}
       .feature-desc {{ $t('overviewPage.modulePlanItemA') }}
 
@@ -81,11 +99,73 @@ const dynamicStates = reactive({
   isTyping: false,
 })
 
+const drawScrollStates = reactive({
+  isShowDrawMark: false,
+  isShowEaseMark: false,
+  isShowCreativityMark: false,
+})
+
+const planScrollStates = reactive({
+  isPlayPlanLottie: false
+})
+
 useResizeObserver(el, (entries) => {
   const entry = entries[0]
   const width = entry.target.getBoundingClientRect().width
   needScrollTrigger.value = width >= scrollTriggerBreakWidth
 })
+
+const setupPlanScrollTrigger = () => {
+  const timeline = gsap.timeline({
+    paused: true,
+    defaults: {
+      duration: 1
+    }
+  })
+    .to(planScrollStates, {
+      isPlayPlanLottie: true
+    })
+
+  gsap.to(planScrollStates, {
+    scrollTrigger: {
+      trigger: '.feature-section.feature-plan',
+      start: '20% center',
+      onEnter: () => {
+        timeline.play()
+      }
+    }
+  })
+}
+
+const setupDrawScrollTrigger = () => {
+  const drawingTimeline = gsap.timeline({
+    paused: true
+  })
+
+  drawingTimeline
+    .to(drawScrollStates, {
+      isShowDrawMark: true,
+      duration: 1
+    })
+    .to(drawScrollStates, {
+      isShowEaseMark: true,
+      duration: 1
+    })
+    .to(drawScrollStates, {
+      isShowCreativityMark: true,
+      duration: 1
+    })
+
+  gsap.to(drawScrollStates, {
+    scrollTrigger: {
+      trigger: '.feature-section.feature-draw',
+      start: '20% center',
+      onEnter: () => {
+        drawingTimeline.play()
+      }
+    }
+  })
+}
 
 const setupWriteScrollTrigger = () => {
   const drawingTimeline = gsap.timeline({
@@ -112,7 +192,9 @@ const setupWriteScrollTrigger = () => {
 }
 
 const setupScrollTrigger = () => {
+  setupDrawScrollTrigger()
   setupWriteScrollTrigger()
+  setupPlanScrollTrigger()
 
   const pinCard = document.querySelector('.video-card.pin-card')
 
@@ -333,4 +415,34 @@ onMounted(() => {
 
       @media $scrollTriggerMaxWidth
         display: block
+
+  .feature-draw
+    .feature-title
+      position: relative
+
+  .svg-icon-drawing
+    position: absolute
+
+    &.draw-mark
+      left: 0em
+      top: -0.05em
+      font-size: 2.32em
+
+    &.ease-mark
+      left: 0.78em
+      top: 0.29em
+      font-size: 2.38em
+
+    &.creativity-mark
+      left: 0em
+      top: 0.33em
+      font-size: (156/36em)
+
+  .plan-lottie
+    width: 56px
+    margin: 0
+    margin-bottom: -12px
+
+    svg
+      // transform: scale(1.2) !important
 </style>

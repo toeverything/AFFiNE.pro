@@ -73,7 +73,7 @@ export default {
     moduleWriteItemC: 'Frame your ideas into slides for an engaging Presentation',
     moduleWriteDesc: 'Build up your content like blocks and let your ideas run wild\n\nStart with an empty space and show the blocks appearing, stacking up, and forming the building.',
     moduleDrawLabel: 'Draw',
-    moduleDrawTitle: '<em>Draw</em> and visualise with ease and creativity',
+    moduleDrawTitle: '<em>Draw</em> and visualise with <em>ease</em> and <em>creativity</em>',
     moduleDrawDesc: 'Visualise your creativity with others.\n\nNo constraints, limited only by your imagination',
     moduleDrawItemA: 'Visualise your creativity with others',
     moduleDrawItemB: 'Frame your ideas into slides for an engaging Presentation',
