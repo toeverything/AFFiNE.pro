@@ -15,8 +15,9 @@ const el = ref()
 
 const targetIsVisible = useElementVisibility(el)
 
-watch(targetIsVisible, (val) => {
-  if (val && props.isActive) {
+watch([targetIsVisible, () => props.isActive], (val) => {
+  console.log(111, val, props.isActive)
+  if (targetIsVisible.value && props.isActive) {
     el.value.play()
   } else {
     el.value.pause()

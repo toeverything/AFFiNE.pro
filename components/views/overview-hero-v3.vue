@@ -1,11 +1,12 @@
 <template lang="pug">
 .overview-hero-v3(
   ref="el"
+  :style="{ '--scroll-progress': scrollProgress }"
 )
   .limit-container
     .pin-wrapper-placeholder
     .hero-cover-wrapper
-      video-play-when-visible( src="/overview/hero-cover.mp4" :isActive="true" )
+      video-play-when-visible( src="/overview/hero-cover.mp4" :isActive="isPlayVideo" )
     .bottom-gap
 
   .pin-wrapper
@@ -46,6 +47,8 @@ const isInited = ref(false)
 const el = ref()
 const canvasRef = ref()
 const planCheckboxValue = ref(true)
+const isPlayVideo = ref(false)
+const scrollProgress = ref(0)
 
 let app: Application
 let cleanup: () => void
@@ -72,7 +75,20 @@ const setupSpline = async () => {
 }
 
 const setupScrollTrigger = async () => {
-  // @TODO
+  gsap.to(scrollProgress, {
+    ease: 'none',
+    scrollTrigger: {
+      markers: false,
+      scrub: 0.5,
+      trigger: '.overview-hero-v3 .pin-wrapper-placeholder',
+      start: "top top",
+      end: "bottom 20%",
+      onUpdate (self) {
+        isPlayVideo.value = self.progress > 0.5
+      }
+    },
+    value: 1
+  })
 }
 
 onActivated(() => {
@@ -245,6 +261,9 @@ onDeactivated(() => {
     box-shadow: 1px 18px 39px 0px rgba(0, 0, 0, 0.15), 5px 71px 71px 0px rgba(0, 0, 0, 0.09), 12px 160px 96px 0px rgba(0, 0, 0, 0.05), 20px 284px 114px 0px rgba(0, 0, 0, 0.01), 32px 443px 124px 0px rgba(0, 0, 0, 0.00)
     position relative
     z-index: 4
+
+    @media (min-width: 1024px) and (min-height: 800px)
+      transform: scale(calc(1 + 0.1 * var(--scroll-progress)))
 
     video
       display: flex
