@@ -408,7 +408,7 @@ onActivated(async () => {
     position: absolute
 
   .icon-item
-    font-size: 60px
+    font-size: fluid-value(60, 70)
     width: 1em
     user-select: none
     overflow: hidden
