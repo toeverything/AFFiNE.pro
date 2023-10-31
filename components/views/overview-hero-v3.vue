@@ -11,7 +11,7 @@
 
   .pin-wrapper
     .text-wrapper.flex.flex-col.items-center
-      .hero-fused-title
+      .hero-fused-title.animated-in
         .row.first-row.flex.justify-center
           .write-word.flex
             .symbol-cursor
@@ -31,8 +31,8 @@
         .row.second-row.flex.justify-center
           | All at Once
           .color-brand .
-      .hero-desc {{ $t('overviewPage.heroDesc') }}
-      download-entry-button( size="large" )
+      .hero-desc.animated-in.animate-delay-50ms {{ $t('overviewPage.heroDesc') }}
+      download-entry-button.animated-in.animate-delay-100ms( size="large" )
     .spline-container( :class="{ 'is-inited': isInited }" )
       canvas( ref="canvasRef" )
 </template>
@@ -163,6 +163,24 @@ onDeactivated(() => {
     padding: 0 32px
     padding-top: fluid-value(44, 100, 390, 1024)
     pointer-events: none
+
+    @keyframes animatedIn
+      from
+        opacity 0
+        transform: translateY(-50px)
+      to
+        opacity 1
+        transform: translateY(0)
+
+    .animated-in
+      animation animatedIn 800ms both
+      animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+    .animate-delay-50ms
+      animation-delay: 50ms
+
+    .animate-delay-100ms
+      animation-delay: 100ms
 
     > *
       position relative

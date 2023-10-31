@@ -196,7 +196,6 @@
           z-index: 3
           background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
 
-
         .card-wave
           position absolute
           width: 100%
