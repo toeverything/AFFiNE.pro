@@ -406,6 +406,10 @@ onMounted(() => {
     .pin-card
       display: block
 
+      @media (min-width: 1280px)
+        transform: scale(1.1)
+        transform-origin: left center
+
       .video-wrapper
         position relative
         width: 100%
