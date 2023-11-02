@@ -6,7 +6,7 @@
   .limit-container
     .pin-wrapper-placeholder
     .hero-cover-wrapper
-      video-play-when-visible( src="/overview/hero-cover.mp4" :isActive="isPlayVideo" )
+      video-play-when-visible( poster="/overview/hero-cover.png" src="/overview/hero-cover.mp4" :isActive="isPlayVideo" )
     .bottom-gap
 
   .pin-wrapper
