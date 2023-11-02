@@ -21,14 +21,14 @@ nuxt-link.blog-card.flex.flex-col(
     .blog-tag( v-for="tag in meta.tags" ) {{ tag }}
   .blog-title {{ meta.title }}
   .blog-desc {{ meta.description }}
-  .meta-row.flex.items-center.gap-32px.mt-8( v-if="needMeta" )
-    .user-info.flex.items-center.gap-12px( v-if="user?.name" )
+  .meta-row.flex.items-center( v-if="needMeta" )
+    .user-info.flex.items-center.gap-2( v-if="user?.name" )
       .user-avatar(
         v-if="user.avatar"
         :style="{ backgroundImage: `url(${user.avatar})` }"
       )
       .user-name {{ user.name }}
-    .publish-date {{ publishDate }}
+    .publish-date &nbsp;&nbsp;·&nbsp;&nbsp;{{ publishDate }}
 </template>
 
 <script setup lang="ts">
@@ -103,9 +103,13 @@ const publishDate = useDateFormat(new Date(props.meta.updated || Date.now()), 'M
     height: auto !important
 
   .user-name
-    font-weight: 700
+    font-weight: 400
     font-size: 14px
-    line-height: 17px
+    line-height: 20px
+    color: black
+
+  .meta-row
+    margin-top: 16px
 
   .user-avatar
     width: 32px
@@ -115,10 +119,10 @@ const publishDate = useDateFormat(new Date(props.meta.updated || Date.now()), 'M
     border-radius: 50%
 
   .publish-date
-    color: var(--primary-gray)
-    font-weight: 500
-    font-size: 14px
-    line-height: 17px
+    color: #8E8D91
+    font-weight: 400
+    font-size: 13px
+    line-height: 20px
 
   /html.dark &
     --tag-color: #E6E6E6

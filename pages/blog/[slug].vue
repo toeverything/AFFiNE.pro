@@ -143,7 +143,7 @@ const handleReturnClick = () => {
 .page.page-blog-article
   min-height: 10vh
   --tag-color: var(--brand)
-  --tag-bg-color: #F9F9F9
+  --tag-bg-color: #fff
 
   .jumbotron-container
     width: 100%

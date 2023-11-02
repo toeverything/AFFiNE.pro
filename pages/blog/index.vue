@@ -7,6 +7,7 @@
     )
       blog-card.cover-blog-card(
         v-if="blogHero"
+        needMeta
         :meta="blogHero"
       )
 
@@ -34,13 +35,13 @@
       )
         nuxt-link.tag(
           :to="`/blog`"
-          :class="{ 'text-brand-grad': !route.query.tag }"
+          :class="{ 'active': !route.query.tag }"
         ) {{ $t('all') }}
 
         nuxt-link.tag(
           v-for="[tag] in blogTags"
           :key="tag"
-          :class="{ 'text-brand-grad': tag === route.query.tag }"
+          :class="{ 'active': tag === route.query.tag }"
           :to="`/blog?tag=${tag}`"
         ) {{ tag }}
 
@@ -52,6 +53,9 @@
         lazy
         needMeta
       )
+
+    overview-slogan-banner
+
 </template>
 
 <script lang="ts" setup>
@@ -102,7 +106,7 @@ const handleTagClick = (tag: string) => {
 
 watch(() => route.query.tag, async () => {
   await nextTick()
-  const $currentTag = document.querySelector('.tag.text-brand-grad')
+  const $currentTag = document.querySelector('.tag.active')
   if ($currentTag) {
     $currentTag.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
   }
@@ -132,15 +136,55 @@ const { arrivedState, x } = useScroll(tagListEl, { behavior: 'smooth' })
     min-height: 50vh
     padding-top: fluid-value(24, 60)
 
+  .blog-card
+    padding: 16px 16px 24px 16px
+    border-radius: 16px
+    border: 1px solid rgba(0, 0, 0, 0.10)
+    background: #FFF
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08)
+
+    .blog-tag
+      border-radius: 43px
+      background: #000
+      color: white
+      letter-spacing: 1.3px
+      padding: 2px 12px
+      font-size: 13px
+      line-height: 20px
+      font-weight: 600
+      height: 24px
+      margin-bottom: 16px
+
+    .card-cover
+      margin-bottom: 16px
+
+    .blog-title
+      font-size: 18px;
+      font-weight: 500
+      line-height: 133.333%
+      letter-spacing: -0.36px
+      color: black
+      margin-bottom: 4px
+
+    .blog-desc
+      color: #424149
+      font-size: 16px
+      font-weight: 400
+      line-height: 150%
+
+  .hero-blog
+    padding: fluid-value(0, 30) 0
+
   .cover-blog-card
     @media $mediaInDesktop
       .blog-title
-        font-size: 32px
-        line-height: 39px
+        font-size: 24px
+        line-height: 32px
+        letter-spacing: -0.48px
 
     .blog-tag-row
-      order: 1
-      margin-top: 40px
+      // order: 1
+      // margin-top: 40px
 
   .tags-list-wrapper
     position relative
@@ -150,15 +194,27 @@ const { arrivedState, x } = useScroll(tagListEl, { behavior: 'smooth' })
       justify-content: center
       align-items: center
       position absolute
-      top: -10px
-      width: 53px
-      height: 53px
+      z-index 3
+      top: 2px
+      cursor pointer
+      width: 24px
+      height: 24px
       border-radius: 50%
-      background: var(--secondary)
-      border: 2px solid var(--scroll-indicator-border-color)
+      // background: var(--secondary)
       opacity: 0
       visibility hidden
       transition: 318ms
+
+      &:before
+        content: ''
+        width: 44px
+        height: 20px
+        position absolute
+        left: 0
+        background: linear-gradient(90deg, #f8f8f7 60.38%, rgba(248, 248, 247, 0.00) 100%);
+
+      &:hover
+        // background: #fff
 
       @media $mediaInXS
         display: none
@@ -168,30 +224,73 @@ const { arrivedState, x } = useScroll(tagListEl, { behavior: 'smooth' })
         visibility inherit
 
       .nuxt-icon
-        font-size: 33px
+        font-size: 24px
+        position relative
+        z-index 2
+
+      &.dir-left
+        left: 0
 
       &.dir-right
         right: 0
+
+        &:before
+          background: linear-gradient(270deg, #f8f8f7 60.38%, rgba(248, 248, 247, 0.00) 100%);
+          transform: translateX(-20px)
+
         .nuxt-icon
           transform: rotate(180deg)
 
   .tags-list
-    padding-bottom: 24px
-    border-bottom: 1px solid var(--divider-color)
+    height: 46px
     margin-top: 58px
-    margin-bottom: 43px
+    margin-bottom: 32px
     overflow-x: auto
     padding-right: 40px
+    scrollbar-width: none
+
+    &:after
+      content: ''
+      position absolute
+      bottom: 0px
+      height: 1px
+      background: #F4F4F5
+      width: 100%
 
     .tag
-      padding: 10px
+      --x-padding: 12px
+      --y-margin: 16px
+      padding: 4px var(--x-padding)
+      margin-bottom: var(--y-margin)
       flex-shrink: 0
-      color: var(--primary-gray)
-      font-size: 20px;
-      line-height: 24px;
+      color: #8E8D91
+      font-size: 14px;
+      line-height: 20px;
+      border-radius: 4px
+      position relative
+      transition: 218ms
 
-      &.text-brand-grad
-        font-weight: 800;
+      &:after
+        content: ''
+        position absolute
+        transition: 218ms
+        z-index 2
+        bottom: s('calc(-1 * var(--y-margin))')
+        left: var(--x-padding)
+        opacity : 0
+        height: 1px
+        background: black
+        width: s('calc(100% - var(--x-padding) * 2)')
+
+      &:hover
+        background: #f2f2f2
+
+      &.active
+        font-weight: 400;
+        color: black !important
+
+        &:after
+          opacity: 1
 
     @media $mediaInMobile
       margin-top: 30px
@@ -199,21 +298,15 @@ const { arrivedState, x } = useScroll(tagListEl, { behavior: 'smooth' })
 
     @media $mediaInXS
       padding-bottom: 0px
-      border-bottom: 0
-
-      .tag
-        font-size: 11.7167px;
-        line-height: 14px;
 
   .blog-list
     display: grid
-    column-gap: fluid-value(16, 102, 768)
-    row-gap: fluid-value(34, 68, 768)
+    column-gap: 24px
+    row-gap: 24px
     grid-template-columns: 1fr 1fr
 
     @media $mediaInXS
       grid-template-columns: 1fr
-      row-gap: 80px
 
   /html.dark &
     --scroll-indicator-border-color: #424242
