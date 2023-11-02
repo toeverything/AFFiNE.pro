@@ -1,12 +1,13 @@
 <template lang="pug">
 .page.page-about-us
 
-  .section.section-hero
-    .md-container.flex.flex-col.items-center
-      .hero-title(
-        v-html="$t('aboutUsPage.slogan')"
-      )
+  .section.section-hero.flex.items-center
+    .limit-container.flex.items-end.justify-between
+      about-title.flex-shrink-0
       .hero-desc {{ $t('aboutUsPage.desc')  }}
+
+  .section.section-intro
+    .limit-container.flex.flex-col.items-center
       .flex.cards-row
         .contact-card
           .card-header.flex.items-center.gap-28px
@@ -57,6 +58,8 @@
           v-for="member in productMembers"
           :member="member"
         )
+
+  overview-slogan-banner
 </template>
 
 <script lang="ts" setup>
@@ -211,6 +214,51 @@ useHead({
   padding-bottom: fluid-value(40, 100)
 
   .section-hero
+    position relative
+    background-image: url(@/assets/about/hero-bg.png)
+    background-repeat: no-repeat
+    height: 580px
+    background-size: 846px 846px
+    background-position: center 70px
+
+    .limit-container
+      column-gap: 80px
+      row-gap: 16px
+
+    @media $mediaInMobile
+      height: 350px
+      background-size: 496px 496px
+      background-position: center 40px
+
+    @media (max-width: 700px)
+      height: 300px
+
+      .limit-container
+        align-items: flex-start
+        flex-direction: column
+
+    @media $mediaInXS
+      height: 300px
+      background-size: 345px 345px
+
+    &:before
+      content: ''
+      position absolute
+      bottom: 0
+      width: 100%
+      height: (140/580 * 100%)
+      background: linear-gradient(180deg, rgba(250, 250, 250, 0.00) 0%, var(--bg) 100%)
+
+    .hero-desc
+      font-size: fluid-value(20, 32, 744)
+      font-weight: 500
+      line-height: 125%
+      letter-spacing: (-1.28/32em)
+      color: black
+      max-width: 400px
+      white-space: pre
+
+  .section-intro
     .divider
       padding-bottom: fluid-value(50, 100)
       margin-bottom: fluid-value(16, 34)
@@ -225,18 +273,7 @@ useHead({
       margin-bottom: 50px
       text-align: center
 
-    .hero-desc
-      font-weight: 800;
-      font-size: fluid-value(24, 36, 744);
-      line-height: (44/36);
-      color: var(--primary-gray)
-      margin-bottom: 100px
-      text-align: center
-
-      @media $mediaInXS
-        margin-bottom: 50px
-
-  .section-title
+  .section-members .section-title
     font-weight: 800;
     font-size: 36px;
     line-height: 220.02%;

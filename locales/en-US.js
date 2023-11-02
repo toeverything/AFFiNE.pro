@@ -119,7 +119,7 @@ export default {
 
   aboutUsPage: {
     slogan: 'To Shape, <br class="show-in-xs" />not to adapt',
-    desc: 'Deliver Building Blocks for Future SaaS Applications.',
+    desc: 'Deliver Building Blocks for\nFuture SaaS Applications',
     contactTitle: 'Do Contact Us if you',
     contactItemA: 'Want to know more about AFFiNE as a collaborative knowledge base;',
     contactItemB: 'Want to join us;',

@@ -188,6 +188,7 @@ $mediaCompactHeader = '(max-width: 1280px)'
       transition: 318ms
       letter-spacing: -0.28px
 
+      &.is-active,
       &:hover
         color: black
         background: rgba(0, 0, 0, 0.04)
