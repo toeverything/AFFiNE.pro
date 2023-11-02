@@ -47,9 +47,9 @@
     .intro-part
       .feature-label
         vue3-lottie.plan-lottie(
+          ref="planLottie"
           :loop="false"
-          :autoPlay="false"
-          :pauseAnimation="!planScrollStates.isPlayPlanLottie"
+          :autoPlay="planScrollStates.isPlayPlanLottie"
           animationLink="/lottie-files/feature-plan.json"
         )
       .feature-title {{ $t('overviewPage.modulePlanTitle') }}
@@ -98,6 +98,7 @@ const el = ref()
 const needScrollTrigger = ref(false)
 const currentSection = ref('write')
 const scrollProgress = ref(0)
+const planLottie = ref()
 const elIsVisible = useElementVisibility(el)
 
 const dynamicStates = reactive({
@@ -225,6 +226,12 @@ const setupScrollTrigger = () => {
     }
   })
 }
+
+watch(() => planScrollStates.isPlayPlanLottie, (val) => {
+  if (val) {
+    planLottie.value.play()
+  }
+})
 
 watch(scrollProgress, (val) => {
   if (val > 0.9) {
@@ -451,9 +458,10 @@ onMounted(() => {
       font-size: (156/36em)
 
   .plan-lottie
-    width: 56px
+    width: 70px
     margin: 0
-    margin-bottom: -12px
+    margin-bottom: -11px
+    margin-left: 1px
 
     svg
       // transform: scale(1.2) !important
