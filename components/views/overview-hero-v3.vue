@@ -123,7 +123,7 @@ onDeactivated(() => {
 
     &,
     &-placeholder
-      height: fluid-value(331, 580, 390, 1024)
+      height: fluid-value(331, 640, 390, 1024)
 
     @media $mediaInXS
       position absolute
