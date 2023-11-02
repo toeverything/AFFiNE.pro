@@ -188,7 +188,8 @@
         z-index: 2
         width: 100%
         height: 100%
-        background-image: url(/overview/privacy-card-cover.svg)
+        background-size: 680px 124px
+        background-image: url(/overview/privacy-card-cover.png)
         background-repeat: no-repeat
         background-position: center top
 
