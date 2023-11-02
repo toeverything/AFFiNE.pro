@@ -100,6 +100,7 @@ const currentSection = ref('write')
 const scrollProgress = ref(0)
 const planLottie = ref()
 const elIsVisible = useElementVisibility(el)
+const pinCardScale = 1.1
 
 const dynamicStates = reactive({
   titleText: t('overviewPage.moduleWriteTitle'),
@@ -219,7 +220,7 @@ const setupScrollTrigger = () => {
       markers: false,
       start: '-76px top',
       end: () => {
-        const pinHeight = pinCard.getBoundingClientRect().height
+        const pinHeight = pinCard.getBoundingClientRect().height / pinCardScale
         const height = el.value?.getBoundingClientRect().height - pinHeight / 2
         return `${height}px ${pinHeight}px`
       },

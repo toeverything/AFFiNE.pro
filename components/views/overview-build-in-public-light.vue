@@ -69,6 +69,9 @@ const handleCopyAddressClick = () => {
   padding-top fluid-value(30, 120, 744)
   padding-bottom fluid-value(30, 120, 744)
 
+  @media (min-width: 1440px)
+    padding-top: 240px
+
   .base-card
     border-radius: 16px
     background: #FFF

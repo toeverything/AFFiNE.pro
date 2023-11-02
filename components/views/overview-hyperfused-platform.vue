@@ -27,17 +27,24 @@
       .flex.flex-col.side-part.gap-4
         .card.focused-card
           .stay-focused-flow-placeholder
-          stay-focused-flow
+          //- stay-focused-flow
+          client-only
+            vue3-lottie.stay-focused-flow-lottie(
+              autoPlay
+              loop
+              animationLink="/lottie-files/stay-focused-flow.json"
+            )
           .card-mini-title {{ $t('overviewPage.consolidateWorkflowAffine') }}
           .card-desc {{ $t('overviewPage.consolidateWorkflowAffineDesc') }}
         .card.privacy-card
           .card-wave-wrapper
             .card-bg
-            vue3-lottie.card-wave(
-              autoPlay
-              loop
-              animationLink="/lottie-files/privacy-wave.json"
-            )
+            client-only
+              vue3-lottie.card-wave(
+                autoPlay
+                loop
+                animationLink="/lottie-files/privacy-wave.json"
+              )
           .card-cover
           .card-mini-title {{ $t('overviewPage.consolidateWorkflowPrivacy') }}
           .card-desc {{ $t('overviewPage.consolidateWorkflowPrivacyDesc') }}
@@ -135,12 +142,18 @@
         height: 210px
         margin-bottom: 24px
 
-      .stay-focused-flow
+      .stay-focused-flow,
+      .stay-focused-flow-lottie
         position absolute
         top: 0
         left: 0
         width: 100%
         height: 210px
+
+      .stay-focused-flow-lottie
+        min-width: 500px
+        transform: translateX(-50%)
+        left: 50%
 
       .card-mini-title
         margin-bottom: 4px

@@ -127,6 +127,7 @@ onActivated(() => {
     position absolute
 
     path
+      // stroke-width: 2px
       stroke-dasharray: 2
       stroke-dashoffset: var(--strokeDashoffset, 2)
 
