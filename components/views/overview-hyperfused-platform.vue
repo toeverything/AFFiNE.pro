@@ -38,12 +38,12 @@
           .card-desc {{ $t('overviewPage.consolidateWorkflowAffineDesc') }}
         .card.privacy-card
           .card-wave-wrapper
-            .card-bg
+            //- .card-bg
             client-only
               vue3-lottie.card-wave(
                 autoPlay
                 loop
-                animationLink="/lottie-files/privacy-wave.json"
+                animationLink="/lottie-files/local-first.json"
               )
           .card-cover
           .card-mini-title {{ $t('overviewPage.consolidateWorkflowPrivacy') }}
@@ -203,6 +203,7 @@
 
         &:before
           content: ''
+          display: none
           position absolute
           bottom: 0
           height: 31px
@@ -214,13 +215,16 @@
           position absolute
           width: 100%
           aspect-ratio: 1/1
-          min-width: 675px
+          min-width: 690px
           height: auto
           left: 50%
           top: 50%
           transform: translate3d(-50%, -50%, 0)
 
       @media (max-width: 560px)
+        .card-wave
+          margin-left: 80px
+
         .card-bg
           background-position-x: -80px
 
