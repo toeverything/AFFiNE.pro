@@ -11,7 +11,7 @@
 
   .pin-wrapper
     .text-wrapper.flex.flex-col.items-center
-      .hero-fused-title.animated-in
+      h1.hero-fused-title.animated-in
         .row.first-row.flex.justify-center
           .write-word.flex
             .symbol-cursor
@@ -31,7 +31,7 @@
         .row.second-row.flex.justify-center
           | All at Once
           .color-brand .
-      .hero-desc.animated-in.animate-delay-50ms {{ $t('overviewPage.heroDesc') }}
+      p.hero-desc.mb-0.animated-in.animate-delay-50ms {{ $t('overviewPage.heroDesc') }}
       download-entry-button.animated-in.animate-delay-100ms( size="large" )
     .spline-container( :class="{ 'is-inited': isInited }" )
       canvas( ref="canvasRef" )
@@ -193,6 +193,7 @@ onDeactivated(() => {
       font-weight: 500
       line-height: 1
       letter-spacing: (-6.3/90em)
+      margin: 0
 
       .symbol-cursor
         position relative

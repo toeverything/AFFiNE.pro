@@ -17,7 +17,7 @@
       .icon-wrapper
         nuxt-icon( name="block-7" )
 
-    .section-title.section-grad-title {{ $t('overviewPage.consolidateWorkflowTitle') }}
+    h2.section-title.section-grad-title {{ $t('overviewPage.consolidateWorkflowTitle') }}
 
     .cards-row.flex.gap-4
       .card.say-goodbye-card

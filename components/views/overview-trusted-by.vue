@@ -1,7 +1,7 @@
 <template lang="pug">
 .overview-trusted-by
   .limit-container.flex.flex-col.items-center
-    .section-grad-title.headine-2 {{ $t('overviewPage.trustedByTitle') }}
+    h3.ma-0.section-grad-title.headline-2 {{ $t('overviewPage.trustedByTitle') }}
     .logo-wall-wrapper
       .desktop-wall
         .wall-item(

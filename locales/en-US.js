@@ -81,7 +81,7 @@ export default {
     modulePlanLabel: 'Plan',
     modulePlanTitle: 'Plan, Track, and Collaborate Efficiently',
     modulePlanDesc: 'Stay on top of your workload and achieve more in less time.',
-    modulePlanItemA: 'Stay on top of your workload and achieve more in less time (save time)',
+    modulePlanItemA: 'Stay on top of your workload and achieve more in less time',
     privacyFirstTitle: 'Privacy Focused & Local-first',
     privacyFirstItemA: 'Privacy-first, and collaborative. No compromises whatsoever.',
     privacyFirstItemB: 'Keep your data in your hand. Moreover, shape your tool in your favour.',

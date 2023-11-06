@@ -11,14 +11,15 @@
             :class="{ 'is-typed': dynamicStates.textTypingIndex >= index, 'is-current': index == dynamicStates.textTypingIndex }"
           )
             | {{ char }}
-      .feature-title {{ $t('overviewPage.moduleWriteSubtitle') }}
-      .feature-desc {{ $t('overviewPage.moduleWriteItemA') }}
-      .feature-desc {{ $t('overviewPage.moduleWriteItemB') }}
-      .feature-desc {{ $t('overviewPage.moduleWriteItemC') }}
+      h3.feature-title
+        span.hidden write&nbsp;
+        | {{ $t('overviewPage.moduleWriteSubtitle') }}
+      p.feature-desc {{ $t('overviewPage.moduleWriteItemA') }}
+      p.feature-desc {{ $t('overviewPage.moduleWriteItemB') }}
 
   mixin drawIntro
     .intro-part
-      .feature-title
+      h3.feature-title
         .underline-wrapper.inline
           em Draw
           svg-icon-drawing.draw-mark( :isShow="drawScrollStates.isShowDrawMark" )
@@ -39,9 +40,9 @@
             nuxt-icon(
               filled name="draw-creativity-mark"
             )
-      .feature-desc {{ $t('overviewPage.moduleDrawItemA') }}
-      .feature-desc {{ $t('overviewPage.moduleDrawItemB') }}
-      .feature-desc {{ $t('overviewPage.moduleDrawItemC') }}
+      p.feature-desc {{ $t('overviewPage.moduleDrawItemA') }}
+      p.feature-desc {{ $t('overviewPage.moduleDrawItemB') }}
+      p.feature-desc {{ $t('overviewPage.moduleDrawItemC') }}
 
   mixin planIntro
     .intro-part
@@ -52,8 +53,8 @@
           :autoPlay="planScrollStates.isPlayPlanLottie"
           animationLink="/lottie-files/feature-plan.json"
         )
-      .feature-title {{ $t('overviewPage.modulePlanTitle') }}
-      .feature-desc {{ $t('overviewPage.modulePlanItemA') }}
+      h3.feature-title {{ $t('overviewPage.modulePlanTitle') }}
+      p.feature-desc {{ $t('overviewPage.modulePlanItemA') }}
 
   .feature-section.feature-write
     .limit-container.flex
@@ -61,24 +62,24 @@
       .video-part
         .video-card.pin-card
           .video-wrapper( :progress="scrollProgress" )
-            img.video-write( :class="{ 'current': currentSection === 'write' }" :src="writeCoverUrl" )
-            img.video-draw( :class="{ 'current': currentSection === 'draw' }" :src="drawCoverUrl" )
-            img.video-plan( :class="{ 'current': currentSection === 'plan' }" :src="planCoverUrl" )
+            img.video-write( alt="write cover" :class="{ 'current': currentSection === 'write' }" :src="writeCoverUrl" )
+            img.video-draw( alt="draw cover" :class="{ 'current': currentSection === 'draw' }" :src="drawCoverUrl" )
+            img.video-plan( alt="plan cover" :class="{ 'current': currentSection === 'plan' }" :src="planCoverUrl" )
 
         .video-card.mobile-card
-          img( :src="writeCoverUrl" )
+          img( alt="write cover" :src="writeCoverUrl" )
   .feature-section.feature-draw
     .limit-container.flex
       +drawIntro
       .video-part
         .video-card.mobile-card
-          img( :src="drawCoverUrl" )
+          img( alt="draw cover" :src="drawCoverUrl" )
   .feature-section.feature-plan
     .limit-container.flex
       +planIntro
       .video-part
         .video-card.mobile-card
-          img( :src="drawCoverUrl" )
+          img( alt="plan cover" :src="drawCoverUrl" )
 </template>
 
 <script setup lang="ts">
@@ -370,6 +371,7 @@ onMounted(() => {
       font-weight: 500
       line-height: 119.444%
       letter-spacing: -(1.44/36em)
+      margin: 0
 
       em
         font-size: 1.11em
@@ -381,6 +383,7 @@ onMounted(() => {
     .feature-desc
       font-size: 16px
       line-height: 150%
+      margin: 0
 
       @media $mediaInXS
         font-size: 14px

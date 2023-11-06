@@ -28,11 +28,11 @@ export default defineNuxtConfig({
       titleTemplate: '%s | AFFiNE - All In One KnowledgeOS',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' },
-        { name: 'description', content: 'AFFiNE is the next-gen knowledge base for professionals that brings planning, sorting and creating all together.' },
+        { name: 'description', content: 'The universal editor that lets you work, play, present or create just about anything.' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:url', content: 'https://affine.pro' },
         { name: 'twitter:title', content: 'AFFiNE - All In One KnowledgeOS' },
-        { name: 'twitter:description', content: 'AFFiNE is the next-gen knowledge base for professionals that brings planning, sorting and creating all together.' },
+        { name: 'twitter:description', content: 'The universal editor that lets you work, play, present or create just about anything.' },
         { name: 'twitter:site', content: '@AffineOfficial' },
         { name: 'twitter:image', content: 'https://affine.pro/og.png' },
         { name: 'og:type', content: 'website' },
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
         { name: 'og:title', content: 'AFFiNE - All In One KnowledgeOS' },
         { name: 'og:url', content: 'https://affine.pro' },
         { name: 'og:image', content: 'https://affine.pro/og.png' },
-        { name: 'og:description', content: 'AFFiNE is the next-gen knowledge base for professionals that brings planning, sorting and creating all together.' },
+        { name: 'og:description', content: 'The universal editor that lets you work, play, present or create just about anything.' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon-96.png' }

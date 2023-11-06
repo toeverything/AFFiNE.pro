@@ -2,7 +2,7 @@
 .page.page-price
   .section.section-hero
     .limit-container.flex.flex-col
-      .hero-title {{ $t('pricePage.title') }}
+      h1.ma-0.hero-title {{ $t('pricePage.title') }}
       .hero-desc {{ $t('pricePage.desc') }}
   .section.section-prices
     .limit-container.flex.flex-col.items-center
@@ -22,7 +22,7 @@
             .planning-name {{ $t('pricePage.free') }}
             .price-row.flex.items-end.gap-2
               .price-amount $0
-              .per-time-tips.headine-6 {{ $t('pricePage.perMonth') }}
+              .per-time-tips.headline-6 {{ $t('pricePage.perMonth') }}
             nuxt-link( href="/download" )
               el-button(
                 type="primary"
@@ -62,8 +62,8 @@
                 .discount-tag.color-emphasis( v-if="isYearly" ) {{ $t('pricePage.yearlyDiscount') }}
 
             .price-row.flex.items-end.gap-2
-              .price-amount $7.99
-              .per-time-tips.headine-6 {{ $t('pricePage.perMonth') }}
+              .price-amount {{ currentTab === 'yearly' ? '$6.75' : '$7.99' }}
+              .per-time-tips.headline-6 {{ $t('pricePage.perMonth') }}
             nuxt-link( :href="PATH.PRICING_PRO_EARLY_ACCESS" target="_blank" rel="nofollow" )
               el-button(
                 type="primary"
