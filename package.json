@@ -37,7 +37,7 @@
     "@nuxt/content": "^2.7.0",
     "@nuxt/image-edge": "^1.0.0-27968280.9739e4d",
     "@nuxtjs/device": "^3.1.0",
-    "@nuxtjs/i18n": "^8.0.0-beta.10",
+    "@nuxtjs/i18n": "^8.0.0-rc.5",
     "@pinia/nuxt": "^0.4.6",
     "@tweakpane/core": "^1.1.6",
     "@types/gulp": "^4.0.13",

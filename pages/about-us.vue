@@ -97,15 +97,16 @@ const coreMembers: Member[] = [
     avatar: "https://unavatar.io/github/doodlewind",
     link: "https://github.com/doodlewind",
   },
-];
-
-const engineeringMembers: Member[] = [
   {
     name: "Huaqiao Li",
     title: "Architecture Engineer",
+    desc: "Leader of AFFiNE engineering.",
     avatar: "https://unavatar.io/github/joooye34",
     link: "https://github.com/joooye34",
   },
+];
+
+const engineeringMembers: Member[] = [
   {
     name: "Darksky Tan",
     title: "Architecture Engineer",
