@@ -4,9 +4,9 @@ on:
   # allows to manually run the job at any time
   workflow_dispatch:
 
-  # run on every push on the release branch
-  push:
-    branches: [production, staging, master, refactor/**]
+  # # run on every push on the release branch
+  # push:
+  #   branches: [production, staging, master, refactor/**]
 
 jobs:
   sync-blog:
