@@ -131,32 +131,43 @@ const engineeringMembers: Member[] = [
     link: "https://github.com/forehalo",
   },
 
-
-  {
-    name: "Regis Chen",
-    title: "Full-stack Engineer",
-    avatar: "/RegisChen.jpeg",
-    link: "https://github.com/regischen",
-  },
-
   {
     name: "Zijian Zuo",
-    title: "Full-stack Engineer",
+    title: "Architecture Engineer",
     avatar: "/Zijian.jpeg",
     link: "https://github.com/zzj3720",
   },
 
   {
+    name: "Regis Chen",
+    title: "R&D Engineer",
+    avatar: "/RegisChen.jpeg",
+    link: "https://github.com/regischen",
+  },
+
+  {
     name: "Hongtao lye",
-    title: "Full-stack Engineer",
+    title: "R&D Engineer",
     avatar: "/Hongtao.jpeg",
     link: "https://github.com/doouding",
   },
   {
     name: "Xiang Gao",
-    title: "Full-stack Engineer",
+    title: "R&D Engineer",
     avatar: "https://unavatar.io/github/Flrande",
     link: "https://github.com/Flrande",
+  },
+  {
+    name: "EYHN",
+    title: "R&D Engineer",
+    avatar: "https://unavatar.io/github/EYHN",
+    link: "https://github.com/EYHN",
+  },
+  {
+    name: "Cats Juice",
+    title: "R&D Engineer",
+    avatar: "https://unavatar.io/github/CatsJuice",
+    link: "https://github.com/CatsJuice",
   },
 ];
 

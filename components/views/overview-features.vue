@@ -12,7 +12,7 @@
           )
             | {{ char }}
       h3.feature-title
-        span.hidden write&nbsp;
+        span.hidden Write&nbsp;
         | {{ $t('overviewPage.moduleWriteSubtitle') }}
       p.feature-desc {{ $t('overviewPage.moduleWriteItemA') }}
       p.feature-desc {{ $t('overviewPage.moduleWriteItemB') }}

@@ -1,12 +1,13 @@
 <template lang="pug">
 nuxt-link(
-  to="/download"
+  :to="PATH.AFFINE_DOWNHILLS"
+  target="_blank"
 )
-  el-button.download-entry-button(
+  el-button.app-entry-button(
     :size="size"
     type="default"
   )
-    | Download
+    | {{ $t('getStarted') }}
 </template>
 
 <script setup lang="ts">
@@ -18,6 +19,6 @@ defineProps<{
 </script>
 
 <style lang="stylus">
-.download-entry-button
+.app-entry-button
   null
 </style>

@@ -32,7 +32,7 @@
           | All at Once
           .color-brand .
       p.hero-desc.mb-0.animated-in.animate-delay-50ms {{ $t('overviewPage.heroDesc') }}
-      download-entry-button.animated-in.animate-delay-100ms( size="large" )
+      app-entry-button.animated-in.animate-delay-100ms( size="large" )
     .spline-container( :class="{ 'is-inited': isInited }" )
       canvas( ref="canvasRef" )
 </template>
@@ -97,9 +97,9 @@ onActivated(() => {
     if (config.public.ENV !== 'development') {
       setupSpline()
     }
-    setupScrollTrigger()
     isInited.value = true
   }
+  setupScrollTrigger()
 })
 
 onDeactivated(() => {
@@ -268,7 +268,7 @@ onDeactivated(() => {
       @media $mediaInXS
         font-size: 16px
 
-    .download-entry-button
+    .app-entry-button
       width: 179px
       margin-top: 36px
 

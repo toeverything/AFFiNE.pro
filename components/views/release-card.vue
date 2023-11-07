@@ -2,38 +2,30 @@
 .release-card.inline-flex.flex-col(
   ref="el"
 )
-  hover-spotlight-card.card-wrapper.inline-flex.flex-col.items-center(
+  .card-wrapper.inline-flex.flex-col.items-center(
     :enableParallax="!$device.isMobile"
     :lightSize="340"
   )
-    .card-title
-      | {{ title }}
-      .title-glow( v-if="isShowTitleGlow" )
     .update-frequency( v-html="updateFrequency" )
-    svg-icon-drawing(  v-if="!$device.isMobile" :isShow="hasAssets && !isOutside" )
-      nuxt-icon.download-drawing-line(
-        filled name="download-drawing-line"
-      )
     //- .release-tag( v-if="hasAssets" ) {{ tag_name.substring(1) }}
     .card-icon(
       :style="{ backgroundImage: `url(${icon})` }"
     )
+    .card-title Download AFFiNE
     .card-desc.text-center( v-html="desc" )
     brand-glow-button(
       @click="() => handleDownloadClick(defaultAsset, title)"
       :needShadow="!tag_name?.includes('canary')"
       :disabled="!hasAssets"
-    ) {{ hasAssets ? $t('download') : $t(isObsolete ? 'outdated' : 'comingSoon') }}
+    )
+      | {{ hasAssets ? $t('download') : $t(isObsolete ? 'outdated' : 'comingSoon') }}
+      | {{ $t('for') }}{{ defaultAssetPlatformName }}
 
-    .platform-name( v-if="defaultAsset && !isObsolete" )
-      | {{ $t('for') }}
-      | {{ defaultAssetPlatformName }}
+    .download-other-version(
+      @click="isShowOtherVersionModal = true"
+    ) Click here to download other version
 
-    .publish-date( v-if="defaultAsset && !isObsolete" )
-      | {{ $t('latestVersion') }}
-      span.fw-500 {{ publishDate }}
-
-    .other-version( v-if="hasAssets" )
+    .other-version.hidden( v-if="hasAssets" )
       .other-version-title.flex.items-center(
         :class="{ 'is-active': isShowOtherVersion }"
         @click="() => isShowOtherVersion = !isShowOtherVersion"
@@ -70,12 +62,36 @@
     :defaultAsset="defaultAsset"
   )
 
+  el-dialog.other-version-modal(
+    v-model="isShowOtherVersionModal"
+    width="346px"
+    title="Other Version"
+    append-to-body
+  )
+    template( v-if="assetsMap.mac.length" )
+      .other-version-title {{ $t('downloadPage.otherVersionFor') }} {{ Platform.Mac }}
+      ul.other-version
+        li( v-for="asset in assetsMap.mac" )
+          nuxt-link( :to="asset.url" ) {{ asset.name }}
+
+    template( v-if="assetsMap.windows.length" )
+      .other-version-title  {{ $t('downloadPage.otherVersionFor') }} {{ Platform.Win }}
+      ul.other-version
+        li( v-for="asset in assetsMap.windows" )
+          nuxt-link( :to="asset.url" ) {{ asset.name }}
+
+    template( v-if="assetsMap.linux.length" )
+      .other-version-title  {{ $t('downloadPage.otherVersionFor') }} {{ Platform.Linux }}
+      ul.other-version
+        li( v-for="asset in assetsMap.linux" )
+          nuxt-link( :to="asset.url" ) {{ asset.name }}
 </template>
 
 <script setup lang="ts">
 import { useMouseInElement, useDateFormat } from '@vueuse/core'
 
 const el = ref(null)
+const isShowOtherVersionModal = ref(false)
 const isShowCanaryModal = ref(false)
 const { isOutside } = useMouseInElement(el, { handleOutside: false })
 
@@ -203,9 +219,6 @@ onBeforeMount(async () => {
 
   .card-wrapper
     width: 100%
-    background: white;
-    border: 1px solid #E3E2E4;
-    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08);
     border-radius: 16px;
     padding: 30px
     gap: fluid-value(16, 18)
@@ -228,9 +241,12 @@ onBeforeMount(async () => {
 
     .card-title
       position: relative
-      font-weight: 800;
-      font-size: fluid-value(24, 32)
+      font-weight: 500;
+      font-size: fluid-value(36, 40)
       line-height: 1
+      line-height: 119.444%
+      letter-spacing: (-1.6/40em)
+      margin-bottom: -8px
 
       .title-glow
         position: absolute
@@ -244,15 +260,17 @@ onBeforeMount(async () => {
         transform: translate3d(-50%, -50%, 0)
 
     .card-icon
-      width: fluid-value(70, 134)
+      width: fluid-value(180, 180)
       aspect-ratio: 1/1
       background-size: contain
+      margin-bottom: 14px
 
     .card-desc
-      min-height: 120px
       white-space: pre-line
       font-size: fluid-value(14, 16)
       line-height: (20/16);
+      max-width: 418px
+      margin-bottom: 14px
 
   .brand-glow-button
     padding: 0 65px
@@ -270,42 +288,6 @@ onBeforeMount(async () => {
     font-size: 12px;
     line-height: 15px;
     margin-top: -0.5em
-
-  .other-version
-    width: 100%
-    padding: 0 12px
-
-    @media $mediaInXS
-      font-size: 12px
-      padding: 0 0
-
-    ul
-      padding-left: 24px
-      margin: 4px
-
-      a
-        line-height: 220.02%;
-        text-decoration: underline
-        text-underline-offset: 3px
-        &:hover
-          opacity: 0.85
-
-  .other-version-title
-    height: 32px
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 220.02%;
-    color: var(--primary-gray)
-    gap: 14px
-    cursor pointer
-
-    .nuxt-icon
-      transition: 368ms
-      transform: rotate(180deg)
-
-    &.is-active
-      .nuxt-icon
-        transform: rotate(270deg)
 
   .info-tips
     font-weight: 500;
@@ -325,4 +307,52 @@ onBeforeMount(async () => {
       border-radius: 50%
       background-color: currentColor
       margin-right: 10px
+
+.other-version-modal
+  border-radius: 16px
+  --el-dialog-padding-primary: 24px;
+
+  .el-dialog__body
+    padding: 14px 24px 14px
+
+  .el-dialog__title
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px; /* 135% */
+    letter-spacing: -0.4px;
+
+  .el-dialog__close
+    font-size: 20px
+
+  .other-version
+    width: 100%
+    padding: 0 12px
+    padding-left: 16px
+
+    @media $mediaInXS
+      font-size: 12px
+
+    a
+      line-height: 220.02%;
+      text-underline-offset: 3px
+      margin-bottom: 12px
+
+      &:hover
+        opacity: 0.85
+
+  .other-version-title
+    line-height: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #8E8D91
+    gap: 14px
+
+    .nuxt-icon
+      transition: 368ms
+      transform: rotate(180deg)
+
+    &.is-active
+      .nuxt-icon
+        transform: rotate(270deg)
 </style>

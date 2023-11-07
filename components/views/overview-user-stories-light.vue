@@ -64,7 +64,7 @@ const stories: UserStory[] = [
   .marquee-wrapper
     &:hover
       .stories-list
-        animation-play-state: paused
+        // animation-play-state: paused
 
   .marquee-copy
     display: none

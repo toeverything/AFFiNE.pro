@@ -36,6 +36,7 @@ export default {
   latestVersion: 'Latest Version: ',
   client: 'Client',
   WhatIsNew: 'What’s new',
+  getStarted: 'Get Started',
 
   useDesktopVersion: {
     title: 'Full functionality on desktop',
@@ -145,7 +146,7 @@ export default {
     canaryDesc: `The cutting-edge version with the latest features and ideas.<br/><br/><b><span style="color: #1E96EB">This build has not been tested or used, it's released as soon as it's built.</span></b>`,
     canaryUpdateFrequency: 'Frequent updates',
     stable: 'Stable',
-    stableDesc: 'The most reliable and well-tested version, perfect for users who want a smooth and consistent experience without worrying about crashes or glitches.',
+    stableDesc: 'Download the AFFiNE Client for offline-enabled work and enhanced device-stored privacy',
     stableUpdateFrequency: '&nbsp;',
     otherVersion: 'Other Version',
     // @FIXME: vars not work in prod

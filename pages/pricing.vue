@@ -23,7 +23,7 @@
             .price-row.flex.items-end.gap-2
               .price-amount $0
               .per-time-tips.headline-6 {{ $t('pricePage.perMonth') }}
-            nuxt-link( href="/download" )
+            nuxt-link( :href="PATH.AFFINE_DOWNHILLS" target="_blank")
               el-button(
                 type="primary"
                 size="action"
@@ -137,8 +137,6 @@
               .item-icon
                 nuxt-icon( name="dot" filled)
               .item-body {{ $t('pricePage.enterpriseItemB') }}
-
-    .limit-container.wip-tips {{ $t('pricePage.wipTips') }}
 </template>
 
 <script lang="ts" setup>

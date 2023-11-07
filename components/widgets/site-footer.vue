@@ -26,11 +26,7 @@
                 )
 
       .nav-list-wrapper.flex.justify-space-between
-        .nav-list
-          .list-name {{ $t('tryItOnline') }}
-          nuxt-link.nav-item.flex.items-center( :to="PATH.AFFINE_DOWNHILLS" target="_blank" v-mobile-intercept)
-            | AFFiNE Alpha
-          nuxt-link.nav-item( :to="PATH.AFFINE_PRE_ALPHA" target="_blank" v-mobile-intercept) AFFiNE Pre-Alpha
+
         .nav-list
           .list-name {{ $t('client') }}
           nuxt-link.nav-item.flex.items-center( to="/download")

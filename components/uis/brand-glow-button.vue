@@ -24,7 +24,7 @@ defineProps<{
   padding: 0 29px
   color: #fff
   font-weight: 500;
-  font-size: fluid-value(16, 24)
+  font-size: fluid-value(16, 20)
   border-radius: 26px
   transition: 368ms
   cursor pointer

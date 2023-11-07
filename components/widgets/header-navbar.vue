@@ -40,9 +40,11 @@
             scroll-link( to="/blog" ) {{ $t('blog') }}
           .nav-item
             scroll-link( to="/pricing" ) {{ $t('price') }}
+          .nav-item
+            scroll-link( to="/download" ) {{ $t('download') }}
 
         .right-part.flex.items-center.gap-12px
-          download-entry-button
+          app-entry-button
           stars-on-github-button
 
 </template>
