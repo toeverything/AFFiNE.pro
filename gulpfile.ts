@@ -1,18 +1,10 @@
-import { src, dest, series, TaskFunction } from 'gulp'
-import { spawn } from 'child_process'
+import { src, dest, series } from 'gulp'
 import axios from 'axios'
 const file = require('gulp-file')
 
-function cleanBlog(cb: any) {
-  const cmd = spawn('rm', ['-rf', './content/blog'])
-  cmd.on('close', () => {
-    cb()
-  })
-}
-
 async function convertBlogToMarkdowns(cb: any) {
   try {
-    const { data } = await axios('https://affine.pro/api/blog')
+    const { data } = await axios('http://192.168.50.11:3001/api/blog')
     const pages = data.pages
     if (!pages || !pages.length) {
       throw new Error('No pages')
@@ -31,4 +23,4 @@ async function convertBlogToMarkdowns(cb: any) {
   cb()
 }
 
-exports.default = series(cleanBlog, convertBlogToMarkdowns)
+exports.default = series(convertBlogToMarkdowns)
