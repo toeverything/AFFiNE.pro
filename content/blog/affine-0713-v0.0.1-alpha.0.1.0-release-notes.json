@@ -1,0 +1,20 @@
+{
+  "title": "AFFiNE 0713 V0.0.1-alpha.0.1.0 Release Notes",
+  "authors": [
+    "Jiachen He",
+    "Fangyuan Zheng",
+    "Fanjing Zhang"
+  ],
+  "tags": [
+    "Release Note"
+  ],
+  "description": "Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows",
+  "created": 1657670400000,
+  "updated": 1657670400000,
+  "layout": "blog",
+  "id": "630ad1a7bdda4d3a872e428a9d5d88c7",
+  "slug": "affine-0713-v0.0.1-alpha.0.1.0-release-notes",
+  "cover": "https://insider.affine.pro/api/workspaces/H6vffRmJbCfA-r3kq_36_/blobs/JspchPzbMyAw5RLMQCH5uLCCNB4O_zaOzzY6MW2t_ls=.webp",
+  "md": "---\n\ntitle: AFFiNE 0713 V0.0.1-alpha.0.1.0 Release Notes\n\nauthor: Jiachen He, Fangyuan Zheng, Fanjing Zhang\n\ntags: Release Note\n\nslug: affine-0713-v0.0.1-alpha.0.1.0-release-notes\n\ndescription: Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows\n\ncreated: 2022-07-13\n\nupdated: 2022-07-13\n\nlayout: blog\n\npublish: true\n\n---\n\n\n![JspchPzbMyAw5RLMQCH5uLCCNB4O_zaOzzY6MW2t_ls=](https://insider.affine.pro/api/workspaces/H6vffRmJbCfA-r3kq_36_/blobs/JspchPzbMyAw5RLMQCH5uLCCNB4O_zaOzzY6MW2t_ls=)\n\n**Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows:**\n\n### **Bug Fixes**\n\nIn our continued effort to make AFFiNE the most reliable all in one knowledge base 展开, fixing bugs is always our main concern. Here's our work in last few days:\n\n* Fixed: Covered Popovers when changing global views;\n* Fixed: Occasionally disappeared placeholder when opening a new page;\n* Fixed: Incorrect display of the Popover for Settings;\n* Fixed: Incorrect display of menu icons when changing groups.\nAFFiNE is currently in the early alpha stage and will be launched in the autumn of 2022.\n\nAFFiNE is an open-source project which can be viewed on Github: [https://github.com/toeverything/AFFiNE#readme](https://github.com/toeverything/AFFiNE#readme)\n\nIf you endorse this open source project, please help us by clicking the GitHub star, which is crucial for the future development of AFFiNE.\n\nAFFiNE is very grateful to all open source contributors and will work to build a more positive open source ecosystem.\n\nHope you have a nice time with AFFiNE!\n\n",
+  "publish": true
+}
