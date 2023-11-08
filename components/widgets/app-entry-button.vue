@@ -1,6 +1,6 @@
 <template lang="pug">
 nuxt-link(
-  :to="PATH.AFFINE_DOWNHILLS"
+  :to="PATH.AFFINE_INSIDER"
   target="_blank"
 )
   el-button.app-entry-button(

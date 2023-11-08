@@ -69,19 +69,19 @@
     append-to-body
   )
     template( v-if="assetsMap.mac.length" )
-      .other-version-title {{ $t('downloadPage.otherVersionFor') }} {{ Platform.Mac }}
+      .other-version-title {{ Platform.Mac }}
       ul.other-version
         li( v-for="asset in assetsMap.mac" )
           nuxt-link( :to="asset.url" ) {{ asset.name }}
 
     template( v-if="assetsMap.windows.length" )
-      .other-version-title  {{ $t('downloadPage.otherVersionFor') }} {{ Platform.Win }}
+      .other-version-title  {{ Platform.Win }}
       ul.other-version
         li( v-for="asset in assetsMap.windows" )
           nuxt-link( :to="asset.url" ) {{ asset.name }}
 
     template( v-if="assetsMap.linux.length" )
-      .other-version-title  {{ $t('downloadPage.otherVersionFor') }} {{ Platform.Linux }}
+      .other-version-title  {{ Platform.Linux }}
       ul.other-version
         li( v-for="asset in assetsMap.linux" )
           nuxt-link( :to="asset.url" ) {{ asset.name }}
@@ -247,6 +247,7 @@ onBeforeMount(async () => {
       line-height: 119.444%
       letter-spacing: (-1.6/40em)
       margin-bottom: -8px
+      color: black
 
       .title-glow
         position: absolute

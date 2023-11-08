@@ -419,6 +419,8 @@ await loadData()
       font-size: fluid-value(24, 48, 390, 768)
       margin-bottom: fluid-value(12, 35, 390, 768)
       flex-shrink: 0
+      color: black
+      letter-spacing: (-0.04em)
 
     .reason-list
       margin: 0
