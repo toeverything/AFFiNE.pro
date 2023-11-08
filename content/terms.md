@@ -179,7 +179,7 @@ We reserve the right to refuse any order placed through the Services. We may, in
 
 **<a name="cancel">6. CANCELLATION</a>**
 
-You can cancel your subscription at any time by logging into your account. Your cancellation will take effect at the end of the current paid term.
+All purchases are non-refundable. You can cancel your subscription at any time by logging into your account. Your cancellation will take effect at the end of the current paid term.
 
 If you are unsatisfied with our Services, please email us at contact@toeverything.info.
 
