@@ -66,6 +66,7 @@
     v-model="isShowOtherVersionModal"
     width="346px"
     title="Other Version"
+    :lock-scroll="false"
     append-to-body
   )
     template( v-if="assetsMap.mac.length" )

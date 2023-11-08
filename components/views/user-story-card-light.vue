@@ -2,6 +2,7 @@
 hover-spotlight-card.user-story-card-light(
   ref="el"
   :light-size="150"
+  :enableHover="$device.isDesktop"
 )
   .meta-row.flex.items-start
     .avatar(

@@ -123,9 +123,12 @@ watch(locale, () => {
           font-size: 14px;
           line-height: 20px;
           color: var(--primary-deep)
-          padding: 12px 0
           letter-spacing: -0.28px;
           border-bottom: 0.5px solid rgba(0, 0, 0, 0.10);
+
+          > a
+            display: block
+            padding: 12px 0
 
       .lang-list
         border-top: 1px solid var(--divider-color)

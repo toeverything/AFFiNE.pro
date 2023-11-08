@@ -72,6 +72,7 @@ const stories: UserStory[] = [
     @media (max-width: 480px)
       display: block
 
+  // @FIXME: https://stackoverflow.com/questions/15751012/css-transform-causes-flicker-in-safari-but-only-when-the-browser-is-2000px-w
   .stories-list
     position: relative
     width: 100%
@@ -80,10 +81,10 @@ const stories: UserStory[] = [
 
     @keyframes panningLoop
       0%
-        transform: translateX(0px)
+        transform: translateX(0px, 0, 1000px)
 
       100%
-        transform: translateX(-100%)
+        transform: translate3d(-100%, 0, 1000px)
 
     @media (max-width: 1024px)
       column-count: 3
@@ -97,10 +98,12 @@ const stories: UserStory[] = [
       width: 1440px
       padding-left: 12px
       padding-right: 12px
-      animation panningLoop 12s linear infinite
+      animation panningLoop 24s linear infinite both
       vertical-align: top;
-      animation-play-state: running
-      will-change: transform
+      z-index 2
+
+      > *
+        // -webkit-transform: translate3d(0, 0, 0)
 
     .user-story-card-light
       // flex: 1 0 258px

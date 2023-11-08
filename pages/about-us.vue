@@ -319,9 +319,15 @@ useHead({
       font-size: 24px;
       line-height: 29px;
 
+      @media $mediaInXS
+        font-size: 20px;
+
     .card-body
       margin: 38px 0 58px
       color: var(--primary-gray)
+
+      @media $mediaInXS
+        margin: 24px 0 28px
 
       ul
         font-size: 16px;
