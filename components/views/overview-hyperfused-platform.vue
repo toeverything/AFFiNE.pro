@@ -32,7 +32,7 @@
             vue3-lottie.stay-focused-flow-lottie(
               autoPlay
               loop
-              animationLink="/lottie-files/stay-focused-flow.json"
+              :animationLink="$device.isMobile ? '/lottie-files/stay-focused-flow-mobile.json' : '/lottie-files/stay-focused-flow.json'"
             )
           .card-mini-title {{ $t('overviewPage.consolidateWorkflowAffine') }}
           .card-desc {{ $t('overviewPage.consolidateWorkflowAffineDesc') }}
