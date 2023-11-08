@@ -94,13 +94,6 @@ const coreMembers: Member[] = [
     avatar: "https://unavatar.io/github/doodlewind",
     link: "https://github.com/doodlewind",
   },
-  {
-    name: "Alex Yang",
-    title: "Architecture Engineer",
-    desc: `Leader of AFFiNE engineering.`,
-    avatar: "https://unavatar.io/github/himself65",
-    link: "https://github.com/himself65",
-  },
 ];
 
 const engineeringMembers: Member[] = [
