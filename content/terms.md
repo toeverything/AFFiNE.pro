@@ -1,6 +1,6 @@
 **TERMS AND CONDITIONS**
 
-**Last updated** **June 27, 2023**
+**Last updated** **November 8, 2023**
 
 **AGREEMENT TO OUR LEGAL TERMS**
 
