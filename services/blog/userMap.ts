@@ -131,5 +131,15 @@ export const USER_MAP: Record<
     name: 'Yiyang Zhang',
     avatar: '/YiyangZhang.jpeg',
     dec: 'Operations Team'
+  },
+  'Yuhang Zhao': {
+    name: 'Yuhang Zhao (Zoey)',
+    avatar: '/YuhangZhao.jpeg',
+    dec: 'Operations Team'
+  },
+  'Yanxin Lu': {
+    name: 'Yanxin Lu',
+    avatar: '/YanxinLu.png',
+    dec: 'Operations Team'
   }
 }

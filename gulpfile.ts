@@ -4,7 +4,7 @@ const file = require('gulp-file')
 
 async function convertBlogToMarkdowns(cb: any) {
   try {
-    const { data } = await axios('http://192.168.50.11:3001/api/blog')
+    const { data } = await axios('https://affine.pro/api/blog')
     const pages = data.pages
     if (!pages || !pages.length) {
       throw new Error('No pages')
