@@ -184,7 +184,7 @@ export default {
     itemMaxFileSize: '{0}MB of maximum file size',
     itemMaxMembers: 'Number of members per Workspace ≤ {0}',
     pro: 'Pro',
-    proAction: 'Get Started',
+    proAction: 'Buy Pro',
     contactSales: 'Contact Us',
     team: 'Team',
     teamItemA: 'Best team workspace for collaboration and knowledge distilling',

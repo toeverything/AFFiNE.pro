@@ -24,7 +24,7 @@
               .price-amount $0
               .per-time-tips.headline-6 {{ $t('pricePage.perMonth') }}
             nuxt-link( :href="PATH.AFFINE_INSIDER" target="_blank")
-              el-button(
+              el-button.is-outlined(
                 type="primary"
                 size="action"
               ) {{ $t('pricePage.freeAction') }}
@@ -57,7 +57,7 @@
         .price-card.type-pro
           .card-header
             .planning-name.flex.items-center.gap-2
-              | {{ $t('pricePage.pro') }}
+              span.pro-label {{ $t('pricePage.pro') }}
               transition( name="fade" :duration="300" )
                 .discount-tag.color-emphasis( v-if="isYearly" ) {{ $t('pricePage.yearlyDiscount') }}
 
@@ -100,7 +100,7 @@
             .price-row.flex.items-center.gap-2
               .coming-soon-tips {{ $t('comingSoon') }}...
             nuxt-link( :href="PATH.PRICING_CONTACT_FORM" target="_blank" rel="nofollow" )
-              el-button(
+              el-button.is-outlined(
                 type="primary"
                 size="action"
               ) {{ $t('pricePage.contactSales') }}
@@ -124,7 +124,7 @@
             .price-row.flex.items-center.gap-2
               .coming-soon-tips {{ $t('comingSoon') }}...
             nuxt-link( :href="PATH.PRICING_CONTACT_FORM" target="_blank" rel="nofollow" )
-              el-button(
+              el-button.is-outlined(
                 type="primary"
                 size="action"
               ) {{ $t('pricePage.contactSales') }}
@@ -170,9 +170,9 @@ useHead({
   .discount-tag
     border-radius: 4px
     padding: 0px 4px
-    background: var(--brand-secondary, #EFFAFF)
+    line-height: 24px
+    background: var(--brand-secondary, #fff)
     font-size: 12px
-    line-height: 20px
     font-weight: 500
 
   .section-hero
@@ -274,6 +274,10 @@ useHead({
     justify-content: flex-start
     box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.05)
 
+    .el-button
+      letter-spacing: -0.14px
+      -webkit-font-smoothing: auto
+
   .planning-name
     font-weight: 500
     line-height: 1.5
@@ -310,6 +314,16 @@ useHead({
   .price-card.type-pro
     --label-bg: 1
     position relative
+    background: linear-gradient(180deg, #9DD7FF -38.5%, #FFF 41.04%, #FFF 98%);
+
+    .pro-label
+      border-radius: 4px
+      background: linear-gradient(289deg, #1E96EB 5.86%, #1ED2EB 103.86%);
+      padding: 0px 7px
+      font-weight: 500
+      font-size: 16px
+      line-height: 24px
+      color: white
 
     &:before,
     &:after
