@@ -46,7 +46,7 @@
     "@types/semver": "^7.3.13",
     "@unocss/extractor-pug": "^0.49.4",
     "@unocss/nuxt": "^0.49.4",
-    "affine-reader": "^2.0.10",
+    "affine-reader": "^2.0.11",
     "gray-matter": "^4.0.3",
     "gulp": "^4.0.2",
     "gulp-file": "^0.4.0",
