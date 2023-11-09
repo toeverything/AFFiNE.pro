@@ -23,7 +23,7 @@
             .price-row.flex.items-end.gap-2
               .price-amount $0
               .per-time-tips.headline-6 {{ $t('pricePage.perMonth') }}
-            nuxt-link( :href="PATH.AFFINE_DOWNHILLS" target="_blank")
+            nuxt-link( :href="PATH.AFFINE_INSIDER" target="_blank")
               el-button(
                 type="primary"
                 size="action"
@@ -64,7 +64,7 @@
             .price-row.flex.items-end.gap-2
               .price-amount {{ currentTab === 'yearly' ? '$6.75' : '$7.99' }}
               .per-time-tips.headline-6 {{ $t('pricePage.perMonth') }}
-            nuxt-link( :href="PATH.PRICING_PRO_EARLY_ACCESS" target="_blank" rel="nofollow" )
+            nuxt-link( :href="currentTab === 'yearly' ? PATH.PRICING_PRO_YEARLY : PATH.PRICING_PRO_MONTHLY" target="_blank" rel="nofollow" )
               el-button(
                 type="primary"
                 size="action"

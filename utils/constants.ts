@@ -22,7 +22,8 @@ export const PATH = {
   INTERN_APPLY_FORM: 'https://6dxre9ihosp.typeform.com/to/lnHWRsVS',
   SING_UP: 'https://insider.affine.pro',
   PRICING_CONTACT_FORM: 'https://6dxre9ihosp.typeform.com/to/uZeBtpPm',
-  PRICING_PRO_EARLY_ACCESS: 'https://community.affine.pro/c/insider-general/',
+  PRICING_PRO_MONTHLY: 'https://insider.affine.pro/signin?subscription_recurring=Monthly&subscription_plan=Pro',
+  PRICING_PRO_YEARLY: 'https://insider.affine.pro/signin?subscription_recurring=Yearly&subscription_plan=Pro',
   GET_NOTIFIED_FORM: 'https://6dxre9ihosp.typeform.com/to/B8IHwuyy',
   COPILOT_FORM: 'https://6dxre9ihosp.typeform.com/to/MjaI1NIV',
 }
