@@ -14,8 +14,6 @@ import 'element-plus/es/components/message/style/css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import '~/styles/main.styl'
 
-import 'vue3-lottie/dist/style.css'
-
 const locale = ref(en)
 
 const i18n = useI18n()
@@ -30,16 +28,20 @@ useHead({
 
 <style lang="stylus">
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap')
+
+::selection
+  background-color: var(--brand)
+  color: white
 
 body
+  --bg: #F8F8F7
   margin: 0
   font-family: "Inter", "Roboto", "Helvetica", "Arial", sans-serif
-  background: $secondary100
+  background: var(--bg)
   color: $primary100
   font-size: 1rem
   line-height: 1.5
-  letter-spacing: 0.00938em
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
@@ -89,11 +91,35 @@ a
   &.is-fluid
     max-width: 100% !important
 
+.limit-container
+  --padding: 32px
+  padding-left: var(--padding)
+  padding-right: var(--padding)
+  max-width: 1144px
+  width: 100%
+  margin: 0 auto
+
+  @media $mediaInXS
+    --padding: 20px
+
 .md-container
   padding: 0 16px
   max-width: (1200px + 32px)
   width: 100%
   margin: 0 auto
+
+// Typography
+.headline-2
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.333
+  letter-spacing: -0.02em
+
+.headline-6
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.28px;
 
 // Page
 .page

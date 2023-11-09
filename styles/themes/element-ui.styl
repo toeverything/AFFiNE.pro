@@ -1,8 +1,8 @@
 :root,
 html.dark {
-  --primary-color-h: 248;
-  --primary-color-s: 100%;
-  --primary-color-l: 61%;
+  --primary-color-h: 205;
+  --primary-color-s: 84%;
+  --primary-color-l: 52%;
 
   --el-color-primary: s('hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l))');
   --el-color-primary-light-3: s('hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 5%))')
@@ -23,7 +23,7 @@ html.dark {
   --el-color-success-light-3: #59AD85; // Hover
   --el-color-success-dark-2: #386D54; // Active
   --el-color-success-light-5: #cbddd3 // Disabled
-
+  --el-overlay-color-lighter: rgba(0, 0, 0, 0.3);
   --el-fill-color-light: #f4f4f4;
   --el-text-color-regular: var(--primary) !important;
   --el-border-radius-base: 6px
@@ -33,13 +33,33 @@ html.dark {
   .el-button {
     font-weight: 800
     background-color: var(--el-button-bg-color);
+    --el-border-radius-base: 34px;
+    font-weight: 500
+    transition: 318ms
+    padding: 7px 16px
+    letter-spacing: -0.28px
+    transition: 150ms cubic-bezier(.42, 0, .58, 1)
+
+    active-scale()
 
     &.is-link {
       background: transparent
     }
 
     &--large {
+      --el-button-size: 43px
       font-size: 20px
+      padding: 10px 20px
+      font-size: 16px
+      letter-spacing: -0.32px
+    }
+
+    &--action {
+      height: 37px
+      font-size: 14px
+      font-weight: 500;
+      letter-spacing: -0.28px
+      border-radius: 100px
     }
 
     &--primary {
@@ -59,39 +79,37 @@ html.dark {
     }
 
     &--default {
-      background-color: #fff
-      color: #0F0F0F !important
+      background-color: var(--primary-deep)
+      color: var(--secondary) !important
+      border: none;
 
       &:hover,
       &:focus {
-        background-color: #efefef !important
-        border-color: #efefef !important
+        background-color: #424149 !important
+        border-color: #424149 !important
       }
 
       &:active {
-        background-color: #dfdfdf !important
-        border-color: #cfcfcf !important
-      }
-
-      &:focus-visible {
-        outline-color: #ccc !important
+        background-color: #424149 !important
+        border-color: #424149 !important
       }
     }
 
     &--secondary {
       color: black
-      background: #F6F6F6
-      border-color: #e0e0e0
+      background: white
+      border-color: rgba(0, 0, 0, 0.15)
 
       &:hover,
       &:focus {
-        background-color: #ffffff !important
-        border-color: #e0e0e0 !important
+        background-color: rgba(0,0,0,0.04) !important
+        border-color: rgba(0, 0, 0, 0.15) !important
+        color: black !important
       }
 
       &:active {
-        background-color: #e0e0e0 !important
-        border-color: #e0e0e0 !important
+        background-color:rgba(0,0,0,0.04) !important
+        border-color: rgba(0, 0, 0, 0.15) !important
       }
     }
 
@@ -103,10 +121,6 @@ html.dark {
   }
 
   // Modal
-  .el-overlay {
-    background-color: rgba(0, 0, 0, 0.9);
-  }
-
   .el-dialog {
     border-radius: 6px;
 
@@ -140,6 +154,10 @@ html.dark {
       }
     }
   }
+}
+
+.el-overlay {
+  backdrop-filter: blur(1.5px);
 }
 
 .el-message {

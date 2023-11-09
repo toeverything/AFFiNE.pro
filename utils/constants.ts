@@ -3,6 +3,7 @@ export const PATH = {
   SHARE_HOST: 'https://affine.pro',
 
   AFFINE_DOWNHILLS: 'https://app.affine.pro',
+  AFFINE_INSIDER: 'https://insider.affine.pro',
   AFFINE_PRE_ALPHA: 'https://livedemo.affine.pro',
 
   AFFiNE_GITHUB: 'https://github.com/toeverything/AFFiNE',
@@ -19,27 +20,24 @@ export const PATH = {
   SNS_YOUTUBE: 'https://www.youtube.com/@affinepro',
 
   INTERN_APPLY_FORM: 'https://6dxre9ihosp.typeform.com/to/lnHWRsVS',
+  SING_UP: 'https://insider.affine.pro',
   PRICING_CONTACT_FORM: 'https://6dxre9ihosp.typeform.com/to/uZeBtpPm',
-  PRICING_PRO_EARLY_ACCESS: 'https://community.affine.pro/c/insider-general/',
+  PRICING_PRO_MONTHLY: 'https://insider.affine.pro/signin?subscription_recurring=Monthly&subscription_plan=Pro',
+  PRICING_PRO_YEARLY: 'https://insider.affine.pro/signin?subscription_recurring=Yearly&subscription_plan=Pro',
   GET_NOTIFIED_FORM: 'https://6dxre9ihosp.typeform.com/to/B8IHwuyy',
   COPILOT_FORM: 'https://6dxre9ihosp.typeform.com/to/MjaI1NIV',
 }
 
 export const COMMUNITY_SNS_LIST = [
   {
+    name: 'Twitter',
+    iconName: 'twitter',
+    link: PATH.SNS_TWITTER
+  },
+  {
     name: 'GitHub',
     iconName: 'github',
     link: PATH.AFFiNE_GITHUB
-  },
-  {
-    name: 'Discord',
-    iconName: 'discord',
-    link: PATH.SNS_DISCORD
-  },
-  {
-    name: 'Reddit',
-    iconName: 'reddit',
-    link: PATH.SNS_REDDIT
   },
   {
     name: 'Telegram',
@@ -47,14 +45,19 @@ export const COMMUNITY_SNS_LIST = [
     link: PATH.SNS_TELEGRAM
   },
   {
-    name: 'Twitter',
-    iconName: 'twitter',
-    link: PATH.SNS_TWITTER
+    name: 'Discord',
+    iconName: 'discord',
+    link: PATH.SNS_DISCORD
   },
   {
     name: 'YouTube',
     iconName: 'youtube',
     link: PATH.SNS_YOUTUBE
+  },
+  {
+    name: 'Reddit',
+    iconName: 'reddit',
+    link: PATH.SNS_REDDIT
   },
 ]
 

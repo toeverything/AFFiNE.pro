@@ -1,7 +1,16 @@
 <template lang="pug">
 .page.page-download
 
-  .section-hero
+  .section-simple-hero
+    .release-cards.flex.items-start.justify-center
+      release-card(
+        :isLatest="true"
+        :isShowTitleGlow="releaseStableCard.title == 'Stable'"
+        :releases="finalReleases"
+        v-bind="releaseStableCard"
+      )
+
+  .section-hero.hidden
     .container.flex.flex-col.items-center
       .hero-headline
         | {{ $t('downloadPage.headline') }}
@@ -47,21 +56,38 @@
           v-bind="data"
         )
 
-      .mobile-version-notes
-        nuxt-icon( name="mobile" filled )
-        | {{ $t('downloadPage.mobileVersionNotes') }}
+  .section-mobile-version
+    .flex.justify-center
+      .wip-box
+        client-only
+          vue3-lottie.gearwheel(
+            autoPlay
+            loop
+            animationLink="/lottie-files/gearwheel.json"
+          )
+        .bottom-mask.flex.items-center.justify-center
+          .info-text.text-center.max-w-413px {{ $t('downloadPage.mobileVersionNotes') }}
 
   .section-why
-    .container.flex.flex-col.items-start
-      .section-subtitle.text-brand-grad {{ $t('downloadPage.why') }}
-      ul.reason-list
-        li {{ $t('downloadPage.reasonA') }}
-        li {{ $t('downloadPage.reasonB') }}
-        li {{ $t('downloadPage.reasonC') }}
-        li {{ $t('downloadPage.reasonD') }}
-
-  .section-sns
-    overview-sns
+    .limit-container.flex.items-start
+      .section-subtitle {{ $t('downloadPage.why') }}
+      .reason-list.flex.flex-wrap
+        .reason-item
+          .item-icon
+            nuxt-icon( name="download-reason-1" filled)
+          .item-text {{ $t('downloadPage.reasonA') }}
+        .reason-item
+          .item-icon
+            nuxt-icon( name="download-reason-2" filled)
+          .item-text {{ $t('downloadPage.reasonB') }}
+        .reason-item
+          .item-icon
+            nuxt-icon( name="download-reason-3" filled)
+          .item-text {{ $t('downloadPage.reasonC') }}
+        .reason-item
+          .item-icon
+            nuxt-icon( name="download-reason-4" filled)
+          .item-text {{ $t('downloadPage.reasonD') }}
 </template>
 
 <script lang="ts" setup>
@@ -137,6 +163,10 @@ const releaseCards = computed(() => {
   ]
 })
 
+const releaseStableCard = computed(() => {
+  return releaseCards.value[1]
+})
+
 const loadData = async () => {
   const isBeta = (release: Release) => !release.prerelease && release.tag_name.includes('beta')
   const isCanary = (release: Release) => release.prerelease && release.tag_name.includes('canary')
@@ -151,6 +181,7 @@ const loadData = async () => {
 
   try {
     tabs.value = await primaryAPI.getReleaseTabs()
+    tabs.value = tabs.value.filter(el => el.releaseMap.stable)
   } catch(error) {
     // @TODO: handle request error
     console.log('[download] loadData error', error)
@@ -166,6 +197,23 @@ await loadData()
 
 <style lang="stylus">
 .page-download
+
+  .section-simple-hero
+    min-height: 60vh
+    padding: fluid-value(80, 180, 390, 560) 20px
+
+    .download-other-version
+      transition: 218ms
+      font-size: 14px;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.14px;
+      border-radius: 4px;
+      padding: 2px 8px
+      cursor pointer
+
+      &:hover
+        background: var(--light-detail-color-hover-color, rgba(0, 0, 0, 0.04));
 
   .section-hero
     min-height: 80vh
@@ -200,7 +248,7 @@ await loadData()
           bottom: 0px
           width: 100%
           height: 2px
-          background-color: white
+          background-color: black
           transition: 318ms
 
         &:hover
@@ -239,8 +287,8 @@ await loadData()
           max-width: 70vw
 
     .mobile-version-notes
-      background: rgba(27, 27, 27, 0.3);
-      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: white;
+      border: 2px solid #E3E2E4;
       border-radius: 10px;
       display: flex;
       padding: 32px;
@@ -274,11 +322,14 @@ await loadData()
       justify-content: center
       align-items: center
       padding: 14px 18px
-      border-radius: 14px
+      border-radius: 8px
       position: relative
-      color: white
+      border: 1px solid #E3E2E4
+      box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08);
+      color: #424149
       cursor: pointer
-      background: linear-gradient(180deg, rgba(217, 217, 217, 0.10) 0%, rgba(255, 255, 255, 0.09) 14.06%, rgba(217, 217, 217, 0.00) 100%);
+      background: white
+      font-weight: 500
 
       .text-wrapper
         position: relative
@@ -299,11 +350,12 @@ await loadData()
         mask-composite: exclude
 
       &:not(.is-current):hover
-        background: linear-gradient(180deg, rgba(217, 217, 217, 0.20) 0%, rgba(255, 255, 255, 0.19) 14.06%, rgba(217, 217, 217, 0.10) 100%);
+        background: #fcfcfc
 
       &.is-current
-        background: #000
+        box-shadow: 0px 2px 10px 0px rgba(30, 150, 235, 0.20);
         padding: 0 fluid-value(20, 50)
+        color: #1E96EB
 
         .info-name
           transform: translateX(0)
@@ -312,23 +364,91 @@ await loadData()
           padding-right: 8px
 
         &:before
-          padding: 2px
-          background: linear-gradient(180deg, #0E55EE 0%, #002A86 100%)
+          padding: 1.5px
+          background: #1E96EB
+
+  .section-mobile-version
+    padding: fluid-value(0, 40) 0 fluid-value(0, 20)
+
+    .wip-box
+      position relative
+      aspect-ratio: 1048/860
+      max-width: 524px
+      width: 100vw
+      background-image: url(/download/wip-box.png)
+      background-size: contain
+      background-repeat: no-repeat
+
+      .gearwheel
+        position absolute
+        bottom: 17%
+        width: 50%
+        height: auto
+        aspect-ratio 1060/860
+        left: 50%
+        transform: translateX(-50%)
+
+      .bottom-mask
+        position absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: (200/430 * 100%)
+        background: linear-gradient(180deg, rgba(248, 248, 247, 0.00) 0%, #F8F8F7 20.66%);
+
+        .info-text
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 133.333%
+          letter-spacing: -0.36px;
+
+          @media $mediaInXS
+            max-width: 290px
 
   .section-why
-    .container
-      border-top: 1px solid var(--divider-color)
-      padding: fluid-value(53, 96) 20px
+    padding: fluid-value(30, 60) 0
+
+    .limit-container
+      gap: fluid-value(32, 200)
+
+      @media (max-width: 1000px)
+        flex-direction: column
 
     .section-subtitle
-      font-weight: 800
+      font-weight: 500
       font-size: fluid-value(24, 48, 390, 768)
       margin-bottom: fluid-value(12, 35, 390, 768)
+      flex-shrink: 0
+      color: black
+      letter-spacing: (-0.04em)
 
     .reason-list
       margin: 0
       font-size: fluid-value(14, 24, 390, 768)
-      line-height: 200%
-      padding-left: 30px
+      gap: 48px
 
+    .reason-item
+      width: calc(50% - 24px)
+
+      .item-text
+        font-size: fluid-value(16, 20, 390, 768);
+        font-weight: 500;
+        line-height: 135%;
+        letter-spacing: (-0.4/20em);
+        color: black
+        margin-top: 12px
+
+      .item-icon
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 40px
+        height: 40px
+        border-radius: 4.184px;
+        border: 1.083px solid rgba(0, 0, 0, 0.10);
+        background: var(--white-white, #FFF);
+        box-shadow: 0px 1.16231px 2.32461px 0px rgba(0, 0, 0, 0.08);
+
+        .nuxt-icon
+          font-size: 27.5px
 </style>

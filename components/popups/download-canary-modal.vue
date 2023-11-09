@@ -72,10 +72,9 @@ const handleDownloadPrimaryClick = () => {
 <style lang="stylus">
 .download-canary-modal
   --el-dialog-width: 520px
-  border-radius: 8px;
-  border: 1px solid #494949;
-  background: linear-gradient(180deg, #000 0%, #171717 100%);
-  box-shadow: 0px 0px 57px 0px rgba(0, 39, 178, 0.29);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff 0%, #eee 100%);
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.15);
 
   @media (max-width: 520px)
     margin-left: 8px;
@@ -89,7 +88,7 @@ const handleDownloadPrimaryClick = () => {
       padding-bottom: 25px
       margin-left: 25px
       margin-right: 25px
-      border-bottom: 1px solid #3D3D3D
+      border-bottom: 1px solid #eee
 
     &__title
       font-size: 24px;
@@ -97,18 +96,18 @@ const handleDownloadPrimaryClick = () => {
 
     &__close
       font-size: 24px;
-      color: white
+      color: black
 
     &__headerbtn
       &:hover
         .el-dialog__close
-          color: #aaa
+          color: #383838
 
     &__body
       padding: 24px 25px
 
     &__footer
-      border-top: 1px solid #3D3D3D
+      border-top: 1px solid #ddd
       padding-left: 0
       padding-right: 0
       padding-top: 20px
@@ -132,7 +131,7 @@ const handleDownloadPrimaryClick = () => {
     font-size: 16px
 
     b
-      color: #FDEF3A
+      color: #EB4335
 
   .text-button
     cursor: pointer

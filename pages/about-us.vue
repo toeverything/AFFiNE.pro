@@ -1,12 +1,13 @@
 <template lang="pug">
 .page.page-about-us
 
-  .section.section-hero
-    .md-container.flex.flex-col.items-center
-      .hero-title(
-        v-html="$t('aboutUsPage.slogan')"
-      )
+  .section.section-hero.flex.items-center
+    .limit-container.flex.items-end.justify-between
+      about-title.flex-shrink-0
       .hero-desc {{ $t('aboutUsPage.desc')  }}
+
+  .section.section-intro
+    .limit-container.flex.flex-col.items-center
       .flex.cards-row
         .contact-card
           .card-header.flex.items-center.gap-28px
@@ -57,6 +58,8 @@
           v-for="member in productMembers"
           :member="member"
         )
+
+  overview-slogan-banner
 </template>
 
 <script lang="ts" setup>
@@ -94,15 +97,16 @@ const coreMembers: Member[] = [
     avatar: "https://unavatar.io/github/doodlewind",
     link: "https://github.com/doodlewind",
   },
-];
-
-const engineeringMembers: Member[] = [
   {
     name: "Huaqiao Li",
     title: "Architecture Engineer",
+    desc: "Leader of AFFiNE engineering.",
     avatar: "https://unavatar.io/github/joooye34",
     link: "https://github.com/joooye34",
   },
+];
+
+const engineeringMembers: Member[] = [
   {
     name: "Darksky Tan",
     title: "Architecture Engineer",
@@ -128,32 +132,43 @@ const engineeringMembers: Member[] = [
     link: "https://github.com/forehalo",
   },
 
-
-  {
-    name: "Regis Chen",
-    title: "Full-stack Engineer",
-    avatar: "/RegisChen.jpeg",
-    link: "https://github.com/regischen",
-  },
-
   {
     name: "Zijian Zuo",
-    title: "Full-stack Engineer",
+    title: "Architecture Engineer",
     avatar: "/Zijian.jpeg",
     link: "https://github.com/zzj3720",
   },
 
   {
+    name: "Regis Chen",
+    title: "R&D Engineer",
+    avatar: "/RegisChen.jpeg",
+    link: "https://github.com/regischen",
+  },
+
+  {
     name: "Hongtao lye",
-    title: "Full-stack Engineer",
+    title: "R&D Engineer",
     avatar: "/Hongtao.jpeg",
     link: "https://github.com/doouding",
   },
   {
     name: "Xiang Gao",
-    title: "Full-stack Engineer",
+    title: "R&D Engineer",
     avatar: "https://unavatar.io/github/Flrande",
     link: "https://github.com/Flrande",
+  },
+  {
+    name: "EYHN",
+    title: "R&D Engineer",
+    avatar: "https://unavatar.io/github/EYHN",
+    link: "https://github.com/EYHN",
+  },
+  {
+    name: "Cats Juice",
+    title: "R&D Engineer",
+    avatar: "https://unavatar.io/github/CatsJuice",
+    link: "https://github.com/CatsJuice",
   },
 ];
 
@@ -207,10 +222,55 @@ useHead({
 <style lang="stylus">
 .page.page-about-us
   --contact-card-bg-color: #fff
-  --contact-card-footer-color: rgba(0, 42, 134, 1)
+  --contact-card-footer-color: brand(100)
   padding-bottom: fluid-value(40, 100)
 
   .section-hero
+    position relative
+    background-image: url(@/assets/about/hero-bg.png)
+    background-repeat: no-repeat
+    height: 580px
+    background-size: 846px 846px
+    background-position: center 70px
+
+    .limit-container
+      column-gap: 80px
+      row-gap: 16px
+
+    @media $mediaInMobile
+      height: 350px
+      background-size: 496px 496px
+      background-position: center 40px
+
+    @media (max-width: 700px)
+      height: 300px
+
+      .limit-container
+        align-items: flex-start
+        flex-direction: column
+
+    @media $mediaInXS
+      height: 300px
+      background-size: 345px 345px
+
+    &:before
+      content: ''
+      position absolute
+      bottom: 0
+      width: 100%
+      height: (140/580 * 100%)
+      background: linear-gradient(180deg, rgba(250, 250, 250, 0.00) 0%, var(--bg) 100%)
+
+    .hero-desc
+      font-size: fluid-value(20, 32, 744)
+      font-weight: 500
+      line-height: 125%
+      letter-spacing: (-1.28/32em)
+      color: black
+      max-width: 400px
+      white-space: pre
+
+  .section-intro
     .divider
       padding-bottom: fluid-value(50, 100)
       margin-bottom: fluid-value(16, 34)
@@ -225,18 +285,7 @@ useHead({
       margin-bottom: 50px
       text-align: center
 
-    .hero-desc
-      font-weight: 800;
-      font-size: fluid-value(24, 36, 744);
-      line-height: (44/36);
-      color: var(--primary-gray)
-      margin-bottom: 100px
-      text-align: center
-
-      @media $mediaInXS
-        margin-bottom: 50px
-
-  .section-title
+  .section-members .section-title
     font-weight: 800;
     font-size: 36px;
     line-height: 220.02%;
@@ -270,9 +319,15 @@ useHead({
       font-size: 24px;
       line-height: 29px;
 
+      @media $mediaInXS
+        font-size: 20px;
+
     .card-body
       margin: 38px 0 58px
       color: var(--primary-gray)
+
+      @media $mediaInXS
+        margin: 24px 0 28px
 
       ul
         font-size: 16px;
@@ -346,8 +401,8 @@ useHead({
       top: 50%
       left: var(--offset)
       right: 0
-      background: #1B1B1B
-      border: 1px solid rgba(255, 255, 255, 0.1)
+      background: #fff
+      border: 1px solid s('rgba(var(--v-primary-rgb), 0.1)')
       box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1)
       border-radius: 14px
       transform: translateY(-50%)
@@ -357,7 +412,7 @@ useHead({
       line-height: 220.02%;
 
     .visit-button
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.05);
       border-radius: 10px;
       padding: 3px 120px;
       font-size: 14px;
@@ -366,7 +421,7 @@ useHead({
       transition: 518ms
 
       &:hover
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(0, 0, 0, 0.1);
 
   .section-members
     .md-container
@@ -394,6 +449,10 @@ useHead({
 
       @media $mediaInXS
         flex: 0 0 46%
+        max-width: calc(50% - 10px)
+
+        .info-name
+          word-break: break-all
 
   /html.dark &
     --contact-card-bg-color: #1b1b1b

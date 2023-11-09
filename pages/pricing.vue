@@ -1,63 +1,153 @@
 <template lang="pug">
 .page.page-price
   .section.section-hero
-    .container.flex.flex-col
-      .hero-title {{ $t('pricePage.title') }}
+    .limit-container.flex.flex-col
+      h1.ma-0.hero-title {{ $t('pricePage.title') }}
       .hero-desc {{ $t('pricePage.desc') }}
   .section.section-prices
-    .container.flex.flex-col.items-center
+    .limit-container.flex.flex-col.items-center
+
+      .tab-bar.flex( :class="[`active-${currentTab}`]" )
+        .tab-active-bg
+        .tab.tab-monthly( @click="() => currentTab = 'monthly'" )
+          span {{ $t('pricePage.monthly') }}
+        .tab.tab-yearly( @click="() => currentTab = 'yearly'" )
+          span.flex
+            | {{ $t('pricePage.yearly') }}&nbsp;
+            span.color-emphasis {{ $t('pricePage.yearlyDiscount') }}
+
       .prices-list.flex
-        .price-card.type-community
+        .price-card.type-free
           .card-header
-            nuxt-link( :to="PATH.AFFiNE_GITHUB" target="_blank" rel="nofollow")
-              .github-button.flex.items-center.justify-center
-                nuxt-icon( name="github" ).text-30px
-            .card-title.size-small.style-thin.mt-5 {{ $t('pricePage.community') }}
-            nuxt-icon.icon-line( name="price-community-line" )
+            .planning-name {{ $t('pricePage.free') }}
+            .price-row.flex.items-end.gap-2
+              .price-amount $0
+              .per-time-tips.headline-6 {{ $t('pricePage.perMonth') }}
+            nuxt-link( :href="PATH.AFFINE_INSIDER" target="_blank")
+              el-button(
+                type="primary"
+                size="action"
+              ) {{ $t('pricePage.freeAction') }}
           .planning-list
-            .item {{ $t('pricePage.communityItemA') }}
-            .item {{ $t('pricePage.communityItemB') }}
-            .item {{ $t('pricePage.communityItemC') }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemUnlimitedLocalWorkspaces') }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemUnlimitedLoginDevices') }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemUnlimitedBlocks') }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemStorage', [10]) }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemMaxFileSize', [10]) }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemMaxMembers', [3]) }}
 
         .price-card.type-pro
-          .card-header.with-bg
-            .card-icon
-              nuxt-icon.icon-circles( name="price-pro" filled )
-            .card-title {{ $t('pricePage.pro') }}
-            .early-access-label {{ $t('earlyAccess') }}
-          .planning-list
-            .item {{ $t('pricePage.proItemA') }}
-            .item {{ $t('pricePage.proItemB') }}
-            .item {{ $t('pricePage.proItemC') }}
-          nuxt-link.contact-us-button( :to="PATH.PRICING_PRO_EARLY_ACCESS" target="_blank" ) {{ $t('getEarlyAccess')  }}
+          .card-header
+            .planning-name.flex.items-center.gap-2
+              | {{ $t('pricePage.pro') }}
+              transition( name="fade" :duration="300" )
+                .discount-tag.color-emphasis( v-if="isYearly" ) {{ $t('pricePage.yearlyDiscount') }}
 
-        .price-card.type-team
-          .card-header.with-bg
-            .card-icon
-              nuxt-icon.icon-triangles( name="price-team" filled )
-            .card-title {{ $t('pricePage.team') }}
+            .price-row.flex.items-end.gap-2
+              .price-amount {{ currentTab === 'yearly' ? '$6.75' : '$7.99' }}
+              .per-time-tips.headline-6 {{ $t('pricePage.perMonth') }}
+            nuxt-link( :href="currentTab === 'yearly' ? PATH.PRICING_PRO_YEARLY : PATH.PRICING_PRO_MONTHLY" target="_blank" rel="nofollow" )
+              el-button(
+                type="primary"
+                size="action"
+              ) {{ $t('pricePage.proAction') }}
           .planning-list
-            .item {{ $t('pricePage.teamItemA') }}
-            .item {{ $t('pricePage.teamItemB') }}
-            .item {{ $t('pricePage.teamItemC') }}
-          nuxt-link.contact-us-button( :to="PATH.PRICING_CONTACT_FORM" target="_blank" ) {{ $t('contactUsNow')  }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemUnlimitedLocalWorkspaces') }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemUnlimitedLoginDevices') }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemUnlimitedBlocks') }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemStorage', [100]) }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemMaxFileSize', [100]) }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemMaxMembers', [10]) }}
+        .price-card.type-team
+          .card-header
+            .planning-name {{ $t('pricePage.team') }}
+            .price-row.flex.items-center.gap-2
+              .coming-soon-tips {{ $t('comingSoon') }}...
+            nuxt-link( :href="PATH.PRICING_CONTACT_FORM" target="_blank" rel="nofollow" )
+              el-button(
+                type="primary"
+                size="action"
+              ) {{ $t('pricePage.contactSales') }}
+          .planning-list
+            .item
+              .item-icon
+                nuxt-icon( name="dot" filled)
+              .item-body {{ $t('pricePage.teamItemA') }}
+            .item
+              .item-icon
+                nuxt-icon( name="dot" filled)
+              .item-body {{ $t('pricePage.teamItemB') }}
+            .item
+              .item-icon
+                nuxt-icon( name="dot" filled)
+              .item-body {{ $t('pricePage.teamItemC') }}
 
         .price-card.type-enterprise
-          .card-header.with-bg
-            nuxt-icon.icon-email( name="mail-alt" filled )
-            .card-title.size-small {{ $t('pricePage.enterprise') }}
+          .card-header
+            .planning-name {{ $t('pricePage.enterprise') }}
+            .price-row.flex.items-center.gap-2
+              .coming-soon-tips {{ $t('comingSoon') }}...
+            nuxt-link( :href="PATH.PRICING_CONTACT_FORM" target="_blank" rel="nofollow" )
+              el-button(
+                type="primary"
+                size="action"
+              ) {{ $t('pricePage.contactSales') }}
           .planning-list
-            .item {{ $t('pricePage.enterpriseItemA') }}
-            .item {{ $t('pricePage.enterpriseItemB') }}
-          nuxt-link.contact-us-button( :to="PATH.PRICING_CONTACT_FORM" target="_blank" ) {{ $t('contactUsNow')  }}
-
-      .wip-tips {{ $t('pricePage.wipTips') }}
+            .item
+              .item-icon
+                nuxt-icon( name="dot" filled)
+              .item-body {{ $t('pricePage.enterpriseItemA') }}
+            .item
+              .item-icon
+                nuxt-icon( name="dot" filled)
+              .item-body {{ $t('pricePage.enterpriseItemB') }}
 </template>
 
 <script lang="ts" setup>
 import { PATH, INFO } from '~/utils/constants'
 
 const { t } = useI18n()
+
+const currentTab = ref('monthly')
+
+const isMonthly = computed(() => currentTab.value === 'monthly')
+const isYearly = computed(() => currentTab.value === 'yearly')
 
 useHead({
   title: t('price')
@@ -66,64 +156,160 @@ useHead({
 
 <style lang="stylus">
 .page.page-price
-  .section-hero
-    padding-top: fluid-value(42, 143)
-    padding-bottom: fluid-value(26, 124)
-    padding-left: fluid-value(44, 100)
-    padding-right: fluid-value(44, 100)
+  .fade-enter-active,
+  .fade-leave-active
+    transition: opacity 0.3s ease
 
-    .container
-      --width: 780px
+  .fade-enter-from,
+  .fade-leave-to
+    opacity: 0
+
+  .color-emphasis
+    color: #1E96EB
+
+  .discount-tag
+    border-radius: 4px
+    padding: 0px 4px
+    background: var(--brand-secondary, #EFFAFF)
+    font-size: 12px
+    line-height: 20px
+    font-weight: 500
+
+  .section-hero
+    padding-top: fluid-value(30, 40)
+    padding-bottom: fluid-value(30, 40)
 
   .hero-title
-    padding-bottom: fluid-value(28, 29)
-    font-weight: 800
-    font-size: fluid-value(20, 24)
-    line-height: 24px
+    padding-bottom: fluid-value(16, 16)
+    font-weight: 500
+    font-size: fluid-value(32, 48)
+    line-height: 119.444%
+    letter-spacing: -0.04em
+    max-width: fluid-value(450, 561)
+    color: black
 
   .hero-desc
     white-space: pre-line
-    font-size: fluid-value(15, 16)
-    line-height: 24px
+    font-size: fluid-value(16, 20)
+    line-height: 135%
+    max-width: fluid-value(450, 590)
+    letter-spacing: -0.02em
+    font-weight: 500
 
   .wip-tips
-    margin-top: fluid-value(32, 75.7)
-    margin-left: -8px
-    margin-right: -8px
-    margin-bottom: fluid-value(12, 75.7)
-    font-size: 16px
-    line-height: 24px
+    margin-top: 24px
+    margin-bottom: 24px
+    font-size: 14px
+    line-height: 20px
+
+  .tab-bar
+    --gap: 2px
+    position relative
+    border-radius: 10px
+    background: #0000000A
+    width: 76%
+    max-width: 532px
+    margin-bottom: fluid-value(24, 48)
+
+    @media $mediaInXS
+      // --gap: 2px
+
+    .color-emphasis
+      font-weight: 400
+
+    &.active-monthly
+      .tab-monthly
+        color: #424149
+
+    &.active-yearly
+      .tab-yearly
+        color: #424149
+      .tab-active-bg
+        transform: translateX(calc(100% - var(--gap) * 2))
+
+    .tab-active-bg
+      position absolute
+      width: 50%
+      top: var(--gap)
+      bottom: var(--gap)
+      left: var(--gap)
+      background: white;
+      border-radius: 8px;
+      transition: 318ms
+      box-shadow: 0px 0px 4px 0px rgba(66, 65, 73, 0.14);
+
+    .tab
+      position relative
+      z-index: 2
+      flex: 1
+      font-weight: 600
+      font-size: 12px
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 32px
+      cursor pointer
+      color: #8E8D91
+      transition color 318ms
 
   .section-prices
-    padding-left: fluid-value(20, 60)
-    padding-right: fluid-value(20, 60)
+    margin-top: 0
 
   .prices-list
     max-width: 1300px
     width: 100%
-    gap: 32px
+    gap: 16px
     flex-wrap: wrap
-    align-items: flex-start
-
-    @media (max-width: 1400px)
-      max-width: 780px
 
   .price-card
     flex: 1
-    min-width: 290px
-    padding: 32px 20px;
+    min-width: 100px
+    padding: 20px 16px;
     gap: 10px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-    border: 1px solid #202020;
+    background: white;
+    border: 1px solid #E3E2E4;
     border-radius: 11px;
     display: flex
     flex-direction: column
     justify-content: flex-start
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.05)
+
+  .planning-name
+    font-weight: 500
+    line-height: 1.5
+    font-size: 16px
+    color: var(--primary-deep)
+    margin-bottom: 10px
+
+  .price-row
+    height: 38.5px
+    margin-bottom: 10px
+
+  .price-amount
+    font-size: 32px
+    font-weight: 700
+    line-height: normal
+    letter-spacing: -0.02em
+    color: var(--primary-deep)
+
+  .coming-soon-tips
+    color: #8E8D91
+    font-size: 16px
+    font-weight: 500
+
+  .per-time-tips
+    color: #8E8D91
+
+  @media (max-width: 1000px)
+    .prices-list
+      max-width: 100%
+
+    .price-card
+      min-width: 300px
 
   .price-card.type-pro
     --label-bg: 1
     position relative
-    background: none
 
     &:before,
     &:after
@@ -140,7 +326,7 @@ useHead({
       opacity: var(--label-bg)
 
     &:after
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.80) 0.01%, rgba(0, 0, 0, 0.50) 100%);
+      background: linear-gradient(180deg, rgba(240, 240, 240, 0.10) 0%, rgba(255, 255, 255, 0.80) 0.01%, rgba(255, 255, 255, 0.50) 100%);
       opacity: calc(1 - var(--label-bg))
 
     .early-access-label
@@ -174,13 +360,6 @@ useHead({
       &:hover
         background: lighten(#006BCC, 10%) !important
 
-    .card-header
-      background: rgba(0, 133, 255, 0.08)
-
-      .icon-circles
-        font-size: 230px
-        transition: 318ms
-
     &:hover
       --label-bg: 0
 
@@ -189,6 +368,7 @@ useHead({
 
       .contact-us-button
         background: #006BCC;
+        color: white
         box-shadow: 0px 4px 29px 0px rgba(255, 255, 255, 0.15), 0px 4px 32px 0px rgba(0, 56, 255, 0.27)
 
       .card-header
@@ -197,24 +377,22 @@ useHead({
           top: -50%
 
   .card-header
-    aspect-ratio: 1/1
     width: 100%
     display: flex
     flex-direction: column
     justify-content: space-between
-    max-height: 168px
     position: relative
-    margin-bottom: 20px
     overflow: hidden
+    margin-bottom: 10px
 
     a
-      display: inline-flex
+      display: flex
 
-      &:hover
-        opacity 0.9
+      button
+        width: 100%
 
     &.with-bg
-      background: rgba(255, 255, 255, 0.05)
+      background: rgba(0, 0, 0, 0.02)
       border-radius: 5px
       padding: 15px
 
@@ -238,7 +416,7 @@ useHead({
     border-radius: 50%
 
   .card-title
-    background: linear-gradient(180deg, #FFFFFF 0%, #B3B3B3 100%);
+    background: linear-gradient(180deg, #000 0%, #5f5f5f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -254,7 +432,7 @@ useHead({
     &.style-thin
       font-weight: 700;
 
-  .type-community
+  .type-free
     .card-title
       padding-bottom: 15px
 
@@ -273,14 +451,20 @@ useHead({
     display: flex
     flex-direction: column
     gap: 8px
+    padding-bottom: 60px
 
     .item
-      padding: 10px
+      display: flex
+      gap: 8px
+      padding: 0
+      font-size: 14px
 
-  .coming-soon-tips,
+      .nuxt-icon
+        font-size: 16px
+
   .contact-us-button
     text-align: center
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
     border-radius: 10px;
     font-size: 15px;
     height: 36px;
@@ -288,10 +472,10 @@ useHead({
     margin-top: 12px
 
   .contact-us-button
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(2px);
     transition: 318ms
 
     &:hover
-      background: rgba(255, 255, 255, 0.23);
+      background: rgba(0, 0, 0, 0.1);
 </style>

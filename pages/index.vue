@@ -2,30 +2,20 @@
 .page.page-home.page-overview
   svg-defs
 
-  .section-hero
-    .base-container.hero-container
-      overview-hero
+  overview-hero-v3
 
-  .section-trusted-by
+  .section-bg-wrapper
     overview-trusted-by
 
-  .section-consolidate-workflow
-    overview-consolidate-workflow
+    overview-hyperfused-platform
 
-  .section-write-draw-plan
-    overview-write-draw-plan
+    overview-features
 
-  .section-build-in-public
-    overview-build-in-public
+    overview-build-in-public-light
 
-  .section-user-stories
-    overview-user-stories
+    overview-user-stories-light
 
-  .section-build-with-module
-    overview-build-with-module
-
-  .section-sns
-    overview-sns
+    overview-slogan-banner
 
 </template>
 
@@ -46,17 +36,23 @@ gsap.registerPlugin(ScrollTrigger)
 <style lang="stylus">
 .section-title
   margin: 0
-  font-weight: 800;
-  font-size: fluid-value(32, 64);
-  line-height: (77/64);
+  font-weight: 500;
+  font-size: fluid-value(32, 60);
+  line-height: (65/60);
   text-align: center
+  letter-spacing: -0.068em;
+
+.section-grad-title
+  background-image: linear-gradient(91deg, #474747 20.12%, #000 55.27%, #474747 82.61%)
+  background-clip: text;
+  color: transparent
 
 .section-grad2-title
   margin: 0
   font-weight: 800;
   font-size: fluid-value(20, 64);
   line-height: (77/64);
-  background-image: linear-gradient(180deg, #0E55EE 0%, #002A86 100%);
+  background-image: linear-gradient(180deg, #1E96EB 0%, #1E96EB 100%);
   background-clip: text;
   color: transparent
 
@@ -66,6 +62,11 @@ gsap.registerPlugin(ScrollTrigger)
 .page-overview
   color: var(--primary)
   font-size: fluid-value()
+
+  .section-bg-wrapper
+    background: var(--bg)
+    position relative
+    z-index: 2
 
   @media $mediaInMobile
     padding-top: 10px
