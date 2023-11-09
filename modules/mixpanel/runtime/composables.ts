@@ -1,4 +1,4 @@
-import { useNuxtApp } from '#app'
+import { useNuxtApp } from '#imports'
 
 export function useMixpanel() {
   return useNuxtApp().$mixpanel
