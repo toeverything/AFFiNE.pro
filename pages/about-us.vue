@@ -32,34 +32,26 @@
   .section.section-members
     .md-container
       .section-title {{ $t('aboutUsPage.memberTitle') }}
-      .section-label {{ $t('aboutUsPage.coreLabel') }}
       .members-list
         member-card(
           v-for="member in coreMembers"
           :member="member"
         )
-
-      .section-title {{ $t('aboutUsPage.engineeringTitle') }}
-      .members-list
         member-card(
           :key="member.avatar"
           v-for="member in engineeringMembers"
           :member="member"
         )
-      .section-title {{ $t('aboutUsPage.communityTitle') }}
-      .members-list
         member-card(
           v-for="member in communityMembers"
           :member="member"
         )
-      .section-title {{ $t('aboutUsPage.productTitle') }}
-      .members-list
         member-card(
           v-for="member in productMembers"
           :member="member"
         )
 
-  overview-slogan-banner
+  overview-slogan-banner.mt-10
 </template>
 
 <script lang="ts" setup>
