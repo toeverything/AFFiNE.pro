@@ -130,12 +130,12 @@ onDeactivated(() => {
       top: 0
 
   .spline-container
-    width: 1920px
-    height: 1100px
+    width: 1600px
+    aspect-ratio: 1920/1100
     position absolute
-    top: -210px
+    top: -110px
     left: 50%
-    transform: translateX(-47.5%)
+    transform: translateX(-50%)
     // z-index: 4
     z-index: -1
     pointer-events: none
