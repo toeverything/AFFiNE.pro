@@ -146,9 +146,13 @@ const currentYear = new Date().getFullYear()
       font-size: 24px
       color: rgba(119, 117, 125, 0.60)
 
+    .link-twitter
+      .sns-icon
+        transform: scale(0.95)
+
     .link-twitter:hover
       .sns-icon
-        color: rgba(29, 161, 242, 1)
+        color: #000
 
     .link-github:hover
       .sns-icon
