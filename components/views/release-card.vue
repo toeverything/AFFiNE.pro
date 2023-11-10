@@ -23,7 +23,7 @@
 
     .download-other-version(
       @click="isShowOtherVersionModal = true"
-    ) Click here to download other version
+    ) Click here to download other versions
 
     .other-version.hidden( v-if="hasAssets" )
       .other-version-title.flex.items-center(
