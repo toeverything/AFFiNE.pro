@@ -15,8 +15,8 @@
         )
           nuxt-icon.icon-menu( :name="isOpen ? 'menu-close' : 'hamburg-menu'" )
 
-    el-collapse-transition
-      .collapsed-menu( v-show="isOpen" )
+    div
+      .collapsed-menu( :style="{ maxHeight: isOpen ? 'var(--h)' : '0px' }" )
         .menu-list
           //- .nav-item
           //-   nuxt-link( to="/" ) {{ $t('home') }}
@@ -49,26 +49,23 @@
 
 <script setup lang="ts">
 import { onClickOutside } from '@vueuse/core'
-import { PATH, CONFIG } from '~/utils/constants'
-const { locale, locales, localeProperties, setLocaleCookie } = useI18n()
-
-const props = defineProps<{
-  y: number
-}>()
+const { locale, setLocaleCookie } = useI18n()
 
 const menuHandler = ref(null)
 const ignoreElRef = ref(null)
 const isOpen = ref(false)
-const isOpenLangList = ref(false)
 
-onClickOutside(menuHandler, (event) => {
-  isOpen.value = false
-}, { ignore: [ ignoreElRef ] })
+onClickOutside(
+  menuHandler,
+  (event) => {
+    isOpen.value = false
+  },
+  { ignore: [ignoreElRef] },
+)
 
 watch(locale, () => {
   setLocaleCookie(locale.value)
 })
-
 </script>
 
 <style lang="stylus">
@@ -111,12 +108,15 @@ watch(locale, () => {
       border-bottom-color: rgba(0, 0, 0, 0.10);
 
     .collapsed-menu
+      transition: max-height 0.3s ease-in-out
       // background: var(--secondary)
       overflow-y: scroll
-      height: s('calc(100dvh - var(--navbar-height))')
+      --h: s('calc(100dvh - var(--navbar-height))')
+      height: var(--h)
 
       .menu-list
         padding: 0 32px
+        height: 100%
 
         .nav-item
           font-weight: 500;
