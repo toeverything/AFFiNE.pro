@@ -65,7 +65,7 @@
   el-dialog.other-version-modal(
     v-model="isShowOtherVersionModal"
     width="346px"
-    title="Other Version"
+    title="Other Versions"
     :lock-scroll="false"
     append-to-body
   )

@@ -98,7 +98,7 @@ const stories: UserStory[] = [
       width: 1440px
       padding-left: 12px
       padding-right: 12px
-      animation panningLoop 24s linear infinite both
+      animation panningLoop 40s linear infinite both
       vertical-align: top;
       z-index 2
 
