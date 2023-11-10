@@ -79,7 +79,7 @@
       +planIntro
       .video-part
         .video-card.mobile-card
-          img( alt="plan cover" :src="drawCoverUrl" )
+          img( alt="plan cover" :src="planCoverUrl" )
 </template>
 
 <script setup lang="ts">
