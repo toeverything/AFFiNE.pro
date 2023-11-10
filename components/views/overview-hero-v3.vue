@@ -47,7 +47,7 @@ const isInited = ref(false)
 const el = ref()
 const canvasRef = ref()
 const planCheckboxValue = ref(true)
-const isPlayVideo = ref(false)
+const isPlayVideo = ref(isMobile)
 const scrollProgress = ref(0)
 
 let app: Application
@@ -84,6 +84,7 @@ const setupScrollTrigger = async () => {
       start: "top top",
       end: "bottom 20%",
       onUpdate (self) {
+        if (isMobile) return
         isPlayVideo.value = self.progress > 0.5
       }
     },
