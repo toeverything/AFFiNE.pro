@@ -260,6 +260,7 @@ useHead({
     width: 100%
     gap: 16px
     flex-wrap: wrap
+    padding-bottom: 16px
 
   .price-card
     flex: 1
@@ -314,7 +315,9 @@ useHead({
   .price-card.type-pro
     --label-bg: 1
     position relative
-    background: linear-gradient(180deg, #9DD7FF -38.5%, #FFF 41.04%, #FFF 98%);
+    top: -1px
+    border: 3px solid var(--brand-brand, #1E96EB)
+    box-shadow: 0px 5px 10px 0px rgba(30, 150, 235, 0.20)
 
     .pro-label
       border-radius: 4px
