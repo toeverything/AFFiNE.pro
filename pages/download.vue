@@ -181,7 +181,7 @@ const loadData = async () => {
 
   try {
     tabs.value = await primaryAPI.getReleaseTabs()
-    tabs.value = tabs.value.filter(el => el.releaseMap.stable)
+    tabs.value = tabs.value.filter(el => el.releaseMap.stable?.assets?.length)
   } catch(error) {
     // @TODO: handle request error
     console.log('[download] loadData error', error)
