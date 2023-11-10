@@ -154,6 +154,9 @@ const handleCopyAddressClick = () => {
         background-size: contain
         padding: 9% 12.5% 13%
 
+        @media (max-width: 500px)
+          background-image: url(/overview/price-model-icons.png)
+
         .icon
           flex: 1
           text-align: center
