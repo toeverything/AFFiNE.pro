@@ -80,7 +80,7 @@ export default {
     moduleDrawItemB: 'Frame your ideas into slides for an engaging Presentation',
     moduleDrawItemC: 'No constraints, limited only by your imagination',
     modulePlanLabel: 'Plan',
-    modulePlanTitle: 'Plan, Track, and Collaborate Efficiently',
+    modulePlanTitle: 'Plan, track, and collaborate efficiently',
     modulePlanDesc: 'Stay on top of your workload and achieve more in less time.',
     modulePlanItemA: 'Stay on top of your workload and achieve more in less time',
     privacyFirstTitle: 'Privacy Focused & Local-first',
