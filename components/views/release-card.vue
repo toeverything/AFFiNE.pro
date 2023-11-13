@@ -11,19 +11,27 @@
     .card-icon(
       :style="{ backgroundImage: `url(${icon})` }"
     )
-    .card-title Download AFFiNE
+    .card-title Download AFFiNE {{ tag_name?.substring(1) }}
     .card-desc.text-center( v-html="desc" )
-    brand-glow-button(
-      @click="() => handleDownloadClick(defaultAsset, title)"
-      :needShadow="!tag_name?.includes('canary')"
-      :disabled="!hasAssets"
-    )
-      | {{ hasAssets ? $t('download') : $t(isObsolete ? 'outdated' : 'comingSoon') }}
-      | {{ $t('for') }}{{ defaultAssetPlatformName }}
+    .button-group.flex.flex-col.gap-24px
+      brand-glow-button(
+        @click="() => handleDownloadClick(defaultAsset, title)"
+        :needShadow="!tag_name?.includes('canary')"
+        :disabled="!hasAssets"
+      )
+        | {{ hasAssets ? $t('download') : $t(isObsolete ? 'outdated' : 'comingSoon') }}
+        | {{ $t('for') }}{{ defaultAssetPlatformName }}
 
-    .download-other-version(
-      @click="isShowOtherVersionModal = true"
-    ) Click here to download other versions
+      .outline-button(
+        @click="isShowOtherVersionModal = true"
+      ) Download other versions of {{ tag_name?.substring(1) }}
+
+    nuxt-link.download-other-version.gap-4px(
+      :to="`${PATH.AFFiNE_GITHUB}/releases`"
+      target="_blank"
+    )
+      nuxt-icon( name="github" )
+      | Get other versions on GitHub
 
     .other-version.hidden( v-if="hasAssets" )
       .other-version-title.flex.items-center(
@@ -89,6 +97,7 @@
 </template>
 
 <script setup lang="ts">
+import { PATH } from '~/utils/constants'
 import { useMouseInElement, useDateFormat } from '@vueuse/core'
 
 const el = ref(null)
@@ -243,7 +252,7 @@ onBeforeMount(async () => {
     .card-title
       position: relative
       font-weight: 500;
-      font-size: fluid-value(36, 40)
+      font-size: fluid-value(24, 40)
       line-height: 1
       line-height: 119.444%
       letter-spacing: (-1.6/40em)
@@ -273,6 +282,25 @@ onBeforeMount(async () => {
       line-height: (20/16);
       max-width: 418px
       margin-bottom: 14px
+
+  .outline-button
+    color: black
+    display flex
+    align-items: center
+    justify-content: center
+    height: fluid-value(38, 52)
+    padding: 0 fluid-value(20, 50)
+    font-weight: 500;
+    font-size: fluid-value(14, 20)
+    border-radius: 26px
+    border: 2px solid var(--black-quaternary, #CCC)
+    transition: 150ms cubic-bezier(.42, 0, .58, 1)
+    cursor pointer
+
+    active-scale()
+
+    &:hover
+      background: rgba(0, 0, 0, 0.04)
 
   .brand-glow-button
     padding: 0 65px

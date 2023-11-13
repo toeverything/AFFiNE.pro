@@ -203,6 +203,8 @@ await loadData()
     padding: fluid-value(80, 180, 390, 560) 20px
 
     .download-other-version
+      display flex
+      align-items: center
       transition: 218ms
       font-size: 14px;
       font-weight: 500;
