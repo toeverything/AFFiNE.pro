@@ -80,14 +80,13 @@ defineProps<{
     &:after
       display none
 
+  active-scale()
+
   &:not(.is-disabled)
     active-scale()
 
     &:hover
       --background-color: #424149
       // box-shadow: 0px 4px 80px #1D62F4, 0px 4px 21px rgba(14, 85, 238, 0.54), 0px 4px 84px rgba(138, 175, 255, 0.3);
-
-    &:active
-      transform: translateY(2px)
 
 </style>
