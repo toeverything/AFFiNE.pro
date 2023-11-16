@@ -14,8 +14,7 @@
       h3.feature-title
         span.hidden Write&nbsp;
         | {{ $t('overviewPage.moduleWriteSubtitle') }}
-      p.feature-desc {{ $t('overviewPage.moduleWriteItemA') }}
-      p.feature-desc {{ $t('overviewPage.moduleWriteItemB') }}
+      p.feature-desc {{ $t('overviewPage.moduleWriteDesc') }}
 
   mixin drawIntro
     .intro-part
@@ -40,9 +39,7 @@
             nuxt-icon(
               filled name="draw-creativity-mark"
             )
-      p.feature-desc {{ $t('overviewPage.moduleDrawItemA') }}
-      p.feature-desc {{ $t('overviewPage.moduleDrawItemB') }}
-      p.feature-desc {{ $t('overviewPage.moduleDrawItemC') }}
+      p.feature-desc {{ $t('overviewPage.moduleDrawDesc') }}
 
   mixin planIntro
     .intro-part
@@ -54,7 +51,7 @@
           animationLink="/lottie-files/feature-plan.json"
         )
       h3.feature-title {{ $t('overviewPage.modulePlanTitle') }}
-      p.feature-desc {{ $t('overviewPage.modulePlanItemA') }}
+      p.feature-desc {{ $t('overviewPage.modulePlanDesc') }}
 
   .feature-section.feature-write
     .limit-container.flex
