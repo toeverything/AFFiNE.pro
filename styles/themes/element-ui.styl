@@ -174,7 +174,7 @@ html.dark {
   max-width: 90vw;
   min-width: 300px;
   border: none;
-  border-radius: 3px;
+  border-radius: 20px;
   padding-top: 12px;
   padding-bottom: 16px;
 
@@ -183,8 +183,8 @@ html.dark {
   }
 
   &--info {
-    background-color: #f7f8fc;
-    box-shadow: inset 0px -2px 0px #dfe4ef;
+    background-color: #fbfbfc;
+    box-shadow: inset 0px -2px 0px #f2f2f5;
     .el-message__content {
       color: #333 !important;
     }
@@ -200,3 +200,39 @@ html.dark {
     box-shadow: inset 0px -2px 0px #c2e1b2;
   }
 }
+
+body
+  .el-dropdown
+    &__popper
+      background-color: #fbfbfc;
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 0px 0px 12px rgba(66,65,73,.14),inset 0px 0px 0px 0.5px #e3e3e4;
+
+      .el-popper__arrow
+        display: none
+
+    &-menu
+      background-color: #fbfbfc;
+      padding: 8px;
+
+      .divider
+        background-color: #e3e2e4;
+        height: 1px;
+        margin-bottom: 8px;
+        margin-top: 8px;
+
+      &__item
+        border-radius: 4px
+        padding: 5px 10px
+        font-size: 15px
+        font-weight: 500
+        transition: all 0.3s ease 0s
+
+        &:not(.is-disabled):hover,
+        &:not(.is-disabled):focus
+          background: rgba(0,0,0,.04)
+          color: var(--primary)
+
+      & + .el-dropdown-menu__item
+        margin-top: 4px

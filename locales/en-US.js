@@ -198,7 +198,7 @@ export default {
 
   notFoundPage: {
     title: '404 Not Found',
-    desc: 'Sorry, the page you are looking for doesn’t exist or has been moved',
+    desc: 'Sorry, the page you are looking for doesn’t exist or has been moved.',
     backToHome: 'Back to Home',
   },
 
