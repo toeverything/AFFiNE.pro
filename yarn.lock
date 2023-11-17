@@ -2745,10 +2745,10 @@ acorn@^8.6.0, acorn@^8.8.1, acorn@^8.8.2:
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.8.2.tgz"
   integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
 
-affine-reader@^2.0.13:
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/affine-reader/-/affine-reader-2.0.13.tgz#5f39c825ecedc194610d8027932bc846b8455c2d"
-  integrity sha512-m9Nl/M42SfOcVUHHAz38umkoZIKDFw91k8O52dDI0UPHJJclj6FOtCtN5Ug8sJWjWDc8mSt45Wh6JqWGDbDWgA==
+affine-reader@^2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/affine-reader/-/affine-reader-2.0.14.tgz#85a5d58c52586f405df506699fd9b60342b90192"
+  integrity sha512-HRWBXNuNqJSXV48eFihqB1pr/wIPJpU1PV9LKZ3TCSgyai5uVklQZkhhLcYYu1gfa+xwZBF4h7jGRyqyA+Ye8Q==
 
 agent-base@6:
   version "6.0.2"
