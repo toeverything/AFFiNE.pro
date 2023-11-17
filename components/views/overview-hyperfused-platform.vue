@@ -29,10 +29,7 @@
           .stay-focused-flow-placeholder
           //- stay-focused-flow
           client-only
-            vue3-lottie.stay-focused-flow-lottie(
-              :autoPlay="!$device.isMobile"
-              :playOnHover="!$device.isMobile"
-              loop
+            lottie-hover-animation.stay-focused-flow-lottie(
               :animationLink="$device.isMobile ? '/lottie-files/stay-focused-flow-mobile.json' : '/lottie-files/stay-focused-flow.json'"
             )
           .card-mini-title {{ $t('overviewPage.consolidateWorkflowAffine') }}
@@ -41,10 +38,7 @@
           .card-wave-wrapper
             //- .card-bg
             client-only
-              vue3-lottie.card-wave(
-                :autoPlay="!$device.isMobile"
-                :playOnHover="!$device.isMobile"
-                loop
+              lottie-hover-animation.card-wave(
                 animationLink="/lottie-files/local-first.json"
               )
           .card-cover
