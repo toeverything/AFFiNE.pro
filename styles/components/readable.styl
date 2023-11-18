@@ -1,7 +1,7 @@
 .readable
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: fluid-value(16, 20)
+  line-height: 162.5%
+  color: black
 
   > *:empty
     display: none
@@ -9,19 +9,28 @@
   > :first-child
     margin-top: 0
 
+  strong
+    font-weight: 600
+
   img, iframe
     max-width: 100%;
     display: block;
     margin: 0px auto;
 
-  p {
-    font-size: 16px;
-    line-height: 24px;
-  }
+  h1
+    font-size: 1.2em
+  h2
+    font-size: 1em
+  h3
+    font-size: 1em
+
+  h1, h2, h3, h4, h5, h6
+    line-height: 133%
+    font-weight: 600
 
   a
     word-wrap: break-word
-    color: #599BFE
+    color: black
     text-decoration: underline
 
     &:hover

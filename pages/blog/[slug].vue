@@ -1,25 +1,22 @@
 <template lang="pug">
 .page.page-blog-article(
 )
+  .scroll-progress(
+    :style="{ '--progress': scrollProgress }"
+  )
   async-container(
     v-bind="asyncOptions"
     :hasContent="article"
   )
-    .jumbotron-container
-      h1.article-title {{ article.title }}
-      .article-desc( v-if="article.description" ) {{ article.description }}
-
     .main-container
       .all-posts-handler.flex.items-center( @click="handleReturnClick" )
-        nuxt-icon( name="ArrowRightSmall" )
+        .icon-circle-wrapper.flex.items-center.justify-center
+          nuxt-icon( name="ArrowRightSmall" )
         | {{ $t('allPosts') }}
-      nuxt-img.article-cover.mb-28px(
-        v-if="article.cover"
-        format="webp"
-        width="1600"
-        height="800"
-        :src="article.cover"
-      )
+
+      h1.article-title {{ article.title }}
+      //- .article-desc( v-if="article.description" ) {{ article.description }}
+
       .article-tag-row.flex.gap-4
         .article-tag( v-for="tag in article.tags" ) {{ tag }}
 
@@ -32,17 +29,31 @@
               v-if="user.avatar"
               :style="{ backgroundImage: `url(${user.avatar})` }"
             )
-            .user-name {{ user.name }}
+            .body
+              .user-name {{ user.name }}
+              .updated-info {{ publishDate }}
 
-      .updated-info.mt-15px Updated: {{ publishDate }}
+      .divider
+
+      nuxt-img.article-cover(
+        v-if="article.cover"
+        format="webp"
+        width="1600"
+        height="800"
+        :src="article.cover"
+      )
 
       .article-detail.readable(
         v-html="html"
       )
+
+  overview-slogan-banner(
+    v-if="article"
+  )
 </template>
 
 <script lang="ts" setup>
-import { useDateFormat } from '@vueuse/core'
+import { useDateFormat, useScroll } from '@vueuse/core'
 import { PATH } from '~/utils/constants'
 import { primaryAPI } from '~/apis'
 import { USER_MAP } from '~/services/blog/userMap'
@@ -51,6 +62,7 @@ import type { ContentFileMeta } from '~/services/blog/resolveContentFile'
 
 const article = ref<ContentFileMeta>()
 const html = ref('')
+const scrollProgress = ref(0)
 const store = useStore()
 const route = useRoute()
 const router = useRouter()
@@ -125,8 +137,16 @@ await loadData()
 
 useHead(pageMeta)
 
+const listenToScroll = () => {
+  const { y } = useScroll(document)
+  watch(y, () => {
+    const totalY = document.body.scrollHeight - window.innerHeight
+    scrollProgress.value = (y.value/totalY) * 100
+  })
+}
 onMounted(() => {
   isFromList.value = store.context.lastPath === '/blog' && window.history.state.back === '/blog'
+  listenToScroll()
 })
 
 const handleReturnClick = () => {
@@ -142,8 +162,21 @@ const handleReturnClick = () => {
 <style lang="stylus">
 .page.page-blog-article
   min-height: 10vh
-  --tag-color: var(--brand)
-  --tag-bg-color: #fff
+  --tag-color: #fff
+  --tag-bg-color: #000
+
+  .scroll-progress
+    position fixed
+    z-index: 3
+    left: 0
+    height: 3px
+    top: var(--navbar-height)
+    background: brand(100)
+    width: calc(var(--progress) * 1.01%)
+    margin-top: 4px
+
+    @media (max-width: 960px)
+      margin-top: 1px
 
   .jumbotron-container
     width: 100%
@@ -152,97 +185,107 @@ const handleReturnClick = () => {
     padding: fluid-value(34, 64) fluid-value(16, 64)
     text-align: center
 
-    .article-title
-      font-weight: 800
-      font-size: fluid-value(20, 54)
-      line-height: 58/48
-      margin: 0
-      margin-bottom: 10px
-
-    .article-desc
-      padding: 0 64px
-      color: var(--primary-gray)
-      font-weight: 500
-      font-size: fluid-value(14, 24)
-      line-height: 1
-
-      @media $mediaInXS
-        padding: 0px
-
   .main-container
     position relative
-    margin-top: 16px
-    padding: 0 fluid-value(16, 40)
+    padding: 0 20px
+    padding-top: 40px
     width: 100%
     margin: auto
-    max-width: 880px
+    max-width: 720px
 
   .article-tag
-    border-radius: 8px
-    padding: 5px 15px
+    border-radius: 30px
+    padding: 2px 12px
     font-weight: 500
-    font-size: 14px
+    font-size: 12px
     line-height: 17px
+    letter-spacing: 1.2px;
+    font-weight: 600;
     background: var(--tag-bg-color)
+    margin-bottom: 10px
     color: var(--tag-color)
 
   .article-cover
     width: 100%
-    aspect-ratio: 800/400
+    aspect-ratio: 493/300
+    border-radius: 12px
     object-fit: cover
     object-position: center
     vertical-align: middle
     height: auto !important
     background: var(--el-fill-color-light)
+    margin-bottom: fluid-value(8, 20)
+
+  .article-title
+    font-weight: 500
+    font-size: fluid-value(32, 36)
+    line-height: 119.444%
+    margin-top: 32px
+    margin-bottom: 18px
+    color: #000
+
+  .article-desc
+    color: var(--primary-gray)
+    font-weight: 500
+    font-size: fluid-value(14, 24)
+    line-height: 1
+
+    @media $mediaInXS
+      padding: 0px
+
+  .divider
+    height: 0.5px
+    background var(--light-detail-color-border-color, #E3E2E4);
+    margin: 32px 0
+    margin-bottom: fluid-value(24, 32)
 
   .users-row
     margin-top: 15px
 
     .user-name
-      font-weight: 700
+      font-weight: 400
       font-size: 14px
-      line-height: 17px
+      line-height: 22px
 
     .user-avatar
-      width: 32px
-      height: 32px
+      width: 36px
+      height: 36px
       background-size: cover
       background-position: center center
       border-radius: 50%
 
   .updated-info
-    color: var(--primary-gray)
-    font-weight: 500
-    font-size: 14px
-    line-height: 17px
+    color: #8E8D91
+    font-size: 13px
+    line-height: 19px
 
   .article-detail
-    padding-top: fluid-value(28, 47, 390, 744)
-
-    @media (max-width: 1280px)
-      padding-bottom: 130px
+    padding-bottom: fluid-value(20, 80)
 
   .all-posts-handler
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 500;
     line-height: 22px;
-    color: var(--primary-gray)
-    position absolute
+    line-height: normal;
+    letter-spacing: -0.32px;
+    color: black
     white-space: nowrap
     cursor pointer
-    top: 15px
-    left: s('max(-17vw, -290px)')
-
-    @media (max-width: 1280px)
-      top: auto
-      bottom: 50px
-      left: 16px
+    transition: 318ms
+    gap: 10px
 
     &:hover
-      color: var(--primary)
+      color: var(--brand)
+
+    .icon-circle-wrapper
+      width: 32px
+      height: 32px
+      border-radius: 50%;
+      background: #FFF;
+      box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15)
 
     .nuxt-icon
-      font-size: 33px
-      margin-right: 33px
+      font-size: 20px
 
   .async-container
     .el-empty
