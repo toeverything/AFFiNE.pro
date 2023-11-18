@@ -11,7 +11,7 @@ nuxt-link.issue-item.flex.items-center(
     .item-meta.flex
       .text-part
         | \#{{ issue.number }} opened · {{ timeAgo }} by · &nbsp;
-      nuxt-link( :to="`https://github.com/${issue.user}`" rel="nofollow" target="_blank" ) {{ issue.user }}
+      nuxt-link.username( :to="`https://github.com/${issue.user}`" rel="nofollow" target="_blank" ) {{ issue.user }}
       nuxt-icon( name="arrow-top-right" )
 </template>
 
@@ -79,6 +79,10 @@ const timeAgo = useTimeAgo(new Date(props.issue.created_at))
 
     .text-part
       text-overflow()
+
+    .username
+      margin-left: 2px
+      white-space: pre
 
     .nuxt-icon
       margin-left: 4px
