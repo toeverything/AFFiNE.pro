@@ -2,6 +2,8 @@
 .page.page-about-us
 
   .section.section-hero.flex.items-center
+    client-only
+      about-globe-sketch
     .limit-container.flex.items-end.justify-between
       about-title.flex-shrink-0
       .hero-desc {{ $t('aboutUsPage.desc')  }}
@@ -219,11 +221,17 @@ useHead({
 
   .section-hero
     position relative
-    background-image: url(@/assets/about/hero-bg.png)
-    background-repeat: no-repeat
     height: 580px
-    background-size: 846px 846px
-    background-position: center 70px
+    overflow: hidden
+
+    .about-globe-sketch
+      position absolute
+      top: -10%
+      z-index: -1
+      left: 50%
+      transform: translateX(-50%)
+      height: 200%
+      aspect-ratio: 1/1
 
     .limit-container
       column-gap: 80px
@@ -231,8 +239,10 @@ useHead({
 
     @media $mediaInMobile
       height: 350px
-      background-size: 496px 496px
-      background-position: center 40px
+
+      .about-globe-sketch
+        top: -8%
+        height: 180%
 
     @media (max-width: 700px)
       height: 300px

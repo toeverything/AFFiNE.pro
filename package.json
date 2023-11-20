@@ -24,6 +24,7 @@
     "laser-pen": "^1.0.0",
     "lodash.throttle": "^4.1.1",
     "matter-js": "^0.19.0",
+    "phenomenon": "^1.6.0",
     "semver": "^7.5.0",
     "tweakpane": "^3.1.7",
     "typescript-cookie": "^1.0.4",
