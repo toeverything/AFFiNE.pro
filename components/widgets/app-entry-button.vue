@@ -1,7 +1,9 @@
 <template lang="pug">
-nuxt-link(
+track-link(
   :to="PATH.AFFINE_INSIDER"
   target="_blank"
+  action="Button"
+  :params="{ resolve: 'Get Started', placement: placement || 'unknown' }"
 )
   el-button.app-entry-button(
     :size="size"
@@ -14,6 +16,7 @@ nuxt-link(
 import { PATH } from '~/utils/constants'
 
 defineProps<{
+  placement?: string
   size?: string
 }>()
 </script>

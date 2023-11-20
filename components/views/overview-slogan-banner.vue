@@ -4,7 +4,7 @@
     affine-logo
     h2.section-title.section-grad-title {{ $t('overviewPage.sloganBannerTitle') }}
     .flex.justify-center.gap-4.action-row
-      app-entry-button( size="large" )
+      app-entry-button( placement="landing_page_lower" size="large" )
       stars-on-github-button(
         class="lt-sm:hidden"
         size="large"

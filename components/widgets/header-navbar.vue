@@ -44,7 +44,7 @@
             scroll-link( to="/download" ) {{ $t('download') }}
 
         .right-part.flex.items-center.gap-12px
-          app-entry-button
+          app-entry-button( placement="header" )
           stars-on-github-button
 
 </template>

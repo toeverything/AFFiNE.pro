@@ -32,7 +32,7 @@
           | All at Once
           .color-brand .
       p.hero-desc.mb-0.animated-in.animate-delay-50ms {{ $t('overviewPage.heroDesc') }}
-      app-entry-button.animated-in.animate-delay-100ms( size="large" )
+      app-entry-button.animated-in.animate-delay-100ms( placement="landing_page" size="large" )
     .spline-container( :class="{ 'is-inited': isInited }" )
       canvas( ref="canvasRef" )
 </template>
