@@ -1,37 +1,36 @@
 <template lang="pug">
-.release-card.inline-flex.flex-col(
+.release-white-card.inline-flex.flex-col(
   ref="el"
 )
-  .card-wrapper.inline-flex.flex-col.items-center(
-    :enableParallax="!$device.isMobile"
+  hover-spotlight-card.card-wrapper.inline-flex.flex-col.items-center(
     :lightSize="340"
   )
+    .card-title
+      | {{ title }}
+      .title-glow( v-if="isShowTitleGlow" )
     .update-frequency( v-html="updateFrequency" )
+    svg-icon-drawing(  v-if="!$device.isMobile" :isShow="hasAssets && !isOutside" )
+      nuxt-icon.download-drawing-line(
+        filled name="download-drawing-line"
+      )
     //- .release-tag( v-if="hasAssets" ) {{ tag_name.substring(1) }}
     .card-icon(
       :style="{ backgroundImage: `url(${icon})` }"
     )
-    .card-title Download AFFiNE {{ tag_name?.substring(1) }}
     .card-desc.text-center( v-html="desc" )
-    .button-group.flex.flex-col.gap-24px
-      brand-glow-button(
-        @click="() => handleDownloadClick(defaultAsset, title)"
-        :needShadow="!tag_name?.includes('canary')"
-        :disabled="!hasAssets"
-      )
-        | {{ hasAssets ? $t('download') : $t(isObsolete ? 'outdated' : 'comingSoon') }}
-        | {{ $t('for') }}{{ defaultAssetPlatformName }}
-
-      .outline-button(
-        @click="isShowOtherVersionModal = true"
-      ) Download other versions of {{ tag_name?.substring(1) }}
-
-    nuxt-link.download-other-version.gap-4px(
-      href="/download/beta-canary"
+    brand-glow-button(
+      @click="() => handleDownloadClick(defaultAsset, title)"
+      :needShadow="!tag_name?.includes('canary')"
+      :disabled="!hasAssets"
     )
-      | Download beta & canary version
+      | {{ hasAssets ? $t('download') : $t(isObsolete ? 'outdated' : 'comingSoon') }}
+      | {{ $t('for') }}{{ defaultAssetPlatformName }}
 
-    .other-version.hidden( v-if="hasAssets" )
+    .publish-date( v-if="defaultAsset && !isObsolete" )
+      | {{ $t('latestVersion') }}
+      span.fw-500 {{ publishDate }}
+
+    .other-version( v-if="hasAssets" )
       .other-version-title.flex.items-center(
         :class="{ 'is-active': isShowOtherVersion }"
         @click="() => isShowOtherVersion = !isShowOtherVersion"
@@ -68,38 +67,12 @@
     :defaultAsset="defaultAsset"
   )
 
-  el-dialog.other-version-modal(
-    v-model="isShowOtherVersionModal"
-    width="346px"
-    title="Other Versions"
-    :lock-scroll="false"
-    append-to-body
-  )
-    template( v-if="assetsMap.mac.length" )
-      .other-version-title {{ Platform.Mac }}
-      ul.other-version
-        li( v-for="asset in assetsMap.mac" )
-          nuxt-link( :to="asset.url" ) {{ asset.name }}
-
-    template( v-if="assetsMap.windows.length" )
-      .other-version-title  {{ Platform.Win }}
-      ul.other-version
-        li( v-for="asset in assetsMap.windows" )
-          nuxt-link( :to="asset.url" ) {{ asset.name }}
-
-    template( v-if="assetsMap.linux.length" )
-      .other-version-title  {{ Platform.Linux }}
-      ul.other-version
-        li( v-for="asset in assetsMap.linux" )
-          nuxt-link( :to="asset.url" ) {{ asset.name }}
 </template>
 
 <script setup lang="ts">
-import { PATH } from '~/utils/constants'
 import { useMouseInElement, useDateFormat } from '@vueuse/core'
 
 const el = ref(null)
-const isShowOtherVersionModal = ref(false)
 const isShowCanaryModal = ref(false)
 const { isOutside } = useMouseInElement(el, { handleOutside: false })
 
@@ -221,19 +194,30 @@ onBeforeMount(async () => {
 </script>
 
 <style lang="stylus">
-.release-card
+.release-white-card
   transform: perspective(800px) scale(var(--scale, 1))
   transform-style: preserve-3d
 
   .card-wrapper
     width: 100%
+    background-color: white;
+    border: 1px solid var(--black-1, rgba(0, 0, 0, 0.10));
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08);
     border-radius: 16px;
     padding: 30px
     gap: fluid-value(16, 18)
     --light-color:rgba(#1E96EB, 0.1)
+    background-image: url(@/assets/download/icon-bg.svg)
+    background-size: 347px 545px
+    background-position: center 4px
+
+    @media $mediaInMobile
+      background-position: center 0px
 
     .update-frequency
       margin-top: -1em
+      font-weight: 500;
+      font-size: 16px
 
     .svg-icon-drawing
       position absolute
@@ -250,11 +234,9 @@ onBeforeMount(async () => {
     .card-title
       position: relative
       font-weight: 500;
-      font-size: fluid-value(24, 40)
-      line-height: 1
-      line-height: 119.444%
-      letter-spacing: (-1.6/40em)
-      margin-bottom: -8px
+      font-size: 32px
+      line-height: 1.2
+      letter-spacing: -0.04em
       color: black
 
       .title-glow
@@ -269,39 +251,30 @@ onBeforeMount(async () => {
         transform: translate3d(-50%, -50%, 0)
 
     .card-icon
-      width: fluid-value(180, 180)
+      width: 134px
       aspect-ratio: 1/1
       background-size: contain
-      margin-bottom: 14px
 
     .card-desc
+      min-height: 120px
       white-space: pre-line
       font-size: fluid-value(14, 16)
-      line-height: (20/16);
-      max-width: 418px
-      margin-bottom: 14px
+      line-height: (24/16);
+      margin-bottom: 10px
 
-  .outline-button
-    color: black
-    display flex
-    align-items: center
-    justify-content: center
-    height: fluid-value(38, 52)
-    padding: 0 fluid-value(20, 50)
-    font-weight: 500;
-    font-size: fluid-value(14, 20)
-    border-radius: 26px
-    border: 2px solid var(--black-quaternary, #CCC)
-    transition: 150ms cubic-bezier(.42, 0, .58, 1)
-    cursor pointer
-
-    active-scale()
-
-    &:hover
-      background: rgba(0, 0, 0, 0.04)
+      b
+        margin-top: -4px
+        display: block
+        border-radius: 4px
+        padding: 4px 16px
+        font-weight: 400
+        color: #1E96EB !important
+        font-size: 13px
+        background: var(--brand-secondary, #EFFAFF);
 
   .brand-glow-button
-    padding: 0 65px
+    padding: 0 40px
+    min-width: 232px
 
   .platform-name
     margin-top: -0.3em
@@ -316,6 +289,42 @@ onBeforeMount(async () => {
     font-size: 12px;
     line-height: 15px;
     margin-top: -0.5em
+
+  .other-version
+    width: 100%
+    padding: 0 12px
+
+    @media $mediaInXS
+      font-size: 12px
+      padding: 0 0
+
+    ul
+      padding-left: 24px
+      margin: 4px
+
+      a
+        line-height: 220.02%;
+        text-decoration: underline
+        text-underline-offset: 3px
+        &:hover
+          opacity: 0.85
+
+  .other-version-title
+    height: 32px
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 220.02%;
+    color: var(--primary-gray)
+    gap: 14px
+    cursor pointer
+
+    .nuxt-icon
+      transition: 368ms
+      transform: rotate(180deg)
+
+    &.is-active
+      .nuxt-icon
+        transform: rotate(270deg)
 
   .info-tips
     font-weight: 500;
@@ -335,52 +344,4 @@ onBeforeMount(async () => {
       border-radius: 50%
       background-color: currentColor
       margin-right: 10px
-
-.other-version-modal
-  border-radius: 16px
-  --el-dialog-padding-primary: 24px;
-
-  .el-dialog__body
-    padding: 14px 24px 14px
-
-  .el-dialog__title
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 27px; /* 135% */
-    letter-spacing: -0.4px;
-
-  .el-dialog__close
-    font-size: 20px
-
-  .other-version
-    width: 100%
-    padding: 0 12px
-    padding-left: 16px
-
-    @media $mediaInXS
-      font-size: 12px
-
-    a
-      line-height: 220.02%;
-      text-underline-offset: 3px
-      margin-bottom: 12px
-
-      &:hover
-        opacity: 0.85
-
-  .other-version-title
-    line-height: 24px;
-    font-weight: 500;
-    font-size: 16px;
-    color: #8E8D91
-    gap: 14px
-
-    .nuxt-icon
-      transition: 368ms
-      transform: rotate(180deg)
-
-    &.is-active
-      .nuxt-icon
-        transform: rotate(270deg)
 </style>

@@ -148,9 +148,9 @@ export default {
     stable: 'Stable',
     stableDesc: 'Download the AFFiNE Client for offline-enabled work and enhanced device-stored privacy.',
     stableUpdateFrequency: '&nbsp;',
-    otherVersion: 'Other Version',
+    otherVersion: 'Other Versions',
     // @FIXME: vars not work in prod
-    otherVersionFor: 'Other version for',
+    otherVersionFor: 'Other versions for',
     manuallyUpdateTips: 'Please note there is currently no auto-updater, you must manually check and download the latest versions.',
     why: 'Why download?',
     reasonA: 'Navigate your workspaces like never before.',

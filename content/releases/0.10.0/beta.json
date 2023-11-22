@@ -1,0 +1,74 @@
+{
+  "name": "0.10.2-beta.0",
+  "tag_name": "v0.10.2-beta.0",
+  "published_at": "2023-11-16T16:16:12Z",
+  "prerelease": true,
+  "assets": [
+    {
+      "name": "affine-beta-linux-x64.AppImage",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2-beta.0/affine-beta-linux-x64.AppImage",
+      "size": 170771648,
+      "download_count": 1
+    },
+    {
+      "name": "affine-beta-linux-x64.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2-beta.0/affine-beta-linux-x64.zip",
+      "size": 170803277,
+      "download_count": 0
+    },
+    {
+      "name": "affine-beta-macos-arm64.dmg",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2-beta.0/affine-beta-macos-arm64.dmg",
+      "size": 162573866,
+      "download_count": 6
+    },
+    {
+      "name": "affine-beta-macos-arm64.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2-beta.0/affine-beta-macos-arm64.zip",
+      "size": 162528046,
+      "download_count": 81
+    },
+    {
+      "name": "affine-beta-macos-x64.dmg",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2-beta.0/affine-beta-macos-x64.dmg",
+      "size": 168493957,
+      "download_count": 5
+    },
+    {
+      "name": "affine-beta-macos-x64.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2-beta.0/affine-beta-macos-x64.zip",
+      "size": 168707488,
+      "download_count": 20
+    },
+    {
+      "name": "affine-beta-windows-x64.exe",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2-beta.0/affine-beta-windows-x64.exe",
+      "size": 172331880,
+      "download_count": 135
+    },
+    {
+      "name": "codecov.yml",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2-beta.0/codecov.yml",
+      "size": 91,
+      "download_count": 0
+    },
+    {
+      "name": "latest-mac.yml",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2-beta.0/latest-mac.yml",
+      "size": 985,
+      "download_count": 339
+    },
+    {
+      "name": "latest.yml",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2-beta.0/latest.yml",
+      "size": 357,
+      "download_count": 283
+    },
+    {
+      "name": "web-static.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2-beta.0/web-static.zip",
+      "size": 57642372,
+      "download_count": 0
+    }
+  ]
+}
