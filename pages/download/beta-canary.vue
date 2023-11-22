@@ -4,7 +4,7 @@
   .section-hero
     .container.flex.flex-col.items-center
       .hero-headline.text-center
-        | Download other versions off AFFiNE
+        | Download other versions of AFFiNE
 
       .release-cards.flex
         release-white-card(

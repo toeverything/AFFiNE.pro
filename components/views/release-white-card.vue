@@ -24,7 +24,6 @@
       :disabled="!hasAssets"
     )
       | {{ hasAssets ? $t('download') : $t(isObsolete ? 'outdated' : 'comingSoon') }}
-      | {{ $t('for') }}{{ defaultAssetPlatformName }}
 
     .publish-date( v-if="defaultAsset && !isObsolete" )
       | {{ $t('latestVersion') }}
