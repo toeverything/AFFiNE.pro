@@ -55,6 +55,14 @@
               .item-body {{ $t('pricePage.itemMaxMembers', [3]) }}
 
         .price-card.type-pro
+          .black-friday-label(
+            v-if="CONFIG.ENABLE_BLACK_FRIDAY"
+            @click="handleCopyCouponClick"
+            :class="{ 'has-copied': copied }"
+          )
+            | Get Coupon: {{ couponCode }}
+            nuxt-icon.text-size-18px( :name="copied ? 'tick' : 'copy'" filled)
+
           .card-header
             .planning-name.flex.items-center.gap-2
               span.pro-label {{ $t('pricePage.pro') }}
@@ -140,14 +148,22 @@
 </template>
 
 <script lang="ts" setup>
-import { PATH, INFO } from '~/utils/constants'
+import { useClipboard } from '@vueuse/core'
+import { PATH, INFO, CONFIG } from '~/utils/constants'
 
 const { t } = useI18n()
 
 const currentTab = ref('monthly')
+const couponCode = ref('BF23')
 
 const isMonthly = computed(() => currentTab.value === 'monthly')
 const isYearly = computed(() => currentTab.value === 'yearly')
+
+const { copy, copied } = useClipboard()
+
+const handleCopyCouponClick = () => {
+  copy(couponCode.value)
+}
 
 useHead({
   title: t('price')
@@ -318,6 +334,33 @@ useHead({
     top: -1px
     border: 3px solid var(--brand-brand, #1E96EB)
     box-shadow: 0px 5px 10px 0px rgba(30, 150, 235, 0.20)
+
+    .black-friday-label
+      cursor pointer
+      border-radius: 54px;
+      border: 1.5px solid #000;
+      background: #F8F8F7;
+      transform: rotate(6deg);
+      padding: 5px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      position absolute
+      z-index: 2
+      top: -4px
+      right: -15px
+      color: #000
+      transition: 218ms
+
+      &:hover
+        background: #F2F2F1;
+
+      &:not(.has-copied)
+        .nuxt-icon path
+          stroke: #000
 
     .pro-label
       border-radius: 4px

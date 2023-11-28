@@ -11,7 +11,16 @@
 
   .pin-wrapper
     .text-wrapper.flex.flex-col.items-center
-      h1.hero-fused-title.animated-in
+      .animated-in(
+        v-if="CONFIG.ENABLE_BLACK_FRIDAY"
+      )
+        nuxt-link.black-friday-button(
+          to="/pricing"
+        )
+          | Black Friday 25% OFF
+          icon-arrow-right
+
+      h1.hero-fused-title.animated-in.animate-delay-50ms
         .row.first-row.flex.justify-center
           .write-word.flex
             .symbol-cursor
@@ -31,14 +40,15 @@
         .row.second-row.flex.justify-center
           | All at Once
           .color-brand .
-      p.hero-desc.mb-0.animated-in.animate-delay-50ms {{ $t('overviewPage.heroDesc') }}
-      app-entry-button.animated-in.animate-delay-100ms( placement="landing_page" size="large" )
+      p.hero-desc.mb-0.animated-in.animate-delay-100ms {{ $t('overviewPage.heroDesc') }}
+      app-entry-button.animated-in.animate-delay-150ms( placement="landing_page" size="large" )
     .spline-container( :class="{ 'is-inited': isInited }" )
       canvas( ref="canvasRef" )
 </template>
 
 <script setup lang="ts">
 import { gsap } from 'gsap'
+import { CONFIG } from '~/utils/constants'
 import { useEventListener } from '@vueuse/core'
 import type { Application } from '@splinetool/runtime'
 const { isMobile } = useDevice()
@@ -115,6 +125,31 @@ onDeactivated(() => {
   min-height: 600px
   position relative
 
+  .black-friday-button
+    display: flex
+    align-items: center
+    position relative
+    top: -52px
+    font-size: 13px
+    color: black
+    font-weight: 700
+    line-height: 19px
+    border-radius: 54px;
+    border: 1.5px solid var(--black-black, #000);
+    background: #F8F8F7;
+    box-shadow: 0px 4px 0px 0px #000;
+    padding: 5px 16px;
+    gap: 4px;
+    transition 218ms
+
+    &:hover
+      box-shadow: 0px 2px 0px 0px #000;
+      transform: translateY(1px)
+
+    &:active
+      box-shadow: 0px 0px 0px 0px #000;
+      transform: translateY(2px)
+
   .pin-wrapper
     position fixed
     width: s('min(1920px, 100vw)')
@@ -181,6 +216,9 @@ onDeactivated(() => {
       animation-delay: 50ms
 
     .animate-delay-100ms
+      animation-delay: 100ms
+
+    .animate-delay-150ms
       animation-delay: 100ms
 
     > *
