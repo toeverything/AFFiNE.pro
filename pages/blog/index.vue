@@ -42,7 +42,8 @@
           v-for="[tag] in blogTags"
           :key="tag"
           :class="{ 'active': tag === route.query.tag }"
-          :to="`/blog?tag=${tag}`"
+          :to="`/blog?tag=${encodeURIComponent(tag)}`"
+          replace
         ) {{ tag }}
 
     .blog-list
