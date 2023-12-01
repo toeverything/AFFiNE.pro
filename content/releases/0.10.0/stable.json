@@ -1,71 +1,78 @@
 {
-  "url": "https://github.com/toeverything/AFFiNE/releases/tag/0.10.2",
-  "name": "0.10.0",
+  "url": "https://github.com/toeverything/AFFiNE/releases/tag/v0.10.3",
+  "name": "0.10.3",
+  "body": "## What's Changed\r\n* ci(core): eslint errors for core by @joooye34 in https://github.com/toeverything/AFFiNE/pull/4662\r\n* fix(electron): dev reload by @pengx17 in https://github.com/toeverything/AFFiNE/pull/4911\r\n* fix: get page preview based on block order by @lawvs in https://github.com/toeverything/AFFiNE/pull/4888\r\n* fix: cherry pick hotfix back to master by @Brooooooklyn in https://github.com/toeverything/AFFiNE/pull/4915\r\n* chore: bump the all-cargo-dependencies group with 5 updates by @dependabot in https://github.com/toeverything/AFFiNE/pull/4918\r\n* fix(storybook): page tags display by @pengx17 in https://github.com/toeverything/AFFiNE/pull/4924\r\n* chore: change default branch to canary by @Brooooooklyn in https://github.com/toeverything/AFFiNE/pull/4948\r\n* fix(server): all viewers can share public link by @forehalo in https://github.com/toeverything/AFFiNE/pull/4968\r\n* refactor: new provider by @EYHN in https://github.com/toeverything/AFFiNE/pull/4900\r\n* fix(core): handle the getSession network error properly by @Brooooooklyn in https://github.com/toeverything/AFFiNE/pull/4909\r\n* feat(i18n): update translation by @JimmFly in https://github.com/toeverything/AFFiNE/pull/4923\r\n* chore: add devcontainer config by @EYHN in https://github.com/toeverything/AFFiNE/pull/4974\r\n* fix(component): stack notification cards expand animation by @CatsJuice in https://github.com/toeverything/AFFiNE/pull/4962\r\n* style(core): update pro plan card style by @CatsJuice in https://github.com/toeverything/AFFiNE/pull/4960\r\n* fix(core): adjust cmdk list scroll padding block by @JimmFly in https://github.com/toeverything/AFFiNE/pull/4972\r\n* feat(core): keep the latest toast showing when multiple call by @JimmFly in https://github.com/toeverything/AFFiNE/pull/4961\r\n* fix(core): escape cmdk value by @JimmFly in https://github.com/toeverything/AFFiNE/pull/4947\r\n* refactor(core): remove all MUI related components and utilities by @CatsJuice in https://github.com/toeverything/AFFiNE/pull/4941\r\n* build: remove useless source-map-loader to speedup webpack by @Brooooooklyn in https://github.com/toeverything/AFFiNE/pull/4910\r\n* chore: bump the all-cargo-dependencies group with 1 update by @dependabot in https://github.com/toeverything/AFFiNE/pull/4997\r\n* fix(core): rerender by @EYHN in https://github.com/toeverything/AFFiNE/pull/4988\r\n* fix(core): make e2e more stable by @EYHN in https://github.com/toeverything/AFFiNE/pull/4987\r\n* feat(workspace): more status for SyncPeer by @EYHN in https://github.com/toeverything/AFFiNE/pull/4983\r\n* feat(workspace): more status for SyncEngine by @EYHN in https://github.com/toeverything/AFFiNE/pull/4984\r\n* fix(core): merge updates before push to storage by @EYHN in https://github.com/toeverything/AFFiNE/pull/4986\r\n* fix(core): cmdk crash when entering double quotes by @JimmFly in https://github.com/toeverything/AFFiNE/pull/5008\r\n* chore: faster lint-staged by @EYHN in https://github.com/toeverything/AFFiNE/pull/5013\r\n* fix: invisible button should not be interactive by @pengx17 in https://github.com/toeverything/AFFiNE/pull/5017\r\n* fix(core): hmr issue on dev by @pengx17 in https://github.com/toeverything/AFFiNE/pull/5006\r\n* build(electron): asar by @pengx17 in https://github.com/toeverything/AFFiNE/pull/4965\r\n* fix(core): add error boundary for workspace layout by @Brooooooklyn in https://github.com/toeverything/AFFiNE/pull/5014\r\n* feat(server): add doc history support by @forehalo in https://github.com/toeverything/AFFiNE/pull/4970\r\n* chore(server): remove deprecated redis manager by @forehalo in https://github.com/toeverything/AFFiNE/pull/4971\r\n* feat(server): add cache module by @forehalo in https://github.com/toeverything/AFFiNE/pull/4973\r\n* feat(server): reduce duplidated merge with cache by @forehalo in https://github.com/toeverything/AFFiNE/pull/4975\r\n* feat(server): event on snapshot upserted by @forehalo in https://github.com/toeverything/AFFiNE/pull/5002\r\n* feat(server): impl doc history by @forehalo in https://github.com/toeverything/AFFiNE/pull/5004\r\n* chore: bump blocksuite by @Flrande in https://github.com/toeverything/AFFiNE/pull/5026\r\n* chore: bump blocksuite by @Flrande in https://github.com/toeverything/AFFiNE/pull/5030\r\n* fix(core): fix page loading shimmer by @EYHN in https://github.com/toeverything/AFFiNE/pull/5027\r\n* fix(workspace): fast check svg buffer by @EYHN in https://github.com/toeverything/AFFiNE/pull/5032\r\n* fix(core): should not reset page preset on rerender by @pengx17 in https://github.com/toeverything/AFFiNE/pull/5034\r\n* fix(server): use iso date string as history query input by @forehalo in https://github.com/toeverything/AFFiNE/pull/5035\r\n* refactor(core): use manual upgrade to replace auto migration when web setup by @joooye34 in https://github.com/toeverything/AFFiNE/pull/5022\r\n* feat: upgrade dependencies and lockfile by @Brooooooklyn in https://github.com/toeverything/AFFiNE/pull/5016\r\n* feat(core): add download app button to web by @JimmFly in https://github.com/toeverything/AFFiNE/pull/5023\r\n* fix(electron): clone db file when enable cloud for desktop by @pengx17 in https://github.com/toeverything/AFFiNE/pull/5028\r\n* fix(server): check state changes before saving history record by @forehalo in https://github.com/toeverything/AFFiNE/pull/5038\r\n* refactor(workspace): blob sync by @EYHN in https://github.com/toeverything/AFFiNE/pull/5037\r\n* chore(core): update react-resizable-panels by @pengx17 in https://github.com/toeverything/AFFiNE/pull/5041\r\n* fix(electron): appimage forge builder by @Brooooooklyn in https://github.com/toeverything/AFFiNE/pull/5043\r\n* chore: bump icons version by @JimmFly in https://github.com/toeverything/AFFiNE/pull/5042\r\n* ci: fix storybook publish problem by @joooye34 in https://github.com/toeverything/AFFiNE/pull/5047\r\n* chore: adjust the request memory size and replica count by @Brooooooklyn in https://github.com/toeverything/AFFiNE/pull/5046\r\n* fix(server): never throw in websocket gateways by @forehalo in https://github.com/toeverything/AFFiNE/pull/5050\r\n* refactor(server): standarderlize metrics and trace with OTEL by @forehalo in https://github.com/toeverything/AFFiNE/pull/5054\r\n* fix(server): add guid compatibility of :space:page variant by @forehalo in https://github.com/toeverything/AFFiNE/pull/5062\r\n* feat: optional payment for server by @darkskygit in https://github.com/toeverything/AFFiNE/pull/5055\r\n* feat: optional payment for frontend by @darkskygit in https://github.com/toeverything/AFFiNE/pull/5056\r\n* feat(core): simple recovery history ui poc by @pengx17 in https://github.com/toeverything/AFFiNE/pull/5033\r\n* chore: bump blocksuite by @Flrande in https://github.com/toeverything/AFFiNE/pull/5051\r\n* test(core): simple recovery ui e2e by @pengx17 in https://github.com/toeverything/AFFiNE/pull/5059\r\n* feat(server): add soft deleted flag to optimized blob table by @forehalo in https://github.com/toeverything/AFFiNE/pull/5058\r\n* chore: bump the all-cargo-dependencies group with 5 updates by @dependabot in https://github.com/toeverything/AFFiNE/pull/5068\r\n* docs: issue triaging document by @EYHN in https://github.com/toeverything/AFFiNE/pull/5071\r\n* fix(electron): electron dev startup on win by @pengx17 in https://github.com/toeverything/AFFiNE/pull/5031\r\n* fix(component): rework tags list collapsing by @pengx17 in https://github.com/toeverything/AFFiNE/pull/5072\r\n* fix(server): wrong OTEL config by @forehalo in https://github.com/toeverything/AFFiNE/pull/5084\r\n* fix(workspace): filter awareness from other workspace by @EYHN in https://github.com/toeverything/AFFiNE/pull/5093\r\n* fix(core): implement editor timeout and report error from boundary by @joooye34 in https://github.com/toeverything/AFFiNE/pull/5105\r\n* ci: add sentry env when frontend assets build by @joooye34 in https://github.com/toeverything/AFFiNE/pull/5131\r\n* fix(core): expose catched editor load error by @joooye34 in https://github.com/toeverything/AFFiNE/pull/5133\r\n* fix(infra): use blocksuite api to check compatibility by @joooye34 in https://github.com/toeverything/AFFiNE/pull/5137\r\n* fix(infra): compatibility logic follow blocksuite by @joooye34 in https://github.com/toeverything/AFFiNE/pull/5143\r\n* fix(core): rerender error boundary when route change and improve sentry report by @joooye34 in https://github.com/toeverything/AFFiNE/pull/5147\r\n\r\n\r\n**Full Changelog**: https://github.com/toeverything/AFFiNE/compare/v0.10.2...v0.10.3",
   "draft": false,
   "prerelease": false,
-  "tag_name": "v0.10.2",
-  "created_at": "2023-11-17T07:58:55Z",
-  "published_at": "2023-11-17T10:20:03Z",
+  "tag_name": "v0.10.3",
+  "created_at": "2023-12-01T04:52:15Z",
+  "published_at": "2023-12-01T05:50:14Z",
   "assets": [
     {
       "name": "affine-stable-linux-x64.AppImage",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2/affine-stable-linux-x64.AppImage",
-      "size": 146461888,
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.3/affine-stable-linux-x64.AppImage",
+      "size": 171078848,
       "download_count": 0
     },
     {
       "name": "affine-stable-linux-x64.zip",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2/affine-stable-linux-x64.zip",
-      "size": 146318244,
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.3/affine-stable-linux-x64.zip",
+      "size": 169494800,
       "download_count": 0
     },
     {
       "name": "affine-stable-macos-arm64.dmg",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2/affine-stable-macos-arm64.dmg",
-      "size": 140987626,
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.3/affine-stable-macos-arm64.dmg",
+      "size": 161767392,
       "download_count": 2
     },
     {
       "name": "affine-stable-macos-arm64.zip",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2/affine-stable-macos-arm64.zip",
-      "size": 139937454,
-      "download_count": 2
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.3/affine-stable-macos-arm64.zip",
+      "size": 161043683,
+      "download_count": 12
     },
     {
       "name": "affine-stable-macos-x64.dmg",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2/affine-stable-macos-x64.dmg",
-      "size": 146254585,
-      "download_count": 4
-    },
-    {
-      "name": "affine-stable-macos-x64.zip",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2/affine-stable-macos-x64.zip",
-      "size": 145400210,
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.3/affine-stable-macos-x64.dmg",
+      "size": 167638446,
       "download_count": 1
     },
     {
+      "name": "affine-stable-macos-x64.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.3/affine-stable-macos-x64.zip",
+      "size": 167277630,
+      "download_count": 13
+    },
+    {
       "name": "affine-stable-windows-x64.exe",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2/affine-stable-windows-x64.exe",
-      "size": 150070120,
-      "download_count": 3
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.3/affine-stable-windows-x64.exe",
+      "size": 171655016,
+      "download_count": 175
     },
     {
       "name": "codecov.yml",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2/codecov.yml",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.3/codecov.yml",
       "size": 91,
       "download_count": 0
     },
     {
       "name": "latest-mac.yml",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2/latest-mac.yml",
-      "size": 989,
-      "download_count": 3
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.3/latest-mac.yml",
+      "size": 990,
+      "download_count": 19
     },
     {
       "name": "latest.yml",
-      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.2/latest.yml",
-      "size": 353,
-      "download_count": 3
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.3/latest.yml",
+      "size": 354,
+      "download_count": 12
+    },
+    {
+      "name": "web-static.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.10.3/web-static.zip",
+      "size": 57557402,
+      "download_count": 0
     }
   ]
 }
