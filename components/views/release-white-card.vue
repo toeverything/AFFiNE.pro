@@ -209,6 +209,7 @@ onBeforeMount(async () => {
     background-image: url(@/assets/download/icon-bg.svg)
     background-size: 347px 545px
     background-position: center 4px
+    background-repeat: no-repeat
 
     @media $mediaInMobile
       background-position: center 0px
