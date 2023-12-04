@@ -191,7 +191,7 @@ const handleReturnClick = () => {
     padding-top: 40px
     width: 100%
     margin: auto
-    max-width: 720px
+    max-width: 790px
 
   .article-tag
     border-radius: 30px
