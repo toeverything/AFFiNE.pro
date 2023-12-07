@@ -1,0 +1,18 @@
+{
+  "title": "AFFiNE Web Version Upgrade - Dec 2023",
+  "authors": [
+    "AFFiNE"
+  ],
+  "tags": [
+    "Content"
+  ],
+  "description": "There are some important changes coming to the web version of AFFiNE. Please take note and make sure you've backed up your data.",
+  "created": 1701388800000,
+  "updated": 1701907200000,
+  "layout": "blog",
+  "id": "fdis8EJPIuXr4DNracwsy",
+  "slug": "affine-web-version-upgrade-12-2023",
+  "cover": null,
+  "md": "---\n\ntitle: \"AFFiNE Web Version Upgrade - Dec 2023\"\n\nauthor: AFFiNE\n\ntags: Content\n\nslug: affine-web-version-upgrade-12-2023\n\ndescription: There are some important changes coming to the web version of AFFiNE. Please take note and make sure you've backed up your data.\n\ncreated: 2023-12-01\n\nupdated: 2023-12-07\n\nlayout: blog\n\npublish: true\n\n---\n\n\n\nThere are some important changes coming to the web version of AFFiNE. Make sure you understand the changes to ensure you keep your data safe.\n\n\n\n### What is happening?\n\nWe  are upgrading [app.affine.pro](app.affine.pro) to use the latest version of AFFiNE. At the time of publishing this article, the [app.affine.pro](app.affine.pro) web app uses an old version of AFFiNE Cloud which is no longer supported. We will upgrade this web version and retire the old version - along with the old data.\n\n\n\n### What do I need to do?\n\n#### If you have ever used [app.affine.pro](app.affine.pro)\n\n* Head over to [app.affine.pro](app.affine.pro) and backup all your data - local and cloud workspaces\n* All local data will be completely lost after December 14th\n* We will keep a temporary copy after December 14 on [archive.affine.pro](archive.affine.pro) (will go live from December 11 onwards)\n#### If you are using [insider.affine.pro](insider.affine.pro)\n\n* Your AFFiNE Cloud data will be acacessible on the new [app.affine.pro](app.affine.pro) version after it is updated (after December 14th)\n* You will lose access to any local storage data - we advise you to download the [AFFiNE Client](https://affine.pro/download) and activate AFFiNE Cloud\n#### If you are using the [AFFiNE Client](https://affine.pro/download)\n\n* There's no action you need to take\n\n\n### More questions?\n\nIf you still have questions or concerns please do email us: [support@toeverything.info](mailto:support@toeverything.info)\n\n\n\n\n\n\n\n",
+  "publish": true
+}
