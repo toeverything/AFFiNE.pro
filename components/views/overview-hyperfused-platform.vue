@@ -105,7 +105,7 @@
     .card
       padding: fluid-value(16, 24, 390, 744);
       padding-bottom: fluid-value(20, 24, 390, 744);
-      border-radius: 16px;
+      border-radius: fluid-value(8, 16);
       background: #FFF;
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15)
 

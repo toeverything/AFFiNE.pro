@@ -43,7 +43,7 @@ onMounted(() => {
 .user-story-card-light
   position: relative
   padding: 24px
-  border-radius: 16px
+  border-radius: fluid-value(8, 16)
   background: #FFF;
   border: 1px solid rgba(0, 0, 0, 0.10);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);

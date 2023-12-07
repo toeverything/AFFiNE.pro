@@ -318,7 +318,7 @@ onDeactivated(() => {
     max-width: 1040px
     margin: 0 auto
     overflow: hidden
-    border-radius: 16px
+    border-radius: fluid-value(8, 16)
     background: var(--white-white, #FFF)
     box-shadow: 1px 18px 39px 0px rgba(0, 0, 0, 0.15), 5px 71px 71px 0px rgba(0, 0, 0, 0.09), 12px 160px 96px 0px rgba(0, 0, 0, 0.05), 20px 284px 114px 0px rgba(0, 0, 0, 0.01), 32px 443px 124px 0px rgba(0, 0, 0, 0.00)
     position relative

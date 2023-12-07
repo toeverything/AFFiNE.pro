@@ -73,7 +73,7 @@ const handleCopyAddressClick = () => {
     padding-top: 240px
 
   .base-card
-    border-radius: 16px
+    border-radius: fluid-value(8, 16)
     background: #FFF
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15)
 
@@ -111,7 +111,7 @@ const handleCopyAddressClick = () => {
     .thin-card
       padding: fluid-value(16, 36, 390, 1024) fluid-value(16, 22, 390, 1024) 0 fluid-value(16, 22, 390, 1024)
       flex: 1
-      border-radius: 12px
+      border-radius: fluid-value(8, 12)
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15)
       background: white
 

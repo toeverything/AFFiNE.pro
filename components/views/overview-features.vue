@@ -392,7 +392,7 @@ onMounted(() => {
       aspect-ratio: 720/500
 
     .video-card
-      border-radius: 16px;
+      border-radius: fluid-value(8, 16);
       border: 1px solid var(--black-quinary, #F4F4F5);
       background: var(--white-white, #FFF);
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
