@@ -70,7 +70,7 @@ export const CONFIG = {
   IS_SHOW_CAMPAIGN_ENTRY: true,
   ENABLE_LANG_SWITCHER: false,
   ENABLE_THEME_SWITCHER: false,
-  ENABLE_BLACK_FRIDAY: true,
+  ENABLE_BLACK_FRIDAY: false,
 
   // Service
   API_HOST: 'https://api.affine.pro'
