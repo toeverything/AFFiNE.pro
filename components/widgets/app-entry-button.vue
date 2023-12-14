@@ -1,6 +1,6 @@
 <template lang="pug">
 track-link(
-  :to="PATH.AFFINE_INSIDER"
+  :to="PATH.AFFINE_WEB_APP"
   target="_blank"
   action="Button"
   :params="{ resolve: 'Get Started', placement: placement || 'unknown' }"
