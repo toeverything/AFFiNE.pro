@@ -23,7 +23,7 @@
             .price-row.flex.items-end.gap-2
               .price-amount $0
               .per-time-tips.headline-6 {{ $t('pricePage.perMonth') }}
-            track-link( :href="PATH.AFFINE_INSIDER" action="Get started" :params="{ resolve: 'Get Started', placement: currentTab === 'yearly' ? 'pricing_page_yearly' : 'pricing_page_monthly' }"  target="_blank")
+            track-link( :href="PATH.AFFINE_WEB_APP" action="Get started" :params="{ resolve: 'Get Started', placement: currentTab === 'yearly' ? 'pricing_page_yearly' : 'pricing_page_monthly' }"  target="_blank")
               el-button.is-outlined(
                 type="primary"
                 size="action"
