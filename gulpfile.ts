@@ -1,6 +1,11 @@
 import { src, dest, series } from 'gulp'
+import fs from 'fs/promises'
 import axios from 'axios'
 const file = require('gulp-file')
+
+function cleanBlog(cb: any) {
+  return fs.rm('./content/blog', { recursive: true, force: true });
+}
 
 async function convertBlogToMarkdowns(cb: any) {
   try {
@@ -23,4 +28,4 @@ async function convertBlogToMarkdowns(cb: any) {
   cb()
 }
 
-exports.default = series(convertBlogToMarkdowns)
+exports.default = series(cleanBlog, convertBlogToMarkdowns)
