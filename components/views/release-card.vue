@@ -212,8 +212,18 @@ const handleDownloadClick = (asset: Asset, type?: string) => {
 }
 
 onBeforeMount(async () => {
+  if ($device.isSafari) {
+    const w = document.createElement("canvas").getContext("webgl")
+    if (w && w.getSupportedExtensions()?.includes('WEBGL_compressed_texture_s3tc_srgb')) {
+      isArm64.value = true
+    }
+    return
+  }
+
   const { architecture } = await navigator.userAgentData?.getHighEntropyValues(['architecture'])
-  if (architecture?.includes('arm')) {
+  if (
+    architecture?.includes('arm')
+  ) {
     isArm64.value = true
   }
 })
