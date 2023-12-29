@@ -1,78 +1,78 @@
 {
-  "url":"https://github.com/toeverything/AFFiNE/releases/tag/v0.11.1",
-  "name":"0.11.1",
-  "body":"fix(core): enable page history for beta/stable (#5415) @pengx17 \r\nfix(component): fix font display on safari (#5393) @EYHN \r\nfix(core): avatars are not aligned (#5404) @JimmFly \r\nfix(core): trash page footer display issue (#5402) @pengx17 \r\nfix(electron): set stable base url to app.affine.pro (#5401) @joooye34 \r\nfix(core): about setting blink issue (#5399) @pengx17 \r\nfix(core): workpace list blink issue on open (#5400) @pengx17 \r\nchore(core): add background color to questionnaire (#5396) @JimmFly \r\nfix(core): correct title of onboarding article-2 (#5387) @CatsJuice \r\nfix: use prefix in electron to prevent formdata bug (#5395) @darkskygit \r\nfix(core): fix flickering workspace list (#5391) @EYHN \r\nfix(workspace): fix svg file with xml header (#5388) @EYHN \r\nfeat: bump blocksuite (#5386) @regischen \r\n",
-  "draft":false,
-  "prerelease":false,
-  "tag_name":"v0.11.1",
-  "created_at":"2023-12-27T06:39:59Z",
-  "published_at":"2023-12-27T11:40:15Z",
-  "assets":[
+  "url": "https://github.com/toeverything/AFFiNE/releases/tag/v0.11.2",
+  "name": "0.11.2",
+  "body": "## What's Changed\r\n* fix: use absolute path in gql client (#5454) by @darkskygit in https://github.com/toeverything/AFFiNE/pull/5462\r\n\r\n\r\n**Full Changelog**: https://github.com/toeverything/AFFiNE/compare/v0.11.1...v0.11.2",
+  "draft": false,
+  "prerelease": false,
+  "tag_name": "v0.11.2",
+  "created_at": "2023-12-29T08:02:29Z",
+  "published_at": "2023-12-29T11:31:58Z",
+  "assets": [
     {
-      "name":"affine-stable-linux-x64.AppImage",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.11.1/affine-stable-linux-x64.AppImage",
-      "size":179066048,
-      "download_count":0
+      "name": "affine-stable-linux-x64.AppImage",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.11.2/affine-stable-linux-x64.AppImage",
+      "size": 179066048,
+      "download_count": 0
     },
     {
-      "name":"affine-stable-linux-x64.zip",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.11.1/affine-stable-linux-x64.zip",
-      "size":177462537,
-      "download_count":5
+      "name": "affine-stable-linux-x64.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.11.2/affine-stable-linux-x64.zip",
+      "size": 177460142,
+      "download_count": 0
     },
     {
-      "name":"affine-stable-macos-arm64.dmg",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.11.1/affine-stable-macos-arm64.dmg",
-      "size":169793193,
-      "download_count":0
+      "name": "affine-stable-macos-arm64.dmg",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.11.2/affine-stable-macos-arm64.dmg",
+      "size": 169791134,
+      "download_count": 0
     },
     {
-      "name":"affine-stable-macos-arm64.zip",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.11.1/affine-stable-macos-arm64.zip",
-      "size":169014676,
-      "download_count":2
+      "name": "affine-stable-macos-arm64.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.11.2/affine-stable-macos-arm64.zip",
+      "size": 169011718,
+      "download_count": 0
     },
     {
-      "name":"affine-stable-macos-x64.dmg",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.11.1/affine-stable-macos-x64.dmg",
-      "size":175720872,
-      "download_count":0
+      "name": "affine-stable-macos-x64.dmg",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.11.2/affine-stable-macos-x64.dmg",
+      "size": 175719502,
+      "download_count": 0
     },
     {
-      "name":"affine-stable-macos-x64.zip",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.11.1/affine-stable-macos-x64.zip",
-      "size":175244411,
-      "download_count":2
+      "name": "affine-stable-macos-x64.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.11.2/affine-stable-macos-x64.zip",
+      "size": 175241760,
+      "download_count": 0
     },
     {
-      "name":"affine-stable-windows-x64.exe",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.11.1/affine-stable-windows-x64.exe",
-      "size":179504488,
-      "download_count":9
+      "name": "affine-stable-windows-x64.exe",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.11.2/affine-stable-windows-x64.exe",
+      "size": 179503464,
+      "download_count": 0
     },
     {
-      "name":"codecov.yml",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.11.1/codecov.yml",
-      "size":91,
-      "download_count":0
+      "name": "codecov.yml",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.11.2/codecov.yml",
+      "size": 91,
+      "download_count": 0
     },
     {
-      "name":"latest-mac.yml",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.11.1/latest-mac.yml",
-      "size":990,
-      "download_count":6
+      "name": "latest-mac.yml",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.11.2/latest-mac.yml",
+      "size": 990,
+      "download_count": 0
     },
     {
-      "name":"latest.yml",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.11.1/latest.yml",
-      "size":354,
-      "download_count":9
+      "name": "latest.yml",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.11.2/latest.yml",
+      "size": 354,
+      "download_count": 0
     },
     {
-      "name":"web-static.zip",
-      "url":"https://github.com/toeverything/AFFiNE/releases/download/v0.11.1/web-static.zip",
-      "size":64185372,
-      "download_count":0
+      "name": "web-static.zip",
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.11.2/web-static.zip",
+      "size": 64185771,
+      "download_count": 0
     }
   ]
 }
