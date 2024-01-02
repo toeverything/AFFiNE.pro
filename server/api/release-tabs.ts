@@ -50,11 +50,18 @@ export default defineEventHandler(async (event) => {
         return el.prerelease && el.tag_name.includes('beta')
       })
 
+      const latestStable = data.find((el: Release) => {
+        return !el.prerelease && !el.tag_name.includes('beta') && !el.tag_name.includes('canary')
+      })
+
       const releaseMap = tabs[0].releaseMap
 
       if (latestCanary && releaseMap && (!releaseMap.canary || !releaseMap.canary.assets?.length)) {
         releaseMap.canary = latestCanary
         releaseMap.beta = latestBeta
+      }
+      if (latestStable && releaseMap) {
+        releaseMap.stable = latestStable
       }
     }
 
