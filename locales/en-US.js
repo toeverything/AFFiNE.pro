@@ -37,6 +37,7 @@ export default {
   client: 'Client',
   WhatIsNew: 'What’s new',
   getStarted: 'Get Started',
+  exploreOnDesktop: 'Explore on Desktop',
 
   useDesktopVersion: {
     title: 'Full functionality on desktop',
