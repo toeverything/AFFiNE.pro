@@ -20,8 +20,17 @@
         .menu-list
           //- .nav-item
           //-   nuxt-link( to="/" ) {{ $t('home') }}
-          .nav-item
-            nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" ) {{ $t('community') }}
+          .nav-item.community-item(
+            @click="isOpenCommunity = !isOpenCommunity" ref="ignoreElRef"
+            :class="{ 'is-open-community': isOpenCommunity }"
+          )
+            a.handler-row.justify-between.items-center.w-full(
+            )
+              | {{ $t('community') }}
+              nuxt-icon.arrow-icon.text-size-20px( name="ArrowRightSmall2" filled )
+
+            el-collapse-transition
+              community-navbar( v-show="isOpenCommunity" )
           .nav-item
             nuxt-link( to="/about-us" ) {{ $t('aboutUs') }}
           .nav-item
@@ -32,7 +41,6 @@
             v-if="CONFIG.ENABLE_LANG_SWITCHER"
           )
             .current-lang.flex.items-center(
-              ref="ignoreElRef"
               @click="() => isOpenLangList = !isOpenLangList"
             )
               | {{ localeProperties?.name  }}
@@ -54,11 +62,13 @@ const { locale, setLocaleCookie } = useI18n()
 const menuHandler = ref(null)
 const ignoreElRef = ref(null)
 const isOpen = ref(false)
+const isOpenCommunity = ref(false)
 
 onClickOutside(
   menuHandler,
   (event) => {
     isOpen.value = false
+    isOpenCommunity.value = false
   },
   { ignore: [ignoreElRef] },
 )
@@ -73,6 +83,20 @@ watch(locale, () => {
 
   .navbar-placeholder
     height: var(--navbar-height)
+
+  .community-navbar
+    margin: 0 -12px
+
+  .community-item
+    .arrow-icon
+      transition: 218ms
+
+    &.is-open-community
+      .arrow-icon
+        transform: rotate(90deg)
+
+  .handler-row
+    display: flex !important
 
   .navbar-fixed
     width: 100%

@@ -10,6 +10,7 @@
     .bottom-gap
 
   .pin-wrapper
+
     .text-wrapper.flex.flex-col.items-center
       .animated-in(
         v-if="CONFIG.ENABLE_BLACK_FRIDAY"

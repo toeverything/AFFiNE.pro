@@ -37,7 +37,7 @@
         .flex.flex-col.justify-between
           .info-text.headline-3 {{ $t('overviewPage.buildInPublicUserCentricDesc') }}
           nuxt-link(
-            :href="PATH.AFFiNE_COMMUNITY"
+            :href="PATH.SNS_DISCORD"
             target="_blank"
             rel="nofollow"
           )

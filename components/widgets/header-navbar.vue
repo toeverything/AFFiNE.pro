@@ -33,7 +33,26 @@
               :style="activeTabStyle"
             )
           .nav-item
-            nuxt-link( :to="PATH.AFFiNE_COMMUNITY" target="_blank" ) {{ $t('community') }}
+            el-popover(
+              trigger="hover"
+              transition="popover-popup"
+              popper-class="community-popper"
+              v-model:visible="isOpenCommunity"
+              width="440px"
+              placement="bottom-start"
+              :show-arrow="false"
+              :offset="8"
+            )
+              template( #reference )
+                a.handler-row.gap-1.items-center(
+                  @click="isOpenCommunity = !isOpenCommunity"
+                  :class="{ 'is-open': isOpenCommunity }"
+                )
+                  | {{ $t('community') }}
+                  nuxt-icon.arrow-icon.text-size-16px( name="ArrowRightSmall2" filled )
+
+              community-navbar
+
           .nav-item
             scroll-link( to="/about-us" ) {{ $t('aboutUs') }}
           .nav-item
@@ -46,7 +65,6 @@
         .right-part.flex.items-center.gap-12px
           app-entry-button( placement="header" )
           stars-on-github-button
-
 </template>
 
 <script setup lang="ts">
@@ -72,6 +90,7 @@ const isReverse = ref(true)
 const lottieIcon = ref<any>(null)
 const lottieLoaded = ref(false)
 const isMounted = ref(false)
+const isOpenCommunity = ref(false)
 const activeTab = ref(null)
 const activeTabStyle = reactive({
   opacity: 0,
@@ -190,10 +209,24 @@ $mediaCompactHeader = '(max-width: 1280px)'
       transition: 318ms
       letter-spacing: -0.28px
 
+      &.handler-row
+        display: flex
+        cursor pointer
+
+        .arrow-icon
+          transition: 160ms var(--ease-out-quad)
+          transform: rotate(90deg)
+
       &.is-active,
       &:hover
         color: black
         background: rgba(0, 0, 0, 0.04)
+
+      &.is-open
+        background: rgba(0, 0, 0, 0.04)
+
+        .arrow-icon
+          transform: rotate(-90deg)
 
     .right-part
       overflow: hidden
@@ -261,4 +294,13 @@ $mediaCompactHeader = '(max-width: 1280px)'
 
   .el-popper__arrow
     display: none
+
+.el-popover.el-popper.community-popper
+  border-radius: 8px;
+  border: 1px solid var(--black-08, rgba(0, 0, 0, 0.08));
+  background: var(--White-Background, #F8F8F7);
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.10);
+  padding: 16px 12px
+  margin-left: -12px
+
 </style>
