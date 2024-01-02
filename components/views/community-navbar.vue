@@ -51,7 +51,7 @@ const navItems = [
 .community-navbar
 
   .nav-sub-item
-    padding: 8px 12px
+    padding: 6px 12px
     border-radius: 4px
     transition: 218ms
 
@@ -61,15 +61,20 @@ const navItems = [
 
     .item-name,
     .item-desc
-      font-size: fluid-value(14, 16)
+      font-size: fluid-value(14, 14)
       font-weight: 500
       line-height: 1.5
 
+    .item-name
+      letter-spacing: (-0.2/14em)
+
     .item-desc
+      line-height: 22px
       color: var(--Black-Tertiary, #8E8D91);
+      font-weight: 400
 
     .nuxt-icon
-      font-size: fluid-value(20, 24)
+      font-size: fluid-value(20, 20)
       color: #77757D99
       transition: 218ms
 

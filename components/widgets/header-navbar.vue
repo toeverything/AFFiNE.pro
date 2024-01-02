@@ -38,7 +38,7 @@
               transition="popover-popup"
               popper-class="community-popper"
               v-model:visible="isOpenCommunity"
-              width="440px"
+              width="400px"
               placement="bottom-start"
               :show-arrow="false"
               :offset="8"
