@@ -51,6 +51,7 @@
     "gray-matter": "^4.0.3",
     "gulp": "^4.0.2",
     "gulp-file": "^0.4.0",
+    "lodash": "^4.17.21",
     "nuxt": "^3.4.1",
     "nuxt-icons": "^3.1.0",
     "nuxt-mixpanel": "^1.0.0",

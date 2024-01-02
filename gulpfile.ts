@@ -1,6 +1,8 @@
 import { src, dest, series } from 'gulp'
 import fs from 'fs/promises'
 import axios from 'axios'
+import _ from 'lodash'
+
 const file = require('gulp-file')
 
 function cleanBlog(cb: any) {
@@ -10,12 +12,14 @@ function cleanBlog(cb: any) {
 async function convertBlogToMarkdowns(cb: any) {
   try {
     const { data } = await axios('https://affine.pro/api/blog')
-    const pages = data.pages
+        const pages = data.pages
+      .filter((page: any) => page.publish)
+
     if (!pages || !pages.length) {
       throw new Error('No pages')
     }
-    pages
-      .filter((page: any) => page.publish)
+
+    _.uniqBy(pages, 'slug')
       .map((page: any, index: number) => {
         return src('/content/*')
           .pipe(file(`${page.slug}.json`, JSON.stringify(page, null, 2)))
