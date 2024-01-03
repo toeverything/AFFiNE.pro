@@ -171,7 +171,7 @@ const communityMembers: Member[] = [
     name: "Christopher Smolak",
     title: "Operation Director, Community and Growth",
     avatar: "/ChristopherSmolak.jpg",
-    link: "https://shortcipher.me",
+    link: "https://github.com/ShortCipher5",
   },
   {
     name: "Yang Peng",
