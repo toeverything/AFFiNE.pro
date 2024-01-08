@@ -12,9 +12,7 @@ Issue/Hotfix: `issue/$x` -> `production`
 
 ## How to publish blog
 
-The blog source uses a public workspace of AFFiNE: [https://app.affine.pro/public-workspace/H6vffRmJbCfA-r3kq_36_](https://app.affine.pro/public-workspace/H6vffRmJbCfA-r3kq_36_)
-
-You can use AFFiNE to write your article, contact [ShortCipher](https://github.com/ShortCipher5) to request permissions for the AFFiNE Blog Workspace.
+The blog uses AFFiNE as the content source. The Workspace ID is found in the following file: [services/blog/getWorkspacePages.ts](services/blog/getWorkspacePages.ts)
 
 Each blog should abide by the following format:
 ```
