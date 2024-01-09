@@ -248,7 +248,9 @@ const { arrivedState, x } = useScroll(tagListEl, { behavior: 'smooth' })
     margin-bottom: 32px
     overflow-x: auto
     padding-right: 40px
-    scrollbar-width: none
+
+    &::-webkit-scrollbar
+      display: none
 
     &:after
       content: ''
