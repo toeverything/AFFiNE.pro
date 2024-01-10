@@ -9,6 +9,7 @@ const cache = new Cacheables({
 })
 
 export default defineEventHandler(async (event) => {
+  console.log('[API] get blog from referrer', event.node.req.headers.referer)
   const getData = () =>
     cache.cacheable(() => getWorkspacePages(), `${event.node.req.url}`, {
       cachePolicy: 'max-age',
