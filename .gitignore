@@ -9,3 +9,5 @@ node_modules
 # VSCode
 .vscode
 .DS_Store
+# Generate
+dist

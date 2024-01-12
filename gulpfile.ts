@@ -11,7 +11,7 @@ function cleanBlog(cb: any) {
 
 async function convertBlogToMarkdowns(cb: any) {
   try {
-    const { data } = await axios('https://affine.pro/api/blog')
+    const { data } = await axios(`https://affine.pro/api/blog?token=${process.env.API_TOKEN}`)
         const pages = data.pages
       .filter((page: any) => page.publish)
 
