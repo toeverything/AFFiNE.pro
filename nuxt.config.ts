@@ -65,6 +65,18 @@ export default defineNuxtConfig({
           src: 'https://app.termly.io/embed.min.js',
           'data-auto-block': 'on',
           'data-website-uuid': 'd12cc511-9767-4514-9a8b-48f5883b5ba6'
+        },
+        {
+          type: 'text/javascript',
+          children: `
+            (function(w){w.fpr=w.fpr||function(){w.fpr.q = w.fpr.q||[];w.fpr.q[arguments[0]=='set'?'unshift':'push'](arguments);};})(window);
+            fpr("init", {cid:"daflad6y"});
+            fpr("click");
+          `
+        },
+        {
+          src: 'https://cdn.firstpromoter.com/fpr.js',
+          async: true
         }
       ]
     }
