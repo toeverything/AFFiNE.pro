@@ -72,7 +72,7 @@
             .price-row.flex.items-end.gap-2
               .price-amount {{ currentTab === 'yearly' ? '$6.75' : '$7.99' }}
               .per-time-tips.headline-6 {{ $t('pricePage.perMonth') }}
-            nuxt-link( :href="currentTab === 'yearly' ? PATH.PRICING_PRO_YEARLY : PATH.PRICING_PRO_MONTHLY" target="_blank" rel="nofollow" )
+            nuxt-link( :href="proActionLink" target="_blank" rel="nofollow" )
               el-button(
                 type="primary"
                 size="action"
@@ -153,11 +153,22 @@ import { PATH, INFO, CONFIG } from '~/utils/constants'
 
 const { t } = useI18n()
 
+const store = useStore()
 const currentTab = ref('monthly')
 const couponCode = ref('BF23')
 
 const isMonthly = computed(() => currentTab.value === 'monthly')
 const isYearly = computed(() => currentTab.value === 'yearly')
+
+const proActionLink = computed(() => {
+  let baseLink = isMonthly.value ? PATH.PRICING_PRO_MONTHLY : PATH.PRICING_PRO_YEARLY
+
+  if (store.context.coupon) {
+    baseLink = `${baseLink}&coupon=${store.context.coupon}`
+  }
+
+  return baseLink
+})
 
 const { copy, copied } = useClipboard()
 

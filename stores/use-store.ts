@@ -18,6 +18,7 @@ type MainState = {
     isShowMobileInterceptModal: boolean
   },
   context: {
+    coupon?: string
     lastPath: string
     lastFetched: Record<string, any>
   }
