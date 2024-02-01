@@ -37,7 +37,7 @@ export default {
   client: "Client",
   WhatIsNew: "What’s new",
   getStarted: "Get Started",
-  login: "Login",
+  login: "Sign up / Sign in",
   exploreOnDesktop: "Explore on Desktop",
 
   useDesktopVersion: {
