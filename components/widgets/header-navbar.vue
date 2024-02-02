@@ -6,7 +6,7 @@
   .navbar-fixed
     .limit-container.flex.items-center
       .flex.flex-1.justify-between.items-center
-        .menu-list.flex.items-center.gap-12px
+        .menu-list.flex.items-center.gap-4px
           nuxt-link.handler.logo-handler(
             to="/"
             @mouseenter="handleMouseenter"
