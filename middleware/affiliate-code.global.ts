@@ -1,6 +1,7 @@
 const SOURCE_CODE_MAP: Record<string, string> = {
   'anshmehra': 'ANSHFANS',
-  'KeepProductive': 'KEEPPRODUCTIVE'
+  'KeepProductive': 'KEEPPRODUCTIVE',
+  'KeepProductive?affiliate_code=KeepProductive': 'KEEPPRODUCTIVE',
 }
 
 export default defineNuxtRouteMiddleware((to, from) => {
