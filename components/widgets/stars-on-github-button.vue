@@ -1,5 +1,5 @@
 <template lang="pug">
-nuxt-link.stars-on-github-button.inline-flex.justify-center.items-center(
+nuxt-link.stars-on-github-btn.inline-flex.justify-center.items-center(
   :to="PATH.AFFiNE_GITHUB"
   target="_blank"
   rel="nofollow"
@@ -15,7 +15,7 @@ import GithubCircle from '~icons/mdi/github-circle'
 </script>
 
 <style lang="stylus">
-.stars-on-github-button
+.stars-on-github-btn
   gap: 6px
   color: var(--primary-deep)
   border-radius: 34px
@@ -40,5 +40,4 @@ import GithubCircle from '~icons/mdi/github-circle'
     font-weight: 500
     line-height: 18px
     letter-spacing: -0.28px
-
 </style>
