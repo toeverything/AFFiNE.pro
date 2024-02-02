@@ -13,7 +13,7 @@ track-link.get-start-link(
 
 .explore-on-desktop {{ $t('exploreOnDesktop') }}
 </template>
-  
+
 <script setup lang="ts">
 import { PATH } from '~/utils/constants'
 
@@ -29,6 +29,10 @@ defineProps<{
 
   @media $mediaInMobile
     display: none
+
+  .login-button
+    padding: 5px 16px
+    height: 30px
 
 .explore-on-desktop
   display: none
