@@ -27,17 +27,7 @@ export const useBlogMetas = (
       meta.slug
     ))
     .sort(({ created: a }, { created: b }) => {
-      if (a === null || b === null) {
-        return 0
-      }
-      if (a < b) {
-        return 1
-      }
-      if (a > b) {
-        return -1
-      } else {
-        return 0
-      }
+      return (b || 0) - (a || 0);
     })
   const tags = getTags(publishedMetas)
   let filteredMetas = query?.tag
