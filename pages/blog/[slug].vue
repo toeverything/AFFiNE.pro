@@ -223,6 +223,7 @@ const handleReturnClick = () => {
     margin-top: 32px
     margin-bottom: 18px
     color: #000
+    letter-spacing: -0.03em
 
   .article-desc
     color: var(--primary-gray)
