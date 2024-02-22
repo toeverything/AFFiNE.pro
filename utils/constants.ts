@@ -76,6 +76,7 @@ export const CONFIG = {
   ENABLE_LANG_SWITCHER: false,
   ENABLE_THEME_SWITCHER: false,
   ENABLE_BLACK_FRIDAY: false,
+  ENABLE_PRODUCT_HUNT: true,
 
   // Service
   API_HOST: "https://api.affine.pro",

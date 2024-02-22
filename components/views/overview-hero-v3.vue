@@ -2,6 +2,7 @@
 .overview-hero-v3(
   ref="el"
   :style="{ '--scroll-progress': scrollProgress }"
+  :class="{  'has-label': CONFIG.ENABLE_PRODUCT_HUNT }"
 )
   .limit-container
     .pin-wrapper-placeholder
@@ -9,9 +10,15 @@
       video-play-when-visible( poster="/overview/hero-cover.png" src="/overview/hero-cover.mp4" :isActive="isPlayVideo" )
     .bottom-gap
 
-  .pin-wrapper
+  .pin-wrapper(
+  )
 
     .text-wrapper.flex.flex-col.items-center
+      .animated-in(
+        v-if="CONFIG.ENABLE_PRODUCT_HUNT"
+      )
+        ProductHuntButton(
+        )
       .animated-in(
         v-if="CONFIG.ENABLE_BLACK_FRIDAY"
       )
@@ -38,9 +45,11 @@
               </svg>
             | Plan,
 
-        .row.second-row.flex.justify-center
-          | All at Once
-          .color-brand .
+        .row.second-row.flex.justify-center.items-end.mt-6px
+          | All at Once.
+          .small-text.flex.justify-center
+            | &nbsp;With&nbsp;
+            .color-brand AI.
       p.hero-desc.mb-0.animated-in.animate-delay-100ms {{ $t('overviewPage.heroDesc') }}
       app-entry-button.animated-in.animate-delay-150ms( placement="landing_page" size="large" )
     .spline-container( :class="{ 'is-inited': isInited }" )
@@ -126,11 +135,17 @@ onDeactivated(() => {
   min-height: 600px
   position relative
 
+  .product-hunt-button,
+  .black-friday-button
+    position relative
+    top: -52px
+
+    @media $mediaInMobile
+      top: -32px
+
   .black-friday-button
     display: flex
     align-items: center
-    position relative
-    top: -52px
     font-size: 13px
     color: black
     font-weight: 700
@@ -165,6 +180,11 @@ onDeactivated(() => {
     @media $mediaInXS
       position absolute
       top: 0
+
+  &.has-label
+    .pin-wrapper,
+    .pin-wrapper-placeholder
+      height: fluid-value(410, 640, 390, 1024)
 
   .spline-container
     width: 1600px
@@ -234,6 +254,11 @@ onDeactivated(() => {
       line-height: 1
       letter-spacing: (-6.3/90em)
       margin: 0
+
+      .small-text
+        font-size: 0.77em
+        line-height: 1.15
+        letter-spacing: -0.07em
 
       .symbol-cursor
         position relative
