@@ -23,7 +23,8 @@ export const PATH = {
   INTERN_APPLY_FORM: "https://6dxre9ihosp.typeform.com/to/lnHWRsVS",
   SING_UP: "https://app.affine.pro",
   LOGIN: "https://app.affine.pro/signin",
-  PRICING_CONTACT_FORM: "https://6dxre9ihosp.typeform.com/to/uZeBtpPm",
+  PRICING_CONTACT_FORM_TEAM: "https://6dxre9ihosp.typeform.com/to/niBcdkvs",
+  PRICING_CONTACT_FORM_ENTERPRISE: "https://6dxre9ihosp.typeform.com/to/rFfobTjf",
   PRICING_PRO_MONTHLY:
     "https://app.affine.pro/signin?subscription_recurring=Monthly&subscription_plan=Pro",
   PRICING_PRO_YEARLY:

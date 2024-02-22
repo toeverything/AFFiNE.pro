@@ -107,11 +107,11 @@
             .planning-name {{ $t('pricePage.team') }}
             .price-row.flex.items-center.gap-2
               .coming-soon-tips {{ $t('comingSoon') }}...
-            nuxt-link( :href="PATH.PRICING_CONTACT_FORM" target="_blank" rel="nofollow" )
+            nuxt-link( :href="PATH.PRICING_CONTACT_FORM_TEAM" target="_blank" rel="nofollow" )
               el-button.is-outlined(
                 type="primary"
                 size="action"
-              ) {{ $t('pricePage.contactSales') }}
+              ) {{ $t('pricePage.contactSalesTeam') }}
           .planning-list
             .item
               .item-icon
@@ -131,11 +131,11 @@
             .planning-name {{ $t('pricePage.enterprise') }}
             .price-row.flex.items-center.gap-2
               .coming-soon-tips {{ $t('comingSoon') }}...
-            nuxt-link( :href="PATH.PRICING_CONTACT_FORM" target="_blank" rel="nofollow" )
+            nuxt-link( :href="PATH.PRICING_CONTACT_FORM_ENTERPRISE" target="_blank" rel="nofollow" )
               el-button.is-outlined(
                 type="primary"
                 size="action"
-              ) {{ $t('pricePage.contactSales') }}
+              ) {{ $t('pricePage.contactSalesEnterprise') }}
           .planning-list
             .item
               .item-icon
