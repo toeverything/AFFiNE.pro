@@ -222,8 +222,8 @@ export default {
     itemMaxMembers: "Number of members per Workspace ≤ {0}",
     pro: "Pro",
     proAction: "Buy Pro",
-    contactSalesTeam: "Book a demo",
-    contactSalesEnterprise: "Book a demo",
+    contactSalesTeam: "Book a Demo",
+    contactSalesEnterprise: "Book a Demo",
     team: "Team",
     teamItemA:
       "Best team workspace for collaboration and knowledge distilling.",
