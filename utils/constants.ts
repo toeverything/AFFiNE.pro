@@ -13,6 +13,7 @@ export const PATH = {
   AFFiNE_OCTO_BASE: "https://github.com/toeverything/octobase",
   AFFiNE_HOME_PAGE: "https://github.com/toeverything/affine.pro",
   AFFiNE_COMMUNITY: "https://community.affine.pro/",
+  AFFiNE_DOCS: 'https://docs.affine.pro/docs',
 
   SNS_REDDIT: "https://www.reddit.com/r/Affine/",
   SNS_DISCORD: "https://discord.com/invite/yz6tGVsf5p",

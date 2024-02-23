@@ -52,6 +52,26 @@
                   nuxt-icon.arrow-icon.text-size-16px( name="ArrowRightSmall2" filled )
 
               community-navbar
+          .nav-item
+            el-popover(
+              trigger="hover"
+              transition="popover-popup"
+              popper-class="community-popper"
+              v-model:visible="isOpenResource"
+              width="400px"
+              placement="bottom-start"
+              :show-arrow="false"
+              :offset="8"
+            )
+              template( #reference )
+                a.handler-row.gap-1.items-center(
+                  @click="isOpenResource = !isOpenResource"
+                  :class="{ 'is-open': isOpenResource }"
+                )
+                  | {{ $t('resource') }}
+                  nuxt-icon.arrow-icon.text-size-16px( name="ArrowRightSmall2" filled )
+
+              resource-navbar
 
           .nav-item
             scroll-link( to="/about-us" ) {{ $t('aboutUs') }}
@@ -91,6 +111,7 @@ const lottieIcon = ref<any>(null)
 const lottieLoaded = ref(false)
 const isMounted = ref(false)
 const isOpenCommunity = ref(false)
+const isOpenResource = ref(false)
 const activeTab = ref(null)
 const activeTabStyle = reactive({
   opacity: 0,
@@ -301,6 +322,6 @@ $mediaCompactHeader = '(max-width: 1280px)'
   background: var(--White-Background, #F8F8F7);
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.10);
   padding: 16px 12px
-  margin-left: -12px
+  // margin-left: -12px
 
 </style>

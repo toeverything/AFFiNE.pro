@@ -31,6 +31,19 @@
 
             el-collapse-transition
               community-navbar( v-show="isOpenCommunity" )
+
+          .nav-item.community-item(
+            @click="isOpenResource = !isOpenResource" ref="ignoreResElRef"
+            :class="{ 'is-open-community': isOpenResource }"
+          )
+            a.handler-row.justify-between.items-center.w-full(
+            )
+              | {{ $t('resource') }}
+              nuxt-icon.arrow-icon.text-size-20px( name="ArrowRightSmall2" filled )
+
+            el-collapse-transition
+              resource-navbar( v-show="isOpenResource" )
+
           .nav-item
             nuxt-link( to="/about-us" ) {{ $t('aboutUs') }}
           .nav-item
@@ -61,16 +74,19 @@ const { locale, setLocaleCookie } = useI18n()
 
 const menuHandler = ref(null)
 const ignoreElRef = ref(null)
+const ignoreResElRef = ref(null)
 const isOpen = ref(false)
 const isOpenCommunity = ref(false)
+const isOpenResource = ref(false)
 
 onClickOutside(
   menuHandler,
   (event) => {
     isOpen.value = false
     isOpenCommunity.value = false
+    isOpenResource.value = false
   },
-  { ignore: [ignoreElRef] },
+  { ignore: [ignoreElRef, ignoreResElRef] },
 )
 
 watch(locale, () => {

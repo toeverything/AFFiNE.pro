@@ -7,6 +7,8 @@ export default {
   openSource: "Open Source",
   websiteTheme: "Website Theme",
   resources: "Resources",
+  resource: "Resource",
+  docs: "Docs",
   latest: "Latest",
   terms: "Terms",
   privacy: "Privacy",
