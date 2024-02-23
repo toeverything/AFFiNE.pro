@@ -24,6 +24,7 @@ export const PATH = {
   INTERN_APPLY_FORM: "https://6dxre9ihosp.typeform.com/to/lnHWRsVS",
   SING_UP: "https://app.affine.pro",
   LOGIN: "https://app.affine.pro/signin",
+  PRICING_JOIN_WAITLIST: "https://6dxre9ihosp.typeform.com/to/niBcdkvs",
   PRICING_CONTACT_FORM_TEAM: "https://6dxre9ihosp.typeform.com/to/niBcdkvs",
   PRICING_CONTACT_FORM_ENTERPRISE: "https://6dxre9ihosp.typeform.com/to/rFfobTjf",
   PRICING_PRO_MONTHLY:
