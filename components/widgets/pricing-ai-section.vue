@@ -45,7 +45,7 @@
           .item
             .item-icon
               nuxt-icon( name="dot")
-            .item-body Summarize your content into structured mind-map
+            .item-body Summarize your content into structured mind-maps
       .feature-cell
         .cell-headline
           nuxt-icon.text-13px( name="ai-plan" filled )
