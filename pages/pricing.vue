@@ -8,7 +8,7 @@
     .limit-container.flex.flex-col.items-center
       pricing-ai-section( isInPricing )
 
-  .section.mb-2
+  .section.mb-8
     .limit-container.flex.flex-col.items-center
       .tab-bar.flex( :class="[`active-${currentTab}`]" )
         .tab-active-bg
@@ -156,6 +156,11 @@
               .item-icon
                 nuxt-icon( name="dot" filled)
               .item-body {{ $t('pricePage.enterpriseItemB') }}
+
+  .section.section-bento.mb-4
+    .limit-container
+      h1.ma-0.mb-6.hero-title Why Not Upgrade to AFFiNE Cloud?
+      pricing-bento
 </template>
 
 <script lang="ts" setup>
