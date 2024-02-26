@@ -222,6 +222,7 @@ export default {
     itemStorage: "{0}GB of Cloud Storage",
     itemMaxFileSize: "{0}MB of maximum file size",
     itemMaxMembers: "Number of members per Workspace ≤ {0}",
+    itemMaxVersionHistory: "{0}-days version history",
     pro: "Pro",
     proAction: "Buy Pro",
     contactSalesTeam: "Book a Demo",

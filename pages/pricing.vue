@@ -53,6 +53,10 @@
               .item-icon
                 nuxt-icon( name="Done" filled)
               .item-body {{ $t('pricePage.itemMaxMembers', [3]) }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemMaxVersionHistory', [7]) }}
 
         .price-card.type-pro
           .black-friday-label(
@@ -102,6 +106,10 @@
               .item-icon
                 nuxt-icon( name="Done" filled)
               .item-body {{ $t('pricePage.itemMaxMembers', [10]) }}
+            .item
+              .item-icon
+                nuxt-icon( name="Done" filled)
+              .item-body {{ $t('pricePage.itemMaxVersionHistory', [30]) }}
         .price-card.type-team
           .card-header
             .planning-name {{ $t('pricePage.team') }}
