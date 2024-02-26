@@ -391,9 +391,10 @@ const DRIVE_FILES = [
 
     .cell-body
       position relative
-      overflow: hidden
       padding-top: 50px
       height: 230px
+      max-width: 400px
+      margin: 0 auto
 
     .drive-file-item
       --y: 0px
@@ -457,6 +458,8 @@ const DRIVE_FILES = [
       padding-left: 24px
       padding-top: 12px
       height: 240px
+      max-width: 400px
+      margin: 0 auto
 
     .notif-item
       width: 360px
