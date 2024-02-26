@@ -153,6 +153,10 @@
               .item-icon
                 nuxt-icon( name="dot" filled)
               .item-body {{ $t('pricePage.enterpriseItemB') }}
+
+  .section.mb-2
+    .limit-container.flex.flex-col.items-center
+      pricing-ai-section
 </template>
 
 <script lang="ts" setup>
