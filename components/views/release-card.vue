@@ -68,30 +68,31 @@
     :defaultAsset="defaultAsset"
   )
 
-  el-dialog.other-version-modal(
-    v-model="isShowOtherVersionModal"
-    width="346px"
-    title="Other Versions"
-    :lock-scroll="false"
-    append-to-body
-  )
-    template( v-if="assetsMap.mac.length" )
-      .other-version-title {{ Platform.Mac }}
-      ul.other-version
-        li( v-for="asset in assetsMap.mac" )
-          nuxt-link( :to="asset.url" ) {{ asset.name }}
+  client-only
+    el-dialog.other-version-modal(
+      v-model="isShowOtherVersionModal"
+      width="346px"
+      title="Other Versions"
+      :lock-scroll="false"
+      append-to-body
+    )
+      template( v-if="assetsMap.mac.length" )
+        .other-version-title {{ Platform.Mac }}
+        ul.other-version
+          li( v-for="asset in assetsMap.mac" )
+            a( :href="asset.url" ) {{ asset.name }}
 
-    template( v-if="assetsMap.windows.length" )
-      .other-version-title  {{ Platform.Win }}
-      ul.other-version
-        li( v-for="asset in assetsMap.windows" )
-          nuxt-link( :to="asset.url" ) {{ asset.name }}
+      template( v-if="assetsMap.windows.length" )
+        .other-version-title  {{ Platform.Win }}
+        ul.other-version
+          li( v-for="asset in assetsMap.windows" )
+            a( :href="asset.url" ) {{ asset.name }}
 
-    template( v-if="assetsMap.linux.length" )
-      .other-version-title  {{ Platform.Linux }}
-      ul.other-version
-        li( v-for="asset in assetsMap.linux" )
-          nuxt-link( :to="asset.url" ) {{ asset.name }}
+      template( v-if="assetsMap.linux.length" )
+        .other-version-title  {{ Platform.Linux }}
+        ul.other-version
+          li( v-for="asset in assetsMap.linux" )
+            a( :href="asset.url" ) {{ asset.name }}
 </template>
 
 <script setup lang="ts">
