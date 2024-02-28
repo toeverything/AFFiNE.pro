@@ -7,26 +7,41 @@
     .limit-container.flex.items-center
       .flex.flex-1.justify-between.items-center
         .menu-list.flex.items-center.gap-4px
-          nuxt-link.handler.logo-handler(
-            to="/"
-            @mouseenter="handleMouseenter"
-            @mouseleave="handleMouseleave"
+          el-popover(
+            trigger="hover"
+            transition="popover-popup"
+            popper-class="logo-phonetic-popper"
+            v-model:visible="isOpenLogoPhonetic"
+            width="130px"
+            placement="bottom-start"
+            :show-arrow="false"
+            :offset="8"
+            @after-enter="handleLogoPhoneticEnter"
           )
-            affine-logo-lottie.navbar-logo(
-              v-if="!lottieLoaded"
-            )
-
-            client-only
-              vue3-lottie.navbar-logo.lottie-logo(
-                ref="lottieIcon"
-                :autoPlay="false"
-                :loop="false"
-                :speed="1"
-                width="32px"
-                height="32px"
-                animationLink="/lottie-files/logo-hover.json"
-                @onAnimationLoaded="handleLottieLoaded"
+            template( #reference )
+              nuxt-link.handler.logo-handler(
+                to="/"
+                @mouseenter="handleMouseenter"
+                @mouseleave="handleMouseleave"
               )
+                affine-logo-lottie.navbar-logo(
+                  v-if="!lottieLoaded"
+                )
+
+                client-only
+                  vue3-lottie.navbar-logo.lottie-logo(
+                    ref="lottieIcon"
+                    :autoPlay="false"
+                    :loop="false"
+                    :speed="1"
+                    width="32px"
+                    height="32px"
+                    animationLink="/lottie-files/logo-hover.json"
+                    @onAnimationLoaded="handleLottieLoaded"
+                  )
+
+            .phonetic-mark əˈfʌɪn | a-fine
+
           client-only
             .active-tab(
               ref="activeTab"
@@ -110,6 +125,7 @@ const isReverse = ref(true)
 const lottieIcon = ref<any>(null)
 const lottieLoaded = ref(false)
 const isMounted = ref(false)
+const isOpenLogoPhonetic = ref(false)
 const isOpenCommunity = ref(false)
 const isOpenResource = ref(false)
 const activeTab = ref(null)
@@ -143,6 +159,14 @@ const handleMouseenter = (event: Event) => {
   animation.setDirection('forward')
   animation.goToAndStop(1)
   animation.play()
+}
+
+let phoneticEnterTimer: any
+const handleLogoPhoneticEnter = () => {
+  clearTimeout(phoneticEnterTimer)
+  phoneticEnterTimer = setTimeout(() => {
+    isOpenLogoPhonetic.value = false
+  }, 2000)
 }
 
 const handleMouseleave = (event: Event) => {
@@ -315,6 +339,22 @@ $mediaCompactHeader = '(max-width: 1280px)'
 
   .el-popper__arrow
     display: none
+
+.el-popover.el-popper.logo-phonetic-popper
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 4px;
+  padding: 4px 12px;
+  min-width: 140px
+  text-align: center
+
+  .phonetic-mark
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #F4F4F5;
 
 .el-popover.el-popper.community-popper
   border-radius: 8px;
