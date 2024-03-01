@@ -207,7 +207,6 @@ const handleReturnClick = () => {
 
   .article-cover
     width: 100%
-    aspect-ratio: 493/300
     border-radius: 12px
     object-fit: cover
     object-position: center
