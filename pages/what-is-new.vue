@@ -4,14 +4,19 @@
     .container.flex.flex-col.items-start
       .section-title {{ $t('whatIsNewPage.title') }}
       .section-desc {{ $t('whatIsNewPage.desc') }}
+      .links-row.my-4.flex
+        nuxt-link(
+          :to="`${PATH.SNS_TWITTER}`"
+          target="_blank" rel="nofollow"
+        )
+          | Join our community
+        .split.mx-2 ·
+        nuxt-link(
+          :to="`${PATH.SNS_TWITTER}`"
+          target="_blank" rel="nofollow"
+        )
+          | Follow us on Twitter
       .body-content {{ $t('whatIsNewPage.heroContent') }}
-      nuxt-link.view-button(
-        :to="`${PATH.AFFiNE_GITHUB}/releases`"
-        target="_blank" rel="nofollow"
-      )
-        | {{ $t('whatIsNewPage.viewGitHubReleases') }}
-        nuxt-icon( name="github" )
-      .divider
 
   .section-changelogs
     ui-loading.mb-30(
@@ -96,30 +101,48 @@ await loadData()
 
 <style lang="stylus">
 .page.page-what-is-new
-  --container-width: 960px
+  --container-width: 660px
 
   .container
     --width: var(--container-width)
     padding-left: fluid-value(16, 40)
 
+    @media (max-width: 1500px)
+      padding-right: fluid-value(16, 40)
+
   .section-hero
-    padding-top: fluid-value(50, 172)
-    padding-bottom: fluid-value(64, 144)
+    max-width: 660px
+    margin: auto
+    padding-top: fluid-value(50, 60)
+    color: #000
 
     .section-title
-      font-size: fluid-value(24, 32)
+      font-size: fluid-value(36, 48)
       margin-bottom: 10px
+      font-weight: 500;
+      line-height: (57/48);
+      letter-spacing: -0.04em;
 
     .section-desc
       font-weight: 500
-      font-size: fluid-value(14, 16)
-      line-height: (19/16)
-      margin-bottom: 44px
+      font-size: fluid-value(18, 20)
+      line-height: (27/28)
+      letter-spacing: -0.02em;
+      color: #424149
+
+    .links-row
+      color: #1E96EB
+      font-weight: 500
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: -0.01em;
 
     .body-content
-      font-size: fluid-value(14, 15);
-      margin-bottom: 44px
       white-space: pre-line
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #424149;
 
     .view-button
       display: flex
@@ -143,10 +166,10 @@ await loadData()
       width: 100%
       height: 1px
       opacity: 0.6
-      margin-top: 42px
-      background: radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
+      margin-top: 64px
+      margin-bottom: 64px
+      background: #CCCCCC
 
   .section-changelogs
-    .changelog-card
-      margin-bottom: fluid-value(64, 144)
+    padding-bottom: 40px
 </style>

@@ -201,7 +201,7 @@ export default {
 
   whatIsNewPage: {
     title: `What’s new`,
-    desc: "New updates about AFFiNE",
+    desc: "New updates and improvements to Linear.",
     heroContent: `Welcome to our What's New section, your source for staying informed about our latest product updates covering iterations, major improvements, and bug fixes. We strive to keep you up-to-date with the most relevant information to ensure you're always on the cutting edge.`,
     viewGitHubReleases: "View GitHub history",
     viewDetail: "View Detail",
