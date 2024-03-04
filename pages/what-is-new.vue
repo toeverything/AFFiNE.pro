@@ -6,7 +6,7 @@
       .section-desc {{ $t('whatIsNewPage.desc') }}
       .links-row.my-4.flex
         nuxt-link(
-          :to="`${PATH.SNS_TWITTER}`"
+          :to="`${PATH.SNS_DISCORD}`"
           target="_blank" rel="nofollow"
         )
           | Join our community
