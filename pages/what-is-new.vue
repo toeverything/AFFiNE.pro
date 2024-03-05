@@ -39,7 +39,10 @@ import { primaryAPI } from '~/apis'
 
 const { t } = useI18n()
 useHead({
-  title: t('whatIsNewPage.title')
+  title: t('whatIsNewPage.title'),
+  meta: [
+    { 'name': 'og:title', content: `${t('whatIsNewPage.title')} - AFFiNE` }
+  ]
 })
 
 const asyncOptions = reactive({
