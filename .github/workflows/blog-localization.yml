@@ -8,6 +8,10 @@ on:
   # push:
   #   branches: [production, staging, master, refactor/**]
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   sync-blog:
     runs-on: ubuntu-latest
