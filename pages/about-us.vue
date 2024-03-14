@@ -376,11 +376,12 @@ useHead({
       font-size: fluid-value(20, 32, 390, 744);
       line-height: 119%;
       letter-spacing: -0.03em;
-      transition: 268ms
+      transition: 350ms
       transform-origin: left center
+      cursor default
 
       &:hover
-        transform: scale(1.125)
+        transform: scale(1.0625)
         color: #000
         @media $mediaInXS
           transform: scale(1.05)
