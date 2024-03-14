@@ -13,47 +13,26 @@
       .flex.cards-row
         .contact-card
           .card-header.flex.items-center.gap-28px
-            .icon-wrapper
-              nuxt-icon( name="Email" )
             | {{ $t('aboutUsPage.contactTitle') }}
           .card-body
-            ul
-              li {{ $t('aboutUsPage.contactItemA') }}
-              li {{ $t('aboutUsPage.contactItemB') }}
-              li {{ $t('aboutUsPage.contactItemC') }}
+            .contact-items
+              .contact-item {{ $t('aboutUsPage.contactItemA') }}
+              .contact-item {{ $t('aboutUsPage.contactItemB') }}
+              .contact-item {{ $t('aboutUsPage.contactItemC') }}
           .card-footer.flex.flex-wrap
-            | {{ $t('aboutUsPage.contactGeneralInfo') }}&nbsp;
-            br.show-in-xs
-            nuxt-link( :to="`mailto:${INFO.CONTACT_EMAIL}`" target="_blank" ) {{ INFO.CONTACT_EMAIL }}
+            nuxt-link( :to="`mailto:${INFO.CONTACT_EMAIL}`" target="_blank" )
+              el-button.contact-button(
+                type="primary"
+                size="action"
+              ) Contact us now!
 
-        .contributor-reward-card.flex.flex-col.items-center
-          .card-desc {{ $t('aboutUsPage.contributorRewardDesc') }}
-          nuxt-link.visit-button( :to="PATH.INTERN_APPLY_FORM" target="_blank" ) {{ $t('visit') }}
-      .divider
+  .section.section-gallery
+    .gallery-container
+      .singapore-photo.photo-1
+      .singapore-photo.photo-2
+      .singapore-photo.photo-3
 
-  .section.section-members
-    .md-container
-      .section-title {{ $t('aboutUsPage.memberTitle') }}
-      .members-list
-        member-card(
-          v-for="member in coreMembers"
-          :member="member"
-        )
-        member-card(
-          :key="member.avatar"
-          v-for="member in engineeringMembers"
-          :member="member"
-        )
-        member-card(
-          v-for="member in communityMembers"
-          :member="member"
-        )
-        member-card(
-          v-for="member in productMembers"
-          :member="member"
-        )
-
-  overview-slogan-banner.mt-10
+  overview-slogan-banner.mt-4
 </template>
 
 <script lang="ts" setup>
@@ -287,6 +266,65 @@ useHead({
       margin-bottom: 50px
       text-align: center
 
+  .section-gallery
+    display: flex
+    justify-content: center
+    padding-top: fluid-value(30, 128, 744)
+    padding-bottom: fluid-value(30, 100, 744)
+
+    .gallery-container
+      display: flex
+      padding-left: fluid-value(20, 70, 390, 744)
+      padding-right: fluid-value(20, 70, 390, 744)
+      min-width: (1614px + 70px)
+
+      @media (max-width: 900px)
+        min-width: 100%
+        flex-direction: column
+        align-items: center
+
+    .singapore-photo
+      background-size: cover
+      background-position: center center
+      border-radius: 8px
+
+    .photo-1
+      width: 530px
+      aspect-ratio: 530/354
+      background-image: url(/about/singapore-1.png)
+      transform: rotate(-3deg)
+
+      @media (max-width: 900px)
+        width: 100%
+        max-width: 586px
+
+    .photo-2
+      position relative
+      z-index: 2
+      width: 508px
+      aspect-ratio: 508/381
+      background-image: url(/about/singapore-2.png)
+
+      @media (max-width: 900px)
+        width: 100%
+        max-width: 588px
+        top: 1.4%
+
+    .photo-3
+      position relative
+      left: 11px
+      z-index: 3
+      width: 546px
+      aspect-ratio: 546/364
+      background-image: url(/about/singapore-3.png)
+      transform: rotate(3.31deg)
+
+      @media (max-width: 900px)
+        width: 100%
+        max-width: 588px
+        left: -4px
+        top: 3%
+
   .section-members .section-title
     font-weight: 800;
     font-size: 36px;
@@ -305,36 +343,51 @@ useHead({
       font-size: 14px
 
   .contact-card
-    background: var(--contact-card-bg-color);
-    border: 1px solid $primary10;
-    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
     border-radius: 14px;
-    padding: 30px;
-    max-width: 630px;
+    padding: fluid-value(12, 30) 0;
     width: 100%
 
-    @media $mediaInXS
-      padding: 16px;
-
     .card-header
-      font-weight: 800;
-      font-size: 24px;
-      line-height: 29px;
-
-      @media $mediaInXS
-        font-size: 20px;
+      font-size: fluid-value(18, 32);
+      line-height: (40/32);
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      color: #1E96EB;
 
     .card-body
-      margin: 38px 0 58px
+      margin: 24px 0 48px
       color: var(--primary-gray)
 
       @media $mediaInXS
-        margin: 24px 0 28px
+        margin: 24px 0 32px
 
       ul
         font-size: 16px;
         padding-left: 26px
         line-height: 220.02%
+
+    .contact-items
+      display: flex
+      flex-direction: column
+      gap: fluid-value(28, 36, 390, 744)
+
+    .contact-item
+      font-weight: 500;
+      font-size: fluid-value(20, 32, 390, 744);
+      line-height: 119%;
+      letter-spacing: -0.03em;
+      transition: 350ms
+      transform-origin: left center
+      cursor default
+
+      &:hover
+        transform: scale(1.0625)
+        color: #000
+        @media $mediaInXS
+          transform: scale(1.05)
+
+    .contact-button
+      min-width: 220px
 
     .card-footer
       font-weight: 800;
@@ -342,29 +395,16 @@ useHead({
       a
         text-decoration: underline
 
-    .icon-wrapper
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center
-      justify-content: center
-      border-radius: 14px
-      background: var(--brand-gradient)
-      color: white
-      font-size: 24px
-
   .cards-row
-    --offset: 169px
-    --reward-scale: 1
+    --offset: 0
     position: relative
     flex-direction: column
     gap: 14px
     align-items: center
-    max-width: 630px
+    max-width: 750px
+    width: 100%
 
     @media $mediaInBigScreen
-      max-width: 100%
-      padding-right: var(--offset)
 
       .contact-card
         position: relative
@@ -377,53 +417,6 @@ useHead({
       .visit-button
         transform: translateX(-30%)
         opacity: 0.4
-
-      &:hover
-        --reward-scale: 1
-
-        .visit-button
-          transform: translateY(0)
-          opacity: 1
-
-        .contact-card
-          transform: translateX(-40%)
-
-        .contributor-reward-card
-          transform: translateX(40%) translateY(-50%) scaleY(var(--reward-scale))
-          max-height: 150%
-
-  .contributor-reward-card
-    padding: 4px
-    overflow: hidden
-
-    @media $mediaInBigScreen
-      max-height: 90%
-      padding: 20px 30px
-      position: absolute
-      top: 50%
-      left: var(--offset)
-      right: 0
-      background: #fff
-      border: 1px solid s('rgba(var(--v-primary-rgb), 0.1)')
-      box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1)
-      border-radius: 14px
-      transform: translateY(-50%)
-
-    .card-desc
-      font-size: 14px;
-      line-height: 220.02%;
-
-    .visit-button
-      background: rgba(0, 0, 0, 0.05);
-      border-radius: 10px;
-      padding: 3px 120px;
-      font-size: 14px;
-      line-height: 220.02%;
-      margin-top: fluid-value(36, 41)
-      transition: 518ms
-
-      &:hover
-        background: rgba(0, 0, 0, 0.1);
 
   .section-members
     .md-container
