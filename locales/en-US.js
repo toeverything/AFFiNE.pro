@@ -155,9 +155,9 @@ export default {
     desc: "Deliver Building Blocks for\nFuture SaaS Applications.",
     contactTitle: "Do contact us if you",
     contactItemA:
-      "Want to know more about AFFiNE as a collaborative knowledge base;",
-    contactItemB: "Want to join us;",
-    contactItemC: "Want to build your own block-based applications.",
+      "Explore AFFiNE as a collaborative knowledge base for innovative teamwork.",
+    contactItemB: "Join Us to be part of our dynamic, fully remote team based in Singapore.",
+    contactItemC: "Create your own block-based applications using AFFiNE's versatile platform.",
     contactGeneralInfo: "General contact (including resume): ",
     contributorRewardDesc: `As an open-source project that values community engagement AFFiNE looks to work closely with its collaborators - that's why we started the AFFiNE Core Community Contributor program and also offer internship opportunities. If you're interested in contributing to AFFiNE, do visit our GitHub and feel free to get stuck in. If you want to be more involved and have access to our team and industry experts, you may express your interest via the form below to apply for a paid internship position.`,
     memberTitle: "Team Members",
