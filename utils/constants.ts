@@ -81,5 +81,5 @@ export const CONFIG = {
   ENABLE_PRODUCT_HUNT: true,
 
   // Service
-  API_HOST: "https://api.affine.pro",
+  API_HOST: "https://affine.pro",
 };
