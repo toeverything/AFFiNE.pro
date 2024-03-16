@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { __PROD__ } from '../../utils/dev'
 
-const REQUEST_URL = 'https://api.affine.pro/api/downloads'
+const REQUEST_URL = 'https://affine.pro/api/worker/releases'
 const PROTOCOL = __PROD__ ? 'https://' : 'http://'
 
 import releasesIndex from '../../content/releases/index.json'
