@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const REQUEST_URL = 'https://api.affine.pro/api/downloads'
+const REQUEST_URL = 'https://affine.pro/api/worker/releases'
 
 export default defineEventHandler(async (event) => {
   try {
