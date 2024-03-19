@@ -100,9 +100,14 @@ export default defineNuxtConfig({
     '@element-plus/nuxt',
     'unplugin-icons/nuxt',
     'nuxt-icons',
+    '@zadigetvoltaire/nuxt-gtm',
     '@unocss/nuxt',
     '@pinia/nuxt',
   ],
+
+  gtm: {
+    id: process.env.NUXT_PUBLIC_GOOGLE_TAG_MANAGER_ID as string,
+  },
 
   build: {
     transpile: ['gsap']
