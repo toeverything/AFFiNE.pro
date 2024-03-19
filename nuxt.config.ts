@@ -106,7 +106,7 @@ export default defineNuxtConfig({
   ],
 
   gtm: {
-    id: process.env.NUXT_PUBLIC_GOOGLE_TAG_MANAGER_ID as string,
+    id: process.env.NUXT_PUBLIC_GOOGLE_TAG_MANAGER_ID || 'GTM-UNDEFINED',
   },
 
   build: {
