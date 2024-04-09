@@ -1,6 +1,13 @@
 <template lang="pug">
 .page.page-ai
 
+  .section.section-qna
+    .limit-container
+      .section-subtitle
+        | Question & Answers
+
+      ai-question-and-answers
+
   .section.section-get-started-with
     .limit-container
       .section-subtitle
@@ -18,6 +25,8 @@ useHead({
 
 <style lang="stylus">
 .page.page-ai
+  padding-bottom: 40px
+
   .section
     .section-subtitle
       font-weight: 500;
