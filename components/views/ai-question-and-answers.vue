@@ -64,6 +64,10 @@ const qnaList: QnAItem[] = [
     .el-collapse-item
       border-bottom: 1px solid var(--el-collapse-border-color)
 
+      &.is-active
+        .el-collapse-item__header
+          transition: 0ms
+
       &:not(.is-active):hover
         .el-collapse-item__header
           background: #f9f9f9
