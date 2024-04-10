@@ -210,6 +210,6 @@ onUnmounted(() => {
 
     &.is-active
       opacity 1
-      transform: translateX(0%)
+      transform: translate3d(0px, 0px, 0px)
 
 </style>
