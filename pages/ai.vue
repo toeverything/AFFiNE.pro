@@ -1,6 +1,15 @@
 <template lang="pug">
 .page.page-ai
 
+  .section.section-feature-tarot
+    .limit-container
+      .section-subtitle
+        | What AFFiNE AI Can Do:
+
+      ai-feature-tarot
+
+      .coming-soon-tips.text-center AI with Database / Workspace will be available soon.
+
   .section.section-qna
     .limit-container
       .section-subtitle
@@ -34,7 +43,7 @@ useHead({
       line-height: (43/36);
       letter-spacing: -0.03em;
       color: #000;
-      margin-top: 80px;
+      margin-top: fluid-value(44, 80);
       margin-bottom: fluid-value(20, 40);
 
       @media $mediaInMobile
@@ -42,4 +51,13 @@ useHead({
 
       .muted
         color: #8E8D91
+
+  .section-feature-tarot
+    .coming-soon-tips
+      margin-left: 20px
+      margin-right: 20px
+      margin-top: 20px
+      font-size: 15px
+      line-height: (24/15)
+      color: #8E8D91
 </style>
