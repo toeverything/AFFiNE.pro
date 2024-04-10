@@ -20,6 +20,8 @@
         .menu-list
           //- .nav-item
           //-   nuxt-link( to="/" ) {{ $t('home') }}
+          .nav-item
+            scroll-link( to="/ai" ) AFFiNE AI
           .nav-item.community-item(
             @click="isOpenCommunity = !isOpenCommunity" ref="ignoreElRef"
             :class="{ 'is-open-community': isOpenCommunity }"

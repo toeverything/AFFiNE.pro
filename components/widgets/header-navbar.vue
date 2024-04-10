@@ -47,6 +47,10 @@
               ref="activeTab"
               :style="activeTabStyle"
             )
+
+          .nav-item
+            scroll-link( to="/ai" ) AFFiNE AI
+
           .nav-item
             el-popover(
               trigger="hover"

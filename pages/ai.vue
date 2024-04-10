@@ -1,6 +1,10 @@
 <template lang="pug">
 .page.page-ai
 
+  .section.section-tri-slides
+    .limit-container
+      ai-tri-slides
+
   .section.section-feature-tarot
     .limit-container
       .section-subtitle
@@ -24,6 +28,12 @@
         span.muted with AFFiNE AI
 
       pricing-ai-section
+
+  .preload-images
+    img( src="/ai/slide-write.png" )
+    img( src="/ai/slide-draw.png" )
+    img( src="/ai/slide-present.png" )
+
 </template>
 
 <script lang="ts" setup>
@@ -35,6 +45,14 @@ useHead({
 <style lang="stylus">
 .page.page-ai
   padding-bottom: 40px
+
+  .preload-images
+    position: absolute
+    overflow: hidden
+    left: -9999px
+    top: -9999px
+    height: 1px
+    width: 1px
 
   .section
     .section-subtitle
