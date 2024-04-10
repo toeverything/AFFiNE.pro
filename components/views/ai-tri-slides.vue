@@ -103,7 +103,7 @@ onUnmounted(() => {
 
 <style lang="stylus">
 .ai-tri-slides
-  margin-top: 36px
+  margin-top: fluid-value(0, 36)
 
   .full-row
     margin-left: calc(-1 * var(--padding))

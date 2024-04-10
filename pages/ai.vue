@@ -1,6 +1,10 @@
 <template lang="pug">
 .page.page-ai
 
+  .section.section-hero
+    .limit-container
+      ai-hero
+
   .section.section-tri-slides
     .limit-container
       ai-tri-slides
