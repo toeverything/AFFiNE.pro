@@ -63,9 +63,13 @@ watch(currentSlideIndex, async () => {
   autoSwitchTl.restart()
 
   await nextTick()
-  const $currentSwitcher = document.querySelector('.slide-switcher.is-active')
+  const $currentSwitcher = document.querySelector<HTMLDivElement>('.slide-switcher.is-active')
   if ($currentSwitcher) {
-    $currentSwitcher.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+    switcherList.value.scrollTo({
+      left: $currentSwitcher.offsetLeft - 20,
+      behavior: "smooth",
+    })
+    // $currentSwitcher.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
   }
 })
 
@@ -107,9 +111,13 @@ onUnmounted(() => {
 
   .slide-switcher-list
     padding: 24px var(--padding) fluid-value(12, 24)
+    overflow-y: clip
     overflow-x: auto
     display: flex
     gap: 16px
+
+    @media(max-width: 768px)
+      gap: 20px
 
     .slide-switcher
       position relative
