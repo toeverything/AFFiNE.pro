@@ -44,6 +44,10 @@
 useHead({
   title: 'AI',
 })
+
+definePageMeta({
+  keepalive: false
+})
 </script>
 
 <style lang="stylus">

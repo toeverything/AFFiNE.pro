@@ -5,7 +5,7 @@
       v-if="$device.isDesktop"
     )
 
-  .flex.flex-col.items-center
+  .content-row.flex.flex-col.items-center
     .ai-text-logo(
       :class="{ 'is-mobile': $device.isMobile }"
       :style="{ '--x': `${elementX}px` }"
@@ -168,6 +168,8 @@ const { elementX } = useMouseInElement(logoEl)
       color: #000
 
   .actions-row
+    padding: relative
+    z-index: 2
     margin-top: fluid-value(32, 56)
     gap: 16px
 
