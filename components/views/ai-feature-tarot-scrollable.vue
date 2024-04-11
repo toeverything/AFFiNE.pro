@@ -15,12 +15,15 @@
     ref="el"
   )
     .cards-list
-      ai-feature-card(
+      .card-hover-wrapper(
         v-for="data in list"
-        :data="data"
-        :onClick="handleCardClick"
         :key="data.id"
+        :class="[`wrapper-${data.id}`]"
       )
+        ai-feature-card(
+          :data="data"
+          :onClick="handleCardClick"
+        )
 </template>
 
 <script setup lang="ts">
@@ -69,36 +72,38 @@ const handleCardClick = () => {
     position relative
     min-width: 1080px
 
-  .ai-feature-card
-    --transform-y: 0px
-    --transform-x: 20px
+  .card-hover-wrapper
     flex-shrink: 0
     top: 0
     position absolute
-    transition: 318ms
-    transform: translateX(var(--transform-x)) translateY(var(--transform-y)) rotate(var(--rotate))
+    --transform-y: 0px
+    --transform-x: 20px
 
     &:hover
       --rotate: 0deg !important
       --transform-y: -100px
 
-  .feature-chat-with-ai
+  .ai-feature-card
+    transition: 318ms
+    transform: translateX(var(--transform-x)) translateY(var(--transform-y)) rotate(var(--rotate))
+
+  .wrapper-chat-with-ai
     --rotate: -3.73deg
     left: 0px
 
-  .feature-inline-ai
+  .wrapper-inline-ai
     --rotate: 7.36deg
     left: 199px
 
-  .feature-slides-ai
+  .wrapper-slides-ai
     --rotate: -1.87deg
     left: 422px
 
-  .feature-mindmap-ai
+  .wrapper-mindmap-ai
     --rotate: 5.17deg
     left: 617px
 
-  .feature-reality-ai
+  .wrapper-reality-ai
     --rotate: -4.56deg
     left: 811px
 </style>
