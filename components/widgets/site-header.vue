@@ -46,4 +46,17 @@ const listenToScroll = () => {
 
     .header-navbar-mobile
       display: block
+
+  .new-label
+    background: linear-gradient(180deg, #56B9FF 0%, #23A4FF 37.88%, #1E96EB 75%);
+    box-shadow: 4px 6px 3px rgba(69, 71, 73, 0.02), 2px 4px 3px rgba(69, 71, 73, 0.08), 1px 2px 2px rgba(69, 71, 73, 0.13), 0px 0px 1px rgba(69, 71, 73, 0.15);
+    border-radius: 2px;
+    padding: 2px 3px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: white;
+
 </style>
