@@ -3,6 +3,7 @@
   .full-row
     .slide-switcher-list.transparent-scroll(
       ref="switcherList"
+      :style="{ '--progress': nextProgress }"
     )
       .slide-switcher(
         v-for="(item, i) in slides"
@@ -10,9 +11,7 @@
         @click="currentSlideIndex = i"
       )
         .active-bg
-        .progress-bar(
-          :style="{ '--progress': nextProgress }"
-        )
+        .progress-bar( v-if="i === nextSlideIndex" )
         .content-wrapper.flex.gap-12px
           .left-part
             nuxt-icon.text-size-32px( :name="item.icon" )
@@ -115,6 +114,7 @@ onUnmounted(() => {
     overflow-x: auto
     display: flex
     gap: 16px
+    --progress: 0
 
     @media(max-width: 768px)
       gap: 20px
@@ -142,7 +142,6 @@ onUnmounted(() => {
         opacity: 0
 
       .progress-bar
-        --progress: 0
         position absolute
         inset: 0
         opacity 0
@@ -150,10 +149,11 @@ onUnmounted(() => {
         background-color: #1E96EB
         transform-origin: left center
         transform: scaleX(var(--progress))
+        will-change: transform
 
       .content-wrapper
         position relative
-        z-index 3
+        z-index 10
 
       .info-title
         font-weight: 500;
@@ -185,7 +185,9 @@ onUnmounted(() => {
     width: 100%
     aspect-ratio: 1080/660
     border-radius: fluid-value(3, 12)
-    filter: drop-shadow(20px 284px 114px rgba(0, 0, 0, 0.01)) drop-shadow(12px 160px 96px rgba(0, 0, 0, 0.05)) drop-shadow(5px 71px 71px rgba(0, 0, 0, 0.09)) drop-shadow(1px 18px 39px rgba(0, 0, 0, 0.15))
+    // Drop shadow cause poor perf on Chrome
+    // filter: drop-shadow(20px 284px 114px rgba(0, 0, 0, 0.01)) drop-shadow(12px 160px 96px rgba(0, 0, 0, 0.05)) drop-shadow(5px 71px 71px rgba(0, 0, 0, 0.09)) drop-shadow(1px 18px 39px rgba(0, 0, 0, 0.15))
+    box-shadow: 20px 284px 114px rgba(0, 0, 0, 0.01), 12px 160px 96px rgba(0, 0, 0, 0.05), 5px 71px 71px rgba(0, 0, 0, 0.09), 1px 18px 39px rgba(0, 0, 0, 0.15)
     overflow hidden
     position relative
 
@@ -198,6 +200,7 @@ onUnmounted(() => {
     transition: 468ms
     transition-timing-function: cubic-bezier(0.25,0.46,0.45,0.94)
     transform: translateX(-8px)
+    will-change: opacity, transform
 
     &.name-write
       background-image: url(/ai/slide-write.png)
