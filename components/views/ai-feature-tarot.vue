@@ -55,7 +55,7 @@ const featureCards: AIFeatureCardData[] = [
     height: 100%
     display: none
 
-  @media (max-width: 390px)
+  @media (max-width: 480px)
     height: 414px
 
     .ai-feature-tarot-scrollable-wrapper

@@ -22,6 +22,30 @@ const setupSpline = async () => {
   app = new Application(canvasRef.value)
   await app.load('/ai/hero-stars.splinecode')
 
+  // Position stars
+  const objects = app.getAllObjects()
+  objects.map(el => {
+    // Purple Star
+    if (el.name === 'AI 6') {
+      el.position.x += 300
+      el.position.y += 110
+      el.position.z -= 500
+    }
+    // Yellow Star
+    if (el.name === 'AI 5') {
+      el.position.x += 580
+      el.position.y += 120
+      el.position.z -= 200
+    }
+    // Blue Star
+    if (el.name === 'AI 4') {
+      el.position.x -= 550
+      el.position.y += 210
+      el.position.z += 0
+    }
+  })
+
+  app.setZoom(0.9)
   // Disable scroll block
   app.eventManager.preventScroll = false
   // Disable resize for perf
@@ -34,7 +58,7 @@ const setupSpline = async () => {
 
   // Emit mouse event
   cleanup = useEventListener(document.body, 'mousemove', (e) => {
-    app._controls.orbitControls.handleMouseMoveRotate(e, 0.005)
+    app._controls.orbitControls.handleMouseMoveRotate(e, 0.003)
   })
 
   isInited.value = true
@@ -60,7 +84,7 @@ onUnmounted(() => {
     position absolute
     z-index: -1
     top: 100px
-    left: 49%
+    left: 50%
     transform: translateX(-50%)
     pointer-events: none
     opacity: 0

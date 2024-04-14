@@ -188,10 +188,10 @@ import { PATH } from '~/utils/constants'
   .section-bg
     margin-top: 32px
     width: 100%
-    height: 238px
+    height: 279px
     background-image: url(/pricing/affine-ai-bg.png)
     background-repeat: no-repeat
-    background-size: 1080px 238px
+    background-size: 1080px 279px
     background-position: bottom center
 
     @media (max-width: 768px)
