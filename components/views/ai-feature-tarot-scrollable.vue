@@ -63,7 +63,8 @@ const handleCardClick = () => {
   display: flex
   width: 100%
   height 590px
-  overflow-x: scroll
+  @media (max-width: 1400px)
+    overflow-x: scroll
   overflow-y: visible
   padding-top: 140px
   padding-bottom: 40px
@@ -82,6 +83,12 @@ const handleCardClick = () => {
     &:hover
       --rotate: 0deg !important
       --transform-y: -100px
+
+      & + .card-hover-wrapper
+        --transform-x: 110px
+
+      .ai-feature-card
+        // z-index: 2
 
   .ai-feature-card
     transition: 318ms

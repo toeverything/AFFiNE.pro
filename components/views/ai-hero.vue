@@ -18,8 +18,8 @@
             .upper-part
             .lower-part
         .black-text-layer
-          | AFFiNE AI.
-          .blue-text-layer AFFiNE AI.
+          | AFFiNE AI
+          .blue-text-layer AFFiNE AI
     .hero-desc
       .row.text-center
         | Your AI Partner&nbsp;
@@ -120,7 +120,7 @@ const { elementX } = useMouseInElement(logoEl)
     .icon-star
       position absolute
       width: (37/90em)
-      right: -(10/90em)
+      right: -(20/90em)
       top: -(20/90em)
 
     .black-text-layer

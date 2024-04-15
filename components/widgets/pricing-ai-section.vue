@@ -65,11 +65,11 @@
           .item
             .item-icon
               nuxt-icon( name="dot")
-            .item-body Auto-sorting and auto-tagging
+            .item-body Auto-sorting and auto-tagging (Coming soon)
           .item
             .item-icon
               nuxt-icon( name="dot")
-            .item-body Open source & Privacy ensured
+            .item-body Privacy ensured
   .section-bg
 </template>
 

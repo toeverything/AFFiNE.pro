@@ -72,7 +72,7 @@
                   @click="isOpenResource = !isOpenResource"
                   :class="{ 'is-open': isOpenResource }"
                 )
-                  | {{ $t('resource') }}
+                  | {{ $t('resources') }}
                   nuxt-icon.arrow-icon.text-size-16px( name="ArrowRightSmall2" filled )
 
               .flex.gap-8px
@@ -83,8 +83,9 @@
                     scroll-link( to="/about-us" @click="isOpenResource = false" ) {{ $t('aboutUs') }}
                   .nav-item
                     scroll-link( to="/blog" @click="isOpenResource = false" ) {{ $t('blog') }}
-
-                community-navbar.flex-1
+                div
+                  .static-link Community
+                  community-navbar.flex-1
 
           .nav-item
             scroll-link( to="/pricing" ) {{ $t('price') }}
@@ -361,20 +362,25 @@ $mediaCompactHeader = '(max-width: 1280px)'
       width: 100%
       margin-bottom: 2px
 
-    .scroll-link
-      display: flex
-      padding: 0 12px
-      border-radius: 12px;
-      font-weight: 500
-      color: black
-      padding: 8px 12px
-      border-radius: 4px;
-      transition: 318ms
-      letter-spacing: -0.28px
+  .scroll-link,
+  .static-link
+    display: flex
+    padding: 0 12px
+    border-radius: 12px;
+    font-weight: 500
+    color: black
+    padding: 8px 12px
+    border-radius: 4px;
+    transition: 318ms
+    letter-spacing: -0.28px
 
-      &.is-active,
-      &:hover
-        color: black
-        background: rgba(0, 0, 0, 0.04)
+  .static-link
+    null
+
+  .scroll-link
+    &.is-active,
+    &:hover
+      color: black
+      background: rgba(0, 0, 0, 0.04)
 
 </style>
