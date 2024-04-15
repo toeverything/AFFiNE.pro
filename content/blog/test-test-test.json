@@ -13,6 +13,6 @@
   "id": "nJpuJDMx4a",
   "slug": "test-test-test",
   "cover": null,
-  "md": "---\n\ntitle: \"test\"\n\nauthor: AFFiNE\n\ntags: Content\n\nslug: test-test-test\n\ndescription: \"test test\"\n\ncreated: 2023-08-25\n\nupdated: 2023-08-25\n\nlayout: blog\n\npublish: true\n\n\n---\n\n\n\n  Task 1\n\n  Task 2\n\n  Task 3\n\n  Task 4\n\n\n\ntest\n\n\n\ntest\n\n\n\ncontent\n\n",
+  "md": "---\n\ntitle: \"test\"\n\nauthor: AFFiNE\n\ntags: Content\n\nslug: test-test-test\n\ndescription: \"test test\"\n\ncreated: 2023-08-25\n\nupdated: 2023-08-25\n\nlayout: blog\n\npublish: true\n\n\n---\n\n\n\n|Title|Status|Column 1|\n|---|---|---|\n|Task 1|<span data-affine-option data-value=\"aMR35KUbfy\" data-option-color=\"var(--affine-tag-teal)\">TODO</span>|asdfasdf<br />aadasd<br />asdfasdfsadf<br />asdfasdfsadfasdfasdfsadf<br />publish: true|\n|Task 2|<span data-affine-option data-value=\"ea8C2ADOjC\" data-option-color=\"var(--affine-tag-blue)\">In Progress</span>||\n|Task 3|<span data-affine-option data-value=\"Tv34SQcx34\" data-option-color=\"var(--affine-tag-orange)\">Done</span>||\n|Task 4|||\n\n\n\ntest\n\n\n\ntest\n\n\n\ncontent\n\n",
   "publish": true
 }
