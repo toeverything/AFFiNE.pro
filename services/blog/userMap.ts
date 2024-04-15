@@ -151,5 +151,10 @@ export const USER_MAP: Record<
     name: 'Meng Cen',
     avatar: '/mengcen.png',
     dec: 'Operations Team'
-  }
+  },
+  'Shuangcao Li': {
+    name: 'Shuangcao Li',
+    avatar: '/shuangcaoli.png',
+    dec: 'Operations Team'
+  },
 }
