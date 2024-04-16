@@ -7,7 +7,7 @@ export const PATH = {
   AFFINE_INSIDER: "https://insider.affine.pro",
   AFFINE_PRE_ALPHA: "https://livedemo.affine.pro",
   // AFFINE_AI_TRY: "https://ai.affine.pro",
-  AFFINE_AI_TRY: "https://app.affine.pro",
+  AFFINE_AI_TRY: "https://app.affine.pro/signin?initCloud=true",
 
   AFFiNE_GITHUB: "https://github.com/toeverything/AFFiNE",
   AFFiNE_GITHUB_ORG: "https://github.com/toeverything",
