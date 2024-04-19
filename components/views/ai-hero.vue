@@ -35,7 +35,10 @@
       el-button.pay-button(
         size="large"
         type="default"
-      ) $99.99 / Year
+      )
+        .flex.flex-col
+          .row-one $8.9 / month
+          .row-two billed annually
     nuxt-link(
       :to="PATH.AFFINE_AI_TRY"
       target="_blank"
@@ -179,6 +182,19 @@ const { elementX } = useMouseInElement(logoEl)
 
     .el-button
       min-width: 204px
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: -0.02em;
+
+    .pay-button
+      .row-two
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: -0.02em;
+        color: rgba(255, 255, 255, 0.75);
 
     .try-button
       background: transparent
