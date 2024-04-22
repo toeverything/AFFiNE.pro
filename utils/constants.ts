@@ -1,3 +1,5 @@
+import { __STAGING__ } from '~/utils/dev'
+
 // @TODO: Move the file to constants dir
 export const PATH = {
   SHARE_HOST: "https://affine.pro",
@@ -7,7 +9,7 @@ export const PATH = {
   AFFINE_INSIDER: "https://insider.affine.pro",
   AFFINE_PRE_ALPHA: "https://livedemo.affine.pro",
   // AFFINE_AI_TRY: "https://ai.affine.pro",
-  AFFINE_AI_TRY: "https://app.affine.pro/signin?initCloud=true",
+  AFFINE_AI_TRY: __STAGING__ ? "https://affine.fail/try-cloud" : "https://app.affine.pro/try-cloud",
 
   AFFiNE_GITHUB: "https://github.com/toeverything/AFFiNE",
   AFFiNE_GITHUB_ORG: "https://github.com/toeverything",
@@ -25,8 +27,8 @@ export const PATH = {
 
   INTERN_APPLY_FORM: "https://6dxre9ihosp.typeform.com/to/lnHWRsVS",
   SING_UP: "https://app.affine.pro",
-  LOGIN: "https://app.affine.pro/signin?initCloud=true",
-  PRICING_JOIN_WAITLIST: "https://buy.stripe.com/00g2bL3ME2Gg9qMaEK",
+  LOGIN: __STAGING__ ? "https://affine.fail/try-cloud" : "https://app.affine.pro/try-cloud",
+  PRICING_JOIN_WAITLIST: __STAGING__  ? "https://affine.fail/subscribe?plan=ai&recurring=yearly" : "https://app.affine.pro/subscribe?plan=ai&recurring=yearly",
   PRICING_CONTACT_FORM_TEAM: "https://6dxre9ihosp.typeform.com/to/niBcdkvs",
   PRICING_CONTACT_FORM_ENTERPRISE: "https://6dxre9ihosp.typeform.com/to/rFfobTjf",
   PRICING_PRO_MONTHLY:
