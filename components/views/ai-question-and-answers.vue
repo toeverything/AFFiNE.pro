@@ -7,7 +7,9 @@
       :title="item.question"
       :name="item.question"
     )
-      .item-answer {{ item.answer }}
+      .item-answer(
+        v-html="item.answer"
+      )
 </template>
 
 <script setup lang="ts">
@@ -20,32 +22,29 @@ type QnAItem = {
 
 const qnaList: QnAItem[] = [
   {
-    question: 'Lorem ipsum dolor sit amet?',
-    answer: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed iaculis nibh vel risus finibus rutrum. Duis risus massa, euismod vel ipsum eu, porta fringilla lacus. Pellentesque posuere nibh et elit cursus, at pulvinar eros ullamcorper. Duis convallis lacus quis lectus gravida fringilla. Nullam malesuada ullamcorper nisi sagittis luctus. Nunc convallis, libero ut aliquam ultrices, ante quam sodales nulla, id consectetur augue erat a lorem. Morbi vestibulum nunc ipsum, eget tristique lectus auctor et. Phasellus suscipit erat ut blandit pretium. Fusce tellus mi, aliquam a turpis sed, bibendum congue turpis. Sed laoreet vel orci eleifend laoreet. Curabitur placerat malesuada leo. Donec vestibulum ex ligula. Integer ultrices sem eu tortor feugiat pulvinar. Praesent ac nisi vitae turpis pulvinar tincidunt.'
+    question: 'Can AFFiNE AI be used in a local workspace?',
+    answer: 'Certainly, you just need to log in to your AFFiNE Cloud account, and then you can activate AFFiNE AI in the local workspace.'
   },
   {
-    question: 'Morbi aliquam nisi sed ante pretium?',
-    answer: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed iaculis nibh vel risus finibus rutrum. Duis risus massa, euismod vel ipsum eu, porta fringilla lacus. Pellentesque posuere nibh et elit cursus, at pulvinar eros ullamcorper. Duis convallis lacus quis lectus gravida fringilla. Nullam malesuada ullamcorper nisi sagittis luctus. Nunc convallis, libero ut aliquam ultrices, ante quam sodales nulla, id consectetur augue erat a lorem. Morbi vestibulum nunc ipsum, eget tristique lectus auctor et. Phasellus suscipit erat ut blandit pretium. Fusce tellus mi, aliquam a turpis sed, bibendum congue turpis. Sed laoreet vel orci eleifend laoreet. Curabitur placerat malesuada leo. Donec vestibulum ex ligula. Integer ultrices sem eu tortor feugiat pulvinar. Praesent ac nisi vitae turpis pulvinar tincidunt.'
+    question: 'How to activate Inline AI assistant in Page Mode?',
+    answer: `In a Doc's Page Mode, you can select one or more blocks, or select the text content, and click "Ask AI" in the pop-up Format Toolbar to activate AFFiNE AI.
+Additionally, after opening a doc, you can click on the "Expand sidebar" in the top right corner, where you will find the chat entry for AFFiNE AI in the sidebar.`
   },
   {
-    question: 'Etiam egestas sollicitudin nulla, nec semper neque?',
-    answer: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed iaculis nibh vel risus finibus rutrum. Duis risus massa, euismod vel ipsum eu, porta fringilla lacus. Pellentesque posuere nibh et elit cursus, at pulvinar eros ullamcorper. Duis convallis lacus quis lectus gravida fringilla. Nullam malesuada ullamcorper nisi sagittis luctus. Nunc convallis, libero ut aliquam ultrices, ante quam sodales nulla, id consectetur augue erat a lorem. Morbi vestibulum nunc ipsum, eget tristique lectus auctor et. Phasellus suscipit erat ut blandit pretium. Fusce tellus mi, aliquam a turpis sed, bibendum congue turpis. Sed laoreet vel orci eleifend laoreet. Curabitur placerat malesuada leo. Donec vestibulum ex ligula. Integer ultrices sem eu tortor feugiat pulvinar. Praesent ac nisi vitae turpis pulvinar tincidunt.'
+    question: 'How to use AFFiNE AI in Edgeless Mode of a doc?',
+    answer: `On the whiteboard (Edgeless Mode), you can activate AFFiNE AI by right-clicking to select content. You can also activate AFFiNE AI's function by clicking "Ask AI" in the Elements menu that appears after selecting one or multiple elements. Additionally, you can also find the chat entry for AFFiNE AI in the sidebar by clicking "Expand sidebar" at the top right corner after opening a doc.`
   },
   {
-    question: 'Nullam aliquet sit amet ex ac tempus?',
-    answer: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed iaculis nibh vel risus finibus rutrum. Duis risus massa, euismod vel ipsum eu, porta fringilla lacus. Pellentesque posuere nibh et elit cursus, at pulvinar eros ullamcorper. Duis convallis lacus quis lectus gravida fringilla. Nullam malesuada ullamcorper nisi sagittis luctus. Nunc convallis, libero ut aliquam ultrices, ante quam sodales nulla, id consectetur augue erat a lorem. Morbi vestibulum nunc ipsum, eget tristique lectus auctor et. Phasellus suscipit erat ut blandit pretium. Fusce tellus mi, aliquam a turpis sed, bibendum congue turpis. Sed laoreet vel orci eleifend laoreet. Curabitur placerat malesuada leo. Donec vestibulum ex ligula. Integer ultrices sem eu tortor feugiat pulvinar. Praesent ac nisi vitae turpis pulvinar tincidunt.'
+    question: 'How does AFFiNE AI share my data？',
+    answer: `AFFiNE only sends related content information to third-party AI vendors when you use AFFiNE AI. If you have any questions, you can refer to our <b>AI terms</b> for policy usage and limits.`
   },
   {
-    question: 'Duis eu facilisis mi. Aliquam a rutrum justo?',
-    answer: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed iaculis nibh vel risus finibus rutrum. Duis risus massa, euismod vel ipsum eu, porta fringilla lacus. Pellentesque posuere nibh et elit cursus, at pulvinar eros ullamcorper. Duis convallis lacus quis lectus gravida fringilla. Nullam malesuada ullamcorper nisi sagittis luctus. Nunc convallis, libero ut aliquam ultrices, ante quam sodales nulla, id consectetur augue erat a lorem. Morbi vestibulum nunc ipsum, eget tristique lectus auctor et. Phasellus suscipit erat ut blandit pretium. Fusce tellus mi, aliquam a turpis sed, bibendum congue turpis. Sed laoreet vel orci eleifend laoreet. Curabitur placerat malesuada leo. Donec vestibulum ex ligula. Integer ultrices sem eu tortor feugiat pulvinar. Praesent ac nisi vitae turpis pulvinar tincidunt.'
+    question: 'Does AFFiNE AI have a free trial?',
+    answer: `Yes, AFFiNE AI provides each AFFiNE Cloud user with 10 trial experiences, so you can try for free without any charge.`
   },
   {
-    question: 'Nunc dignissim dictum varius?',
-    answer: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed iaculis nibh vel risus finibus rutrum. Duis risus massa, euismod vel ipsum eu, porta fringilla lacus. Pellentesque posuere nibh et elit cursus, at pulvinar eros ullamcorper. Duis convallis lacus quis lectus gravida fringilla. Nullam malesuada ullamcorper nisi sagittis luctus. Nunc convallis, libero ut aliquam ultrices, ante quam sodales nulla, id consectetur augue erat a lorem. Morbi vestibulum nunc ipsum, eget tristique lectus auctor et. Phasellus suscipit erat ut blandit pretium. Fusce tellus mi, aliquam a turpis sed, bibendum congue turpis. Sed laoreet vel orci eleifend laoreet. Curabitur placerat malesuada leo. Donec vestibulum ex ligula. Integer ultrices sem eu tortor feugiat pulvinar. Praesent ac nisi vitae turpis pulvinar tincidunt.'
-  },
-  {
-    question: 'Curabitur ut venenatis turpis?',
-    answer: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed iaculis nibh vel risus finibus rutrum. Duis risus massa, euismod vel ipsum eu, porta fringilla lacus. Pellentesque posuere nibh et elit cursus, at pulvinar eros ullamcorper. Duis convallis lacus quis lectus gravida fringilla. Nullam malesuada ullamcorper nisi sagittis luctus. Nunc convallis, libero ut aliquam ultrices, ante quam sodales nulla, id consectetur augue erat a lorem. Morbi vestibulum nunc ipsum, eget tristique lectus auctor et. Phasellus suscipit erat ut blandit pretium. Fusce tellus mi, aliquam a turpis sed, bibendum congue turpis. Sed laoreet vel orci eleifend laoreet. Curabitur placerat malesuada leo. Donec vestibulum ex ligula. Integer ultrices sem eu tortor feugiat pulvinar. Praesent ac nisi vitae turpis pulvinar tincidunt.'
+    question: 'After purchasing the AFFiNE AI service, are there any limitations?',
+    answer: `In the early stages of AFFiNE AI's launch, users who purchase AFFiNE AI can enjoy unlimited usage, which is mainly for early users of AFFiNE AI. Restrictions will be adjusted later on.`
   },
 ]
 </script>
