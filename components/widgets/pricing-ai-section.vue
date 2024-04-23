@@ -15,12 +15,13 @@
               .row-one $8.9 / month
               .row-two billed annually
       .row
-        nuxt-link( :href="PATH.AFFINE_AI_TRY" target="_blank" rel="nofollow" )
+        nuxt-link( :href="isInPricing ? '/ai' : PATH.AFFINE_AI_TRY" :target="isInPricing ? null : '_blank'" rel="nofollow" )
           el-button.join-button(
+            :class="{ 'is-in-pricing': isInPricing }"
             type="primary"
             size="action"
             plain
-          ) Try for Free
+          ) {{ isInPricing ? "Learn about AFFiNE AI" : "Try for Free" }}
     .features-row.flex
       .feature-cell
         .cell-headline
@@ -78,6 +79,10 @@
 
 <script setup lang="ts">
 import { PATH } from '~/utils/constants'
+
+const props = defineProps<{
+  isInPricing?: boolean
+}>()
 </script>
 
 <style lang="stylus">
@@ -131,6 +136,10 @@ import { PATH } from '~/utils/constants'
       -webkit-font-smoothing: auto
       padding-left: 26px
       padding-right: 26px
+
+      &.is-in-pricing
+        padding-left: 16px
+        padding-right: 16px
 
       .row-two
         font-weight: 500;

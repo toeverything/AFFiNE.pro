@@ -156,7 +156,7 @@
 
   .section.mb-2
     .limit-container.flex.flex-col.items-center
-      pricing-ai-section
+      pricing-ai-section( isInPricing )
 </template>
 
 <script lang="ts" setup>
