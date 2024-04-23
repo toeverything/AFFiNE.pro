@@ -93,7 +93,7 @@ Additionally, after opening a doc, you can click on the "Expand sidebar" in the 
         padding: 0 24px 10px
         font-size: 16px;
         line-height: 24px;
-        color: #000000;
+        color: #8E8D91;
         position relative
         z-index 3
 

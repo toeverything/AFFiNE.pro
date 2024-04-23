@@ -10,7 +10,10 @@
           el-button.join-button(
             type="primary"
             size="action"
-          ) $99.99 / year
+          )
+            .flex.flex-col
+              .row-one $8.9 / month
+              .row-two billed annually
       .row
         nuxt-link( :href="PATH.AFFINE_AI_TRY" target="_blank" rel="nofollow" )
           el-button.join-button(
@@ -128,6 +131,13 @@ import { PATH } from '~/utils/constants'
       -webkit-font-smoothing: auto
       padding-left: 26px
       padding-right: 26px
+
+      .row-two
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: -0.02em;
+        color: rgba(255, 255, 255, 0.75);
 
       &.is-plain
         background: white
