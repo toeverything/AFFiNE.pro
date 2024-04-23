@@ -35,7 +35,9 @@
         .nav-list
           .list-name {{ $t('resources') }}
           nuxt-link.nav-item.flex( to="/pricing" ) {{ $t('price') }}
+          nuxt-link.nav-item.flex( :to="PATH.AFFiNE_DOCS" target="_blank" rel="nofollow") {{ $t('docs') }}
           nuxt-link.nav-item.flex( to="/about-us" ) {{ $t('aboutUs') }}
+          nuxt-link.nav-item.flex( to="/blog" ) {{ $t('blog') }}
           nuxt-link.nav-item.flex( to="/terms" ) {{ $t('terms') }}
           nuxt-link.nav-item.flex( to="/privacy" ) {{ $t('privacy') }}
           nuxt-link.nav-item.flex( :to="PATH.AFFiNE_COMMUNITY" target="_blank" rel="nofollow") {{ $t('community') }}
