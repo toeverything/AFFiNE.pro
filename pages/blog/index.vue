@@ -35,13 +35,13 @@
       )
         nuxt-link.tag(
           :to="`/blog`"
-          :class="{ 'active': !route.query.tag }"
+          :class="{ 'active': asyncOptions.isInited && !route.query.tag }"
         ) {{ $t('all') }}
 
         nuxt-link.tag(
           v-for="[tag] in blogTags"
           :key="tag"
-          :class="{ 'active': tag === route.query.tag }"
+          :class="{ 'active': asyncOptions.isInited && tag === route.query.tag }"
           :to="`/blog?tag=${encodeURIComponent(tag)}`"
           replace
         ) {{ tag }}
@@ -70,7 +70,8 @@ const route = useRoute()
 const router = useRouter()
 const asyncOptions = reactive({
   isLoading: true,
-  isError: false
+  isError: false,
+  isInited: false,
 })
 
 const loadData = async () => {
@@ -127,6 +128,11 @@ definePageMeta({
 })
 
 const { arrivedState, x } = useScroll(tagListEl, { behavior: 'smooth' })
+
+onMounted(() => {
+  asyncOptions.isInited = true
+})
+
 </script>
 
 <style lang="stylus">
