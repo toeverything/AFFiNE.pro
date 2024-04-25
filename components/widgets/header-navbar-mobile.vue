@@ -41,7 +41,7 @@
                 .nav-item
                   nuxt-link( to="/about-us" @click="isOpen = false") {{ $t('aboutUs') }}
                 .nav-item
-                  nuxt-link( to="/blog" @click="isOpen = false") {{ $t('blog') }}
+                  nuxt-link( to="/blog?tag=Release+Note" @click="isOpen = false") {{ $t('blog') }}
                 .nav-item.mb-8px
                   nuxt-link( @click.stop="() => {}" ) Community
                 community-navbar

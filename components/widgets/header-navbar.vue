@@ -82,7 +82,7 @@
                   .nav-item
                     scroll-link( to="/about-us" @click="isOpenResource = false" ) {{ $t('aboutUs') }}
                   .nav-item
-                    scroll-link( to="/blog" @click="isOpenResource = false" ) {{ $t('blog') }}
+                    scroll-link( to="/blog?tag=Release+Note" @click="isOpenResource = false" ) {{ $t('blog') }}
                 div
                   .static-link Community
                   community-navbar.flex-1
