@@ -1,0 +1,21 @@
+{
+  "title": "AFFiNE 0720 V0.0.1-alpha.0.2.1 Release Notes",
+  "authors": [
+    "Jiachen He",
+    "Fangyuan Zheng",
+    "Yipei Wei",
+    "Fanjing Zhang"
+  ],
+  "tags": [
+    "Release Note"
+  ],
+  "description": "Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows",
+  "created": 1658275200000,
+  "updated": 1658275200000,
+  "layout": "blog",
+  "id": "89098c9ea80646549d263924e68059d5",
+  "slug": "affine-0720-v0.0.1-alpha.0.2.1-release-notes",
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/6VRed784f7jyEctOTJiQR8ir11tFfOQsV4kubVrH0bQ=.webp",
+  "md": "---\n\ntitle: AFFiNE 0720 V0.0.1-alpha.0.2.1 Release Notes\n\nauthor: Jiachen He, Fangyuan Zheng, Yipei Wei, Fanjing Zhang\n\ntags: Release Note\n\nslug: affine-0720-v0.0.1-alpha.0.2.1-release-notes\n\ndescription: Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows\n\ncreated: 2022-07-20\n\nupdated: 2022-07-20\n\nlayout: blog\n\npublish: true\n\n---\n\n\n![6VRed784f7jyEctOTJiQR8ir11tFfOQsV4kubVrH0bQ=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/6VRed784f7jyEctOTJiQR8ir11tFfOQsV4kubVrH0bQ=.webp)\n\n**Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows:**\n\n### **Bug Fixes**\n\nIn our continued effort to make AFFiNE the most reliable all in one knowledge base 展开, fixing bugs is always our main concern. Here's our work in the last few days:\n\n* Fixed: AFFiNE Kanban will appear with the tag of ‘no started’ when dragging and dropping;\n\n* Fixed: Insert links that appear in text repetitively;\n\n* Fixed: The content of copy and paste into the editor have ‘&nbsp’ sometimes;\n\n* Fixed: Current page shows deleted text after deleted it;\n\n* Fixed: The alignment in the inline menu is not persistent;\n\n* Fixed: After pasting the article, the carriage return style is incorrect;\n\n* Fixed: After modifying the Kanban content, the Kanban view will move up and down with the mouse;\n\n* Fixed: Copy the full text to a new page, and two edit boxes will appear;\n\n* Fixed: Fix the problem that only the text block has inline menu;\n\n* Fixed: Fix the Popover of Switch Menu UI was blocked;\n\n* Fixed: Fix the title of the page mode is half blocked;\n\n* Fixed: The problem that only some blocks are displayed by default when switching from page mode to board mode;\n\n* Fixed: When the mouse hover, the block menu before the block may not appear;\n\n* Fixed: Adding a Kanban view group is not responding;\n\n* Fixed: In board mode, the default group size is not adaptive and lacks base color differentiation;\n\n* Fixed: In board mode, the group is not updated after the card has modified its status；\n\n* Fixed: Drag-and-drop function of the Kanban card is disabled;\n\n* Fixed: Clicking on a blank area after uploading an image shows an error;\n\n* Fixed: Copy the image to the webpage, and it will prompt “JS Error” after successful paste;\n\n* Fixed: Fix page title cannot be pasted;\n\n* Fixed: Fix embedded YouTube videos & Figma.\n\n# Improvement\n\nIn our continued effort to make AFFiNE the most reliable workOS platform, optimizing user experience is always our main concern. Here’s our work in the last few days:\n\n* Improvement: The group bar is easy to be focused on by other components and challenging to be clicked;\n\n* Improvement: The selection effect of the image block and embed link block to be uploaded been optimized;\n\n* Improvement: Optimize and improve the unordered list;\n\n* Improvement: Optimize and improve the jittering experience after a picture click.\n\nAFFiNE is currently in the early alpha stage with limited access, and public early access will be available in the autumn of 2022.\n\nAFFiNE is an open-source project which can be viewed on Github: [https://github.com/toeverything/AFFiNE#readme](https://github.com/toeverything/AFFiNE#readme)\n\nIf you endorse this open source project, please help us by clicking the GitHub star, which is crucial for the future development of AFFiNE.\n\nAFFiNE is very grateful to all open source contributors and will work to build a more positive open source ecosystem.\n\nHope you have a nice time with AFFiNE!\n\n",
+  "publish": true
+}
