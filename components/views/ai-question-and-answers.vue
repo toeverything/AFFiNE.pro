@@ -60,6 +60,12 @@ Additionally, after opening a doc, you can click on the "Expand sidebar" in the 
     --el-collapse-header-height: 56px
     --el-collapse-border-color: #E3E2E4
 
+    .el-collapse-item__arrow
+      transform: rotate(90deg);
+
+    .el-collapse-item__arrow.is-active
+      transform: rotate(-90deg);
+
     .el-collapse-item
       border-bottom: 1px solid var(--el-collapse-border-color)
 
