@@ -76,18 +76,20 @@ We recommend that you print a copy of these Legal Terms for your records.
 
 [28\. MISCELLANEOUS](#misc)
 
-[29\. CONTACT US](#contact)
+[AI TERMS](#ai)
+
+[CONTACT US](#contact)
 
 
-**<a name="services">1. OUR SERVICES</a>**
+**<a id="services">1. OUR SERVICES</a>**
 
 The information provided when using the Services is not intended for distribution to or use by any person or entity in any jurisdiction or country where such distribution or use would be contrary to law or regulation or which would subject us to any registration requirement within such jurisdiction or country. Accordingly, those persons who choose to access the Services from other locations do so on their own initiative and are solely responsible for compliance with local laws, if and to the extent local laws are applicable.
 
 The Services are not tailored to comply with industry-specific regulations (Health Insurance Portability and Accountability Act (HIPAA), Federal Information Security Management Act (FISMA), etc.), so if your interactions would be subjected to such laws, you may not use the Services. You may not use the Services in a way that would violate the Gramm-Leach-Bliley Act (GLBA).
 
 
-**<a name="ip">2. INTELLECTUAL PROPERTY RIGHTS</a>**
-  
+**<a id="ip">2. INTELLECTUAL PROPERTY RIGHTS</a>**
+
 **Our intellectual property**
 
 We are the owner or the licensee of all intellectual property rights in our Services, including all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics in the Services (collectively, the "Content"), as well as the trademarks, service marks, and logos contained therein (the "Marks").
@@ -143,20 +145,20 @@ You are solely responsible for your Submissions and/or Contributions and you exp
 We respect the intellectual property rights of others. If you believe that any material available on or through the Services infringes upon any copyright you own or control, please immediately refer to the "[](#dmca)[COPYRIGHT INFRINGEMENTS](#copyrightyes)" section below.
 
 
-**<a name="userreps">3. USER REPRESENTATIONS</a>**
+**<a id="userreps">3. USER REPRESENTATIONS</a>**
 
 By using the Services, you represent and warrant that: (1) all registration information you submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such information and promptly update such registration information as necessary; (3) you have the legal capacity and you agree to comply with these Legal Terms; (4) you are not a minor in the jurisdiction in which you reside; (5) you will not access the Services through automated or non-human means, whether through a bot, script or otherwise; (6) you will not use the Services for any illegal or unauthorized purpose; and (7) your use of the Services will not violate any applicable law or regulation.
 
 If you provide any information that is untrue, inaccurate, not current, or incomplete, we have the right to suspend or terminate your account and refuse any and all current or future use of the Services (or any portion thereof).
 
 
-**<a name="userreg">4. USER REGISTRATION</a>**
+**<a id="userreg">4. USER REGISTRATION</a>**
 
 You may be required to register to use the Services. You agree to keep your password confidential and will be responsible for all use of your account and password. We reserve the right to remove, reclaim, or change a username you select if we determine, in our sole discretion, that such username is inappropriate, obscene, or otherwise objectionable.
 
 
-**<a name="purchases">5. PURCHASES AND PAYMENT</a>**
-<a name="subscription"></a>
+**<a id="purchases">5. PURCHASES AND PAYMENT</a>**
+<a id="subscription"></a>
 
 We accept the following forms of payment:
 
@@ -177,18 +179,18 @@ You agree to pay all charges at the prices then in effect for your purchases and
 We reserve the right to refuse any order placed through the Services. We may, in our sole discretion, limit or cancel quantities purchased per person, per household, or per order. These restrictions may include orders placed by or under the same customer account, the same payment method, and/or orders that use the same billing or shipping address. We reserve the right to limit or prohibit orders that, in our sole judgment, appear to be placed by dealers, resellers, or distributors.
 
 
-**<a name="cancel">6. CANCELLATION</a>**
+**<a id="cancel">6. CANCELLATION</a>**
 
 All purchases are non-refundable. You can cancel your subscription at any time by logging into your account. Your cancellation will take effect at the end of the current paid term.
 
 If you are unsatisfied with our Services, please email us at contact@toeverything.info.
 
-**<a name="software">7. SOFTWARE</a>**
+**<a id="software">7. SOFTWARE</a>**
 
 We may include software for use in connection with our Services. If such software is accompanied by an end user license agreement ("EULA"), the terms of the EULA will govern your use of the software. If such software is not accompanied by a EULA, then we grant to you a non-exclusive, revocable, personal, and non-transferable license to use such software solely in connection with our services and in accordance with these Legal Terms. Any software and any related documentation is provided "AS IS" without warranty of any kind, either express or implied, including, without limitation, the implied warranties of merchantability, fitness for a particular purpose, or non-infringement. You accept any and all risk arising out of use or performance of any software. You may not reproduce or redistribute any software except in accordance with the EULA or these Legal Terms.
 
 
-**<a name="prohibited">8. PROHIBITED ACTIVITIES</a>**
+**<a id="prohibited">8. PROHIBITED ACTIVITIES</a>**
 
 You may not access or use the Services for any purpose other than that for which we make the Services available. The Services may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us.
 
@@ -220,8 +222,8 @@ As a user of the Services, you agree not to:
 *   Engage in activities aimed at evading or bypassing usage limits and/or restrictions set.
 
 
-**<a name="ugc">9. USER GENERATED CONTRIBUTIONS</a>**
-  
+**<a id="ugc">9. USER GENERATED CONTRIBUTIONS</a>**
+
 The Services may invite you to chat, contribute to, or participate in blogs, message boards, online forums, and other functionality, and may provide you with the opportunity to create, submit, post, display, transmit, perform, publish, distribute, or broadcast content and materials to us or on the Services, including but not limited to text, writings, video, audio, photographs, graphics, comments, suggestions, or personal information or other material (collectively, "Contributions"). Contributions may be viewable by other users of the Services and through third-party websites. As such, any Contributions you transmit may be treated as non-confidential and non-proprietary. When you create or make available any Contributions, you thereby represent and warrant that:
 
 *   The creation, distribution, transmission, public display, or performance, and the accessing, downloading, or copying of your Contributions do not and will not infringe the proprietary rights, including but not limited to the copyright, patent, trademark, trade secret, or moral rights of any third party.
@@ -241,7 +243,7 @@ The Services may invite you to chat, contribute to, or participate in blogs, mes
 Any use of the Services in violation of the foregoing violates these Legal Terms and may result in, among other things, termination or suspension of your rights to use the Services.
 
 
-<a name="license">10. CONTRIBUTION LICENSE</a>
+<a id="license">10. CONTRIBUTION LICENSE</a>
 
 By posting your Contributions to any part of the Services or making Contributions accessible to the Services by linking your account from the Services to any of your social networking accounts, you automatically grant, and you represent and warrant that you have the right to grant, to us an unrestricted, unlimited, irrevocable, perpetual, non-exclusive, transferable, royalty-free, fully-paid, worldwide right, and license to host, use, copy, reproduce, disclose, sell, resell, publish, broadcast, retitle, archive, store, cache, publicly perform, publicly display, reformat, translate, transmit, excerpt (in whole or in part), and distribute such Contributions (including, without limitation, your image and voice) for any purpose, commercial, advertising, or otherwise, and to prepare derivative works of, or incorporate into other works, such Contributions, and grant and authorize sublicenses of the foregoing. The use and distribution may occur in any media formats and through any media channels.
 
@@ -252,58 +254,58 @@ We do not assert any ownership over your Contributions. You retain full ownershi
 We have the right, in our sole and absolute discretion, (1) to edit, redact, or otherwise change any Contributions; (2) to re-categorize any Contributions to place them in more appropriate locations on the Services; and (3) to pre-screen or delete any Contributions at any time and for any reason, without notice. We have no obligation to monitor your Contributions.
 
 
-<a name="reviews">11. GUIDELINES FOR REVIEWS</a>
+<a id="reviews">11. GUIDELINES FOR REVIEWS</a>
 
 We may provide you areas on the Services to leave reviews or ratings. When posting a review, you must comply with the following criteria: (1) you should have firsthand experience with the person/entity being reviewed; (2) your reviews should not contain offensive profanity, or abusive, racist, offensive, or hateful language; (3) your reviews should not contain discriminatory references based on religion, race, gender, national origin, age, marital status, sexual orientation, or disability; (4) your reviews should not contain references to illegal activity; (5) you should not be affiliated with competitors if posting negative reviews; (6) you should not make any conclusions as to the legality of conduct; (7) you may not post any false or misleading statements; and (8) you may not organize a campaign encouraging others to post reviews, whether positive or negative.
 
 We may accept, reject, or remove reviews in our sole discretion. We have absolutely no obligation to screen reviews or to delete reviews, even if anyone considers reviews objectionable or inaccurate. Reviews are not endorsed by us, and do not necessarily represent our opinions or the views of any of our affiliates or partners. We do not assume liability for any review or for any claims, liabilities, or losses resulting from any review. By posting a review, you hereby grant to us a perpetual, non-exclusive, worldwide, royalty-free, fully paid, assignable, and sublicensable right and license to reproduce, modify, translate, transmit by any means, display, perform, and/or distribute all content relating to review.
 
 
-<a name="socialmedia">12. SOCIAL MEDIA</a>
+<a id="socialmedia">12. SOCIAL MEDIA</a>
 
 As part of the functionality of the Services, you may link your account with online accounts you have with third-party service providers (each such account, a "Third-Party Account") by either: (1) providing your Third-Party Account login information through the Services; or (2) allowing us to access your Third-Party Account, as is permitted under the applicable terms and conditions that govern your use of each Third-Party Account. You represent and warrant that you are entitled to disclose your Third-Party Account login information to us and/or grant us access to your Third-Party Account, without breach by you of any of the terms and conditions that govern your use of the applicable Third-Party Account, and without obligating us to pay any fees or making us subject to any usage limitations imposed by the third-party service provider of the Third-Party Account. By granting us access to any Third-Party Accounts, you understand that (1) we may access, make available, and store (if applicable) any content that you have provided to and stored in your Third-Party Account (the "Social Network Content") so that it is available on and through the Services via your account, including without limitation any friend lists and (2) we may submit to and receive from your Third-Party Account additional information to the extent you are notified when you link your account with the Third-Party Account. Depending on the Third-Party Accounts you choose and subject to the privacy settings that you have set in such Third-Party Accounts, personally identifiable information that you post to your Third-Party Accounts may be available on and through your account on the Services. Please note that if a Third-Party Account or associated service becomes unavailable or our access to such Third-Party Account is terminated by the third-party service provider, then Social Network Content may no longer be available on and through the Services. You will have the ability to disable the connection between your account on the Services and your Third-Party Accounts at any time. PLEASE NOTE THAT YOUR RELATIONSHIP WITH THE THIRD-PARTY SERVICE PROVIDERS ASSOCIATED WITH YOUR THIRD-PARTY ACCOUNTS IS GOVERNED SOLELY BY YOUR AGREEMENT(S) WITH SUCH THIRD-PARTY SERVICE PROVIDERS. We make no effort to review any Social Network Content for any purpose, including but not limited to, for accuracy, legality, or non-infringement, and we are not responsible for any Social Network Content. You acknowledge and agree that we may access your email address book associated with a Third-Party Account and your contacts list stored on your mobile device or tablet computer solely for purposes of identifying and informing you of those contacts who have also registered to use the Services. You can deactivate the connection between the Services and your Third-Party Account by contacting us using the contact information below or through your account settings (if applicable). We will attempt to delete any information stored on our servers that was obtained through such Third-Party Account, except the username and profile picture that become associated with your account.
 
 
-<a name="thirdparty">13. THIRD-PARTY WEBSITES AND CONTENT</a>
+<a id="thirdparty">13. THIRD-PARTY WEBSITES AND CONTENT</a>
 
 The Services may contain (or you may be sent via the Site) links to other websites ("Third-Party Websites") as well as articles, photographs, text, graphics, pictures, designs, music, sound, video, information, applications, software, and other content or items belonging to or originating from third parties ("Third-Party Content"). Such Third-Party Websites and Third-Party Content are not investigated, monitored, or checked for accuracy, appropriateness, or completeness by us, and we are not responsible for any Third-Party Websites accessed through the Services or any Third-Party Content posted on, available through, or installed from the Services, including the content, accuracy, offensiveness, opinions, reliability, privacy practices, or other policies of or contained in the Third-Party Websites or the Third-Party Content. Inclusion of, linking to, or permitting the use or installation of any Third-Party Websites or any Third-Party Content does not imply approval or endorsement thereof by us. If you decide to leave the Services and access the Third-Party Websites or to use or install any Third-Party Content, you do so at your own risk, and you should be aware these Legal Terms no longer govern. You should review the applicable terms and policies, including privacy and data gathering practices, of any website to which you navigate from the Services or relating to any applications you use or install from the Services. Any purchases you make through Third-Party Websites will be through other websites and from other companies, and we take no responsibility whatsoever in relation to such purchases which are exclusively between you and the applicable third party. You agree and acknowledge that we do not endorse the products or services offered on Third-Party Websites and you shall hold us blameless from any harm caused by your purchase of such products or services. Additionally, you shall hold us blameless from any losses sustained by you or harm caused to you relating to or resulting in any way from any Third-Party Content or any contact with Third-Party Websites.
 
 
-<a name="sitemanage">14. SERVICES MANAGEMENT</a>
+<a id="sitemanage">14. SERVICES MANAGEMENT</a>
 
 We reserve the right, but not the obligation, to: (1) monitor the Services for violations of these Legal Terms; (2) take appropriate legal action against anyone who, in our sole discretion, violates the law or these Legal Terms, including without limitation, reporting such user to law enforcement authorities; (3) in our sole discretion and without limitation, refuse, restrict access to, limit the availability of, or disable (to the extent technologically feasible) any of your Contributions or any portion thereof; (4) in our sole discretion and without limitation, notice, or liability, to remove from the Services or otherwise disable all files and content that are excessive in size or are in any way burdensome to our systems; and (5) otherwise manage the Services in a manner designed to protect our rights and property and to facilitate the proper functioning of the Services.
 
 
-<a name="ppno">15. PRIVACY POLICY</a>
-  
+<a id="ppno">15. PRIVACY POLICY</a>
+
 We care about data privacy and security. By using the Services, you agree to be bound by our Privacy Policy posted on the Services, which is incorporated into these Legal Terms. Please be advised the Services are hosted in Singapore, United States and United Kingdom. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in Singapore, United States and United Kingdom, then through your continued use of the Services, you are transferring your data to Singapore, United States and United Kingdom, and you expressly consent to have your data transferred to and processed in Singapore, United States and United Kingdom.
 
 
-<a name="copyrightyes">16. COPYRIGHT INFRINGEMENTS</a>
+<a id="copyrightyes">16. COPYRIGHT INFRINGEMENTS</a>
 
 We respect the intellectual property rights of others. If you believe that any material available on or through the Services infringes upon any copyright you own or control, please immediately notify us using the contact information provided below (a "Notification"). A copy of your Notification will be sent to the person who posted or stored the material addressed in the Notification. Please be advised that pursuant to applicable law you may be held liable for damages if you make material misrepresentations in a Notification. Thus, if you are not sure that material located on or linked to by the Services infringes your copyright, you should consider first contacting an attorney.
 
 
-<a name="terms">17. TERM AND TERMINATION</a>
+<a id="terms">17. TERM AND TERMINATION</a>
 
 These Legal Terms shall remain in full force and effect while you use the Services. WITHOUT LIMITING ANY OTHER PROVISION OF THESE LEGAL TERMS, WE RESERVE THE RIGHT TO, IN OUR SOLE DISCRETION AND WITHOUT NOTICE OR LIABILITY, DENY ACCESS TO AND USE OF THE SERVICES (INCLUDING BLOCKING CERTAIN IP ADDRESSES), TO ANY PERSON FOR ANY REASON OR FOR NO REASON, INCLUDING WITHOUT LIMITATION FOR BREACH OF ANY REPRESENTATION, WARRANTY, OR COVENANT CONTAINED IN THESE LEGAL TERMS OR OF ANY APPLICABLE LAW OR REGULATION. WE MAY TERMINATE YOUR USE OR PARTICIPATION IN THE SERVICES OR DELETE YOUR ACCOUNT AND ANY CONTENT OR INFORMATION THAT YOU POSTED AT ANY TIME, WITHOUT WARNING, IN OUR SOLE DISCRETION.
 
 If we terminate or suspend your account for any reason, you are prohibited from registering and creating a new account under your name, a fake or borrowed name, or the name of any third party, even if you may be acting on behalf of the third party. In addition to terminating or suspending your account, we reserve the right to take appropriate legal action, including without limitation pursuing civil, criminal, and injunctive redress.
 
 
-<a name="modifications">18. MODIFICATIONS AND INTERRUPTIONS</a>
+<a id="modifications">18. MODIFICATIONS AND INTERRUPTIONS</a>
 
 We reserve the right to change, modify, or remove the contents of the Services at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our Services. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Services.
 
 We cannot guarantee the Services will be available at all times. We may experience hardware, software, or other problems or need to perform maintenance related to the Services, resulting in interruptions, delays, or errors. We reserve the right to change, revise, update, suspend, discontinue, or otherwise modify the Services at any time or for any reason without notice to you. You agree that we have no liability whatsoever for any loss, damage, or inconvenience caused by your inability to access or use the Services during any downtime or discontinuance of the Services. Nothing in these Legal Terms will be construed to obligate us to maintain and support the Services or to supply any corrections, updates, or releases in connection therewith.
 
 
-<a name="law">19. GOVERNING LAW</a>
+<a id="law">19. GOVERNING LAW</a>
 
 These Legal Terms shall be governed by and defined following the laws of Singapore. TOEVERYTHING PTE. LTD. and yourself irrevocably consent that the courts of Singapore shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these Legal Terms.
 
 
-<a name="disputes">20. DISPUTE RESOLUTION</a>
+<a id="disputes">20. DISPUTE RESOLUTION</a>
 
 **Binding Arbitration**
 
@@ -318,47 +320,62 @@ The Parties agree that any arbitration shall be limited to the Dispute between t
 The Parties agree that the following Disputes are not subject to the above provisions concerning binding arbitration: (a) any Disputes seeking to enforce or protect, or concerning the validity of, any of the intellectual property rights of a Party; (b) any Dispute related to, or arising from, allegations of theft, piracy, invasion of privacy, or unauthorized use; and (c) any claim for injunctive relief. If this provision is found to be illegal or unenforceable, then neither Party will elect to arbitrate any Dispute falling within that portion of this provision found to be illegal or unenforceable and such Dispute shall be decided by a court of competent jurisdiction within the courts listed for jurisdiction above, and the Parties agree to submit to the personal jurisdiction of that court.
 
 
-<a name="corrections">21. CORRECTIONS</a>
+<a id="corrections">21. CORRECTIONS</a>
 
 There may be information on the Services that contains typographical errors, inaccuracies, or omissions, including descriptions, pricing, availability, and various other information. We reserve the right to correct any errors, inaccuracies, or omissions and to change or update the information on the Services at any time, without prior notice.
 
 
-<a name="disclaimer">22. DISCLAIMER</a>
+<a id="disclaimer">22. DISCLAIMER</a>
 
 THE SERVICES ARE PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. YOU AGREE THAT YOUR USE OF THE SERVICES WILL BE AT YOUR SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, IN CONNECTION WITH THE SERVICES AND YOUR USE THEREOF, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE MAKE NO WARRANTIES OR REPRESENTATIONS ABOUT THE ACCURACY OR COMPLETENESS OF THE SERVICES' CONTENT OR THE CONTENT OF ANY WEBSITES OR MOBILE APPLICATIONS LINKED TO THE SERVICES AND WE WILL ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY (1) ERRORS, MISTAKES, OR INACCURACIES OF CONTENT AND MATERIALS, (2) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO AND USE OF THE SERVICES, (3) ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION AND/OR FINANCIAL INFORMATION STORED THEREIN, (4) ANY INTERRUPTION OR CESSATION OF TRANSMISSION TO OR FROM THE SERVICES, (5) ANY BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE WHICH MAY BE TRANSMITTED TO OR THROUGH THE SERVICES BY ANY THIRD PARTY, AND/OR (6) ANY ERRORS OR OMISSIONS IN ANY CONTENT AND MATERIALS OR FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF ANY CONTENT POSTED, TRANSMITTED, OR OTHERWISE MADE AVAILABLE VIA THE SERVICES. WE DO NOT WARRANT, ENDORSE, GUARANTEE, OR ASSUME RESPONSIBILITY FOR ANY PRODUCT OR SERVICE ADVERTISED OR OFFERED BY A THIRD PARTY THROUGH THE SERVICES, ANY HYPERLINKED WEBSITE, OR ANY WEBSITE OR MOBILE APPLICATION FEATURED IN ANY BANNER OR OTHER ADVERTISING, AND WE WILL NOT BE A PARTY TO OR IN ANY WAY BE RESPONSIBLE FOR MONITORING ANY TRANSACTION BETWEEN YOU AND ANY THIRD-PARTY PROVIDERS OF PRODUCTS OR SERVICES. AS WITH THE PURCHASE OF A PRODUCT OR SERVICE THROUGH ANY MEDIUM OR IN ANY ENVIRONMENT, YOU SHOULD USE YOUR BEST JUDGMENT AND EXERCISE CAUTION WHERE APPROPRIATE.
 
 
-<a name="liability">23. LIMITATIONS OF LIABILITY</a>
+<a id="liability">23. LIMITATIONS OF LIABILITY</a>
 
 IN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFIT, LOST REVENUE, LOSS OF DATA, OR OTHER DAMAGES ARISING FROM YOUR USE OF THE SERVICES, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED HEREIN, OUR LIABILITY TO YOU FOR ANY CAUSE WHATSOEVER AND REGARDLESS OF THE FORM OF THE ACTION, WILL AT ALL TIMES BE LIMITED TO THE LESSER OF THE AMOUNT PAID, IF ANY, BY YOU TO US DURING THE three (3) MONTH PERIOD PRIOR TO ANY CAUSE OF ACTION ARISING OR $99.99 USD. CERTAIN US STATE LAWS AND INTERNATIONAL LAWS DO NOT ALLOW LIMITATIONS ON IMPLIED WARRANTIES OR THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES. IF THESE LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE DISCLAIMERS OR LIMITATIONS MAY NOT APPLY TO YOU, AND YOU MAY HAVE ADDITIONAL RIGHTS.
 
 
-<a name="indemnification">24. INDEMNIFICATION</a>
+<a id="indemnification">24. INDEMNIFICATION</a>
 
 You agree to defend, indemnify, and hold us harmless, including our subsidiaries, affiliates, and all of our respective officers, agents, partners, and employees, from and against any loss, damage, liability, claim, or demand, including reasonable attorneys’ fees and expenses, made by any third party due to or arising out of: (1) your Contributions; (2) use of the Services; (3) breach of these Legal Terms; (4) any breach of your representations and warranties set forth in these Legal Terms; (5) your violation of the rights of a third party, including but not limited to intellectual property rights; or (6) any overt harmful act toward any other user of the Services with whom you connected via the Services. Notwithstanding the foregoing, we reserve the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify us, and you agree to cooperate, at your expense, with our defense of such claims. We will use reasonable efforts to notify you of any such claim, action, or proceeding which is subject to this indemnification upon becoming aware of it.
 
 
-<a name="userdata">25. USER DATA</a>
+<a id="userdata">25. USER DATA</a>
 
 We will maintain certain data that you transmit to the Services for the purpose of managing the performance of the Services, as well as data relating to your use of the Services. Although we perform regular routine backups of data, you are solely responsible for all data that you transmit or that relates to any activity you have undertaken using the Services. You agree that we shall have no liability to you for any loss or corruption of any such data, and you hereby waive any right of action against us arising from any such loss or corruption of such data.
 
 
-<a name="electronic">26. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</a>
+<a id="electronic">26. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</a>
 
 Visiting the Services, sending us emails, and completing online forms constitute electronic communications. You consent to receive electronic communications, and you agree that all agreements, notices, disclosures, and other communications we provide to you electronically, via email and on the Services, satisfy any legal requirement that such communication be in writing. YOU HEREBY AGREE TO THE USE OF ELECTRONIC SIGNATURES, CONTRACTS, ORDERS, AND OTHER RECORDS, AND TO ELECTRONIC DELIVERY OF NOTICES, POLICIES, AND RECORDS OF TRANSACTIONS INITIATED OR COMPLETED BY US OR VIA THE SERVICES. You hereby waive any rights or requirements under any statutes, regulations, rules, ordinances, or other laws in any jurisdiction which require an original signature or delivery or retention of non-electronic records, or to payments or the granting of credits by any means other than electronic means.
 
 
-<a name="california">27. CALIFORNIA USERS AND RESIDENTS</a>
+<a id="california">27. CALIFORNIA USERS AND RESIDENTS</a>
 
 If any complaint with us is not satisfactorily resolved, you can contact the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs in writing at 1625 North Market Blvd., Suite N 112, Sacramento, California 95834 or by telephone at (800) 952-5210 or (916) 445-1254.
 
 
-<a name="misc">28. MISCELLANEOUS</a>
+<a id="misc">28. MISCELLANEOUS</a>
 
 These Legal Terms and any policies or operating rules posted by us on the Services or in respect to the Services constitute the entire agreement and understanding between you and us. Our failure to exercise or enforce any right or provision of these Legal Terms shall not operate as a waiver of such right or provision. These Legal Terms operate to the fullest extent permissible by law. We may assign any or all of our rights and obligations to others at any time. We shall not be responsible or liable for any loss, damage, delay, or failure to act caused by any cause beyond our reasonable control. If any provision or part of a provision of these Legal Terms is determined to be unlawful, void, or unenforceable, that provision or part of the provision is deemed severable from these Legal Terms and does not affect the validity and enforceability of any remaining provisions. There is no joint venture, partnership, employment or agency relationship created between you and us as a result of these Legal Terms or use of the Services. You agree that these Legal Terms will not be construed against us by virtue of having drafted them. You hereby waive any and all defenses you may have based on the electronic form of these Legal Terms and the lack of signing by the parties hereto to execute these Legal Terms.
 
+**<a id="ai">Annex A: AFFiNE AI Terms</a>**
 
-<a name="contact">29. CONTACT US</a>
+We are honored that you choose to use AFFiNE AI. AFFiNE AI can help you summarize, polish, translate, continue writing, etc. It can generate mind maps, presentations, pictures, and it can help you adjust the layout. You can get text optimization tips by talking to it. It can record continuous conversations with you and provide feedback on the content of the continuous conversations.
+
+Before using it, please read and understand the following terms carefully. The following terms are supplementary to AFFiNE AI. If you agree to the following terms and continue to use AFFiNE AI, you will be deemed to have fully understood the following terms and agreed to the following terms, TERMS AND CONDITIONS and Privacy Policy as the entire agreement governing your use of AFFiNE and our services. If you do not agree to this Agreement and TERMS AND CONDITIONS. If you agree with any terms in the Privacy Policy, please stop using the service immediately.
+
+When using AFFiNE AI, please ensure that the input content should be content for which you have intellectual property rights or have been legally authorized by the rights holder. There is no violation of applicable laws and regulations or infringement of the legitimate rights and interests of others (including but not limited to copyrights, patent rights, trademark rights and other intellectual property rights and other rights), content that violates public order. We recommend that you ensure that authorized users carefully check the input content to avoid entering sensitive or confidential content. You agree that we are not responsible for the query, use, disclosure, decryption, storage, backup, retention, or export of your data that is not caused by our intention or gross negligence.
+
+You promise to abide by local laws and regulations when using AFFiNE AI, and will not use this service to conduct any activities that are illegal, violate public order and good morals, inappropriate, infringe on the legitimate rights and interests of others, or violate these terms, TERMS AND CONDITIONS and Privacy Policy, and will not publish or input , output, and disseminate any content that violates the above agreement, and will not use this service to produce, copy, publish, or disseminate false news information and other false information. Otherwise, we have the right to stop generating and transmitting the corresponding content in accordance with the agreement and legal provisions. Block, delete, and have the right to take actions including but not limited to warning, restricting or prohibiting the use of some or all functions, blocking accounts until cancellation, etc. depending on the circumstances, save relevant records, and report to the relevant competent authorities. If the relevant input content violates the law, infringes upon the legitimate rights and interests of any third party, or causes other disputes, you will be solely responsible for the resulting violations, infringements, disputes, and losses, and we are not responsible for this. If this causes any losses to us, we will have the right to demand compensation from you.
+
+We attach great importance to the quality of content generated by artificial intelligence models and will strive to take reasonable security measures to filter inappropriate content. You understand and agree that due to the characteristics of the content generated by the artificial intelligence model, AFFiNE AI cannot guarantee the legality, accuracy, completeness, functionality and applicability of the output content, and the output content does not represent AFFiNE's attitude or opinion. You should conduct necessary review and judgment on the output content, and be responsible for the actions and content under your and authorized user accounts. We will not claim any rights or bear any responsibility for the output content, nor will we assume any responsibility for the output content caused by your use of this service. or any breach of this Agreement. You confirm and agree not to hold AFFiNE and its operating entities responsible for the inaccuracy and inapplicability of the output content. If you publish or disseminate content output by AFFiNE AI according to your instructions, you shall be responsible for the authenticity of the content. You understand and agree that the output is for reference only and should not be relied upon as professional advice, commercial use, or for any other purpose. If it involves situations that may have a significant impact on you or relevant parties (such as legal, medical, financial, insurance, etc. scenarios), it is recommended that you consult relevant authorities or professionals. Any judgment you make based on the output content or any subsequent related operations based on it will be borne by you, including any consequences of the legality, accuracy, completeness, functionality, etc. of the output content. Risks arising from reliance on non-infringement or fulfillment of a particular purpose. If you publicly disseminate sensitive content or unreasonable and ambiguous content in the output content, you will be solely responsible for the infringement, disputes, and losses caused thereby, and we are not responsible for this. If this causes any losses to us, we will have the right to demand compensation from you.
+
+Artificial intelligence and machine learning models can improve over time to better address specific use cases. We may use data we collect from your use of AFFiNE AI to improve our models. Since we use third-party AI models, when you choose to use AFFiNE AI, we have to share your information with the third party, the model provider. You have no objection to this.
+
+In order to improve user experience, meet new user needs, ensure the security and stability of products and services, or based on legal and regulatory requirements, we will update or change AFFiNE AI from time to time (including but not limited to modification, upgrade, migration, development New features, changes, suspension or cancellation of certain features), maintenance, suspension or termination of the Service, you agree that we will not be liable to you for this.
+
+<a id="contact">CONTACT US</a>
 
 In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:
 
@@ -371,3 +388,4 @@ In order to resolve a complaint regarding the Services or to receive further inf
 **Singapore**
 
 ****contact@toeverything.info****
+
