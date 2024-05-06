@@ -19,7 +19,7 @@
       :data="data"
       :onClick="handleCardClick"
       :key="data.id"
-      :className="{ 'is-current': i === slideIndex, 'is-next': i === slideIndex + 1, 'is-prev': i === slideIndex - 1, 'is-backup': i > slideIndex + 1 || i < slideIndex - 1  }"
+      :className="{ 'is-current': i === slideIndex, 'is-next': i === slideIndex + 1, 'is-prev': i < slideIndex, 'is-backup': i > slideIndex + 1  }"
     )
 </template>
 
@@ -77,18 +77,29 @@ const handleRightClick = () => {
 
   .ai-feature-card
     position absolute
-    transition: 318ms
+    transition: 518ms
     transform: translateX(var(--transform-x)) translateY(var(--transform-y)) rotate(var(--rotate))
 
-    &.is-prev
+    &.feature-chat-with-ai
+      z-index: 5
+
+    &.feature-inline-ai
+      z-index: 4
+
+    &.feature-slides-ai
       z-index: 3
+
+    &.feature-mindmap-ai
+      z-index: 2
+
+    &.is-prev
       --rotate: -3.73deg
       --transform-x: -120%
 
     &.is-current
-      z-index: 2
       --transform-x: 20px
       --rotate: -3.73deg
+      // transition-delay: 200ms
 
     &.is-next
       --transform-x: 17px
@@ -97,5 +108,7 @@ const handleRightClick = () => {
     &.is-backup
       opacity: 0
       --rotate: 7.36deg
+      transition: none
+      // transition-delay: 200ms
 
 </style>

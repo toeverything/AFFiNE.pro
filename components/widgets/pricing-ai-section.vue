@@ -95,6 +95,7 @@ const props = defineProps<{
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.05)
   line-height: (15/12)
   color: #000
+  overflow: hidden
 
   .content-row
     display: flex

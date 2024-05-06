@@ -91,7 +91,7 @@ const handleCardClick = () => {
         // z-index: 2
 
   .ai-feature-card
-    transition: 318ms
+    transition: 418ms
     transform: translateX(var(--transform-x)) translateY(var(--transform-y)) rotate(var(--rotate))
 
   .wrapper-chat-with-ai
