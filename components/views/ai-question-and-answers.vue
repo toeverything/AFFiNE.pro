@@ -36,7 +36,7 @@ Additionally, after opening a doc, you can click on the "Expand sidebar" in the 
   },
   {
     question: 'How does AFFiNE AI share my data？',
-    answer: `AFFiNE only sends related content information to third-party AI vendors when you use AFFiNE AI. If you have any questions, you can refer to our <b><a href="/terms#ai">AI terms</a></b> for policy usage and limits.`
+    answer: `AFFiNE only sends related content information to third-party AI vendors when you use AFFiNE AI. If you have any questions, you can refer to our <a href="/terms#ai" target="_blank">AI terms</a> for policy usage and limits.`
   },
   {
     question: 'Does AFFiNE AI have a free trial?',
@@ -102,6 +102,12 @@ Additionally, after opening a doc, you can click on the "Expand sidebar" in the 
         color: #8E8D91;
         position relative
         z-index 3
+
+        a
+         color: var(--brand)
+
+         &:hover
+           text-decoration: underline
 
       &__arrow
         position relative
