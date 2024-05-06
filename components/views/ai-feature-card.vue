@@ -11,12 +11,15 @@
     :style="{ backgroundImage: `url(${data.image})` }"
   )
   .content-wrapper
-    .info-title {{ data.title }}
+    .info-title.flex.items-center.gap-8px
+      | {{ data.title }}
+      .beta-label( v-if="data.isBeta" ) Beta
     .info-desc {{ data.desc }}
 </template>
 
 <script lang="ts">
 export type AIFeatureCardData = {
+  isBeta?: boolean
   id: string
   title: string
   desc: string
@@ -52,6 +55,18 @@ const props = defineProps<{
     &:hover
       .try-it
         opacity: 1
+
+
+  .beta-label
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 9px;
+    color: #7F7F7F;
+    padding: 2px 5px;
+    width: 28px;
+    height: 14px;
+    border: 0.5px solid #7F7F7F;
+    border-radius: 10px;
 
   .try-it
     position absolute

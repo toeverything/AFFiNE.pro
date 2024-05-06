@@ -27,6 +27,7 @@ const featureCards: AIFeatureCardData[] = [
     image: '/ai/feature-inline-ai.png'
   },
   {
+    isBeta: true,
     id: 'slides-ai',
     title: 'Make Presentation with AI',
     desc: 'Craft polished, presentation-ready slides with just one click.',
@@ -39,6 +40,7 @@ const featureCards: AIFeatureCardData[] = [
     image: '/ai/feature-mindmap-ai.png'
   },
   {
+    isBeta: true,
     id: 'reality-ai',
     title: 'Make it Real with AI',
     desc: 'From concept to completion, turn ideas into reality.',

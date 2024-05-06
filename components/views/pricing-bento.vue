@@ -272,7 +272,7 @@ const DRIVE_FILES = [
       pointer-events: none
       width: 637px;
       height: 637px;
-      background: radial-gradient(49.87% 49.87% at 50.13% 50.13%, rgba(33, 89, 211, 0.1) 0%, rgba(33, 89, 211, 0) 100%)
+      // background: radial-gradient(49.87% 49.87% at 50.13% 50.13%, rgba(33, 89, 211, 0.1) 0%, rgba(33, 89, 211, 0) 100%)
       left: -319px;
 
     .cell-header,
@@ -516,6 +516,7 @@ const DRIVE_FILES = [
       transition: 318ms
 
     .notif-button
+      display none
       position absolute
       background-image: url(/pricing/bento-everywhere-button.png)
       width: 138px

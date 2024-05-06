@@ -52,7 +52,7 @@
           .item
             .item-icon
               nuxt-icon( name="dot")
-            .item-body Turn your outline into beautiful, engaging presentations
+            .item-body Turn your outline into beautiful, engaging presentations(Beta)
           .item
             .item-icon
               nuxt-icon( name="dot")
