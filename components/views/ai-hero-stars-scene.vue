@@ -83,7 +83,7 @@ onUnmounted(() => {
     aspect-ratio: 1920/600
     position absolute
     z-index: -1
-    top: 100px
+    top: 180px
     left: 50%
     transform: translateX(-50%)
     pointer-events: none
