@@ -6,6 +6,7 @@
     )
 
   .content-row.flex.flex-col.items-center
+    ProductHuntButton.mb-4
     .ai-text-logo(
       :class="{ 'is-mobile': $device.isMobile }"
       :style="{ '--x': `${elementX}px` }"
