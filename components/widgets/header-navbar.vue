@@ -348,6 +348,7 @@ $mediaCompactHeader = '(max-width: 1280px)'
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #F4F4F5;
+    white-space: pre;
 
 .el-popover.el-popper.community-popper
   border-radius: 8px;
