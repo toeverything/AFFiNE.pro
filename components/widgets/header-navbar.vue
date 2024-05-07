@@ -47,33 +47,22 @@
               ref="activeTab"
               :style="activeTabStyle"
             )
-          .nav-item
-            el-popover(
-              trigger="hover"
-              transition="popover-popup"
-              popper-class="community-popper"
-              v-model:visible="isOpenCommunity"
-              width="400px"
-              placement="bottom-start"
-              :show-arrow="false"
-              :offset="8"
-            )
-              template( #reference )
-                a.handler-row.gap-1.items-center(
-                  @click="isOpenCommunity = !isOpenCommunity"
-                  :class="{ 'is-open': isOpenCommunity }"
-                )
-                  | {{ $t('community') }}
-                  nuxt-icon.arrow-icon.text-size-16px( name="ArrowRightSmall2" filled )
 
-              community-navbar
+          .nav-item
+            scroll-link.flex.items-center.gap-4px( to="/ai" )
+              | AFFiNE AI
+              .new-label NEW
+
+          .nav-item
+            scroll-link( to="/download" ) {{ $t('download') }}
+
           .nav-item
             el-popover(
               trigger="hover"
               transition="popover-popup"
               popper-class="community-popper"
               v-model:visible="isOpenResource"
-              width="400px"
+              width="542px"
               placement="bottom-start"
               :show-arrow="false"
               :offset="8"
@@ -83,19 +72,23 @@
                   @click="isOpenResource = !isOpenResource"
                   :class="{ 'is-open': isOpenResource }"
                 )
-                  | {{ $t('resource') }}
+                  | {{ $t('resources') }}
                   nuxt-icon.arrow-icon.text-size-16px( name="ArrowRightSmall2" filled )
 
-              resource-navbar
+              .flex.gap-8px
+                .inner-page-navbar.w-140px
+                  .nav-item
+                    scroll-link( :to="PATH.AFFiNE_DOCS" ) Docs
+                  .nav-item
+                    scroll-link( to="/about-us" @click="isOpenResource = false" ) {{ $t('aboutUs') }}
+                  .nav-item
+                    scroll-link( to="/blog?tag=Release+Note" @click="isOpenResource = false" ) {{ $t('blog') }}
+                div
+                  .static-link Community
+                  community-navbar.flex-1
 
           .nav-item
-            scroll-link( to="/about-us" ) {{ $t('aboutUs') }}
-          .nav-item
-            scroll-link( to="/blog" ) {{ $t('blog') }}
-          .nav-item
             scroll-link( to="/pricing" ) {{ $t('price') }}
-          .nav-item
-            scroll-link( to="/download" ) {{ $t('download') }}
 
         .right-part.flex.items-center.gap-12px
           login-button( placement="header" )
@@ -245,7 +238,7 @@ $mediaCompactHeader = '(max-width: 1280px)'
 
     .nav-item > a,
     .el-dropdown
-      display: block
+      display: flex
       padding: 0 12px
       border-radius: 12px;
       color: black
@@ -363,5 +356,31 @@ $mediaCompactHeader = '(max-width: 1280px)'
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.10);
   padding: 16px 12px
   // margin-left: -12px
+
+  .inner-page-navbar
+    .nav-item
+      width: 100%
+      margin-bottom: 2px
+
+  .scroll-link,
+  .static-link
+    display: flex
+    padding: 0 12px
+    border-radius: 12px;
+    font-weight: 500
+    color: black
+    padding: 8px 12px
+    border-radius: 4px;
+    transition: 318ms
+    letter-spacing: -0.28px
+
+  .static-link
+    null
+
+  .scroll-link
+    &.is-active,
+    &:hover
+      color: black
+      background: rgba(0, 0, 0, 0.04)
 
 </style>

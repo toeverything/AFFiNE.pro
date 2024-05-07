@@ -20,17 +20,10 @@
         .menu-list
           //- .nav-item
           //-   nuxt-link( to="/" ) {{ $t('home') }}
-          .nav-item.community-item(
-            @click="isOpenCommunity = !isOpenCommunity" ref="ignoreElRef"
-            :class="{ 'is-open-community': isOpenCommunity }"
-          )
-            a.handler-row.justify-between.items-center.w-full(
-            )
-              | {{ $t('community') }}
-              nuxt-icon.arrow-icon.text-size-20px( name="ArrowRightSmall2" filled )
-
-            el-collapse-transition
-              community-navbar( v-show="isOpenCommunity" )
+          .nav-item
+            scroll-link.flex.items-center.gap-4px( to="/ai" )
+              | AFFiNE AI
+              .new-label NEW
 
           .nav-item.community-item(
             @click="isOpenResource = !isOpenResource" ref="ignoreResElRef"
@@ -42,12 +35,17 @@
               nuxt-icon.arrow-icon.text-size-20px( name="ArrowRightSmall2" filled )
 
             el-collapse-transition
-              resource-navbar( v-show="isOpenResource" )
+              .flex.flex-col( v-show="isOpenResource" )
+                .nav-item
+                  scroll-link( :to="PATH.AFFiNE_DOCS" ) Docs
+                .nav-item
+                  nuxt-link( to="/about-us" @click="isOpen = false") {{ $t('aboutUs') }}
+                .nav-item
+                  nuxt-link( to="/blog?tag=Release+Note" @click="isOpen = false") {{ $t('blog') }}
+                .nav-item.mb-8px
+                  nuxt-link( @click.stop="() => {}" ) Community
+                community-navbar
 
-          .nav-item
-            nuxt-link( to="/about-us" ) {{ $t('aboutUs') }}
-          .nav-item
-            nuxt-link( to="/blog" ) {{ $t('blog') }}
           .nav-item
             nuxt-link( to="/pricing" ) {{ $t('price') }}
           .nav-item(
@@ -106,6 +104,8 @@ watch(locale, () => {
   .community-item
     .arrow-icon
       transition: 218ms
+    .nav-item
+      border: none !important
 
     &.is-open-community
       .arrow-icon
@@ -167,7 +167,7 @@ watch(locale, () => {
           border-bottom: 0.5px solid rgba(0, 0, 0, 0.10);
 
           > a
-            display: block
+            display: flex
             padding: 12px 0
 
       .lang-list

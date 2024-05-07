@@ -2,6 +2,8 @@
 .page.page-home.page-overview
   svg-defs
 
+  ProductHuntFixedButton
+
   overview-hero-v3
 
   .section-bg-wrapper
@@ -62,6 +64,15 @@ gsap.registerPlugin(ScrollTrigger)
 .page-overview
   color: var(--primary)
   font-size: fluid-value()
+
+  .product-hunt-fixed-button
+    position fixed
+    bottom: 30px
+    right: 40px
+    z-index: 10
+
+    @media $mediaInMobile
+      display: none
 
   .section-bg-wrapper
     background: var(--bg)

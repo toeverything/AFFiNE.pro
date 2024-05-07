@@ -5,16 +5,27 @@
       .info-headline.mb-2 Turn all your ideas into reality
       .info-title.mb-2 AFFiNE AI
       .info-desc.mb-6 A true multimodal AI copilot.
-      nuxt-link( :href="PATH.PRICING_JOIN_WAITLIST" target="_blank" rel="nofollow" )
-        el-button.join-button(
-          type="primary"
-          size="action"
-        ) Join Waiting List
-      .join-desc.mt-3 Join the early access queue for $99.99/year.
+      .row.mb-3
+        nuxt-link( :href="PATH.PRICING_JOIN_WAITLIST" target="_blank" rel="nofollow" )
+          el-button.join-button(
+            type="primary"
+            size="action"
+          )
+            .flex.flex-col
+              .row-one $8.9 / month
+              .row-two billed annually
+      .row
+        nuxt-link( :href="isInPricing ? '/ai' : PATH.AFFINE_AI_TRY" :target="isInPricing ? null : '_blank'" rel="nofollow" )
+          el-button.join-button(
+            :class="{ 'is-in-pricing': isInPricing }"
+            type="primary"
+            size="action"
+            plain
+          ) {{ isInPricing ? "Learn about AFFiNE AI" : "Try for Free" }}
     .features-row.flex
       .feature-cell
         .cell-headline
-          nuxt-icon.text-14px( name="ai-write" filled )
+          nuxt-icon.text-20px( name="ai-write" filled )
           | Write with you
         .planning-list
           .item
@@ -31,7 +42,7 @@
             .item-body Change the tones / fix spelling & grammar
       .feature-cell
         .cell-headline
-          nuxt-icon.text-13px( name="ai-draw" filled )
+          nuxt-icon.text-20px( name="ai-draw" filled )
           | Draw with you
         .planning-list
           .item
@@ -41,14 +52,14 @@
           .item
             .item-icon
               nuxt-icon( name="dot")
-            .item-body Turn your outline into beautiful, engaging presentations
+            .item-body Turn your outline into beautiful, engaging presentations(Beta)
           .item
             .item-icon
               nuxt-icon( name="dot")
             .item-body Summarize your content into structured mind-maps
       .feature-cell
         .cell-headline
-          nuxt-icon.text-13px( name="ai-plan" filled )
+          nuxt-icon.text-20px( name="ai-plan" filled )
           | Plan with you
         .planning-list
           .item
@@ -58,16 +69,20 @@
           .item
             .item-icon
               nuxt-icon( name="dot")
-            .item-body Auto-sorting and auto-tagging
+            .item-body Auto-sorting and auto-tagging (Coming soon)
           .item
             .item-icon
               nuxt-icon( name="dot")
-            .item-body Open source & Privacy ensured
+            .item-body Privacy ensured
   .section-bg
 </template>
 
 <script setup lang="ts">
 import { PATH } from '~/utils/constants'
+
+const props = defineProps<{
+  isInPricing?: boolean
+}>()
 </script>
 
 <style lang="stylus">
@@ -80,6 +95,7 @@ import { PATH } from '~/utils/constants'
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.05)
   line-height: (15/12)
   color: #000
+  overflow: hidden
 
   .content-row
     display: flex
@@ -95,7 +111,7 @@ import { PATH } from '~/utils/constants'
 
     .info-headline
       color: var(--brand)
-      font-size: 12px
+      font-size: 15px
       font-weight: 500
 
     .info-title
@@ -110,6 +126,9 @@ import { PATH } from '~/utils/constants'
       line-height: 20px
       letter-spacing: -0.02em
 
+    .el-button
+      min-width: 160px
+
     .join-button
       font-weight: 500
       font-size: 14px
@@ -118,6 +137,24 @@ import { PATH } from '~/utils/constants'
       -webkit-font-smoothing: auto
       padding-left: 26px
       padding-right: 26px
+
+      &.is-in-pricing
+        padding-left: 16px
+        padding-right: 16px
+
+      .row-two
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: -0.02em;
+        color: rgba(255, 255, 255, 0.75);
+
+      &.is-plain
+        background: white
+
+        &:hover
+          color: var(--brand) !important
+          background-color: brand(10) !important
 
     .join-desc
       font-size: 13px
@@ -148,23 +185,33 @@ import { PATH } from '~/utils/constants'
 
     .planning-list
       padding-bottom: 0 !important
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+      color: #8E8D91
 
       .item
-        & + .item
-          margin-top: 8px
+        display: flex
+        gap: 8px
+        padding: 0
+        font-size: 14px
+
+        .nuxt-icon
+          font-size: 16px
 
       .item-body
         font-weight: 400
         font-size: 14px
         line-height: 22px
-        color: #424149
+        color: #8E8D91
 
   .section-bg
+    margin-top: 32px
     width: 100%
-    height: 278px
+    height: 279px
     background-image: url(/pricing/affine-ai-bg.png)
     background-repeat: no-repeat
-    background-size: 1080px 278px
+    background-size: 1080px 279px
     background-position: bottom center
 
     @media (max-width: 768px)

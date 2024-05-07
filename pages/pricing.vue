@@ -4,9 +4,12 @@
     .limit-container.flex.flex-col
       h1.ma-0.hero-title {{ $t('pricePage.title') }}
       .hero-desc {{ $t('pricePage.desc') }}
-  .section.section-prices
+  .section.section-prices.mb-10
     .limit-container.flex.flex-col.items-center
+      pricing-ai-section( isInPricing )
 
+  .section.mb-8
+    .limit-container.flex.flex-col.items-center
       .tab-bar.flex( :class="[`active-${currentTab}`]" )
         .tab-active-bg
         .tab.tab-monthly( @click="() => currentTab = 'monthly'" )
@@ -154,9 +157,10 @@
                 nuxt-icon( name="dot" filled)
               .item-body {{ $t('pricePage.enterpriseItemB') }}
 
-  .section.mb-2
-    .limit-container.flex.flex-col.items-center
-      pricing-ai-section
+  .section.section-bento.mb-4
+    .limit-container
+      h1.ma-0.mb-6.hero-title Why Not Upgrade to AFFiNE Cloud?
+      pricing-bento
 </template>
 
 <script lang="ts" setup>
@@ -166,7 +170,7 @@ import { PATH, INFO, CONFIG } from '~/utils/constants'
 const { t } = useI18n()
 
 const store = useStore()
-const currentTab = ref('monthly')
+const currentTab = ref('yearly')
 const couponCode = ref('BF23')
 
 const isMonthly = computed(() => currentTab.value === 'monthly')
