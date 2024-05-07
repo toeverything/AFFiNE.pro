@@ -27,6 +27,11 @@
         )
           | Black Friday 25% OFF
           icon-arrow-right
+      .animated-in(
+        v-if="uwuQueryParam"
+      )
+        UwuLogo(
+        )
 
       h1.hero-fused-title.animated-in.animate-delay-50ms
         .row.first-row.flex.justify-center
@@ -61,6 +66,7 @@ import { gsap } from 'gsap'
 import { CONFIG } from '~/utils/constants'
 import { useEventListener } from '@vueuse/core'
 import type { Application } from '@splinetool/runtime'
+import { ref, onMounted } from 'vue'
 const { isMobile } = useDevice()
 
 const isInited = ref(false)
@@ -70,8 +76,16 @@ const planCheckboxValue = ref(true)
 const isPlayVideo = ref(isMobile)
 const scrollProgress = ref(0)
 
+const uwuQueryParam = ref(false)
+
 let app: Application
 let cleanup: () => void
+
+onMounted(() => {
+  // 检查查询参数中是否存在 ?uwu
+  const params = new URLSearchParams(window.location.search)
+  uwuQueryParam.value = params.has('uwu')
+})
 
 const setupSpline = async () => {
   const { Application } = await import('@splinetool/runtime')
