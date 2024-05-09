@@ -40,7 +40,7 @@ const listenToScroll = () => {
   .header-navbar-mobile
     display: none
 
-  @media (max-width: 960px)
+  @media (max-width: 800px)
     .header-navbar
       display: none
 
