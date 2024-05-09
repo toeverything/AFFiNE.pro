@@ -1,6 +1,6 @@
 <template lang="pug">
 track-link.get-start-link(
-  :to="PATH.LOGIN"
+  :to="isAiPage ? PATH.LOGIN : PATH.AFFINE_WEB_APP"
   target="_blank"
   action="Button"
   :params="{ resolve: 'Login', placement: placement || 'unknown' }"
@@ -9,13 +9,16 @@ track-link.get-start-link(
     :size="size"
     type="default"
   )
-    | {{ $t('login') }}
+    | {{ isAiPage ? $t('login') : 'Get Started' }}
 
 .explore-on-desktop {{ $t('exploreOnDesktop') }}
 </template>
 
 <script setup lang="ts">
 import { PATH } from '~/utils/constants'
+
+const route = useRoute()
+const isAiPage = computed(() => route.fullPath.includes('/ai'))
 
 defineProps<{
   placement?: string
