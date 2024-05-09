@@ -1,10 +1,14 @@
 import { getBlocksuiteReader } from 'affine-reader'
+import PQueue from 'p-queue';
 import { ContentFileMeta, parseWorkspacePageMeta } from './resolveContentFile'
 
 const reader = getBlocksuiteReader({
   // public workspace id for affine.pro
-  workspaceId: `qf73AF6vzWphbTJdN7KiX`
+  workspaceId: `qf73AF6vzWphbTJdN7KiX`,
+  retry: 3,
 })
+
+const queue = new PQueue({ concurrency: 5 });
 
 let lastFetch = 0
 
@@ -28,9 +32,12 @@ export async function getWorkspacePages(invalidateCache = false) {
         ?.filter((p) => !p.trash)
         .filter(p => p.title) || []
 
-      return Promise.all(
-        filteredPages.map((page) => parseWorkspacePageMeta(page, reader))
-      )
+        return queue.addAll(
+          filteredPages.map((page, idx) => () => {
+            console.log(`(${idx}/${filteredPages.length}) parsing ${page.id}:${page.title}`)
+            return parseWorkspacePageMeta(page, reader);
+          })
+        );
     })
     lastFetch = Date.now()
   } else {

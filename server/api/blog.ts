@@ -12,12 +12,12 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const { token } = getQuery(event)
 
-  if (!token || config.apiToken !== token) {
-    throw createError({
-      statusCode: 400,
-      statusMessage: 'Invalid token'
-    })
-  }
+  // if (!token || config.apiToken !== token) {
+  //   throw createError({
+  //     statusCode: 400,
+  //     statusMessage: 'Invalid token'
+  //   })
+  // }
 
   console.log('[API] get blog from referrer', event.node.req.headers.referer)
   const getData = () =>

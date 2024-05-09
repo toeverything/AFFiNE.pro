@@ -3150,10 +3150,10 @@ acorn@^8.6.0, acorn@^8.8.1, acorn@^8.8.2:
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.8.2.tgz"
   integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
 
-affine-reader@^2.3.6:
-  version "2.3.6"
-  resolved "https://registry.yarnpkg.com/affine-reader/-/affine-reader-2.3.6.tgz#fa058129b2953c8bb97e5161e2cc91b7fae22b63"
-  integrity sha512-U9fddZJ6lOYp+P/OV3WR+3ZCDh9MR4bd/RCVd2JoR7Q1cqBldrPLDO49khGnG/+gX1E3tibulT9tzmFBtrRnBA==
+affine-reader@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/affine-reader/-/affine-reader-2.4.0.tgz#95a012fe89c2631c5cf67a9211b83e2458107aa7"
+  integrity sha512-lhnQDh0pmHQvpKl8xrcYRgqe2UZgl/iwD3snRDRJREPVenP58v2PJHW9ELjXhTUHK+peeCgIBHKrB9KKkIwAqA==
   dependencies:
     "@blocksuite/blocks" "^0.10.0"
 
@@ -5042,6 +5042,11 @@ eventemitter3@^4.0.0:
   version "4.0.7"
   resolved "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.7.tgz"
   integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
+
+eventemitter3@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-5.0.1.tgz#53f5ffd0a492ac800721bb42c66b841de96423c4"
+  integrity sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==
 
 execa@^5.1.1:
   version "5.1.1"
@@ -8923,6 +8928,19 @@ p-locate@^5.0.0:
   integrity sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==
   dependencies:
     p-limit "^3.0.2"
+
+p-queue@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/p-queue/-/p-queue-8.0.1.tgz#718b7f83836922ef213ddec263ff4223ce70bef8"
+  integrity sha512-NXzu9aQJTAzbBqOt2hwsR63ea7yvxJc0PwN/zobNAudYfb1B7R08SzB4TsLeSbUCuG467NhnoT0oO6w1qRO+BA==
+  dependencies:
+    eventemitter3 "^5.0.1"
+    p-timeout "^6.1.2"
+
+p-timeout@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/p-timeout/-/p-timeout-6.1.2.tgz#22b8d8a78abf5e103030211c5fc6dee1166a6aa5"
+  integrity sha512-UbD77BuZ9Bc9aABo74gfXhNvzC9Tx7SxtHSh1fxvx3jTLLYvmVhiQZZrJzqqU0jKbN32kb5VOKiLEQI/3bIjgQ==
 
 pako@^1.0.10, pako@^1.0.11, pako@^1.0.6, pako@~1.0.2:
   version "1.0.11"
