@@ -17,15 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-
-      - name: Run install
-        uses: borales/actions-yarn@v4
+      - uses: actions/setup-node@v4
         with:
-          cmd: install
-
+          node-version: '18'
+          cache: 'yarn'
+      - run: yarn install
       - name: "Run sync command"
-        run: API_TOKEN=${{ secrets.API_TOKEN }} npm run sync-blog
+        run: yarn sync-blog
 
       - name: "Commit sync contents"
         uses: stefanzweifel/git-auto-commit-action@v4

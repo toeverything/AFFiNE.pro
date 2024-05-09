@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "sync-blog": "gulp",
+    "sync-blog": "tsx sync-blog.mts",
     "build": "nuxt build",
     "dev": "nuxt dev --port 3001",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "type": "module",
   "dependencies": {
     "@blocksuite/blocks": "^0.5.0-alpha.1",
     "@blocksuite/editor": "^0.5.0-alpha.1",
@@ -27,6 +28,7 @@
     "p-queue": "^8.0.1",
     "phenomenon": "^1.6.0",
     "semver": "^7.5.0",
+    "tsx": "^4.9.3",
     "tweakpane": "^3.1.7",
     "typescript-cookie": "^1.0.4",
     "vue-highlight-words": "^3.0.1",
@@ -65,7 +67,6 @@
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
     "stylus": "^0.59.0",
-    "ts-node": "^10.9.1",
     "typescript": "^5.1.6",
     "unified": "^10.1.2",
     "unist-util-visit": "^4.1.2",
