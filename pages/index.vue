@@ -13,6 +13,8 @@
 
     overview-features
 
+    overview-ai
+
     overview-build-in-public-light
 
     overview-user-stories-light
