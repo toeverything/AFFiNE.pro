@@ -1,10 +1,11 @@
 <template lang="pug">
 .overview-ai
   .limit-container.flex.flex-col.items-center
-    h2.section-title.section-grad-title
+    h2.section-title.section-grad-title.relative
       | AI<br/>
       | partner helps you better
       | write, draw and plan.
+      nuxt-icon.title-star( name="star" )
 
     .section-desc Let’s you think bigger, create faster, work smarter in anytime, anywhere
 
@@ -36,7 +37,7 @@
       .dot-item(
         v-for="(_, i) in aiCards"
         :class="{ 'is-active': i === currentIndex }"
-        @click="currentIndex = i"
+        @click="() => handleDotClick(i)"
       )
         .dot-circle
 </template>
@@ -46,7 +47,9 @@ import { useResizeObserver, useScroll } from '@vueuse/core';
 
 const scrollList = ref<HTMLElement | null>(null)
 const currentIndex = ref(0)
+const isSwitching = ref(false)
 const cardWidthRef = ref(0)
+const widthOffsetRef = ref(1)
 
 const aiCards = [
   '/overview/ai/1.png',
@@ -55,6 +58,8 @@ const aiCards = [
   '/overview/ai/4.png',
   '/overview/ai/5.png',
 ]
+
+let timer: any
 
 const { x, isScrolling } = useScroll(scrollList, {
   behavior: 'smooth'
@@ -71,21 +76,39 @@ const getCardWidthAndGap = () => {
 }
 
 watch(x, () => {
+  if (isSwitching.value) return
   const { gap, cardWidth } = getCardWidthAndGap()
-  const index = Math.round(x.value / (cardWidth - gap))
-  currentIndex.value = index
+  const index = Math.round(x.value / (cardWidth / widthOffsetRef.value - gap))
+  currentIndex.value = Math.min(aiCards.length - 1, index)
 })
 
+const handleDotClick = (index: number) => {
+  clearTimeout(timer)
+  currentIndex.value = index
+  isSwitching.value = true
+  timer = setTimeout(() => {
+    isSwitching.value = false
+  }, 500)
+}
+
 watch(currentIndex, () => {
-  if (isScrolling.value) return
-  const isBigScreen = window.innerWidth > 768
-  const widthOffset = isBigScreen ? 1.2 : 1
+  if (isScrolling.value && !isSwitching.value) return
   const { gap, cardWidth } = getCardWidthAndGap()
-  x.value = currentIndex.value * (cardWidth / widthOffset + gap)
+  x.value = window.innerWidth > 744
+    ? currentIndex.value * (cardWidth / widthOffsetRef.value - gap)
+    : currentIndex.value * (cardWidth + gap)
 })
 
 useResizeObserver(scrollList, () => {
   cardWidthRef.value = document.querySelector('.ai-card[data-item="0"]')?.getBoundingClientRect().width || 0
+
+  const isBigScreen = window.innerWidth > 1440
+  const isTabletScreen = window.innerWidth > 768
+  let widthOffset = isTabletScreen ? 1.2 : 1
+  if (isBigScreen) {
+    widthOffset = 1.38
+  }
+  widthOffsetRef.value = widthOffset
 })
 </script>
 
@@ -93,6 +116,15 @@ useResizeObserver(scrollList, () => {
 .overview-ai
   padding-top: fluid-value(60, 120)
   padding-bottom: fluid-value(40, 60)
+
+  .title-star
+    font-size: fluid-value(16, 24)
+    color: #1e96eb
+    top: -2px
+    left: 50%
+    margin-left: fluid-value(24, 40)
+    transform: translateX(-50%)
+    position absolute
 
   .section-title
     background: radial-gradient(59.95% 118.21% at 50% 19.91%, #1E96EB 0%, #1E96EB 12.75%, #000000 77%);
@@ -140,7 +172,7 @@ useResizeObserver(scrollList, () => {
       }
 
     .right-spacer
-      width: fluid-value(1, 400)
+      width: fluid-value(1, 400, 744, 1920)
 
     @media (min-width: 2200px)
       .list-content
@@ -159,7 +191,7 @@ useResizeObserver(scrollList, () => {
     gap: 4px
     padding-top: fluid-value(32, 64)
 
-    @media (min-width: 1500px) {
+    @media (min-width: 2200px) {
       display: none
     }
 
