@@ -4,7 +4,7 @@
     h2.section-title.section-grad-title.relative
       | AI<br/>
       | partner helps you better
-      | write, draw and plan.
+      | write, draw and plan
       nuxt-icon.title-star( name="star" )
 
     .section-desc Let you think bigger, create faster, work smarter in anytime, anywhere
