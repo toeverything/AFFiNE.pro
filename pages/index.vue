@@ -7,6 +7,8 @@
   overview-hero-v3
 
   .section-bg-wrapper
+    overview-ai
+
     overview-trusted-by
 
     overview-hyperfused-platform
