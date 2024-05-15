@@ -7,7 +7,7 @@
       | write, draw and plan.
       nuxt-icon.title-star( name="star" )
 
-    .section-desc Let’s you think bigger, create faster, work smarter in anytime, anywhere
+    .section-desc Let you think bigger, create faster, work smarter in anytime, anywhere
 
     nuxt-link(
       to="/ai"
