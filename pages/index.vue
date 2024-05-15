@@ -7,13 +7,13 @@
   overview-hero-v3
 
   .section-bg-wrapper
-    overview-ai
-
     overview-trusted-by
 
     overview-hyperfused-platform
 
     overview-features
+
+    overview-ai
 
     overview-build-in-public-light
 

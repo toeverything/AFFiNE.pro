@@ -72,14 +72,16 @@ const getCardWidthAndGap = () => {
 
 watch(x, () => {
   const { gap, cardWidth } = getCardWidthAndGap()
-  const index = Math.round(x.value / (cardWidth + gap))
+  const index = Math.round(x.value / (cardWidth - gap))
   currentIndex.value = index
 })
 
 watch(currentIndex, () => {
   if (isScrolling.value) return
+  const isBigScreen = window.innerWidth > 768
+  const widthOffset = isBigScreen ? 1.2 : 1
   const { gap, cardWidth } = getCardWidthAndGap()
-  x.value = currentIndex.value * (cardWidth + gap)
+  x.value = currentIndex.value * (cardWidth / widthOffset + gap)
 })
 
 useResizeObserver(scrollList, () => {
@@ -90,7 +92,7 @@ useResizeObserver(scrollList, () => {
 <style lang="stylus">
 .overview-ai
   padding-top: fluid-value(60, 120)
-  padding-bottom: fluid-value(40, 130)
+  padding-bottom: fluid-value(40, 60)
 
   .section-title
     background: radial-gradient(59.95% 118.21% at 50% 19.91%, #1E96EB 0%, #1E96EB 12.75%, #000000 77%);
@@ -131,10 +133,14 @@ useResizeObserver(scrollList, () => {
         flex-shrink: 0
 
     .left-spacer
-      width: fluid-value(38, 150)
+      width: calc((100vw - 1080px) / 2 - 36px)
+
+      @media (max-width: 744px) {
+        width: 38px
+      }
 
     .right-spacer
-      width: fluid-value(1, 150)
+      width: fluid-value(1, 400)
 
     @media (min-width: 2200px)
       .list-content
@@ -153,6 +159,10 @@ useResizeObserver(scrollList, () => {
     gap: 4px
     padding-top: fluid-value(32, 64)
 
+    @media (min-width: 1500px) {
+      display: none
+    }
+
   .dot-item
     display: flex
     justify-content: center
@@ -167,6 +177,10 @@ useResizeObserver(scrollList, () => {
       border-radius: 50%
       background: #CCCCCC
       transition: 318ms
+
+    &:hover
+      .dot-circle
+        background: #808080
 
     &.is-active
       .dot-circle
