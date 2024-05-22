@@ -10,9 +10,20 @@
           .icons-part
             nuxt-link.mr-5.inline-flex(
               to="/"
+              @mouseenter="handleMouseenter"
+              @mouseleave="handleMouseleave"
             )
-              affine-logo.icon-logo(
-              )
+              client-only
+                vue3-lottie.icon-logo.lottie-logo(
+                  ref="lottieIcon"
+                  :loop="false"
+                  :autoPlay="false"
+                  :speed="1"
+                  width="48px"
+                  height="48px"
+                  animationLink="/lottie-files/logo-hover.json"
+                  @onAnimationLoaded="handleLottieLoaded"
+                )
             .sns-icons-row.flex
               nuxt-link(
                 v-for="sns in COMMUNITY_SNS_LIST"
@@ -64,6 +75,27 @@
 import { PATH, CONFIG, COMMUNITY_SNS_LIST } from '~/utils/constants'
 
 const currentYear = new Date().getFullYear()
+
+const lottieIcon = ref<any>(null)
+const LAST_LOTTIE_FRAME = 39
+
+const handleMouseenter = (event: Event) => {
+  const animation = lottieIcon.value
+
+  if (!animation) return
+
+  animation.setDirection('forward')
+  animation.goToAndStop(1)
+  animation.play()
+}
+
+const handleMouseleave = (event: Event) => {
+  lottieIcon.value?.goToAndStop(LAST_LOTTIE_FRAME)
+}
+
+const handleLottieLoaded = () => {
+  lottieIcon.value?.goToAndStop(1)
+}
 </script>
 
 <style lang="stylus">
