@@ -4,158 +4,326 @@
     .limit-container.flex.flex-col
       h1.ma-0.hero-title {{ $t('pricePage.title') }}
       .hero-desc {{ $t('pricePage.desc') }}
-  .section.section-prices.mb-10
-    .limit-container.flex.flex-col.items-center
-      pricing-ai-section( isInPricing )
 
-  .section.mb-8
-    .limit-container.flex.flex-col.items-center
-      .tab-bar.flex( :class="[`active-${currentTab}`]" )
-        .tab-active-bg
-        .tab.tab-monthly( @click="() => currentTab = 'monthly'" )
-          span {{ $t('pricePage.monthly') }}
-        .tab.tab-yearly( @click="() => currentTab = 'yearly'" )
-          span.flex
-            | {{ $t('pricePage.yearly') }}&nbsp;
-            span.color-emphasis {{ $t('pricePage.yearlyDiscount') }}
+  .section.mb-70px
+    .limit-container.flex.flex-col
+      .pricing-header.flex.items-center.justify-space-between.gap-4
+        .desktop-version.flex-1
+          .flex.flex-1.items-center.gap-4
+            .tab-bar.flex( :class="[`active-${currentPricingType}`]" )
+              .tab-active-bg
+              .tab.tab-cloud( @click="() => currentPricingType = 'cloud'" )
+                span Cloud
+              //- .tab.tab-selfhost( @click="() => currentPricingType = 'selfhost'" )
+              .tab.tab-selfhost.coming-soon
+                span.flex
+                  | Self Hosted(Coming soon)
+            .host-tips We host, no technical setup required.
 
-      .prices-list.flex
-        .price-card.type-free
-          .card-header
-            .planning-name {{ $t('pricePage.free') }}
-            .price-row.flex.items-end.gap-2
-              .price-amount $0
-              .per-time-tips.headline-6 {{ $t('pricePage.perMonth') }}
-            track-link( :href="PATH.AFFINE_WEB_APP" action="Get started" :params="{ resolve: 'Get Started', placement: currentTab === 'yearly' ? 'pricing_page_yearly' : 'pricing_page_monthly' }"  target="_blank")
-              el-button.is-outlined(
-                type="primary"
-                size="action"
-              ) {{ $t('pricePage.freeAction') }}
-          .planning-list
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemUnlimitedLocalWorkspaces') }}
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemUnlimitedLoginDevices') }}
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemUnlimitedBlocks') }}
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemStorage', [10]) }}
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemMaxFileSize', [10]) }}
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemMaxMembers', [3]) }}
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemMaxVersionHistory', [7]) }}
-
-        .price-card.type-pro
-          .black-friday-label(
-            v-if="CONFIG.ENABLE_BLACK_FRIDAY"
-            @click="handleCopyCouponClick"
-            :class="{ 'has-copied': copied }"
+        .mobile-version.flex-1
+          el-dropdown(
+            trigger="click"
+            popper-class="pricing-type-dropdown"
+            placement="bottom-start"
           )
-            | Get Coupon: {{ couponCode }}
-            nuxt-icon.text-size-18px( :name="copied ? 'tick' : 'copy'" filled)
+            .select-button.flex.items-center.gap-6px
+              | {{ currentPricingType === 'cloud' ? 'AFFINE.Pro' : 'Self Hosted' }}
+              nuxt-icon.text-size-24px( name="ArrowDownSmall" filled)
+            template( #dropdown )
+              el-dropdown-menu
+                el-dropdown-item( @click="currentPricingType = 'cloud'" )
+                  | AFFiNE.Pro
+                  .info-desc We host, no technical setup required.
+                .divider
+                el-dropdown-item
+                  | Self Hosted (Coming soon)
+                  .info-desc You host, control, and are responsible for your data.
 
-          .card-header
-            .planning-name.flex.items-center.gap-2
-              span.pro-label {{ $t('pricePage.pro') }}
-              transition( name="fade" :duration="300" )
-                .discount-tag.color-emphasis( v-if="isYearly" ) {{ $t('pricePage.yearlyDiscount') }}
+        .right-part
+          .flex.gap-3.items-center
+            .info-tips
+              | Billed Yearly&nbsp;
+              span.highlight Saving 15%
+            el-switch(
+              v-model="isYearly"
+              size="large"
+            )
 
-            .price-row.flex.items-end.gap-2
-              .price-amount {{ currentTab === 'yearly' ? '$6.75' : '$7.99' }}
-              .per-time-tips.headline-6 {{ $t('pricePage.perMonth') }}
-            nuxt-link( :href="proActionLink" target="_blank" rel="nofollow" )
-              el-button(
-                type="primary"
-                size="action"
-              ) {{ $t('pricePage.proAction') }}
-          .planning-list
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemUnlimitedLocalWorkspaces') }}
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemUnlimitedLoginDevices') }}
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemUnlimitedBlocks') }}
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemStorage', [100]) }}
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemMaxFileSize', [100]) }}
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemMaxMembers', [10]) }}
-            .item
-              .item-icon
-                nuxt-icon( name="Done" filled)
-              .item-body {{ $t('pricePage.itemMaxVersionHistory', [30]) }}
-        .price-card.type-team
-          .card-header
-            .planning-name {{ $t('pricePage.team') }}
-            .price-row.flex.items-center.gap-2
-              .coming-soon-tips {{ $t('comingSoon') }}...
-            nuxt-link( :href="PATH.PRICING_CONTACT_FORM_TEAM" target="_blank" rel="nofollow" )
-              el-button.is-outlined(
-                type="primary"
-                size="action"
-              ) {{ $t('pricePage.contactSalesTeam') }}
-          .planning-list
-            .item
-              .item-icon
-                nuxt-icon( name="dot" filled)
-              .item-body {{ $t('pricePage.teamItemA') }}
-            .item
-              .item-icon
-                nuxt-icon( name="dot" filled)
-              .item-body {{ $t('pricePage.teamItemB') }}
-            .item
-              .item-icon
-                nuxt-icon( name="dot" filled)
-              .item-body {{ $t('pricePage.teamItemC') }}
+      template( v-if="currentPricingType === 'selfhost'" )
+        .prices-list.flex.selfhost-list
+          .price-card.type-pro
+            .black-friday-label(
+              v-if="CONFIG.ENABLE_BLACK_FRIDAY"
+              @click="handleCopyCouponClick"
+              :class="{ 'has-copied': copied }"
+            )
+              | Get Coupon: {{ couponCode }}
+              nuxt-icon.text-size-18px( :name="copied ? 'tick' : 'copy'" filled)
 
-        .price-card.type-enterprise
-          .card-header
-            .planning-name {{ $t('pricePage.enterprise') }}
-            .price-row.flex.items-center.gap-2
-              .coming-soon-tips {{ $t('comingSoon') }}...
-            nuxt-link( :href="PATH.PRICING_CONTACT_FORM_ENTERPRISE" target="_blank" rel="nofollow" )
-              el-button.is-outlined(
-                type="primary"
-                size="action"
-              ) {{ $t('pricePage.contactSalesEnterprise') }}
-          .planning-list
-            .item
-              .item-icon
-                nuxt-icon( name="dot" filled)
-              .item-body {{ $t('pricePage.enterpriseItemA') }}
-            .item
-              .item-icon
-                nuxt-icon( name="dot" filled)
-              .item-body {{ $t('pricePage.enterpriseItemB') }}
+            .card-header
+              .planning-name Pro
+              .planning-desc For family and small teams.
+
+              .price-row.flex.items-end.gap-2
+                .price-amount
+                  span.number {{ isYearly ? '$6.75' : '$7.99' }}
+                  | &nbsp;{{ $t('pricePage.perMonth') }}
+
+            .planning-list
+              .list-section Include in Community:
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Everything in AFFiNE FOSS & Basic
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body 100 GB of Cloud Storage
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body 100 MB of Maximum file size
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Up to 10 members per Workspace
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body 30-days Cloud Time Machine file version history
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Add comments on Doc and Edgeless
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Community Support
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Real-time Syncing & Collaboration for more people
+
+            .card-footer
+              nuxt-link( :href="proActionLink" target="_blank" rel="nofollow" )
+                el-button(
+                  type="primary"
+                  size="action"
+                ) Upgrade
+          .price-card.type-enterprise
+            .card-header
+              .planning-name Teams / Enterprise
+              .planning-desc Best for scalable teams.
+              .price-row.flex.items-end.gap-2
+                .price-amount Contact Sales
+
+            .planning-list
+              .list-section Both in Teams & Enterprise:
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Everything in AFFiNE Pro
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Advanced Permission control, Page history and Review mode
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Pay for seats, fits all team size
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Email & Slack Support
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Offer K8s Support
+              .list-section Enterprise only:
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body SSO Authorization
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Solutions & Best Practices for Dedicated needs
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Embed-able & Integrations with IT support
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body White label for secondary sales.
+
+            .card-footer
+              nuxt-link( :href="PATH.PRICING_CONTACT_FORM_ENTERPRISE" target="_blank" rel="nofollow" )
+                el-button(
+                  type="primary"
+                  size="action"
+                ) Tell us Your Offer
+      template( v-if="currentPricingType === 'cloud'" )
+        .prices-list.flex
+          .price-card.type-free
+            .card-header
+              .planning-name FOSS + Basic
+              .planning-desc Open-Source under MIT license.
+              .price-row.flex.items-end.gap-2
+                .price-amount Free forever
+            .planning-list
+              .list-section Include in FOSS:
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Unlimited Local Workspaces
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Unlimited use and Customization
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Unlimited Doc and Edgeless editing
+              .list-section Include in Basic:
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body 10 GB of Cloud Storage
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body 10 MB of Maximum file size
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Up to 3 members per Workspace
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body 7-days Cloud Time Machine file version history
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Up to 3 login devices
+            .card-footer
+              track-link( :href="PATH.AFFINE_WEB_APP" action="Get started" :params="{ resolve: 'Get Started', placement: currentTab === 'yearly' ? 'pricing_page_yearly' : 'pricing_page_monthly' }"  target="_blank")
+                el-button(
+                  type="primary"
+                  size="action"
+                ) {{ $t('pricePage.freeAction') }}
+          .price-card.type-pro
+            .black-friday-label(
+              v-if="CONFIG.ENABLE_BLACK_FRIDAY"
+              @click="handleCopyCouponClick"
+              :class="{ 'has-copied': copied }"
+            )
+              | Get Coupon: {{ couponCode }}
+              nuxt-icon.text-size-18px( :name="copied ? 'tick' : 'copy'" filled)
+
+            .card-header
+              .planning-name Pro
+              .planning-desc For family and small teams.
+
+              .price-row.flex.items-end.gap-2
+                .price-amount
+                  span.number {{ isYearly ? '$6.75' : '$7.99' }}
+                  | &nbsp;{{ $t('pricePage.perMonth') }}
+
+            .planning-list
+              .list-section Include in Pro:
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Everything in AFFiNE FOSS & Basic
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body 100 GB of Cloud Storage
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body 100 MB of Maximum file size
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Up to 10 members per Workspace
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body 30-days Cloud Time Machine file version history
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Add comments on Doc and Edgeless
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Community Support
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Real-time Syncing & Collaboration for more people
+
+            .card-footer
+              nuxt-link( :href="proActionLink" target="_blank" rel="nofollow" )
+                el-button(
+                  type="primary"
+                  size="action"
+                ) Upgrade
+
+          .price-card.type-enterprise
+            .card-header
+              .planning-name Teams / Enterprise
+              .planning-desc Best for scalable teams.
+              .price-row.flex.items-end.gap-2
+                .price-amount Contact Sales
+
+            .planning-list
+              .list-section Both in Teams & Enterprise:
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Everything in AFFiNE Pro
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Advanced Permission control, Page history and Review mode
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Pay for seats, fits all team size
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Email & Slack Support
+              .list-section Enterprise only:
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body SSO Authorization
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Solutions & Best Practices for Dedicated needs
+              .item
+                .item-icon
+                  nuxt-icon( name="Done" filled)
+                .item-body Embed-able & Integrations with IT support
+
+            .card-footer
+              nuxt-link( :href="PATH.PRICING_CONTACT_FORM_ENTERPRISE" target="_blank" rel="nofollow" )
+                el-button(
+                  type="primary"
+                  size="action"
+                ) Tell us Your Offer
+
+  pricing-believer-tier
+
+  .section.section-prices.mb-60px
+    .limit-container.flex.flex-col
+      h1.ma-0.mb-6.hero-title Achieve more in less time with AFFiNE AI
+      pricing-ai-section( isInPricing )
 
   .section.section-bento.mb-4
     .limit-container
@@ -170,11 +338,14 @@ import { PATH, INFO, CONFIG } from '~/utils/constants'
 const { t } = useI18n()
 
 const store = useStore()
+const currentPricingType = ref('cloud')
+// const currentPricingType = ref('selfhost')
+
+const isYearly = ref(false)
 const currentTab = ref('yearly')
 const couponCode = ref('BF23')
 
-const isMonthly = computed(() => currentTab.value === 'monthly')
-const isYearly = computed(() => currentTab.value === 'yearly')
+const isMonthly = computed(() => !isYearly.value)
 
 const proActionLink = computed(() => {
   let baseLink = isMonthly.value ? PATH.PRICING_PRO_MONTHLY : PATH.PRICING_PRO_YEARLY
@@ -245,30 +416,88 @@ useHead({
     font-size: 14px
     line-height: 20px
 
+  .desktop-version
+    display: block
+
+    @media (max-width: 960px)
+      display: none
+
+  .mobile-version
+    display: none
+
+    .select-button
+      background: #FFFFFF;
+      border: 1px solid #E3E2E4;
+      box-shadow: 0px 0px 4px rgba(66, 65, 73, 0.14);
+      border-radius: 8px;
+      padding: 6px 8px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+      color: #121212;
+      cursor pointer
+
+    @media (max-width: 960px)
+      display: block
+
+  .pricing-header
+    width: 100%
+    margin-bottom: fluid-value(16, 16)
+
+  .host-tips,
+  .info-tips
+    font-size: 14px;
+    line-height: 22px;
+    color: #8E8D91;
+    @media (max-width: 960px)
+      font-size: 12px;
+      line-height: 16px;
+
+    .highlight
+      font-weight: 600;
+      color: #1E96EB;
+
+      @media (max-width: 960px)
+        display: block
+
+  .el-switch
+    --el-switch-off-color: rgba(119, 117, 125, 1)
+
   .tab-bar
     --gap: 2px
     position relative
     border-radius: 10px
     background: #0000000A
     width: 76%
-    max-width: 532px
-    margin-bottom: fluid-value(24, 48)
+    max-width: 300px
 
-    @media $mediaInXS
-      // --gap: 2px
+    .tab-cloud
+      flex: 120
+
+    .tab-selfhost
+      flex: 180
+
+    .coming-soon
+      cursor: not-allowed !important
 
     .color-emphasis
       font-weight: 400
 
-    &.active-monthly
-      .tab-monthly
+
+    &.active-cloud
+      .tab-active-bg
+        width: 120px
+
+      .tab-cloud
         color: #424149
 
-    &.active-yearly
-      .tab-yearly
+    &.active-selfhost
+      .tab-selfhost
         color: #424149
       .tab-active-bg
-        transform: translateX(calc(100% - var(--gap) * 2))
+        width: 180px
+        transform: translateX(118px)
 
     .tab-active-bg
       position absolute
@@ -284,7 +513,6 @@ useHead({
     .tab
       position relative
       z-index: 2
-      flex: 1
       font-weight: 600
       font-size: 12px
       display: flex
@@ -297,7 +525,6 @@ useHead({
 
   .section-prices
     margin-top: 0
-
   .prices-list
     max-width: 1300px
     width: 100%
@@ -305,40 +532,49 @@ useHead({
     flex-wrap: wrap
     padding-bottom: 16px
 
+  .selfhost-list
+    max-width: 700px
+    margin: 0 auto
+
   .price-card
     flex: 1
     min-width: 100px
-    padding: 20px 16px;
-    gap: 10px;
     background: white;
-    border: 1px solid #E3E2E4;
-    border-radius: 11px;
+    border: 1px solid rgba(227, 226, 228, 1);
+    border-radius: 16px;
     display: flex
     flex-direction: column
     justify-content: flex-start
-    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.05)
+    min-height: fluid-value(300, 650)
+    // box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.05)
 
     .el-button
       letter-spacing: -0.14px
       -webkit-font-smoothing: auto
 
   .planning-name
-    font-weight: 500
+    font-weight: 600
     line-height: 1.5
     font-size: 16px
     color: var(--primary-deep)
-    margin-bottom: 10px
+
+  .planning-desc
+    font-size: 15px;
+    line-height: 24px;
+    color: #8E8D91;
 
   .price-row
-    height: 38.5px
-    margin-bottom: 10px
+    margin-top: 8px
 
   .price-amount
-    font-size: 32px
-    font-weight: 700
-    line-height: normal
-    letter-spacing: -0.02em
-    color: var(--primary-deep)
+    font-size: 26px
+    font-weight: 600
+    line-height: 36px
+    color: #121212
+
+    .number
+      display: inline-block
+      min-width: 73px
 
   .coming-soon-tips
     color: #8E8D91
@@ -358,9 +594,6 @@ useHead({
   .price-card.type-pro
     --label-bg: 1
     position relative
-    top: -1px
-    border: 3px solid var(--brand-brand, #1E96EB)
-    box-shadow: 0px 5px 10px 0px rgba(30, 150, 235, 0.20)
 
     .black-friday-label
       cursor pointer
@@ -470,7 +703,10 @@ useHead({
     justify-content: space-between
     position: relative
     overflow: hidden
-    margin-bottom: 10px
+    padding: 20px 16px;
+    background: #FBFBFC;
+    border-bottom: 1px solid #E3E2E4;
+    border-radius: 16px 16px 0px 0px;
 
     a
       display: flex
@@ -534,17 +770,35 @@ useHead({
       font-size: 43px
       padding-top: 17px
 
+  .card-footer
+    padding: 12px 16px
+
+    .el-button
+      width: 100%
+      border-radius: 8px
+
   .planning-list
     display: flex
     flex-direction: column
+    flex: 1
     gap: 8px
-    padding-bottom: 60px
+    padding: 12px 16px
+    padding-bottom: 30px
+
+    .list-section
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      color: #8E8D91;
 
     .item
+      min-height: 24px
       display: flex
+      align-items: center
       gap: 8px
       padding: 0
-      font-size: 14px
+      font-size: 12px
+      line-height: 20px
 
       .nuxt-icon
         font-size: 16px
@@ -565,4 +819,19 @@ useHead({
 
     &:hover
       background: rgba(0, 0, 0, 0.1);
+
+.pricing-type-dropdown
+  width: 284px
+
+  .el-dropdown-menu__item
+    flex-direction: column
+    align-items: flex-start
+    white-space: pre-line;
+    font-weight: 400
+    font-size: 14px;
+    color: #121212
+
+    .info-desc
+      line-height: 22px;
+      color: #8E8D91;
 </style>
