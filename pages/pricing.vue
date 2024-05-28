@@ -797,8 +797,8 @@ useHead({
       align-items: center
       gap: 8px
       padding: 0
-      font-size: 12px
-      line-height: 20px
+      font-size: 14px
+      line-height: 24px
 
       .nuxt-icon
         font-size: 16px
