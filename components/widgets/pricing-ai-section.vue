@@ -181,10 +181,10 @@ const props = defineProps<{
       font-size: 14px
       line-height: 20px
       letter-spacing: -0.02em
-      margin-bottom: 12px
+      margin-bottom: 14px
 
     .planning-list
-      padding-bottom: 0 !important
+      padding: 0 !important
       display: flex;
       flex-direction: column;
       gap: 8px
