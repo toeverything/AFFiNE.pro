@@ -195,6 +195,7 @@ const props = defineProps<{
         gap: 8px
         padding: 0
         font-size: 14px
+        align-items: flex-start !important
 
         .nuxt-icon
           font-size: 16px
