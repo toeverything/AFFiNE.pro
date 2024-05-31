@@ -1,6 +1,14 @@
 <template lang="pug">
 .page.page-price
+
   .section.section-hero
+
+  .section.section-prices.mb-70px
+    .limit-container.flex.flex-col
+      h1.ma-0.mb-6.hero-title Achieve more in less time with AFFiNE AI
+      pricing-ai-section( isInPricing )
+
+  .section.section-prices
     .limit-container.flex.flex-col
       h1.ma-0.hero-title {{ $t('pricePage.title') }}
       .hero-desc {{ $t('pricePage.desc') }}
@@ -319,11 +327,6 @@
                 ) Tell Us Your Offer
 
   pricing-believer-tier
-
-  .section.section-prices.mb-60px
-    .limit-container.flex.flex-col
-      h1.ma-0.mb-6.hero-title Achieve more in less time with AFFiNE AI
-      pricing-ai-section( isInPricing )
 
   .section.section-bento.mb-4
     .limit-container
