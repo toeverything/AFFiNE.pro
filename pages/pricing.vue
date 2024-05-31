@@ -50,7 +50,7 @@
         .right-part
           .flex.gap-3.items-center
             .info-tips
-              | Bill Annually&nbsp;
+              | Billed Annually&nbsp;
               span.highlight Saving 15%
             el-switch(
               v-model="isYearly"
