@@ -42,7 +42,7 @@
         .right-part
           .flex.gap-3.items-center
             .info-tips
-              | Billed Yearly&nbsp;
+              | Bill Annually&nbsp;
               span.highlight Saving 15%
             el-switch(
               v-model="isYearly"
@@ -162,7 +162,7 @@
                 el-button(
                   type="primary"
                   size="action"
-                ) Tell us Your Offer
+                ) Tell Us Your Offer
       template( v-if="currentPricingType === 'cloud'" )
         .prices-list.flex
           .price-card.type-free
@@ -316,7 +316,7 @@
                 el-button(
                   type="primary"
                   size="action"
-                ) Tell us Your Offer
+                ) Tell Us Your Offer
 
   pricing-believer-tier
 
@@ -341,7 +341,7 @@ const store = useStore()
 const currentPricingType = ref('cloud')
 // const currentPricingType = ref('selfhost')
 
-const isYearly = ref(false)
+const isYearly = ref(true)
 const currentTab = ref('yearly')
 const couponCode = ref('BF23')
 
