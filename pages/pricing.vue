@@ -123,7 +123,7 @@
               .planning-name Teams / Enterprise
               .planning-desc Best for scalable teams.
               .price-row.flex.items-end.gap-2
-                .price-amount Contact Sales
+                .price-amount Coming Soon
 
             .planning-list
               .list-section Both in Teams & Enterprise:
@@ -170,7 +170,7 @@
                 el-button(
                   type="primary"
                   size="action"
-                ) Tell Us Your Offer
+                ) Tell Us Your Use Case
       template( v-if="currentPricingType === 'cloud'" )
         .prices-list.flex
           .price-card.type-free
@@ -285,7 +285,7 @@
               .planning-name Teams / Enterprise
               .planning-desc Best for scalable teams.
               .price-row.flex.items-end.gap-2
-                .price-amount Contact Sales
+                .price-amount Coming Soon
 
             .planning-list
               .list-section Both in Teams & Enterprise:
@@ -324,7 +324,7 @@
                 el-button(
                   type="primary"
                   size="action"
-                ) Tell Us Your Offer
+                ) Tell Us Your Use Case
 
   pricing-believer-tier
 
