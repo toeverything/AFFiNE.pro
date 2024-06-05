@@ -80,7 +80,7 @@ export const CONFIG = {
   ENABLE_LANG_SWITCHER: false,
   ENABLE_THEME_SWITCHER: false,
   ENABLE_BLACK_FRIDAY: false,
-  ENABLE_PRODUCT_HUNT: true,
+  ENABLE_PRODUCT_HUNT: false,
 
   // Service
   API_HOST: "https://affine.pro",
