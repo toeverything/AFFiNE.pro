@@ -69,8 +69,8 @@ gsap.registerPlugin(ScrollTrigger)
 
   .product-hunt-fixed-button
     position fixed
-    bottom: 30px
-    right: 40px
+    bottom: 10px
+    right: 20px
     z-index: 10
 
     @media $mediaInMobile
