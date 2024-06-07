@@ -127,7 +127,7 @@ const props = defineProps<{
       letter-spacing: -0.02em
 
     .el-button
-      min-width: 160px
+      min-width: 173px
 
     .join-button
       font-weight: 500
