@@ -50,6 +50,7 @@ import { PATH } from '~/utils/constants'
   background-image: url(/pricing/believer-tier-bg.png)
   background-size: cover
   background-position: right top
+  box-shadow: 0px 1px 6px rgba(0,0,0,0.05)
 
   @media $mediaInMobile
     background-image: url(/pricing/believer-tier-bg-mobile.png)
