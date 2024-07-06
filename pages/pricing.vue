@@ -13,7 +13,7 @@
       h1.ma-0.hero-title {{ $t('pricePage.title') }}
       .hero-desc {{ $t('pricePage.desc') }}
 
-  .section.mb-70px
+  .section.mb-10px
     .limit-container.flex.flex-col
       .pricing-header.flex.items-center.justify-space-between.gap-4
         .desktop-version.flex-1
@@ -326,7 +326,9 @@
                   size="action"
                 ) Tell Us Your Use Case
 
-  pricing-believer-tier
+  .section.section-believer-tier.mb-60px
+    .limit-container
+      pricing-believer-tier
 
   .section.section-bento.mb-4
     .limit-container
