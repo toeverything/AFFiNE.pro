@@ -16,7 +16,9 @@
     .content-part(
       class="pb-30px md:pb-0"
     )
-      .features-list.flex.flex-col.gap-18px
+      .features-list.flex.flex-col.gap-18px.mt-10px(
+        class="md:mt-32px"
+      )
         .feature-item.flex.items-center.gap-2
           .item-icon
             nuxt-icon( name="AFFiNE-Icon" filled)
@@ -29,10 +31,10 @@
           .item-icon
             nuxt-icon( name="Done" filled)
           .item-body 1TB Cloud Storage
-        .feature-item.flex.items-center.gap-2
-          .item-icon
-            nuxt-icon( name="Done" filled)
-          .item-body Dedicated Discord support with AFFiNE makers
+        //- .feature-item.flex.items-center.gap-2
+        //-   .item-icon
+        //-     nuxt-icon( name="Done" filled)
+        //-   .item-body Dedicated Discord support with AFFiNE makers
 </template>
 
 <script setup lang="ts">
