@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://affine.pro/</loc>
+  <lastmod>2024-07-22T09:27:55+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://affine.pro/about-us</loc>
+  <lastmod>2024-07-22T09:27:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://affine.pro/blog?tag=Release+Note</loc>
+  <lastmod>2024-07-03T05:50:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://affine.pro/pricing</loc>
+  <lastmod>2024-07-22T09:27:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://affine.pro/ai</loc>
+  <lastmod>2024-07-22T09:27:55+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://affine.pro/download</loc>
+  <lastmod>2024-07-22T09:27:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://affine.pro/what-is-new</loc>
+  <lastmod>2024-07-22T09:27:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://affine.pro/terms</loc>
+  <lastmod>2024-07-22T09:27:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://affine.pro/privacy</loc>
+  <lastmod>2024-07-22T09:27:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://affine.pro/blog</loc>
+  <lastmod>2024-07-03T03:01:05+00:00</lastmod>
+  <priority>1.00</priority>
+  <changefreq>daily</changefreq>
+</url>
+
+</urlset>

@@ -1,3 +1,5 @@
 User-agent: *
 Disallow:
 Disallow: /cgi-bin/
+
+sitemap: https://affine.pro/sitemap.xml
