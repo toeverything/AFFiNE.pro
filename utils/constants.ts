@@ -33,7 +33,7 @@ export const PATH = {
   PRICING_CONTACT_FORM_ENTERPRISE: "https://6dxre9ihosp.typeform.com/to/rFfobTjf",
   PRICING_PRO_MONTHLY: __STAGING__  ? "https://affine.fail/subscribe?plan=pro&recurring=monthly" : "https://app.affine.pro/subscribe?plan=pro&recurring=monthly",
   PRICING_PRO_YEARLY: __STAGING__  ? "https://affine.fail/subscribe?plan=pro&recurring=yearly" : "https://app.affine.pro/subscribe?plan=pro&recurring=yearly",
-  PRICING_BELIEVER_TIER: __STAGING__  ? "https://affine.fail/subscribe?plan=believer" : "https://app.affine.pro/subscribe?plan=believer",
+  PRICING_BELIEVER_TIER: __STAGING__  ? "https://affine.fail/subscribe?plan=pro&recurring=lifetime" : "https://app.affine.pro/subscribe?plan=pro&recurring=lifetime",
   GET_NOTIFIED_FORM: "https://6dxre9ihosp.typeform.com/to/B8IHwuyy",
   COPILOT_FORM: "https://6dxre9ihosp.typeform.com/to/MjaI1NIV",
 };
