@@ -42,6 +42,7 @@ export default defineNuxtConfig({
         { name: 'og:url', content: 'https://affine.pro' },
         { name: 'og:image', content: 'https://affine.pro/og.png' },
         { name: 'og:description', content: 'The universal editor that lets you work, play, present or create just about anything.' },
+        { name: 'saashub-verification', content: 'koz5tiouhxbt' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon-96.png' }
