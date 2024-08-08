@@ -3220,10 +3220,10 @@ acorn@^8.6.0, acorn@^8.8.1, acorn@^8.8.2:
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.8.2.tgz"
   integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
 
-affine-reader@^2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/affine-reader/-/affine-reader-2.4.2.tgz#6ce8643ae3fdd2ec5eaab7b3402d4e8fcbb489ea"
-  integrity sha512-Nwxq/altTM+wFl2X+ZyJ9UQ/fvmWoQuWn+uPrJ5efcD7F/CQSzNDbp5fdbo0tzXWXLaxGExZsdaY3zEVjUi3pg==
+affine-reader@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/affine-reader/-/affine-reader-2.5.0.tgz#809a96267f9011e5743e1acaced30b8c91e295ca"
+  integrity sha512-xNQAMZV3wHd51/vPO1SWxt4PguEb0CTrdFtY3sjVMTJT9TGByhsVvhYCCX5I9ITQu0j3Xqk3MbnSOM+XD9T7pQ==
   dependencies:
     "@blocksuite/blocks" "^0.10.0"
 
