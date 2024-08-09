@@ -13,7 +13,7 @@
       h1.ma-0.hero-title {{ $t('pricePage.title') }}
       .hero-desc {{ $t('pricePage.desc') }}
 
-  .section.mb-70px
+  .section.mb-10px
     .limit-container.flex.flex-col
       .pricing-header.flex.items-center.justify-space-between.gap-4
         .desktop-version.flex-1
@@ -21,7 +21,7 @@
             .tab-bar.flex( :class="[`active-${currentPricingType}`]" )
               .tab-active-bg
               .tab.tab-cloud( @click="() => currentPricingType = 'cloud'" )
-                span Cloud
+                span AFFiNE.Pro
               //- .tab.tab-selfhost( @click="() => currentPricingType = 'selfhost'" )
               .tab.tab-selfhost.coming-soon
                 span.flex
@@ -326,7 +326,9 @@
                   size="action"
                 ) Tell Us Your Use Case
 
-  pricing-believer-tier
+  .section.section-believer-tier.mb-60px
+    .limit-container
+      pricing-believer-tier
 
   .section.section-bento.mb-4
     .limit-container
@@ -473,10 +475,10 @@ useHead({
     border-radius: 10px
     background: #0000000A
     width: 76%
-    max-width: 300px
+    max-width: 360px
 
     .tab-cloud
-      flex: 120
+      flex: 180
 
     .tab-selfhost
       flex: 180
@@ -490,7 +492,7 @@ useHead({
 
     &.active-cloud
       .tab-active-bg
-        width: 120px
+        width: 180px
 
       .tab-cloud
         color: #424149
@@ -549,7 +551,7 @@ useHead({
     flex-direction: column
     justify-content: flex-start
     min-height: fluid-value(300, 650)
-    // box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.05)
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.05)
 
     .el-button
       letter-spacing: -0.14px
