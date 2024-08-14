@@ -1,7 +1,7 @@
 <template lang="pug">
 a.scroll-link(
   @click.stop="handleRootClick"
-  :class="{ 'is-active': to === '/' ? route.path === to : route.path.startsWith(to) }"
+  :class="{ 'is-active': route.path === '/' ? route.path === to : to.startsWith(route.path) }"
 )
   slot
 </template>
@@ -15,6 +15,7 @@ const route = useRoute()
 const router = useRouter()
 
 const handleRootClick = () => {
+  console.log(123, route)
   if (props.to === route.path) {
     window.scrollTo({top: 0, behavior: 'smooth'})
     return

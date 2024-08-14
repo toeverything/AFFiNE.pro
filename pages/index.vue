@@ -38,31 +38,6 @@ gsap.registerPlugin(ScrollTrigger)
 </script>
 
 <style lang="stylus">
-.section-title
-  margin: 0
-  font-weight: 500;
-  font-size: fluid-value(32, 60);
-  line-height: (65/60);
-  text-align: center
-  letter-spacing: -0.068em;
-
-.section-grad-title
-  background-image: linear-gradient(91deg, #474747 20.12%, #000 55.27%, #474747 82.61%)
-  background-clip: text;
-  color: transparent
-
-.section-grad2-title
-  margin: 0
-  font-weight: 800;
-  font-size: fluid-value(20, 64);
-  line-height: (77/64);
-  background-image: linear-gradient(180deg, #1E96EB 0%, #1E96EB 100%);
-  background-clip: text;
-  color: transparent
-
-  /html.dark &
-    background-image: linear-gradient(180deg, #A8C3FF 0%, #417DFF 100%)
-
 .page-overview
   color: var(--primary)
   font-size: fluid-value()

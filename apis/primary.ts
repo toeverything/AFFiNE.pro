@@ -35,6 +35,22 @@ class PrimaryAPI {
     }
   }
 
+  async getTemplates () {
+    const store = useStore()
+
+    if (process.client) {
+      if (store.templates.length) return store.templates
+    }
+    try {
+      const res = await queryContent<Template>('templates')
+        .find()
+      store.templates = res
+      return res
+    } catch (error) {
+      console.log('getTemplates error', error)
+    }
+  }
+
   async getReleases () {
     const res = await useFetchWithCache<Release[]>('/api/releases', FOUR_HOURS)
     return res.value

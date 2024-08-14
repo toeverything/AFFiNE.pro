@@ -13,6 +13,7 @@ export default {
   terms: "Terms",
   privacy: "Privacy",
   blog: "Blog",
+  template: "Templates",
   price: "Pricing",
   all: "All",
   allPosts: "All posts",

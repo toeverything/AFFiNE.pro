@@ -16,6 +16,8 @@ export default defineNuxtConfig({
 
   nitro: {
     routeRules: {
+      '/templates': { swr: true },
+      '/templates/**': { swr: true },
       '/blog': { swr: true },
       '/blog/**': { swr: true },
     }

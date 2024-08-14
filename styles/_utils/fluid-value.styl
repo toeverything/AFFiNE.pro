@@ -17,3 +17,5 @@ fluid-value(min = 16, max = 24, minWidth = 390, maxWidth = 1440, unit = 'px')
   result = s('clamp(%srem, %srem + %svw, %srem)', min, constant, ceil(100 * variablePart, 2), max)
 
   return result
+
+fv = fluid-value
