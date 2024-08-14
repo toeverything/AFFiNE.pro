@@ -40,4 +40,29 @@ declare global {
     content: string
   }
 
+  interface Template {
+    title: string
+    tags: string[]
+    id: string
+    slug: string
+    cover: string
+    description: string
+    created: number
+    updated: number
+    md: string
+    publish: boolean
+
+    // Removed fields
+    // layout: string
+    // authors: []string
+    // html: string
+
+    // New fields
+    relatedTemplates: string[]
+    relatedBlogs: string[]
+    order: number
+    useTemplateUrl: string
+    previewUrl: string
+  }
+
 }
