@@ -1,12 +1,28 @@
 <template lang="pug">
 .page.page-templates
-  .limit-container.template-container
-    .section.section-hero
+  .section.section-hero
+    .limit-container
       h1.section-title Start with Template
 
       template-tags-list(
         :tags="templateTags"
       )
+
+    .limit-container.narrow-container
+      template-hero-card(
+        :meta="templateHero"
+      )
+
+  .section.section-main
+    .limit-container.narrow-container
+      .template-list
+        template-card(
+          v-for="meta in templateList"
+          :key="meta.slug"
+          :meta="meta"
+        )
+
+      template-intro
 </template>
 
 <script lang="ts" setup>
@@ -56,10 +72,14 @@ useHead({
 
 <style lang="stylus">
 .page.page-templates
-  .template-container
-    padding-top: fv(90, 100)
+  padding-top: fv(60, 100)
+
+  .narrow-container
+    max-width: 1100px
 
   .section-hero
+    margin-bottom: fv(4, 20)
+
     .section-title
       font-weight: 500;
       font-size: fv(36, 60);
@@ -72,5 +92,15 @@ useHead({
       text-fill-color: transparent;
       margin-bottom: fv(32, 36)
 
+  .template-list
+    display: grid
+    column-gap: fv(24, 32)
+    row-gap: fv(24, 32)
+    grid-template-columns: 1fr 1fr 1fr
 
+    @media (max-width: 920px)
+      grid-template-columns: 1fr 1fr
+
+    @media $mediaInXS
+      grid-template-columns: 1fr
 </style>

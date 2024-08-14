@@ -113,6 +113,12 @@ export default defineNuxtConfig({
     enableRouterSync: true
   },
 
+  content: {
+    markdown: {
+      anchorLinks: false
+    }
+  },
+
   build: {
     transpile: ['gsap']
   },
