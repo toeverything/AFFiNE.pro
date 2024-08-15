@@ -13,7 +13,9 @@
 .default-layout
   min-height: 500px
   // position relative
-  // overflow: hidden
+
+  @media $mediaInMobile
+    overflow: hidden
 
   .fluid-container
     height: 100%

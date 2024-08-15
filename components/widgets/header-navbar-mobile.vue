@@ -50,22 +50,7 @@
 
           .nav-item
             nuxt-link( to="/pricing" ) {{ $t('price') }}
-          .nav-item(
-            v-if="CONFIG.ENABLE_LANG_SWITCHER"
-          )
-            .current-lang.flex.items-center(
-              @click="() => isOpenLangList = !isOpenLangList"
-            )
-              | {{ localeProperties?.name  }}
-              nuxt-icon.ml-3px( name="arrow-down-s" )
 
-        .menu-list.lang-list( v-show="isOpenLangList" )
-          .nav-item.flex.justify-between(
-            v-for="item in locales"
-            @click="locale = item.code"
-          )
-            | {{ item.name }}
-            nuxt-icon.text-6( :name="locale === item.code ? 'CheckBoxCheck' : 'CheckBoxUncheck'" )
 </template>
 
 <script setup lang="ts">

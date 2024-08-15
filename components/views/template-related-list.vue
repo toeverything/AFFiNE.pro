@@ -42,7 +42,7 @@ const list = computed(() => {
   position relative
   z-index 2
   margin-bottom: 42px
-  --width: 1036px
+  --width: 880px
 
   .title
     font-weight: 600;

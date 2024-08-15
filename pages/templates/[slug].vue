@@ -29,7 +29,8 @@
     :meta="template"
   )
 
-  overview-slogan-banner
+  template-slogan-banner
+
 </template>
 
 <script lang="ts" setup>
