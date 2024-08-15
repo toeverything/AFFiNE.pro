@@ -1,6 +1,6 @@
 <template lang="pug">
 nuxt-link.template-card.flex.flex-col(
-  :to="{ path: `/templates/${meta.slug}`, meta: { source: 'list' } } "
+  :to="{ path: `/${isBlog ? 'blog' : 'templates'}/${meta.slug}`, meta: { source: 'list' } } "
 )
   .card-cover-wrapper
     nuxt-img.card-cover(
@@ -9,14 +9,19 @@ nuxt-link.template-card.flex.flex-col(
       :alt="meta.title"
     )
 
-  h3.card-title {{ meta.title }}
-  .card-desc {{ meta.description }}
+  h3.card-title(
+    :class="{ 'is-blog': isBlog }"
+  ) {{ meta.title }}
+  .card-desc(v-if="!isBlog") {{ meta.description }}
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{
+  type: 'template' | 'blog'
   meta: Template
 }>()
+
+const isBlog = computed(() => props.type === 'blog')
 </script>
 
 <style lang="stylus">
@@ -48,7 +53,8 @@ const props = defineProps<{
     line-height: (24/18);
     letter-spacing: -0.02em;
     color: #141414;
-    multiline-overflow(1)
+    &:not(.is-blog)
+      multiline-overflow(1)
 
   .card-desc
     padding: 0 6px

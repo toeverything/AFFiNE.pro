@@ -53,6 +53,7 @@ const props = defineProps<{
     border: 1px solid #F3F3F3
     border-radius: 8px 8px 0px 0px
     aspect-ratio: 402/333
+    background-color: white
     background-position: top center
 
     @media $mediaColDir

@@ -55,6 +55,15 @@ html.dark {
       letter-spacing: -0.32px
     }
 
+    &--medium {
+      --el-button-size: 40px
+      height: var(--el-button-size)
+      padding: 8px 22px
+      font-size: 15px
+      line-height: 24px
+      font-weight: 600;
+    }
+
     &--action, &--action-rounded {
       height: 37px
       font-size: 14px
@@ -62,6 +71,7 @@ html.dark {
       letter-spacing: -0.28px
       border-radius: 100px
     }
+
     &--action-rounded {
       border-radius: 8px
       min-width: 95px
@@ -112,7 +122,7 @@ html.dark {
 
     &--secondary {
       color: black
-      background: white
+      background: transparent
       border-color: rgba(0, 0, 0, 0.15)
 
       &:hover,

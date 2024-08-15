@@ -80,11 +80,11 @@
                   .nav-item
                     scroll-link( :to="PATH.AFFiNE_DOCS" ) Docs
                   .nav-item
+                    scroll-link( to="/templates" @click="isOpenResource = false" ) {{ $t('template') }}
+                  .nav-item
                     scroll-link( to="/about-us" @click="isOpenResource = false" ) {{ $t('aboutUs') }}
                   .nav-item
                     scroll-link( to="/blog?tag=Release+Note" @click="isOpenResource = false" ) {{ $t('blog') }}
-                  .nav-item
-                    scroll-link( to="/templates" @click="isOpenResource = false" ) {{ $t('template') }}
                 div
                   .static-link Community
                   community-navbar.flex-1

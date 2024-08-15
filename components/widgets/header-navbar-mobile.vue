@@ -39,6 +39,8 @@
                 .nav-item
                   scroll-link( :to="PATH.AFFiNE_DOCS" ) Docs
                 .nav-item
+                  nuxt-link( to="/templates" @click="isOpen = false" ) {{ $t('template') }}
+                .nav-item
                   nuxt-link( to="/about-us" @click="isOpen = false") {{ $t('aboutUs') }}
                 .nav-item
                   nuxt-link( to="/blog?tag=Release+Note" @click="isOpen = false") {{ $t('blog') }}
@@ -129,7 +131,7 @@ watch(locale, () => {
       padding-right: 8px
       padding: 0 32px
 
-      @media (max-width: 390px)
+      @media (max-width: 480px)
         padding: 0 20px
 
     .try-link
