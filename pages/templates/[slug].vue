@@ -2,13 +2,14 @@
 .page.page-template-single(
   v-if="template"
 )
-  .limit-container.hero-container.narrow-container
+  .overflow-hidden
+    .limit-container.hero-container.narrow-container
 
-    template-return-handler(
-      @click="handleReturnClick"
-    )
+      template-return-handler(
+        @click="handleReturnClick"
+      )
 
-    template-single-hero( :meta="template" )
+      template-single-hero( :meta="template" )
 
   template-related-list(
     title="Similar templates"
@@ -83,7 +84,7 @@ const handleReturnClick = () => {
 }
 
 definePageMeta({
-  keepalive: false,
+  // keepalive: false,
 })
 
 const pageMeta = computed(() => {
@@ -129,6 +130,9 @@ onMounted(() => {
   .hero-container
     padding-top: 40px
     padding-bottom: var(--section-spacing)
+
+    @media (max-width: 1100px)
+      overflow hidden
 
   .content-container
     max-width: 944px

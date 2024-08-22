@@ -15,7 +15,6 @@ const route = useRoute()
 const router = useRouter()
 
 const handleRootClick = () => {
-  console.log(123, route)
   if (props.to === route.path) {
     window.scrollTo({top: 0, behavior: 'smooth'})
     return

@@ -23,8 +23,10 @@ const animateState = reactive({
   scrollProgress: 0
 })
 
-const setupScrollTrigger = () => {
+const setupScrollTrigger = async () => {
   if (device.isMobile) return
+
+  await nextTick()
 
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -41,12 +43,17 @@ const setupScrollTrigger = () => {
     .to(animateState, {
       scrollProgress: 1,
       ease: 'none',
+      overwrite: true
     })
     // .to('.screenshot-card')
 }
 
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger)
+  setupScrollTrigger()
+})
+
+onActivated(() => {
   setupScrollTrigger()
 })
 </script>
@@ -56,7 +63,7 @@ onMounted(() => {
   position relative
   overflow-y: hidden
 
-  @media $mediaInMobile
+  @media (max-width: 2000px)
     overflow: hidden
 
   .overview-slogan-banner
