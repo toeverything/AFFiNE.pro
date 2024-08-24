@@ -31,6 +31,14 @@ useHead({
   titleTemplate: 'AFFiNE - All In One KnowledgeOS',
   meta: [
     { name: 'twitter:title', content: 'AFFiNE - All In One KnowledgeOS' },
+  ],
+  script: [
+    {
+      type: 'text/javascript',
+      src: 'https://app.termly.io/embed.min.js',
+      'data-auto-block': 'on',
+      'data-website-uuid': 'd12cc511-9767-4514-9a8b-48f5883b5ba6'
+    },
   ]
 })
 
