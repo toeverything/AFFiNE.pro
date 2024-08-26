@@ -18,6 +18,7 @@ export const getTemplateWorkspacePages = async () => {
       delete template.properties
       delete template.parsedBlocks
       delete template.linkedPages
+      template.order = category.featured?.id === template.id ? -2 : 0
       templates.push(template)
     })
   })

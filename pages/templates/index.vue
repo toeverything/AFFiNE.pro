@@ -10,6 +10,7 @@
 
     .limit-container.narrow-container
       template-hero-card(
+        v-if="templateHero"
         :meta="templateHero"
       )
 
@@ -52,7 +53,7 @@ const templateMetas = computed(() => useTemplateMetas(store.templates, {
 }))
 
 const templateHero = computed(() => {
-  return templateMetas.value.templateMetas[0]
+  return templateMetas.value.featuredMeta
 })
 
 const templateList = computed(() => {

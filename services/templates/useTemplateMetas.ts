@@ -30,13 +30,19 @@ export const useTemplateMetas = (
       }
       return (b || 0) - (a || 0);
     })
+  let featuredMeta = publishedMetas[0]
+
   const tags = getTags(publishedMetas)
   let filteredMetas = query?.tag
     ? publishedMetas.filter((meta) => meta.tags?.includes(query.tag))
     : publishedMetas
 
-  if (filteredMetas.length > 3 && filteredMetas[0] === publishedMetas[0]) {
+  if (query?.tag && filteredMetas.length > 0) {
+    featuredMeta = filteredMetas[0]
+  }
+
+  if (filteredMetas.length > 3 && filteredMetas[0].id === featuredMeta.id) {
     filteredMetas = filteredMetas.slice(1)
   }
-  return { templateMetas: publishedMetas, tags, filteredMetas }
+  return { templateMetas: publishedMetas, tags, featuredMeta, filteredMetas }
 }

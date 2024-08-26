@@ -4,16 +4,18 @@
     h1.hero-title {{ meta.title }}
     p.hero-desc {{ meta.description }}
     .actions-row.flex.items-center.gap-3
-      nuxt-link(
+      track-link(
         :to="meta.useTemplateUrl"
         target="_blank"
+        action="Use_Template_Clicked"
       )
         el-button(
           size="medium"
           type="primary"
         ) Use this template
-      nuxt-link(
+      track-link(
         :to="meta.previewUrl"
+        action="Preview_Clicked"
         target="_blank"
       )
         el-button(
