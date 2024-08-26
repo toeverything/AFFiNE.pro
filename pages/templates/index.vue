@@ -23,7 +23,9 @@
           :meta="meta"
         )
 
-      template-intro
+      template-intro(
+        :md="templateHero?.intro || ''"
+      )
 </template>
 
 <script lang="ts" setup>

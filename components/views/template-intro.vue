@@ -1,11 +1,27 @@
 <template lang="pug">
-content-doc.template-intro.readable(
-  path="/template-intro"
-  :head="false"
+.template-intro.readable(
+  v-html="html"
 )
 </template>
 
 <script setup lang="ts">
+import { renderHTML } from '~/services/blog/resolveContentFile'
+
+const props = defineProps<{
+  md: string
+}>()
+
+const html = ref('')
+
+const updateHtml = async () => {
+  html.value = await renderHTML(props.md)
+}
+
+watch(() => props.md, () => {
+  updateHtml()
+})
+
+await updateHtml()
 </script>
 
 <style lang="stylus">
