@@ -19,7 +19,7 @@ export const useTemplateMetas = (
   const publishedMetas = templateMetas
     .filter((meta) => (
       meta.publish &&
-      meta.cover &&
+      // meta.cover &&
       meta.title &&
       meta.md &&
       meta.slug
