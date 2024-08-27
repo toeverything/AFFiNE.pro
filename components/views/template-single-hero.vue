@@ -26,8 +26,9 @@
 
   .cover-part
     .image-mask
-    .cover-img(
-      :style="{ backgroundImage: `url(${meta.cover})` }"
+    img.cover-img(
+      :alt="meta.coverAlt"
+      :src="meta.cover"
     )
 </template>
 
@@ -109,6 +110,8 @@ const props = defineProps<{
       background-color: white;
       border-radius: 8px;
       transform: matrix(0.99, 0.16, -0.41, 0.91, 0, 0);
+      object-fit: cover
+      object-position: top center
 
   .template-share
     display: none
