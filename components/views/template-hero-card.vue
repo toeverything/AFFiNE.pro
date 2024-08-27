@@ -18,14 +18,20 @@ nuxt-link.template-hero-card(
 </template>
 
 <script setup lang="ts">
+import Rand from 'rand-seed';
+
 const props = defineProps<{
   meta: Template
 }>()
 
-
 type HeroTheme = 'teal' | 'sky' | 'violet' | 'yellow' | 'rose' | 'emerald'
 
-const theme = computed<HeroTheme>(() => props.meta.theme || 'sky')
+const themes: HeroTheme[] = ['teal', 'sky', 'violet', 'yellow', 'rose', 'emerald']
+const theme = computed<HeroTheme>(() => {
+  const rand = new Rand(props.meta.id);
+  const ind: number = Math.floor(rand.next() * themes.length)
+  return themes[ind] || 'sky'
+})
 </script>
 
 <style lang="stylus">

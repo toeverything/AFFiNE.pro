@@ -9042,6 +9042,11 @@ radix3@^1.0.1, radix3@^1.1.0:
   resolved "https://registry.npmjs.org/radix3/-/radix3-1.1.0.tgz"
   integrity sha512-pNsHDxbGORSvuSScqNJ+3Km6QAVqk8CfsCBIEoDgpqLrkD2f3QM4I7d1ozJJ172OmIcoUcerZaNWqtLkRXTV3A==
 
+rand-seed@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/rand-seed/-/rand-seed-2.1.4.tgz#e43366bf74812cb6f3ba690a85352c311a65640b"
+  integrity sha512-hC6uW0+63gLquGuY5IWZzDcfFuXY6PwByUW/6AtzYf2nyn2CNkSM7mryiVIUvf8DKuST7kUIRfhTSxTfvdbWgA==
+
 randombytes@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/randombytes/-/randombytes-2.1.0.tgz"
