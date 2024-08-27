@@ -4,9 +4,9 @@ nuxt-link.template-card.flex.flex-col(
 )
   .card-cover-wrapper
     nuxt-img.card-cover(
-      v-if="meta.cover"
-      :src="meta.cover"
-      :alt="meta.title"
+      v-if="meta.thumbnail || meta.cover"
+      :src="meta.thumbnail || meta.cover"
+      :alt="meta.thumbnailAlt || meta.coverAlt || meta.title"
     )
 
   h3.card-title(
