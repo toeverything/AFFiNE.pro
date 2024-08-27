@@ -46,6 +46,8 @@ declare global {
     id: string
     slug: string
     cover: string
+    coverAlt: string
+    theme: any
     description: string
     created: number
     updated: number
