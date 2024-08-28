@@ -20,12 +20,12 @@
     ) {{ $t('all') }}
 
     nuxt-link.tag(
-      v-for="[tag] in tags"
-      :key="tag"
-      :class="{ 'active': asyncOptions.isInited && tag === route.query.tag }"
-      :to="`/templates?tag=${encodeURIComponent(tag)}`"
+      v-for="cate in cates"
+      :key="cate.slug"
+      :class="{ 'active': asyncOptions.isInited && cate.slug === route.query.tag }"
+      :to="`/templates?tag=${encodeURIComponent(cate.slug)}`"
       replace
-    ) {{ tag }}
+    ) {{ cate.title }}
 </template>
 
 <script setup lang="ts">
@@ -33,8 +33,10 @@ import { useScroll } from '@vueuse/core'
 
 const props = withDefaults(defineProps<{
   tags?: string[]
+  cates?: any[]
 }>(), {
   tags: [] as any,
+  cates: [] as any
 })
 
 // @FIXME: Infinite redirect when contains query on local

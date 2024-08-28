@@ -2,10 +2,11 @@
 .page.page-templates
   .section.section-hero
     .limit-container
-      h1.section-title Start with Template
+      h1.section-title {{ templateHero.cateTitle || 'Start with Template' }}
 
       template-tags-list(
         :tags="templateTags"
+        :cates="templateCates"
       )
 
     .limit-container.narrow-container
@@ -64,6 +65,10 @@ const templateList = computed(() => {
 
 const templateTags = computed(() => {
   return templateMetas.value.tags
+})
+
+const templateCates = computed(() => {
+  return templateMetas.value.cates
 })
 
 await loadData()

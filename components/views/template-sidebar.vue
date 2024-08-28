@@ -8,7 +8,7 @@
     .tags.flex.flex-col.items-start.gap-8px
       nuxt-link.tag(
         v-for="tag in tags"
-        :to="`/templates?tag=${encodeURIComponent(tag)}`"
+        :to="`/templates?tag=${encodeURIComponent(meta.cateSlug || tag)}`"
       ) {{ tag }}
 </template>
 

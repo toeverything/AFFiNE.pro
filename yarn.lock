@@ -3047,10 +3047,10 @@ acorn@^8.6.0, acorn@^8.8.1, acorn@^8.8.2:
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.8.2.tgz"
   integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
 
-affine-reader@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/affine-reader/-/affine-reader-3.0.7.tgz#78d0a29b7d35a5522718a56f920da0df4382c85d"
-  integrity sha512-RIq6c2UMza/LZHcAOoqhaSR5Ie9bAojSzq6zeSxTt5nDo+tUXKnSfWUBl2Msol6LRn6jxO+hp0S9L46BH6JVAw==
+affine-reader@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/affine-reader/-/affine-reader-3.0.8.tgz#d6e66cc960dbe57a25fa7a5611361cb0912c85c5"
+  integrity sha512-A9I2lCsF2m12ualy6ScQ8pnV3bCj5T9yKiDq/XsqQtE52DZjcV68SzpEZ+K6WCv7Sbl8FEAgPgAaOvT1ItljKw==
   dependencies:
     yjs "^13.6.18"
 

@@ -60,6 +60,8 @@ declare global {
     // html: string
 
     // New fields
+    cateTitle: string
+    cateSlug: string
     relatedTemplates: string[]
     relatedBlogs: string[]
     order: number

@@ -52,7 +52,7 @@
     "@unocss/extractor-pug": "^0.49.4",
     "@unocss/nuxt": "^0.49.4",
     "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
-    "affine-reader": "^3.0.7",
+    "affine-reader": "^3.0.8",
     "gray-matter": "^4.0.3",
     "gulp": "^4.0.2",
     "gulp-file": "^0.4.0",
