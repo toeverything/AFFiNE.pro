@@ -2,7 +2,7 @@
   "id": "GA3Ft7UyCv_xqYRr0D3Qa",
   "title": "Vision Board Template 2024",
   "createDate": 1724909217475,
-  "updatedDate": 1724915903974,
+  "updatedDate": 1724925012483,
   "guid": "GA3Ft7UyCv_xqYRr0D3Qa",
   "author": "AFFiNE",
   "tags": [
@@ -14,8 +14,10 @@
   "description": "Vision board Template",
   "publish": true,
   "template": "LinkedPage:QSo8JL7GTHrBJaQbRbjoB",
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/oT1rzd_I2C9_MuDwrXIIVje1rPZxE7fs-LCH8TZw4m0=.webp",
+  "coverAlt": "AFFiNE Vision Board Template",
   "md": "Vision board Template\n\n\n\n\n\n",
-  "valid": false,
+  "valid": true,
   "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&pageId=QSo8JL7GTHrBJaQbRbjoB&name=Vision+Board+Template+2024",
   "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&pageId=QSo8JL7GTHrBJaQbRbjoB&name=Vision+Board+Template+2024",
   "relatedTemplates": [
