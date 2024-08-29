@@ -2,7 +2,7 @@
   "id": "8YL3XQH4Y2ZW1fzDQ8Jcp",
   "title": "Standard Operating Procedure Template",
   "createDate": 1724907193407,
-  "updatedDate": 1724907290038,
+  "updatedDate": 1724912319956,
   "guid": "8YL3XQH4Y2ZW1fzDQ8Jcp",
   "author": "AFFiNE",
   "tags": [
@@ -14,12 +14,19 @@
   "description": "Study smarter with the Cornell Notes Template, your new best friend in academic success. Suitable for students of all ages and subjects, this template takes the famous Cornell Note-Taking System and makes it simple and easy to use, whether you prefer Google Docs, Word or a PDF.\n\n\nWalk into your next class or meeting with a tool that organizes your thoughts and helps you understand and retain information. The Cornell Notes Template is just that - a structured and efficient way of note taking thathas helped thousands of students and professionals.",
   "publish": true,
   "template": "LinkedPage:KaleLT2bTNcs9sQ4o_Ke1",
-  "md": "",
+  "md": "\n\n\n\n\n\n",
   "valid": false,
   "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&pageId=KaleLT2bTNcs9sQ4o_Ke1&name=Standard+Operating+Procedure+Template",
   "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&pageId=KaleLT2bTNcs9sQ4o_Ke1&name=Standard+Operating+Procedure+Template",
-  "relatedTemplates": [],
-  "relatedBlogs": [],
+  "relatedTemplates": [
+    "coquette-aesthetic-vision-board",
+    "smart-goal-template"
+  ],
+  "relatedBlogs": [
+    "five-best-open-source-miro-alternatives-2023",
+    "top-10-best-free-digital-planner-apps-2023",
+    "8-free-printable-vision-board-templates-examples-2023"
+  ],
   "order": -2,
   "cateSlug": "sop-template",
   "cateTitle": "SOP Standard Operating Procedure Template",
