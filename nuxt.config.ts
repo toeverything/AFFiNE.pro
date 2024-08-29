@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'path';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -6,21 +6,21 @@ export default defineNuxtConfig({
     apiToken: '',
     public: {
       ENV: process.env.NODE_ENV,
-      UPDATED_DATE: Date.now()
-    }
+      UPDATED_DATE: Date.now(),
+    },
   },
 
   devServer: {
-    host: '0.0.0.0'
+    host: '0.0.0.0',
   },
 
   nitro: {
     routeRules: {
-      '/templates': { swr: true },
+      // '/templates': { swr: true },
       '/templates/**': { swr: true },
       '/blog': { swr: true },
       '/blog/**': { swr: true },
-    }
+    },
   },
 
   ssr: true,
@@ -30,12 +30,24 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: '%s | AFFiNE - All In One KnowledgeOS',
       meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' },
-        { name: 'description', content: 'The universal editor that lets you work, play, present or create just about anything.' },
+        {
+          name: 'viewport',
+          content:
+            'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1',
+        },
+        {
+          name: 'description',
+          content:
+            'The universal editor that lets you work, play, present or create just about anything.',
+        },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:url', content: 'https://affine.pro' },
         { name: 'twitter:title', content: 'AFFiNE - All In One KnowledgeOS' },
-        { name: 'twitter:description', content: 'The universal editor that lets you work, play, present or create just about anything.' },
+        {
+          name: 'twitter:description',
+          content:
+            'The universal editor that lets you work, play, present or create just about anything.',
+        },
         { name: 'twitter:site', content: '@AffineOfficial' },
         { name: 'twitter:image', content: 'https://affine.pro/og.png' },
         { name: 'og:type', content: 'website' },
@@ -43,14 +55,17 @@ export default defineNuxtConfig({
         { name: 'og:title', content: 'AFFiNE - All In One KnowledgeOS' },
         { name: 'og:url', content: 'https://affine.pro' },
         { name: 'og:image', content: 'https://affine.pro/og.png' },
-        { name: 'og:description', content: 'The universal editor that lets you work, play, present or create just about anything.' },
-        { name: 'saashub-verification', content: 'koz5tiouhxbt' }
+        {
+          name: 'og:description',
+          content:
+            'The universal editor that lets you work, play, present or create just about anything.',
+        },
+        { name: 'saashub-verification', content: 'koz5tiouhxbt' },
       ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon-96.png' }
-      ],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon-96.png' }],
       script: [
-        { id: 'check-dark-light',
+        {
+          id: 'check-dark-light',
           children: `
             ;(() => {
               const preference = 'light'
@@ -62,35 +77,34 @@ export default defineNuxtConfig({
                 document.documentElement.classList.add('dark')
               }
             })()
-          ` },
+          `,
+        },
         {
           type: 'text/javascript',
           children: `
             (function(w){w.fpr=w.fpr||function(){w.fpr.q = w.fpr.q||[];w.fpr.q[arguments[0]=='set'?'unshift':'push'](arguments);};})(window);
             fpr("init", {cid:"daflad6y"});
             fpr("click");
-          `
+          `,
         },
         {
           src: 'https://cdn.firstpromoter.com/fpr.js',
-          async: true
-        }
-      ]
-    }
+          async: true,
+        },
+      ],
+    },
   },
 
   imports: {
-    dirs: [ 'stores', 'composables' ]
+    dirs: ['stores', 'composables'],
   },
 
   components: {
-    dirs: [
-      { path: '~/components', pathPrefix: false }
-    ]
+    dirs: [{ path: '~/components', pathPrefix: false }],
   },
 
   experimental: {
-    inlineSSRStyles: false
+    inlineSSRStyles: false,
   },
 
   modules: [
@@ -108,27 +122,27 @@ export default defineNuxtConfig({
 
   gtm: {
     id: process.env.NUXT_PUBLIC_GOOGLE_TAG_MANAGER_ID || 'GTM-UNDEFINED',
-    enableRouterSync: true
+    enableRouterSync: true,
   },
 
   content: {
     markdown: {
-      anchorLinks: false
-    }
+      anchorLinks: false,
+    },
   },
 
   build: {
-    transpile: ['gsap']
+    transpile: ['gsap'],
   },
 
   vite: {
     css: {
       preprocessorOptions: {
         stylus: {
-          additionalData: `@require "../styles/ref.styl"`
-        }
-      }
-    }
+          additionalData: `@require "../styles/ref.styl"`,
+        },
+      },
+    },
   },
 
   i18n: {
@@ -140,14 +154,13 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
     defaultLocale: 'en',
     compilation: {
-      strictMessage: false
-    }
+      strictMessage: false,
+    },
   },
 
   image: {
     cloudflare: {
-      baseURL: 'https://affine.pro'
-    }
-  }
-
-})
+      baseURL: 'https://affine.pro',
+    },
+  },
+});

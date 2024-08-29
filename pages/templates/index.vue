@@ -30,48 +30,53 @@
 </template>
 
 <script lang="ts" setup>
-import { primaryAPI } from '~/apis'
-import { useTemplateMetas } from '~/services/templates/useTemplateMetas'
+import { primaryAPI } from '~/apis';
+import { useTemplateMetas } from '~/services/templates/useTemplateMetas';
 
-const store = useStore()
-const route = useRoute()
+const store = useStore();
+const url = useRequestURL();
+const route = useRoute();
 const asyncOptions = reactive({
   isLoading: true,
   isError: false,
   isInited: false,
-})
+});
 
 const loadData = async () => {
   try {
-    asyncOptions.isLoading = true
-    await primaryAPI.getTemplates()
+    asyncOptions.isLoading = true;
+    await primaryAPI.getTemplates();
   } catch (error) {
-    asyncOptions.isError = true
+    asyncOptions.isError = true;
   }
-  asyncOptions.isLoading = false
-}
+  asyncOptions.isLoading = false;
+};
 
-const templateMetas = computed(() => useTemplateMetas(store.templates, {
-  tag: route.query.tag as string
-}))
+const templateMetas = computed(() =>
+  useTemplateMetas(store.templates, {
+    tag: (route?.query
+      ? route.query.tag
+      : url.searchParams.get('tag')) as string,
+  })
+);
 
 const templateHero = computed(() => {
-  return templateMetas.value.featuredMeta
-})
+  return templateMetas.value.featuredMeta;
+});
 
 const templateList = computed(() => {
-  return templateMetas.value.filteredMetas
-})
+  return templateMetas.value.filteredMetas;
+});
 
 const templateTags = computed(() => {
-  return templateMetas.value.tags
-})
+  return templateMetas.value.tags;
+});
 
 const templateCates = computed(() => {
-  return templateMetas.value.cates
-})
+  return templateMetas.value.cates;
+});
 
-await loadData()
+await loadData();
 
 useHead({
   title: 'Templates',
