@@ -10,28 +10,35 @@ nuxt-link.template-hero-card(
     .content-part
       h2.card-title {{ meta.title }}
       p.card-desc {{ meta.description }}
-      .flex.justify-end.mt-22px.button-row
+      .flex.mt-22px.button-row
         el-button.detail-button(
           type="primary"
           size="action-rounded"
-        ) Details
+        ) Explore Details
 </template>
 
 <script setup lang="ts">
 import Rand from 'rand-seed';
 
 const props = defineProps<{
-  meta: Template
-}>()
+  meta: Template;
+}>();
 
-type HeroTheme = 'teal' | 'sky' | 'violet' | 'yellow' | 'rose' | 'emerald'
+type HeroTheme = 'teal' | 'sky' | 'violet' | 'yellow' | 'rose' | 'emerald';
 
-const themes: HeroTheme[] = ['teal', 'sky', 'violet', 'yellow', 'rose', 'emerald']
+const themes: HeroTheme[] = [
+  'teal',
+  'sky',
+  'violet',
+  'yellow',
+  'rose',
+  'emerald',
+];
 const theme = computed<HeroTheme>(() => {
   const rand = new Rand(props.meta.id);
-  const ind: number = Math.floor(rand.next() * themes.length)
-  return themes[ind] || 'sky'
-})
+  const ind: number = Math.floor(rand.next() * themes.length);
+  return themes[ind] || 'sky';
+});
 </script>
 
 <style lang="stylus">
