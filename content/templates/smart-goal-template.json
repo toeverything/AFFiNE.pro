@@ -2,7 +2,7 @@
   "id": "_Bpe5IadJPG_MiS7tEJyb",
   "title": "Smart Goal Template",
   "createDate": 1724903592826,
-  "updatedDate": 1724912130683,
+  "updatedDate": 1725012348088,
   "guid": "_Bpe5IadJPG_MiS7tEJyb",
   "author": "AFFiNE",
   "tags": [
@@ -14,8 +14,10 @@
   "description": "Study smarter with the Cornell Notes Template, your new best friend in academic success. Suitable for students of all ages and subjects, this template takes the famous Cornell Note-Taking System and makes it simple and easy to use, whether you prefer Google Docs, Word or a PDF.\n\n\nWalk into your next class or meeting with a tool that organizes your thoughts and helps you understand and retain information. The Cornell Notes Template is just that - a structured and efficient way of note taking thathas helped thousands of students and professionals.",
   "publish": true,
   "template": "LinkedPage:rLQBOFWnGP1yMQfln6xk3",
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/hjkoSs4q80UkHAXZ-vk-XzvPkzuz9_LGxuTEQCTp6NA=.webp",
+  "coverAlt": "Smart Goal Template",
   "md": "Smart Goal Template Demo\n\n\n\n\n\n",
-  "valid": false,
+  "valid": true,
   "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&pageId=rLQBOFWnGP1yMQfln6xk3&name=Smart+Goal+Template",
   "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&pageId=rLQBOFWnGP1yMQfln6xk3&name=Smart+Goal+Template",
   "relatedTemplates": [
