@@ -80,6 +80,8 @@
                   .nav-item
                     scroll-link( :to="PATH.AFFiNE_DOCS" ) Docs
                   .nav-item
+                    scroll-link( to="/templates" @click="isOpenResource = false" ) {{ $t('template') }}
+                  .nav-item
                     scroll-link( to="/about-us" @click="isOpenResource = false" ) {{ $t('aboutUs') }}
                   .nav-item
                     scroll-link( to="/blog?tag=Release+Note" @click="isOpenResource = false" ) {{ $t('blog') }}
@@ -96,87 +98,90 @@
 </template>
 
 <script setup lang="ts">
-import GithubCircle from '~icons/mdi/github-circle'
+import GithubCircle from '~icons/mdi/github-circle';
 
-import { PATH, CONFIG } from '~/utils/constants'
-import { useDark } from '@vueuse/core'
+import { PATH, CONFIG } from '~/utils/constants';
+import { useDark } from '@vueuse/core';
 
-const { locale, locales, localeProperties, setLocaleCookie } = useI18n()
+const { locale, locales, localeProperties, setLocaleCookie } = useI18n();
 
 const props = defineProps<{
-  y: number
-}>()
+  y: number;
+}>();
 
-const route = useRoute()
+const route = useRoute();
 // @FIXME: Get this value after mounted
-const isDark = useDark({ initialValue: 'dark' })
+const isDark = useDark({ initialValue: 'dark' });
 
-let lastCallTime = Date.now()
-const LAST_LOTTIE_FRAME = 39
+let lastCallTime = Date.now();
+const LAST_LOTTIE_FRAME = 39;
 
-const isReverse = ref(true)
-const lottieIcon = ref<any>(null)
-const lottieLoaded = ref(false)
-const isMounted = ref(false)
-const isOpenLogoPhonetic = ref(false)
-const isOpenCommunity = ref(false)
-const isOpenResource = ref(false)
-const activeTab = ref(null)
+const isReverse = ref(true);
+const lottieIcon = ref<any>(null);
+const lottieLoaded = ref(false);
+const isMounted = ref(false);
+const isOpenLogoPhonetic = ref(false);
+const isOpenCommunity = ref(false);
+const isOpenResource = ref(false);
+const activeTab = ref(null);
 const activeTabStyle = reactive({
   opacity: 0,
   width: '0px',
   transform: '',
-  transition: '0s'
-})
+  transition: '0s',
+});
 const affixProgress = computed(() => {
-  return Math.min(1, props.y / 50)
-})
+  return Math.min(1, props.y / 50);
+});
 
 const refreshActiveTab = async (needTransition = false) => {
-  await nextTick()
-  const $target = document.querySelector('.nav-item a.is-active')
-  if (!$target) return
-  const width = $target.clientWidth
-  let left = $target.parentElement?.offsetLeft || 0
-  activeTabStyle.opacity = 1
-  activeTabStyle.width = `${width}px`
-  activeTabStyle.transform = `translateX(${left}px)`
-  activeTabStyle.transition = needTransition ? '218ms' : '0s'
-}
+  await nextTick();
+  const $target = document.querySelector('.nav-item a.is-active');
+  if (!$target) return;
+  const width = $target.clientWidth;
+  let left = $target.parentElement?.offsetLeft || 0;
+  activeTabStyle.opacity = 1;
+  activeTabStyle.width = `${width}px`;
+  activeTabStyle.transform = `translateX(${left}px)`;
+  activeTabStyle.transition = needTransition ? '218ms' : '0s';
+};
 
 const handleMouseenter = (event: Event) => {
-  const animation = lottieIcon.value
+  const animation = lottieIcon.value;
 
-  if (!animation) return
+  if (!animation) return;
 
-  animation.setDirection('forward')
-  animation.goToAndStop(1)
-  animation.play()
-}
+  animation.setDirection('forward');
+  animation.goToAndStop(1);
+  animation.play();
+};
 
-let phoneticEnterTimer: any
+let phoneticEnterTimer: any;
 const handleLogoPhoneticEnter = () => {
-  clearTimeout(phoneticEnterTimer)
+  clearTimeout(phoneticEnterTimer);
   phoneticEnterTimer = setTimeout(() => {
-    isOpenLogoPhonetic.value = false
-  }, 2000)
-}
+    isOpenLogoPhonetic.value = false;
+  }, 2000);
+};
 
 const handleMouseleave = (event: Event) => {
-  lottieIcon.value?.goToAndStop(LAST_LOTTIE_FRAME)
-}
+  lottieIcon.value?.goToAndStop(LAST_LOTTIE_FRAME);
+};
 
 const handleLottieLoaded = () => {
-  lottieIcon.value?.goToAndStop(1)
-  lottieLoaded.value = true
-}
+  lottieIcon.value?.goToAndStop(1);
+  lottieLoaded.value = true;
+};
 
 onMounted(() => {
-  refreshActiveTab()
-  isMounted.value = true
-})
+  refreshActiveTab();
+  isMounted.value = true;
+});
 
-watch(() => route.path, () => refreshActiveTab(true))
+watch(
+  () => route.path,
+  () => refreshActiveTab(true)
+);
 </script>
 
 <style lang="stylus">
@@ -383,5 +388,4 @@ $mediaCompactHeader = '(max-width: 1280px)'
     &:hover
       color: black
       background: rgba(0, 0, 0, 0.04)
-
 </style>

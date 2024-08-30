@@ -4,6 +4,7 @@ export default defineNuxtPlugin(async nuxtApp => {
 
   try {
     primaryAPI.getBlog()
+    primaryAPI.getTemplates()
     if (process.client) {
       primaryAPI.getReleaseTabs()
     }

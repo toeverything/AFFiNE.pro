@@ -39,6 +39,8 @@
                 .nav-item
                   scroll-link( :to="PATH.AFFiNE_DOCS" ) Docs
                 .nav-item
+                  nuxt-link( to="/templates" @click="isOpen = false" ) {{ $t('template') }}
+                .nav-item
                   nuxt-link( to="/about-us" @click="isOpen = false") {{ $t('aboutUs') }}
                 .nav-item
                   nuxt-link( to="/blog?tag=Release+Note" @click="isOpen = false") {{ $t('blog') }}
@@ -48,22 +50,7 @@
 
           .nav-item
             nuxt-link( to="/pricing" ) {{ $t('price') }}
-          .nav-item(
-            v-if="CONFIG.ENABLE_LANG_SWITCHER"
-          )
-            .current-lang.flex.items-center(
-              @click="() => isOpenLangList = !isOpenLangList"
-            )
-              | {{ localeProperties?.name  }}
-              nuxt-icon.ml-3px( name="arrow-down-s" )
 
-        .menu-list.lang-list( v-show="isOpenLangList" )
-          .nav-item.flex.justify-between(
-            v-for="item in locales"
-            @click="locale = item.code"
-          )
-            | {{ item.name }}
-            nuxt-icon.text-6( :name="locale === item.code ? 'CheckBoxCheck' : 'CheckBoxUncheck'" )
 </template>
 
 <script setup lang="ts">
@@ -129,7 +116,7 @@ watch(locale, () => {
       padding-right: 8px
       padding: 0 32px
 
-      @media (max-width: 390px)
+      @media (max-width: 480px)
         padding: 0 20px
 
     .try-link

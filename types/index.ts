@@ -1,43 +1,71 @@
-export { }
+export {};
 
 declare global {
-
   interface Asset {
-    name: string
-    url: string
+    name: string;
+    url: string;
   }
 
   interface Release {
-    tag_name: string,
-    prerelease: boolean,
-    published_at: string,
-    assets: Asset[]
+    tag_name: string;
+    prerelease: boolean;
+    published_at: string;
+    assets: Asset[];
   }
 
   interface ReleaseTab {
-    name?: string
-    version: string
+    name?: string;
+    version: string;
     releaseMap?: {
-      canary: Release | null
-      stable: Release | null
-      beta: Release | null
-    }
+      canary: Release | null;
+      stable: Release | null;
+      beta: Release | null;
+    };
   }
 
   interface Changelog {
-    title: string
-    version: string
-    date: string | number
-    description?: string
-    detailLink?: string
-    cover?: string
+    title: string;
+    version: string;
+    date: string | number;
+    description?: string;
+    detailLink?: string;
+    cover?: string;
   }
 
   interface UserStory {
-    avatar: string
-    name: string
-    position: string
-    content: string
+    avatar: string;
+    name: string;
+    position: string;
+    content: string;
   }
 
+  interface Template {
+    title: string;
+    tags: string[];
+    id: string;
+    slug: string;
+    cover: string;
+    coverAlt: string;
+    theme: any;
+    description: string;
+    created: number;
+    updated: number;
+    md: string;
+    publish: boolean;
+
+    // Removed fields
+    // layout: string
+    // authors: []string
+    // html: string
+
+    // New fields
+    cateTitle: string;
+    cateName: string;
+    cateSlug: string;
+    relatedTemplates: string[];
+    relatedBlogs: string[];
+    order: number;
+    useTemplateUrl: string;
+    previewUrl: string;
+  }
 }

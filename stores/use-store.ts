@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { useLocalStorage } from '@vueuse/core'
+import { RemovableRef, useLocalStorage } from '@vueuse/core'
 import { getCookie } from 'typescript-cookie'
 import { ContentFileMeta } from '~/services/blog/resolveContentFile'
 
@@ -10,7 +10,9 @@ const userInitial = {
 }
 
 type MainState = {
+  user: RemovableRef<typeof userInitial>
   blog: ContentFileMeta[],
+  templates: Template[],
   github: {
     starAmount: boolean | undefined
   },
@@ -45,6 +47,7 @@ export const useStore = defineStore('main', {
     },
 
     blog: [],
+    templates: [],
 
     // Entity
     domain: {
@@ -60,6 +63,7 @@ export const useStore = defineStore('main', {
       return token || state.user.token
     },
     isAuthed (state) {
+      // @ts-ignore
       return this.token || state.user.token
     }
   },

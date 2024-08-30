@@ -1,7 +1,7 @@
 <template lang="pug">
 a.scroll-link(
   @click.stop="handleRootClick"
-  :class="{ 'is-active': to === '/' ? route.path === to : route.path.startsWith(to) }"
+  :class="{ 'is-active': route.path === '/' ? route.path === to : to.startsWith(route.path) }"
 )
   slot
 </template>
