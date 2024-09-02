@@ -8,16 +8,16 @@
     .tags.flex.flex-col.items-start.gap-8px
       nuxt-link.tag(
         v-for="tag in tags"
-        :to="`/templates?tag=${encodeURIComponent(meta.cateSlug || tag)}`"
+        :to="`/templates/category-${encodeURIComponent(meta.cateSlug || tag)}`"
       ) {{ tag }}
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{
-  meta: Template
-}>()
+  meta: Template;
+}>();
 
-const tags = computed(() => props.meta.tags)
+const tags = computed(() => props.meta.tags);
 </script>
 
 <style lang="stylus">
@@ -45,5 +45,4 @@ const tags = computed(() => props.meta.tags)
 
     &:hover
       background: rgba(0,0,0,0.04)
-
 </style>

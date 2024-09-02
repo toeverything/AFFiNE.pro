@@ -16,41 +16,44 @@
   )
     nuxt-link.tag(
       :to="`/templates`"
-      :class="{ 'active': asyncOptions.isInited && !route.query.tag }"
+      :class="{ 'active': asyncOptions.isInited && !route.params.slug }"
     ) {{ $t('all') }}
 
     nuxt-link.tag(
       v-for="cate in cates"
       :key="cate.slug"
-      :class="{ 'active': asyncOptions.isInited && cate.slug === route.query.tag }"
-      :to="`/templates?tag=${encodeURIComponent(cate.slug)}`"
+      :class="{ 'active': asyncOptions.isInited && cate.slug === route.params.slug }"
+      :to="`/templates/category-${encodeURIComponent(cate.slug)}`"
       replace
     ) {{ cate.title }}
 </template>
 
 <script setup lang="ts">
-import { useScroll } from '@vueuse/core'
+import { useScroll } from '@vueuse/core';
 
-const props = withDefaults(defineProps<{
-  tags?: string[]
-  cates?: any[]
-}>(), {
-  tags: [] as any,
-  cates: [] as any
-})
+const props = withDefaults(
+  defineProps<{
+    tags?: string[];
+    cates?: any[];
+  }>(),
+  {
+    tags: [] as any,
+    cates: [] as any,
+  }
+);
 
 // @FIXME: Infinite redirect when contains query on local
-const route = useRoute()
-const tagListEl = ref<HTMLElement | null>(null)
-const { arrivedState, x } = useScroll(tagListEl, { behavior: 'smooth' })
+const route = useRoute();
+const tagListEl = ref<HTMLElement | null>(null);
+const { arrivedState, x } = useScroll(tagListEl, { behavior: 'smooth' });
 
 const asyncOptions = reactive({
   isInited: false,
-})
+});
 
 onMounted(() => {
-  asyncOptions.isInited = true
-})
+  asyncOptions.isInited = true;
+});
 </script>
 
 <style lang="stylus">
