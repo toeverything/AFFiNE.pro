@@ -125,6 +125,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    'nuxt-delay-hydration',
     '@nuxt/content',
     '@nuxt/image-edge',
     '@nuxtjs/device',
@@ -136,6 +137,11 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@pinia/nuxt',
   ],
+
+  // @ts-ignore
+  delayHydration: {
+    mode: 'mount',
+  },
 
   gtm: {
     id: process.env.NUXT_PUBLIC_GOOGLE_TAG_MANAGER_ID || 'GTM-UNDEFINED',
