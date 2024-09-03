@@ -9,6 +9,7 @@ nuxt-link.blog-card.flex.flex-col(
     format="webp"
     width="1200"
     height="600"
+    :alt="meta.title"
   )
   nuxt-img.card-cover(
     v-else
@@ -16,6 +17,7 @@ nuxt-link.blog-card.flex.flex-col(
     width="2400"
     height="1200"
     :src="meta.cover"
+    :alt="meta.title"
   )
   .blog-tag-row.flex.gap-4
     .blog-tag( v-for="tag in meta.tags" ) {{ tag }}
@@ -32,27 +34,30 @@ nuxt-link.blog-card.flex.flex-col(
 </template>
 
 <script setup lang="ts">
-import { useDateFormat } from '@vueuse/core'
-import { USER_MAP } from '~/services/blog/userMap'
-import type { ContentFileMeta } from '~/services/blog/resolveContentFile'
+import { useDateFormat } from '@vueuse/core';
+import { USER_MAP } from '~/services/blog/userMap';
+import type { ContentFileMeta } from '~/services/blog/resolveContentFile';
 
 const props = defineProps<{
-  meta: ContentFileMeta
-  needMeta?: boolean
-  lazy?: boolean
-}>()
+  meta: ContentFileMeta;
+  needMeta?: boolean;
+  lazy?: boolean;
+}>();
 
 const user = computed(() => {
-  const author = props.meta.authors && props.meta.authors[0]
+  const author = props.meta.authors && props.meta.authors[0];
 
   if (!author) {
-    return {}
+    return {};
   }
 
-  return USER_MAP[author]
-})
+  return USER_MAP[author];
+});
 
-const publishDate = useDateFormat(new Date(props.meta.updated || Date.now()), 'MM/DD/YYYY')
+const publishDate = useDateFormat(
+  new Date(props.meta.updated || Date.now()),
+  'MM/DD/YYYY'
+);
 </script>
 
 <style lang="stylus">
@@ -127,5 +132,4 @@ const publishDate = useDateFormat(new Date(props.meta.updated || Date.now()), 'M
   /html.dark &
     --tag-color: #E6E6E6
     --tag-bg-color: rgba(249, 249, 249, 0.3)
-
 </style>

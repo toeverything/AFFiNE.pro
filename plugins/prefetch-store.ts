@@ -1,15 +1,13 @@
-import { primaryAPI } from '~/apis'
+import { primaryAPI } from '~/apis';
 
-export default defineNuxtPlugin(async nuxtApp => {
-
+export default defineNuxtPlugin(async (nuxtApp) => {
   try {
-    primaryAPI.getBlog()
-    primaryAPI.getTemplates()
     if (process.client) {
-      primaryAPI.getReleaseTabs()
+      primaryAPI.getBlog();
+      primaryAPI.getTemplates();
+      primaryAPI.getReleaseTabs();
     }
   } catch (error) {
-    console.log('prefetch store error', error)
+    console.log('prefetch store error', error);
   }
-
-})
+});

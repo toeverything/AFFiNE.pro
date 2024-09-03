@@ -20,6 +20,7 @@
           )
             template( #reference )
               nuxt-link.handler.logo-handler(
+                aria-label="logo"
                 to="/"
                 @mouseenter="handleMouseenter"
                 @mouseleave="handleMouseleave"
@@ -68,7 +69,7 @@
               :offset="8"
             )
               template( #reference )
-                a.handler-row.gap-1.items-center(
+                .nav-handler.handler-row.gap-1.items-center(
                   @click="isOpenResource = !isOpenResource"
                   :class="{ 'is-open': isOpenResource }"
                 )
@@ -242,6 +243,7 @@ $mediaCompactHeader = '(max-width: 1280px)'
       padding: 20px 32px
 
     .nav-item > a,
+    .nav-item > .nav-handler,
     .el-dropdown
       display: flex
       padding: 0 12px

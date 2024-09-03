@@ -32,6 +32,7 @@
 <script lang="ts" setup>
 import { primaryAPI } from '~/apis';
 import { useTemplateMetas } from '~/services/templates/useTemplateMetas';
+import { getTemplateCateMeta } from '~/utils/template';
 
 const store = useStore();
 const url = useRequestURL();
@@ -78,9 +79,12 @@ const templateCates = computed(() => {
 
 await loadData();
 
-useHead({
+const pageMeta = computed(() => ({
   title: 'Templates',
-});
+  meta: getTemplateCateMeta(templateHero.value),
+}));
+
+useHead(pageMeta);
 </script>
 
 <style lang="stylus">

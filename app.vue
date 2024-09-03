@@ -6,30 +6,26 @@
 </template>
 
 <script setup>
-import { ElConfigProvider } from 'element-plus'
+import { ElConfigProvider } from 'element-plus';
 
-import en from 'element-plus/lib/locale/lang/en'
+import en from 'element-plus/lib/locale/lang/en';
 
-import 'element-plus/es/components/message/style/css'
-import 'element-plus/theme-chalk/dark/css-vars.css'
-import '~/styles/main.styl'
+import 'element-plus/es/components/message/style/css';
+import 'element-plus/theme-chalk/dark/css-vars.css';
+import '~/styles/main.styl';
 
-const locale = ref(en)
+const locale = ref(en);
 
-const i18n = useI18n()
+const i18n = useI18n();
 
 useHead({
   htmlAttrs: {
-    lang: i18n.locale.value || 'en'
-  }
-})
-
+    lang: i18n.locale.value || 'en',
+  },
+});
 </script>
 
 <style lang="stylus">
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap')
-
 ::selection
   background-color: var(--brand)
   color: white

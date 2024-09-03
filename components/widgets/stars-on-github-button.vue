@@ -3,15 +3,16 @@ nuxt-link.stars-on-github-btn.inline-flex.justify-center.items-center(
   :to="PATH.AFFiNE_GITHUB"
   target="_blank"
   rel="nofollow"
+  aria-label="github"
 )
   GithubCircle
   .info-text Stars on GitHub
 </template>
 
 <script setup lang="ts">
-import { PATH } from '~/utils/constants'
+import { PATH } from '~/utils/constants';
 
-import GithubCircle from '~icons/mdi/github-circle'
+import GithubCircle from '~icons/mdi/github-circle';
 </script>
 
 <style lang="stylus">
