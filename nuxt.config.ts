@@ -15,11 +15,16 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    compressPublicAssets: {
+      gzip: true,
+    },
     routeRules: {
-      // '/templates': { swr: true },
-      '/templates/**': { swr: true },
-      '/blog': { swr: true },
-      '/blog/**': { swr: true },
+      '/': { prerender: true },
+      '/ai': { prerender: true },
+      '/templates': { prerender: true },
+      '/templates/**': { prerender: true },
+      '/blog': { prerender: true },
+      '/blog/**': { prerender: true },
     },
   },
 
@@ -33,7 +38,7 @@ export default defineNuxtConfig({
         {
           name: 'viewport',
           content:
-            'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1',
+            'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=6',
         },
         {
           name: 'description',
@@ -62,7 +67,19 @@ export default defineNuxtConfig({
         },
         { name: 'saashub-verification', content: 'koz5tiouhxbt' },
       ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon-96.png' }],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon-96.png' },
+        {
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap',
+          as: 'style',
+          rel: 'preload',
+        },
+        {
+          href: 'https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap',
+          as: 'style',
+          rel: 'preload',
+        },
+      ],
       script: [
         {
           id: 'check-dark-light',

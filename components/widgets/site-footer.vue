@@ -9,6 +9,7 @@
         .flex.items-start.flex-wrap
           .icons-part
             nuxt-link.mr-5.inline-flex(
+              aria-label="logo"
               to="/"
               @mouseenter="handleMouseenter"
               @mouseleave="handleMouseleave"
@@ -31,6 +32,7 @@
                 :to="sns.link"
                 rel="nofollow"
                 target="_blank"
+                :aria-label="sns.name"
               )
                 nuxt-icon.sns-icon(
                   :name="sns.iconName"
@@ -72,30 +74,30 @@
 </template>
 
 <script setup lang="ts">
-import { PATH, CONFIG, COMMUNITY_SNS_LIST } from '~/utils/constants'
+import { PATH, CONFIG, COMMUNITY_SNS_LIST } from '~/utils/constants';
 
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 
-const lottieIcon = ref<any>(null)
-const LAST_LOTTIE_FRAME = 39
+const lottieIcon = ref<any>(null);
+const LAST_LOTTIE_FRAME = 39;
 
 const handleMouseenter = (event: Event) => {
-  const animation = lottieIcon.value
+  const animation = lottieIcon.value;
 
-  if (!animation) return
+  if (!animation) return;
 
-  animation.setDirection('forward')
-  animation.goToAndStop(1)
-  animation.play()
-}
+  animation.setDirection('forward');
+  animation.goToAndStop(1);
+  animation.play();
+};
 
 const handleMouseleave = (event: Event) => {
-  lottieIcon.value?.goToAndStop(LAST_LOTTIE_FRAME)
-}
+  lottieIcon.value?.goToAndStop(LAST_LOTTIE_FRAME);
+};
 
 const handleLottieLoaded = () => {
-  lottieIcon.value?.goToAndStop(1)
-}
+  lottieIcon.value?.goToAndStop(1);
+};
 </script>
 
 <style lang="stylus">
@@ -277,5 +279,4 @@ const handleLottieLoaded = () => {
     --logo-color: #fff
     --list-name-color: #555555
     --list-item-color: var(--primary-gray)
-
 </style>

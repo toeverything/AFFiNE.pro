@@ -11,6 +11,8 @@
 
     nuxt-link(
       to="/ai"
+      aria-label="learn more"
+      title="Learn more about AFFiNE AI"
     )
       el-button(
         type="default"
@@ -45,11 +47,11 @@
 <script setup lang="ts">
 import { useResizeObserver, useScroll } from '@vueuse/core';
 
-const scrollList = ref<HTMLElement | null>(null)
-const currentIndex = ref(0)
-const isSwitching = ref(false)
-const cardWidthRef = ref(0)
-const widthOffsetRef = ref(1)
+const scrollList = ref<HTMLElement | null>(null);
+const currentIndex = ref(0);
+const isSwitching = ref(false);
+const cardWidthRef = ref(0);
+const widthOffsetRef = ref(1);
 
 const aiCards = [
   '/overview/ai/1.png',
@@ -57,59 +59,62 @@ const aiCards = [
   '/overview/ai/3.png',
   '/overview/ai/4.png',
   '/overview/ai/5.png',
-]
+];
 
-let timer: any
+let timer: any;
 
 const { x, isScrolling } = useScroll(scrollList, {
-  behavior: 'smooth'
-})
+  behavior: 'smooth',
+});
 
 const getCardWidthAndGap = () => {
-  const gap = window.innerWidth > 768 ? 34 : 12
-  const cardWidth = cardWidthRef.value || 400
+  const gap = window.innerWidth > 768 ? 34 : 12;
+  const cardWidth = cardWidthRef.value || 400;
 
   return {
     gap,
-    cardWidth
-  }
-}
+    cardWidth,
+  };
+};
 
 watch(x, () => {
-  if (isSwitching.value) return
-  const { gap, cardWidth } = getCardWidthAndGap()
-  const index = Math.round(x.value / (cardWidth / widthOffsetRef.value - gap))
-  currentIndex.value = Math.min(aiCards.length - 1, index)
-})
+  if (isSwitching.value) return;
+  const { gap, cardWidth } = getCardWidthAndGap();
+  const index = Math.round(x.value / (cardWidth / widthOffsetRef.value - gap));
+  currentIndex.value = Math.min(aiCards.length - 1, index);
+});
 
 const handleDotClick = (index: number) => {
-  clearTimeout(timer)
-  currentIndex.value = index
-  isSwitching.value = true
+  clearTimeout(timer);
+  currentIndex.value = index;
+  isSwitching.value = true;
   timer = setTimeout(() => {
-    isSwitching.value = false
-  }, 500)
-}
+    isSwitching.value = false;
+  }, 500);
+};
 
 watch(currentIndex, () => {
-  if (isScrolling.value && !isSwitching.value) return
-  const { gap, cardWidth } = getCardWidthAndGap()
-  x.value = window.innerWidth > 744
-    ? currentIndex.value * (cardWidth / widthOffsetRef.value - gap)
-    : currentIndex.value * (cardWidth + gap)
-})
+  if (isScrolling.value && !isSwitching.value) return;
+  const { gap, cardWidth } = getCardWidthAndGap();
+  x.value =
+    window.innerWidth > 744
+      ? currentIndex.value * (cardWidth / widthOffsetRef.value - gap)
+      : currentIndex.value * (cardWidth + gap);
+});
 
 useResizeObserver(scrollList, () => {
-  cardWidthRef.value = document.querySelector('.ai-card[data-item="0"]')?.getBoundingClientRect().width || 0
+  cardWidthRef.value =
+    document.querySelector('.ai-card[data-item="0"]')?.getBoundingClientRect()
+      .width || 0;
 
-  const isBigScreen = window.innerWidth > 1440
-  const isTabletScreen = window.innerWidth > 768
-  let widthOffset = isTabletScreen ? 1.2 : 1
+  const isBigScreen = window.innerWidth > 1440;
+  const isTabletScreen = window.innerWidth > 768;
+  let widthOffset = isTabletScreen ? 1.2 : 1;
   if (isBigScreen) {
-    widthOffset = 1.38
+    widthOffset = 1.38;
   }
-  widthOffsetRef.value = widthOffset
-})
+  widthOffsetRef.value = widthOffset;
+});
 </script>
 
 <style lang="stylus">
@@ -218,5 +223,4 @@ useResizeObserver(scrollList, () => {
       .dot-circle
         background: #1E96EB
         transform: scale(1.5)
-
 </style>

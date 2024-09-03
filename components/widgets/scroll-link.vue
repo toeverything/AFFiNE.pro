@@ -1,6 +1,7 @@
 <template lang="pug">
 a.scroll-link(
   @click.stop="handleRootClick"
+  :href="to"
   :class="{ 'is-active': route.path === '/' ? route.path === to : to.startsWith(route.path) }"
 )
   slot
@@ -8,24 +9,26 @@ a.scroll-link(
 
 <script setup lang="ts">
 const props = defineProps<{
-  to: string
-}>()
+  to: string;
+}>();
 
-const route = useRoute()
-const router = useRouter()
+const route = useRoute();
+const router = useRouter();
 
-const handleRootClick = () => {
+const handleRootClick = (e: Event) => {
+  e.preventDefault();
+
   if (props.to === route.path) {
-    window.scrollTo({top: 0, behavior: 'smooth'})
-    return
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
   }
 
   if (props.to.startsWith('http')) {
-    return window.open(props.to, '_blank')
+    return window.open(props.to, '_blank');
   }
 
-  router.push(props.to)
-}
+  router.push(props.to);
+};
 </script>
 
 <style lang="stylus">

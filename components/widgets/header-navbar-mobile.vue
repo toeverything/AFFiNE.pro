@@ -29,7 +29,7 @@
             @click="isOpenResource = !isOpenResource" ref="ignoreResElRef"
             :class="{ 'is-open-community': isOpenResource }"
           )
-            a.handler-row.justify-between.items-center.w-full(
+            .nav-handler.handler-row.justify-between.items-center.w-full(
             )
               | {{ $t('resource') }}
               nuxt-icon.arrow-icon.text-size-20px( name="ArrowRightSmall2" filled )
@@ -45,7 +45,7 @@
                 .nav-item
                   nuxt-link( to="/blog?tag=Release+Note" @click="isOpen = false") {{ $t('blog') }}
                 .nav-item.mb-8px
-                  nuxt-link( @click.stop="() => {}" ) Community
+                  .nav-handler( @click.stop="() => {}" ) Community
                 community-navbar
 
           .nav-item
@@ -54,29 +54,29 @@
 </template>
 
 <script setup lang="ts">
-import { onClickOutside } from '@vueuse/core'
-const { locale, setLocaleCookie } = useI18n()
+import { onClickOutside } from '@vueuse/core';
+const { locale, setLocaleCookie } = useI18n();
 
-const menuHandler = ref(null)
-const ignoreElRef = ref(null)
-const ignoreResElRef = ref(null)
-const isOpen = ref(false)
-const isOpenCommunity = ref(false)
-const isOpenResource = ref(false)
+const menuHandler = ref(null);
+const ignoreElRef = ref(null);
+const ignoreResElRef = ref(null);
+const isOpen = ref(false);
+const isOpenCommunity = ref(false);
+const isOpenResource = ref(false);
 
 onClickOutside(
   menuHandler,
   (event) => {
-    isOpen.value = false
-    isOpenCommunity.value = false
-    isOpenResource.value = false
+    isOpen.value = false;
+    isOpenCommunity.value = false;
+    isOpenResource.value = false;
   },
-  { ignore: [ignoreElRef, ignoreResElRef] },
-)
+  { ignore: [ignoreElRef, ignoreResElRef] }
+);
 
 watch(locale, () => {
-  setLocaleCookie(locale.value)
-})
+  setLocaleCookie(locale.value);
+});
 </script>
 
 <style lang="stylus">
@@ -153,7 +153,8 @@ watch(locale, () => {
           letter-spacing: -0.28px;
           border-bottom: 0.5px solid rgba(0, 0, 0, 0.10);
 
-          > a
+          > a,
+          .nav-handler
             display: flex
             padding: 12px 0
 

@@ -80,132 +80,132 @@
 </template>
 
 <script setup lang="ts">
-import { useResizeObserver } from '@vueuse/core'
-import { useElementVisibility } from '@vueuse/core'
-import { gsap } from 'gsap'
+import { useResizeObserver } from '@vueuse/core';
+import { useElementVisibility } from '@vueuse/core';
+import { gsap } from 'gsap';
 
-const scrollTriggerBreakWidth = 900
+const scrollTriggerBreakWidth = 900;
 
-const writeCoverUrl = '/overview/Write.jpg'
-const drawCoverUrl = '/overview/Draw.jpg'
-const planCoverUrl = '/overview/Plan.jpg'
+const writeCoverUrl = '/overview/Write.jpg';
+const drawCoverUrl = '/overview/Draw.jpg';
+const planCoverUrl = '/overview/Plan.jpg';
 
-const { t } = useI18n()
+const { t } = useI18n();
 
-const el = ref()
-const needScrollTrigger = ref(false)
-const currentSection = ref('write')
-const scrollProgress = ref(0)
-const planLottie = ref()
-const elIsVisible = useElementVisibility(el)
-const pinCardScale = 1.1
+const el = ref();
+const needScrollTrigger = ref(false);
+const currentSection = ref('write');
+const scrollProgress = ref(0);
+const planLottie = ref();
+const elIsVisible = useElementVisibility(el);
+const pinCardScale = 1.1;
 
 const dynamicStates = reactive({
   titleText: t('overviewPage.moduleWriteTitle'),
   typingIndex: -1,
   isTyping: false,
-})
+});
 
 const drawScrollStates = reactive({
   isShowDrawMark: false,
   isShowEaseMark: false,
   isShowCreativityMark: false,
-})
+});
 
 const planScrollStates = reactive({
-  isPlayPlanLottie: false
-})
+  isPlayPlanLottie: false,
+});
 
 useResizeObserver(el, (entries) => {
-  const entry = entries[0]
-  const width = entry.target.getBoundingClientRect().width
-  needScrollTrigger.value = width >= scrollTriggerBreakWidth
-})
+  const entry = entries[0];
+  const width = entry.target.getBoundingClientRect().width;
+  needScrollTrigger.value = width >= scrollTriggerBreakWidth;
+});
 
 const setupPlanScrollTrigger = () => {
-  const timeline = gsap.timeline({
-    paused: true,
-    defaults: {
-      duration: 1
-    }
-  })
-    .to(planScrollStates, {
-      isPlayPlanLottie: true
+  const timeline = gsap
+    .timeline({
+      paused: true,
+      defaults: {
+        duration: 1,
+      },
     })
+    .to(planScrollStates, {
+      isPlayPlanLottie: true,
+    });
 
   gsap.to(planScrollStates, {
     scrollTrigger: {
       trigger: '.feature-section.feature-plan',
       start: '20% center',
       onEnter: () => {
-        timeline.play()
-      }
-    }
-  })
-}
+        timeline.play();
+      },
+    },
+  });
+};
 
 const setupDrawScrollTrigger = () => {
   const drawingTimeline = gsap.timeline({
-    paused: true
-  })
+    paused: true,
+  });
 
   drawingTimeline
     .to(drawScrollStates, {
       isShowDrawMark: true,
-      duration: 1
+      duration: 1,
     })
     .to(drawScrollStates, {
       isShowEaseMark: true,
-      duration: 1
+      duration: 1,
     })
     .to(drawScrollStates, {
       isShowCreativityMark: true,
-      duration: 1
-    })
+      duration: 1,
+    });
 
   gsap.to(drawScrollStates, {
     scrollTrigger: {
       trigger: '.feature-section.feature-draw',
       start: '20% center',
       onEnter: () => {
-        drawingTimeline.play()
-      }
-    }
-  })
-}
+        drawingTimeline.play();
+      },
+    },
+  });
+};
 
 const setupWriteScrollTrigger = () => {
   const drawingTimeline = gsap.timeline({
-    paused: true
-  })
+    paused: true,
+  });
 
-  drawingTimeline
-    .to(dynamicStates, {
-      isTyping: true,
-      textTypingIndex: dynamicStates.titleText.length - 1,
-      ease: `steps(${dynamicStates.titleText.length - 1})`,
-      duration: 2
-    })
+  drawingTimeline.to(dynamicStates, {
+    isTyping: true,
+    textTypingIndex: dynamicStates.titleText.length - 1,
+    ease: `steps(${dynamicStates.titleText.length - 1})`,
+    duration: 1,
+  });
 
   gsap.to(dynamicStates, {
     scrollTrigger: {
       trigger: '.feature-section.feature-write',
       start: '20% center',
       onEnter: () => {
-        drawingTimeline.play()
-      }
-    }
-  })
-}
+        drawingTimeline.play();
+      },
+    },
+  });
+};
 
 const setupScrollTrigger = () => {
-  setupDrawScrollTrigger()
-  setupWriteScrollTrigger()
-  setupPlanScrollTrigger()
+  setupDrawScrollTrigger();
+  setupWriteScrollTrigger();
+  setupPlanScrollTrigger();
 
-  const pinCard = document.querySelector('.video-card.pin-card')
+  const pinCard = document.querySelector('.video-card.pin-card');
 
-  if (!pinCard) return
+  if (!pinCard) return;
 
   gsap.to(scrollProgress, {
     ease: 'none',
@@ -218,53 +218,62 @@ const setupScrollTrigger = () => {
       markers: false,
       start: '-76px top',
       end: () => {
-        const pinHeight = pinCard.getBoundingClientRect().height / pinCardScale
-        const height = el.value?.getBoundingClientRect().height - pinHeight / 2
-        return `${height}px ${pinHeight}px`
+        const pinHeight = pinCard.getBoundingClientRect().height / pinCardScale;
+        const height = el.value?.getBoundingClientRect().height - pinHeight / 2;
+        return `${height}px ${pinHeight}px`;
       },
-    }
-  })
-}
+    },
+  });
+};
 
-watch(() => planScrollStates.isPlayPlanLottie, (val) => {
-  if (val) {
-    planLottie.value.play()
+watch(
+  () => planScrollStates.isPlayPlanLottie,
+  (val) => {
+    if (val) {
+      planLottie.value.play();
+    }
   }
-})
+);
 
 watch(scrollProgress, (val) => {
   if (val > 0.9) {
-    currentSection.value = 'plan'
-    return
+    currentSection.value = 'plan';
+    return;
   }
   if (val > 0.4) {
-    currentSection.value = 'draw'
-    return
+    currentSection.value = 'draw';
+    return;
   }
-  currentSection.value = 'write'
-})
+  currentSection.value = 'write';
+});
 
 watch(currentSection, (val) => {
-  const $videos = [...document.querySelectorAll<HTMLVideoElement>('.pin-card video')]
-  $videos.map($el => {
-    $el.pause()
-  })
-  const $video = document.querySelector<HTMLVideoElement>(`.pin-card video.video-${val}`)
+  const $videos = [
+    ...document.querySelectorAll<HTMLVideoElement>('.pin-card video'),
+  ];
+  $videos.map(($el) => {
+    $el.pause();
+  });
+  const $video = document.querySelector<HTMLVideoElement>(
+    `.pin-card video.video-${val}`
+  );
   if ($video) {
-    $video.play()
+    $video.play();
   }
-})
+});
 
 watch(elIsVisible, (val) => {
-  const $video = document.querySelector<HTMLVideoElement>('.pin-card video.current')
+  const $video = document.querySelector<HTMLVideoElement>(
+    '.pin-card video.current'
+  );
   if ($video) {
-    val ? $video.play() : $video.pause()
+    val ? $video.play() : $video.pause();
   }
-})
+});
 
 onMounted(() => {
-  setupScrollTrigger()
-})
+  setupScrollTrigger();
+});
 </script>
 
 <style lang="stylus">
