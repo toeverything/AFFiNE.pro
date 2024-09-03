@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   app: {
     keepalive: true,
     head: {
-      titleTemplate: '%s | AFFiNE - All In One KnowledgeOS',
+      titleTemplate: '%s | AFFiNE',
       meta: [
         {
           name: 'viewport',

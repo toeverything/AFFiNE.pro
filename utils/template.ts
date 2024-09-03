@@ -5,7 +5,7 @@ export const getTemplateCateMeta = (meta: Template) => {
 
   const title = meta.cateTitle
     ? meta.cateTitle + ' | AFFiNE'
-    : 'Templates | AFFiNE - All In One KnowledgeOS';
+    : 'Templates | AFFiNE';
   const desc =
     meta.description ||
     'There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.';
@@ -17,6 +17,8 @@ export const getTemplateCateMeta = (meta: Template) => {
     { name: 'twitter:url', content: url },
     { name: 'twitter:description', content: desc },
     { name: 'twitter:image', content: image },
+
+    { name: 'description', content: desc },
 
     { name: 'og:title', content: title },
     { name: 'og:url', content: url },

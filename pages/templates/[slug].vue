@@ -35,65 +35,69 @@
 </template>
 
 <script lang="ts" setup>
-import { PATH } from '~/utils/constants'
-import { primaryAPI } from '~/apis'
-import { renderHTML } from '~/services/blog/resolveContentFile'
+import { PATH } from '~/utils/constants';
+import { primaryAPI } from '~/apis';
+import { renderHTML } from '~/services/blog/resolveContentFile';
 
-const template = ref<Template>()
-const html = ref('')
-const store = useStore()
-const route = useRoute()
-const router = useRouter()
-const isFromList = ref(false)
+const template = ref<Template>();
+const html = ref('');
+const store = useStore();
+const route = useRoute();
+const router = useRouter();
+const isFromList = ref(false);
 
 const asyncOptions = reactive({
   emptyTips: 'Template Not Found',
   errorTips: 'Template Load Error',
   errorActionText: 'Back to Home',
   onErrorAction: () => {
-    router.push('/')
+    router.push('/');
   },
   isLoading: true,
-  isError: false
-})
+  isError: false,
+});
 
 const loadData = async () => {
   try {
-    asyncOptions.isError = false
-    asyncOptions.isLoading = true
-    await primaryAPI.getTemplates()
-    template.value = store.templates.find(item => item.slug === route.params.slug)
+    asyncOptions.isError = false;
+    asyncOptions.isLoading = true;
+    await primaryAPI.getTemplates();
+    template.value = store.templates.find(
+      (item) => item.slug === route.params.slug
+    );
 
-    html.value = await renderHTML(template.value?.md as string)
+    html.value = await renderHTML(template.value?.md as string);
   } catch (error) {
-    console.log('Load template single error', error)
-    asyncOptions.isError = true
+    console.log('Load template single error', error);
+    asyncOptions.isError = true;
     if (!template.value) {
-      router.push(`/not-found?fromPath=${route.path}`)
+      router.push(`/not-found?fromPath=${route.path}`);
     }
   }
-  asyncOptions.isLoading = false
-}
+  asyncOptions.isLoading = false;
+};
 
 const handleReturnClick = () => {
   if (isFromList.value) {
-    return window.history.go(-1)
+    return window.history.go(-1);
   }
 
-  router.push('/templates')
-}
+  router.push('/templates');
+};
 
 definePageMeta({
   // keepalive: false,
-})
+});
 
 const pageMeta = computed(() => {
   const title = template.value?.title
-    ? template.value?.title + " | AFFiNE"
-    : "Templates | AFFiNE - All In One KnowledgeOS"; // should always have a title`
-  const desc = template.value?.description || 'There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.'
-  const url = `${PATH.SHARE_HOST}/templates/${template.value?.slug}`
-  const image =  template.value?.cover || 'https://affine.pro/og.jpeg'
+    ? template.value?.title + ' | AFFiNE'
+    : 'Templates | AFFiNE - All In One KnowledgeOS'; // should always have a title`
+  const desc =
+    template.value?.description ||
+    'There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.';
+  const url = `${PATH.SHARE_HOST}/templates/${template.value?.slug}`;
+  const image = template.value?.cover || 'https://affine.pro/og.jpeg';
 
   return {
     title: template.value?.title,
@@ -103,21 +107,25 @@ const pageMeta = computed(() => {
       { name: 'twitter:description', content: desc },
       { name: 'twitter:image', content: image },
 
+      { name: 'description', content: desc },
+
       { name: 'og:title', content: title },
       { name: 'og:url', content: url },
       { name: 'og:description', content: desc },
       { name: 'og:image', content: image },
-    ]
-  }
-})
+    ],
+  };
+});
 
-await loadData()
+await loadData();
 
-useHead(pageMeta)
+useHead(pageMeta);
 
 onMounted(() => {
-  isFromList.value = store.context.lastPath === '/templates' && window.history.state.back === '/templates'
-})
+  isFromList.value =
+    store.context.lastPath === '/templates' &&
+    window.history.state.back === '/templates';
+});
 </script>
 
 <style lang="stylus">
