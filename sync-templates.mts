@@ -41,14 +41,16 @@ async function convertTemplatesToMarkdowns() {
     await ensureDir("./content/templates");
 
     // save template snapshots
-    for (const page of pages) {
-      const zip: Blob = await getTemplateSnapshot(page.templateId);
+    for (const [idx, page] of pages.entries()) {
+      console.log(`(${idx + 1}/${pages.length}) saving ${page.id}`);
       await fs.writeFile(
         `./content/templates/${page.slug}.json`,
         JSON.stringify(page, null, 2)
       );
+      const zip: Blob = await getTemplateSnapshot(page.templateId);
       const buffer = Buffer.from(await zip.arrayBuffer());
       await fs.writeFile(`./public/templates/snapshots/${page.id}.zip`, buffer);
+      console.log(`(${idx + 1}/${pages.length}) saved ${page.id}`);
     }
   } catch (error) {
     console.log("convertTemplatesToMarkdowns error", error);
