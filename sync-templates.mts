@@ -5,10 +5,22 @@ import {
   getTemplateWorkspacePages,
 } from "./services/templates/getWorkspacePages";
 
-async function ensureDir(path: string) {
-  if (!(await fs.stat(path)).isDirectory()) {
-    await fs.mkdir(path, { recursive: true });
+async function checkDir(path: string) {
+  try {
+    if ((await fs.stat(path)).isDirectory()) {
+      return true;
+    }
+  } catch (error) {
+    return false;
   }
+  return false;
+}
+
+async function ensureDir(path: string) {
+  if (await checkDir(path)) {
+    return;
+  }
+  await fs.mkdir(path, { recursive: true });
 }
 
 function cleanTemplates() {
