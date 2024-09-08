@@ -1,4 +1,3 @@
-import gulp from "gulp";
 import fs from "fs/promises";
 import _ from "lodash";
 import {
@@ -6,7 +5,11 @@ import {
   getTemplateWorkspacePages,
 } from "./services/templates/getWorkspacePages";
 
-import file from "gulp-file";
+async function ensureDir(path: string) {
+  if (!(await fs.stat(path)).isDirectory()) {
+    await fs.mkdir(path, { recursive: true });
+  }
+}
 
 function cleanTemplates() {
   return fs.rm("./content/templates", { recursive: true, force: true });
@@ -22,18 +25,18 @@ async function convertTemplatesToMarkdowns() {
       throw new Error("No pages");
     }
 
-    _.uniqBy(pages, "slug").map((page, index) => {
-      return gulp
-        .src("/content/*")
-        .pipe(file(`${page.slug}.json`, JSON.stringify(page, null, 2)))
-        .pipe(gulp.dest("./content/templates"));
-    });
+    await ensureDir("./public/templates/snapshots");
+    await ensureDir("./content/templates");
 
     // save template snapshots
     for (const page of pages) {
       const zip: Blob = await getTemplateSnapshot(page.templateId);
+      await fs.writeFile(
+        `./content/templates/${page.slug}.json`,
+        JSON.stringify(page, null, 2)
+      );
       const buffer = Buffer.from(await zip.arrayBuffer());
-      fs.writeFile(`./public/templates/snapshots/${page.id}.zip`, buffer);
+      await fs.writeFile(`./public/templates/snapshots/${page.id}.zip`, buffer);
     }
   } catch (error) {
     console.log("convertTemplatesToMarkdowns error", error);
