@@ -5,6 +5,7 @@ import {
   getTemplateWorkspacePages,
 } from "./services/templates/getWorkspacePages";
 import { getWorkspacePages } from "./services/blog/getWorkspacePages";
+import path from "node:path";
 
 async function checkDir(path: string) {
   try {
@@ -24,6 +25,52 @@ async function ensureDir(path: string) {
   await fs.mkdir(path, { recursive: true });
 }
 
+function toBlobPath(blobId: string) {
+  return path.resolve(process.cwd(), `./public/blobs/${blobId}`);
+}
+
+async function blobExists(blobId: string) {
+  try {
+    const stat = await fs.stat(toBlobPath(blobId));
+    return stat.isFile();
+  } catch (error) {
+    return false;
+  }
+}
+
+async function ensureBlob(blobId: string) {
+  if (await blobExists(blobId)) {
+    return;
+  }
+  await ensureDir(path.dirname(toBlobPath(blobId)));
+  const blob = await fetch(
+    `https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/${blobId}`
+  );
+  const buffer = Buffer.from(await blob.arrayBuffer());
+  // todo: encode image with higher compression
+  await fs.writeFile(toBlobPath(blobId), buffer);
+}
+
+async function replaceBlobUrl(content: string) {
+  // find all blob urls of https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/uuid
+  const blobUrls = content.matchAll(
+    /https:\/\/app\.affine\.pro\/api\/workspaces\/qf73AF6vzWphbTJdN7KiX\/blobs\/([A-Za-z0-9=_-]+)/g
+  );
+  if (!blobUrls) {
+    return content;
+  }
+  content = content.replaceAll(
+    "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX",
+    ""
+  );
+  for (const blobUrl of blobUrls) {
+    // check if blob exists
+    const blobId = blobUrl[1];
+    await ensureBlob(blobId);
+  }
+  return content;
+}
+
 async function syncBlogs() {
   try {
     await fs.rm("./content/blog", { recursive: true, force: true });
@@ -40,10 +87,9 @@ async function syncBlogs() {
 
     for (const [idx, page] of pages.entries()) {
       console.log(`(${idx + 1}/${pages.length}) saving ${page.id}`);
-      await fs.writeFile(
-        `./content/blog/${page.slug}.json`,
-        JSON.stringify(page, null, 2)
-      );
+      let content = JSON.stringify(page, null, 2);
+      content = await replaceBlobUrl(content);
+      await fs.writeFile(`./content/blog/${page.slug}.json`, content);
     }
   } catch (error) {
     console.log("syncBlogs error", error);
@@ -69,10 +115,9 @@ async function syncTemplates() {
     // save template snapshots
     for (const [idx, page] of pages.entries()) {
       console.log(`(${idx + 1}/${pages.length}) saving ${page.id}`);
-      await fs.writeFile(
-        `./content/templates/${page.slug}.json`,
-        JSON.stringify(page, null, 2)
-      );
+      let content = JSON.stringify(page, null, 2);
+      content = await replaceBlobUrl(content);
+      await fs.writeFile(`./content/templates/${page.slug}.json`, content);
       const zip: Blob = await getTemplateSnapshot(page.templateId);
       const buffer = Buffer.from(await zip.arrayBuffer());
       await fs.writeFile(`./public/templates/snapshots/${page.id}.zip`, buffer);
