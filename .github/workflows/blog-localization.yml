@@ -24,10 +24,9 @@ jobs:
       - run: yarn install
       - name: "Run sync command"
         run: |
-          yarn sync-blog
-          yarn sync-templates
+          yarn sync-content
       - name: "Commit sync contents"
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[GitHub Action] Sync blog contents from AFFiNE Cloud"
-          file_pattern: "content/blog/*.json content/templates/*.json"
+          file_pattern: "content/blog/*.json content/templates/*.json public/templates/snapshots/*.zip"
