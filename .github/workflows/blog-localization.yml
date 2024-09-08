@@ -19,14 +19,15 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'yarn'
+          node-version: "18"
+          cache: "yarn"
       - run: yarn install
       - name: "Run sync command"
-        run: yarn sync-blog
-
+        run: |
+          yarn sync-blog
+          yarn sync-templates
       - name: "Commit sync contents"
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[GitHub Action] Sync blog contents from AFFiNE Cloud"
-          file_pattern: 'content/blog/*.json content/templates/*.json'
+          file_pattern: "content/blog/*.json content/templates/*.json"
