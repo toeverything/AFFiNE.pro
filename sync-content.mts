@@ -130,7 +130,7 @@ async function syncTemplates() {
 }
 
 async function main() {
-  // await syncBlogs();
+  await syncBlogs();
   await syncTemplates();
   process.exit(0);
 }
