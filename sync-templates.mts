@@ -61,6 +61,7 @@ async function convertTemplatesToMarkdowns() {
 async function main() {
   await cleanTemplates();
   await convertTemplatesToMarkdowns();
+  process.exit(0);
 }
 
 main();
