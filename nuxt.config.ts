@@ -70,11 +70,6 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon-96.png' },
         {
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap',
-          as: 'style',
-          rel: 'preload',
-        },
-        {
           href: 'https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap',
           as: 'style',
           rel: 'preload',
