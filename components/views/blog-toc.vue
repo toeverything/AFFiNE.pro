@@ -54,7 +54,7 @@ const handleHeadingClick = (id: string) => {
 
 <style lang="stylus">
 .blog-toc
-  max-height: s('calc(100vh - 370px)')
+  max-height: s('round(calc(100vh - 310px), 30px)')
 
   .heading
     font-weight: 500;
