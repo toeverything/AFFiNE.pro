@@ -207,6 +207,7 @@ const handleReturnClick = () => {
     width: 100%
     max-width: (190px + 50 + 600 + 40)
     left -120px
+    padding-bottom: fluid-value(20, 80)
 
     @media (max-width: 1200px)
       left: 0
@@ -298,8 +299,6 @@ const handleReturnClick = () => {
     font-size: 13px
     line-height: 19px
 
-  .article-detail
-    padding-bottom: fluid-value(20, 80)
 
   .all-posts-handler
     font-size: 16px;

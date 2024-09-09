@@ -43,7 +43,7 @@
 
   .sidebar-section.section-cta
     .headline-6.info-desc.mb-3 Start using AFFiNE today
-    app-entry-button( placement="landing_page_lower" size="action" )
+    app-entry-button( placement="blog_sidebar" size="action" )
 
 </template>
 
