@@ -51,7 +51,7 @@ async function crawlTemplates() {
       }
 
       // check if snapshot exists
-      const snapshotPath = path.join(rootDir, 'public', 'templates', 'snapshots', `${template.id}.zip`);
+      const snapshotPath = path.join(rootDir, 'public', 'templates', 'snapshots', `${template.templateId}.zip`);
       if (await fs.exists(snapshotPath)) {
         console.log(`snapshot exists for ${template.id}`);
       } else {
@@ -74,6 +74,7 @@ async function main() {
   await clean();
   await crawlTemplates();
   console.log('done');
+  process.exit(0);
 }
 
 main();
