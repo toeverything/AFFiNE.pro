@@ -111,7 +111,7 @@ const theme = computed<HeroTheme>(() => {
     line-height: 1.5;
     color: rgba(0, 0, 0, 0.6);
     margin-top: 13px
-    multiline-overflow(7)
+    multiline-overflow(6)
 
     @media $mediaColDir
       display: none

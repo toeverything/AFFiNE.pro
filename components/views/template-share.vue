@@ -3,6 +3,7 @@
   el-tooltip(
     :content="copied ? 'Copied' : 'Copy link'"
     effect="light"
+    :hide-after="50"
     popper-class="share-tooltip"
   )
     .handler( @click="handleLinkClick" )
@@ -10,6 +11,7 @@
   el-tooltip(
     content="Share to X"
     effect="light"
+    :hide-after="50"
     popper-class="share-tooltip"
   )
     .handler( @click="handleTwitterClick" )
@@ -17,20 +19,15 @@
   el-tooltip(
     content="Share to Reddit"
     effect="light"
+    :hide-after="50"
     popper-class="share-tooltip"
   )
     .handler( @click="handleRedditClick" )
       nuxt-icon.text-size-17px( name="reddit" )
   el-tooltip(
-    content="Share to Facebook"
-    effect="light"
-    popper-class="share-tooltip"
-  )
-    .handler( @click="handleFacebookClick" )
-      nuxt-icon( name="facebook" )
-  el-tooltip(
     content="Share to email"
     effect="light"
+    :hide-after="50"
     popper-class="share-tooltip"
   )
     .handler( @click="handleEmailClick" )
@@ -68,13 +65,6 @@ const handleTwitterClick = () => {
 
 const handleRedditClick = () => {
   window.open(`https://reddit.com/submit?url=${shareText.value}`, '_blank');
-};
-
-const handleFacebookClick = () => {
-  window.open(
-    `https://www.facebook.com/sharer/sharer.php?u=${shareText.value}`,
-    '_blank'
-  );
 };
 
 const handleEmailClick = () => {
