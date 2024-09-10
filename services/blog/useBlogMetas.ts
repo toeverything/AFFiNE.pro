@@ -1,5 +1,3 @@
-import type { ContentFileMeta } from './resolveContentFile'
-
 function getTags(blogMetas: ContentFileMeta[]) {
   const tagsMap = new Map<string, number>()
   blogMetas.forEach((meta) => {

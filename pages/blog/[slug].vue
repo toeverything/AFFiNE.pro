@@ -55,12 +55,12 @@
 </template>
 
 <script lang="ts" setup>
-import { useDateFormat, useScroll } from '@vueuse/core';
-import { PATH } from '~/utils/constants';
-import { primaryAPI } from '~/apis';
-import { USER_MAP } from '~/services/blog/userMap';
-import { renderHTML } from '~/services/blog/resolveContentFile';
-import type { ContentFileMeta } from '~/services/blog/resolveContentFile';
+
+import { useDateFormat, useScroll } from '@vueuse/core'
+import { PATH } from '~/utils/constants'
+import { primaryAPI } from '~/apis'
+import { USER_MAP } from '~/services/blog/userMap'
+import { renderHTML } from '~/services/blog/renderHTML'
 
 const article = ref<ContentFileMeta>();
 const html = ref('');

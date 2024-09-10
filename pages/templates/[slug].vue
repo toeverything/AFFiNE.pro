@@ -37,9 +37,9 @@
 <script lang="ts" setup>
 import { PATH } from '~/utils/constants';
 import { primaryAPI } from '~/apis';
-import { renderHTML } from '~/services/blog/resolveContentFile';
+import { renderHTML } from '~/services/blog/renderHTML';
 
-const template = ref<Template>();
+const template = ref<TemplateContentFileMeta>();
 const html = ref('');
 const store = useStore();
 const route = useRoute();

@@ -18,7 +18,7 @@ nuxt-link.template-card.flex.flex-col(
 <script setup lang="ts">
 const props = defineProps<{
   type: 'template' | 'blog'
-  meta: Template
+  meta: TemplateContentFileMeta
 }>()
 
 const isBlog = computed(() => props.type === 'blog')

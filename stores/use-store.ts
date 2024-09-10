@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia'
 import { RemovableRef, useLocalStorage } from '@vueuse/core'
 import { getCookie } from 'typescript-cookie'
-import { ContentFileMeta } from '~/services/blog/resolveContentFile'
 
 const userInitial = {
   username: null,
@@ -12,7 +11,7 @@ const userInitial = {
 type MainState = {
   user: RemovableRef<typeof userInitial>
   blog: ContentFileMeta[],
-  templates: Template[],
+  templates: TemplateContentFileMeta[],
   github: {
     starAmount: boolean | undefined
   },
@@ -62,7 +61,7 @@ export const useStore = defineStore('main', {
       }
       return token || state.user.token
     },
-    isAuthed (state) {
+    isAuthed(state) {
       // @ts-ignore
       return this.token || state.user.token
     }

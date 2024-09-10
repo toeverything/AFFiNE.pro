@@ -21,7 +21,7 @@ nuxt-link.template-hero-card(
 import Rand from 'rand-seed';
 
 const props = defineProps<{
-  meta: Template;
+  meta: TemplateContentFileMeta;
 }>();
 
 type HeroTheme = 'teal' | 'sky' | 'violet' | 'yellow' | 'rose' | 'emerald';
