@@ -299,7 +299,6 @@ const handleReturnClick = () => {
     font-size: 13px
     line-height: 19px
 
-
   .all-posts-handler
     font-size: 16px;
     font-weight: 500;
