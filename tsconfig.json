@@ -5,5 +5,8 @@
     "types": [
       "unplugin-icons/types/vue",
     ]
-  }
+  },
+  "exclude": [
+    "generation"
+  ]
 }

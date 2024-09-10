@@ -36,7 +36,6 @@ nuxt-link.blog-card.flex.flex-col(
 <script setup lang="ts">
 import { useDateFormat } from '@vueuse/core';
 import { USER_MAP } from '~/services/blog/userMap';
-import type { ContentFileMeta } from '~/services/blog/resolveContentFile';
 
 const props = defineProps<{
   meta: ContentFileMeta;

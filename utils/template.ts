@@ -1,6 +1,6 @@
 import { PATH } from '~/utils/constants';
 
-export const getTemplateCateMeta = (meta: Template) => {
+export const getTemplateCateMeta = (meta: TemplateContentFileMeta) => {
   if (!meta) return;
 
   const title = meta.cateTitle

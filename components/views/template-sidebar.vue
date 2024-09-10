@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  meta: Template;
+  meta: TemplateContentFileMeta;
 }>();
 
 const tags = computed(() => props.meta.tags);

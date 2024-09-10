@@ -1,18 +1,25 @@
 {
+  "id": "fdis8EJPIuXr4DNracwsy",
+  "createDate": 1701918557079,
+  "favorite": false,
   "title": "AFFiNE Web Version Upgrade - Dec 2023",
-  "authors": [
-    "Christopher Smolak"
-  ],
+  "updatedDate": 1704357262477,
+  "guid": "fdis8EJPIuXr4DNracwsy",
+  "author": "Christopher Smolak",
   "tags": [
     "User Guide"
   ],
+  "slug": "affine-web-version-upgrade-12-2023",
   "description": "“There are some important changes coming to the web version of AFFiNE. Please take note and make sure you've backed up your data.”",
   "created": 1701388800000,
   "updated": 1701907200000,
   "layout": "blog",
-  "id": "fdis8EJPIuXr4DNracwsy",
-  "slug": "affine-web-version-upgrade-12-2023",
-  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/iRK4908FcqUxVe56Cla5ppvLNQbTv-Vlhct00gGuBwU=.webp",
-  "md": "---\n\n\ntitle: \"AFFiNE Web Version Upgrade - Dec 2023\"\n\n\nauthor: Christopher Smolak\n\n\ntags: User Guide\n\n\nslug: affine-web-version-upgrade-12-2023\n\n\ndescription: “There are some important changes coming to the web version of AFFiNE. Please take note and make sure you've backed up your data.”\n\n\ncreated: 2023-12-01\n\n\nupdated: 2023-12-07\n\n\nlayout: blog\n\n\npublish: true\n\n\n---\n\n\n\n![iRK4908FcqUxVe56Cla5ppvLNQbTv-Vlhct00gGuBwU=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/iRK4908FcqUxVe56Cla5ppvLNQbTv-Vlhct00gGuBwU=.webp)\n\n\nThere are some important changes coming to the web version of AFFiNE. Make sure you understand the changes to ensure you keep your data safe.\n\n\n\n\n\n**We always recommend you use the latest [AFFiNE Client](https://affine.pro/download) and activate AFFiNE Cloud.**\n\n\n\n\n\n### What is happening?\n\n\nWe are upgrading [app.affine.pro](https://app.affine.pro) to use the latest version of AFFiNE. At the time of publishing this article, the [app.affine.pro](https://app.affine.pro) web app uses an old version of AFFiNE Cloud which is no longer supported. We will upgrade this web version and retire the old version - along with the old data. These changes are planned for December 14th - 15th (Singapore Standard Time).\n\n\n\n\n\n### What do I need to do?\n\n\n\n\n\n#### If you have ever used [app.affine.pro](https://app.affine.pro)\n\n\n* Head over to [app.affine.pro](https://app.affine.pro) and backup all your data - local and cloud workspaces\n\n\n* All local data will be completely lost after the upgrade\n\n\n* We will keep a temporary copy of AFFiNE Cloud data on [archive.affine.pro](https://archive.affine.pro) (live from next week for a limited period)\n\n\n#### If you are using [insider.affine.pro](https://insider.affine.pro)\n\n\n* Your AFFiNE Cloud data will be accessible on the new [app.affine.pro](https://app.affine.pro) version after it is updated\n\n\n* You will lose access to any local storage data - we advise you to download the [AFFiNE Client](https://affine.pro/download) and activate AFFiNE Cloud\n\n\n#### If you are using the [AFFiNE Client](https://affine.pro/download)\n\n\n* There's no action you need to take\n\n\n\n\n\n### More questions?\n\n\nIf you still have questions or concerns please do email us: [support@toeverything.info](mailto:support@toeverything.info)\n\n\n\n\n\n\n\n\n\n\n\n",
-  "publish": true
+  "publish": true,
+  "authors": [
+    "Christopher Smolak"
+  ],
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/iRK4908FcqUxVe56Cla5ppvLNQbTv-Vlhct00gGuBwU=",
+  "coverAlt": "",
+  "md": "There are some important changes coming to the web version of AFFiNE. Make sure you understand the changes to ensure you keep your data safe.\n\n\n\n\n\n**We always recommend you use the latest [AFFiNE Client](https://affine.pro/download) and activate AFFiNE Cloud.**\n\n\n\n\n\n### What is happening?\n\n\nWe are upgrading [app.affine.pro](https://app.affine.pro) to use the latest version of AFFiNE. At the time of publishing this article, the [app.affine.pro](https://app.affine.pro) web app uses an old version of AFFiNE Cloud which is no longer supported. We will upgrade this web version and retire the old version - along with the old data. These changes are planned for December 14th - 15th (Singapore Standard Time).\n\n\n\n\n\n### What do I need to do?\n\n\n\n\n\n#### If you have ever used [app.affine.pro](https://app.affine.pro)\n\n\n* Head over to [app.affine.pro](https://app.affine.pro) and backup all your data - local and cloud workspaces\n\n\n* All local data will be completely lost after the upgrade\n\n\n* We will keep a temporary copy of AFFiNE Cloud data on [archive.affine.pro](https://archive.affine.pro) (live from next week for a limited period)\n\n\n#### If you are using [insider.affine.pro](https://insider.affine.pro)\n\n\n* Your AFFiNE Cloud data will be accessible on the new [app.affine.pro](https://app.affine.pro) version after it is updated\n\n\n* You will lose access to any local storage data - we advise you to download the [AFFiNE Client](https://affine.pro/download) and activate AFFiNE Cloud\n\n\n#### If you are using the [AFFiNE Client](https://affine.pro/download)\n\n\n* There's no action you need to take\n\n\n\n\n\n### More questions?\n\n\nIf you still have questions or concerns please do email us: [support@toeverything.info](mailto:support@toeverything.info)\n\n\n\n\n\n\n\n\n\n\n\n",
+  "valid": true
 }

@@ -24,7 +24,7 @@
 const props = defineProps<{
   title: string,
   type: 'template' | 'blog',
-  meta: Template,
+  meta: TemplateContentFileMeta,
 }>()
 
 const store = useStore()

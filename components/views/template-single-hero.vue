@@ -34,7 +34,7 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  meta: Template
+  meta: TemplateContentFileMeta
 }>()
 </script>
 

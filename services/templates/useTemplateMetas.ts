@@ -1,4 +1,4 @@
-function getTags(templateMetas: Template[]) {
+function getTags(templateMetas: TemplateContentFileMeta[]) {
   const tagsMap = new Map<string, number>();
   templateMetas.forEach((meta) => {
     meta.tags?.forEach((tag) => {
@@ -12,7 +12,7 @@ function getTags(templateMetas: Template[]) {
   return Array.from(tagsMap);
 }
 
-function getCates(templateMetas: Template[]) {
+function getCates(templateMetas: TemplateContentFileMeta[]) {
   const catesMap = new Map<string, string>();
   templateMetas.forEach((meta) => {
     catesMap.set(meta.cateName || meta?.tags[0], meta.cateSlug);
@@ -21,7 +21,7 @@ function getCates(templateMetas: Template[]) {
 }
 
 export const useTemplateMetas = (
-  templateMetas: Template[],
+  templateMetas: TemplateContentFileMeta[],
   query?: { tag: string }
 ) => {
   const publishedMetas = templateMetas
@@ -45,8 +45,8 @@ export const useTemplateMetas = (
   const cates = getCates(publishedMetas);
   let filteredMetas = query?.tag
     ? publishedMetas.filter(
-        (meta) => meta.tags?.includes(query.tag) || meta.cateSlug === query.tag
-      )
+      (meta) => meta.tags?.includes(query.tag) || meta.cateSlug === query.tag
+    )
     : publishedMetas;
 
   if (query?.tag && filteredMetas.length > 0) {

@@ -1,20 +1,25 @@
 {
+  "id": "2cc5b2d5e7db4dcc99526125eeb5d67c",
   "title": "AFFiNE 0729 V0.0.1-alpha.0.3.2 Release Notes",
+  "createDate": 1680147991871,
+  "guid": "d4e09e1e-78b7-440d-bf57-2093eb547182",
+  "author": "Jiachen He, Fangyuan Zheng, Fanjing Zhang",
+  "tags": [
+    "Release Note"
+  ],
+  "slug": "affine-0729-v0.0.1-alpha.0.3.2-release-notes",
+  "description": "Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows",
+  "created": 1659052800000,
+  "updated": 1659052800000,
+  "layout": "blog",
+  "publish": true,
   "authors": [
     "Jiachen He",
     "Fangyuan Zheng",
     "Fanjing Zhang"
   ],
-  "tags": [
-    "Release Note"
-  ],
-  "description": "Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows",
-  "created": 1659052800000,
-  "updated": 1659052800000,
-  "layout": "blog",
-  "id": "2cc5b2d5e7db4dcc99526125eeb5d67c",
-  "slug": "affine-0729-v0.0.1-alpha.0.3.2-release-notes",
-  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/oaG84jFRwPu2fG2dLRqt9D7zOi5o-kZWLBXLA_lZHuI=.webp",
-  "md": "---\n\n\ntitle: AFFiNE 0729 V0.0.1-alpha.0.3.2 Release Notes\n\n\nauthor: Jiachen He, Fangyuan Zheng, Fanjing Zhang\n\n\ntags: Release Note\n\n\nslug: affine-0729-v0.0.1-alpha.0.3.2-release-notes\n\n\ndescription: Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows\n\n\ncreated: 2022-07-29\n\n\nupdated: 2022-07-29\n\n\nlayout: blog\n\n\npublish: true\n\n\n---\n\n\n\n![oaG84jFRwPu2fG2dLRqt9D7zOi5o-kZWLBXLA_lZHuI=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/oaG84jFRwPu2fG2dLRqt9D7zOi5o-kZWLBXLA_lZHuI=.webp)\n\n\n**Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows:**\n\n\n### **Bug Fixes**\n\n\nIn our continued effort to make AFFiNE the most reliable all in one knowledge base 展开, fixing bugs is always our main concern. Here's our work in the last few days:\n\n\n* Fixed: The position of the selection created by the left mouse button in page mode is fixed when the page is scrolled;\n\n\n* Fixed: The pop-up box of the tag system in kanban view will be obscured by the card;\n\n\n* Fixed: The top toolbar right setting center icon shows the wrong style when open;\n\n\n* Fixed: When selecting a color from the left toolbar \"pencil\" in board mode, the bubble style is wrong when the mouse hovers;\n\n\n* Fixed: When deleting a selected block group, the shapes within the group cannot be deleted;\n\n\n* Fixed: Dragging the block left, and right will bring up two delete buttons in board mode;\n\n\n* Fixed: The color card of the tag system needs to be aligned with the design;\n\n\n* Fixed: The tags that have been added to the article can be modified by popping up an edit box when the mouse is clicked;\n\n\n* Fixed: Wrong position of the line under the text when the mouse hovers to wake up the tag system;\n\n\n* Fixed: The default value of \"Field Title\" of the tag-added card is set;\n\n\n* Fixed: Top toolbar and left function list layout optimization.\n\n\nAFFiNE is currently in the early alpha stage with limited access, and public early access will be available in the autumn of 2022.\n\n\nAFFiNE is an open-source project which can be viewed on Github: [https://github.com/toeverything/AFFiNE#readme](https://github.com/toeverything/AFFiNE#readme)\n\n\nIf you endorse this open source project, please help us by clicking the GitHub star, which is crucial for the future development of AFFiNE.\n\n\nAFFiNE is very grateful to all open source contributors and will work to build a more positive open source ecosystem.\n\n\nHope you have a nice time with AFFiNE!\n\n\n",
-  "publish": true
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/oaG84jFRwPu2fG2dLRqt9D7zOi5o-kZWLBXLA_lZHuI=",
+  "coverAlt": "",
+  "md": "**Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows:**\n\n\n### **Bug Fixes**\n\n\nIn our continued effort to make AFFiNE the most reliable all in one knowledge base 展开, fixing bugs is always our main concern. Here's our work in the last few days:\n\n\n* Fixed: The position of the selection created by the left mouse button in page mode is fixed when the page is scrolled;\n\n\n* Fixed: The pop-up box of the tag system in kanban view will be obscured by the card;\n\n\n* Fixed: The top toolbar right setting center icon shows the wrong style when open;\n\n\n* Fixed: When selecting a color from the left toolbar \"pencil\" in board mode, the bubble style is wrong when the mouse hovers;\n\n\n* Fixed: When deleting a selected block group, the shapes within the group cannot be deleted;\n\n\n* Fixed: Dragging the block left, and right will bring up two delete buttons in board mode;\n\n\n* Fixed: The color card of the tag system needs to be aligned with the design;\n\n\n* Fixed: The tags that have been added to the article can be modified by popping up an edit box when the mouse is clicked;\n\n\n* Fixed: Wrong position of the line under the text when the mouse hovers to wake up the tag system;\n\n\n* Fixed: The default value of \"Field Title\" of the tag-added card is set;\n\n\n* Fixed: Top toolbar and left function list layout optimization.\n\n\nAFFiNE is currently in the early alpha stage with limited access, and public early access will be available in the autumn of 2022.\n\n\nAFFiNE is an open-source project which can be viewed on Github: [https://github.com/toeverything/AFFiNE#readme](https://github.com/toeverything/AFFiNE#readme)\n\n\nIf you endorse this open source project, please help us by clicking the GitHub star, which is crucial for the future development of AFFiNE.\n\n\nAFFiNE is very grateful to all open source contributors and will work to build a more positive open source ecosystem.\n\n\nHope you have a nice time with AFFiNE!\n\n\n",
+  "valid": true
 }

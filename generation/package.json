@@ -1,0 +1,19 @@
+{
+  "name": "generation",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Scripts for generating static content",
+  "scripts": {
+    "sync-blog": "tsx sync-blog.ts",
+    "sync-changelog": "tsx sync-changelog.ts",
+    "sync-template": "tsx sync-template.ts"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "affine-reader": "^3.1.3",
+    "fs-extra": "^11.2.0",
+    "tsx": "^4.19.0"
+  },
+  "type": "module",
+  "packageManager": "yarn@1.22.19"
+}

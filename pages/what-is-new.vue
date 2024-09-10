@@ -49,7 +49,7 @@ const asyncOptions = reactive({
   isLoading: true,
   isError: false
 })
-const changelogs = ref([
+const changelogs = ref<Changelog[]>([
   {
     title: `What’s new  -  AFFiNE- 20230601`,
     version: '0.6.0 - stable/beta',
@@ -71,6 +71,7 @@ const changelogs = ref([
 const washedChangelogs = computed(() => {
   return changelogs.value
     .map(el => {
+      // @ts-ignore
       el.date = new Date(el.date).getTime()
       return el
     })
@@ -83,13 +84,13 @@ const washedChangelogs = computed(() => {
       } else {
         return 0
       }
-  })
+    })
 })
 
 const loadData = async () => {
   try {
     asyncOptions.isLoading = true
-    const { list } = await primaryAPI.getChangelogs()
+    const list = await primaryAPI.getChangelogs()
     if (list) {
       changelogs.value = list
     }

@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { renderHTML } from '~/services/blog/resolveContentFile'
+import { renderHTML } from '~/services/blog/renderHtml'
 
 const props = defineProps<{
   md: string

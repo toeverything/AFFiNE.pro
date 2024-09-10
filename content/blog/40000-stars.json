@@ -1,18 +1,23 @@
 {
+  "id": "TEhIJC5lIOeoB3_wRfsyJ",
   "title": "40,000 Stars and Counting: A Look Back at AFFiNE’s Journey",
-  "authors": [
-    "AFFiNE Team"
-  ],
+  "createDate": 1725522504217,
+  "updatedDate": 1725953645703,
+  "guid": "TEhIJC5lIOeoB3_wRfsyJ",
+  "author": "AFFiNE Team",
   "tags": [
     "Content"
   ],
+  "slug": "40000-stars",
   "description": "Discover the journey behind AFFiNE’s 40,000 stars milestone in our latest blog post. Explore key milestones, challenges overcome, and inspiring user stories that showcase how AFFiNE has transformed workflows and empowered creativity. Join us in celebrating this significant achievement and learn about the impact of our vibrant community",
   "created": 1725840000000,
-  "updated": null,
   "layout": "blog",
-  "id": "TEhIJC5lIOeoB3_wRfsyJ",
-  "slug": "40000-stars",
-  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/iw4ol26frrarm54C4VIF7glSVz20sjLfaoZlbnGeV7M=.webp",
-  "md": "---\n\n\ntitle: \"40,000 Stars and Counting: A Look Back at AFFiNE’s Journey\"\n\n\nauthor: \"AFFiNE Team\"\n\n\ntags: Content\n\n\nslug: 40000-stars\n\n\ndescription: \"Discover the journey behind AFFiNE’s 40,000 stars milestone in our latest blog post. Explore key milestones, challenges overcome, and inspiring user stories that showcase how AFFiNE has transformed workflows and empowered creativity. Join us in celebrating this significant achievement and learn about the impact of our vibrant community\"\n\n\ncreated: 2024-09-09\n\n\nlayout: blog\n\n\npublish: true\n\n\n---\n\n\n\n![iw4ol26frrarm54C4VIF7glSVz20sjLfaoZlbnGeV7M=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/iw4ol26frrarm54C4VIF7glSVz20sjLfaoZlbnGeV7M=.webp)\n\n\n## To our incredible community,\n\n\nWe are thrilled to announce a significant milestone: reaching 40,000 stars! This achievement is more than just a number; it represents the passion, dedication, and belief you’ve all shown throughout this journey.\n\n\nReaching [**40,000 stars**](https://github.com/toeverything/AFFiNE) is more than just a milestone – it's a testament to the passion, dedication, and belief you’ve all shown in this journey.Every contribution, whether it’s a star, a line of code, or a piece of feedback, has helped shape this project into what it is today.\n\n\nYou've not only fueled the growth of this software, but you've become part of a thriving community that supports one another and drives progress together. This achievement belongs to each and every one of you.From the bottom of our hearts, **thank you** for being a part of this adventure.\n\n\nEvery star, line of code, and piece of feedback has played a crucial role in shaping our project. Your support has not only driven the growth of this software but has also fostered a vibrant community where everyone supports each other and pushes progress forward.\n\n\nThis milestone belongs to each and every one of you. We are deeply grateful for your involvement and for being an integral part of this adventure. As we look to the future, we are more committed than ever to continuing this remarkable journey together.\n\n\nThank you for your unwavering support. Here’s to many more milestones and successes ahead!\n\n\nWith heartfelt thanks,\n\n\n### The AFFiNE Team\n\n\n\n\n\n",
-  "publish": true
+  "publish": true,
+  "authors": [
+    "AFFiNE Team"
+  ],
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/iw4ol26frrarm54C4VIF7glSVz20sjLfaoZlbnGeV7M=",
+  "coverAlt": "",
+  "md": "## To our incredible community,\n\n\nWe are thrilled to announce a significant milestone: reaching 40,000 stars! This achievement is more than just a number; it represents the passion, dedication, and belief you’ve all shown throughout this journey.\n\n\nReaching [**40,000 stars**](https://github.com/toeverything/AFFiNE) is more than just a milestone – it's a testament to the passion, dedication, and belief you’ve all shown in this journey.Every contribution, whether it’s a star, a line of code, or a piece of feedback, has helped shape this project into what it is today.\n\n\nYou've not only fueled the growth of this software, but you've become part of a thriving community that supports one another and drives progress together. This achievement belongs to each and every one of you.From the bottom of our hearts, **thank you** for being a part of this adventure.\n\n\nEvery star, line of code, and piece of feedback has played a crucial role in shaping our project. Your support has not only driven the growth of this software but has also fostered a vibrant community where everyone supports each other and pushes progress forward.\n\n\nThis milestone belongs to each and every one of you. We are deeply grateful for your involvement and for being an integral part of this adventure. As we look to the future, we are more committed than ever to continuing this remarkable journey together.\n\n\nThank you for your unwavering support. Here’s to many more milestones and successes ahead!\n\n\nWith heartfelt thanks,\n\n\n### The AFFiNE Team\n\n\n\n\n\n",
+  "valid": true
 }

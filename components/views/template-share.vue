@@ -44,7 +44,7 @@ import { useClipboard } from '@vueuse/core';
 const { copy, copied } = useClipboard();
 
 const props = defineProps<{
-  meta: Template;
+  meta: TemplateContentFileMeta;
 }>();
 
 const templateLink = computed(() => {

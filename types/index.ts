@@ -1,4 +1,4 @@
-export {};
+export { };
 
 declare global {
   interface Asset {
@@ -39,32 +39,29 @@ declare global {
     content: string;
   }
 
-  interface Template {
-    title: string;
-    tags: string[];
-    id: string;
-    slug: string;
-    cover: string;
-    coverAlt: string;
-    theme: any;
-    description: string;
-    created: number;
-    updated: number;
-    md: string;
-    publish: boolean;
+  interface ContentFileMeta {
+    title: string | null
+    authors: string[] | null
+    tags: string[] | null
+    id: string
+    slug: string | null
+    cover?: string | null
+    coverAlt?: string;
+    description: string | null
+    created: number | null
+    updated: number | null
+    md: string
+    layout: string | null
+    publish?: boolean
+  }
 
-    // Removed fields
-    // layout: string
-    // authors: []string
-    // html: string
-
+  interface TemplateContentFileMeta extends ContentFileMeta {
     // New fields
     cateTitle: string;
     cateName: string;
     cateSlug: string;
     relatedTemplates: string[];
     relatedBlogs: string[];
-    order: number;
     useTemplateUrl: string;
     previewUrl: string;
   }

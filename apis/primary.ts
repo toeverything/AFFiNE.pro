@@ -1,10 +1,8 @@
-import { ContentFileMeta } from '~/services/blog/resolveContentFile'
-
 const FOUR_HOURS = 1000 * 3600 * 4
 
 class PrimaryAPI {
 
-  async getBlog () {
+  async getBlog() {
     const store = useStore()
 
     if (process.client) {
@@ -35,14 +33,14 @@ class PrimaryAPI {
     }
   }
 
-  async getTemplates () {
+  async getTemplates() {
     const store = useStore()
 
     if (process.client) {
       if (store.templates.length) return store.templates
     }
     try {
-      const res = await queryContent<Template>('templates')
+      const res = await queryContent<TemplateContentFileMeta>('templates')
         .find()
       store.templates = res
       return res
@@ -51,19 +49,44 @@ class PrimaryAPI {
     }
   }
 
-  async getReleases () {
+  async getReleases() {
     const res = await useFetchWithCache<Release[]>('/api/releases', FOUR_HOURS)
     return res.value
   }
 
-  async getReleaseTabs () {
+  async getReleaseTabs() {
     const res = await useFetchWithCache<ReleaseTab[]>('/api/release-tabs', FOUR_HOURS)
     return res.value
   }
 
-  async getChangelogs () {
-    const res = await useFetchWithCache<Changelog[]>('/api/changelogs', FOUR_HOURS)
-    return res.value
+  async getChangelogs() {
+    const store = useStore()
+
+    if (process.client) {
+      if (store.changelogs.length) return store.changelogs
+    }
+    try {
+      const res = await queryContent<Changelog>('/changelogs').find()
+
+      if (res?.length) {
+        store.changelogs = res.sort(({ date: a }, { date: b }) => {
+          if (a === null || b === null) {
+            return 0
+          }
+          if (a < b) {
+            return 1
+          }
+          if (a > b) {
+            return -1
+          } else {
+            return 0
+          }
+        })
+      }
+      return res
+    } catch (error) {
+      console.log('getChangelogs error', error)
+    }
   }
 
 }
