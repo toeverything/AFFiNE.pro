@@ -12,13 +12,9 @@
   },
   "type": "module",
   "dependencies": {
-    "@blocksuite/blocks": "^0.5.0-alpha.1",
-    "@blocksuite/editor": "^0.5.0-alpha.1",
-    "@blocksuite/store": "^0.5.0-alpha.1",
     "@splinetool/runtime": "^0.9.489",
     "@vueuse/core": "^9.12.0",
     "axios": "^1.3.2",
-    "buffer": "^6.0.3",
     "cacheables": "^1.2.2",
     "element-plus": "^2.2.29",
     "gsap": "^3.11.5",

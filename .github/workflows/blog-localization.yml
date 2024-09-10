@@ -22,8 +22,13 @@ jobs:
           node-version: '18'
           cache: 'yarn'
       - run: yarn install
+        working-directory: ./generation
       - name: "Run sync command"
-        run: yarn sync-blog
+        working-directory: ./generation
+        run: |
+          yarn sync-blog
+          yarn sync-template
+          yarn sync-changelog
 
       - name: "Commit sync contents"
         uses: stefanzweifel/git-auto-commit-action@v4

@@ -12,6 +12,7 @@ type MainState = {
   user: RemovableRef<typeof userInitial>
   blog: ContentFileMeta[],
   templates: TemplateContentFileMeta[],
+  changelogs: Changelog[],
   github: {
     starAmount: boolean | undefined
   },
@@ -47,6 +48,7 @@ export const useStore = defineStore('main', {
 
     blog: [],
     templates: [],
+    changelogs: [],
 
     // Entity
     domain: {

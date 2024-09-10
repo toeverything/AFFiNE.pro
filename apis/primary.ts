@@ -60,8 +60,33 @@ class PrimaryAPI {
   }
 
   async getChangelogs() {
-    const res = await useFetchWithCache<Changelog[]>('/api/changelogs', FOUR_HOURS)
-    return res.value
+    const store = useStore()
+
+    if (process.client) {
+      if (store.changelogs.length) return store.changelogs
+    }
+    try {
+      const res = await queryContent<Changelog>('/changelogs').find()
+
+      if (res?.length) {
+        store.changelogs = res.sort(({ date: a }, { date: b }) => {
+          if (a === null || b === null) {
+            return 0
+          }
+          if (a < b) {
+            return 1
+          }
+          if (a > b) {
+            return -1
+          } else {
+            return 0
+          }
+        })
+      }
+      return res
+    } catch (error) {
+      console.log('getChangelogs error', error)
+    }
   }
 
 }

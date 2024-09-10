@@ -1,20 +1,26 @@
 {
+  "id": "5fb2b59082614cf6b9de9a82c6f78f36",
   "title": "A Recommendation for interface-based programming",
+  "createDate": 1680147991871,
+  "trash": false,
+  "guid": "6185468e-31a6-461b-aabf-48fb13bbc547",
+  "author": "Chi Zhang, Ran Chen, Fanjing Zhang",
+  "tags": [
+    "Let’s make XXX"
+  ],
+  "slug": "a-recommendation-for-interface-based-programming",
+  "description": "When implementing custom data structures, it is best to keep methods such as forEach, find and findLast coherent with Javascript's interface standards",
+  "created": 1657238400000,
+  "updated": 1657238400000,
+  "layout": "blog",
+  "publish": true,
   "authors": [
     "Chi Zhang",
     "Ran Chen",
     "Fanjing Zhang"
   ],
-  "tags": [
-    "Let’s make XXX"
-  ],
-  "description": "When implementing custom data structures, it is best to keep methods such as forEach, find and findLast coherent with Javascript's interface standards",
-  "created": 1657238400000,
-  "updated": 1657238400000,
-  "layout": "blog",
-  "id": "5fb2b59082614cf6b9de9a82c6f78f36",
-  "slug": "a-recommendation-for-interface-based-programming",
-  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/CUeJwGnhp58p-ySwHHeG36rSJ6_peWKOk21yfW-be-g=.webp",
-  "md": "---\n\n\ntitle: A Recommendation for interface-based programming\n\n\nauthor: Chi Zhang, Ran Chen, Fanjing Zhang\n\n\ntags: Let’s make XXX\n\n\nslug: a-recommendation-for-interface-based-programming\n\n\ndescription: When implementing custom data structures, it is best to keep methods such as forEach, find and findLast coherent with Javascript's interface standards\n\n\ncreated: 2022-07-08\n\n\nupdated: 2022-07-08\n\n\nlayout: blog\n\n\npublish: true\n\n\n---\n\n\n\n![CUeJwGnhp58p-ySwHHeG36rSJ6_peWKOk21yfW-be-g=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/CUeJwGnhp58p-ySwHHeG36rSJ6_peWKOk21yfW-be-g=.webp)\n\n\nWhen implementing custom data structures, it is best to keep methods such as forEach, find and findLast coherent with Javascript's interface standards. This is beneficial to the future upgrade of data structure, and also saves you time to remember different realization processes of the same interfaces. Taking forEach as an example [1]:\n\n\nThe forEach() method executes the provided callback once for each value which actually exists in the Set object. It is not invoked for values which have been deleted. However, it is executed for values which are present but have the value undefined.\n\n\nCallback is invoked with three arguments:\n\n\n* the element value\n\n\n* the element key\n\n\n* the set object being traversed\n\n\nThere are no keys in Set objects, however, so the first two arguments are both values contained in the Set. This is to make it consistent with other forEach() methods for Map and Array.\n\n\nIf a thisArg parameter is provided to forEach(), it will be passed to callback when invoked, for use as its this value. Otherwise, the value undefined will be passed for use as its this value. The this value ultimately observable by callback is determined according to the usual rules for determining the this seen by a function.\n\n\nEach value is visited once, except in the case when it was deleted and re-added before forEach() has finished. callback is not invoked for values deleted before being visited. New values added before forEach() has finished will be visited.\n\n\nforEach() executes the callback function once for each element in the Set object; it does not return a value.\n\n\nIn this case, it is not hard to tell that interface-based programming is a time saver. Without interface-based programming, software architecture cannot be low in coupling and high in cohesion.\n\n\n# References\n\n\n[1]. [MDN contributors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach/contributors.txt). (Mar 28, 2022). _Set.prototype.forEach()_. MDN Web Docs. [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach)\n\n\n",
-  "publish": true
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/CUeJwGnhp58p-ySwHHeG36rSJ6_peWKOk21yfW-be-g=",
+  "coverAlt": "",
+  "md": "When implementing custom data structures, it is best to keep methods such as forEach, find and findLast coherent with Javascript's interface standards. This is beneficial to the future upgrade of data structure, and also saves you time to remember different realization processes of the same interfaces. Taking forEach as an example [1]:\n\n\nThe forEach() method executes the provided callback once for each value which actually exists in the Set object. It is not invoked for values which have been deleted. However, it is executed for values which are present but have the value undefined.\n\n\nCallback is invoked with three arguments:\n\n\n* the element value\n\n\n* the element key\n\n\n* the set object being traversed\n\n\nThere are no keys in Set objects, however, so the first two arguments are both values contained in the Set. This is to make it consistent with other forEach() methods for Map and Array.\n\n\nIf a thisArg parameter is provided to forEach(), it will be passed to callback when invoked, for use as its this value. Otherwise, the value undefined will be passed for use as its this value. The this value ultimately observable by callback is determined according to the usual rules for determining the this seen by a function.\n\n\nEach value is visited once, except in the case when it was deleted and re-added before forEach() has finished. callback is not invoked for values deleted before being visited. New values added before forEach() has finished will be visited.\n\n\nforEach() executes the callback function once for each element in the Set object; it does not return a value.\n\n\nIn this case, it is not hard to tell that interface-based programming is a time saver. Without interface-based programming, software architecture cannot be low in coupling and high in cohesion.\n\n\n# References\n\n\n[1]. [MDN contributors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach/contributors.txt). (Mar 28, 2022). _Set.prototype.forEach()_. MDN Web Docs. [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach)\n\n\n",
+  "valid": true
 }
