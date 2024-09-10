@@ -37,7 +37,7 @@
 <script lang="ts" setup>
 import { PATH } from '~/utils/constants';
 import { primaryAPI } from '~/apis';
-import { renderHTML } from '~/services/blog/renderHTML';
+import { renderHTML } from '~/services/blog/renderHtml';
 
 const template = ref<TemplateContentFileMeta>();
 const html = ref('');

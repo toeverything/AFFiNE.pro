@@ -1,4 +1,8 @@
-import path from 'path';
+const ALLOW_ORIGINS = new Set([
+  'https://affine.pro',
+  'https://insider.affine.pro',
+  'https://affine.fail',
+])
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -7,6 +11,15 @@ export default defineNuxtConfig({
     public: {
       ENV: process.env.NODE_ENV,
       UPDATED_DATE: Date.now(),
+    },
+  },
+
+  security: {
+    corsHandler: {
+      origin: (origin: string) => ALLOW_ORIGINS.has(origin),
+      methods: ['GET', 'HEAD', 'OPTIONS'],
+      allowHeaders: '*',
+      exposeHeaders: '*',
     },
   },
 
@@ -130,6 +143,7 @@ export default defineNuxtConfig({
     '@zadigetvoltaire/nuxt-gtm',
     '@unocss/nuxt',
     '@pinia/nuxt',
+    'nuxt-security',
   ],
 
   gtm: {
@@ -175,4 +189,4 @@ export default defineNuxtConfig({
       baseURL: 'https://affine.pro',
     },
   },
-});
+})
