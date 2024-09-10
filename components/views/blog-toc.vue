@@ -56,6 +56,28 @@ const handleHeadingClick = (id: string) => {
 .blog-toc
   max-height: s('round(calc(48vh), 30px)')
   overflow-y: auto
+  padding-right: 20px
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 70%, 1);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 318ms;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: hsla(0, 0%, 50%, 1);
+  }
 
   .heading
     font-weight: 500;

@@ -121,6 +121,9 @@ const handleEmailClick = () => {
   .section-toc
     overflow hidden
 
+  .section-cta
+    padding-right: 20px
+
 .share-tooltip
   border-radius: 6px
   --el-border-color-light: #eee

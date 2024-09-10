@@ -201,7 +201,7 @@ const handleReturnClick = () => {
   .content-container
     position relative
     display flex
-    gap: 50px
+    gap: 30px
     padding: 0 20px
     margin: 0 auto
     width: 100%
@@ -213,8 +213,8 @@ const handleReturnClick = () => {
       left: 0
 
     .blog-sidebar
-      flex: 190
-      max-width: 190px
+      flex: 210
+      max-width: 210px
 
     .content-row
       flex: 600
