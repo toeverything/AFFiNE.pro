@@ -50,20 +50,15 @@ async function crawlTemplates() {
         cateSlug: category.slug,
       }
 
-      // check if snapshot exists
       const snapshotPath = path.join(rootDir, 'public', 'templates', 'snapshots', `${template.templateId}.zip`);
-      if (await fs.exists(snapshotPath)) {
-        console.log(`snapshot exists for ${template.id}`);
-      } else {
-        const zip = await reader.getDocSnapshot(template.templateId);
-        if (!zip) {
-          console.log(`no snapshot for ${template.templateId}`);
-          continue;
-        }
-        const buffer = Buffer.from(await zip.arrayBuffer());
-        await fs.writeFile(path.join(rootDir, 'public', 'templates', 'snapshots', `${template.templateId}.zip`), buffer);
-      }
 
+      const zip = await reader.getDocSnapshot(template.templateId);
+      if (!zip) {
+        console.log(`no snapshot for ${template.templateId}`);
+        continue;
+      }
+      const buffer = Buffer.from(await zip.arrayBuffer());
+      await fs.writeFile(snapshotPath, buffer);
       await fs.writeFile(path.join(rootDir, 'content', 'templates', `${template.slug}.json`), JSON.stringify(t, null, 2));
       console.log(`saved ${template.slug}`)
     }
