@@ -20,6 +20,8 @@ async function crawlTemplates() {
     throw new Error('No pages found');
   }
 
+  await fs.ensureDir(path.join(rootDir, 'public', 'templates', 'snapshots'));
+
   console.log('crawling templates...')
 
   const templateList = await reader.getTemplateList();
@@ -32,6 +34,10 @@ async function crawlTemplates() {
 
   for (const category of categories) {
     for (const template of category.list) {
+      if (!template.templateId) {
+        console.log(`no templateId for ${template.id}`);
+        continue;
+      }
       // @ts-ignore
       delete template.properties;
       delete template.parsedBlocks;
@@ -44,6 +50,20 @@ async function crawlTemplates() {
         cateSlug: category.slug,
       }
 
+      // check if snapshot exists
+      const snapshotPath = path.join(rootDir, 'public', 'templates', 'snapshots', `${template.id}.zip`);
+      if (await fs.exists(snapshotPath)) {
+        console.log(`snapshot exists for ${template.id}`);
+      } else {
+        const zip = await reader.getDocSnapshot(template.templateId);
+        if (!zip) {
+          console.log(`no snapshot for ${template.templateId}`);
+          continue;
+        }
+        const buffer = Buffer.from(await zip.arrayBuffer());
+        await fs.writeFile(path.join(rootDir, 'public', 'templates', 'snapshots', `${template.id}.zip`), buffer);
+      }
+
       await fs.writeFile(path.join(rootDir, 'content', 'templates', `${template.slug}.json`), JSON.stringify(t, null, 2));
       console.log(`saved ${template.slug}`)
     }
@@ -53,6 +73,7 @@ async function crawlTemplates() {
 async function main() {
   await clean();
   await crawlTemplates();
+  console.log('done');
 }
 
 main();
