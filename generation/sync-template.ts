@@ -61,7 +61,7 @@ async function crawlTemplates() {
           continue;
         }
         const buffer = Buffer.from(await zip.arrayBuffer());
-        await fs.writeFile(path.join(rootDir, 'public', 'templates', 'snapshots', `${template.id}.zip`), buffer);
+        await fs.writeFile(path.join(rootDir, 'public', 'templates', 'snapshots', `${template.templateId}.zip`), buffer);
       }
 
       await fs.writeFile(path.join(rootDir, 'content', 'templates', `${template.slug}.json`), JSON.stringify(t, null, 2));
