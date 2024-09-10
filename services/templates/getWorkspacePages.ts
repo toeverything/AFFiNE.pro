@@ -1,10 +1,9 @@
-import * as reader from "affine-reader/template";
-
-type WorkspacePage = reader.WorkspacePage;
+import * as reader from 'affine-reader/template';
+import { WorkspacePage } from 'affine-reader';
 
 export const templateReader = reader.instantiateReader({
-  workspaceId: "qf73AF6vzWphbTJdN7KiX",
-  target: "https://app.affine.pro",
+  workspaceId: 'qf73AF6vzWphbTJdN7KiX',
+  target: 'https://app.affine.pro',
 });
 
 export const getTemplateWorkspacePages = async () => {
@@ -35,8 +34,4 @@ export const getTemplateWorkspacePages = async () => {
   );
 
   return workspacePages;
-};
-
-export const getTemplateSnapshot = async (docId: string) => {
-  return await templateReader.getDocSnapshot(docId);
 };
