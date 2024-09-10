@@ -21,6 +21,9 @@ export default defineNuxtConfig({
       allowHeaders: '*',
       exposeHeaders: '*',
     },
+    headers: {
+      contentSecurityPolicy: false,
+    },
   },
 
   devServer: {
