@@ -15,18 +15,19 @@
 </template>
 
 <script setup lang="ts">
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const device = useDevice()
+const device = useDevice();
 const animateState = reactive({
-  scrollProgress: 0
-})
+  scrollProgress: 0,
+});
 
 const setupScrollTrigger = async () => {
-  if (device.isMobile) return
+  if (device.isMobile) return;
 
-  await nextTick()
+  await nextTick();
 
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -34,28 +35,28 @@ const setupScrollTrigger = async () => {
       trigger: '.template-slogan-banner',
       markers: false,
       start: `top bottom`,
-      end: "bottom 60%",
+      end: 'bottom 60%',
       invalidateOnRefresh: true,
-    }
-  })
+    },
+  });
 
-  tl
-    .to(animateState, {
-      scrollProgress: 1,
-      ease: 'none',
-      overwrite: true
-    })
-    // .to('.screenshot-card')
-}
+  tl.to(animateState, {
+    scrollProgress: 1,
+    ease: 'none',
+    overwrite: true,
+  });
+  // .to('.screenshot-card')
+};
 
 onMounted(() => {
-  gsap.registerPlugin(ScrollTrigger)
-  setupScrollTrigger()
-})
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin);
+  setupScrollTrigger();
+});
 
 onActivated(() => {
-  setupScrollTrigger()
-})
+  setupScrollTrigger();
+});
 </script>
 
 <style lang="stylus">
@@ -192,5 +193,4 @@ onActivated(() => {
     .bottom-mark
       bottom: 0
       background: linear-gradient(180deg, rgba(248, 248, 247, 0) 0%, #F8F8F7 75.56%)
-
 </style>

@@ -1,12 +1,15 @@
 .readable
-  font-size: fluid-value(16, 20)
-  line-height: 162.5%
+  font-size: fluid-value(15, 15)
+  line-height: (28/17)
   color: black
 
   p
-    line-height: 1.8
+    letter-spacing: -0.01em;
     margin-top: 0
-    margin-bottom: 1.2em
+    margin-bottom: 1.4em
+
+    > img
+      margin: 8px 0
 
     & + ul
       margin-top: -0.8em
@@ -17,6 +20,22 @@
   > :first-child
     margin-top: 0
 
+  blockquote
+    position relative
+    margin-left: 0;
+    padding-left: 20px
+    font-weight: 500
+    color: inherit
+
+    &:before
+      content: ''
+      position absolute
+      left: 0
+      height: 100%
+      width: 4px
+      border-radius: 8px
+      background: hsla(0, 0%, 80%, 1);
+
   strong
     font-weight: 600
 
@@ -26,22 +45,22 @@
     margin: 0px auto;
 
   h1
-    font-size: 1.2em
+    font-size: 1.64em
 
   h2
-    font-size: 1em
+    font-size: 1.529em
 
   h3
-    font-size: 1em
+    font-size: 1.411em
 
   h4, h5, h6
     font-size: 1em
 
   h1, h2, h3, h4, h5, h6
-    line-height: 133%
+    line-height: (32/24)
     font-weight: 600
-    margin-top: 1em
-    margin-bottom: 12px
+    margin-top: 0
+    margin-bottom: 24px
 
   a
     word-wrap: break-word
@@ -84,3 +103,11 @@
       color: #EAEAEA
       background: #2C2C2C
       border-color: #333
+
+  ul,
+  ol
+    padding-left: 24px
+    margin-bottom: 24px
+
+    li > p
+      margin-bottom: 4px
