@@ -61,6 +61,7 @@
     "nuxt": "^3.4.1",
     "nuxt-icons": "^3.1.0",
     "nuxt-mixpanel": "^1.0.0",
+    "nuxt-security": "^2.0.0-rc.9",
     "pug": "^3.0.2",
     "rehype-prism-plus": "^1.5.1",
     "rehype-stringify": "^9.0.3",
