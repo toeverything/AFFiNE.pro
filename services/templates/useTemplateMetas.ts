@@ -39,7 +39,6 @@ export const useTemplateMetas = (
       }
       return (b || 0) - (a || 0);
     });
-  let featuredMeta = publishedMetas[0];
 
   const tags = getTags(publishedMetas);
   const cates = getCates(publishedMetas);
@@ -49,13 +48,9 @@ export const useTemplateMetas = (
     )
     : publishedMetas;
 
-  if (query?.tag && filteredMetas.length > 0) {
-    featuredMeta = filteredMetas[0];
-  }
+  const featuredMeta = filteredMetas.find((meta) => meta.featured) || filteredMetas[0];
 
-  if (filteredMetas.length > 3 && filteredMetas[0].id === featuredMeta.id) {
-    filteredMetas = filteredMetas.slice(1);
-  }
+  filteredMetas = filteredMetas.length > 3 ? filteredMetas.filter((meta) => meta.id !== featuredMeta.id) : filteredMetas;
   return {
     templateMetas: publishedMetas,
     tags,
