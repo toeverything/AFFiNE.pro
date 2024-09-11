@@ -53,6 +53,7 @@ declare global {
     md: string
     layout: string | null
     publish?: boolean
+    relatedBlogs: string[]
   }
 
   interface TemplateContentFileMeta extends ContentFileMeta {
