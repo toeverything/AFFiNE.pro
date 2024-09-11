@@ -50,6 +50,7 @@
       )
 
   template-related-list(
+    title="Related Articles"
     type="blog"
     :meta="article"
   )
