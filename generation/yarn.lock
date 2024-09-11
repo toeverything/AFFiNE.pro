@@ -598,10 +598,10 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-affine-reader@^3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/affine-reader/-/affine-reader-3.1.4.tgz#1d93bf00d2621a74e2fde5315eaf840754bdcb68"
-  integrity sha512-RXhoCtbgpwawSZTHj2a6go9go8q4kUE1SZ98Y6fum/6PuwzvONiCbELNB/Uy9Q2v1BMdps8ewnIGYFLWQ8fuBw==
+affine-reader@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/affine-reader/-/affine-reader-3.2.0.tgz#e2496cbfd5714658ea6505dd34c8b47b28278624"
+  integrity sha512-3xO58i7PABVXD6Mi7mZIzf6VQvvBZhN7txrbLr19Cwh2EHhGFPmCEBjjbahf95Fedyc5/snghWuS3HW6rc3+/g==
   dependencies:
     "@blocksuite/blocks" "^0.17.4"
     "@blocksuite/presets" "^0.17.4"
