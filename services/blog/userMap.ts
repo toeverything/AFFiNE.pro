@@ -67,6 +67,11 @@ export const USER_MAP: Record<
     avatar: '/favicon-96.png',
     dec: 'Toeverything',
   },
+  'AFFiNE Team': {
+    name: 'AFFiNE',
+    avatar: '/favicon-96.png',
+    dec: 'Toeverything',
+  },
   'Xinglong Wang': {
     name: 'Xinglong Wang',
     avatar: '/XinglongWang.png',
@@ -87,9 +92,14 @@ export const USER_MAP: Record<
     avatar: '/WenhaoTan.jpeg',
     dec: 'Director of Performance and Security',
   },
+  'Enther He': {
+    name: 'Jiachen He',
+    avatar: '/JiachenHe.jpg',
+    dec: 'Founder & Product Director',
+  },
   'Jiachen He': {
     name: 'Jiachen He',
-    avatar: '/JiachenHe.png',
+    avatar: '/JiachenHe.jpg',
     dec: 'Founder & Product Director',
   },
   'Shaoxuan Qi': {
