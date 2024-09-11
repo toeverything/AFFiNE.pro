@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/fs-extra": "^11.0.4",
-    "affine-reader": "^3.2.4",
+    "affine-reader": "^3.2.5",
     "fs-extra": "^11.2.0",
     "tsx": "^4.19.0"
   },
