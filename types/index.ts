@@ -56,6 +56,8 @@ declare global {
   }
 
   interface TemplateContentFileMeta extends ContentFileMeta {
+    featured?: boolean;
+    intro?: string;
     // New fields
     cateTitle: string;
     cateName: string;

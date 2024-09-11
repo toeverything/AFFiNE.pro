@@ -33,7 +33,7 @@ async function crawlTemplates() {
   const { categories } = templateList;
 
   for (const category of categories) {
-    for (const template of category.list) {
+    for (const [index, template] of category.list.entries()) {
       if (!template.templateId) {
         console.log(`no templateId for ${template.id}`);
         continue;
@@ -43,11 +43,27 @@ async function crawlTemplates() {
       delete template.parsedBlocks;
       delete template.linkedPages;
 
+      const featured = index === 0;
+
+      const snapshotUrl = `https://affine.pro/template/snapshots/${template.templateId}.zip`;
+
+      const params = new URLSearchParams({
+        workspaceId: reader.workspaceId,
+        docId: template.templateId,
+        pageId: template.id, // deprecated
+        name: template.title || template.id,
+        snapshotUrl,
+      });
+
       const t = {
         ...template,
+        featured,
         cateTitle: category.title,
         cateName: category.category,
         cateSlug: category.slug,
+        intro: featured ? category.description : undefined,
+        useTemplateUrl: `https://app.affine.pro/template/import?${params.toString()}`,
+        previewUrl: `https://app.affine.pro/template/preview?${params.toString()}`,
       }
 
       const snapshotPath = path.join(rootDir, 'public', 'templates', 'snapshots', `${template.templateId}.zip`);
