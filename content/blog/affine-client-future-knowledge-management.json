@@ -1,9 +1,6 @@
 {
   "id": "OrVf38Qw1x",
   "title": "AFFiNE Client: The Future of Knowledge Management",
-  "createDate": 1682044663569,
-  "favorite": false,
-  "guid": "67bec405-d39e-4b1e-aec8-5419d8360f73",
   "author": "Christopher Smolak",
   "tags": [
     "User Guide"
@@ -20,5 +17,11 @@
   "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/CcrBdMTEIFujc0Snod5PrlOnCAamTx58YM7ZJPqSXDw=",
   "coverAlt": "",
   "md": "\n\n\nIt wasn't too long ago that we officially [announced the AFFiNE Client,](https://affine.pro/blog/affine-client-native-desktop-apps) and how it will provide a greatly improved experience for our users. A truly privacy-focussed and local-first AFFiNE. Making a next-gen knowledge base is no small task, but should not get in the way of our commitments and promises to you. That's why we have made the decision to move to the AFFiNE Client as the main entry point to AFFiNE, while also disabling some Cloud features.\n\n\n### Moving to the client\n\n\nThere are so many different web browsers that all behave differently, and this has a huge impact across our user base and the user experience. We want to offer a standard user experience, with standard features for all of our users across all of the available paltforms. This is something that has proven to be difficult by focussing on the browser. Despite the ease of use, with the browser being readily available - it does not allow users to consistently and reliable use AFFiNE. This is a huge issue.\n\n\nBy developing the AFFiNE Client we can now provide users with a feature-rich solution that matches our expectations, while offering users a reliable solution - no matter their platform. Furthermore, by providing a downloadable client we can finally deliver a true offline experience. The AFFiNE Client will work offline, a true local-first experience, and this has also been one of our key commitments.\n\n\n### Local-First - AFFiNE Cloud coming soon\n\n\n\n![12qGRb_1Eio5HyyV5ld4Xy2c1QlONAnzHRYpkt21amA=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/12qGRb_1Eio5HyyV5ld4Xy2c1QlONAnzHRYpkt21amA=)\n\n\nAs we shift to the AFFiNE Client we have decided to take the time to overhaul our backend storage solution and disable the AFFiNE Cloud. You can continue to try our [online demo](https://app.affine.pro) which will continue to function, but the AFFiNE Client will have the AFFiNE Cloud service disabled. We will work hard on signficantly improving the realibaility and performance of our storage solution before enabling it again in the AFFiNE Client.\n\n\nWe understand this disappoint some of our users, but we have decided this is the best way to deliver on our promises and offer an experience that we are truly proud of. We endeavour to bring you a new improved AFFiNE Cloud solution as soon as possible. So do keep an eye out for future updates and announcements.\n\n\n### Conclusion\n\n\nDo come and have a try with the AFFiNE Client.\n\n\nThe [AFFiNE Latest GitHub Release](https://github.com/toeverything/AFFiNE/releases/latest) is linked to the stable version - we recommend this for most users. However, if you are interested in some of our latest development and trying the latest features you can view all of our [AFFiNE GitHub Releases](https://github.com/toeverything/AFFiNE/releases).\n\n\nAnd we are super excited to hear about your feedback and ideas - so welcome you to come join the [AFFiNE Community](https://community.affine.pro).\n\n\n",
-  "valid": true
+  "createDate": 1682044663569,
+  "favorite": false,
+  "guid": "67bec405-d39e-4b1e-aec8-5419d8360f73",
+  "valid": true,
+  "relatedBlogIds": [],
+  "linkedPageIds": [],
+  "relatedBlogs": []
 }

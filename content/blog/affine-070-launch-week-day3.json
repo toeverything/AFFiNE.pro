@@ -1,9 +1,6 @@
 {
   "id": "6pdB6esN7I",
-  "title": "AFFiNE 0.7.0 Preview - Launch week - day 3/5",
-  "createDate": 1689134397057,
-  "favorite": false,
-  "guid": "4ea0538a-0983-42bc-b54c-8dac6d9a21e2",
+  "title": "AFFiNE 0.7.0 - day3",
   "author": "Xuan Pang",
   "tags": [
     "Release Note"
@@ -20,5 +17,11 @@
   "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/m0a3Rj_bLfP0VgeQNyiYyCFIFQZdsRm_QQCVv_9IfjY=",
   "coverAlt": "",
   "md": "**Welcome to the highly anticipated launch week of AFFiNE 0.7.0 Preview!** We are thrilled to present an array of groundbreaking features and a redesigned user experience that will redefine the way you work.\n\n\nOn the third day of the AFFiNE 0.7.0 Preview launch week, we will introduce you to the exciting updates, including text-to-database conversion, selection and drag functionality and the more properties/ block types. Get ready to unlock new levels of productivity and immerse yourself in a seamless and efficient workflow.\n\n\n# **Efficient Table Manipulation - Streamline Your Table Management**\n\n\n## ① Text-to-table Conversion - Bring Order and Clarity to Your Information\n\n\nWith just one click, you are able to transform your text into structured tables, organizing information for visual appeal. Say goodbye to the hassle of manually inputting your text, cell by cell, into the database.\n\n\n\n![wzNppJMgVjC8ThVR9TlhVkPu5OXTEsEsqnuv-Xmrr0g=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/wzNppJMgVjC8ThVR9TlhVkPu5OXTEsEsqnuv-Xmrr0g=)\n\n\n## ② Cell Selection Movement- Seamlessly Move Selection to Any Cells via Keyboard\n\n\nOnce a cell is selected, you can smoothly move the selection to adjacent cells, horizontally or vertically, by utilizing intuitive keyboard controls. Now you can swiftly traverse your data without the need for mouse clicks or manual adjustments.\n\n\n\n![YwVCb63TM8IPzr6JyiZj659VjxPeTIFif8RtJ8yCIOo=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/YwVCb63TM8IPzr6JyiZj659VjxPeTIFif8RtJ8yCIOo=)\n\n\n## ③ Rearrange Columns - Drag Columns to Your Desired Positions\n\n\nTired of tedious manual adjustments? Now you can rearrange your table columns simply by dragging them to your desired positions.\n\n\n\n![RJeOwsZFMQE8zW7muemAnAEX1UELMFRD2Y66caKzYpo=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/RJeOwsZFMQE8zW7muemAnAEX1UELMFRD2Y66caKzYpo=)\n\n\n# **Optimize the Database - Exploring Advanced Database Properties**\n\n\n## ① Progress Tracking - Gain Real-time Visibility into Ongoing Processes\n\n\nAre you still replying on intricate charts to track your progress? We offer you a much simpler way! Now you can  track your progress just within a single cell of the database of AFFiNE!\n\n\n\n![2NIoNhADb_679qk76PMxv7YIIygT_RuCqsk4l5MItjs=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/2NIoNhADb_679qk76PMxv7YIIygT_RuCqsk4l5MItjs=)\n\n\n## ② Hyperlink - Quick Access to External Resources\n\n\nSometimes you may want to add tons of information to the database, which may lead to information overload. Here, we encourage you to insert hyperlinks, in order to prevent clutter and allow for easier navigation to specific details when needed.\n\n\n\n![G6CMsggjutVcZaot4zLiuj_PQugl_SxseczPL-fMygo=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/G6CMsggjutVcZaot4zLiuj_PQugl_SxseczPL-fMygo=)\n\n\nRest assured, the AFFiNE Preview 0.7.0 version will be made available at a very recent date. Stay tuned for the official launch and get ready to experience a seamless and reliable note-taking solution.\n\n\n# Get ready to unlock new levels of productivity\n\n\n* Official Website: [https://affine.pro/](https://affine.pro/)\n\n\n* GitHub: [https://github.com/toeverything/AFFiNE](https://github.com/toeverything/AFFiNE)\n\n\n* Discord: [https://discord.gg/Arn7TqJBvG](https://discord.gg/Arn7TqJBvG)\n\n\n* Telegram: [https://t.me/affineworkos](https://t.me/affineworkos)\n\n\n\n\n\n",
-  "valid": true
+  "createDate": 1689134397057,
+  "favorite": false,
+  "guid": "4ea0538a-0983-42bc-b54c-8dac6d9a21e2",
+  "valid": true,
+  "relatedBlogIds": [],
+  "linkedPageIds": [],
+  "relatedBlogs": []
 }

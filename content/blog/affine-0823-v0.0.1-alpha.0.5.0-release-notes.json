@@ -1,8 +1,6 @@
 {
   "id": "a1b3873d861b4b7aa49178626318341b",
-  "title": "AFFiNE 0823 V0.0.1-alpha.0.5.0 Release Notes",
-  "createDate": 1680147991871,
-  "guid": "b2cf860f-0180-4606-b8af-175e2da11595",
+  "title": "affine-0823-v0.0.1-alpha.0.5.0-release-notes",
   "author": "Jiachen He, Xinglong Wang, Fangyuan Zheng, Fanjing Zhang",
   "tags": [
     "Release Note"
@@ -22,5 +20,10 @@
   "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/JspchPzbMyAw5RLMQCH5uLCCNB4O_zaOzzY6MW2t_ls=",
   "coverAlt": "",
   "md": "Thank you very much for your interest in AFFiNE! Some new and exciting changes are as follows:\n\n\n### Features\n\n\n* Feature: Live demo([https://livedemo.affine.pro/demo](https://livedemo.affine.pro/demo/affineNmS7TJ5dvE4ngEhS)) up and running;\n\n\n* Feature: You can now click inside a block to edit directly in Edgeless Mode;\n\n\n\n![1I7UaHQRwwzSOpcOldmPDhNONTh-gX71exsTe3y2V6c=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/1I7UaHQRwwzSOpcOldmPDhNONTh-gX71exsTe3y2V6c=)\n\n\n* Feature: Added layout function in Edgeless Mode;\n\n\n\n![PPj7skjz-FITYOeAUlVlJ2O2uzK1uNjyOxYVR-abeYs=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/PPj7skjz-FITYOeAUlVlJ2O2uzK1uNjyOxYVR-abeYs=)\n\n\n* Feature: Added a menu option to insert a new block below.\n\n\n### **Bug Fixes**\n\n\nIn AFFiNE team and users continued effort to make AFFiNE the most reliable all-in-one knowledge base, fixing bugs is always our main concern. Here's our work over the last few days:\n\n\n* Fixed: In Edgeless Mode, selecting multiple blocks for group operation led to the website crashing;\n\n\n* Fixed: In Edgeless Mode, zoom scroll jumps too fast from 10%-70%-250%;\n\n\n* **Fixed: The mouse now will auto-focus when creating a new text input box in edgeless mode;**\n\n\n* Fixed: The lock function didn't work if shapes were in block-groups;\n\n\n* Fixed: '/' doesn't work after creating some new groups;\n\n\n* Fixed: The command menu positioning that appeared did not meet expectations;\n\n\n* Fixed: In Paper Mode, no background color could be added to the text;\n\n\n* **Fixed: Pasting a link creates a new line - instead of inserting inline;**\n\n\n* Fixed: A dividing line displays when dragging the block with the mouse, but this line remained after the operation is finished in paper mode;\n\n\n* Fixed: Added arm64 Support to the Docker Images.\n\n\n### Improvement\n\n\nIn AFFiNE team and users continued effort to make Affine the most reliable all-in-one knowledge base, optimizing user experience is always our main concern. Here's our work in the last few days:\n\n\n* Improvement: Edgeless Mode toolbar tooltip changes;\n\n\n* Improvement: When clicking on a link, it will now open in a new tab;\n\n\n* Improvement: Button colors of transform changes;\n\n\n* Improvement: Sidebar changes in Paper Mode;\n\n\n* Improvement: The icon of the top toolbar is updated in Paper Mode;\n\n\n* Improvement: The page tree item will change the background when the mouse enters;\n\n\n* Improvement: The space between list items has been decreased;\n\n\n* **Improvement: Made it easier to create grids, such as nested grids;**\n\n\n* Improvement: List adds a shadow box in the Paper Mode sidebar;\n\n\n* Improvement: Use of drag hand style when dragging in Edgeless Mode;\n\n\n* Improvement: When selecting multiple blocks with the mouse, we’ve added a style to separate the blocks;\n\n\n* Improvement: A prompt is now given when the page link is copied.\n\n\nAFFiNE is currently in the early alpha stage with limited access, and public early access will be available in the autumn of 2022.\n\n\nAFFiNE is an open-source project which can be viewed on Github:[https://github.com/toeverything/AFFiNE#readme](https://github.com/toeverything/AFFiNE#readme)\n\n\nThe official website for AFFiNE ishttps://affine.pro/\n\n\nIf you endorse this open source project, please help us by clicking the GitHub star, which is crucial for the future development of AFFiNE.\n\n\nAFFiNE is very grateful to all open source contributors and will work to build a more positive open source ecosystem.\n\n\nHope you have a nice time with AFFiNE!\n\n\n",
-  "valid": true
+  "createDate": 1680147991871,
+  "guid": "b2cf860f-0180-4606-b8af-175e2da11595",
+  "valid": true,
+  "relatedBlogIds": [],
+  "linkedPageIds": [],
+  "relatedBlogs": []
 }

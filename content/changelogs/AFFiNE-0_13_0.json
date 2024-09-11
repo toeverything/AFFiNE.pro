@@ -1,14 +1,17 @@
 {
   "id": "J4nEhNGgsqHlGtN19k3R0",
-  "title": "0.13.0",
-  "createDate": 1710500389252,
-  "updatedDate": 1710500392412,
-  "guid": "J4nEhNGgsqHlGtN19k3R0",
+  "title": "what's new - affine - 20240315",
   "version": "AFFiNE-0.13.0",
   "date": "2024-03-04T00:00:00.000Z",
   "description": "Our latest 0.13.0 version brings the Page Info feature, perfect for boosting project management on a personal level. Plus, our AFFiNE AI are now available for subscription, which facilitates enhanced writing, presentation, planning, and more. We've also tackled those annoying bugs, ensuring a smoother ride. Let's dive in and experience productivity at its finest!",
   "detailLink": "https://affine.pro/blog/whats-new-affine-20240315",
   "cover": "https://insider.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/eHMyjy-Aq0AI9SYHlhHyIDFftXVQdEFUwt8PTqLtrVE=.webp",
   "md": "\n\n\n",
-  "valid": false
+  "createDate": 1710500389252,
+  "updatedDate": 1710500392412,
+  "guid": "J4nEhNGgsqHlGtN19k3R0",
+  "valid": false,
+  "relatedBlogIds": [],
+  "linkedPageIds": [],
+  "relatedBlogs": []
 }

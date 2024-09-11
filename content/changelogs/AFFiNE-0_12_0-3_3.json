@@ -1,14 +1,17 @@
 {
   "id": "kVkX31r6v3U_6MxnmCkDa",
-  "title": "0.12.0",
-  "createDate": 1709528567251,
-  "updatedDate": 1709528569780,
-  "guid": "kVkX31r6v3U_6MxnmCkDa",
+  "title": "0.12.0-day3/3",
   "version": "AFFiNE-0.12.0-3/3",
   "date": "2024-03-04T00:00:00.000Z",
   "description": "Step into the world of curated creativity with Day 3 of our 0.12.0 launch week! We are delighted to share 3 newly added functions in the upcoming 0.13.0 version, where you can diversify displayed information, edit different pages simultaneously and make synchronous update, thus avoiding time waste. Apart from the self-host version update, our AFFiNE AI is also on the way!",
   "detailLink": "https://affine.pro/blog/affine-0-12-0-launch-week-day-3-early-access-affine-ai-self-host-upcoming-0-13-unveiled",
   "cover": "https://insider.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/6WgReCYYXC_eya6pE2jTwj-FdetD7TFv7a9-DKnUOU4=.webp",
   "md": "",
-  "valid": false
+  "createDate": 1709528567251,
+  "updatedDate": 1709528569780,
+  "guid": "kVkX31r6v3U_6MxnmCkDa",
+  "valid": false,
+  "relatedBlogIds": [],
+  "linkedPageIds": [],
+  "relatedBlogs": []
 }

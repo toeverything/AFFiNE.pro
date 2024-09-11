@@ -1,14 +1,17 @@
 {
   "id": "j1aMV79dJKA4E6GRLmFsZ",
-  "title": "“0.11.0”",
-  "createDate": 1703240824835,
-  "updatedDate": 1703249870850,
-  "guid": "j1aMV79dJKA4E6GRLmFsZ",
+  "title": "AFFiNE 0.11.0 - Launch week - Day 5/5: From Concept to Click: Onboard AFFiNE the way how we image, design, and eventually build it.",
   "version": "AFFiNE-0.11.0-5/5",
   "date": "2023-12-22T00:00:00.000Z",
   "description": "Explore the intricacies of AFFiNE 0.11.0's onboarding masterpiece on the final day of our launch week. From setting design goals to innovative highlights, delve into the meticulous planning and dedication that shaped our design philosophy. Join us on this visual journey.",
   "detailLink": "https://affine.pro/blog/affine-0.11.0-Launch-Week-Day-5-From-Concept-to-Click-Onboarding-Process",
   "cover": "https://insider.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/w7XZA6Ba7oiG37vTfowLwhtiOOUFW1ACKzmE7nrrDFM=.webp",
   "md": "",
-  "valid": false
+  "createDate": 1703240824835,
+  "updatedDate": 1703249870850,
+  "guid": "j1aMV79dJKA4E6GRLmFsZ",
+  "valid": false,
+  "relatedBlogIds": [],
+  "linkedPageIds": [],
+  "relatedBlogs": []
 }

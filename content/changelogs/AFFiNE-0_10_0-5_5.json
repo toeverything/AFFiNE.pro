@@ -1,14 +1,17 @@
 {
   "id": "mR6ClEsIdDzKEpTvRGRdn",
-  "title": "0.10.0",
-  "createDate": 1699604684317,
-  "updatedDate": 1703239390390,
-  "guid": "gccB8ILpdX7bvgbngvoon:space:mR6ClEsIdDzKEpTvRGRdn",
+  "title": "AFFiNE 0.10.0 - Launch week - Day 5/5: Stable with Cloud support, Finally available to every Pro in your team",
   "version": "AFFiNE-0.10.0-5/5",
   "date": "2023-11-10T00:00:00.000Z",
   "description": "Discover innovation with AFFiNE 0.10.0! Download the stable version for a fresh workspace. Pro version debuts, unlocking advanced features, including 100GB cloud storage, larger file uploads, and enhanced teamwork. Elevate your AFFiNE experience today!",
   "detailLink": "https://affine.pro/blog/affine-0-10-0-launch-week-day-5-5-stable-with-cloud-support-finally-available-to-every-pro-in-your-team",
   "cover": "https://insider.affine.pro/api/workspaces/H6vffRmJbCfA-r3kq_36_/blobs/o995DimD_w1oF4hY-Bfh_G8DBVh7rnbsyMvCnVXzZiE=.webp",
   "md": "",
-  "valid": false
+  "createDate": 1699604684317,
+  "updatedDate": 1703239390390,
+  "guid": "gccB8ILpdX7bvgbngvoon:space:mR6ClEsIdDzKEpTvRGRdn",
+  "valid": false,
+  "relatedBlogIds": [],
+  "linkedPageIds": [],
+  "relatedBlogs": []
 }

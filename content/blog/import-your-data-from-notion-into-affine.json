@@ -1,11 +1,6 @@
 {
   "id": "7elzuorYHc",
-  "createDate": 1685501012728,
-  "favorite": false,
-  "trash": false,
-  "updatedDate": 1725008454747,
-  "title": "Import your data from Notion into AFFiNE｜2024 Latest Tutorial",
-  "guid": "053d1fa6-410b-4e77-9d5d-322e8179f2a0",
+  "title": "Import your data from Notion into AFFiNE",
   "author": "Christopher Smolak",
   "tags": [
     "User Guide"
@@ -22,5 +17,13 @@
   "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/jvIUb3dsvsSKGWznjyGh2ZR2CMFNkRQJte44RoLUdB0=",
   "coverAlt": "",
   "md": "Maybe you are coming from another app, such as Notion, and have a large workspace of work you don't want to lose. No problem! We want you to be able to enjoy [AFFiNE](https://www.affine.pro/), and take control of your data and track progress- so we have added import support from Notion. There are a few steps that need to be completed so we'll guide you through that now.\n\n\n## **First Method:**\n\n\nPlease directly follow the instructions from out Youtube Tutorial video:\n\n\n<iframe\n  type=\"text/html\"\n  width=\"100%\"\n  height=\"410px\"\n  src=\"https://www.youtube.com/embed/k3leDjxImqM\"\n  frameborder=\"0\"\n  allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"\n  allowfullscreen>\n</iframe>\n\n\n## Step1.Exporting from Notion\n\n\nFirst thing to do is export your data from Notion.\n\n\n* Please make sure you export your Notion files to HTML files.\n\n\n* Click Include subpages button.\n\n\n* Then click Export button.\n\n\n\n![mbp--XFJeikiwMBdA2LiyeV-65FzgHO86K3uksQRC-8=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/mbp--XFJeikiwMBdA2LiyeV-65FzgHO86K3uksQRC-8=)\n\n\n## Step2.Importing Into AFFiNE\n\n\nThe procedure is:\n\n\n* Head to All pages\n\n\n* Import page (from New Page more options)\n\n\n* Select your Notion `.zip` to export file\n\n\n\n\n\n## Second Method:Markdown File Import Tutorial\n\n\nHowever, if you are using Markdown files, please check out this video tutorial to know how to import markdown files to AFFiNE.\n\n\n<iframe\n  type=\"text/html\"\n  width=\"100%\"\n  height=\"410px\"\n  src=\"https://www.youtube.com/embed/ehp35oXl0V8\"\n  frameborder=\"0\"\n  allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"\n  allowfullscreen>\n</iframe>\n\n\n### One More Thing:\n\n\nThe Iink to block feature will also be fully supported in the near future.\n\n\nNot all features are supported one-to-one but we are continuing to improve compatibility.\n\n\nMore discussion can be found here: [https://community.affine.pro/c/feature-requests/import-export](https://community.affine.pro/c/feature-requests/import-export)\n\n\nAlso very welcome to join our [Discord Community](https://discord.com/invite/Arn7TqJBvG) to have better support!\n\n\n#### \n\n\n#### **In addition:**\n\n\nAFFiNE is an open source alternative to Notion and Miro. We also have edgeless canvas features that can use and our templates feature will be online soon.\n\n\nFor people hesitate to use our cloud service, our open source version is a local first product you can self host it and keep all your files on your computer. Click here to know more: [https://github.com/toeverything/AFFiNE?tab=readme-ov-file](https://github.com/toeverything/AFFiNE?tab=readme-ov-file)\n\n\n",
-  "valid": true
+  "createDate": 1685501012728,
+  "favorite": false,
+  "trash": false,
+  "updatedDate": 1725008454747,
+  "guid": "053d1fa6-410b-4e77-9d5d-322e8179f2a0",
+  "valid": true,
+  "relatedBlogIds": [],
+  "linkedPageIds": [],
+  "relatedBlogs": []
 }

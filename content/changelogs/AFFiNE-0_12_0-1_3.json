@@ -1,14 +1,17 @@
 {
   "id": "uZ2Pxkyv-K_u6vU3oT68V",
-  "title": "0.12.0",
-  "createDate": 1709528243998,
-  "updatedDate": 1709528546264,
-  "guid": "uZ2Pxkyv-K_u6vU3oT68V",
+  "title": "0.12.0 launch week-1/3",
   "version": "AFFiNE-0.12.0-1/3",
   "date": "2024-03-04T00:00:00.000Z",
   "description": "We are thrilled to bring you a range of feature improvements and a simplified user operation process, leading to an enhanced overall efficiency of the product.",
   "detailLink": "https://affine.pro/blog/affine-0-12-0-launch-week-day1-3-a-new-frontier-in-note-taking-daily-notes-card-views-bookmarks-and-everything-in-between",
   "cover": "https://insider.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/5w--EBI6aWrthHmgWmqMvJNPCLSDho2feds1KdvboKU=.webp",
   "md": "",
-  "valid": false
+  "createDate": 1709528243998,
+  "updatedDate": 1709528546264,
+  "guid": "uZ2Pxkyv-K_u6vU3oT68V",
+  "valid": false,
+  "relatedBlogIds": [],
+  "linkedPageIds": [],
+  "relatedBlogs": []
 }
