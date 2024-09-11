@@ -49,18 +49,22 @@
         v-html="html"
       )
 
+  template-related-list(
+    type="blog"
+    :meta="article"
+  )
+
   template-slogan-banner(
     v-if="article"
   )
 </template>
 
 <script lang="ts" setup>
-
-import { useDateFormat, useScroll } from '@vueuse/core'
-import { PATH } from '~/utils/constants'
-import { primaryAPI } from '~/apis'
-import { USER_MAP } from '~/services/blog/userMap'
-import { renderHTML } from '~/services/blog/renderHtml'
+import { useDateFormat, useScroll } from '@vueuse/core';
+import { PATH } from '~/utils/constants';
+import { primaryAPI } from '~/apis';
+import { USER_MAP } from '~/services/blog/userMap';
+import { renderHTML } from '~/services/blog/renderHtml';
 
 const article = ref<ContentFileMeta>();
 const html = ref('');

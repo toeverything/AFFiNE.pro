@@ -2,7 +2,7 @@
 .template-related-list(
   v-if="list.length"
 )
-  .title-row.flex
+  .title-row.flex( v-if="title" )
     .left-spacer
     h4.title {{ title }}
 
@@ -22,19 +22,24 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  title: string,
-  type: 'template' | 'blog',
-  meta: TemplateContentFileMeta,
-}>()
+  title?: string;
+  type: 'template' | 'blog';
+  meta: TemplateContentFileMeta;
+}>();
 
-const store = useStore()
-const isBlog = props.type === 'blog'
+const store = useStore();
+const isBlog = props.type === 'blog';
 
 const list = computed(() => {
-  const slugs = isBlog ? props.meta.relatedBlogs : props.meta.relatedTemplates
-  const list = isBlog ? store.blog : store.templates
-  return slugs.map(slug => list.find(item => item.slug === slug)).filter(el => el)
-})
+  const slugs = isBlog ? props.meta.relatedBlogs : props.meta.relatedTemplates;
+  const list = isBlog ? store.blog : store.templates;
+
+  if (!slugs) return [];
+
+  return slugs
+    .map((slug) => list.find((item) => item.slug === slug.replace('/', '')))
+    .filter((el) => el);
+});
 </script>
 
 <style lang="stylus">
@@ -72,5 +77,4 @@ const list = computed(() => {
 
     @media (max-width: 480px)
       min-width: 20px
-
 </style>
