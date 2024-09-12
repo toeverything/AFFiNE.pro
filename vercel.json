@@ -1,0 +1,10 @@
+{
+  "routes": [
+    {
+      "src": "/_nuxt/(.*)",
+      "headers": {
+        "CDN-Cache-Control": "no-cache"
+      }
+    }
+  ]
+}
