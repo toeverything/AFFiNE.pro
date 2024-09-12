@@ -4,7 +4,8 @@
       "src": "/_nuxt/(.*)",
       "headers": {
         "Cache-Control": ""
-      }
+      },
+      "continue": false
     }
   ]
 }
