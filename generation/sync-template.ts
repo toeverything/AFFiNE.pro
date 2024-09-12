@@ -45,7 +45,7 @@ async function crawlTemplates() {
 
       const featured = index === 0;
 
-      const snapshotUrl = `https://affine.pro/template/snapshots/${template.templateId}.zip`;
+      const snapshotUrl = `https://affine.pro/templates/snapshots/${template.templateId}.zip`;
 
       const params = new URLSearchParams({
         workspaceId: reader.workspaceId,

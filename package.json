@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "sync-blog": "tsx sync-blog.mts",
     "build": "nuxt build",
     "dev": "nuxt dev --port 3001",
     "generate": "nuxt generate",
