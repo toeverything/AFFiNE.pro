@@ -49,6 +49,7 @@
           .list-name {{ $t('resources') }}
           nuxt-link.nav-item.flex( to="/pricing" ) {{ $t('price') }}
           nuxt-link.nav-item.flex( :to="PATH.AFFiNE_DOCS" target="_blank" rel="nofollow") {{ $t('docs') }}
+          nuxt-link.nav-item.flex( to="/templates" ) Templates
           nuxt-link.nav-item.flex( to="/about-us" ) {{ $t('aboutUs') }}
           nuxt-link.nav-item.flex( to="/blog?tag=Release+Note" ) {{ $t('blog') }}
           nuxt-link.nav-item.flex( to="/terms" ) {{ $t('terms') }}
