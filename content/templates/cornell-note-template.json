@@ -40,9 +40,8 @@
     "top-10-best-free-digital-planner-apps-2023",
     "8-free-printable-vision-board-templates-examples-2023"
   ],
-  "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=BpuxLX_gPxYS-PTlVH8Ff&pageId=WCiKoC9_FensTgC9Dw_GY&name=Cornell+Note+Template&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FBpuxLX_gPxYS-PTlVH8Ff.zip",
-  "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=BpuxLX_gPxYS-PTlVH8Ff&pageId=WCiKoC9_FensTgC9Dw_GY&name=Cornell+Note+Template&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FBpuxLX_gPxYS-PTlVH8Ff.zip",
   "templateId": "BpuxLX_gPxYS-PTlVH8Ff",
+  "templateMode": "page",
   "relatedTemplates": [
     "coquette-aesthetic-vision-board",
     "smart-goal-template",
@@ -51,5 +50,7 @@
   "featured": false,
   "cateTitle": "Cornell Notes Template for Free Download",
   "cateName": "Cornell Notes Template",
-  "cateSlug": "cornell-notes-template"
+  "cateSlug": "cornell-notes-template",
+  "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=BpuxLX_gPxYS-PTlVH8Ff&pageId=WCiKoC9_FensTgC9Dw_GY&name=Cornell+Note+Template&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FBpuxLX_gPxYS-PTlVH8Ff.zip",
+  "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=BpuxLX_gPxYS-PTlVH8Ff&pageId=WCiKoC9_FensTgC9Dw_GY&name=Cornell+Note+Template&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FBpuxLX_gPxYS-PTlVH8Ff.zip"
 }
