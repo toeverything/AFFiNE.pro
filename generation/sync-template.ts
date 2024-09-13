@@ -52,6 +52,7 @@ async function crawlTemplates() {
         docId: template.templateId,
         pageId: template.id, // deprecated
         name: template.title || template.id,
+        mode: template.templateMode || 'page',
         snapshotUrl,
       });
 
