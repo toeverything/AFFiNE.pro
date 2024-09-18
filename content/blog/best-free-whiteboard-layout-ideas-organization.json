@@ -1,26 +1,29 @@
 {
-  "id": "se997EnBjUtK7HsFLv6QL",
-  "title": "10 Best Free Whiteboard Layout Ideas in 2024: How to be More Productive?",
   "author": "Jackie Peng",
-  "tags": [
-    "Content"
-  ],
-  "slug": "best-free-whiteboard-layout-ideas-organization",
-  "description": "“Explore innovative ways to organize your thoughts, plan projects, and tackle complex tasks. Discover how whiteboard layout ideas/setup can streamline your workflow and make information visually engaging,  whether in the office, classroom or at home.”",
-  "created": 1704240000000,
-  "updated": 1704240000000,
-  "layout": "blog",
-  "publish": true,
   "authors": [
     "Jackie Peng"
   ],
-  "md": "",
-  "updatedDate": 1711432195076,
   "createDate": 1704360870253,
+  "created": 1704240000000,
+  "description": "“Explore innovative ways to organize your thoughts, plan projects, and tackle complex tasks. Discover how whiteboard layout ideas/setup can streamline your workflow and make information visually engaging,  whether in the office, classroom or at home.”",
   "favorite": false,
   "guid": "se997EnBjUtK7HsFLv6QL",
-  "valid": false,
-  "relatedBlogIds": [],
-  "linkedPageIds": [],
-  "relatedBlogs": []
+  "id": "se997EnBjUtK7HsFLv6QL",
+  "layout": "blog",
+  "linkedPageIds": [
+  ],
+  "md": "",
+  "publish": true,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "slug": "best-free-whiteboard-layout-ideas-organization",
+  "tags": [
+    "Content"
+  ],
+  "title": "10 Best Free Whiteboard Layout Ideas in 2024: How to be More Productive?",
+  "updated": 1704240000000,
+  "updatedDate": 1711432195076,
+  "valid": false
 }

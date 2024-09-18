@@ -1,17 +1,20 @@
 {
-  "id": "uDm247sopnDqeIMMXe2bW",
-  "title": "0.12.0 2/3",
-  "version": "AFFiNE-0.12.0-2/3",
+  "cover": "https://insider.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/DioZFnJGG7MAFwGSdNxCC6txNIgIM1yR4Cgms7mFxHk=.webp",
+  "createDate": 1709528442643,
   "date": "2024-03-04T00:00:00.000Z",
   "description": "Step into the world of curated creativity with Day 2 of our 0.12.0 launch week! This update introduces significant features to enhance your workflow: now you can dictate the visibility of your content, easily access the Whiteboard Scissors Tool, and experience increased productivity through the versatility of our new templates.",
   "detailLink": "https://affine.pro/blog/AFFiNE-0.12.0-Launch-Week-Day2-3-Display-Management-and-Template-Refinement-Enhanced-Visibility-More-Possibilities",
-  "cover": "https://insider.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/DioZFnJGG7MAFwGSdNxCC6txNIgIM1yR4Cgms7mFxHk=.webp",
-  "md": "",
-  "createDate": 1709528442643,
-  "updatedDate": 1709528445667,
   "guid": "uDm247sopnDqeIMMXe2bW",
+  "id": "uDm247sopnDqeIMMXe2bW",
+  "linkedPageIds": [
+  ],
+  "md": "",
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "title": "0.12.0",
+  "updatedDate": 1709528445667,
   "valid": false,
-  "relatedBlogIds": [],
-  "linkedPageIds": [],
-  "relatedBlogs": []
+  "version": "AFFiNE-0.12.0-2/3"
 }

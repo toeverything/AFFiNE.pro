@@ -1,18 +1,21 @@
 {
-  "id": "10ZOFUyVEytxggceGb7ha",
-  "title": "What's new - AFFiNE - 20231201",
-  "version": "AFFiNE-0.10.3-stable",
+  "cover": "https://insider.affine.pro/api/workspaces/H6vffRmJbCfA-r3kq_36_/blobs/HHq6zYztUu0BAMytn6tYYOyogd79pTLZC22kt_Fk4hY=.webp",
+  "createDate": 1701423894612,
   "date": "2023-12-01T00:00:00.000Z",
   "description": "In the updated stable version, new features in the whiteboard and database are designed to streamline workflow, enhance data management, and provide a more intuitive and flexible user experience. Whether it's through improved text formatting options or advanced database functionalities, users can now manage and present their data more effectively and efficiently.",
   "detailLink": "https://affine.pro/blog/whats-new-affine-20231201",
-  "cover": "https://insider.affine.pro/api/workspaces/H6vffRmJbCfA-r3kq_36_/blobs/HHq6zYztUu0BAMytn6tYYOyogd79pTLZC22kt_Fk4hY=.webp",
-  "md": "",
-  "createDate": 1701423894612,
-  "updatedDate": 1703239678951,
   "favorite": true,
   "guid": "10ZOFUyVEytxggceGb7ha",
+  "id": "10ZOFUyVEytxggceGb7ha",
+  "linkedPageIds": [
+  ],
+  "md": "",
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "title": "0.10.3",
+  "updatedDate": 1703239678951,
   "valid": false,
-  "relatedBlogIds": [],
-  "linkedPageIds": [],
-  "relatedBlogs": []
+  "version": "AFFiNE-0.10.3-stable"
 }

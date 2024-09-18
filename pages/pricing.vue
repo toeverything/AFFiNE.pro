@@ -102,10 +102,6 @@
               .item
                 .item-icon
                   nuxt-icon( name="Done" filled)
-                .item-body Add comments on Doc and Edgeless
-              .item
-                .item-icon
-                  nuxt-icon( name="Done" filled)
                 .item-body Community Support
               .item
                 .item-icon
@@ -263,10 +259,6 @@
               .item
                 .item-icon
                   nuxt-icon( name="Done" filled)
-                .item-body Add comments on Doc and Edgeless
-              .item
-                .item-icon
-                  nuxt-icon( name="Done" filled)
                 .item-body Community Support
               .item
                 .item-icon
@@ -337,40 +329,42 @@
 </template>
 
 <script lang="ts" setup>
-import { useClipboard } from '@vueuse/core'
-import { PATH, INFO, CONFIG } from '~/utils/constants'
+import { useClipboard } from '@vueuse/core';
+import { PATH, INFO, CONFIG } from '~/utils/constants';
 
-const { t } = useI18n()
+const { t } = useI18n();
 
-const store = useStore()
-const currentPricingType = ref('cloud')
+const store = useStore();
+const currentPricingType = ref('cloud');
 // const currentPricingType = ref('selfhost')
 
-const isYearly = ref(true)
-const currentTab = ref('yearly')
-const couponCode = ref('BF23')
+const isYearly = ref(true);
+const currentTab = ref('yearly');
+const couponCode = ref('BF23');
 
-const isMonthly = computed(() => !isYearly.value)
+const isMonthly = computed(() => !isYearly.value);
 
 const proActionLink = computed(() => {
-  let baseLink = isMonthly.value ? PATH.PRICING_PRO_MONTHLY : PATH.PRICING_PRO_YEARLY
+  let baseLink = isMonthly.value
+    ? PATH.PRICING_PRO_MONTHLY
+    : PATH.PRICING_PRO_YEARLY;
 
   if (store.context.coupon) {
-    baseLink = `${baseLink}&coupon=${store.context.coupon}`
+    baseLink = `${baseLink}&coupon=${store.context.coupon}`;
   }
 
-  return baseLink
-})
+  return baseLink;
+});
 
-const { copy, copied } = useClipboard()
+const { copy, copied } = useClipboard();
 
 const handleCopyCouponClick = () => {
-  copy(couponCode.value)
-}
+  copy(couponCode.value);
+};
 
 useHead({
-  title: t('price')
-})
+  title: t('price'),
+});
 </script>
 
 <style lang="stylus">

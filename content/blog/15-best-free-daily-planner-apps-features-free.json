@@ -1,28 +1,31 @@
 {
-  "id": "HfUWMlsf-lRlaWMROStl2",
-  "title": "15 Best Free Daily Planner Apps for 2024 (Features, Price)",
   "author": "Jackie Peng",
-  "tags": [
-    "Content"
-  ],
-  "slug": "15-best-free-daily-planner-apps-features-free",
-  "description": "In this article, we'll shed light on the 15 best free digital daily planner apps and scheduling software available today. These feature-rich tools are designed to assist you in planning, prioritizing, and streamlining your daily life. Explore this curated list to discover the perfect digital companion for your daily planning needs.",
-  "created": 1704153600000,
-  "updated": 1709510400000,
-  "layout": "blog",
-  "publish": true,
   "authors": [
     "Jackie Peng"
   ],
   "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/Wl2EmuRNH4xjlrWLBKzZIToWPXkzTIwdP2xVewmIDRk=",
   "coverAlt": "Daily Planner App",
-  "md": "",
-  "updatedDate": 1723099301351,
   "createDate": 1704174336285,
+  "created": 1704153600000,
+  "description": "In this article, we'll shed light on the 15 best free digital daily planner apps and scheduling software available today. These feature-rich tools are designed to assist you in planning, prioritizing, and streamlining your daily life. Explore this curated list to discover the perfect digital companion for your daily planning needs.",
   "favorite": false,
   "guid": "HfUWMlsf-lRlaWMROStl2",
-  "valid": false,
-  "relatedBlogIds": [],
-  "linkedPageIds": [],
-  "relatedBlogs": []
+  "id": "HfUWMlsf-lRlaWMROStl2",
+  "layout": "blog",
+  "linkedPageIds": [
+  ],
+  "md": "",
+  "publish": true,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "slug": "15-best-free-daily-planner-apps-features-free",
+  "tags": [
+    "Content"
+  ],
+  "title": "15 Best Free Daily Planner Apps for 2024 (Features, Price)",
+  "updated": 1709510400000,
+  "updatedDate": 1723099301351,
+  "valid": false
 }

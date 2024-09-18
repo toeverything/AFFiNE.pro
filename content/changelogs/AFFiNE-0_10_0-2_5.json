@@ -1,17 +1,20 @@
 {
-  "id": "EfmtNOPiEMCV-jZfBDxks",
-  "title": "AFFiNE 0.10.0 - Launch week - Day 2/5: Filter, Find, Collect, Control What are Important",
-  "version": "AFFiNE-0.10.0-2/5",
+  "cover": "https://insider.affine.pro/api/workspaces/H6vffRmJbCfA-r3kq_36_/blobs/Ep9MIsgbSCJ4eUpWYYN9FSMMZrN3R8QZ7erVFBJGVFE=.webp",
+  "createDate": 1699595675471,
   "date": "2023-11-07T00:00:00.000Z",
   "description": "Explore a revamped collection, manual multi-page selection, rule-based filtering, and supercharged navigation with Command+K, transforming your workflow and unlocking your writing potential.",
   "detailLink": "https://affine.pro/blog/affine-0-10-0-launch-week-day-2-5-filter-find-collect-control-what-are-important",
-  "cover": "https://insider.affine.pro/api/workspaces/H6vffRmJbCfA-r3kq_36_/blobs/Ep9MIsgbSCJ4eUpWYYN9FSMMZrN3R8QZ7erVFBJGVFE=.webp",
-  "md": "",
-  "createDate": 1699595675471,
-  "updatedDate": 1703239178108,
   "guid": "gccB8ILpdX7bvgbngvoon:space:EfmtNOPiEMCV-jZfBDxks",
+  "id": "EfmtNOPiEMCV-jZfBDxks",
+  "linkedPageIds": [
+  ],
+  "md": "",
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "title": "0.10.0",
+  "updatedDate": 1703239178108,
   "valid": false,
-  "relatedBlogIds": [],
-  "linkedPageIds": [],
-  "relatedBlogs": []
+  "version": "AFFiNE-0.10.0-2/5"
 }

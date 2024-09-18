@@ -1,5 +1,6 @@
 import { instantiateReader } from 'affine-reader/blog';
 import fs from 'fs-extra';
+import stringify from 'json-stable-stringify';
 
 import path from 'node:path';
 import { rootDir } from './utils';
@@ -49,7 +50,7 @@ async function crawlChangelogs() {
 
     content.date = typeof content.date === 'string' ? new Date(content.date).getTime() : content.date;
 
-    await fs.writeFile(fileDist, JSON.stringify(content, null, 2));
+    await fs.writeFile(fileDist, stringify(content, { space: '  ' }));
     console.log(`Saved ${page.id}`);
   }
 }

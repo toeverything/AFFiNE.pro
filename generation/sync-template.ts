@@ -1,6 +1,6 @@
 import { instantiateReader } from 'affine-reader/template';
 import fs from 'fs-extra';
-
+import stringify from 'json-stable-stringify';
 import path from 'node:path';
 import { rootDir } from './utils';
 
@@ -76,7 +76,7 @@ async function crawlTemplates() {
       }
       const buffer = Buffer.from(await zip.arrayBuffer());
       await fs.writeFile(snapshotPath, buffer);
-      await fs.writeFile(path.join(rootDir, 'content', 'templates', `${template.slug}.json`), JSON.stringify(t, null, 2));
+      await fs.writeFile(path.join(rootDir, 'content', 'templates', `${template.slug}.json`), stringify(t, { space: '  ' }));
       console.log(`saved ${template.slug}`)
     }
   }

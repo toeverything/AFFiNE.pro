@@ -1,18 +1,21 @@
 {
-  "id": "L2yYCLRra5JukiHz3rEd1",
-  "title": "AFFiNE 0.11.0 - Launch Week - Day 3/5: Beyond Text: Color, History, Table of Content and More Possibilities",
-  "version": "AFFiNE-0.11.0-3/5",
+  "cover": "https://insider.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/7TojeqUtvrM_wRdhmHKqHMxmzqREAS9p-e9z-7eugsc=.webp",
+  "createDate": 1703238469901,
   "date": "2023-12-20T00:00:00.000Z",
   "description": "Explore revolutionary features on day 3 of AFFiNE 0.11.0 launch week! Dive into enchanting color options, a flexible database, history tracking, and a cool table of contents. Embark on a digital adventure in knowledge crafting and organization!",
   "detailLink": "https://affine.pro/blog/affine-0-11-0-launch-day-3-beyond-text-color-history-table-of-content-possibilities",
-  "cover": "https://insider.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/7TojeqUtvrM_wRdhmHKqHMxmzqREAS9p-e9z-7eugsc=.webp",
-  "md": "\n\n\n",
-  "createDate": 1703238469901,
-  "updatedDate": 1703242227472,
   "favorite": true,
   "guid": "L2yYCLRra5JukiHz3rEd1",
+  "id": "L2yYCLRra5JukiHz3rEd1",
+  "linkedPageIds": [
+  ],
+  "md": "\n\n\n",
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "title": "“0.11.0”",
+  "updatedDate": 1703242227472,
   "valid": false,
-  "relatedBlogIds": [],
-  "linkedPageIds": [],
-  "relatedBlogs": []
+  "version": "AFFiNE-0.11.0-3/5"
 }
