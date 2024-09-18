@@ -19,8 +19,16 @@ export default defineEventHandler(async (event) => {
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&apos;");
 
-  // sorting the blogs by date
-  const sortedBlogs = blogs.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  // formatting the time stamp
+  const formatDate = (timestamp: number) => new Date(timestamp).toUTCString();
+
+    // covert timestamps and sort by the most recent date
+    const sortedBlogs = blogs
+        .map((blog) => ({
+            ...blog,
+            date: formatDate(blog.created || blog.createDate) // Use 'created' timestamp, fallback to 'createDate'
+        }))
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   let rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
     <rss version="2.0">
