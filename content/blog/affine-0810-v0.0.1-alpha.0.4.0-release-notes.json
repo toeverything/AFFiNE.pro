@@ -1,6 +1,11 @@
 {
   "id": "fcd73624e7f74857ad977400161b033d",
-  "title": "affine-0810-v0.0.1-alpha.0.4.0-release-notes",
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/JspchPzbMyAw5RLMQCH5uLCCNB4O_zaOzzY6MW2t_ls=",
+  "coverAlt": "",
+  "md": "**Thank you very much for your interest in AFFiNE! Some exciting changes are as follows:**\n\n\n### **New Features**\n\n\n* Instructions for online use;\n\n\n\n![BwKdBDcBzdP42e9CZ8KnwKsuIYoI7IPZw2bjP58WDOw=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/BwKdBDcBzdP42e9CZ8KnwKsuIYoI7IPZw2bjP58WDOw=)\n\n\n* The kanban view now supports grouping by status.\n\n\n### **Bug Fixes**\n\n\nIn our continued effort to make AFFiNE the most reliable all in one knowledge base, fixing bugs is always our main concern. Here's our work over the last few days:\n\n\n* Fixed: In doc mode, the text content is obscured by the menu floating box;\n\n\n* Fixed: The size of the left menu trigger button is wrong in page mode;\n\n\n* Fixed: In doc mode, when clicking the 'add tag' icon after selecting multiple blocks with the mouse, the page will be stuck;\n\n\n* Fixed: When opening multiple file menu within sidebar in doc mode, the menu boxes will block each other;\n\n\n* Fixed: There is a bug in the rename workspace name function in doc mode;\n\n\n* Fixed: When the user presses the shift key to draw consecutive straight lines, the second line's starting point coincides with the first line's ending point;\n\n\n* Fixed: The block delete button (located in the left menu) does not work in the grid scene of page mode.\n\n\nAFFiNE is currently in the early alpha stage with limited access, and public early access will be available in the autumn of 2022.\n\n\nAFFiNE is an open-source project which can be viewed on Github: [https://github.com/toeverything/AFFiNE#readme](https://github.com/toeverything/AFFiNE#readme)\n\n\nIf you endorse this open source project, please help us by clicking the GitHub star, which is crucial for the future development of AFFiNE.\n\n\nAFFiNE is very grateful to all open source contributors and will work to build a more positive open source ecosystem.\n\n\nHope you have a nice time with AFFiNE!\n\n\n",
+  "title": "AFFiNE 0810 V0.0.1-alpha.0.4.0 Release Notes",
+  "createDate": 1680147991871,
+  "guid": "6ed9be0b-581b-4512-ad9f-417baab0b5d1",
   "author": "Jiachen He, Christopher Smolak, Xiwen Tu, Fanjing Zhang",
   "tags": [
     "Release Note"
@@ -17,11 +22,6 @@
     "Xiwen Tu",
     "Fanjing Zhang"
   ],
-  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/JspchPzbMyAw5RLMQCH5uLCCNB4O_zaOzzY6MW2t_ls=",
-  "coverAlt": "",
-  "md": "**Thank you very much for your interest in AFFiNE! Some exciting changes are as follows:**\n\n\n### **New Features**\n\n\n* Instructions for online use;\n\n\n\n![BwKdBDcBzdP42e9CZ8KnwKsuIYoI7IPZw2bjP58WDOw=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/BwKdBDcBzdP42e9CZ8KnwKsuIYoI7IPZw2bjP58WDOw=)\n\n\n* The kanban view now supports grouping by status.\n\n\n### **Bug Fixes**\n\n\nIn our continued effort to make AFFiNE the most reliable all in one knowledge base, fixing bugs is always our main concern. Here's our work over the last few days:\n\n\n* Fixed: In doc mode, the text content is obscured by the menu floating box;\n\n\n* Fixed: The size of the left menu trigger button is wrong in page mode;\n\n\n* Fixed: In doc mode, when clicking the 'add tag' icon after selecting multiple blocks with the mouse, the page will be stuck;\n\n\n* Fixed: When opening multiple file menu within sidebar in doc mode, the menu boxes will block each other;\n\n\n* Fixed: There is a bug in the rename workspace name function in doc mode;\n\n\n* Fixed: When the user presses the shift key to draw consecutive straight lines, the second line's starting point coincides with the first line's ending point;\n\n\n* Fixed: The block delete button (located in the left menu) does not work in the grid scene of page mode.\n\n\nAFFiNE is currently in the early alpha stage with limited access, and public early access will be available in the autumn of 2022.\n\n\nAFFiNE is an open-source project which can be viewed on Github: [https://github.com/toeverything/AFFiNE#readme](https://github.com/toeverything/AFFiNE#readme)\n\n\nIf you endorse this open source project, please help us by clicking the GitHub star, which is crucial for the future development of AFFiNE.\n\n\nAFFiNE is very grateful to all open source contributors and will work to build a more positive open source ecosystem.\n\n\nHope you have a nice time with AFFiNE!\n\n\n",
-  "createDate": 1680147991871,
-  "guid": "6ed9be0b-581b-4512-ad9f-417baab0b5d1",
   "valid": true,
   "relatedBlogIds": [],
   "linkedPageIds": [],
