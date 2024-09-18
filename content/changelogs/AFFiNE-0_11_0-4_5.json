@@ -1,17 +1,20 @@
 {
-  "id": "2WL43gRM02zltVMTrfFBn",
-  "md": "",
-  "title": "“0.11.0”",
+  "cover": "https://insider.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/E6b0QmRpabhahpHSMLDxiFIJv8NuqBgaGeywTEg7UnY=.webp",
   "createDate": 1703238621334,
-  "updatedDate": 1703240473581,
-  "guid": "2WL43gRM02zltVMTrfFBn",
-  "version": "AFFiNE-0.11.0-4/5",
   "date": "2023-12-21T00:00:00.000Z",
   "description": "Discover the dynamic realm of AFFiNE 0.11.0 Day 4 – a compelling Miro alternative offering free online whiteboard templates designed to enhance creative clarity. Experience a suite of tools specifically that is great to keep productive visually for both individuals and teams.",
   "detailLink": "https://affine.pro/blog/affine-0-11-0-launch-day-4-navigating-canvas-complexity-templates-clarity-free-online-whiteboard",
-  "cover": "https://insider.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/E6b0QmRpabhahpHSMLDxiFIJv8NuqBgaGeywTEg7UnY=.webp",
+  "guid": "2WL43gRM02zltVMTrfFBn",
+  "id": "2WL43gRM02zltVMTrfFBn",
+  "linkedPageIds": [
+  ],
+  "md": "",
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "title": "“0.11.0”",
+  "updatedDate": 1703240473581,
   "valid": false,
-  "relatedBlogIds": [],
-  "linkedPageIds": [],
-  "relatedBlogs": []
+  "version": "AFFiNE-0.11.0-4/5"
 }
