@@ -1,29 +1,32 @@
 {
-  "id": "f88912b2aee84e47aae18f64332131be",
-  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/oSmlB48rgShBiKSetZZnBGQS1qfcpu7uQPKpVVp2pUU=",
-  "coverAlt": "",
-  "md": "**Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows:**\n\n\n### **Bug Fixes**\n\n\nIn our continued effort to make AFFiNE the most reliable all in one knowledge base 展开, fixing bugs is always our main concern. Here's our work in the last few days:\n\n\n* Fixed: In Kanban view, dragging a card with the mouse will trigger a selection and bring up a tag edit box;\n\n\n* Fixed: Adding a child of a page in page-tree in doc mode will throw an error in the page;\n\n\n* Fixed: User changes in the Kanban view are not synchronized when converting to text;\n\n\n* Fixed: When you add a tag to a block in an article and then hover over another block to add a tag, the tag edit card displays the tag record;\n\n\n* Fixed: In page mode, the block group toolbar and the mode switch button on the page are blocked from each other;\n\n\n* Fixed: In the board mode, when dragging one of the block groups into another block group, the first displayed indicator line will always be there;\n\n\n* Fixed: The 'ctrl + A' shortcut cannot be used in the input box of the edit panel of the tag app (Note: 'ctrl+a' key combination is a select-all shortcut).\n\n\nAFFiNE is currently in the early alpha stage with limited access, and public early access will be available in the autumn of 2022.\n\n\nAFFiNE is an open-source project which can be viewed on Github: [https://github.com/toeverything/AFFiNE#readme](https://github.com/toeverything/AFFiNE#readme)\n\n\nIf you endorse this open source project, please help us by clicking the GitHub star, which is crucial for the future development of AFFiNE.\n\n\nAFFiNE is very grateful to all open source contributors and will work to build a more positive open source ecosystem.\n\n\nHope you have a nice time with AFFiNE !\n\n\n",
-  "title": "AFFiNE 0805 V0.0.1-alpha.0.3.4 Release Notes",
-  "createDate": 1680147991871,
-  "trash": false,
-  "guid": "eabdf614-1a53-4fc9-b361-7c039be25e7c",
   "author": "Jiachen He, Fangyuan Zheng, Fanjing Zhang",
-  "tags": [
-    "Release Note"
-  ],
-  "slug": "affine-0805-v0.0.1-alpha.0.3.4-release-notes",
-  "description": "Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows",
-  "created": 1659657600000,
-  "updated": 1659657600000,
-  "layout": "blog",
-  "publish": true,
   "authors": [
     "Jiachen He",
     "Fangyuan Zheng",
     "Fanjing Zhang"
   ],
-  "valid": true,
-  "relatedBlogIds": [],
-  "linkedPageIds": [],
-  "relatedBlogs": []
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/oSmlB48rgShBiKSetZZnBGQS1qfcpu7uQPKpVVp2pUU=",
+  "coverAlt": "",
+  "createDate": 1680147991871,
+  "created": 1659657600000,
+  "description": "Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows",
+  "guid": "eabdf614-1a53-4fc9-b361-7c039be25e7c",
+  "id": "f88912b2aee84e47aae18f64332131be",
+  "layout": "blog",
+  "linkedPageIds": [
+  ],
+  "md": "**Thank you very much for your attention to AFFiNE! Some exciting changes in AFFiNE are as follows:**\n\n\n### **Bug Fixes**\n\n\nIn our continued effort to make AFFiNE the most reliable all in one knowledge base 展开, fixing bugs is always our main concern. Here's our work in the last few days:\n\n\n* Fixed: In Kanban view, dragging a card with the mouse will trigger a selection and bring up a tag edit box;\n\n\n* Fixed: Adding a child of a page in page-tree in doc mode will throw an error in the page;\n\n\n* Fixed: User changes in the Kanban view are not synchronized when converting to text;\n\n\n* Fixed: When you add a tag to a block in an article and then hover over another block to add a tag, the tag edit card displays the tag record;\n\n\n* Fixed: In page mode, the block group toolbar and the mode switch button on the page are blocked from each other;\n\n\n* Fixed: In the board mode, when dragging one of the block groups into another block group, the first displayed indicator line will always be there;\n\n\n* Fixed: The 'ctrl + A' shortcut cannot be used in the input box of the edit panel of the tag app (Note: 'ctrl+a' key combination is a select-all shortcut).\n\n\nAFFiNE is currently in the early alpha stage with limited access, and public early access will be available in the autumn of 2022.\n\n\nAFFiNE is an open-source project which can be viewed on Github: [https://github.com/toeverything/AFFiNE#readme](https://github.com/toeverything/AFFiNE#readme)\n\n\nIf you endorse this open source project, please help us by clicking the GitHub star, which is crucial for the future development of AFFiNE.\n\n\nAFFiNE is very grateful to all open source contributors and will work to build a more positive open source ecosystem.\n\n\nHope you have a nice time with AFFiNE !\n\n\n",
+  "publish": true,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "slug": "affine-0805-v0.0.1-alpha.0.3.4-release-notes",
+  "tags": [
+    "Release Note"
+  ],
+  "title": "AFFiNE 0805 V0.0.1-alpha.0.3.4 Release Notes",
+  "trash": false,
+  "updated": 1659657600000,
+  "valid": true
 }

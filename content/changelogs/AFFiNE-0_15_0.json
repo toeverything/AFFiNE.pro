@@ -1,17 +1,20 @@
 {
-  "id": "JaE6jKgjBIoSfEpJffAzi",
-  "md": "",
-  "title": "0.15.0",
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/20mYHk3x3qM3J3uJFtY2MOHNvUm7etjfHzQy3CooIHo=.webp",
   "createDate": 1719910386762,
-  "updatedDate": 1719912268763,
-  "guid": "JaE6jKgjBIoSfEpJffAzi",
-  "version": "AFFiNE-0.15.0",
   "date": "2024-07-01T00:00:00.000Z",
   "description": "With AFFiNE AI, you can write, draw and present with total intelligence. Whether it's refining and editing documents, brainstorming, creating captivating presentations, or sketching visual ideas, AFFiNE AI simplifies your workflow and instantly boosts your creativity.",
   "detailLink": "https://affine.pro/blog/whats-new-affine-2024-07",
-  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/20mYHk3x3qM3J3uJFtY2MOHNvUm7etjfHzQy3CooIHo=.webp",
+  "guid": "JaE6jKgjBIoSfEpJffAzi",
+  "id": "JaE6jKgjBIoSfEpJffAzi",
+  "linkedPageIds": [
+  ],
+  "md": "",
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "title": "0.15.0",
+  "updatedDate": 1719912268763,
   "valid": false,
-  "relatedBlogIds": [],
-  "linkedPageIds": [],
-  "relatedBlogs": []
+  "version": "AFFiNE-0.15.0"
 }

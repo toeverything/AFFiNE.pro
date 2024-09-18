@@ -1,29 +1,32 @@
 {
-  "id": "246d067fba3e45238851dec8c69da17c",
-  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/6VRed784f7jyEctOTJiQR8ir11tFfOQsV4kubVrH0bQ=",
-  "coverAlt": "",
-  "md": "**Thank you very much for your interest in AFFiNE! Some new and exciting changes are as follows:**\n\n\n### **Bug Fixes**\n\n\nIn our continued effort to make AFFiNE the most reliable all-in-one knowledge base, fixing bugs is always our main concern. Here's our work over the last few days:\n\n\n* Fixed: Text was obscured by inline menu in paper mode;\n\n\n* Fixed: Props format with errors and were showing in the console;\n\n\n* Fixed: When the user presses the shift key to draw consecutive straight lines, the starting point of the second line now coincides with the ending point of the first line;\n\n\n* Fixed: Tag-app caused page crashes during use;\n\n\n* Fixed: The page view did not accurately recognize the mouse selection;\n\n\n* Fixed: After switching pages, the behavior of selection feature did not meet expectations;\n\n\n* Fixed: AFFiNE was prompting a window during the installation process indicating that the installation has failed;\n\n\n* Fixed: Alignment of page styles with design drawings;\n\n\n* Fixed: In paper mode, no background colors could be added to the text;\n\n\n* Fixed: The GitBook URL now uses AFFiNE's domain name;\n\n\n* Fixed: The GitHub ReadMe badge has been updated;\n\n\n* Fixed: Low priority console warnings where React does not recognize isDisabled.\n\n\nAFFiNE is currently in the early alpha stage with limited access, and public early access will be available in the autumn of 2022.\n\n\nAFFiNE is an open-source project which can be viewed on Github:[https://github.com/toeverything/AFFiNE#readme](https://github.com/toeverything/AFFiNE#readme)\n\n\nThe official website for AFFiNE is [https://affine.pro/](https://affine.pro/)\n\n\nIf you endorse this open source project, please help us by clicking the GitHub star, which is crucial for the future development of AFFiNE.\n\n\nAFFiNE is very grateful to all open source contributors and will work to build a more positive open source ecosystem.\n\n\nHope you have a nice time with AFFiNE!\n\n\n",
-  "title": "AFFiNE 0812 V0.0.1-alpha.0.4.1 Release Notes",
-  "createDate": 1680147991871,
-  "guid": "d1aa8a0e-5d71-4ed6-ba61-6af04983915e",
   "author": "Jiachen He, Christopher Smolak, Fangyuan Zheng, Fanjing Zhang",
-  "tags": [
-    "Release Note"
-  ],
-  "slug": "affine-0812-v0.0.1-alpha.0.4.1-release-notes",
-  "description": "Thank you very much for your interest in AFFiNE! Some new and exciting changes are as follows",
-  "created": 1660262400000,
-  "updated": 1660262400000,
-  "layout": "blog",
-  "publish": true,
   "authors": [
     "Jiachen He",
     "Christopher Smolak",
     "Fangyuan Zheng",
     "Fanjing Zhang"
   ],
-  "valid": true,
-  "relatedBlogIds": [],
-  "linkedPageIds": [],
-  "relatedBlogs": []
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/6VRed784f7jyEctOTJiQR8ir11tFfOQsV4kubVrH0bQ=",
+  "coverAlt": "",
+  "createDate": 1680147991871,
+  "created": 1660262400000,
+  "description": "Thank you very much for your interest in AFFiNE! Some new and exciting changes are as follows",
+  "guid": "d1aa8a0e-5d71-4ed6-ba61-6af04983915e",
+  "id": "246d067fba3e45238851dec8c69da17c",
+  "layout": "blog",
+  "linkedPageIds": [
+  ],
+  "md": "**Thank you very much for your interest in AFFiNE! Some new and exciting changes are as follows:**\n\n\n### **Bug Fixes**\n\n\nIn our continued effort to make AFFiNE the most reliable all-in-one knowledge base, fixing bugs is always our main concern. Here's our work over the last few days:\n\n\n* Fixed: Text was obscured by inline menu in paper mode;\n\n\n* Fixed: Props format with errors and were showing in the console;\n\n\n* Fixed: When the user presses the shift key to draw consecutive straight lines, the starting point of the second line now coincides with the ending point of the first line;\n\n\n* Fixed: Tag-app caused page crashes during use;\n\n\n* Fixed: The page view did not accurately recognize the mouse selection;\n\n\n* Fixed: After switching pages, the behavior of selection feature did not meet expectations;\n\n\n* Fixed: AFFiNE was prompting a window during the installation process indicating that the installation has failed;\n\n\n* Fixed: Alignment of page styles with design drawings;\n\n\n* Fixed: In paper mode, no background colors could be added to the text;\n\n\n* Fixed: The GitBook URL now uses AFFiNE's domain name;\n\n\n* Fixed: The GitHub ReadMe badge has been updated;\n\n\n* Fixed: Low priority console warnings where React does not recognize isDisabled.\n\n\nAFFiNE is currently in the early alpha stage with limited access, and public early access will be available in the autumn of 2022.\n\n\nAFFiNE is an open-source project which can be viewed on Github:[https://github.com/toeverything/AFFiNE#readme](https://github.com/toeverything/AFFiNE#readme)\n\n\nThe official website for AFFiNE is [https://affine.pro/](https://affine.pro/)\n\n\nIf you endorse this open source project, please help us by clicking the GitHub star, which is crucial for the future development of AFFiNE.\n\n\nAFFiNE is very grateful to all open source contributors and will work to build a more positive open source ecosystem.\n\n\nHope you have a nice time with AFFiNE!\n\n\n",
+  "publish": true,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "slug": "affine-0812-v0.0.1-alpha.0.4.1-release-notes",
+  "tags": [
+    "Release Note"
+  ],
+  "title": "AFFiNE 0812 V0.0.1-alpha.0.4.1 Release Notes",
+  "updated": 1660262400000,
+  "valid": true
 }
