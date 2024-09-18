@@ -41,13 +41,16 @@ declare global {
 
   interface ContentFileMeta {
     title: string | null
+    description: string | null
+    ogtitle: string | null
+    ogdescription: string | null
+    ogimage: string | null
     authors: string[] | null
     tags: string[] | null
     id: string
     slug: string | null
     cover?: string | null
     coverAlt?: string;
-    description: string | null
     created: number | null
     updated: number | null
     md: string
