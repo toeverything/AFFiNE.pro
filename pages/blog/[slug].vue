@@ -114,9 +114,7 @@ const publishDate = useDateFormat(
 );
 
 const pageMeta = computed(() => {
-  const title = article.value?.ogtitle || article.value?.title
-    ? article.value?.title + ' | AFFiNE'
-    : 'Blog | AFFiNE - All In One KnowledgeOS'; // should always have a title`
+  const title = (article.value?.ogtitle || article.value?.title || 'Blog') + ' | AFFiNE';
   const desc =
     article.value?.ogdescription ||
     article.value?.description ||
