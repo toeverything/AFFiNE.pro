@@ -2,7 +2,7 @@ const ALLOW_ORIGINS = new Set([
   'https://affine.pro',
   'https://insider.affine.pro',
   'https://affine.fail',
-])
+]);
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     },
     headers: {
       contentSecurityPolicy: false,
+      crossOriginEmbedderPolicy: false,
     },
   },
 
@@ -192,4 +193,4 @@ export default defineNuxtConfig({
       baseURL: 'https://affine.pro',
     },
   },
-})
+});
