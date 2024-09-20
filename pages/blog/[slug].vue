@@ -11,7 +11,7 @@
         nuxt-icon( name="ArrowRightSmall" )
       | {{ $t('allPosts') }}
 
-    .info-meta.last-edited.mb-4 Last edited: May 23, 2024
+    .info-meta.last-edited.mb-4 Last edited: {{ publishDate }}
 
     h1.article-title {{ article.title }}
     //- .article-desc( v-if="article.description" ) {{ article.description }}
@@ -110,17 +110,21 @@ const users = computed(() => {
 
 const publishDate = useDateFormat(
   computed(() => new Date(article.value?.updated || Date.now())),
-  'MM/DD/YYYY'
+  'MMM DD, YYYY'
 );
 
 const pageMeta = computed(() => {
-  const title = (article.value?.ogtitle || article.value?.title || 'Blog') + ' | AFFiNE';
+  const title =
+    (article.value?.ogtitle || article.value?.title || 'Blog') + ' | AFFiNE';
   const desc =
     article.value?.ogdescription ||
     article.value?.description ||
     'There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.';
   const url = `${PATH.SHARE_HOST}/blog/${article.value?.slug}`;
-  const image = article.value?.ogimage || article.value?.cover || 'https://affine.pro/og.jpeg';
+  const image =
+    article.value?.ogimage ||
+    article.value?.cover ||
+    'https://affine.pro/og.jpeg';
 
   return {
     title: article.value?.title,
