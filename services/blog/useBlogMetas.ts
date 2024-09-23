@@ -24,7 +24,7 @@ export const useBlogMetas = (
       meta.md &&
       meta.slug
     ))
-    .sort(({ created: a }, { created: b }) => {
+    .sort(({ updated: a }, { updated: b }) => {
       return (b || 0) - (a || 0);
     })
   const tags = getTags(publishedMetas)
