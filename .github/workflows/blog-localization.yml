@@ -25,13 +25,9 @@ jobs:
         working-directory: ./generation
       - name: "Run sync command"
         working-directory: ./generation
-        run: |
-          yarn sync-blog
-          yarn sync-template
-          yarn sync-changelog
-
+        run: yarn gen:all
       - name: "Commit sync contents"
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[GitHub Action] Sync blog contents from AFFiNE Cloud"
-          file_pattern: 'content/blog/*.json content/templates/*.json content/changelogs/*.json public/templates/snapshots/*.zip'
+          file_pattern: 'content/blog/*.json content/templates/*.json content/changelogs/*.json public/templates/snapshots/*.zip public/rss.xml public/sitemap.xml'
