@@ -6,7 +6,10 @@
   "scripts": {
     "sync-blog": "tsx sync-blog.ts",
     "sync-changelog": "tsx sync-changelog.ts",
-    "sync-template": "tsx sync-template.ts"
+    "sync-template": "tsx sync-template.ts",
+    "gen-rss": "tsx gen-rss.ts",
+    "gen-sitemap": "tsx gen-sitemap.ts",
+    "gen:all": "yarn sync-blog && yarn sync-changelog && yarn sync-template && yarn gen-rss && yarn gen-sitemap"
   },
   "dependencies": {
     "@types/fs-extra": "^11.0.4",
@@ -14,7 +17,9 @@
     "affine-reader": "^3.2.9",
     "fs-extra": "^11.2.0",
     "json-stable-stringify": "^1.1.1",
-    "tsx": "^4.19.0"
+    "sitemap": "^8.0.0",
+    "tsx": "^4.19.0",
+    "xml-formatter": "^3.6.3"
   },
   "type": "module",
   "packageManager": "yarn@1.22.19"
