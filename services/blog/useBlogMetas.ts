@@ -22,7 +22,8 @@ export const useBlogMetas = (
       meta.cover &&
       meta.title &&
       meta.md &&
-      meta.slug
+      meta.slug &&
+      meta.layout === 'blog'
     ))
     .sort(({ updated: a }, { updated: b }) => {
       return (b || 0) - (a || 0);

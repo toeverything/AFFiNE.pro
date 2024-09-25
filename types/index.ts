@@ -53,6 +53,7 @@ declare global {
     coverAlt?: string;
     created: number | null
     updated: number | null
+    updatedDate: number | null // given by affine app
     md: string
     layout: string | null
     publish?: boolean
