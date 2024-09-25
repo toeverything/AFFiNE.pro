@@ -1,0 +1,34 @@
+{
+  "author": "AFFiNE",
+  "authors": [
+    "AFFiNE"
+  ],
+  "createDate": 1727205548429,
+  "created": 1727136000000,
+  "description": "Wedding Planner Checklist",
+  "guid": "3Hv9PVJP3pgMUpgUqb2Ln",
+  "id": "3Hv9PVJP3pgMUpgUqb2Ln",
+  "linkedPageIds": [
+    "2aUTfRedEQbIYWp0G5Xs3",
+    "mhXkUvwacMxFPXrxlUQEF",
+    "y3GwFuCD7PCzfmAihbd5m",
+    "EzCZzdu56cBrqqDab4RtK",
+    "mhXkUvwacMxFPXrxlUQEF",
+    "_Bpe5IadJPG_MiS7tEJyb",
+    "WCiKoC9_FensTgC9Dw_GY"
+  ],
+  "md": "\n\n\n\n\n\n|Title|\n|---|\n|[](LinkedPage:mhXkUvwacMxFPXrxlUQEF)<br /><br /><br />|\n|[](LinkedPage:y3GwFuCD7PCzfmAihbd5m:page)<br /><br /><br />|\n|[](LinkedPage:EzCZzdu56cBrqqDab4RtK:page)<br /><br /><br />|\n\n\n|Title|\n|---|\n|[](LinkedPage:mhXkUvwacMxFPXrxlUQEF)<br /><br /><br />|\n|[](LinkedPage:_Bpe5IadJPG_MiS7tEJyb)<br /><br /><br />|\n|[](LinkedPage:WCiKoC9_FensTgC9Dw_GY)<br /><br /><br />|\n\n\n\n\n\n",
+  "publish": true,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "slug": "wedding-planner-checklist",
+  "tags": [
+    "Checklist Template"
+  ],
+  "template": "LinkedPage:2aUTfRedEQbIYWp0G5Xs3:page",
+  "title": "Wedding Planner Checklist",
+  "updatedDate": 1727205702261,
+  "valid": false
+}

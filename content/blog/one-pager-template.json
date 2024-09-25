@@ -1,0 +1,42 @@
+{
+  "author": "AFFiNE",
+  "authors": [
+    "AFFiNE"
+  ],
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/BL2ibyHtz5wOMe1C2tSQ5-6hqknieqPB7vYpMYtqJLM=",
+  "coverAlt": "One Pager Template",
+  "createDate": 1727167125395,
+  "created": 1727049600000,
+  "description": "Create professional one-pagers effortlessly with our customizable AFFiNE template. Perfect for project summaries, proposals, and profiles. Organize key points, details, and contact info in a clear, concise format. Boost your productivity with this versatile, easy-to-use template designed for AFFiNE's AI-powered note-taking platform.",
+  "guid": "4kDX4gDFREAJ7ykJ2zHI6",
+  "id": "4kDX4gDFREAJ7ykJ2zHI6",
+  "linkedPageIds": [
+    "lkbuDmj6Ud4DdK-DfK4VZ",
+    "mhXkUvwacMxFPXrxlUQEF",
+    "_Bpe5IadJPG_MiS7tEJyb",
+    "WCiKoC9_FensTgC9Dw_GY",
+    "6gOLcAJKsJ",
+    "UKFrN2wPYEAlaP_b4_r8m",
+    "o4iUDMOOWp_aAVCgFHFiT"
+  ],
+  "md": "## To use this template in AFFiNE:\n\n\nCreate a new document in AFFiNE.\nCopy and paste this Markdown template into the document.\nReplace the placeholder text (enclosed in square brackets) with your actual content.\nCustomize the sections, headings, and points to fit your specific needs.\nUse AFFiNE's formatting options to enhance the visual appeal and readability.\nThis one-pager template is designed to:\n\n\n### Capture attention with a clear title and brief overview.\n\n\nHighlight key points upfront.\nProvide space for more detailed information in separate sections.\nInclude contact information for follow-up.\nOffer additional resources for those who want to learn more.\n\n\n### You can further customize this template in AFFiNE by:\n\n\nUsing different heading levels to adjust the visual hierarchy.\nAdding images or icons to make it more visually appealing.\nIncorporating callout boxes for important information.\nUsing color coding or tags to categorize different types of information.\nAdding links to relevant AFFiNE documents or external resources.\nRemember, the key to a good one-pager is keeping it concise and focused on the most important information. The goal is to communicate your main points quickly and effectively.\n\n\n|Title|\n|---|\n|[](LinkedPage:mhXkUvwacMxFPXrxlUQEF)<br /><br /><br />|\n|[](LinkedPage:_Bpe5IadJPG_MiS7tEJyb)<br /><br /><br />|\n|[](LinkedPage:WCiKoC9_FensTgC9Dw_GY)<br /><br /><br />|\n\n\n",
+  "publish": true,
+  "relatedBlogIds": [
+    "6gOLcAJKsJ",
+    "UKFrN2wPYEAlaP_b4_r8m",
+    "o4iUDMOOWp_aAVCgFHFiT"
+  ],
+  "relatedBlogs": [
+    "five-best-open-source-miro-alternatives-2023",
+    "top-10-best-free-digital-planner-apps-2023",
+    "check-out-a-list-of-meal-planner-template-options-for-your-family"
+  ],
+  "slug": "one-pager-template",
+  "tags": [
+    "One Pager Template"
+  ],
+  "template": "LinkedPage:lkbuDmj6Ud4DdK-DfK4VZ:page",
+  "title": "One Pager Template",
+  "updatedDate": 1727167362585,
+  "valid": true
+}

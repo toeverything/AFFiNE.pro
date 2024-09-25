@@ -1,0 +1,42 @@
+{
+  "author": "AFFiNE",
+  "authors": [
+    "AFFiNE"
+  ],
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/lSVlFSb8W-StQoTVIqKzM6K5nLRhvXPtQzn7A0aAhjk=",
+  "coverAlt": "Daily Planner",
+  "createDate": 1727196492774,
+  "created": 1727136000000,
+  "description": "This hourly planner templatehelps you structure your day effectively, with sections for daily goals, an hourly schedule, and end-of-day reflection. By using this planner, you can ensure you make the most of every hour and stay focused on your tasks and objectives.",
+  "guid": "EzCZzdu56cBrqqDab4RtK",
+  "id": "EzCZzdu56cBrqqDab4RtK",
+  "linkedPageIds": [
+    "c5VHONcpks_OTNtpVPQFb",
+    "2c1TLEdEIfcLPBd5wHCE8",
+    "y3GwFuCD7PCzfmAihbd5m",
+    "WCiKoC9_FensTgC9Dw_GY",
+    "6gOLcAJKsJ",
+    "UKFrN2wPYEAlaP_b4_r8m",
+    "siVFmLrvI-bKkBlpcemaF"
+  ],
+  "md": "An **hourly planner** is the perfect tool for managing your time effectively and staying on top of your daily tasks. Whether you’re juggling work meetings, personal appointments, or dedicated focus hours, breaking your day into hourly segments ensures that every moment is accounted for. This planner is ideal for individuals with busy schedules, helping to keep you organized and productive by structuring your day in a clear, manageable way.\n\n\n### **Key Features of the Hourly Planner**\n\n\n### **1. Hourly Breakdown**\n\n\nThe **hourly breakdown** provides a detailed structure for planning your day, hour by hour. It’s perfect for scheduling meetings, setting aside time for focused work, or balancing personal activities with professional responsibilities.\n\n\n### **2. Daily Goals**\n\n\nSet **daily goals** to give your day a clear direction and purpose. Whether it’s completing work tasks or reaching personal milestones, this section helps you stay focused on what you need to accomplish.\n\n\n### **3. Flexibility and Customization**\n\n\nThe hourly planner is **flexible**, allowing you to plan your day based on your routine. It’s adaptable for both early risers and night owls, ensuring you can create a schedule that works for you.\n\n\n### **4. Reflection and Notes**\n\n\nAt the end of the day, reflect on your progress and leave notes for improvement or upcoming tasks. The **reflection and notes** section helps you track what worked well and what can be adjusted for better productivity.\n\n\n|Title|\n|---|\n|[](LinkedPage:2c1TLEdEIfcLPBd5wHCE8:page)<br /><br /><br />|\n|[](LinkedPage:y3GwFuCD7PCzfmAihbd5m:page)<br /><br /><br />|\n|[](LinkedPage:WCiKoC9_FensTgC9Dw_GY)<br /><br /><br />|\n\n\n",
+  "publish": true,
+  "relatedBlogIds": [
+    "6gOLcAJKsJ",
+    "UKFrN2wPYEAlaP_b4_r8m",
+    "siVFmLrvI-bKkBlpcemaF"
+  ],
+  "relatedBlogs": [
+    "five-best-open-source-miro-alternatives-2023",
+    "top-10-best-free-digital-planner-apps-2023",
+    "8-free-printable-vision-board-templates-examples-2023"
+  ],
+  "slug": "hourly-planner",
+  "tags": [
+    "Digital Planner"
+  ],
+  "template": "LinkedPage:c5VHONcpks_OTNtpVPQFb:page",
+  "title": "Hourly Planner",
+  "updatedDate": 1727244751532,
+  "valid": true
+}

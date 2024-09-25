@@ -1,0 +1,30 @@
+{
+  "author": "Haoxin Shang",
+  "authors": [
+    "Haoxin Shang"
+  ],
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/U4uBjbDsL41-Ne0GKgMcnVeXeICjYvpbqJjQ2i4mNlk=",
+  "coverAlt": "",
+  "createDate": 1687145251982,
+  "created": 1686787200000,
+  "description": null,
+  "favorite": false,
+  "guid": "4e128e84-2448-476a-90bb-3d2b85776bf6",
+  "id": "O1Dps_6q9Y",
+  "layout": "blog",
+  "linkedPageIds": [
+  ],
+  "md": "AFFiNE and Supabase collaborated to host an exceptional offline meetup in Singapore on the evening of June 8, 2023. The event focused on open-source themes and provided a valuable opportunity for like-minded individuals to connect. By embracing open-source, we aimed to harness global intelligence and drive innovation. Renowned companies including Meta, Supabase, AFFiNE, Grab, and Shopee participated, bringing together developers, investors, and DevRels to discuss technology, open-source, and AI.\n\n\n\n![r7Qw3Lqal0Yojmwrq45nOMTMoEwMbZa5mllqjGaYViA=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/r7Qw3Lqal0Yojmwrq45nOMTMoEwMbZa5mllqjGaYViA=)\n\n\nDuring the sharing session, three remarkable speakers captivated the audience. Mr Yifeng Wang, the technical partner from AFFiNE, kicked off the event with an enlightening speech. He highlighted the growth and community support of the AFFiNE knowledge base, emphasizing the advantages of open-source products and sharing operational experiences that showcased the benefits of embracing an open-source workflow.Roughly includes the following points：\n\n\n1. Introduction: AFFiNE is a locally prioritized and open-sourced product.\n\n\n1. Engineering practices of open source products, and introduced the development strategy of AFFiNE.\n\n\n1. The combination of open source and commercialization.\n\n\nIf you want to get more info, you can watch the video.\n\n\n\n![AyFw0rKpKpgWRlzNZ83zmY3Pg4zUFveDuQoWrmExoYs=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/AyFw0rKpKpgWRlzNZ83zmY3Pg4zUFveDuQoWrmExoYs=)\n\n\n [Click here to view the speech video](https://www.youtube.com/watch?v=hXCMP0T0QOE)\n\n\nNext, Supabase's DevRel, Mr Thor, brought a humorous and fun-filled speech. He primarily explored how we can use Postgres with OpenAI to build a ChatGPT-like search experience that works with content from your own docs.Roughly includes the following points：\n\n\n1. Popularize knowledge and usage of Postgres.\n\n\n1. How to use Postgres and OpenAI to build your own ChatGPT.\n\n\n1. Demonstrated an example of using Postgres and OpenAI to build an image search.\n\n\nIf you want to get more info, you can watch the video.\n\n\n\n![HH4neqh239vGDZ1lFPLyvZ76hXr_nXv2J55NWPiHNNQ=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/HH4neqh239vGDZ1lFPLyvZ76hXr_nXv2J55NWPiHNNQ=)\n\n\n [Click here to view the speech video](https://www.youtube.com/watch?v=RyJHUYIjT3M)\n\n\nFinally, Mr Brooklyn from AFFiNE left a deep impression with his unique insights. He mainly discussed how we can use Rust with NAPI-RS to build a high-performance Node.js addon and what's the trade-off for doing this. If you want to get more info, you can watch the video.Roughly includes the following points：\n\n\n1. Rust and NAPI-RS are being used to rewrite many front-end tools, mainly performance-sensitive libraries, to replace original JavaScript components.\n\n\n1. NAPI-RS can handle more complex scenarios, such as building plugin APIs to process source code and returning a promise.\n\n\n1. The security issues, debugging problems, and overhead costs of NAPI-RS.\n\n\n\n![ZuiF4LEeBKFrCBtvJFLzkkHB7MXod9coTlqEMtc4odE=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/ZuiF4LEeBKFrCBtvJFLzkkHB7MXod9coTlqEMtc4odE=)\n\n\n[Click here to view the speech video](https://www.youtube.com/watch?v=hXCMP0T0QOE)\n\n\nSpecial thanks to Supabase for co-organizing and engineers.sg for filming the video.\n\n\n\n![LFvhEKKKntNOLPn4CfOCwJ31vq6hk0R16Nf4sLU9nUM=](https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/LFvhEKKKntNOLPn4CfOCwJ31vq6hk0R16Nf4sLU9nUM=)\n\n\nAs a dedicated advocate of open-source, AFFiNE strives to foster connections with developers worldwide. We remain actively engaged in organizing and participating in global open-source technology events. We encourage you to stay updated on our upcoming activities, as we will host events periodically. Furthermore, we value your feedback and suggestions regarding this event. Please feel free to contact us through the following channels.\n\n\n**Following our Channels👇:**\n\n\n* Official Website: [https://affine.pro/](https://affine.pro/)\n\n\n* GitHub: [https://github.com/toeverything/AFFiNE](https://github.com/toeverything/AFFiNE)\n\n\n* Discord: [https://discord.gg/Arn7TqJBvG](https://discord.gg/Arn7TqJBvG)\n\n\n* Telegram: [https://t.me/affineworkos](https://t.me/affineworkos)\n\n\n",
+  "publish": false,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "slug": "open-source-alliance-offline-meetup",
+  "tags": [
+    "Content"
+  ],
+  "title": "2023 Open-source Alliance: A Memorable Offline Meetup",
+  "updated": 1687132800000,
+  "valid": true
+}

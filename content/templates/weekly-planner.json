@@ -1,0 +1,54 @@
+{
+  "author": "AFFiNE",
+  "authors": [
+    "AFFiNE"
+  ],
+  "cateName": "Digital Planner",
+  "cateSlug": "digital-planner",
+  "cateTitle": "Digital Planner",
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/-QclQNN7YEd8vsVl2Ks7iMrj6zT5vQrpMbS6zYleG0M=",
+  "coverAlt": "",
+  "createDate": 1727195122171,
+  "created": 1727136000000,
+  "description": "This template features sections for weekly goals, daily to-do lists, appointments, and notes for Monday through Friday, a combined weekend section, and a weekly review section at the bottom for reflection and planning.",
+  "featured": false,
+  "guid": "y3GwFuCD7PCzfmAihbd5m",
+  "id": "y3GwFuCD7PCzfmAihbd5m",
+  "linkedPageIds": [
+    "1q2HJaIWeyp4pi3vm7LuW",
+    "HjjOWQnAjlp4OAaV3aOzY",
+    "W9LjO_lpay5qyGkwJC2Nk",
+    "1e8crRBof26Jag3KtBG1J",
+    "6gOLcAJKsJ",
+    "UKFrN2wPYEAlaP_b4_r8m",
+    "siVFmLrvI-bKkBlpcemaF"
+  ],
+  "md": "## **Weekly Planner**\n\n\nThis weekly planner template is designed to help you stay organized and productive throughout the week. It includes a section for setting your**weekly goals**at the top, followed by daily sections for**Monday through Friday**, each featuring to-do lists, appointments, and space for notes. The**weekend**is covered with a combined section for**Saturday and Sunday**, allowing for a more relaxed, flexible schedule. At the bottom, there’s a**weekly review section**, perfect for reflecting on your accomplishments and planning for the week ahead.\n\n\n### **Benefits of Using a Weekly Planner**\n\n\nUsing a weekly planner helps you prioritize tasks, manage time effectively, and stay focused on your goals. It allows you to break down large projects into manageable steps and track progress throughout the week. Additionally, having a dedicated space for reflection in the weekly review section helps you adjust your plans and improve productivity for the following week. This structure ensures that you’re balancing both work and personal time, especially with the flexibility of the weekend section.\n\n\n",
+  "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=1q2HJaIWeyp4pi3vm7LuW&pageId=y3GwFuCD7PCzfmAihbd5m&name=Weekly+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2F1q2HJaIWeyp4pi3vm7LuW.zip",
+  "publish": true,
+  "relatedBlogIds": [
+    "6gOLcAJKsJ",
+    "UKFrN2wPYEAlaP_b4_r8m",
+    "siVFmLrvI-bKkBlpcemaF"
+  ],
+  "relatedBlogs": [
+    "five-best-open-source-miro-alternatives-2023",
+    "top-10-best-free-digital-planner-apps-2023",
+    "8-free-printable-vision-board-templates-examples-2023"
+  ],
+  "relatedTemplates": [
+    "monthly-weekly-planner",
+    "weekly-budget-planner"
+  ],
+  "slug": "weekly-planner",
+  "tags": [
+    "Digital Planner"
+  ],
+  "template": "LinkedPage:1q2HJaIWeyp4pi3vm7LuW:page",
+  "templateId": "1q2HJaIWeyp4pi3vm7LuW",
+  "templateMode": "page",
+  "title": "Weekly Planner",
+  "updatedDate": 1727233482460,
+  "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=1q2HJaIWeyp4pi3vm7LuW&pageId=y3GwFuCD7PCzfmAihbd5m&name=Weekly+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2F1q2HJaIWeyp4pi3vm7LuW.zip",
+  "valid": true
+}

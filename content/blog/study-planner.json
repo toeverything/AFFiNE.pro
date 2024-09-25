@@ -1,0 +1,42 @@
+{
+  "author": "AFFiNE",
+  "authors": [
+    "AFFiNE"
+  ],
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/J8nlyWrALbIFv9hAq1vVlMkpKQ__-zQo6apX8EU1lLg=",
+  "coverAlt": "Study Planner",
+  "createDate": 1727207182900,
+  "created": 1727136000000,
+  "description": "The Study Planneris designed to help students effectively plan their study time, manage assignments, and set academic goals. By organizing study sessions and tracking progress, this planner ensures that students stay focused and on track throughout their studies. Whether you’re preparing for exams, balancing multiple subjects, or managing deadlines, the study planner offers the structure needed to stay organized and succeed academically.",
+  "guid": "_IilUogF-fcBCqr39WtAq",
+  "id": "_IilUogF-fcBCqr39WtAq",
+  "linkedPageIds": [
+    "iGmPAsgb1Z7rZ1Hthm5hu",
+    "mhXkUvwacMxFPXrxlUQEF",
+    "y3GwFuCD7PCzfmAihbd5m",
+    "EzCZzdu56cBrqqDab4RtK",
+    "oapgNIuMNG",
+    "sCGzzgL7ehx7YswYLAozx",
+    "8yoI71clK3"
+  ],
+  "md": "A **Study Planner** is an essential tool for students looking to effectively manage their study time, track assignments, and set academic goals. Whether you’re balancing multiple subjects, preparing for exams, or tackling a large project, this planner allows you to break down your tasks into manageable steps, prioritize what’s important, and stay on track. With dedicated sections for daily study sessions, to-do lists, and progress tracking, a study planner helps students stay organized, focused, and motivated throughout the academic journey.\n\n\n## **Key Features of the Study Planner**\n\n\n### **1. Study Schedule**\n\n\nThe **study schedule** section lets you map out your study sessions for the week, ensuring you’re allocating enough time to each subject or task.\n\n\n### **2. Assignment Tracker**\n\n\nKeep track of your assignments and deadlines with the**assignment tracker**, ensuring nothing slips through the cracks and every task is completed on time.\n\n\n### **3. Goal Setting and Progress Review**\n\n\nThe **goal setting** and **progress review** sections encourage students to set achievable academic goals and reflect on their progress at the end of the week, keeping them motivated and accountable.\n\n\n\n\n\n|Title|\n|---|\n|[](LinkedPage:mhXkUvwacMxFPXrxlUQEF)<br /><br /><br />|\n|[](LinkedPage:y3GwFuCD7PCzfmAihbd5m:page)<br /><br /><br />|\n|[](LinkedPage:EzCZzdu56cBrqqDab4RtK:page)<br /><br /><br />|\n\n\n",
+  "publish": true,
+  "relatedBlogIds": [
+    "oapgNIuMNG",
+    "sCGzzgL7ehx7YswYLAozx",
+    "8yoI71clK3"
+  ],
+  "relatedBlogs": [
+    "5-best-free-daily-planner-apps-for-2023",
+    "free-and-printable-family-tree-templates",
+    "best-open-source-notion-alternatives"
+  ],
+  "slug": "study-planner",
+  "tags": [
+    "Digital Planner"
+  ],
+  "template": "LinkedPage:iGmPAsgb1Z7rZ1Hthm5hu:page",
+  "title": "Study Planner",
+  "updatedDate": 1727272269603,
+  "valid": true
+}

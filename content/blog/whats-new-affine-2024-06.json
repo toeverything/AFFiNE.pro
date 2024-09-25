@@ -1,0 +1,28 @@
+{
+  "author": "AFFiNE",
+  "authors": [
+    "AFFiNE"
+  ],
+  "createDate": 1719281083823,
+  "created": 1719273600000,
+  "description": "AFFiNE is the alternative of Notion, Miro, and Monday, this article introduces what’s new, and what updates, Improvements, and bug fixes have been released in the latest version.",
+  "guid": "3b21QoW2h4IKKUE6JbVJE",
+  "id": "3b21QoW2h4IKKUE6JbVJE",
+  "layout": "blog",
+  "linkedPageIds": [
+  ],
+  "md": "In our latest release, we have introduced further integration of AI and advanced document management features that will transform the way you work. From AI-powered image processing to innovative document embedding techniques.\n\n\n## Key Updates\n\n\n### 1. AI-Powered Image Processing\n\n\nOne of the most exciting developments is the introduction of AI-powered image processing features. These tools, available through AFFiNE AI, offer a range of capabilities:\n\n\n* **AI Image Filter**: Users can now apply AI style filters to images effortlessly, enhancing visual appeal and creativity.\n\n\n* **Image Processing Features**: Functions such as \"Clearer,\" \"Remove Background,\" and \"Convert to Sticker\" provide users with powerful tools to manipulate images with ease.\n\n\n* **Generate a Caption**: This feature leverages AI to recognize images and generate descriptive captions, making content creation more efficient.\n\n\nThese AI-driven tools not only streamline the image editing process but also open up new possibilities for creative expression.\n\n\n### 2. Enhanced Document Embedding\n\n\nThe new document embedding features significantly improve how users manage and associate documents:\n\n\n* **Linked Docs Insertion**: Users can now insert linked documents in both Page Mode and Edgeless Mode, making it easier to reference and connect related content.\n\n\n* **Shortcut Keys and Automatic Recognition**: The addition of shortcut keys and automatic recognition for private links simplifies the process of embedding documents.\n\n\n* **External Links Management**: Quickly insert external links and manage bookmarks with ease, enhancing the organization and accessibility of resources.\n\n\nThese enhancements make document management more intuitive and efficient, allowing users to maintain a cohesive and well-organized digital workspace.\n\n\n### 3. Mind Map Integration\n\n\nMind mapping is a powerful tool for organizing thoughts and ideas, and the latest updates have made it even more accessible:\n\n\n* **Mind Map Toolbar Option**: A dedicated option in the Edgeless toolbar, along with the shortcut key \"M,\" allows for quick creation and organization of mind maps.\n\n\n* **Diverse Styles and Intuitive Interface**: Multiple new styles and a streamlined editing process make mind maps more engaging and easier to use.\n\n\nBy integrating mind maps seamlessly into the digital workspace, users can enhance their brainstorming sessions and idea presentations.\n\n\n## Conclusion\n\n\nThe latest advancements in AI and document management are revolutionizing digital workspaces. AI-powered image processing, enhanced document embedding, and intuitive mind map integration are just a few of the features that are driving this transformation. These innovations not only improve productivity and creativity but also make digital interactions more seamless and enjoyable. As we continue to embrace these technologies, the potential for further enhancements and new possibilities is limitless. Stay ahead of the curve by exploring these cutting-edge tools and integrating them into your workflow.\n\n\n",
+  "publish": false,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "slug": "whats-new-affine-2024-06",
+  "tags": [
+    "Release Note"
+  ],
+  "title": "What's new - AFFiNE - June 2024 Update",
+  "updated": 1719273600000,
+  "updatedDate": 1719283265173,
+  "valid": false
+}
