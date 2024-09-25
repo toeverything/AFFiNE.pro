@@ -98,7 +98,7 @@ useHead(pageMeta);
     .section-title
       font-weight: 500;
       font-size: fv(36, 60);
-      line-height: (65/60);
+      line-height: (70/60);
       letter-spacing: -0.05em;
       background: linear-gradient(91.4deg, #474747 20.12%, #000000 55.27%, #474747 82.61%);
       -webkit-background-clip: text;
