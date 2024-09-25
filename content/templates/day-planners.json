@@ -1,0 +1,47 @@
+{
+  "author": "AFFiNE",
+  "authors": [
+    "AFFiNE"
+  ],
+  "cateName": "Digital Planner",
+  "cateSlug": "digital-planner",
+  "cateTitle": "Digital Planner",
+  "createDate": 1727206121350,
+  "created": 1727136000000,
+  "description": " ",
+  "featured": false,
+  "guid": "3N1O3DJ9FdTN3qMqMKBTx",
+  "id": "3N1O3DJ9FdTN3qMqMKBTx",
+  "linkedPageIds": [
+    "fhOfOV5RgWKEQTNSVvqAh",
+    "mhXkUvwacMxFPXrxlUQEF",
+    "y3GwFuCD7PCzfmAihbd5m",
+    "EzCZzdu56cBrqqDab4RtK",
+    "mhXkUvwacMxFPXrxlUQEF",
+    "_Bpe5IadJPG_MiS7tEJyb",
+    "WCiKoC9_FensTgC9Dw_GY"
+  ],
+  "md": "\n\n\n\n\n\n|Title|\n|---|\n|[](LinkedPage:mhXkUvwacMxFPXrxlUQEF)<br /><br /><br />|\n|[](LinkedPage:_Bpe5IadJPG_MiS7tEJyb)<br /><br /><br />|\n|[](LinkedPage:WCiKoC9_FensTgC9Dw_GY)<br /><br /><br />|\n\n\n\n\n\n",
+  "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=fhOfOV5RgWKEQTNSVvqAh&pageId=3N1O3DJ9FdTN3qMqMKBTx&name=Day+Planners&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FfhOfOV5RgWKEQTNSVvqAh.zip",
+  "publish": true,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "relatedTemplates": [
+    "coquette-aesthetic-vision-board",
+    "weekly-planner",
+    "hourly-planner"
+  ],
+  "slug": "day-planners",
+  "tags": [
+    "Digital Planner"
+  ],
+  "template": "LinkedPage:fhOfOV5RgWKEQTNSVvqAh:page",
+  "templateId": "fhOfOV5RgWKEQTNSVvqAh",
+  "templateMode": "page",
+  "title": "Day Planners",
+  "updatedDate": 1727206124033,
+  "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=fhOfOV5RgWKEQTNSVvqAh&pageId=3N1O3DJ9FdTN3qMqMKBTx&name=Day+Planners&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FfhOfOV5RgWKEQTNSVvqAh.zip",
+  "valid": false
+}

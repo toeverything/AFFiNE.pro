@@ -1,0 +1,47 @@
+{
+  "author": "AFFiNE",
+  "authors": [
+    "AFFiNE"
+  ],
+  "cateName": "Digital Planner",
+  "cateSlug": "digital-planner",
+  "cateTitle": "Digital Planner",
+  "createDate": 1727201575895,
+  "created": 1727136000000,
+  "description": " ",
+  "featured": false,
+  "guid": "svEic6EMkJedcGmHtAkKT",
+  "id": "svEic6EMkJedcGmHtAkKT",
+  "linkedPageIds": [
+    "uoQVH0dl2QSdFaPQo6oE-",
+    "4SBqQ6lf4oJjmlRejOhyH",
+    "y3GwFuCD7PCzfmAihbd5m",
+    "EzCZzdu56cBrqqDab4RtK",
+    "mhXkUvwacMxFPXrxlUQEF",
+    "_Bpe5IadJPG_MiS7tEJyb",
+    "WCiKoC9_FensTgC9Dw_GY"
+  ],
+  "md": "\n\n\n|Title|\n|---|\n|[](LinkedPage:mhXkUvwacMxFPXrxlUQEF)<br /><br /><br />|\n|[](LinkedPage:_Bpe5IadJPG_MiS7tEJyb)<br /><br /><br />|\n|[](LinkedPage:WCiKoC9_FensTgC9Dw_GY)<br /><br /><br />|\n\n\n",
+  "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=uoQVH0dl2QSdFaPQo6oE-&pageId=svEic6EMkJedcGmHtAkKT&name=Homework+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FuoQVH0dl2QSdFaPQo6oE-.zip",
+  "publish": true,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "relatedTemplates": [
+    "home-school-planner",
+    "weekly-planner",
+    "hourly-planner"
+  ],
+  "slug": "homework-planner",
+  "tags": [
+    "Digital Planner"
+  ],
+  "template": "LinkedPage:uoQVH0dl2QSdFaPQo6oE-:page",
+  "templateId": "uoQVH0dl2QSdFaPQo6oE-",
+  "templateMode": "page",
+  "title": "Homework Planner",
+  "updatedDate": 1727201578961,
+  "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=uoQVH0dl2QSdFaPQo6oE-&pageId=svEic6EMkJedcGmHtAkKT&name=Homework+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FuoQVH0dl2QSdFaPQo6oE-.zip",
+  "valid": false
+}

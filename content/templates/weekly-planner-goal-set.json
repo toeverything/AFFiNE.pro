@@ -1,0 +1,47 @@
+{
+  "author": "AFFiNE",
+  "authors": [
+    "AFFiNE"
+  ],
+  "cateName": "Digital Planner",
+  "cateSlug": "digital-planner",
+  "cateTitle": "Digital Planner",
+  "createDate": 1727200850658,
+  "created": 1727136000000,
+  "description": " ",
+  "featured": false,
+  "guid": "gSAbKEN7Wmc7FgItWLUH1",
+  "id": "gSAbKEN7Wmc7FgItWLUH1",
+  "linkedPageIds": [
+    "OaJKRp2TvN5ivPvgjntgA",
+    "4SBqQ6lf4oJjmlRejOhyH",
+    "y3GwFuCD7PCzfmAihbd5m",
+    "EzCZzdu56cBrqqDab4RtK",
+    "mhXkUvwacMxFPXrxlUQEF",
+    "_Bpe5IadJPG_MiS7tEJyb",
+    "WCiKoC9_FensTgC9Dw_GY"
+  ],
+  "md": "\n\n\n|Title|\n|---|\n|[](LinkedPage:mhXkUvwacMxFPXrxlUQEF)<br /><br /><br />|\n|[](LinkedPage:_Bpe5IadJPG_MiS7tEJyb)<br /><br /><br />|\n|[](LinkedPage:WCiKoC9_FensTgC9Dw_GY)<br /><br /><br />|\n\n\n",
+  "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=OaJKRp2TvN5ivPvgjntgA&pageId=gSAbKEN7Wmc7FgItWLUH1&name=Weekly+Planner+Goal+Set&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FOaJKRp2TvN5ivPvgjntgA.zip",
+  "publish": true,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "relatedTemplates": [
+    "home-school-planner",
+    "weekly-planner",
+    "hourly-planner"
+  ],
+  "slug": "weekly-planner-goal-set",
+  "tags": [
+    "Digital Planner"
+  ],
+  "template": "LinkedPage:OaJKRp2TvN5ivPvgjntgA:page",
+  "templateId": "OaJKRp2TvN5ivPvgjntgA",
+  "templateMode": "page",
+  "title": "Weekly Planner Goal Set",
+  "updatedDate": 1727200892307,
+  "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=OaJKRp2TvN5ivPvgjntgA&pageId=gSAbKEN7Wmc7FgItWLUH1&name=Weekly+Planner+Goal+Set&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FOaJKRp2TvN5ivPvgjntgA.zip",
+  "valid": false
+}

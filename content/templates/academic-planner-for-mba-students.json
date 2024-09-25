@@ -1,0 +1,47 @@
+{
+  "author": "AFFiNE",
+  "authors": [
+    "AFFiNE"
+  ],
+  "cateName": "Digital Planner",
+  "cateSlug": "digital-planner",
+  "cateTitle": "Digital Planner",
+  "createDate": 1727203185123,
+  "created": 1727136000000,
+  "description": " ",
+  "featured": false,
+  "guid": "18pEltFlAQ0nf3zAtspEK",
+  "id": "18pEltFlAQ0nf3zAtspEK",
+  "linkedPageIds": [
+    "0-zh-78UZ3Okgxf_UGsag",
+    "4SBqQ6lf4oJjmlRejOhyH",
+    "y3GwFuCD7PCzfmAihbd5m",
+    "EzCZzdu56cBrqqDab4RtK",
+    "mhXkUvwacMxFPXrxlUQEF",
+    "_Bpe5IadJPG_MiS7tEJyb",
+    "WCiKoC9_FensTgC9Dw_GY"
+  ],
+  "md": "\n\n\n|Title|\n|---|\n|[](LinkedPage:mhXkUvwacMxFPXrxlUQEF)<br /><br /><br />|\n|[](LinkedPage:_Bpe5IadJPG_MiS7tEJyb)<br /><br /><br />|\n|[](LinkedPage:WCiKoC9_FensTgC9Dw_GY)<br /><br /><br />|\n\n\n",
+  "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=0-zh-78UZ3Okgxf_UGsag&pageId=18pEltFlAQ0nf3zAtspEK&name=Academic+Planner+For+MBA+Students&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2F0-zh-78UZ3Okgxf_UGsag.zip",
+  "publish": true,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "relatedTemplates": [
+    "home-school-planner",
+    "weekly-planner",
+    "hourly-planner"
+  ],
+  "slug": "academic-planner-for-mba-students",
+  "tags": [
+    "Digital Planner"
+  ],
+  "template": "LinkedPage:0-zh-78UZ3Okgxf_UGsag:page",
+  "templateId": "0-zh-78UZ3Okgxf_UGsag",
+  "templateMode": "page",
+  "title": "Academic Planner For MBA Students",
+  "updatedDate": 1727203187942,
+  "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=0-zh-78UZ3Okgxf_UGsag&pageId=18pEltFlAQ0nf3zAtspEK&name=Academic+Planner+For+MBA+Students&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2F0-zh-78UZ3Okgxf_UGsag.zip",
+  "valid": false
+}

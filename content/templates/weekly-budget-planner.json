@@ -1,0 +1,47 @@
+{
+  "author": "AFFiNE",
+  "authors": [
+    "AFFiNE"
+  ],
+  "cateName": "Digital Planner",
+  "cateSlug": "digital-planner",
+  "cateTitle": "Digital Planner",
+  "createDate": 1727202974292,
+  "created": 1727136000000,
+  "description": " ",
+  "featured": false,
+  "guid": "W9LjO_lpay5qyGkwJC2Nk",
+  "id": "W9LjO_lpay5qyGkwJC2Nk",
+  "linkedPageIds": [
+    "LVnV3_rBcIar6KD03lz6l",
+    "4SBqQ6lf4oJjmlRejOhyH",
+    "y3GwFuCD7PCzfmAihbd5m",
+    "EzCZzdu56cBrqqDab4RtK",
+    "mhXkUvwacMxFPXrxlUQEF",
+    "_Bpe5IadJPG_MiS7tEJyb",
+    "WCiKoC9_FensTgC9Dw_GY"
+  ],
+  "md": "\n\n\n|Title|\n|---|\n|[](LinkedPage:mhXkUvwacMxFPXrxlUQEF)<br /><br /><br />|\n|[](LinkedPage:_Bpe5IadJPG_MiS7tEJyb)<br /><br /><br />|\n|[](LinkedPage:WCiKoC9_FensTgC9Dw_GY)<br /><br /><br />|\n\n\n",
+  "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=LVnV3_rBcIar6KD03lz6l&pageId=W9LjO_lpay5qyGkwJC2Nk&name=Weekly+Budget+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FLVnV3_rBcIar6KD03lz6l.zip",
+  "publish": true,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "relatedTemplates": [
+    "home-school-planner",
+    "weekly-planner",
+    "hourly-planner"
+  ],
+  "slug": "weekly-budget-planner",
+  "tags": [
+    "Digital Planner"
+  ],
+  "template": "LinkedPage:LVnV3_rBcIar6KD03lz6l:page",
+  "templateId": "LVnV3_rBcIar6KD03lz6l",
+  "templateMode": "page",
+  "title": "Weekly Budget Planner",
+  "updatedDate": 1727202976640,
+  "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=LVnV3_rBcIar6KD03lz6l&pageId=W9LjO_lpay5qyGkwJC2Nk&name=Weekly+Budget+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FLVnV3_rBcIar6KD03lz6l.zip",
+  "valid": false
+}

@@ -1,0 +1,47 @@
+{
+  "author": "AFFiNE",
+  "authors": [
+    "AFFiNE"
+  ],
+  "cateName": "Digital Planner",
+  "cateSlug": "digital-planner",
+  "cateTitle": "Digital Planner",
+  "createDate": 1727201794106,
+  "created": 1727136000000,
+  "description": " ",
+  "featured": false,
+  "guid": "ah0Xe9WK_soKncqKwIXdX",
+  "id": "ah0Xe9WK_soKncqKwIXdX",
+  "linkedPageIds": [
+    "ctEcafPBkAd2IYBGStBD5",
+    "4SBqQ6lf4oJjmlRejOhyH",
+    "y3GwFuCD7PCzfmAihbd5m",
+    "EzCZzdu56cBrqqDab4RtK",
+    "mhXkUvwacMxFPXrxlUQEF",
+    "_Bpe5IadJPG_MiS7tEJyb",
+    "WCiKoC9_FensTgC9Dw_GY"
+  ],
+  "md": "\n\n\n|Title|\n|---|\n|[](LinkedPage:mhXkUvwacMxFPXrxlUQEF)<br /><br /><br />|\n|[](LinkedPage:_Bpe5IadJPG_MiS7tEJyb)<br /><br /><br />|\n|[](LinkedPage:WCiKoC9_FensTgC9Dw_GY)<br /><br /><br />|\n\n\n",
+  "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=ctEcafPBkAd2IYBGStBD5&pageId=ah0Xe9WK_soKncqKwIXdX&name=Minecraft+Building+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FctEcafPBkAd2IYBGStBD5.zip",
+  "publish": true,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "relatedTemplates": [
+    "home-school-planner",
+    "weekly-planner",
+    "hourly-planner"
+  ],
+  "slug": "minecraft-building-planner",
+  "tags": [
+    "Digital Planner"
+  ],
+  "template": "LinkedPage:ctEcafPBkAd2IYBGStBD5:page",
+  "templateId": "ctEcafPBkAd2IYBGStBD5",
+  "templateMode": "page",
+  "title": "Minecraft Building Planner",
+  "updatedDate": 1727201805027,
+  "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=ctEcafPBkAd2IYBGStBD5&pageId=ah0Xe9WK_soKncqKwIXdX&name=Minecraft+Building+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FctEcafPBkAd2IYBGStBD5.zip",
+  "valid": false
+}

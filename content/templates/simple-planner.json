@@ -1,0 +1,47 @@
+{
+  "author": "AFFiNE",
+  "authors": [
+    "AFFiNE"
+  ],
+  "cateName": "Digital Planner",
+  "cateSlug": "digital-planner",
+  "cateTitle": "Digital Planner",
+  "createDate": 1727202707925,
+  "created": 1727136000000,
+  "description": " ",
+  "featured": false,
+  "guid": "4Jzrp_uXrgV7q6asQ-z6Y",
+  "id": "4Jzrp_uXrgV7q6asQ-z6Y",
+  "linkedPageIds": [
+    "2PPo1GdSrLtIf1IRDli4h",
+    "4SBqQ6lf4oJjmlRejOhyH",
+    "y3GwFuCD7PCzfmAihbd5m",
+    "EzCZzdu56cBrqqDab4RtK",
+    "mhXkUvwacMxFPXrxlUQEF",
+    "_Bpe5IadJPG_MiS7tEJyb",
+    "WCiKoC9_FensTgC9Dw_GY"
+  ],
+  "md": "\n\n\n|Title|\n|---|\n|[](LinkedPage:mhXkUvwacMxFPXrxlUQEF)<br /><br /><br />|\n|[](LinkedPage:_Bpe5IadJPG_MiS7tEJyb)<br /><br /><br />|\n|[](LinkedPage:WCiKoC9_FensTgC9Dw_GY)<br /><br /><br />|\n\n\n",
+  "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=2PPo1GdSrLtIf1IRDli4h&pageId=4Jzrp_uXrgV7q6asQ-z6Y&name=Simple+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2F2PPo1GdSrLtIf1IRDli4h.zip",
+  "publish": true,
+  "relatedBlogIds": [
+  ],
+  "relatedBlogs": [
+  ],
+  "relatedTemplates": [
+    "home-school-planner",
+    "weekly-planner",
+    "hourly-planner"
+  ],
+  "slug": "simple-planner",
+  "tags": [
+    "Digital Planner"
+  ],
+  "template": "LinkedPage:2PPo1GdSrLtIf1IRDli4h:page",
+  "templateId": "2PPo1GdSrLtIf1IRDli4h",
+  "templateMode": "page",
+  "title": "Simple Planner",
+  "updatedDate": 1727202712384,
+  "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=2PPo1GdSrLtIf1IRDli4h&pageId=4Jzrp_uXrgV7q6asQ-z6Y&name=Simple+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2F2PPo1GdSrLtIf1IRDli4h.zip",
+  "valid": false
+}
