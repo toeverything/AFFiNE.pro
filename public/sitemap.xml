@@ -1295,6 +1295,10 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://affine.pro/templates/fitness-planner</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/templates/high-note-collection-planners</loc>
         <priority>1.0</priority>
     </url>
@@ -1348,6 +1352,10 @@
     </url>
     <url>
         <loc>https://affine.pro/templates/planner-for-students</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://affine.pro/templates/pregnancy-planner</loc>
         <priority>1.0</priority>
     </url>
     <url>

@@ -7,10 +7,10 @@
   "cateSlug": "digital-planner",
   "cateTitle": "Digital Planner",
   "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/lSVlFSb8W-StQoTVIqKzM6K5nLRhvXPtQzn7A0aAhjk=",
-  "coverAlt": "",
+  "coverAlt": "Daily Planner",
   "createDate": 1727196492774,
   "created": 1727136000000,
-  "description": "This **hourly planner template** helps you structure your day effectively, with sections for daily goals, an hourly schedule, and end-of-day reflection. By using this planner, you can ensure you make the most of every hour and stay focused on your tasks and objectives.",
+  "description": "This hourly planner templatehelps you structure your day effectively, with sections for daily goals, an hourly schedule, and end-of-day reflection. By using this planner, you can ensure you make the most of every hour and stay focused on your tasks and objectives.",
   "featured": true,
   "guid": "EzCZzdu56cBrqqDab4RtK",
   "id": "EzCZzdu56cBrqqDab4RtK",
@@ -50,7 +50,7 @@
   "templateId": "c5VHONcpks_OTNtpVPQFb",
   "templateMode": "page",
   "title": "Hourly Planner",
-  "updatedDate": 1727234834861,
+  "updatedDate": 1727244751532,
   "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=c5VHONcpks_OTNtpVPQFb&pageId=EzCZzdu56cBrqqDab4RtK&name=Hourly+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2Fc5VHONcpks_OTNtpVPQFb.zip",
   "valid": true
 }
