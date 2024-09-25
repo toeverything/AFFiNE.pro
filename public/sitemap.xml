@@ -1255,6 +1255,10 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://affine.pro/templates/adhd-planner</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/templates/best-academic-planner</loc>
         <priority>1.0</priority>
     </url>
