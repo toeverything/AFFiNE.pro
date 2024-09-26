@@ -1231,6 +1231,10 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://affine.pro/blog/mymind-vs-notion</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/blog/reading-log-review</loc>
         <priority>1.0</priority>
     </url>
@@ -1444,6 +1448,10 @@
     </url>
     <url>
         <loc>https://affine.pro/templates/work-planner</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://affine.pro/templates/yearly-planner-2024</loc>
         <priority>1.0</priority>
     </url>
     <url>

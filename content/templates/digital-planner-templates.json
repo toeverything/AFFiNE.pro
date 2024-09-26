@@ -6,9 +6,11 @@
   "cateName": "Digital Planner",
   "cateSlug": "digital-planner",
   "cateTitle": "Digital Planner",
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/kWkA9Nqt0Fkcq43V_BynrPpCQZPpIU56Kr-0_sH0Oj0=",
+  "coverAlt": "Digital Planner Templates",
   "createDate": 1727206511441,
   "created": 1727136000000,
-  "description": " ",
+  "description": "Stay organized with customizable Digital Planner Templates. Plan daily, weekly, or monthly tasks, set priorities, and track goals digitally. Ideal for personal and professional use, these templates enhance productivity and streamline scheduling across all devices.",
   "featured": false,
   "guid": "JcefhvTwE9xKcjwEX9bWQ",
   "id": "JcefhvTwE9xKcjwEX9bWQ",
@@ -21,7 +23,7 @@
     "sCGzzgL7ehx7YswYLAozx",
     "8yoI71clK3"
   ],
-  "md": "\n\n\n\n\n\n",
+  "md": "### **Digital Planner Templates – Streamline Your Life with Digital Organization**\n\n\nThe **Digital Planner Templates** are designed to help you manage your daily, weekly, and monthly tasks all in one place, making organization simple and convenient. These templates are fully customizable, allowing you to plan, schedule, and track your goals digitally, eliminating the need for paper. Whether you’re managing work deadlines, personal appointments, or fitness goals,**Digital Planner Templates**offer the flexibility and efficiency needed to stay on top of everything. Access your planner from any device and make changes with ease.\n\n\n### **Why Choose Digital Planner Templates?**\n\n\n**Digital Planner Templates** provide the perfect balance of structure and customization. You can color-code tasks, set reminders, and track progress all with a few clicks. They are especially useful for busy professionals, students, or anyone who wants to simplify their life by keeping everything organized in one digital space. With the ability to integrate with apps like Google Calendar or task managers, these templates enhance productivity while reducing the clutter of traditional paper planners.\n\n\n",
   "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=oZXRtS0QeTYSCQ1HXK1Uv&pageId=JcefhvTwE9xKcjwEX9bWQ&name=Digital+Planner+Templates&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FoZXRtS0QeTYSCQ1HXK1Uv.zip",
   "publish": true,
   "relatedBlogIds": [
@@ -47,7 +49,7 @@
   "templateId": "oZXRtS0QeTYSCQ1HXK1Uv",
   "templateMode": "page",
   "title": "Digital Planner Templates",
-  "updatedDate": 1727272297330,
+  "updatedDate": 1727355398352,
   "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=oZXRtS0QeTYSCQ1HXK1Uv&pageId=JcefhvTwE9xKcjwEX9bWQ&name=Digital+Planner+Templates&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FoZXRtS0QeTYSCQ1HXK1Uv.zip",
-  "valid": false
+  "valid": true
 }

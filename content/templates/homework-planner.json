@@ -6,6 +6,8 @@
   "cateName": "Digital Planner",
   "cateSlug": "digital-planner",
   "cateTitle": "Digital Planner",
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/9wbgV8KhtwqcPW5AppPA0RL22pyJYSP3BQWK928v3JI=",
+  "coverAlt": "Homework Planner",
   "createDate": 1727201575895,
   "created": 1727136000000,
   "description": "Stay on top of your assignments and deadlines with the AFFiNE Homework Planner. This customizable template helps students of all ages organize their tasks, track progress, and maintain a structured approach to academic success.",
@@ -21,7 +23,7 @@
     "sCGzzgL7ehx7YswYLAozx",
     "1BncsglG1B78S9HUjsWk6"
   ],
-  "md": "\n\n\n",
+  "md": "## **Homework Planner – Stay on Top of Your Assignments**\n\n\nThe **Homework Planner** is a practical tool designed to help students organize their assignments and manage deadlines with ease. Featuring sections for daily tasks, subject-specific homework, due dates, and progress tracking, this planner ensures that students stay on top of their academic responsibilities. With space for prioritizing tasks, writing down important reminders, and reflecting on completed work, the**Homework Planner** helps students develop strong time management skills and reduce stress throughout the school year.\n\n\n### **Simplify Your Study Routine with the Homework Planner**\n\n\nThe **Homework Planner** provides a structured layout for tracking daily and weekly homework, project deadlines, and study sessions. By keeping all academic tasks in one place, this planner helps students manage their workload efficiently. Ideal for middle school, high school, and college students, the **Homework Planner** is essential for staying organized, avoiding last-minute cramming, and achieving academic success.\n\n\n",
   "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=uoQVH0dl2QSdFaPQo6oE-&pageId=svEic6EMkJedcGmHtAkKT&name=Homework+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FuoQVH0dl2QSdFaPQo6oE-.zip",
   "publish": true,
   "relatedBlogIds": [
@@ -47,7 +49,7 @@
   "templateId": "uoQVH0dl2QSdFaPQo6oE-",
   "templateMode": "page",
   "title": "Homework Planner",
-  "updatedDate": 1727348945437,
+  "updatedDate": 1727351899794,
   "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=uoQVH0dl2QSdFaPQo6oE-&pageId=svEic6EMkJedcGmHtAkKT&name=Homework+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FuoQVH0dl2QSdFaPQo6oE-.zip",
-  "valid": false
+  "valid": true
 }

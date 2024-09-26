@@ -5,8 +5,8 @@
     <description>All In One KnowledgeOS</description>
     <link>https://affine.pro</link>
     <atom:link href="https://affine.pro/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 26 Sep 2024 11:11:12 GMT</lastBuildDate>
-    <pubDate>Thu, 26 Sep 2024 11:11:12 GMT</pubDate>
+    <lastBuildDate>Thu, 26 Sep 2024 13:08:14 GMT</lastBuildDate>
+    <pubDate>Thu, 26 Sep 2024 13:08:14 GMT</pubDate>
     <ttl>60</ttl>
     
     <item>
@@ -79,6 +79,15 @@
       <guid isPermaLink="true">https://affine.pro/blog/free-customized-travel-itinerary-planner-templates</guid>
       <pubDate>Tue, 24 Sep 2024 00:00:00 GMT</pubDate>
       <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/16dUl3oXSx-beJUMvTp3Pdtn7wkDce86h75Ezo803CY=" type="image/png" />
+    </item>
+    
+    <item>
+      <title>Mymind vs. Notion: Uncovering the Knowledge Management Landscape from the AFFiNE Perspective</title>
+      <description><![CDATA[Explore the strengths and limitations of Mymind and Notion, while discovering how the innovative AFFiNE platform can elevate your knowledge management and productivity. Learn about the key features, integration capabilities, and collaborative advantages that make AFFiNE a compelling alternative in the evolving digital landscape.]]></description>
+      <link>https://affine.pro/blog/mymind-vs-notion</link>
+      <guid isPermaLink="true">https://affine.pro/blog/mymind-vs-notion</guid>
+      <pubDate>Tue, 24 Sep 2024 00:00:00 GMT</pubDate>
+      <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/jlpyunCK1jiZDPSvaW_1NjF3dTcqSgFLd3Hm09OZf8I=" type="image/png" />
     </item>
     
     <item>

@@ -6,9 +6,11 @@
   "cateName": "Digital Planner",
   "cateSlug": "digital-planner",
   "cateTitle": "Digital Planner",
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/OuzPXhkLipRKXqZFWQRyJa1H8w50kkz20duhNAj6uHo=",
+  "coverAlt": "",
   "createDate": 1727207259432,
   "created": 1727136000000,
-  "description": " ",
+  "description": "Create, organize, and execute your video projects effortlessly with the **Video Planner Free**. This essential tool helps you outline ideas, plan shoots, and track editing tasks, streamlining your creative process from concept to final cut. Perfect for content creators and filmmakers!",
   "featured": false,
   "guid": "Vcdp7hST2jj30QjJEF2mC",
   "id": "Vcdp7hST2jj30QjJEF2mC",
@@ -21,7 +23,7 @@
     "sCGzzgL7ehx7YswYLAozx",
     "8yoI71clK3"
   ],
-  "md": "\n\n\n\n\n\n",
+  "md": "## **Video Planner Free – Organize Your Creative Vision**\n\n\nThe **Video Planner Free** is an essential tool for content creators, filmmakers, and video enthusiasts looking to streamline their video production process. This planner allows you to outline your video concepts, plan shooting schedules, and track editing tasks—all in one convenient format. With easy-to-use templates, the **Video Planner Free** helps you maintain clarity and focus throughout every stage of your project, ensuring that your creative vision comes to life seamlessly.\n\n\n### **Maximize Your Efficiency with the Video Planner Free**\n\n\nThe **Video Planner Free** provides a structured approach to video creation. Use dedicated sections to brainstorm ideas, script your content, and organize your shot lists. With the ability to set deadlines and track progress, this planner keeps you accountable and on schedule. Whether you’re producing a YouTube video, a corporate presentation, or a short film, the **Video Planner Free**is designed to help you manage your workflow effectively, making the video creation process enjoyable and efficient.\n\n\n\n\n\n",
   "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=eERRx7-Qwj7vYIBuJYMX_&pageId=Vcdp7hST2jj30QjJEF2mC&name=Video+Planner+Free&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FeERRx7-Qwj7vYIBuJYMX_.zip",
   "publish": true,
   "relatedBlogIds": [
@@ -47,7 +49,7 @@
   "templateId": "eERRx7-Qwj7vYIBuJYMX_",
   "templateMode": "page",
   "title": "Video Planner Free",
-  "updatedDate": 1727272254537,
+  "updatedDate": 1727355841196,
   "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=eERRx7-Qwj7vYIBuJYMX_&pageId=Vcdp7hST2jj30QjJEF2mC&name=Video+Planner+Free&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FeERRx7-Qwj7vYIBuJYMX_.zip",
-  "valid": false
+  "valid": true
 }

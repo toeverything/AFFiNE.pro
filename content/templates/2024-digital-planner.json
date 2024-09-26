@@ -6,9 +6,11 @@
   "cateName": "Digital Planner",
   "cateSlug": "digital-planner",
   "cateTitle": "Digital Planner",
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/WBEiHqRYsN-59wJmMjmm5qhhIJw-oPoSDLn8PCBe-ko=",
+  "coverAlt": "2024 Digital Planner Free",
   "createDate": 1727206603741,
   "created": 1727136000000,
-  "description": " ",
+  "description": "Stay organized in 2024 with our customizable Digital Planner. Manage your daily, weekly, and monthly tasks effortlessly, set goals, and track progress from any device. Perfect for personal and professional planning, this eco-friendly solution keeps your schedule streamlined and efficient.",
   "featured": false,
   "guid": "y65IUf9M0ewSOS-6lBhHB",
   "id": "y65IUf9M0ewSOS-6lBhHB",
@@ -21,7 +23,7 @@
     "sCGzzgL7ehx7YswYLAozx",
     "8yoI71clK3"
   ],
-  "md": "\n\n\n\n\n\n",
+  "md": "## 2024 Digital Planner – Plan Your Year with Flexibility and Efficiency\n\n\nThe **2024 Digital Planner** is your ultimate tool for managing your year with ease. This planner is designed to help you stay organized and productive throughout the year, offering customizable layouts for daily, weekly, and monthly planning. With the flexibility of digital format, you can access it from any device and make adjustments as your schedule evolves. Whether you’re setting long-term goals or tracking daily habits, the **2024 Digital Planner** keeps everything in one place, providing a streamlined approach to organization.\n\n\n### Stay on Top of Your Goals with the 2024 Digital Planner\n\n\nThe**2024 Digital Planner** is perfect for those who prefer a paperless planning system. With features like task prioritization, habit tracking, and seamless integration with digital calendars, this planner helps you stay focused and motivated. Whether you’re planning personal milestones or professional deadlines, the **2024 Digital Planner** allows you to efficiently map out your year, ensuring you meet every goal on time. Plus, the eco-friendly digital format helps reduce paper waste.\n\n\n\n\n\n",
   "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=rjJDX-53FrmGu_Quyl8RK&pageId=y65IUf9M0ewSOS-6lBhHB&name=2024+Digital+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FrjJDX-53FrmGu_Quyl8RK.zip",
   "publish": true,
   "relatedBlogIds": [
@@ -47,7 +49,7 @@
   "templateId": "rjJDX-53FrmGu_Quyl8RK",
   "templateMode": "page",
   "title": "2024 Digital Planner",
-  "updatedDate": 1727272287979,
+  "updatedDate": 1727355534150,
   "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=rjJDX-53FrmGu_Quyl8RK&pageId=y65IUf9M0ewSOS-6lBhHB&name=2024+Digital+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FrjJDX-53FrmGu_Quyl8RK.zip",
-  "valid": false
+  "valid": true
 }
