@@ -8,7 +8,7 @@
   "cateTitle": "Digital Planner",
   "createDate": 1727201575895,
   "created": 1727136000000,
-  "description": " ",
+  "description": "Stay on top of your assignments and deadlines with the AFFiNE Homework Planner. This customizable template helps students of all ages organize their tasks, track progress, and maintain a structured approach to academic success.",
   "featured": false,
   "guid": "svEic6EMkJedcGmHtAkKT",
   "id": "svEic6EMkJedcGmHtAkKT",
@@ -17,16 +17,22 @@
     "4SBqQ6lf4oJjmlRejOhyH",
     "y3GwFuCD7PCzfmAihbd5m",
     "EzCZzdu56cBrqqDab4RtK",
-    "mhXkUvwacMxFPXrxlUQEF",
-    "_Bpe5IadJPG_MiS7tEJyb",
-    "WCiKoC9_FensTgC9Dw_GY"
+    "oapgNIuMNG",
+    "sCGzzgL7ehx7YswYLAozx",
+    "1BncsglG1B78S9HUjsWk6"
   ],
-  "md": "\n\n\n|Title|\n|---|\n|[](LinkedPage:mhXkUvwacMxFPXrxlUQEF)<br /><br /><br />|\n|[](LinkedPage:_Bpe5IadJPG_MiS7tEJyb)<br /><br /><br />|\n|[](LinkedPage:WCiKoC9_FensTgC9Dw_GY)<br /><br /><br />|\n\n\n",
+  "md": "\n\n\n",
   "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=uoQVH0dl2QSdFaPQo6oE-&pageId=svEic6EMkJedcGmHtAkKT&name=Homework+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FuoQVH0dl2QSdFaPQo6oE-.zip",
   "publish": true,
   "relatedBlogIds": [
+    "oapgNIuMNG",
+    "sCGzzgL7ehx7YswYLAozx",
+    "1BncsglG1B78S9HUjsWk6"
   ],
   "relatedBlogs": [
+    "5-best-free-daily-planner-apps-for-2023",
+    "free-and-printable-family-tree-templates",
+    "digital-planner-template"
   ],
   "relatedTemplates": [
     "home-school-planner",
@@ -41,7 +47,7 @@
   "templateId": "uoQVH0dl2QSdFaPQo6oE-",
   "templateMode": "page",
   "title": "Homework Planner",
-  "updatedDate": 1727201578961,
+  "updatedDate": 1727348945437,
   "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=uoQVH0dl2QSdFaPQo6oE-&pageId=svEic6EMkJedcGmHtAkKT&name=Homework+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FuoQVH0dl2QSdFaPQo6oE-.zip",
   "valid": false
 }
