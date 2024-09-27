@@ -1235,6 +1235,10 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://affine.pro/blog/pages-linking-to-pages</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/blog/reading-log-review</loc>
         <priority>1.0</priority>
     </url>

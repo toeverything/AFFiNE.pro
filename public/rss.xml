@@ -5,8 +5,8 @@
     <description>All In One KnowledgeOS</description>
     <link>https://affine.pro</link>
     <atom:link href="https://affine.pro/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 26 Sep 2024 15:24:36 GMT</lastBuildDate>
-    <pubDate>Thu, 26 Sep 2024 15:24:36 GMT</pubDate>
+    <lastBuildDate>Fri, 27 Sep 2024 08:14:56 GMT</lastBuildDate>
+    <pubDate>Fri, 27 Sep 2024 08:14:56 GMT</pubDate>
     <ttl>60</ttl>
     
     <item>
@@ -88,6 +88,15 @@
       <guid isPermaLink="true">https://affine.pro/blog/mymind-vs-notion</guid>
       <pubDate>Tue, 24 Sep 2024 00:00:00 GMT</pubDate>
       <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/jlpyunCK1jiZDPSvaW_1NjF3dTcqSgFLd3Hm09OZf8I=" type="image/png" />
+    </item>
+    
+    <item>
+      <title>Connecting the Dots: Leveraging Pages Linking to Pages to Boost Productivity in AFFiNE.</title>
+      <description><![CDATA[In the ever-expanding world of information, the ability to effectively manage, interconnect, and navigate our personal knowledge has become a crucial skill. This is where the importance of backlinks and interconnected pages shines through in the realm of personal knowledge management (PKM).]]></description>
+      <link>https://affine.pro/blog/pages-linking-to-pages</link>
+      <guid isPermaLink="true">https://affine.pro/blog/pages-linking-to-pages</guid>
+      <pubDate>Tue, 24 Sep 2024 00:00:00 GMT</pubDate>
+      <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/RuHmHybHuCXC4gKgumLGnuWAxmwOD5SShDtRKgULQng=" type="image/png" />
     </item>
     
     <item>
