@@ -6,9 +6,11 @@
   "cateName": "Checklist Template",
   "cateSlug": "checklist-template",
   "cateTitle": "Checklist Template",
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/iQRwD9HhiDYV-2YcVYUqOjxHEijyM-wl98g3CiZhkro=",
+  "coverAlt": "Wedding Planner Checklist",
   "createDate": 1727205548429,
   "created": 1727136000000,
-  "description": "Wedding Planner Checklist",
+  "description": "Stay organized and stress-free with our Wedding Planner Checklist. From setting your budget to sending thank-you notes, this comprehensive guide ensures no detail is missed for your perfect day.",
   "featured": false,
   "guid": "3Hv9PVJP3pgMUpgUqb2Ln",
   "id": "3Hv9PVJP3pgMUpgUqb2Ln",
@@ -17,16 +19,22 @@
     "mhXkUvwacMxFPXrxlUQEF",
     "y3GwFuCD7PCzfmAihbd5m",
     "EzCZzdu56cBrqqDab4RtK",
-    "mhXkUvwacMxFPXrxlUQEF",
-    "_Bpe5IadJPG_MiS7tEJyb",
-    "WCiKoC9_FensTgC9Dw_GY"
+    "RYQGPFyCRaTw0Ue_RnTVi",
+    "ALd2NGSY5kMZyMNCpKLUI",
+    "dH_dq8pJiQ"
   ],
-  "md": "\n\n\n\n\n\n|Title|\n|---|\n|[](LinkedPage:mhXkUvwacMxFPXrxlUQEF)<br /><br /><br />|\n|[](LinkedPage:_Bpe5IadJPG_MiS7tEJyb)<br /><br /><br />|\n|[](LinkedPage:WCiKoC9_FensTgC9Dw_GY)<br /><br /><br />|\n\n\n\n\n\n",
+  "md": "## Wedding Planner Checklist – Your Step-by-Step Guide to a Perfect Wedding\n\n\nPlanning your dream wedding can be overwhelming, but with the **Wedding Planner Checklist**, you can stay organized and stress-free. This comprehensive checklist is designed to guide you through every aspect of the wedding planning process, from the moment you get engaged to the day you say “I do.” Whether you’re having a grand celebration or a small intimate gathering, the **Wedding Planner Checklist** ensures that no detail is missed, making your special day truly unforgettable.\n\n\n### Why You Need a Wedding Planner Checklist\n\n\nThe **Wedding Planner Checklist** breaks down each stage of planning into manageable tasks, helping you stay on schedule and avoid last-minute surprises. From booking venues and selecting vendors to sending invitations and planning the honeymoon, this checklist is your all-in-one tool for tracking progress, setting deadlines, and staying organized. It’s perfect for couples who want to take control of their wedding plans while keeping the process smooth and enjoyable.\n\n\n\n\n\n",
   "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=2aUTfRedEQbIYWp0G5Xs3&pageId=3Hv9PVJP3pgMUpgUqb2Ln&name=Wedding+Planner+Checklist&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2F2aUTfRedEQbIYWp0G5Xs3.zip",
   "publish": true,
   "relatedBlogIds": [
+    "RYQGPFyCRaTw0Ue_RnTVi",
+    "ALd2NGSY5kMZyMNCpKLUI",
+    "dH_dq8pJiQ"
   ],
   "relatedBlogs": [
+    "top-8-ai-note-taking-tools-2024-best-reviews",
+    "best-8-free-event-planning-templates-checklists-customize",
+    "best-evernote-alternatives-and-competitors-for-note-taking"
   ],
   "relatedTemplates": [
     "coquette-aesthetic-vision-board",
@@ -41,7 +49,7 @@
   "templateId": "2aUTfRedEQbIYWp0G5Xs3",
   "templateMode": "page",
   "title": "Wedding Planner Checklist",
-  "updatedDate": 1727205702261,
+  "updatedDate": 1727537885571,
   "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=2aUTfRedEQbIYWp0G5Xs3&pageId=3Hv9PVJP3pgMUpgUqb2Ln&name=Wedding+Planner+Checklist&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2F2aUTfRedEQbIYWp0G5Xs3.zip",
-  "valid": false
+  "valid": true
 }
