@@ -6,6 +6,8 @@
   "cateName": "Digital Planner",
   "cateSlug": "digital-planner",
   "cateTitle": "Digital Planner",
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/NYOpxhKDu69XPPqRKZmFtKT-TuuIz2DBidYaIKGc0f8=",
+  "coverAlt": "Minecraft Building Planner",
   "createDate": 1727201794106,
   "created": 1727136000000,
   "description": "The Minecraft Building Planneris a comprehensive tool for Minecraft players looking to plan their building projects with precision and efficiency. Whether you’re a beginner working on a simple farm or an advanced builder constructing elaborate castles, this planner allows you to stay organized by tracking materials, setting timelines, and breaking down your projects into manageable steps.",
@@ -21,7 +23,7 @@
     "sCGzzgL7ehx7YswYLAozx",
     "8yoI71clK3"
   ],
-  "md": "\n\n\nA **Minecraft Building Planner** is an essential tool for players who want to organize their building projects within the game. Whether you’re constructing a simple house or an intricate cityscape, planning your builds ahead of time can save you resources, time, and effort. This planner helps you track materials, set project timelines, and manage different aspects of your builds, ensuring that your Minecraft creations are as efficient and impressive as possible.\n\n\n## **Key Features of the Minecraft Building Planner**\n\n\n### **1. Project Planning**\n\n\nThe **project planning** section allows you to outline the type of build, its dimensions, and the location in your Minecraft world. This helps you visualize and prepare for your build before placing the first block.\n\n\n### **2. Resource Management**\n\n\nThe **resource management** section is perfect for listing all the materials you’ll need, making sure you have the right amount of blocks, tools, and items to complete your project without unnecessary trips back and forth.\n\n\n### **3. Step-by-Step Build Timeline**\n\n\nBreak down your project into **step-by-step building phases** to stay organized and ensure that each stage of your project is completed before moving on to the next.\n\n\n",
+  "md": "A **Minecraft Building Planner** is an essential tool for players who want to organize their building projects within the game. Whether you’re constructing a simple house or an intricate cityscape, planning your builds ahead of time can save you resources, time, and effort. This planner helps you track materials, set project timelines, and manage different aspects of your builds, ensuring that your Minecraft creations are as efficient and impressive as possible.\n\n\n## **Key Features of the Minecraft Building Planner**\n\n\n### **1. Project Planning**\n\n\nThe **project planning** section allows you to outline the type of build, its dimensions, and the location in your Minecraft world. This helps you visualize and prepare for your build before placing the first block.\n\n\n### **2. Resource Management**\n\n\nThe **resource management** section is perfect for listing all the materials you’ll need, making sure you have the right amount of blocks, tools, and items to complete your project without unnecessary trips back and forth.\n\n\n### **3. Step-by-Step Build Timeline**\n\n\nBreak down your project into **step-by-step building phases** to stay organized and ensure that each stage of your project is completed before moving on to the next.\n\n\n",
   "previewUrl": "https://app.affine.pro/template/preview?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=ctEcafPBkAd2IYBGStBD5&pageId=ah0Xe9WK_soKncqKwIXdX&name=Minecraft+Building+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FctEcafPBkAd2IYBGStBD5.zip",
   "publish": true,
   "relatedBlogIds": [
@@ -47,7 +49,7 @@
   "templateId": "ctEcafPBkAd2IYBGStBD5",
   "templateMode": "page",
   "title": "Minecraft Building Planner",
-  "updatedDate": 1727272146466,
+  "updatedDate": 1727532779071,
   "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=ctEcafPBkAd2IYBGStBD5&pageId=ah0Xe9WK_soKncqKwIXdX&name=Minecraft+Building+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2FctEcafPBkAd2IYBGStBD5.zip",
-  "valid": false
+  "valid": true
 }

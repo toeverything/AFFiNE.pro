@@ -6,6 +6,8 @@
   "cateName": "Digital Planner",
   "cateSlug": "digital-planner",
   "cateTitle": "Digital Planner",
+  "cover": "https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/wbtrEr6qVe2b5FrOOAUsmI8t5-lPeBpCgtiLDRhJp1o=",
+  "coverAlt": "Academic Planner",
   "createDate": 1727203098714,
   "created": 1727136000000,
   "description": "The Academic Planneris the perfect tool for students, educators, and academic professionals to stay organized and efficient throughout the school year. With a focus on managing courses, assignments, study schedules, and academic goals, this planner ensures that you never miss a deadline and remain on top of your workload. Whether you’re balancing multiple courses or working towards long-term academic goals, the academic planner is designed to give you clarity and control over your academic life.",
@@ -47,7 +49,7 @@
   "templateId": "z-L5wQT6iYU-PmtgSf3Ir",
   "templateMode": "page",
   "title": "Academic Planner",
-  "updatedDate": 1727272917216,
+  "updatedDate": 1727532601672,
   "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=z-L5wQT6iYU-PmtgSf3Ir&pageId=zdQDYnR6oRTGHaQ3xWtS-&name=Academic+Planner&mode=page&snapshotUrl=https%3A%2F%2Faffine.pro%2Ftemplates%2Fsnapshots%2Fz-L5wQT6iYU-PmtgSf3Ir.zip",
-  "valid": false
+  "valid": true
 }
