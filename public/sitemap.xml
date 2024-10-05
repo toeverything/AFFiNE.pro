@@ -39,11 +39,23 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://affine.pro/blog/tips-where-and-how-contribute-open-source-projects</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/blog/top-5-free-practical-time-management-templates</loc>
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://affine.pro/blog/top-5-mind-maps-examples-and-tools</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/blog/top-free-workflow-temlplates-to-consider</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://affine.pro/blog/best-requirements-apps-for-successful-project-delivery</loc>
         <priority>1.0</priority>
     </url>
     <url>
@@ -903,15 +915,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://affine.pro/blog/top-5-mind-maps-examples-and-tools</loc>
-        <priority>1.0</priority>
-    </url>
-    <url>
         <loc>https://affine.pro/blog/power-of-collaboration-why-teams-need-to-work-together-for-success</loc>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://affine.pro/blog/tips-where-and-how-contribute-open-source-projects</loc>
         <priority>1.0</priority>
     </url>
     <url>
@@ -928,10 +932,6 @@
     </url>
     <url>
         <loc>https://affine.pro/blog/agile-workflow-what-is-agile-workflow-how-to-build</loc>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://affine.pro/blog/best-requirements-apps-for-successful-project-delivery</loc>
         <priority>1.0</priority>
     </url>
     <url>
