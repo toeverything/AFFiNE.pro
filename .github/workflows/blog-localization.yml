@@ -34,4 +34,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[GitHub Action] Sync blog contents from AFFiNE Cloud"
-          file_pattern: "content/blog/*.json content/templates/*.json content/changelogs/*.json public/templates/snapshots/*.zip public/rss.xml public/sitemap.xml"
+          file_pattern: "content/blog/*.json content/templates/*.json content/changelogs/*.json public/rss.xml public/sitemap.xml"
