@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "description": "Scripts for generating static content",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "sync-blog": "tsx sync-blog.ts",
     "sync-changelog": "tsx sync-changelog.ts",
@@ -12,11 +15,13 @@
     "gen:all": "yarn sync-blog && yarn sync-changelog && yarn sync-template && yarn gen-rss && yarn gen-sitemap"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.669.0",
     "@types/fs-extra": "^11.0.4",
     "@types/json-stable-stringify": "^1.0.36",
     "affine-reader": "^3.2.9",
     "fs-extra": "^11.2.0",
     "json-stable-stringify": "^1.1.1",
+    "mime-types": "^2.1.35",
     "sitemap": "^8.0.0",
     "tsx": "^4.19.0",
     "xml-formatter": "^3.6.3"
