@@ -72,7 +72,7 @@ async function crawlTemplates() {
 
       const featured = index === 0;
 
-      const snapshotUrl = `https://cdn.affine.pro/${R2_BUCKET}/${R2_PREFIX}/${template.templateId}.zip`;
+      const snapshotUrl = `https://cdn.affine.pro/${R2_PREFIX}/${template.templateId}.zip`;
 
       const params = new URLSearchParams({
         workspaceId: reader.workspaceId,
@@ -93,22 +93,12 @@ async function crawlTemplates() {
         useTemplateUrl: `https://app.affine.pro/template/import?${params.toString()}`,
         previewUrl: `https://app.affine.pro/template/preview?${params.toString()}`,
       };
-
-      const snapshotPath = path.join(
-        rootDir,
-        "public",
-        "templates",
-        "snapshots",
-        `${template.templateId}.zip`
-      );
-
       const zip = await reader.getDocSnapshot(template.templateId);
       if (!zip) {
         console.log(`no snapshot for ${template.templateId}`);
         continue;
       }
       const buffer = Buffer.from(await zip.arrayBuffer());
-      await fs.writeFile(snapshotPath, buffer);
       console.log(`uploading ${template.templateId} to ${R2_BUCKET}`);
       await uploadTemplateSnapshot(template.templateId, buffer);
       await fs.writeFile(
