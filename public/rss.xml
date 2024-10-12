@@ -5,9 +5,18 @@
     <description>All In One KnowledgeOS</description>
     <link>https://affine.pro</link>
     <atom:link href="https://affine.pro/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 11 Oct 2024 11:14:25 GMT</lastBuildDate>
-    <pubDate>Fri, 11 Oct 2024 11:14:25 GMT</pubDate>
+    <lastBuildDate>Sat, 12 Oct 2024 09:15:08 GMT</lastBuildDate>
+    <pubDate>Sat, 12 Oct 2024 09:15:08 GMT</pubDate>
     <ttl>60</ttl>
+    
+    <item>
+      <title>AFFiNE AI: Revolutionizing Your Workspace with the Best Canvas AI.</title>
+      <description><![CDATA[Canvas AI is a cutting-edge tool designed to enhance visual collaboration and idea organization in modern workspaces. By allowing teams to brainstorm, plan, and manage tasks on a digital canvas, it promotes creativity and productivity.]]></description>
+      <link>https://affine.pro/blog/best-canvas-ai</link>
+      <guid isPermaLink="true">https://affine.pro/blog/best-canvas-ai</guid>
+      <pubDate>Sat, 12 Oct 2024 00:00:00 GMT</pubDate>
+      <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/BytVdSmNv03ECbDFQCBEIj1S2IORcZwYnlGl_usoowE=" type="image/png" />
+    </item>
     
     <item>
       <title>6 Best Project Management Tools to boost productivity in 2024</title>
