@@ -13,7 +13,7 @@
 
     .info-meta.last-edited.mb-4 Last edited: {{ publishDate }}
 
-    h1.article-title {{ article.title }}
+    h1.article-title {{ article?.title }}
     //- .article-desc( v-if="article.description" ) {{ article.description }}
 
     .article-tag-row.flex.gap-4
