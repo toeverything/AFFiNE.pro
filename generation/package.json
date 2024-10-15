@@ -18,7 +18,7 @@
     "@aws-sdk/client-s3": "^3.669.0",
     "@types/fs-extra": "^11.0.4",
     "@types/json-stable-stringify": "^1.0.36",
-    "affine-reader": "^3.2.9",
+    "affine-reader": "^3.2.10",
     "fs-extra": "^11.2.0",
     "json-stable-stringify": "^1.1.1",
     "mime-types": "^2.1.35",
