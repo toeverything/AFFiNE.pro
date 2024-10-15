@@ -35,7 +35,15 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://affine.pro/blog/cool-ways-to-organize-a-one-pager</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/blog/reading-log</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://affine.pro/blog/teacher-planner</loc>
         <priority>1.0</priority>
     </url>
     <url>

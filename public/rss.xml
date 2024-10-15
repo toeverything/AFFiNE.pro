@@ -5,9 +5,18 @@
     <description>All In One KnowledgeOS</description>
     <link>https://affine.pro</link>
     <atom:link href="https://affine.pro/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 14 Oct 2024 11:03:08 GMT</lastBuildDate>
-    <pubDate>Mon, 14 Oct 2024 11:03:08 GMT</pubDate>
+    <lastBuildDate>Tue, 15 Oct 2024 13:25:56 GMT</lastBuildDate>
+    <pubDate>Tue, 15 Oct 2024 13:25:56 GMT</pubDate>
     <ttl>60</ttl>
+    
+    <item>
+      <title>Cool Ways to Organize a One Pager Using AFFiNE’s Note-Taking App</title>
+      <description><![CDATA[Organize and enhance your reading with our comprehensive guide to reading logs. Track progress, reflect on your journey, and explore customizable templates with cloud storage and edgeless canvas.]]></description>
+      <link>https://affine.pro/blog/cool-ways-to-organize-a-one-pager</link>
+      <guid isPermaLink="true">https://affine.pro/blog/cool-ways-to-organize-a-one-pager</guid>
+      <pubDate>Mon, 14 Oct 2024 00:00:00 GMT</pubDate>
+      <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/BL2ibyHtz5wOMe1C2tSQ5-6hqknieqPB7vYpMYtqJLM=" type="image/png" />
+    </item>
     
     <item>
       <title>Comprehensive Reading Log Guide: Track, Reflect, and Enhance Your Reading Journey</title>
@@ -16,6 +25,15 @@
       <guid isPermaLink="true">https://affine.pro/blog/reading-log</guid>
       <pubDate>Mon, 14 Oct 2024 00:00:00 GMT</pubDate>
       <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/NjkjrFnCGm1aPBW7CMncfAkjqKkuySWJkCgzBZs3NuY=" type="image/png" />
+    </item>
+    
+    <item>
+      <title>5 Must-Have Templates in Your Teacher Planner to Stay Organized</title>
+      <description><![CDATA[Stay organized throughout the school year with AFFiNE’s powerful note-taking app. Create customizable teacher planners for lessons, schedules, grades, and tasks with real-time collaboration and efficient planning tools.]]></description>
+      <link>https://affine.pro/blog/teacher-planner</link>
+      <guid isPermaLink="true">https://affine.pro/blog/teacher-planner</guid>
+      <pubDate>Mon, 14 Oct 2024 00:00:00 GMT</pubDate>
+      <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/zcw2KAn-yYUmHMGW5k_BH_She7iNksy6pX9a3ooZn5Q=" type="image/png" />
     </item>
     
     <item>
