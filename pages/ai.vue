@@ -11,7 +11,7 @@
 
   .section.section-feature-tarot
     .limit-container
-      .section-subtitle
+      h2.section-subtitle
         | What AFFiNE AI Can Do:
 
       ai-feature-tarot
@@ -20,14 +20,14 @@
 
   .section.section-qna
     .limit-container
-      .section-subtitle
+      h2.section-subtitle
         | Question & Answers
 
       ai-question-and-answers
 
   .section.section-get-started-with
     .limit-container
-      .section-subtitle
+      h2.section-subtitle
         | Get Started&nbsp;
         span.muted with AFFiNE AI
 
@@ -41,8 +41,19 @@
 </template>
 
 <script lang="ts" setup>
+const meta = {
+  title: 'AFFiNE AI – The Leading Canvas AI for Smarter Note Taking and Collaboration',
+  description: 'Explore AFFiNE AI, the premier Canvas AI tool for seamless planning, brainstorming, and team collaboration. Enhance creativity, streamline workflows, and organize projects with ease using AFFiNE AI\'s intuitive and flexible platform.',
+}
 useHead({
-  title: 'AI',
+  title: meta.title,
+  meta: [
+    { name: 'description', content: meta.description },
+    { name: 'og:description', content: meta.description },
+    { name: 'og:title', content: meta.title },
+    { name: 'twitter:description', content: meta.description },
+    { name: 'twitter:title', content: meta.title },
+  ],
 })
 
 definePageMeta({

@@ -1,4 +1,5 @@
 const FOUR_HOURS = 1000 * 3600 * 4
+const HALF_HOUR = 1000 * 3600 * 0.5
 
 class PrimaryAPI {
 
@@ -49,14 +50,43 @@ class PrimaryAPI {
     }
   }
 
-  async getReleases() {
-    const res = await useFetchWithCache<Release[]>('/api/releases', FOUR_HOURS)
-    return res.value
-  }
-
   async getReleaseTabs() {
-    const res = await useFetchWithCache<ReleaseTab[]>('/api/release-tabs', FOUR_HOURS)
-    return res.value
+    const res: Release[] = await (await fetch(`${CONFIG.API_HOST}/api/worker/releases`)).json();
+    const data = res
+      .map(({ name, prerelease, assets, tag_name, published_at }) => {
+        return {
+          name,
+          tag_name,
+          published_at,
+          prerelease,
+          assets,
+        };
+      })
+      .filter((el) => el.published_at && el.assets?.length);
+    
+    const latestCanary = data.find((el) => {
+      return el.prerelease && el.tag_name.includes("canary");
+    });
+    
+    const latestBeta = data.find((el) => {
+      return el.prerelease && el.tag_name.includes("beta");
+    });
+    
+    const latestStable = data.find((el) => {
+      return (
+        !el.prerelease &&
+        !el.tag_name.includes("beta") &&
+        !el.tag_name.includes("canary")
+      );
+    });
+    
+    const releaseMap = {
+      canary: latestCanary,
+      beta: latestBeta,
+      stable: latestStable,
+    };
+
+    return releaseMap
   }
 
   async getChangelogs() {

@@ -4,10 +4,12 @@
     el-collapse-item(
       v-for="item in qnaList"
       :key="item.question"
-      :title="item.question"
       :name="item.question"
     )
-      .item-answer(
+      template(#title)
+        h3.item-question
+          | {{ item.question }}
+      p.item-answer(
         v-html="item.answer"
       )
 </template>
@@ -119,6 +121,15 @@ Additionally, after opening a doc, you can click on the "Expand sidebar" in the 
           stroke-width: 20px
           stroke: currentColor
 
+    .item-question
+      font-weight: inherit
+      font-size: inherit
+      line-height: inherit
+      letter-spacing: inherit
+      color: inherit
+      margin: 0
+
     .item-answer
       white-space: pre-line
+      margin: 0
 </style>

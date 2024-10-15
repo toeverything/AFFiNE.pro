@@ -62,10 +62,11 @@ const finalIssues = computed(() => {
 const loadData = async () => {
   try {
     isLoading.value = true
-    const res = await $fetch<any>(`api/status`)
-    openedIssues.value = res.opened_issues
-    closedIssues.value = res.closed_issues
-    store.github.starAmount = res.stargazers_count
+    const res = await fetch(`${CONFIG.API_HOST}/api/status`)
+    const data = await res.json() 
+    openedIssues.value = data.opened_issues
+    closedIssues.value = data.closed_issues
+    store.github.starAmount = data.stargazers_count
   } catch(error) {
     isError.value = true
   }

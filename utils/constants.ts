@@ -84,5 +84,5 @@ export const CONFIG = {
   ENABLE_PRODUCT_HUNT: false,
 
   // Service
-  API_HOST: "https://affine.pro",
+  API_HOST: process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : 'https://affine.pro',
 };

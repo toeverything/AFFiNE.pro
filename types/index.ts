@@ -7,6 +7,7 @@ declare global {
   }
 
   interface Release {
+    name: string;
     tag_name: string;
     prerelease: boolean;
     published_at: string;
