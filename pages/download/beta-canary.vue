@@ -10,9 +10,9 @@
         release-white-card(
           v-for="data in releaseCards"
           :key="data.name"
-          :isLatest="currentTabIndex === 0"
+          :isLatest="true"
           :isShowTitleGlow="data.title == 'Stable'"
-          :releases="finalReleases"
+          :releases="releases"
           v-bind="data"
         )
 
@@ -35,29 +35,31 @@ enum ReleaseType {
   Stable = 'stable',
 }
 
-const tabs = ref<ReleaseType[]>([])
-const currentTabIndex = ref(0)
-
-const finalReleases = computed(() => {
-  const currentTab = tabs.value[currentTabIndex.value]
-
-  if (!currentTab) return releases
-
-  return Object.assign({}, releases, currentTab.releaseMap)
-})
-
-const releases: Record<string, Release> = reactive({
+const defaultReleaseTabs: Record<ReleaseType, Release | undefined> = {
   beta: {
+    name: '',
     tag_name: '',
+    published_at: '',
     prerelease: false,
     assets: []
   },
   canary: {
-    tag_name: 'v0.5.4-canary.3',
+    name: '',
+    tag_name: '',
+    published_at: '',
     prerelease: true,
     assets: []
-  }
-})
+  },
+  stable: {
+    name: '',
+    tag_name: '',
+    published_at: '',
+    prerelease: false,
+    assets: []
+  },
+}
+
+const tabs = ref(defaultReleaseTabs)
 
 const releaseCards = computed(() => {
   return [
@@ -66,7 +68,7 @@ const releaseCards = computed(() => {
       updateFrequency: t('downloadPage.betaUpdateFrequency'),
       desc: t('downloadPage.betaDesc'),
       icon: betaIconUrl,
-      ...finalReleases.value.beta
+      ...tabs.value.beta
     },
     {
       title: t('downloadPage.canary'),
@@ -74,7 +76,7 @@ const releaseCards = computed(() => {
       updateFrequency: t('downloadPage.canaryUpdateFrequency'),
       icon: canaryIconUrl,
       // tips: t('downloadPage.manuallyUpdateTips'),
-      ...finalReleases.value.canary
+      ...tabs.value.canary
     },
   ]
 })
@@ -93,7 +95,6 @@ const loadData = async () => {
 
   try {
     tabs.value = await primaryAPI.getReleaseTabs()
-    tabs.value = tabs.value.filter(el => el.releaseMap.stable?.assets?.length)
   } catch(error) {
     // @TODO: handle request error
     console.log('[download] loadData error', error)

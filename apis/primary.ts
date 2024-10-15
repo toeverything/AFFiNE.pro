@@ -51,8 +51,8 @@ class PrimaryAPI {
   }
 
   async getReleaseTabs() {
-    const res = await useFetchWithCache<Release[]>(`${CONFIG.API_HOST}/api/worker/releases`, HALF_HOUR);
-    const data = res.value
+    const res: Release[] = await (await fetch(`${CONFIG.API_HOST}/api/worker/releases`)).json();
+    const data = res
       .map(({ name, prerelease, assets, tag_name, published_at }) => {
         return {
           name,

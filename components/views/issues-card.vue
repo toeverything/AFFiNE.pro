@@ -62,7 +62,7 @@ const finalIssues = computed(() => {
 const loadData = async () => {
   try {
     isLoading.value = true
-    const res = await fetch(`${CONFIG.API_HOST}api/status`)
+    const res = await fetch(`${CONFIG.API_HOST}/api/status`)
     const data = await res.json() 
     openedIssues.value = data.opened_issues
     closedIssues.value = data.closed_issues

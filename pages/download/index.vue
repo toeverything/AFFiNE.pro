@@ -6,55 +6,9 @@
       release-card(
         :isLatest="true"
         :isShowTitleGlow="releaseStableCard.title == 'Stable'"
-        :releases="finalReleases"
+        :releases="tabs.value"
         v-bind="releaseStableCard"
       )
-
-  .section-hero.hidden
-    .container.flex.flex-col.items-center
-      .hero-headline
-        | {{ $t('downloadPage.headline') }}
-        .hero-try-action
-          | {{ $t('downloadPage.headlineLinkYouCanTry') }}
-          track-link(
-            :to="PATH.AFFINE_DOWNHILLS" v-mobile-intercept target="_blank"
-            action="Link"
-            :params="{ 'resolve': 'Online Demo' }"
-          ) {{ $t('downloadPage.headlineLink') }}
-
-      .release-tabs.flex.gap-4(
-      )
-        circle-loading(
-          v-if="!tabs.length"
-        )
-        template(
-          v-else
-        )
-          .release-tab.flex(
-            v-for="(tab, index) in tabs"
-            :class="{ 'is-current': index === currentTabIndex}"
-            @click="() => currentTabIndex = index"
-          )
-            .text-wrapper.flex
-              .info-name( v-if="tab.name" ) {{ tab.name }}
-              .info-version {{ tab.version }}
-
-          nuxt-link.release-tab.flex(
-            :to="`${PATH.AFFiNE_GITHUB}/releases`"
-            target="_blank" rel="nofollow"
-          )
-            .text-wrapper
-              .info-version More
-
-      .release-cards.flex.items-start
-        release-card(
-          v-for="data in releaseCards"
-          :key="data.name"
-          :isLatest="currentTabIndex === 0"
-          :isShowTitleGlow="data.title == 'Stable'"
-          :releases="finalReleases"
-          v-bind="data"
-        )
 
   .section-mobile-version
     .flex.justify-center
@@ -107,34 +61,31 @@ enum ReleaseType {
   Stable = 'stable',
 }
 
-const tabs = ref<ReleaseType[]>([])
-const currentTabIndex = ref(0)
-
-const finalReleases = computed(() => {
-  const currentTab = tabs.value[currentTabIndex.value]
-
-  if (!currentTab) return releases
-
-  return Object.assign({}, releases, currentTab.releaseMap)
-})
-
-const releases: Record<string, Release> = reactive({
+const defaultReleaseTabs: Record<ReleaseType, Release | undefined> = {
   beta: {
+    name: '',
     tag_name: '',
+    published_at: '',
     prerelease: false,
     assets: []
   },
   canary: {
-    tag_name: 'v0.5.4-canary.3',
+    name: '',
+    tag_name: '',
+    published_at: '',
     prerelease: true,
     assets: []
   },
   stable: {
+    name: '',
     tag_name: '',
+    published_at: '',
     prerelease: false,
     assets: []
   },
-})
+}
+
+const tabs = ref(defaultReleaseTabs)
 
 const releaseCards = computed(() => {
   return [
@@ -143,14 +94,14 @@ const releaseCards = computed(() => {
       updateFrequency: t('downloadPage.betaUpdateFrequency'),
       desc: t('downloadPage.betaDesc'),
       icon: betaIconUrl,
-      ...finalReleases.value.beta
+      ...tabs.value.beta
     },
     {
       title: t('downloadPage.stable'),
       updateFrequency: t('downloadPage.stableUpdateFrequency'),
       desc: t('downloadPage.stableDesc'),
       icon: stableIconUrl,
-      ...finalReleases.value.stable
+      ...tabs.value.stable
     },
     {
       title: t('downloadPage.canary'),
@@ -158,7 +109,7 @@ const releaseCards = computed(() => {
       updateFrequency: t('downloadPage.canaryUpdateFrequency'),
       icon: canaryIconUrl,
       // tips: t('downloadPage.manuallyUpdateTips'),
-      ...finalReleases.value.canary
+      ...tabs.value.canary
     },
   ]
 })
@@ -168,20 +119,8 @@ const releaseStableCard = computed(() => {
 })
 
 const loadData = async () => {
-  const isBeta = (release: Release) => !release.prerelease && release.tag_name.includes('beta')
-  const isCanary = (release: Release) => release.prerelease && release.tag_name.includes('canary')
-  const isStable = (release: Release) => !release.prerelease
-  const hasRelease = (release: Release) => release.tag_name && release.assets.length
-  const getReleaseType = (release: Release) => {
-    if (isBeta(release)) return ReleaseType.Beta
-    if (isCanary(release)) return ReleaseType.Canary
-    if (isStable(release)) return ReleaseType.Stable
-    return null
-  }
-
   try {
     tabs.value = await primaryAPI.getReleaseTabs()
-    tabs.value = tabs.value.filter(el => el.releaseMap.stable?.assets?.length)
   } catch(error) {
     // @TODO: handle request error
     console.log('[download] loadData error', error)
