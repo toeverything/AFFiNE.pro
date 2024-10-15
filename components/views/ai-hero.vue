@@ -22,8 +22,8 @@
             .lower-part
         .black-text-layer
           | AFFiNE AI
-          .blue-text-layer AFFiNE AI
-    .hero-desc
+          h1.blue-text-layer AFFiNE AI
+    h2.hero-desc
       .row.text-center
         | Your AI Partner&nbsp;
         span.highlight Helps You Better
@@ -154,6 +154,10 @@ const { elementX } = useMouseInElement(logoEl)
       text-fill-color: transparent;
       transition: 318ms
       transition-delay: 168ms
+      margin: 0
+      font-size: inherit
+      letter-spacing: inherit
+      font-weight: inherit
 
   .hero-desc
     margin-top: 16px
