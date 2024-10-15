@@ -43,7 +43,7 @@ export default defineNuxtConfig({
       '/blog': { prerender: true },
       '/blog/**': { prerender: false },
       // dev only proxy:
-      '/api/**': { proxy: 'https://affine.pro/api/**' },
+      // '/api/**': { proxy: 'https://affine.pro/api/**' },
     },
   },
 
