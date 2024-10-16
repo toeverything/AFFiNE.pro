@@ -14,6 +14,8 @@
       :style="{ '--x': `${elementX}px` }"
       ref="logoEl"
     )
+      h1.hidden
+        | AFFiNE AI – The Leading Canvas AI for Smarter Note Taking and Collaboration
       icon-ai-star.icon-star
       .magic-wrapper
         .magic-wand-wrapper
@@ -22,7 +24,7 @@
             .lower-part
         .black-text-layer
           | AFFiNE AI
-          h1.blue-text-layer AFFiNE AI
+          .blue-text-layer AFFiNE AI
     h2.hero-desc
       .row.text-center
         | Your AI Partner&nbsp;
