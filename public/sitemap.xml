@@ -35,6 +35,14 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://affine.pro/blog/best-daily-planner</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://affine.pro/blog/note-making-strategies</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/blog/adhd-planner</loc>
         <priority>1.0</priority>
     </url>
