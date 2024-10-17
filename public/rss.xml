@@ -5,9 +5,18 @@
     <description>All In One KnowledgeOS</description>
     <link>https://affine.pro</link>
     <atom:link href="https://affine.pro/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 17 Oct 2024 20:57:33 GMT</lastBuildDate>
-    <pubDate>Thu, 17 Oct 2024 20:57:33 GMT</pubDate>
+    <lastBuildDate>Thu, 17 Oct 2024 21:26:29 GMT</lastBuildDate>
+    <pubDate>Thu, 17 Oct 2024 21:26:29 GMT</pubDate>
     <ttl>60</ttl>
+    
+    <item>
+      <title>The 5 Best Offline Alternatives to Notion</title>
+      <description><![CDATA[Notion is a cloud-based project management and collaboration tool - this article introduces some of the best offline alternatives you might like to try.]]></description>
+      <link>https://affine.pro/blog/5-best-offline-alternatives-to-notion</link>
+      <guid isPermaLink="true">https://affine.pro/blog/5-best-offline-alternatives-to-notion</guid>
+      <pubDate>Thu, 17 Oct 2024 00:00:00 GMT</pubDate>
+      <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/uO1ZB4KWJaUGczcj2ij-OuUOEy0qu6eGa08hzMPp6yk=" type="image/png" />
+    </item>
     
     <item>
       <title>Best Daily Planners of 2024: A Comprehensive Guide to Boosting Your Productivity</title>
