@@ -35,6 +35,10 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://affine.pro/blog/comprehensive-house-cleaning-checklist</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/blog/notion-alternatives-to-revolutionise-your-personal-workflow</loc>
         <priority>1.0</priority>
     </url>
@@ -252,10 +256,6 @@
     </url>
     <url>
         <loc>https://affine.pro/blog/10-free-project-communication-plan-templates-examples</loc>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://affine.pro/blog/comprehensive-house-cleaning-checklist</loc>
         <priority>1.0</priority>
     </url>
     <url>
@@ -1316,6 +1316,10 @@
     </url>
     <url>
         <loc>https://affine.pro/blog/the-cornell-notes-template-and-system-learning-tips</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://affine.pro/blog/to-do-list-template</loc>
         <priority>1.0</priority>
     </url>
     <url>
