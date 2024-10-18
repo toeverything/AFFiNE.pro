@@ -5,8 +5,8 @@
     <description>All In One KnowledgeOS</description>
     <link>https://affine.pro</link>
     <atom:link href="https://affine.pro/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 18 Oct 2024 06:30:20 GMT</lastBuildDate>
-    <pubDate>Fri, 18 Oct 2024 06:30:20 GMT</pubDate>
+    <lastBuildDate>Fri, 18 Oct 2024 06:41:46 GMT</lastBuildDate>
+    <pubDate>Fri, 18 Oct 2024 06:41:46 GMT</pubDate>
     <ttl>60</ttl>
     
     <item>
@@ -226,7 +226,7 @@
     </item>
     
     <item>
-      <title>How to Ask AI a Question More Efficiently</title>
+      <title>How to question AI？</title>
       <description><![CDATA[Unlock the potential of AI by asking efficient questions to get accurate responses. Ask the right questions and get accurate responses every time.]]></description>
       <link>https://affine.pro/blog/how-to-ask-ai-question-efficiently</link>
       <guid isPermaLink="true">https://affine.pro/blog/how-to-ask-ai-question-efficiently</guid>
