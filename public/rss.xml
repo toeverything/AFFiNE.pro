@@ -5,8 +5,8 @@
     <description>All In One KnowledgeOS</description>
     <link>https://affine.pro</link>
     <atom:link href="https://affine.pro/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 18 Oct 2024 22:37:53 GMT</lastBuildDate>
-    <pubDate>Fri, 18 Oct 2024 22:37:53 GMT</pubDate>
+    <lastBuildDate>Fri, 18 Oct 2024 23:18:32 GMT</lastBuildDate>
+    <pubDate>Fri, 18 Oct 2024 23:18:32 GMT</pubDate>
     <ttl>60</ttl>
     
     <item>
@@ -25,6 +25,15 @@
       <guid isPermaLink="true">https://affine.pro/blog/comprehensive-house-cleaning-checklist</guid>
       <pubDate>Sat, 19 Oct 2024 00:00:00 GMT</pubDate>
       <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/rrrnaM9kp39Of3g1MhNU-VSX0xTNuh8oHf1NRFDZp2I=" type="image/png" />
+    </item>
+    
+    <item>
+      <title>Notion Node Map vs. AFFiNE’s Multi-Model Canvas AI: The Best Tool for Visual Planning</title>
+      <description><![CDATA[Discover how AFFiNE’s Multi-Model Canvas AI outperforms Notion for visual planning and node mapping. Explore the benefits of AFFiNE’s edgeless canvas, customizable features, and AI-powered tools that streamline your workflow and enhance creativity. Compare the two platforms and see why AFFiNE is the superior choice for effective visual planning.]]></description>
+      <link>https://affine.pro/blog/node-map-notion</link>
+      <guid isPermaLink="true">https://affine.pro/blog/node-map-notion</guid>
+      <pubDate>Sat, 19 Oct 2024 00:00:00 GMT</pubDate>
+      <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/9Y7_SWHGwO8Q7J4-mgdlsI-mL3jsQuVwJevnpgP8Hhc=" type="image/png" />
     </item>
     
     <item>
