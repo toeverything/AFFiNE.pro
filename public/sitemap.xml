@@ -35,6 +35,10 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://affine.pro/blog/notion-alternatives-to-revolutionise-your-personal-workflow</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/blog/5-best-offline-alternatives-to-notion</loc>
         <priority>1.0</priority>
     </url>
@@ -504,10 +508,6 @@
     </url>
     <url>
         <loc>https://affine.pro/blog/affine-0-12-0-launch-week-day1-3-a-new-frontier-in-note-taking-daily-notes-card-views-bookmarks-and-everything-in-between</loc>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://affine.pro/blog/notion-alternatives-to-revolutionise-your-personal-workflow</loc>
         <priority>1.0</priority>
     </url>
     <url>
