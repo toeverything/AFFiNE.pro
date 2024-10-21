@@ -23,7 +23,6 @@ async function getJsons(dir: string) {
 
 async function main() {
   const lastmod = '';
-  const changefreq = 'daily';
 
   const blogs: ContentFileMeta[] = await getJsons(path.join(contentPath, 'blog'));
   const templates: TemplateContentFileMeta[] = await getJsons(path.join(contentPath, 'templates'));
@@ -34,23 +33,26 @@ async function main() {
     .map((el) => ({
       url: `blog/${el.slug}`,
       priority: 1,
+      changefreq: 'daily'
     }));
 
   const templateRoutes = templates.map((el) => ({
     url: `templates/${el.slug}`,
     priority: 1,
+    changefreq: 'daily'
   }));
 
   const templateCateRoutes = templateMetas.cates.map((el) => ({
     url: `templates/category-${el.slug}`,
     priority: 1,
+    changefreq: 'daily'
   }));
 
   const dynamicRoutes = [
     { url: '/', lastmod, priority: 1 },
     { url: '/about-us', lastmod, priority: 0.8 },
-    { url: '/blog', lastmod, changefreq, priority: 1 },
-    { url: '/templates', lastmod, changefreq, priority: 1 },
+    { url: '/blog', lastmod, priority: 1 },
+    { url: '/templates', lastmod, priority: 1 },
     { url: '/pricing', lastmod, priority: 0.8 },
     { url: '/ai', lastmod, priority: 1 },
     { url: '/download', lastmod, priority: 0.8 },
