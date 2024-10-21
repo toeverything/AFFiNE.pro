@@ -42,6 +42,10 @@ export default defineNuxtConfig({
       // dev only proxy:
       // '/api/**': { proxy: 'https://affine.pro/api/**' },
     },
+
+    prerender: {
+      autoSubfolderIndex: false,
+    },
   },
 
   ssr: true,
