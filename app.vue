@@ -8,7 +8,7 @@
 <script setup>
 import { ElConfigProvider } from 'element-plus';
 
-import en from 'element-plus/lib/locale/lang/en';
+import en from 'element-plus/es/locale/lang/en';
 
 import 'element-plus/es/components/message/style/css';
 import 'element-plus/theme-chalk/dark/css-vars.css';

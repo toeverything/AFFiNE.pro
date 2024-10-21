@@ -1,7 +1,7 @@
 <template lang="pug">
 .blog-sidebar
   .sidebar-section.section-toc
-    blog-toc( :markdown="meta.md" )
+    blog-toc( :markdown="meta?.md" )
   .sidebar-section.section-share
     .headline-6.sidebar-title Share
     .blog-share.flex.gap-10px
