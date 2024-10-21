@@ -17,7 +17,7 @@
     //- .article-desc( v-if="article.description" ) {{ article.description }}
 
     .article-tag-row.flex.gap-4
-      .article-tag( v-for="tag in article.tags" ) {{ tag }}
+      .article-tag( v-for="tag in article?.tags" ) {{ tag }}
 
     .users-row.flex.flex-wrap.items-center.gap-20px( v-if="users && users.length" )
       .user-meta.flex.items-center(
@@ -39,11 +39,11 @@
     )
     .content-row
       nuxt-img.article-cover(
-        v-if="article.cover"
+        v-if="article?.cover"
         format="webp"
         width="1600"
         height="800"
-        :src="article.cover"
+        :src="article?.cover"
       )
       .article-detail.readable(
         v-html="html"

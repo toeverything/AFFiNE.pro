@@ -24,14 +24,14 @@
 const props = defineProps<{
   title?: string;
   type: 'template' | 'blog';
-  meta: TemplateContentFileMeta;
+  meta?: TemplateContentFileMeta;
 }>();
 
 const store = useStore();
 const isBlog = props.type === 'blog';
 
 const list = computed(() => {
-  const slugs = isBlog ? props.meta.relatedBlogs : props.meta.relatedTemplates;
+  const slugs = isBlog ? props.meta?.relatedBlogs : props.meta?.relatedTemplates;
   const list = isBlog ? store.blog : store.templates;
 
   if (!slugs) return [];
