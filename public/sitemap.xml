@@ -1633,6 +1633,16 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://affine.pro/blog/note-taking-templates</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://affine.pro/blog/one-pager-template</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/blog/pages-linking-to-pages</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
