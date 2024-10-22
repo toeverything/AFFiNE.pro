@@ -33,6 +33,11 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://affine.pro/blog/free-ai-paragraph-generators</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/blog/top-asynchronous-communication-tools-free</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -429,11 +434,6 @@
     </url>
     <url>
         <loc>https://affine.pro/blog/best-ai-chatbots</loc>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://affine.pro/blog/free-ai-paragraph-generators</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
