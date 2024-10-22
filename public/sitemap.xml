@@ -38,6 +38,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://affine.pro/blog/note-taking-ai-from-rough-notes-to-mind-map</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/blog/top-asynchronous-communication-tools-free</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -294,11 +299,6 @@
     </url>
     <url>
         <loc>https://affine.pro/blog/15-best-free-daily-planner-apps-features-free</loc>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://affine.pro/blog/note-taking-ai-from-rough-notes-to-mind-map</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>

@@ -5,8 +5,8 @@
     <description>All In One KnowledgeOS</description>
     <link>https://affine.pro</link>
     <atom:link href="https://affine.pro/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 22 Oct 2024 11:18:41 GMT</lastBuildDate>
-    <pubDate>Tue, 22 Oct 2024 11:18:41 GMT</pubDate>
+    <lastBuildDate>Tue, 22 Oct 2024 12:34:27 GMT</lastBuildDate>
+    <pubDate>Tue, 22 Oct 2024 12:34:27 GMT</pubDate>
     <ttl>60</ttl>
     
     <item>
@@ -34,6 +34,15 @@
       <guid isPermaLink="true">https://affine.pro/blog/one-pager-template</guid>
       <pubDate>Tue, 22 Oct 2024 00:00:00 GMT</pubDate>
       <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/MA8ac_PqgrqhfuZzatw76Cv13MwR2HPArjIVBzN-dV4=" type="image/png" />
+    </item>
+    
+    <item>
+      <title>AFFiNE AI: Note Taking AI from rough notes to mind map</title>
+      <description><![CDATA[In today's fast-paced digital world, the way we capture and organize information is undergoing a revolutionary transformation. At the forefront of this change is AI-powered note-taking, a technology that's reshaping how we interact with and process information. This innovative approach is not just about digitizing notes; it's about enhancing our ability to understand, organize, and utilize the information we gather.]]></description>
+      <link>https://affine.pro/blog/note-taking-ai-from-rough-notes-to-mind-map</link>
+      <guid isPermaLink="true">https://affine.pro/blog/note-taking-ai-from-rough-notes-to-mind-map</guid>
+      <pubDate>Mon, 21 Oct 2024 00:00:00 GMT</pubDate>
+      <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/zYkALy9-ezOpQGOuV2EzCHKLQxFOQuFKjwAxjDSw_ag=" type="image/png" />
     </item>
     
     <item>
@@ -646,15 +655,6 @@
       <guid isPermaLink="true">https://affine.pro/blog/15-best-free-daily-planner-apps-features-free</guid>
       <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
       <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/Wl2EmuRNH4xjlrWLBKzZIToWPXkzTIwdP2xVewmIDRk=" type="image/png" />
-    </item>
-    
-    <item>
-      <title>AFFiNE AI: Note Taking AI from rough notes to mind map</title>
-      <description><![CDATA[In today's fast-paced digital world, the way we capture and organize information is undergoing a revolutionary transformation. At the forefront of this change is AI-powered note-taking, a technology that's reshaping how we interact with and process information. This innovative approach is not just about digitizing notes; it's about enhancing our ability to understand, organize, and utilize the information we gather.]]></description>
-      <link>https://affine.pro/blog/note-taking-ai-from-rough-notes-to-mind-map</link>
-      <guid isPermaLink="true">https://affine.pro/blog/note-taking-ai-from-rough-notes-to-mind-map</guid>
-      <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
-      <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/zYkALy9-ezOpQGOuV2EzCHKLQxFOQuFKjwAxjDSw_ag=" type="image/png" />
     </item>
     
     <item>
