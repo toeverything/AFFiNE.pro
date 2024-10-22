@@ -12,6 +12,11 @@ permissions:
   contents: write
   pull-requests: write
 
+# Add concurrency group to queue builds
+concurrency:
+  group: blog-sync
+  cancel-in-progress: false  # Queue instead of canceling
+
 jobs:
   sync-blog:
     runs-on: ubuntu-latest
