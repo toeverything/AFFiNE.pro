@@ -5,8 +5,8 @@
     <description>All In One KnowledgeOS</description>
     <link>https://affine.pro</link>
     <atom:link href="https://affine.pro/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 22 Oct 2024 12:34:27 GMT</lastBuildDate>
-    <pubDate>Tue, 22 Oct 2024 12:34:27 GMT</pubDate>
+    <lastBuildDate>Tue, 22 Oct 2024 16:13:35 GMT</lastBuildDate>
+    <pubDate>Tue, 22 Oct 2024 16:13:35 GMT</pubDate>
     <ttl>60</ttl>
     
     <item>
@@ -43,6 +43,15 @@
       <guid isPermaLink="true">https://affine.pro/blog/note-taking-ai-from-rough-notes-to-mind-map</guid>
       <pubDate>Mon, 21 Oct 2024 00:00:00 GMT</pubDate>
       <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/zYkALy9-ezOpQGOuV2EzCHKLQxFOQuFKjwAxjDSw_ag=" type="image/png" />
+    </item>
+    
+    <item>
+      <title>How to Make a Storyboard: 10 Real-World Storyboard Examples for Visual Storytelling Success</title>
+      <description><![CDATA[Learn how to create effective storyboards with AFFiNE’s customizable templates and canvas-based tools. This guide covers storyboard examples from various industries, highlights the benefits of using AFFiNE for visual storytelling, and provides practical tips for collaborative and flexible storyboarding.]]></description>
+      <link>https://affine.pro/blog/storyboard-examples</link>
+      <guid isPermaLink="true">https://affine.pro/blog/storyboard-examples</guid>
+      <pubDate>Mon, 21 Oct 2024 00:00:00 GMT</pubDate>
+      <enclosure url="https://app.affine.pro/api/workspaces/qf73AF6vzWphbTJdN7KiX/blobs/N9f1q_Fj1hAVsbklVUAUCVt490CyQThT-e-BtcIHyl8=" type="image/png" />
     </item>
     
     <item>

@@ -1663,6 +1663,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://affine.pro/blog/storyboard-examples</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://affine.pro/blog/the-cornell-notes-template-and-system-learning-tips</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
