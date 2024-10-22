@@ -10,7 +10,7 @@
   "coverAlt": "AFFiNE Vision Board Template",
   "createDate": 1724909217475,
   "created": 1723161600000,
-  "description": "A Vision Board Template is a structured framework for creating a visual representation of your goals, dreams, and aspirations. This powerful tool combines images, words, and symbols to create a tangible manifestation of your desired future. By providing a clear structure and guidelines, a Vision Board Template helps individuals focus their thoughts, clarify their objectives, and maintain motivation towards achieving their personal and professional goals.",
+  "description": "A Vision Board Template is a structured framework for creating a visual representation of your goals, dreams, and aspirations. This powerful tool combines images, words, and symbols to create a tangible manifestation of your desired future.",
   "featured": true,
   "guid": "GA3Ft7UyCv_xqYRr0D3Qa",
   "id": "GA3Ft7UyCv_xqYRr0D3Qa",
@@ -19,6 +19,7 @@
     "QSo8JL7GTHrBJaQbRbjoB",
     "mhXkUvwacMxFPXrxlUQEF",
     "_Bpe5IadJPG_MiS7tEJyb",
+    "95Q6wHtc1LeRLwNwwptet",
     "6gOLcAJKsJ",
     "UKFrN2wPYEAlaP_b4_r8m",
     "siVFmLrvI-bKkBlpcemaF"
@@ -38,7 +39,8 @@
   ],
   "relatedTemplates": [
     "coquette-aesthetic-vision-board",
-    "smart-goal-template"
+    "smart-goal-template",
+    "monthly-meal-plan-template"
   ],
   "slug": "vision-board-template-2024",
   "tags": [
@@ -49,7 +51,7 @@
   "templateMode": "edgeless",
   "title": "Vision Board Template 2024",
   "updated": 1723161600000,
-  "updatedDate": 1726212377970,
+  "updatedDate": 1729566410916,
   "useTemplateUrl": "https://app.affine.pro/template/import?workspaceId=qf73AF6vzWphbTJdN7KiX&docId=QSo8JL7GTHrBJaQbRbjoB&pageId=GA3Ft7UyCv_xqYRr0D3Qa&name=Vision+Board+Template+2024&mode=edgeless&snapshotUrl=https%3A%2F%2Fcdn.affine.pro%2Ftemplate-snapshots%2FQSo8JL7GTHrBJaQbRbjoB.zip",
   "valid": true
 }
