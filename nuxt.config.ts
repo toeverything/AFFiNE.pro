@@ -156,7 +156,8 @@ export default defineNuxtConfig({
 
   gtm: {
     id:
-      process.env.NUXT_PUBLIC_ENV === 'production'
+      process.env.NUXT_PUBLIC_ENV === 'production' ||
+      process.env.CF_PAGES_BRANCH === 'production'
         ? 'GTM-T3FBJ5V'
         : 'GTM-UNDEFINED',
     enableRouterSync: true,
