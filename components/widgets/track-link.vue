@@ -10,21 +10,30 @@ nuxt-link(
 
 <script setup lang="ts">
 const props = defineProps<{
-  to: string,
-  onClick: () => any,
-  target?: string,
-  rel?: string,
-  action?: string,
-  params?: Record<string, string>
-}>()
+  to: string;
+  onClick: () => any;
+  target?: string;
+  rel?: string;
+  action?: string;
+  params?: Record<string, string>;
+}>();
 
-const mixpanel = useMixpanel()
+const gtm = useGtm();
+const mixpanel = useMixpanel();
 
 const handleLinkClick = () => {
   if (props.onClick) {
-    props.onClick()
+    props.onClick();
   }
-  if (!props.action) return
-  mixpanel.track(props.action, props.params)
-}
+  if (!props.action) return;
+  mixpanel.track(props.action, props.params);
+  if (!gtm) return;
+  // @TODO: Support custom dimensions
+  gtm.trackEvent({
+    event: props.action,
+    action: 'click',
+    category: props.params?.resolve || 'link',
+    ...props.params,
+  });
+};
 </script>

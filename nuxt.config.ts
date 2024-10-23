@@ -155,7 +155,10 @@ export default defineNuxtConfig({
   ],
 
   gtm: {
-    id: process.env.NUXT_PUBLIC_GOOGLE_TAG_MANAGER_ID || 'GTM-UNDEFINED',
+    id:
+      process.env.NUXT_PUBLIC_ENV === 'production'
+        ? 'GTM-T3FBJ5V'
+        : 'GTM-UNDEFINED',
     enableRouterSync: true,
   },
 
