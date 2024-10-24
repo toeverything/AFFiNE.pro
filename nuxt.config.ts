@@ -32,16 +32,23 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    routeRules: {
+    routeRules: process.env.NODE_ENV === 'production' ? {
       '/': { prerender: true },
       '/ai': { prerender: true },
       '/templates': { prerender: true },
       '/templates/**': { prerender: true },
       '/blog': { prerender: true },
       '/blog/**': { prerender: true },
-      // dev only proxy:
-      // '/api/**': { proxy: 'https://affine.pro/api/**' },
-    },
+      }
+      : {
+        '/': { prerender: true },
+        '/ai': { prerender: true },
+        '/templates': { prerender: true },
+        '/templates/**': { prerender: true },
+        '/blog': { prerender: true },
+        '/blog/**': { prerender: false },
+        '/api/worker/**': { proxy: 'https://affine.pro/api/worker/**' }
+      },
 
     prerender: {
       autoSubfolderIndex: false,

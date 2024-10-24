@@ -54,7 +54,7 @@ const user = computed(() => {
 });
 
 const publishDate = useDateFormat(
-  new Date(props.meta.updated || Date.now()),
+  new Date(props.meta.updated || props.meta.created || Date.now()),
   'MM/DD/YYYY'
 );
 </script>

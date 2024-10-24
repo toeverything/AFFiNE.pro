@@ -960,7 +960,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@nuxt/content@^2.7.0":
+"@nuxt/content@^2.13.4":
   version "2.13.4"
   resolved "https://registry.yarnpkg.com/@nuxt/content/-/content-2.13.4.tgz#5a827ef80792ef60ad96fc208017ea7f8e841bf6"
   integrity sha512-NBaHL/SNYUK7+RLgOngSFmKqEPYc0dYdnwVFsxIdrOZUoUbD8ERJJDaoRwwtyYCMOgUeFA/zxAkuADytp+DKiQ==
@@ -1084,7 +1084,7 @@
   optionalDependencies:
     ipx "^2.1.0"
 
-"@nuxt/kit@3.13.2", "@nuxt/kit@^3.0.0", "@nuxt/kit@^3.1.1", "@nuxt/kit@^3.10.3", "@nuxt/kit@^3.11.2", "@nuxt/kit@^3.12.3", "@nuxt/kit@^3.12.4", "@nuxt/kit@^3.13.1", "@nuxt/kit@^3.13.2", "@nuxt/kit@^3.2.0", "@nuxt/kit@^3.2.2", "@nuxt/kit@^3.5.0", "@nuxt/kit@^3.5.1":
+"@nuxt/kit@3.13.2", "@nuxt/kit@^3.0.0", "@nuxt/kit@^3.1.1", "@nuxt/kit@^3.10.3", "@nuxt/kit@^3.11.2", "@nuxt/kit@^3.12.3", "@nuxt/kit@^3.12.4", "@nuxt/kit@^3.13.1", "@nuxt/kit@^3.13.2", "@nuxt/kit@^3.2.0", "@nuxt/kit@^3.2.2", "@nuxt/kit@^3.5.1", "@nuxt/kit@^3.9.0":
   version "3.13.2"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.13.2.tgz#4c019a87e08c33ec14d1059497ba40568b82bfed"
   integrity sha512-KvRw21zU//wdz25IeE1E5m/aFSzhJloBRAQtv+evcFeZvuroIxpIQuUqhbzuwznaUwpiWbmwlcsp5uOWmi4vwA==
@@ -1359,13 +1359,13 @@
     "@parcel/watcher-win32-ia32" "2.4.1"
     "@parcel/watcher-win32-x64" "2.4.1"
 
-"@pinia/nuxt@^0.4.6":
-  version "0.4.11"
-  resolved "https://registry.yarnpkg.com/@pinia/nuxt/-/nuxt-0.4.11.tgz#1b3f728ae112d45deff5971376e05b8a8d64f720"
-  integrity sha512-bhuNFngJpmBCdAqWguezNJ/oJFR7wvKieqiZrmmdmPR07XjsidAw8RLXHMZE9kUm32M9E6T057OBbG/22jERTg==
+"@pinia/nuxt@^0.5.5":
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/@pinia/nuxt/-/nuxt-0.5.5.tgz#0e156bbb86b3ccb087006ff505bc0c1b6522e8c3"
+  integrity sha512-wjxS7YqIesh4OLK+qE3ZjhdOJ5pYZQ+VlEmZNtTwzQn1Kavei/khovx7mzXVXNA/mvSPXVhb9xBzhyS3XMURtw==
   dependencies:
-    "@nuxt/kit" "^3.5.0"
-    pinia ">=2.1.0"
+    "@nuxt/kit" "^3.9.0"
+    pinia "^2.2.3"
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -6717,7 +6717,7 @@ picomatch@^4.0.2:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-4.0.2.tgz#77c742931e8f3b8820946c76cd0c1f13730d1dab"
   integrity sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==
 
-pinia@>=2.1.0:
+pinia@^2.2.3:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/pinia/-/pinia-2.2.4.tgz#79b63b231a3da80968ab58f7721f575fe2c509ac"
   integrity sha512-K7ZhpMY9iJ9ShTC0cR2+PnxdQRuwVIsXDO/WIEV/RnMC/vmSoKDTKW/exNQYPI+4ij10UjXqdNiEHwn47McANQ==

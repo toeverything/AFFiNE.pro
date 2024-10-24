@@ -6,7 +6,7 @@ class PrimaryAPI {
   async getBlog() {
     const store = useStore()
 
-    if (process.client) {
+    if (import.meta.client) {
       if (store.blog.length) return store.blog
     }
     try {
@@ -14,7 +14,7 @@ class PrimaryAPI {
         .find()
 
       if (res?.length) {
-        store.blog = res.sort(({ created: a }, { created: b }) => {
+        store.blog = res.toSorted(({ created: a }, { created: b }) => {
           if (a === null || b === null) {
             return 0
           }
@@ -37,7 +37,7 @@ class PrimaryAPI {
   async getTemplates() {
     const store = useStore()
 
-    if (process.client) {
+    if (import.meta.client) {
       if (store.templates.length) return store.templates
     }
     try {
@@ -92,14 +92,14 @@ class PrimaryAPI {
   async getChangelogs() {
     const store = useStore()
 
-    if (process.client) {
+    if (import.meta.client) {
       if (store.changelogs.length) return store.changelogs
     }
     try {
       const res = await queryContent<Changelog>('/changelogs').find()
 
       if (res?.length) {
-        store.changelogs = res.sort(({ date: a }, { date: b }) => {
+        store.changelogs = res.toSorted(({ date: a }, { date: b }) => {
           if (a === null || b === null) {
             return 0
           }

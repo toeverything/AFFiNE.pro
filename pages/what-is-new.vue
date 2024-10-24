@@ -75,7 +75,7 @@ const washedChangelogs = computed(() => {
       el.date = new Date(el.date).getTime()
       return el
     })
-    .sort(({ date: a }, { date: b }) => {
+    .toSorted(({ date: a }, { date: b }) => {
       if (a < b) {
         return 1
       }

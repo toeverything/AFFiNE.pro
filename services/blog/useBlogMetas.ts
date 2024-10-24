@@ -24,8 +24,8 @@ export const useBlogMetas = (
       meta.md &&
       meta.slug
     ))
-    .sort(({ updated: a }, { updated: b }) => {
-      return (b || 0) - (a || 0);
+    .toSorted(({ updated: u0, created: c0 }, { updated: u1, created: c1 }) => {
+      return (u1 || c1 || 0) - (u0 || c0 || 0);
     })
   const tags = getTags(publishedMetas)
   let filteredMetas = query?.tag

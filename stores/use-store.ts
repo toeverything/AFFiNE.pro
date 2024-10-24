@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
-import { RemovableRef, useLocalStorage } from '@vueuse/core'
+import type { RemovableRef } from '@vueuse/core'
+import { useLocalStorage } from '@vueuse/core'
 import { getCookie } from 'typescript-cookie'
 
 const userInitial = {

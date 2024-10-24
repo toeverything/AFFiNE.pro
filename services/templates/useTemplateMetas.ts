@@ -15,7 +15,10 @@ function getTags(templateMetas: TemplateContentFileMeta[]) {
 function getCates(templateMetas: TemplateContentFileMeta[]) {
   const catesMap = new Map<string, string>();
   templateMetas.forEach((meta) => {
-    catesMap.set(meta.cateName || meta?.tags[0], meta.cateSlug);
+    const tag = meta.cateName || meta?.tags?.[0]
+    if (tag) {
+      catesMap.set(tag, meta.cateSlug);
+    }
   });
   return Array.from(catesMap, ([title, slug]) => ({ title, slug }));
 }
@@ -33,10 +36,7 @@ export const useTemplateMetas = (
         meta.md &&
         meta.slug
     )
-    .sort(({ created: a, order: c }, { created: b, order: d }) => {
-      if (c !== d) {
-        return c - d;
-      }
+    .toSorted(({ created: a }, { created: b }) => {
       return (b || 0) - (a || 0);
     });
 
