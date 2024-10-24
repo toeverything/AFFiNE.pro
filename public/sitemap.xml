@@ -203,11 +203,6 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://affine.pro/blog/10-best-free-chore-chart-templates-kids-adults</loc>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
         <loc>https://affine.pro/blog/10-best-whiteboard-layout-ideas-boost-your-productivity</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -1599,6 +1594,11 @@
     </url>
     <url>
         <loc>https://affine.pro/blog/chore-chart</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://affine.pro/blog/digital-calendar-planner-templates</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
