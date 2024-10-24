@@ -29,7 +29,7 @@ async function main() {
   const templateMetas = useTemplateMetas(templates);
 
   const blogArticlesRoutes = blogs
-    .toSorted((a, b) => (b.updated ?? 0) - (a.updated ?? 0))
+    .sort((a, b) => (b.updated ?? 0) - (a.updated ?? 0))
     .map((el) => ({
       url: `blog/${el.slug}`,
       priority: 1,

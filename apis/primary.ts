@@ -6,7 +6,7 @@ class PrimaryAPI {
   async getBlog() {
     const store = useStore()
 
-    if (process.client) {
+    if (import.meta.client) {
       if (store.blog.length) return store.blog
     }
     try {
@@ -37,7 +37,7 @@ class PrimaryAPI {
   async getTemplates() {
     const store = useStore()
 
-    if (process.client) {
+    if (import.meta.client) {
       if (store.templates.length) return store.templates
     }
     try {
@@ -92,7 +92,7 @@ class PrimaryAPI {
   async getChangelogs() {
     const store = useStore()
 
-    if (process.client) {
+    if (import.meta.client) {
       if (store.changelogs.length) return store.changelogs
     }
     try {
