@@ -14,7 +14,7 @@ class PrimaryAPI {
         .find()
 
       if (res?.length) {
-        store.blog = res.toSorted(({ created: a }, { created: b }) => {
+        store.blog = res.sort(({ created: a }, { created: b }) => {
           if (a === null || b === null) {
             return 0
           }
@@ -99,7 +99,7 @@ class PrimaryAPI {
       const res = await queryContent<Changelog>('/changelogs').find()
 
       if (res?.length) {
-        store.changelogs = res.toSorted(({ date: a }, { date: b }) => {
+        store.changelogs = res.sort(({ date: a }, { date: b }) => {
           if (a === null || b === null) {
             return 0
           }

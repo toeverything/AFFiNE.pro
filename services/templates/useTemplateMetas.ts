@@ -36,7 +36,7 @@ export const useTemplateMetas = (
         meta.md &&
         meta.slug
     )
-    .toSorted(({ created: a }, { created: b }) => {
+    .sort(({ created: a }, { created: b }) => {
       return (b || 0) - (a || 0);
     });
 

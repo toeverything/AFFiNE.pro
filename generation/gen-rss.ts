@@ -39,7 +39,7 @@ async function main() {
       ...blog,
       date: formatDate(blog.updated || blog.created || Date.now()) // Use 'created' timestamp, fallback to 'createDate'
     }))
-    .toSorted((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   // Use template literals for better readability
   let rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
